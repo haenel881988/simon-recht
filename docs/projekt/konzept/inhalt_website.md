@@ -1,0 +1,1 @@
+In diesem Dokument wird der Inhalt, der Text und die Struktur der Website beschrieben. Es dient als Grundlage für die Entwicklung und der schriftliche / inhaltlichen Struktur der Website.
