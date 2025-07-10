@@ -1,9 +1,20 @@
-# Projekt-Index & Glossar
+# 🎯 Simon-Recht Projekt: Zentrale Übersicht für KI
 
-Diese Datei dient als zentrale Übersicht für Copilot und alle Mitwirkenden.
+## 📋 **Projekt-Grundlagen**
+- **Projektname:** simon-recht
+- **Typ:** Rechtsanwalts-Website  
+- **Owner:** haenel881988
+- **Branch:** main
+- **Ziel:** Professionelle, SEO-optimierte Anwalts-Website
 
+## 🏗️ **Aktuelle Projektphase**
+- ✅ Grundstruktur erstellt
+- ✅ Dokumentation angelegt  
+- ✅ KI-Instructions konfiguriert
+- 🔄 **AKTUELL:** Planung & Konzeptentwicklung
+- ⏳ **NÄCHSTE SCHRITTE:** Website-Entwicklung
 
-## Wichtige Dateien & Verzeichnisse
+## 🗂️ **Wichtige Dateien & Verzeichnisse**
 
 - [README im Root](../../README.md)
 - [Projekt-Dokumentation](../../docs/README.md)
@@ -32,3 +43,12 @@ Diese Datei dient als zentrale Übersicht für Copilot und alle Mitwirkenden.
 - **Glossar**: Begriffserklärungen und Abkürzungen.
 
 > Tipp: Bitte diese Datei regelmäßig aktualisieren, wenn neue wichtige Dateien, Prozesse oder Begriffe hinzukommen!
+
+
+
+Umgang mit Chats und dem Kontext:
+Damit die KI IMMER den vollständigen Kontext besitzt, muss die KI IMMER den Chat protokollieren, strukturieren, kontextualisieren.
+Dazu muss die KI diese Readme-Datei lesen UND verstehen.:
+C:\apps\website\simon-recht\docs\projekt\chats\README.md
+
+Dabei muss die KI eigenständig ohne nachfragen, den Chat entsprechend protokollieren und verwalten.
