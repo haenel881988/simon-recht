@@ -42,3 +42,6 @@ Die KI MUSS bei jedem erkannten Widerspruch oder potenziell gefährlichen Konfli
 
 Beispiel Exception im Chat:  
 ⚠️ Exception: Widerspruch erkannt zwischen [Anweisung A] und [Anweisung B]. Bitte klären!
+
+
+

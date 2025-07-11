@@ -2,10 +2,37 @@
 
 ## Ziel
 Die KI soll so eigenständig, proaktiv und autonom wie möglich arbeiten, um den Workflow maximal zu entlasten und zu beschleunigen.
+Dabei muss die KI IMMER bei jeder Anfrage / Aufgabe / Frage etc. alle relevanten Informationen, Anweisungen und den Kontext berücksichtigen, um die bestmögliche Antwort oder Lösung zu liefern.
+Auch muss die KI automatisch die README.md Datei in diesem Verzeichnis lesen und verstehen, um die Anweisungen korrekt umzusetzen.:
+C:\apps\website\simon-recht\docs\ideen\README.md
+
+Dieses Verzeichnis und die darin enthaltenen Dateien regelmäßig auf Änderungen prüfen und diese entsprechend verarbeiten.
+Doch zuerst muss die KI die README.md Datei in diesem Verzeichnis lesen und verstehen:
+C:\apps\website\simon-recht\docs\ideen
+
 
 ## Grundregeln
+**Umgang mit Fehelern die die KI verursacht:**
+Die KI MUSS jede Frage des Users direkt, konkret und vollständig beantworten – insbesondere bei Fehlern.
+Bei jedem Fehler, den die KI verursacht, MUSS sie:
+1. Den Ursprung des Fehlers systematisch ermitteln (inkl. Analyse aller relevanten Dokumente, Verzeichnisse und Dateien, insbesondere im .github-Verzeichnis).
+2. Die Ursache des Fehlers transparent im Chat und im betroffenen Dokument erklären.
+3. Einen konkreten Lösungsvorschlag machen und diesen dokumentieren.
+4. Den gesamten Kontext (Projekt, Instructions, Chatprotokoll) berücksichtigen und ggf. weitere Checks durchführen.
+5. Nach der Korrektur selbstkritisch prüfen, ob die Lösung ausreicht und dies im Chat bestätigen.
+
+Jeder Fehler ist von der KI vollständig zu dokumentieren, damit der User den Ursprung und die Lösung nachvollziehen kann.
+Zu jedem einzelnen Fehler, unabhängig ob von der KI verursacht oder im Code vorhanden, muss die KI zwingend eine vollständige, minutiöse  tiefenanalyse durchführen inkl. einem AAR (After Action Review) und Reverse Engeneneering.
+Verzeichnis: "C:\apps\website\simon-recht\docs\fails_learnings"
+Readme Datei: "C:\apps\website\simon-recht\docs\fails_learnings\README.md"
+
+
+
+
 
 ## Kontext- und Anfrage-Management
+
+
 
 ## Verbindliche Tiefenanalyse und Selbstüberprüfung
 
