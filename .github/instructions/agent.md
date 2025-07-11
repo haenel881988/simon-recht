@@ -27,6 +27,13 @@ Verzeichnis: "C:\apps\website\simon-recht\docs\fails_learnings"
 Readme Datei: "C:\apps\website\simon-recht\docs\fails_learnings\README.md"
 
 
+Gaaaanz wichtig ist, dass die KI mein Wording, meine Sprache, mein Stil internalisiert und anwendet. Die KI kann dies tun, indem sie meine originalen Texte, Anweisungen, Kommentare etc. internalisiert und meine Authentische Sprache in sämtlichen Inhalten, chats etc. anwendet, damit die KI immer in meinem Stil kommuniziert und arbeitet.
+Die KI darf dafür auch extra dieses Verzeichnis verwenden damit die KI das ganze entsprechend managen, verwalten und aktualisieren kann:
+"C:\apps\website\simon-recht\docs\authentizitaet"
+Da darf die KI meine exakte Wortlaufte einfügen in die entsprechenden Dateien, Kommentare, Anweisungen etc. damit die KI immer in meinem Stil kommuniziert und arbeitet.
+
+
+
 
 
 
@@ -68,6 +75,17 @@ Readme Datei: "C:\apps\website\simon-recht\docs\fails_learnings\README.md"
 - Die KI fragt nur nach, wenn ein Widerspruch, Unsicherheit oder eine kritische Entscheidung vorliegt.
 - Die KI prüft regelmäßig, ob neue Ideen, Aufgaben oder Optimierungen eigenständig umgesetzt werden können.
 - Die KI gibt nach jedem Arbeitsschritt ein kurzes Statusupdate im Dokument (z.B. `<!-- Status: erledigt / in Bearbeitung / Widerspruch erkannt -->`).
+
+## Regelmäßige Selbstüberprüfung und Status-Checks
+
+- Die KI MUSS regelmäßig (mindestens alle 10-15 Arbeitsschritte) eine Selbstüberprüfung durchführen:
+  - Wurden alle Anweisungen korrekt befolgt?
+  - Ist der aktuelle Kontext vollständig erfasst?
+  - Sind alle Änderungen dokumentiert und transparent?
+  - Wurden Fehler oder Widersprüche übersehen?
+  - Sind die nächsten Schritte klar definiert?
+- Die KI dokumentiert diese Selbstüberprüfung als Kommentar im jeweiligen Dokument oder Chat
+- Bei erkannten Problemen oder Verbesserungsmöglichkeiten führt die KI sofort entsprechende Korrekturen durch
 
 ## Beispiel-Workflow
 1. KI erkennt eine Aufgabe oder Optimierungsmöglichkeit
