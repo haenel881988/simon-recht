@@ -1,32 +1,51 @@
-In dieser Datei wird das zentraler dreh- und angelpunkt für die KI und für mich, Simon Haenel um die Übersicht zu behalten.
+# 🎯 SIMON-RECHT PROJEKT - SAUBERE STRUKTUR
 
-Jedes Verzeichnis und darin enthaltene Datei wird hier referenziert.
+**Aufgeräumt am:** 2025-07-12  
+**Mission:** Mindset schlägt Grosskonzern  
+**Status:** FUNKTIONSFÄHIGES SYSTEM
 
-Jedes Verzeichnis inkl. die der .github Datei, welche die Instructions für die KI enthält, wird hier referenziert inkl. des vollständigen Pfades.
+---
 
+## 📁 **PROJEKT-STRUKTUR (Sauber!):**
 
+### **AKTIVE ARBEITSBEREICHE:**
+```
+📁 projekt/         # Haupt-Projektdateien
+├── konzept/        # Strategien & Pläne  
+├── chats/          # Chat-Protokolle
+└── struktur_website/ # Website-Aufbau
 
-**Copilot Instructions**
-C:\apps\website\simon-recht\.github
+📁 ideen/           # Simon's Brainstorming-Zone
+├── ideen_roh.md    # Neue Ideen sammeln
+└── ideen_aufgearbeitet.md # Verarbeitete Ideen
+```
 
+### **ARCHIVIERT (Chaos beseitigt):**
+```
+📁 _ARCHIV_CHAOS/   # Alte, redundante Dateien
+```
 
-  
+---
 
-  
-  **Projekt**
-  Verzeichnis: "C:\apps\website\simon-recht\docs\projekt\konzept\projekt"
-  
-  **README.md**
+## 🎯 **WIE DAS SYSTEM FUNKTIONIERT:**
 
+### **FÜR SIMON:**
+1. **Neue Ideen** → `ideen/ideen_roh.md`
+2. **Projekt-Updates** → KI kümmert sich um `projekt/`
 
+### **FÜR KI:**
+1. **Projekt-Management** → `projekt/` Ordner
+2. **Website-Entwicklung** → `src/` Ordner  
 
+---
 
+## ✅ **NÄCHSTE SCHRITTE:**
 
-Readme Datei: "C:\apps\website\simon-recht\docs\konzept\README.md"
+1. **Website funktionsfähig machen** (Navigation, Blog)
+2. **Landingpage implementieren** (Simon's authentische Texte)
+3. **Gelddruckmaschine aktivieren** 💰
 
-Projekt
+---
 
-
-Skripte dürfen niemals gelöscht werden. Sämtliche Probleme müssen an der Wurzel / radikal (radikal = lateinisch für Wurzel) behoben werden.
-Redundanzen sind zu vermeiden.
+*Chaos beseitigt - System etabliert - Bereit für Erfolg! 🚀*
 

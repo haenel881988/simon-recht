@@ -1,27 +1,36 @@
 # Globales Design-System für simon-recht
 
+*Komplettes Design-System - vereint DESIGN_SYSTEM.md Inhalte*
 *In einfacher Sprache erklärt - kein Code, nur Beschreibungen*
+
+## 🎨 **DESIGN-PHILOSOPHIE & BRAND IDENTITY**
+
+### **Kernbotschaft:** "Mindset schlägt Grosskonzern"
+### **Zielgruppe:** Schweizer/Deutsche im DACH-Raum gegen Grosskonzerne  
+### **Tonalität:** Professionell, kämpferisch, vertrauenswürdig, direkt
 
 ## 🎨 **FARBEN (Farbpalette)**
 
-### **Hauptfarben:**
-- **Schwarz:** Für Überschriften und wichtige Bereiche
-  - Warum: Wirkt autoritär und ernst, zeigt "Ich meine es ernst"
-  - Wo verwenden: Hero-Section, wichtige Headlines
+### **Primärfarben (Vertrauen & Kompetenz):**
+- **Hauptblau:** #1e40af - Tiefes Blau für Vertrauen und Professionalität
+- **Helles Blau:** #3b82f6 - Für Buttons und aktive Elemente  
+- **Dunkles Blau:** #1e3a8a - Für Überschriften und wichtige Texte
 
-- **Weiß:** Für Text und helle Bereiche  
-  - Warum: Sauber und klar, gut lesbar
-  - Wo verwenden: Haupttext, helle Sektionen
+### **Sekundärfarben (Erfolg & Energie):**
+- **Erfolgs-Grün:** #059669 - Für Erfolg/Sieg Signale
+- **Warn-Orange:** #d97706 - Für Aufmerksamkeit und CTAs
+- **Kampf-Rot:** #dc2626 - Für Entschlossenheit und wichtige Warnungen
 
-- **Gold/Orange:** Für Erfolg und wichtige Buttons
-  - Warum: Signalisiert Gewinn und Erfolg
-  - Wo verwenden: Trust-Badge, Haupt-Buttons, Sieg-Momente
+### **Neutrale Farben:**
+- **Sehr hell:** #f9fafb - Für Hintergründe
+- **Hell:** #f3f4f6 - Für Cards und Bereiche  
+- **Dunkel:** #111827 - Für Text und dunkle Bereiche
 
-### **Unterstützende Farben:**
-- **Hellgrau:** Für weniger wichtigen Text
-- **Dunkelgrau:** Für Schatten und Abgrenzungen  
-- **Grün:** Nur für Erfolgs-Nachrichten ("Gewonnen!")
-- **Rot:** Nur für Warnungen und wichtige Hinweise
+### **Spezial-Farben für Tools:**
+- **ChatGPT-Grün:** #10a37f - Brand-Farbe für ChatGPT Karten
+- **Gemini-Blau:** #4285f4 - Brand-Farbe für Gemini Karten
+- **Download-Gradient:** Blau-Grau Verlauf für Download-Boxen
+- **Warnung-Gelb:** #fbbf24 - Für Disclaimer-Boxen
 
 ## 📝 **SCHRIFTEN (Typography)**
 
@@ -182,3 +191,57 @@
 ### **Vertikale Rhythmus:**
 - **Alle Abstände:** Vielfache von 8px (8, 16, 24, 32, 40...)
 - **Warum:** Sieht ordentlicher und professioneller aus
+
+## 🃏 **TOOL-KARTEN DESIGN**
+
+### **Tool-Karten Aufbau:**
+- **Größe:** 350px breit x 280px hoch (Desktop)
+- **Screenshot-Bereich:** 300x200px für Tool-Screenshots
+- **Text-Bereich:** 50px hoch für Titel und Beschreibung
+- **Hover-Effekt:** Leichtes Anheben (5px) mit Schatten
+- **Rahmen:** 2px solid in Tool-Farbe (ChatGPT-Grün/Gemini-Blau)
+
+### **Badge-Design ("Mein Einsatz"):**
+- **Position:** Oben rechts über dem Screenshot
+- **Hintergrund:** Halb-transparentes Kampf-Rot (#dc2626)
+- **Text:** Weiß, fett, kleine Schrift
+- **Form:** Abgerundete Ecken (8px)
+
+## 📦 **DOWNLOAD-BOXEN DESIGN**
+
+### **Box-Gestaltung:**
+- **Größe:** 280px breit x 200px hoch
+- **Hintergrund:** Blau-Grau Gradient (von hell zu dunkel)
+- **Icon:** 📝 Download-Symbol (32px groß)
+- **Button:** Warn-Orange Hintergrund mit weißem Text
+- **Hover:** Dunkler werden + leichte Vergrößerung
+
+### **Content-Struktur pro Box:**
+- **Icon-Bereich:** 60px hoch, zentriert
+- **Titel:** 40px hoch, fette Schrift
+- **Beschreibung:** 60px hoch, normale Schrift  
+- **Button:** 40px hoch, volle Breite
+
+## ⚠️ **WARNUNG-BOXEN DESIGN**
+
+### **Disclaimer-Box Gestaltung:**
+- **Hintergrund:** Warnung-Gelb (#fbbf24) mit 20% Transparenz
+- **Rahmen:** 3px solid Warn-Orange (#d97706)
+- **Icon:** ⚠️ Symbol (24px groß) links
+- **Text:** Dunkles Grau (#111827), fett für Überschrift
+- **Abstände:** 20px Innenabstand rundum
+
+## 💻 **CODE-BLOCK DESIGN**
+
+### **Entwickler-Editor Look:**
+- **Hintergrund:** Sehr dunkles Grau (#1e293b)
+- **Text-Farbe:** Helles Grau (#e2e8f0)
+- **Schrift:** Monospace (Courier New, Monaco)
+- **Zeilen-Nummern:** Links, hellgrau, schmaler
+- **Kopier-Button:** Rechts oben, Blau (#3b82f6)
+
+### **Syntax-Highlighting:**
+- **Prompts:** Grün (#22c55e) für Anweisungen
+- **Platzhalter:** Orange (#f59e0b) für [EINFÜGEN]
+- **Aufzählungen:** Blau (#60a5fa) für Listen
+- **Wichtiges:** Rot (#ef4444) für kritische Teile

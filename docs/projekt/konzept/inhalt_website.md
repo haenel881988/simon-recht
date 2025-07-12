@@ -17,7 +17,7 @@
 ### **IMMER SAGEN:**
 - ✅ "Du willst wissen, wie..."
 - ✅ "Der grösste Gegner bist du selbst"
-- ✅ "Mindset schlägt Grosskonzern - BEWIESEN"
+- ✅ "Mindset schlägt Grosskonzern"
 - ✅ "Radikale Selbstehrlichkeit"
 
 ---
@@ -28,11 +28,10 @@
 
 #### **HERO-SECTION:**
 ```
-HEADLINE: "Du willst wissen, wie ich einen Grosskonzern 
-juristisch in die Schranken wies?"
+HEADLINE: "Mindset schlägt Grosskonzern"
 
-SUB-HEADLINE: "Der grösste Gegner war nicht der Konzern - 
-sondern ich selbst."
+SUB-HEADLINE: "Du willst wissen, wie ich einen Grosskonzern 
+juristisch in die Schranken wies?"
 
 CTA: "Zeig mir den Weg"
 ```

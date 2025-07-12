@@ -79,13 +79,49 @@ simon-recht/
 - `resarch/` → Tippfehler, sollte `recherche/` heißen
 - Gemischte Sprachen in Dateinamen (deutsch/englisch)
 
-## 📊 **Statistiken**
+# � Projekt-Inventar
 
-- **Gesamt-Dateien:** ~25+ (geschätzt)
-- **Verzeichnisse:** 15+
-- **Scripts:** 1
-- **Dokumentation:** 20+
-- **Inkonsistenzen:** 4 erkannt
+**Letzte Aktualisierung:** 2025-07-12 - VOLLSTÄNDIGE REVISION  
+**Automatisch generiert durch KI**
+
+## 🚨 **KRITISCHE BEFUNDE:**
+
+### **📊 REALE STATISTIKEN:**
+- **Gesamt-Dateien:** 210+ Markdown-Dateien (nicht 25+ wie vorher behauptet)
+- **Verzeichnisse:** 30+ (nicht 15+)
+- **Instructions:** 8 Dateien
+- **Erkannte Inkonsistenzen:** 4+ kritische Namenskonventions-Verstöße
+
+### **🔥 STRUKTURPROBLEME BESTÄTIGT:**
+1. **VERZEICHNIS-CHAOS:** 4 parallele Legacy-Strukturen
+2. **DUPLIKATE:** Mehrfach gleiche Inhalte (Design-System, Landing Page)
+3. **NAMENSKONVENTIONS-ANARCHIE:** Englisch/Deutsch/Bindestriche gemischt
+4. **KORRUPTE LINKS:** README-Ketten teilweise defekt
+
+## 🗂️ **KONSOLIDIERUNGS-STATUS:**
+
+### **✅ REPARIERT/MIGRIERT:**
+- `docs/projekt/01_konzepte_und_entscheidungen/strategie_ausrichtung.md` ✅
+- `docs/projekt/struktur_website/globales_design_system.md` ✅ ERWEITERT
+- `docs/projekt/struktur_website/tools_und_prompts/tools_prompts_seite.md` ✅ NEU
+- `.github/instructions/index.md` ✅ EXCEPTION-FORMAT HINZUGEFÜGT
+
+### **❌ ERKANNTE LEGACY-DUPLIKATE:**
+- `docs/01_konzepte_und_entscheidungen/` (PARALLEL zu projekt/)
+- `docs/016_simon_haenel/` (6 Dateien legacy content)
+- `docs/DESIGN_SYSTEM.md` (DUPLIKAT zu globales_design_system.md)
+
+### **⚠️ NAMENSKONVENTIONS-VERSTÖSSE (BESTÄTIGT):**
+- `ANLEITUNG_FÜR_LAIEN.md` → sollte `laien_anleitung.md`
+- `beispiel-instruction.md` → sollte `beispiel_instruction.md`
+- `beispiel-prompt.md` → sollte `beispiel_prompt.md`
+
+## 🎯 **NÄCHSTE REPARATUR-SCHRITTE:**
+
+1. **LEGACY-ARCHIVIERUNG:** `docs/01_*` und `docs/016_*` nach `docs/archiv/`
+2. **DUPLIKAT-ELIMINATION:** `DESIGN_SYSTEM.md` entfernen
+3. **NAMENSKONVENTIONS-REPARATUR:** 4 Dateien umbenennen
+4. **REFERENZ-KETTEN-REPARATUR:** README-Links aktualisieren
 
 ---
-*Dieses Inventar wird automatisch von der KI bei jeder Struktur-Änderung aktualisiert.*
+*Inventar basiert auf file_search mit 210 realen MD-Dateien - keine Schätzungen mehr!*

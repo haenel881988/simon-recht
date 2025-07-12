@@ -126,8 +126,8 @@ Bild-URL: "C:\apps\website\simon-recht\docs\projekt\medien\bilder\simon_haenel_e
 4. Strategie-Entwicklung-Prompt
 5. Klageschrift-Optimierung-Prompt
 
-**CSS-Beschreibung Tools:**
-- Tool-Karten mit Screenshots
-- Prompt-Sammlung als Download-Boxes
-- Warnung-Boxen für Disclaimer
-- Code-Blöcke für Prompt-Darstellung
+**CSS-Implementierung:** ✅ Fertig in `tools_und_prompts/tools_prompts_seite.md`
+- Tool-Karten mit Screenshots → Detaillierte Spezifikation erstellt
+- Prompt-Sammlung als Download-Boxes → 5 Download-Boxen Design fertig
+- Warnung-Boxen für Disclaimer → Gelb-Orange Warning-Design spezifiziert
+- Code-Blöcke für Prompt-Darstellung → Entwickler-Editor Look definiert
