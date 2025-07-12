@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-07-06T13:54:55.479Z",
+  "sessionId": "aar-1751810095480-64mzwyq62",
+  "issues": [],
+  "fixes": [
+    {
+      "issueId": "system-error",
+      "fixType": "system_error",
+      "fixDescription": "Cannot read properties of undefined (reading 'includes')",
+      "codeChanges": null,
+      "outcome": "failed",
+      "appliedAt": "2025-07-06T13:55:19.313Z",
+      "verificationResult": null
+    }
+  ],
+  "patterns": [],
+  "confidence": {}
+}

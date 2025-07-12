@@ -1,3 +1,7 @@
+In dieser README.md Datei wird das Hauptziel der Website dargestellt.
+
+
+
 In diesem Verzeichnis wird die Struktur der Website dokumentiert, inklusive aller relevanten Dateien, Verzeichnisse und Anweisungen für die KI.
 
 Dabei handelt es sich um eine zentrale Anlaufstelle für alle, die an der Website arbeiten oder sie verstehen möchten. Die Struktur ist so angelegt, dass sie leicht verständlich und nachvollziehbar ist.

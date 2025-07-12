@@ -11,7 +11,7 @@
 
 Hier beginnst du deine Geschichte. Male ein Bild von der Ausgangslage. Wie hast du dich gefühlt, als du die Ablehnung von der Pensionskasse erhalten hast? Beschreibe das Gefühl der Ohnmacht, der Wut oder der Verzweiflung. Der Leser sollte sofort spüren, wie es ist, gegen eine riesige, anonyme Organisation anzutreten.
 
-Mein Leben begann bei der Geburt nicht mit einem Schrei, sondern mit einer Stille. Die Nabelschnur schlang sich um mein zerbrechlichen Hals.
+Mein Leben begann bei der Geburt nicht mit einem Schrei, sondern mit einer tödlichen Stille. Die Nabelschnur schlang sich um mein zerbrechlichen Hals.
 Die Geburt war die Hölle, für meine Mutter, für mein Vater und mich.
 Mein Vater (RIP: 2007) war damals 1988 Chefarzt Gynäkologie im Spital Grenchen.
 Für alle beteiligten war es eine traumatische Geburt. Schon bei der Geburt konnte ich meine Persönlichkeit entfalten, die eines Kämpfers. Meine Mutter berichtete, dass solche Geburten 

@@ -56,11 +56,13 @@ Menschen mit juristischen Problemen.
 
 #### **NEUE HERO-SECTION (ÜBERARBEITET):**
 ```
-HEADLINE: "Wie ich mit KI einen Rechtsstreit gegen einen Grosskonzern gewonnen habe"
+HEADLINE: "Mindset schlägt Grosskonzern"
 
-SUBHEADLINE: "Du willst dich juristisch selbstermächtigen? Mindset schlägt Grosskonzern!"
+SUBHEADLINE: "Willst du Wissen, wie ich einen Grosskonzern juristisch in die Schranken wies?"
 
-CTA: "Fallbeispiel + Prompts herunterladen (kostenlos)"
+CTA: "Fallbeispiel ansehen"
+
+
 ```
 
 ZUSÄTZLICHE POWER-STATEMENTS:

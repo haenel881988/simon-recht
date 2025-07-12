@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "sessionId": "aar-1751832731839-oggkizxvs",
+    "timestamp": "2025-07-06T20:12:11.838Z",
+    "totalIssues": 0,
+    "totalFixes": 0,
+    "successRate": 0,
+    "newPatterns": 0
+  },
+  "insights": {
+    "mostCommonIssueType": "",
+    "highestConfidenceIssues": [],
+    "falsePositiveRate": 0,
+    "improvementAreas": [
+      "Low success rate - enhance fix recommendations"
+    ]
+  },
+  "recommendations": [
+    "Continue collecting AAR metrics for better ML training data",
+    "Implement confidence-based issue filtering",
+    "Add more context-aware validation rules"
+  ]
+}

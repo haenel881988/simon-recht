@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0",
+  "buildChecker": {
+    "enabled": true,
+    "logLevel": "verbose",
+    "autoFix": false,
+    "notifications": true
+  },
+  "seoChecks": {
+    "minimumWordCount": 2300,
+    "keywordDensity": {
+      "min": 1.0,
+      "max": 2.0,
+      "target": 1.5
+    },
+    "metaDescription": {
+      "minLength": 150,
+      "maxLength": 160
+    },
+    "requiredElements": [
+      "sitemap",
+      "robots.txt",
+      "meta-tags",
+      "focus-keywords",
+      "internal-links",
+      "schema.org"
+    ]
+  },
+  "performance": {
+    "budgets": {
+      "buildTime": 600000,
+      "bundleSize": "2MB",
+      "lighthouse": {
+        "performance": 90,
+        "accessibility": 95,
+        "bestPractices": 95,
+        "seo": 95
+      }
+    }
+  },
+  "archiving": {
+    "enabled": true,
+    "retention": "12months",
+    "compression": true
+  },
+  "aiIntegration": {
+    "generateActionPlans": true,
+    "prioritizeIssues": true,
+    "documentChanges": true,
+    "reverseEngineering": true,
+    "aarGeneration": true
+  }
+}

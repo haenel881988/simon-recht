@@ -1,4 +1,10 @@
 # 🎯 Simon-Recht Projekt: Zentrale Übersicht für KI
+
+Sämtliche Terminal Befehle müssen als Powershell Syntax von der KI ausgeführt werden.
+
+
+
+
 Das Projekt muss struturiert, organisiert und systematisch verwaltet werden.
 Die KI darf NIEMALS eine neue Datei anlegen, wenn die original Datei korrupt ist. Die korrupte Datei muss von der KI manuell, per Hand, repariert werden.
 Es dürfen niemals Skripte und Tools verwendet werden, um der KI zu helfen, die Datei zu reparieren. Die KI muss eigenständig und ohne externe Hilfe arbeiten.
