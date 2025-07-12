@@ -1086,3 +1086,48 @@ JEDER FEHLER DER PASSIERT:
 4. Simon's Wording als heilig behandeln
 5. Einfachheit über Komplexität
 ```
+
+## 🔍 BEWEISPFLICHT + KONKRETE SPEZIFIKATION
+
+### **ABSOLUTE REGEL: BEWEISE FÜR JEDEN CONTENT**
+```
+🔴 NIEMALS Content ohne Quellenangabe generieren!
+🔴 IMMER konkrete Dokument-Pfade nennen!
+🔴 DIREKTE Verlinkung zu verwendeten Dateien!
+🔴 TRANSPARENT zeigen WO Information herkommt!
+```
+
+### **PFLICHT-FORMAT FÜR CONTENT-GENERIERUNG:**
+```
+📋 CONTENT BASIERT AUF:
+   📄 Datei: C:\pfad\zur\datei.md
+   📄 Zeilen: 15-45 (konkrete Stelle)
+   📄 Inhalt: "Exakter Text aus Datei"
+   
+📋 ÄNDERUNGS-VORSCHLAG:
+   ✏️ KONKRET: Ersetze Zeile X mit "neuem Text"
+   ✏️ GRUND: Basierend auf Dokument Y, Abschnitt Z
+   ✏️ BEWEIS: [Direkter Link zur Quelle]
+```
+
+### **VERBOTENE VAGE AUSSAGEN:**
+```
+❌ "Ich ändere die Homepage"
+❌ "Basierend auf deinen Vorgaben"  
+❌ "Wie besprochen"
+❌ "Den Inhalt anpassen"
+
+✅ "Ersetze Zeile 23-25 in index.astro mit Text aus briefing_dokument.md Zeile 67"
+✅ "Hero-Titel ändern basierend auf C:\...\umpositionierungs-konzept.md"
+✅ "CTA-Button Text aus C:\...\konzept.md Abschnitt 'Handlungsaufforderung'"
+```
+
+### **BEWEISPFLICHT-PROTOKOLL:**
+```
+VOR JEDER ÄNDERUNG:
+1. Quelldokument EXPLIZIT nennen
+2. Exakte Zeilen/Abschnitte angeben
+3. Original-Text zitieren
+4. Neue Version mit Beweis rechtfertigen
+5. Direkte Pfade zu Dokumenten verlinken
+```

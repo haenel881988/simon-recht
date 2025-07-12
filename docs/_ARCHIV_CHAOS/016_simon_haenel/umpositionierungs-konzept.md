@@ -24,12 +24,11 @@
 ## 🎯 NEUE POSITIONIERUNG
 
 ### **NEUE BRAND-IDENTITY:**
-**"Simon Haenel - Der Mann, der mit KI gegen Großkonzerne gewann"**
+**"Mindset schlägt Grosskonzern"**
 
 ### **NEUE VALUE PROPOSITION (ÜBERARBEITET):**
-*"Du wirst ungerecht behandelt? Mindset schlägt Grosskonzern vor Gericht (BV.2024.00062) mithilfe der KI"*
+*"Willst du wissen wie ich einen Grosskonzern vor Gericht besiegt habe?"*
 
-Hoffnung auf Entschädigungsforderungen hätten vermieden können durch 
 
 ### **NEUE ZIELGRUPPEN:**
 Menschen mit juristischen Problemen.

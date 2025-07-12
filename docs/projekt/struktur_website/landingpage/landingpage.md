@@ -1,5 +1,7 @@
 # LANDINGPAGE-STRUKTUR simon-recht
 
+KEINE ANIMATION AUF DER LANDINGPAGE, SCHON GAR KEINE BILDER-ANIMATION!!!
+
 **Methodik:** PAS-Framework (Problem, Agitate, Solution) + Hölle/Himmel-Prinzip
 **Tonalität:** Anklagend, direkt, konfrontativ - "Du"-Ansprache
 **Ziel:** Komplette Website für juristische Selbsthilfe mit KI
