@@ -123,7 +123,7 @@ Und dazu gehört auch meine Meinung.
 Wer damit nicht leben kann - ist höflich ausgeladen, sich nicht mit mir in Kontakt zu treten.
 Ich helfe gerne Menschen, ich liebe es Menschen zu helfen. Neulich war ich bei einer Frau die Probleme hatte mit ihrem Computer.
 Als ich ihr sagte, moment mal - ich zeige dir wie das funktioniert, weil sie ja alles macht, was falsch ist - meinte sie: "Was für eine Frechheit / Arroganz, ich wäre der depp." Ich habe nachgedoppelt und ihr gesagt, schau mal dein Desktop an, da sind 1000 Dateien, Ordner und Programme drauf, die völlig chaotisch sind, Kalender, mails, einfach alles durcheinander.
-Als ich ihr sagte: "Der Desktop spiegelt dein innerer geistiger Zustand wieder" wurde sie übergriff und sagte tatsächlich: "Halt die Fre....Klappte du bist bei mir und ich du willst Geld verdienen, du bist der Depp."
+Als ich ihr sagte: "Der Desktop spiegelt dein innerer geistiger Zustand wieder" wurde sie übergriff und sagte tatsächlich: "Halt die Fre....Klappe du bist bei mir und ich du willst Geld verdienen, du bist der Depp."
 Ich erwiederte nur: "Meinst du, ich bin auf dein sch... Geld angewiesen? Was denkst du warum ich da bin? um dich abzuzocken? Meinst du ich will dein erbärmliches Geld womit du dich identifizierst? Nein, ich will dir helfen, ich will dir zeigen, wie du dein Laptop und Leben in den Griff bekommst."
 Dieser Moment, diese Erlösung, diese Erkenntnis, dass hätte ich eine Frau, hätte ich klein beigegeben, ich meine Frustration meiner Frau ausgelassen hätte - was ja gang und gäbe ist, Nein. Ich entschied mich, ihr knallhart die Wahrheit zu sagen.
 Das sie es Verstand, dass niemand ihr helfen möchte, nicht mal ihr Sohn. 
@@ -146,7 +146,7 @@ Ich weiss noch, als mir eine bekannte Person sagte:
 "Simon, Recht haben und Recht bekommen sind zwei verschiedene Dinge."
 Nun, dass diese Person völlig falsch lag, beweist das Gerichtsurteil mit der Aktennummer: BV.2024.00062 vom 02.07.2025.
 
-
+Und allen zu zeigen 
 
 Ich will somit alle betroffenen Menschen ermutigen, sich zu wehren, aufzustehen gegen diese korrupten, egoistischen und narzisstischen Grosskonzerne, die sich über Menschen stellen, die sie als Nummern in ihren Akten betrachten.
 Diese Willkür und diese Kalkül muss einhalt geboten werden.
