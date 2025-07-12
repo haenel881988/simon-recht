@@ -16,7 +16,11 @@ Dabei werden folgende Methoden und Techniken angewendet:
     - Storytelling --> Dabei erzähle ich meine (Hölle / Himmel Prinzip) Story, um die Leser emotional abzuholen und sie in die Geschichte einzutauchen die nach dem AIDA oder PAS Prinzip aufgebaut ist mit hypnotischen Sprachmustern.
 
 
+Fokus 1: Website fertigstellen und live schalten.
 
+Fokus 2: Content erstellen (Blog, Social Media), der auf die Wartelisten-Landingpage führt.
+
+Fokus 3: Das E-Book schreiben.
 
 ## Struktur der Website
 

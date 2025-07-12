@@ -1,5 +1,9 @@
 # 📝 BLOG-STRATEGIE: Radikale Wahrheiten statt Marketing-Bullshit
 
+Radikale Wahrheiten statt Marketing-Bullshit
+
+
+
 **Status:** Neu erstellt - Verzeichnis war leer  
 **Stil:** Simons authentische Sprache + verkaufspsychologische Struktur
 **Ziel:** Trust-Building durch konfrontative Ehrlichkeit
@@ -15,8 +19,9 @@
 - ❌ Generische Motivationssprüche
 
 ### **IMMER SCHREIBEN:**
-- ✅ "Warum du selbst dein größter Feind bist"
-- ✅ "Die harte Wahrheit über..."
+- ✅ "Warum du selbst dein größter Feind bist" --> Vorsicht, niemals implizieren, immer explizitieren, dass der Leser selbst sein größter Feind ist. Beispiel:
+"Handelst du oder wirst du behandelt?" --> das ist explizit. Er denkt über seine eigene Handlung nach, Trigger! ob gut oder schlecht, ist egal. Den wer nicht auffällt, fällt weg!
+- ✅ "Die harte Wahrheit über..." --> Was und welche Wahrheit??? die harte wahrheit impliziert, dass das nur generischer Müll ist! Beispiel: "Wer jammert hat keine Zeit zum gewinnen!"
 - ✅ "Hier ist was niemand dir sagt über..."
 - ✅ Konkrete Praxisbeispiele mit Beweisen
 
