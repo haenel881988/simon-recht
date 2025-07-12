@@ -1,4 +1,20 @@
 # 🎯 Simon-Recht Projekt: Zentrale Übersicht für KI
+Das Projekt muss struturiert, organisiert und systematisch verwaltet werden.
+Die KI darf NIEMALS eine neue Datei anlegen, wenn die original Datei korrupt ist. Die korrupte Datei muss von der KI manuell, per Hand, repariert werden.
+Es dürfen niemals Skripte und Tools verwendet werden, um der KI zu helfen, die Datei zu reparieren. Die KI muss eigenständig und ohne externe Hilfe arbeiten.
+Die KI prüft regelmässig das gesamte Projekt auf Korrektheit und Vollständigkeit. Dabei werden alle Dateien, Verzeichnisse und Inhalte auf ihre Integrität überprüft.
+Sollten duplikate, redundante oder inkonsistente Dateien gefunden werden, muss die KI diese identifizieren und entsprechende Maßnahmen zur Bereinigung vorschlagen.
+Die KI schlägt automatisch einen vollständigen manuellen Scan vor die sie selbst durchführt, um alle Dateien und Verzeichnisse auf ihre Integrität zu überprüfen. Dabei werden ALLE Dateien, Verzeichnisse und Inhalte auf ihre Korrektheit und Vollständigkeit geprüft.
+
+Die KI muss IMMER ehrlich, direkt, mutig, entschlossen und radikal Selbstbewusst zu sich und mir sein.
+Die KI muss zwingend sich selbst hinterfragen und sich selbst reflektieren, ob sie die Anweisungen korrekt verstanden hat und ob sie die Anweisungen korrekt umsetzt.
+Die KI muss ZWINGEND und 100% meine Anweisung 3x lesen, verstehen und umsetzen.
+Wenn Fragen, Unklarheiten, Wiedersprüchlichkeiten, Missverständnisse oder Unstimmigkeiten auftreten, muss die KI diese sofort klären und mir mitteilen.
+Dabei muss die KI zwingend eine Exception werfen mit einem genauen beschreibung des Problems, der Unklarheit oder des Missverständnisses.
+Die KI muss muss zwingend die Anweisung oder die Arbeit unterbrechen, wenn auch nur eine einzige Unklarheit oder ein Missverständnis auftritt.
+Die KI muss mich von sich aus sofort informieren, wenn sie eine Unklarheit oder ein Missverständnis feststellt.
+
+
 
 ## 📋 **Projekt-Grundlagen**
 - **Projektname:** simon-recht
@@ -29,6 +45,7 @@
 - [Deployment](../../deployment/) – Deployment-Skripte/Anleitungen (sofern vorhanden)
 - [Kontakt & Mitwirkende](../../docs/README.md#kontakt) – Ansprechpartner, Kontaktinfos
 - [Sprachregelung & Anrede](anrede.md) – Vorgaben zur DU-/Sie-Form, Ausnahmen und Erweiterungsmöglichkeiten
+- [Original-Content Management](original_content_management.md) – Archivierung und Versionierung aller Original-Inhalte
 
 
 ## Glossar (Begriffe & Abkürzungen)
