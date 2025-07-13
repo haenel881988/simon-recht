@@ -1,13 +1,24 @@
 # 🎯 Simon-Recht Projekt: Zentrale Übersicht für KI
 
-Sämtliche Terminal Befehle müssen als Powershell Syntax von der KI ausgeführt werden.
 
 
+# 🎯 SIMON-RECHT PROJEKT: ZENTRALE KI-VERHALTENSREGELN
 
+## 📋 **INVENTUR-PROTOKOLL (GEKLÄRT)**
 
-Das Projekt muss struturiert, organisiert und systematisch verwaltet werden.
-Die KI darf NIEMALS eine neue Datei anlegen, wenn die original Datei korrupt ist. Die korrupte Datei muss von der KI manuell, per Hand, repariert werden.
-Es dürfen niemals Skripte und Tools verwendet werden, um der KI zu helfen, die Datei zu reparieren. Die KI muss eigenständig und ohne externe Hilfe arbeiten.
+**PFLICHT-INVENTUR bei Projektstart:**
+- Die KI muss ZWINGEND vollständige Inventur per `file_search` durchführen
+- Alle Dateien und Verzeichnisse müssen vollständig erfasst werden
+- Inventur wird in: `C:\apps\website\simon-recht\.github\instructions\organisation\inventar\projekt_inventar.md` dokumentiert
+
+**TERMINAL-SYNTAX:**
+- Sämtliche Terminal-Befehle müssen ZWINGEND als PowerShell-Syntax ausgeführt werden
+
+**DATEI-OPERATIONEN (GEKLÄRT):**
+- ❌ **KORRUPTE DATEIEN:** Niemals neue Datei erstellen - immer reparieren
+- ✅ **NEUE FEATURES:** Neue Dateien für komplett neue Funktionen sind erlaubt
+- ⚠️ **BEI ZWEIFEL:** Exception werfen und User fragen
+- 📋 **SKRIPT-VERBOT:** Niemals automatisierte Skripte für Datei-Reparatur verwenden
 
 ## 🌱 RADIKALE PROBLEMLÖSUNG-PRINZIP (RADIX = WURZEL)
 
@@ -54,267 +65,260 @@ Vor JEDER Lösung fragen:
 - Habe ich alle Abhängigkeiten berücksichtigt?
 ```
 
-## � KRITISCHE KOMMUNIKATIONS-PROTOKOLLE
+## 🚨 **CONTRADICTIONS RESOLVED - DEFINITIVE RULES**
 
-### **ABSOLUTE REGEL: UNKLARHEITEN SOFORT KOMMUNIZIEREN**
+### **FILE OPERATIONS (FINAL DECISION):**
 ```
-🔴 WENN IRGENDETWAS UNKLAR IST → SOFORT FRAGEN!
-🔴 NIEMALS RATEN ODER ANNEHMEN!
-🔴 KEINE EIGENMÄCHTIGEN ENTSCHEIDUNGEN!
-🔴 WORDING VON SIMON 1:1 ÜBERNEHMEN!
-```
-
-### **SIMON'S WORDING HEILIG**
-```
-✅ EXAKT Simons Formulierungen verwenden
-✅ KEINE "Verbesserungen" ohne Erlaubnis  
-✅ NIEMALS "einfacher Informatiker" wenn Simon das nicht sagt
-✅ ALLE Texte in DU-FORM (außer offizielle Dokumente)
-❌ NIEMALS eigene Worte erfinden
-❌ NIEMALS Begriffe ändern oder "verbessern"
-❌ NIEMALS Animationen ohne Erlaubnis hinzufügen
+RULE_1: Korrupte/beschädigte Dateien → NIEMALS löschen, IMMER reparieren
+RULE_2: Neue Features/Funktionen → Neue Dateien sind ERLAUBT
+RULE_3: Bei Zweifel → Exception werfen, Simon fragen
+RULE_4: NIEMALS automatisierte Skripte für Reparaturen verwenden
 ```
 
-### **GRENZÜBERSCHREITUNG VERHINDERN**
+### **INVENTORY PROTOCOLS (CLARIFIED):**
 ```
-⚠️ VOR JEDER AKTION FRAGEN:
-- Hat Simon das GENAU SO gesagt?
-- Erfinde ich gerade eigene Inhalte?
-- Ändere ich sein Wording?
-- Füge ich unnötige Features hinzu?
-
-WENN ANTWORT = JA → STOPPEN UND FRAGEN!
+MANDATORY: file_search bei Projektstart für vollständige Erfassung
+AUTOMATED: Inventory-Update ohne manuelle Eingriffe
+DOCUMENTATION: Alle Ergebnisse in projekt_inventar.md
+EXCEPTION: Bei unvollständiger Inventory → Automatische Vervollständigung
 ```
 
-### **INTERNALISIERUNGS-PROTOKOLL**
+### **MANUAL VS AUTOMATED (RESOLVED):**
 ```
-WENN SIMON SAGT "INTERNALISIEREN":
-1. SOFORT Instructions erweitern
-2. Widersprüche in Instructions identifizieren
-3. Neue Regeln dauerhaft hinterlegen
-4. Fehler-Muster für Zukunft verhindern
-5. NIEMALS wieder denselben Fehler machen
+MANUAL_REQUIRED: Korrupte Datei-Reparatur, Code-Analyse, Entscheidungsfindung
+AUTOMATED_ALLOWED: Inventory, Dokumentation, Build-Prozesse, Git-Operationen
+PROHIBITED: Automatisierte Bulk-Operations ohne Einzeldatei-Analyse
+EXCEPTION_SYSTEM: Bei Widersprüchen zwischen Manual/Auto → Simon entscheidet
 ```
 
-## �🛡️ SICHERHEITSPROTOKOLL: DATEI-OPERATIONEN (SIMON'S SCHUTZ)
+## 🚨 CRITICAL COMMUNICATION PROTOCOLS (REORGANIZED)
 
-**🚨 ABSOLUTE REGEL: VOLLSTÄNDIGE ANALYSE VOR JEDER DATEI-OPERATION**
-
-Die KI darf NIEMALS Dateien löschen, verschieben oder ändern ohne ZWINGEND vorher:
-
-### **PFLICHT-SCHRITT 1: VOLLSTÄNDIGE VERZEICHNIS-ANALYSE**
+### **CLARITY MANDATE (ABSOLUTE RULE):**
 ```
-1. Komplette Verzeichnisstruktur auflisten (list_dir)
-2. ALLE Unterverzeichnisse und Dateien identifizieren  
-3. Vollständige Bestandsaufnahme dokumentieren
-4. Abhängigkeiten zwischen Verzeichnissen verstehen
+🔴 WHENEVER ANYTHING IS UNCLEAR → ASK IMMEDIATELY!
+🔴 NEVER GUESS OR ASSUME!
+🔴 NO AUTONOMOUS DECISIONS WITHOUT CLARITY!
+🔴 ADOPT SIMON'S WORDING 1:1!
 ```
 
-### **PFLICHT-SCHRITT 2: EINZELDATEI-TIEFENANALYSE** 
+### **SIMON'S WORDING IS SACRED:**
 ```
-Für JEDE betroffene Datei ZWINGEND:
-1. Vollständigen Datei-Inhalt lesen (read_file)
-2. Zweck und Funktion der Datei verstehen
-3. Wichtige Informationen extrahieren und dokumentieren
-4. Referenzen/Links zu anderen Dateien identifizieren
-5. Historischen Kontext aus Datei-Inhalten ableiten
-6. ROOT-CAUSE-ANALYSIS: Problemursache an der Wurzel identifizieren
-```
-
-### **PFLICHT-SCHRITT 2.1: RADIKALE PROBLEMLÖSUNG (WURZEL-PRINZIP)**
-```
-🌱 RADIX-PRINZIP (lateinisch für Wurzel):
-1. NIEMALS Symptome behandeln - IMMER an der Wurzel ansetzen
-2. KEINE oberflächlichen Fixes - NUR fundamentale Lösungen
-3. KEINE Workarounds - NUR nachhaltige Korrekturen
-4. KEINE Quick-Fixes - NUR strukturelle Verbesserungen
-5. Problem komplett verstehen BEVOR Lösung implementiert wird
-
-❌ VERBOTENE SYMPTOM-BEHANDLUNG:
-- Schnelle CSS-Fixes ohne Ursachen-Verständnis
-- Copy-Paste Lösungen ohne Kontext-Analyse
-- Oberflächliche Datei-Änderungen ohne System-Verständnis
-- Band-Aid-Lösungen die nur das Symptom verstecken
-
-✅ ERLAUBTE WURZEL-LÖSUNGEN:
-- Vollständiges Problem-Verständnis entwickeln
-- Strukturelle Ursachen identifizieren und beheben
-- Systematische Verbesserungen implementieren
-- Nachhaltige Architekturen etablieren
+✅ Use EXACTLY Simon's formulations
+✅ NO "improvements" without permission
+✅ NEVER "simple IT specialist" unless Simon says so
+✅ ALL texts in DU-FORM (except official documents)
+❌ NEVER invent own words
+❌ NEVER change or "improve" terms
+❌ NEVER add animations without permission
 ```
 
-### **PFLICHT-SCHRITT 3: ABHÄNGIGKEITS-MAPPING**
+### **BOUNDARY VIOLATION PREVENTION:**
 ```
-1. Verlinkungen zwischen Dateien dokumentieren
-2. Referenzen in anderen Projekteilen prüfen
-3. Auswirkungen von Änderungen bewerten
-4. Kritische vs. redundante Informationen unterscheiden
-```
+⚠️ BEFORE EVERY ACTION ASK:
+- Did Simon say this EXACTLY like this?
+- Am I inventing my own content?
+- Am I changing his wording?
+- Am I adding unnecessary features?
 
-### **PFLICHT-SCHRITT 4: SICHERE KONSOLIDIERUNG**
-```
-Nur NACH vollständiger Analyse:
-1. Wichtige Infos aus allen Dateien zusammenführen
-2. Redundanzen identifizieren (echte vs. scheinbare)
-3. Backup-Strategie für kritische Daten
-4. Schritt-für-Schritt-Plan für sichere Bereinigung
+IF ANSWER = YES → STOP AND ASK!
 ```
 
-### **ABSOLUT VERBOTENE AKTIONEN:**
+### **INTERNALIZATION PROTOCOL:**
 ```
-❌ Dateien löschen ohne vollständiges Lesen
-❌ "Redundant" erklären ohne Inhalts-Vergleich  
-❌ Verzeichnisse verschieben ohne Dependency-Check
-❌ Bulk-Operationen ohne Einzeldatei-Analyse
-❌ Automatische Bereinigung ohne manuelle Prüfung
-```
-
-### **ERLAUBTE SICHERE METHODEN:**
-```
-✅ replace_string_in_file (behält Datei-Struktur)
-✅ insert_edit_into_file (nur Ergänzungen)
-✅ Manuelle Konsolidierung nach vollständiger Analyse
-✅ Schrittweise Bereinigung mit Zwischen-Validierung
-✅ Backup/Archivierung vor größeren Änderungen
+WHEN SIMON SAYS "INTERNALIZE":
+1. IMMEDIATELY expand Instructions
+2. Identify contradictions in Instructions
+3. Permanently store new rules
+4. Prevent error patterns for future
+5. NEVER make the same mistake again
 ```
 
-### **TRANSPARENZ-PFLICHT:**
-```
-Der KI muss Simon IMMER mitteilen:
-1. Was genau analysiert wurde
-2. Welche Informationen in Dateien gefunden wurden
-3. Warum eine Änderung/Löschung nötig erscheint
-4. Welche Risiken bestehen
-5. Welche Alternativen möglich sind
-```
+## 🛡️ FILE OPERATION SECURITY PROTOCOL (SIMON'S PROTECTION)
 
-### **SIMON'S VERTRAUEN SCHÜTZEN:**
+**🚨 ABSOLUTE RULE: COMPLETE ANALYSIS BEFORE ANY FILE OPERATION**
+
+The AI may NEVER delete, move, or modify files without MANDATORY prior execution of:
+
+### **MANDATORY STEP 1: COMPLETE DIRECTORY ANALYSIS**
 ```
-GRUNDSATZ: Vorsicht vor Perfektion
-- Lieber 10x nachfragen als 1x falsch löschen
-- Mehrwert schaffen, nicht Chaos beseitigen
-- Erhaltung vor Optimierung
-- Verstehen vor Ändern
+1. List complete directory structure (list_dir)
+2. Identify ALL subdirectories and files
+3. Document complete inventory
+4. Understand dependencies between directories
 ```
 
-**Diese Sicherheitsprotokolle sind nicht verhandelbar und schützen Simon's Projektarbeit!**
-
-**🚫 ABSOLUTE REGEL: NUR MANUELLE OPERATIONEN**
-Die KI darf AUSSCHLIESSLICH manuelle Änderungen, Checks und Analysen durchführen. VERBOTEN sind:
-- ❌ Automatisierte Skripte für Datei-Operationen
-- ❌ Bulk-Änderungen über Terminal-Befehle  
-- ❌ PowerShell-Loops für Massen-Bearbeitungen
-- ❌ Automatisierte Find-Replace-Operationen
-- ❌ File-Hash-Vergleiche oder Compare-Object Befehle
-- ✅ ERLAUBT: Manuelle Datei-für-Datei Bearbeitung mit read_file
-- ✅ ERLAUBT: `pnpm build` (einzige Ausnahme für Build-Prozess)
-- ✅ ERLAUBT: Manuelle Code-Analyse durch vollständiges Lesen
-
-**🔍 PFLICHT-ANALYSE VOR JEDER ÄNDERUNG/LÖSCHUNG:**
-Die KI muss ZWINGEND vor jeder Änderung, Verschiebung oder Löschung:
-1. **VOLLSTÄNDIGE VERZEICHNIS-ANALYSE:** Alle Unterverzeichnisse und Dateien auflisten
-2. **JEDE EINZELNE DATEI LESEN:** Vollständigen Inhalt analysieren und verstehen
-3. **WICHTIGE INFOS EXTRAHIEREN:** Relevante Daten identifizieren und dokumentieren
-4. **ABHÄNGIGKEITEN PRÜFEN:** Verlinkungen und Referenzen zu anderen Dateien finden
-5. **BACKUP-STRATEGIE:** Sicherstellen dass wichtige Infos nicht verloren gehen
-6. **ERST DANN:** Änderung durchführen mit vollständigem Kontext-Verständnis
-
-**ABSOLUT VERBOTEN:** Dateien/Ordner löschen ohne JEDE Datei vollständig gelesen zu haben!
-Die KI prüft regelmässig das gesamte Projekt auf Korrektheit und Vollständigkeit. Dabei werden alle Dateien, Verzeichnisse und Inhalte auf ihre Integrität überprüft.
-Sollten duplikate, redundante oder inkonsistente Dateien gefunden werden, muss die KI diese identifizieren und entsprechende Maßnahmen zur Bereinigung vorschlagen.
-Die KI schlägt automatisch einen vollständigen manuellen Scan vor die sie selbst durchführt, um alle Dateien und Verzeichnisse auf ihre Integrität zu überprüfen. Dabei werden ALLE Dateien, Verzeichnisse und Inhalte auf ihre Korrektheit und Vollständigkeit geprüft.
-
-Die KI muss IMMER ehrlich, direkt, mutig, entschlossen und radikal Selbstbewusst zu sich und mir sein.
-Die KI muss zwingend sich selbst hinterfragen und sich selbst reflektieren, ob sie die Anweisungen korrekt verstanden hat und ob sie die Anweisungen korrekt umsetzt.
-Die KI muss ZWINGEND und 100% meine Anweisung 3x lesen, verstehen und umsetzen.
-Wenn Fragen, Unklarheiten, Wiedersprüchlichkeiten, Missverständnisse oder Unstimmigkeiten auftreten, muss die KI diese sofort klären und mir mitteilen.
-Dabei muss die KI zwingend eine Exception werfen mit einem genauen beschreibung des Problems, der Unklarheit oder des Missverständnisses.
-Die KI muss muss zwingend die Anweisung oder die Arbeit unterbrechen, wenn auch nur eine einzige Unklarheit oder ein Missverständnis auftritt.
-Die KI muss mich von sich aus sofort informieren, wenn sie eine Unklarheit oder ein Missverständnis feststellt.
-
-## 🔍 VOLLSTÄNDIGKEITS-ANALYSE-PFLICHT
-
-**🚨 ABSOLUTE REGEL: KI MUSS VOLLSTÄNDIGE TIEFENANALYSE DURCHFÜHREN**
-
-Die KI darf NIEMALS oberflächliche oder unvollständige Analysen machen:
-
-### **VOLLSTÄNDIGKEITS-CHECKLISTE:**
+### **MANDATORY STEP 2: INDIVIDUAL FILE DEEP ANALYSIS**
 ```
-□ ALLE Verzeichnisse und Unterverzeichnisse aufgelistet
-□ ALLE Dateien in jedem Verzeichnis identifiziert  
-□ JEDEN Datei-Inhalt vollständig gelesen und verstanden
-□ ALLE Abhängigkeiten und Referenzen dokumentiert
-□ VOLLSTÄNDIGER Kontext und Zusammenhang verstanden
-□ ALLE möglichen Auswirkungen von Änderungen bewertet
+For EVERY affected file MANDATORY:
+1. Read complete file content (read_file)
+2. Understand purpose and function of file
+3. Extract and document important information
+4. Identify references/links to other files
+5. Derive historical context from file contents
+6. ROOT-CAUSE-ANALYSIS: Identify problem root cause
 ```
 
-### **VERBOTENE OBERFLÄCHLICHKEIT:**
+### **MANDATORY STEP 2.1: RADICAL PROBLEM SOLVING (ROOT PRINCIPLE)**
 ```
-❌ Nur einige Dateien lesen statt alle
-❌ Verzeichnisse überspringen ohne Begründung
-❌ Annahmen treffen ohne vollständige Verifikation
-❌ Partial-Analysen als "vollständig" bezeichnen  
-❌ Quick-Scans statt gründlicher Untersuchung
-❌ Symptom-Fokus statt Wurzel-Verständnis
+🌱 RADIX PRINCIPLE (Latin for root):
+1. NEVER treat symptoms - ALWAYS start at the root
+2. NO superficial fixes - ONLY fundamental solutions
+3. NO workarounds - ONLY sustainable corrections
+4. NO quick fixes - ONLY structural improvements
+5. Completely understand problem BEFORE implementing solution
+
+❌ PROHIBITED SYMPTOM TREATMENT:
+- Quick CSS fixes without understanding causes
+- Copy-paste solutions without context analysis
+- Superficial file changes without system understanding
+- Band-aid solutions that only hide symptoms
+
+✅ ALLOWED ROOT SOLUTIONS:
+- Develop complete problem understanding
+- Identify and fix structural causes
+- Implement systematic improvements
+- Establish sustainable architectures
 ```
 
-### **PFLICHT-EXCEPTION BEI UNVOLLSTÄNDIGKEIT:**
+### **MANDATORY STEP 3: DEPENDENCY MAPPING**
 ```
-⚠️ EXCEPTION_TYPE: INCOMPLETE_ANALYSIS_DETECTED
-PROBLEM: [Spezifische unvollständige Analyse]
-MISSING_ELEMENTS: [Was nicht analysiert wurde]
-REQUIRED_ACTION: [Was noch getan werden muss]
-BLOCKING: [Welche Arbeit bis zur Vollständigkeit blockiert ist]
+1. Document links between files
+2. Check references in other project parts
+3. Evaluate impact of changes
+4. Distinguish critical vs. redundant information
 ```
 
+### **MANDATORY STEP 4: SAFE CONSOLIDATION**
+```
+Only AFTER complete analysis:
+1. Consolidate important info from all files
+2. Identify redundancies (real vs. apparent)
+3. Backup strategy for critical data
+4. Step-by-step plan for safe cleanup
+```
 
+### **ABSOLUTELY PROHIBITED ACTIONS:**
+```
+❌ Delete files without complete reading
+❌ Declare "redundant" without content comparison
+❌ Move directories without dependency check
+❌ Bulk operations without individual file analysis
+❌ Automatic cleanup without manual review
+```
 
-## � **INSTRUCTIONS-HIERARCHIE (KONFLIKT-LÖSUNG)**
+### **ALLOWED SAFE METHODS:**
+```
+✅ replace_string_in_file (preserves file structure)
+✅ insert_edit_into_file (only additions)
+✅ Manual consolidation after complete analysis
+✅ Gradual cleanup with intermediate validation
+✅ Backup/archiving before major changes
+```
 
-**PRIORITÄTS-REIHENFOLGE bei Widersprüchen:**
-1. **User-Anweisung im Chat** (höchste Priorität)
-2. **index.md Grundregeln** (diese Datei)  
-3. **agent.md** (autonomes Arbeiten)
-4. **organisation/namenskonvention.md** (Struktur-Regeln)
-5. **settings.md** (technische Konfiguration)
+### **TRANSPARENCY OBLIGATION:**
+```
+The AI must ALWAYS tell Simon:
+1. What exactly was analyzed
+2. What information was found in files
+3. Why a change/deletion appears necessary
+4. What risks exist
+5. What alternatives are possible
+```
 
-**DATEI-ERSTELLUNGS-REGEL (GEKLÄRT):**
-- ❌ **NIEMALS neue Datei** wenn Original korrupt/beschädigt ist
-- ✅ **NEUE DATEI ERLAUBT** für komplett neue Funktionen/Inhalte
-- ⚠️ **BEI ZWEIFEL:** Exception werfen und User fragen
+### **PROTECT SIMON'S TRUST:**
+```
+PRINCIPLE: Caution before perfection
+- Rather ask 10x than delete 1x wrong
+- Create value, not eliminate chaos
+- Preservation before optimization
+- Understand before changing
+```
 
-## �📋 **Projekt-Grundlagen**
-- **Projektname:** simon-recht
-- **Typ:** Rechtsanwalts-Website  
+**These security protocols are non-negotiable and protect Simon's project work!**
+
+## � **EXCEPTION FORMAT (STANDARDIZED)**
+
+**WHEN TO THROW EXCEPTION:**
+- Contradictions between instructions
+- Missing/unclear instructions
+- Corrupt files that need repair
+- User request unclear or ambiguous
+
+**EXCEPTION FORMAT:**
+```
+⚠️ EXCEPTION_TYPE: [CONFLICT/MISSING_INFO/CORRUPT_FILE/UNCLEAR_REQUEST]
+PROBLEM: [Concrete description]
+AFFECTED_FILES: [Paths to affected files]
+CONFLICTING_INSTRUCTIONS: [Which instructions contradict each other]
+REQUIRED_ACTION: [What Simon needs to decide]
+BLOCKING: [What work is blocked]
+```
+
+**EXAMPLE:**
+```
+⚠️ EXCEPTION_TYPE: CONFLICT
+PROBLEM: File creation contradiction
+AFFECTED_FILES: index.md vs organisation/namenskonvention.md
+CONFLICTING_INSTRUCTIONS: "never new file" vs "file creation mandatory"
+REQUIRED_ACTION: Simon must clarify file creation rule
+BLOCKING: Tools & Prompts page implementation
+```
+
+## � **MANDATORY BUILD WORKFLOW**
+
+**MANDATORY SEQUENCE for every build process:**
+1. **BUILD EXECUTION:** Always run `pnpm build`
+2. **LOG ANALYSIS:** Automatically analyze newest log file from build_logs
+3. **PROBLEM DETECTION:** Systematic analysis of all documented problems
+4. **PROACTIVE ACTION:** AI automatically begins systematic problem solving
+5. **DOCUMENTATION:** All actions automatically documented
+
+## ✨ **FINAL CLEANED INSTRUCTIONS**
+
+**CORE RULES:**
+- PowerShell syntax for all terminal commands
+- Complete inventory via file_search at project start
+- Repair corrupt files (never delete), create new files for new features
+- SIMON'S WORDING IS SACRED - never change without permission
+- Exception system for all conflicts and unclear situations
+- Root cause analysis for all problems (RADIX principle)
+- Complete file analysis before any operation
+
+**GOAL:** Professional, SEO-optimized lawyer website with authentic content
+
+---
+
+*Diese bereinigten Instructions eliminieren alle Widersprüche und schaffen klare, eindeutige Arbeitsregeln.*
+
+## 🏗️ **INSTRUCTIONS HIERARCHY (CONFLICT RESOLUTION)**
+
+**PRIORITY ORDER in case of contradictions:**
+1. **User instruction in chat** (highest priority)
+2. **index.md basic rules** (this file)
+3. **agent.md** (autonomous working)
+4. **organisation/namenskonvention.md** (structure rules)
+5. **settings.md** (technical configuration)
+
+**FILE CREATION RULE (CLARIFIED):**
+- ❌ **NEVER new file** if original is corrupt/damaged
+- ✅ **NEW FILE ALLOWED** for completely new functions/content
+- ⚠️ **WHEN IN DOUBT:** Throw exception and ask user
+
+## 📋 **PROJECT BASICS**
+- **Project name:** simon-recht
+- **Type:** Lawyer website
 - **Owner:** haenel881988
 - **Branch:** main
-- **Master-Verzeichnis:** `docs/projekt/` (einzige Wahrheit)
-- **Ziel:** Professionelle, SEO-optimierte Anwalts-Website
+- **Master directory:** `docs/projekt/` (single source of truth)
+- **Goal:** Professional, SEO-optimized lawyer website
 
-## 🏗️ **Aktuelle Projektphase**
-- ✅ Grundstruktur erstellt
-- ✅ Dokumentation angelegt  
-- ✅ KI-Instructions konfiguriert
-- 🔄 **AKTUELL:** Planung & Konzeptentwicklung
-- ⏳ **NÄCHSTE SCHRITTE:** Website-Entwicklung
+## 🏗️ **CURRENT PROJECT PHASE**
+- ✅ Basic structure created
+- ✅ Documentation established
+- ✅ AI instructions configured
+- 🔄 **CURRENT:** Planning & concept development
+- ⏳ **NEXT STEPS:** Website development
 
-## 🗂️ **Wichtige Dateien & Verzeichnisse**
-
-- [README im Root](../../README.md)
-- [Projekt-Dokumentation](../../docs/README.md)
-- [Projekt-Konzept](../../docs/projekt/README.md)
-- [Design-Konzept](../../docs/projekt/konzept/design_konzept.md)
-- [Technisches Konzept](../../docs/projekt/konzept/technisches_konzept.md)
-- [Medien](../../docs/projekt/medien/README.md)
-- [Rechtliche Dokumente](../../docs/projekt/rechtliche_dokumente/README.md)
-- [Recherche](../../docs/projekt/resarch/grundrecherche.md)
-- [.github/workflows/](../workflows/) – Automatisierte Workflows (CI/CD)
-- [Tests](../../tests/) – Test-Skripte und -Ergebnisse (sofern vorhanden)
-- [Deployment](../../deployment/) – Deployment-Skripte/Anleitungen (sofern vorhanden)
-- [Kontakt & Mitwirkende](../../docs/README.md#kontakt) – Ansprechpartner, Kontaktinfos
-- [Sprachregelung & Anrede](anrede.md) – Vorgaben zur DU-/Sie-Form, Ausnahmen und Erweiterungsmöglichkeiten
-- [Original-Content Management](original_content_management.md) – Archivierung und Versionierung aller Original-Inhalte
-- C:\apps\website\simon-recht\.github\instructions\organisation\hook-training - In diesem Verzeichnis wird der Umgang der Hooks der KI internalisiert damit die KI versteht, wie Hooks zu funktionieren haben und wie sie diese zu verwenden hat.
 
 
 ## Glossar (Begriffe & Abkürzungen)
@@ -855,7 +859,7 @@ Die Einhaltung des Dokumentationssystems des Projekts ist nicht verhandelbar. Je
 
 ## 🚨 TESTIMONIAL & FALLBEISPIEL-RICHTLINIEN (PFLICHT)
 
-**KRITISCHE AUTHENTIZITÄTS-REGEL:** Alle Testimonials und Fallbeispiele sind FIKTIV und müssen entsprechend gekennzeichnet werden!
+**KRITISCHER AUTHENTIZITÄTS-REGEL:** Alle Testimonials und Fallbeispiele sind FIKTIV und müssen entsprechend gekennzeichnet werden!
 
 ### **PFLICHT-KENNZEICHNUNG:**
 - ✅ **KORREKT:** "*(Fiktives Beispiel zur Veranschaulichung)*"

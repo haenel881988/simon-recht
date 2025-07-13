@@ -7,7 +7,10 @@
 
 ### **Kernbotschaft:** "Mindset schlägt Grosskonzern"
 ### **Zielgruppe:** Schweizer/Deutsche im DACH-Raum gegen Grosskonzerne  
-### **Tonalität:** Professionell, kämpferisch, vertrauenswürdig, direkt
+### **Tonalität:**
+Stil und Wording hier abschauen:
+"C:\apps\website\simon-recht\docs\_ARCHIV_CHAOS\016_simon_haenel\simon_geschichte\fallbeispiel_Story_formatted.md"
+
 
 ## 🎨 **FARBEN (Farbpalette)**
 

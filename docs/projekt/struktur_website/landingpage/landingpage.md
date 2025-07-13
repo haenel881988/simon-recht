@@ -8,6 +8,17 @@ KEINE ANIMATION AUF DER LANDINGPAGE, SCHON GAR KEINE BILDER-ANIMATION!!!
 
 ## 🏠 **LANDINGPAGE (PAS-Framework)**
 
+
+**Navigation:**
+ - Links oben: Simon Haenel
+ - Rechts oben:
+    - Startseite
+    - Über mich
+    - Blog
+    - Kontakt
+    
+
+
 ### **SEKTION 1: PROBLEM**
 **Psychologisches Ziel:** Sofortige Wiedererkennung - "Das ist mein Problem!"
 
@@ -15,9 +26,12 @@ KEINE ANIMATION AUF DER LANDINGPAGE, SCHON GAR KEINE BILDER-ANIMATION!!!
 Layout: zwei spalten, Hintergrundfarbe: Schwarz
 
 **linke Spalte:**
-- **Headline:** "Du kämpfst nach den Regeln. Dein Gegner nicht. Deshalb verlierst Du."
-- **Sub-Headline:** "Wenn du das Gefühl hast, gegen eine unsichtbare Wand aus Bürokratie, Willkür und internen Spielchen anzukämpfen, dann ist das kein Zufall. Es ist das System."
-- **Trust-Badge:** "⚖️ Gerichtsurteil BV.2024.00062 - GEWONNEN"
+- **Headline:** "Mindset schlägt Grosskonzern"
+- **Sub-Headline:** "Willst du Wissen wie ich einen Grosskonzern vor Gericht besiegt habe?"
+
+- **CTA-Button:** "Jetzt Fallbeispiel lesen"
+
+- **Trust-Badge:** "⚖️ Gerichtsurteil BV.2024.00062"
 
 **rechte Spalte:**
 Bild-URL: "C:\apps\website\simon-recht\docs\projekt\medien\bilder\simon_haenel_entschlossen.webp"
