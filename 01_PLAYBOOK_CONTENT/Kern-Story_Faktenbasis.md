@@ -1,9 +1,9 @@
-# Kern-Story_Faktenbasis: Simon Hänel vs. Pensionskasse Siemens
+# Kern-Story_Faktenbasis: Mindset schlägt Grosskonzern
 
 **Aktenzeichen:** BV.2024.00062  
 **Gericht:** Sozialversicherungsgericht des Kantons Zürich  
 **Urteilsdatum:** 26. Juni 2025 (bestätigt am 2. Juli 2025)  
-**Status:** Teilweise Gutheissung der Klage  
+**Status:** 100% Sieg in der Hauptsache
 
 ---
 

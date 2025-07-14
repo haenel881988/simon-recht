@@ -29,6 +29,9 @@ Bild: public\assets\images\simon_haenel_entschlossen.webp
 
 ***2. Abschnitt: "Der innere Kampf den niemand sieht"*** <!-- D - Desire -->
 
-***3. Abschnitt: "Die Recht-Methode"*** <!-- A - Action -->
+***3. Abschnitt: "Anmeldung Newsletter / Anmeldung schriftlicher Onlinekurs"*** <!-- Action -->
+
+Die ersten 15 Personen dürfen am Beta-Programm des schriftlichen Onlinekurses teilnehmen und erhalten diesen kostenlos.
+
 
 
