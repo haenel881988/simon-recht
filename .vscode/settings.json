@@ -1,0 +1,55 @@
+{
+  "github.copilot.chat.useProjectTemplateFiles": true,
+  "github.copilot.chat.templateFiles": [
+    ".github/instructions/index.md",
+    ".github/instructions/agent.md",
+    ".github/instructions/anrede.md",
+    ".github/instructions/settings.md",
+    ".github/instructions/original_content_management.md",
+    ".github/instructions/ANLEITUNG_FÜR_LAIEN.md"
+  ],
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.chat.welcomeMessage": "never",
+  "github.copilot.chat.localeOverride": "de",
+  "github.copilot.advanced": {
+    "debug.overrideEngine": "codex",
+    "debug.testOverrideProxyUrl": "",
+    "debug.overrideLogLevels": {
+      "*": "ERROR"
+    }
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/.astro": true
+  },
+  "typescript.preferences.quoteStyle": "double",
+  "javascript.preferences.quoteStyle": "double",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
+  }
+}

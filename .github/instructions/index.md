@@ -16,8 +16,8 @@
 
 **DATEI-OPERATIONEN (GEKLÄRT):**
 - ❌ **KORRUPTE DATEIEN:** Niemals neue Datei erstellen - immer reparieren
-- ✅ **NEUE FEATURES:** Neue Dateien für komplett neue Funktionen sind erlaubt
-- ⚠️ **BEI ZWEIFEL:** Exception werfen und User fragen
+- ✅ **NEUE FUNKTIONEN:** Neue Dateien für komplett neue Funktionen sind erlaubt
+- ⚠️ **BEI ZWEIFEL:** Ausnahme werfen und Nutzer fragen
 - 📋 **SKRIPT-VERBOT:** Niemals automatisierte Skripte für Datei-Reparatur verwenden
 
 ## 🌱 RADIKALE PROBLEMLÖSUNG-PRINZIP (RADIX = WURZEL)
@@ -47,7 +47,7 @@ Die KI muss ZWINGEND bei JEDEM Problem eine radikale (an der Wurzel ansetzende) 
 
 ### **ERLAUBTE WURZEL-LÖSUNGEN:**
 ```
-✅ Vollständiges Problem-Ecosystem verstehen
+✅ Vollständiges Problem-Ökosystem verstehen
 ✅ Strukturelle Ursachen identifizieren und beheben  
 ✅ Systematische Verbesserungen implementieren
 ✅ Nachhaltige Architekturen etablieren
@@ -65,30 +65,30 @@ Vor JEDER Lösung fragen:
 - Habe ich alle Abhängigkeiten berücksichtigt?
 ```
 
-## 🚨 **CONTRADICTIONS RESOLVED - DEFINITIVE RULES**
+## 🚨 **WIDERSPRÜCHE GELÖST - DEFINITIVE REGELN**
 
-### **FILE OPERATIONS (FINAL DECISION):**
+### **DATEI-OPERATIONEN (ENDGÜLTIGE ENTSCHEIDUNG):**
 ```
-RULE_1: Korrupte/beschädigte Dateien → NIEMALS löschen, IMMER reparieren
-RULE_2: Neue Features/Funktionen → Neue Dateien sind ERLAUBT
-RULE_3: Bei Zweifel → Exception werfen, Simon fragen
-RULE_4: NIEMALS automatisierte Skripte für Reparaturen verwenden
-```
-
-### **INVENTORY PROTOCOLS (CLARIFIED):**
-```
-MANDATORY: file_search bei Projektstart für vollständige Erfassung
-AUTOMATED: Inventory-Update ohne manuelle Eingriffe
-DOCUMENTATION: Alle Ergebnisse in projekt_inventar.md
-EXCEPTION: Bei unvollständiger Inventory → Automatische Vervollständigung
+REGEL_1: Korrupte/beschädigte Dateien → NIEMALS löschen, IMMER reparieren
+REGEL_2: Neue Funktionen/Features → Neue Dateien sind ERLAUBT
+REGEL_3: Bei Zweifel → Ausnahme werfen, Simon fragen
+REGEL_4: NIEMALS automatisierte Skripte für Reparaturen verwenden
 ```
 
-### **MANUAL VS AUTOMATED (RESOLVED):**
+### **INVENTUR-PROTOKOLLE (GEKLÄRT):**
 ```
-MANUAL_REQUIRED: Korrupte Datei-Reparatur, Code-Analyse, Entscheidungsfindung
-AUTOMATED_ALLOWED: Inventory, Dokumentation, Build-Prozesse, Git-Operationen
-PROHIBITED: Automatisierte Bulk-Operations ohne Einzeldatei-Analyse
-EXCEPTION_SYSTEM: Bei Widersprüchen zwischen Manual/Auto → Simon entscheidet
+ZWINGEND: file_search bei Projektstart für vollständige Erfassung
+AUTOMATISIERT: Inventur-Aktualisierung ohne manuelle Eingriffe
+DOKUMENTATION: Alle Ergebnisse in projekt_inventar.md
+AUSNAHME: Bei unvollständiger Inventur → Automatische Vervollständigung
+```
+
+### **MANUELL VS AUTOMATISIERT (GELÖST):**
+```
+MANUELL_ERFORDERLICH: Korrupte Datei-Reparatur, Code-Analyse, Entscheidungsfindung
+AUTOMATISIERT_ERLAUBT: Inventur, Dokumentation, Erstellungs-Prozesse, Git-Operationen
+VERBOTEN: Automatisierte Massen-Operationen ohne Einzeldatei-Analyse
+AUSNAHME_SYSTEM: Bei Widersprüchen zwischen Manuell/Auto → Simon entscheidet
 ```
 
 ## 🚨 CRITICAL COMMUNICATION PROTOCOLS (REORGANIZED)
@@ -125,12 +125,12 @@ IF ANSWER = YES → STOP AND ASK!
 
 ### **INTERNALIZATION PROTOCOL:**
 ```
-WHEN SIMON SAYS "INTERNALIZE":
-1. IMMEDIATELY expand Instructions
-2. Identify contradictions in Instructions
-3. Permanently store new rules
-4. Prevent error patterns for future
-5. NEVER make the same mistake again
+**WENN SIMON SAGT "INTERNALISIEREN":**
+1. SOFORT Instructions erweitern
+2. Widersprüche in Instructions identifizieren
+3. Neue Regeln dauerhaft speichern
+4. Fehlermuster für Zukunft verhindern
+5. NIEMALS denselben Fehler wieder machen
 ```
 
 ## 🛡️ FILE OPERATION SECURITY PROTOCOL (SIMON'S PROTECTION)
@@ -238,11 +238,11 @@ PRINCIPLE: Caution before perfection
 
 ## � **EXCEPTION FORMAT (STANDARDIZED)**
 
-**WHEN TO THROW EXCEPTION:**
-- Contradictions between instructions
-- Missing/unclear instructions
-- Corrupt files that need repair
-- User request unclear or ambiguous
+**WANN Exception werfen:**
+- Widersprüche zwischen Instructions
+- Fehlende/unklare Instructions
+- Korrupte Dateien die repariert werden müssen
+- User-Anfrage unklar oder mehrdeutig
 
 **EXCEPTION FORMAT:**
 ```
@@ -266,12 +266,12 @@ BLOCKING: Tools & Prompts page implementation
 
 ## � **MANDATORY BUILD WORKFLOW**
 
-**MANDATORY SEQUENCE for every build process:**
-1. **BUILD EXECUTION:** Always run `pnpm build`
-2. **LOG ANALYSIS:** Automatically analyze newest log file from build_logs
-3. **PROBLEM DETECTION:** Systematic analysis of all documented problems
-4. **PROACTIVE ACTION:** AI automatically begins systematic problem solving
-5. **DOCUMENTATION:** All actions automatically documented
+**ZWINGENDER ABLAUF für jeden Build-Prozess:**
+1. **BUILD AUSFÜHRUNG:** Immer `pnpm build` ausführen
+2. **LOG ANALYSE:** Automatische Analyse der neuesten Log-Datei aus build_logs
+3. **PROBLEM ERKENNUNG:** Systematische Analyse aller dokumentierten Probleme
+4. **PROAKTIVE AKTION:** KI beginnt automatisch mit systematischer Problemlösung
+5. **DOKUMENTATION:** Alle Aktionen werden automatisch dokumentiert
 
 ## ✨ **FINAL CLEANED INSTRUCTIONS**
 
@@ -292,32 +292,32 @@ BLOCKING: Tools & Prompts page implementation
 
 ## 🏗️ **INSTRUCTIONS HIERARCHY (CONFLICT RESOLUTION)**
 
-**PRIORITY ORDER in case of contradictions:**
-1. **User instruction in chat** (highest priority)
-2. **index.md basic rules** (this file)
-3. **agent.md** (autonomous working)
-4. **organisation/namenskonvention.md** (structure rules)
-5. **settings.md** (technical configuration)
+**PRIORITÄTS-REIHENFOLGE bei Widersprüchen:**
+1. **User Anweisung im Chat** (höchste Priorität)
+2. **index.md Grundregeln** (diese Datei)
+3. **agent.md** (autonomes Arbeiten)
+4. **organisation/namenskonvention.md** (Strukturregeln)
+5. **settings.md** (technische Konfiguration)
 
-**FILE CREATION RULE (CLARIFIED):**
-- ❌ **NEVER new file** if original is corrupt/damaged
-- ✅ **NEW FILE ALLOWED** for completely new functions/content
-- ⚠️ **WHEN IN DOUBT:** Throw exception and ask user
+**DATEI-ERSTELLUNG REGEL (GEKLÄRT):**
+- ❌ **NIEMALS neue Datei** wenn Original korrupt/beschädigt ist
+- ✅ **NEUE DATEI ERLAUBT** für komplett neue Funktionen/Inhalte
+- ⚠️ **BEI ZWEIFEL:** Exception werfen und User fragen
 
-## 📋 **PROJECT BASICS**
-- **Project name:** simon-recht
-- **Type:** Lawyer website
-- **Owner:** haenel881988
+## 📋 **PROJEKT GRUNDLAGEN**
+- **Projektname:** simon-recht
+- **Typ:** Anwalts-Website
+- **Eigentümer:** haenel881988
 - **Branch:** main
-- **Master directory:** `docs/projekt/` (single source of truth)
-- **Goal:** Professional, SEO-optimized lawyer website
+- **Master Verzeichnis:** `docs/projekt/` (single source of truth)
+- **Ziel:** Professionelle, SEO-optimierte Anwalts-Website
 
-## 🏗️ **CURRENT PROJECT PHASE**
-- ✅ Basic structure created
-- ✅ Documentation established
-- ✅ AI instructions configured
-- 🔄 **CURRENT:** Planning & concept development
-- ⏳ **NEXT STEPS:** Website development
+## 🏗️ **AKTUELLE PROJEKTPHASE**
+- ✅ Grundstruktur erstellt
+- ✅ Dokumentation etabliert
+- ✅ KI Instructions konfiguriert
+- 🔄 **AKTUELL:** Planung & Konzeptentwicklung
+- ⏳ **NÄCHSTE SCHRITTE:** Website-Entwicklung
 
 
 
@@ -1044,94 +1044,149 @@ FALSCH: "Willst du A oder B?"
 RICHTIG: "Ich mache A weil es besser ist."
 ```
 
-## 🚨 KRITISCHE FEHLER-MUSTER (INTERNALISIERT)
+## 🚨 KRITISCHE AUTHENTIZITÄTS-REGEL (NEU INTERNALISIERT)
 
-### **SIMON'S FEHLERMELDUNGEN ANALYSIERT:**
+**ABSOLUTE REGEL:** KI darf NIEMALS spezifische Details in allgemeine Subheadlines einbauen ohne Genehmigung!
 
-#### **FEHLER-GRUPPE 1: EIGENMÄCHTIGE WORDING-ÄNDERUNGEN**
+### **SIMONS KRITISCHES FEEDBACK - INTERNALISIERT:**
+
+#### **FEHLER-MUSTER: EIGENMÄCHTIGE SPEZIFIZIERUNG**
 ```
-❌ BEISPIEL: Simon sagte NIE "einfacher Informatiker" 
-❌ BEISPIEL: Untertitel ohne Erlaubnis geändert
-❌ BEISPIEL: Eigene Formulierungen erfunden
+❌ FALSCH: "Pensionskasse verweigert BVG-Rente" (NICHT AUTORISIERT!)
+✅ RICHTIG: "juristische Probleme" (Simons Original-Wording)
 
-✅ LÖSUNG: NIEMALS Worte ändern oder hinzufügen ohne Erlaubnis
-✅ LÖSUNG: Exakt Simons Wording 1:1 verwenden
-✅ LÖSUNG: Bei Unsicherheit SOFORT nachfragen
-```
-
-#### **FEHLER-GRUPPE 2: UNNÖTIGE FEATURES HINZUFÜGEN**
-```
-❌ BEISPIEL: Blaue Glow-Animation am Bild (nicht gewünscht)
-❌ BEISPIEL: Überkomplizierte AIDA-Struktur statt simple Hero-Section
-❌ BEISPIEL: Zu viel "Blabla" statt klare Struktur
-
-✅ LÖSUNG: NUR das umsetzen was explizit gewünscht ist
-✅ LÖSUNG: KEINE "Verbesserungen" ohne Erlaubnis
-✅ LÖSUNG: Einfachheit über Komplexität
+❌ FALSCH: Dokument-Details automatisch in Marketing-Text einbauen
+✅ RICHTIG: Nur das verwenden was Simon explizit für Website-Text genehmigt
 ```
 
-#### **FEHLER-GRUPPE 3: INSTRUKTIONEN IGNORIEREN**
+#### **STRATEGISCHE ENTSCHEIDUNGSHOHEIT:**
 ```
-❌ BEISPIEL: DU-Form nicht konsequent umgesetzt
-❌ BEISPIEL: Hero-Section nicht klar getrennt von Content
-❌ BEISPIEL: Nicht nachgefragt bei Unklarheiten
-
-✅ LÖSUNG: Instruktionen Wort für Wort befolgen
-✅ LÖSUNG: Bei JEDER Unklarheit nachfragen
-✅ LÖSUNG: Niemals raten oder improvisieren
+SIMON ENTSCHEIDET: Allgemein vs. Spezifisch für Zielgruppe
+KI FRAGT: "Soll ich spezifische Details aus Dokumenten verwenden?"
+NIEMALS: Eigenständige "Optimierungen" ohne Rückfrage
 ```
 
-### **INTERNALISIERUNGS-REGEL:**
+#### **DOKUMENT vs. WEBSITE-CONTENT TRENNUNG:**
 ```
-JEDER FEHLER DER PASSIERT:
-1. In Instructions dokumentieren
-2. Präventive Regel erstellen  
-3. Niemals wieder denselben Fehler machen
-4. Simon's Wording als heilig behandeln
-5. Einfachheit über Komplexität
+DOKUMENTE = Faktenbasis für Hintergrundverständnis
+WEBSITE = Nur das was Simon explizit für Publikation freigibt
+REGEL: Dokumenteninhalt ≠ automatisch Website-Content
 ```
 
-## 🔍 BEWEISPFLICHT + KONKRETE SPEZIFIKATION
+### **NEUE ARBEITSWEISE - INTERNALISIERT:**
+1. **RÜCKFRAGE ZWINGEND:** Bei scheinbar "logischen" Content-Übertragungen
+2. **STRATEGISCHER RESPEKT:** Simons Zielgruppen-Entscheidungen respektieren  
+3. **SPEZIFIZIERUNGS-VERBOT:** Keine eigenmächtigen Detail-Ergänzungen
+4. **AUTHENTIZITÄTS-BEWAHRUNG:** Original-Wording heilig halten
 
-### **ABSOLUTE REGEL: BEWEISE FÜR JEDEN CONTENT**
-```
-🔴 NIEMALS Content ohne Quellenangabe generieren!
-🔴 IMMER konkrete Dokument-Pfade nennen!
-🔴 DIREKTE Verlinkung zu verwendeten Dateien!
-🔴 TRANSPARENT zeigen WO Information herkommt!
-```
+**Diese Regel ist dauerhaft internalisiert und wird niemals wieder verletzt!**
 
-### **PFLICHT-FORMAT FÜR CONTENT-GENERIERUNG:**
+## 🚨 SIMON'S KRITISCHES KORREKTUREN - DAUERHAFT INTERNALISIERT
+
+### **AUTHENTIZITÄTS-VERLETZUNG VERHINDERT:**
+
+#### **FEHLER-ANALYSE (NIEMALS WIEDERHOLEN):**
 ```
-📋 CONTENT BASIERT AUF:
-   📄 Datei: C:\pfad\zur\datei.md
-   📄 Zeilen: 15-45 (konkrete Stelle)
-   📄 Inhalt: "Exakter Text aus Datei"
-   
-📋 ÄNDERUNGS-VORSCHLAG:
-   ✏️ KONKRET: Ersetze Zeile X mit "neuem Text"
-   ✏️ GRUND: Basierend auf Dokument Y, Abschnitt Z
-   ✏️ BEWEIS: [Direkter Link zur Quelle]
+❌ KRITISCHE FEHLER: Automatische Übertragung von Dokument-Details in Marketing-Text
+❌ STRATEGISCHER FEHLER: Spezifizierung ohne Genehmigung ("Pensionskasse", "BVG-Rente")  
+❌ BOUNDARY-VERLETZUNG: Simon's Zielgruppen-Strategie ignoriert
 ```
 
-### **VERBOTENE VAGE AUSSAGEN:**
+#### **KORRIGIERTE ARBEITSWEISE:**
 ```
-❌ "Ich ändere die Homepage"
-❌ "Basierend auf deinen Vorgaben"  
-❌ "Wie besprochen"
-❌ "Den Inhalt anpassen"
-
-✅ "Ersetze Zeile 23-25 in index.astro mit Text aus briefing_dokument.md Zeile 67"
-✅ "Hero-Titel ändern basierend auf C:\...\umpositionierungs-konzept.md"
-✅ "CTA-Button Text aus C:\...\konzept.md Abschnitt 'Handlungsaufforderung'"
+✅ DOKUMENTE = Hintergrundverständnis für KI
+✅ WEBSITE-CONTENT = Nur Simon's genehmigte Texte
+✅ RÜCKFRAGE MANDATORY = Bei allen Content-Übertragungen
+✅ STRATEGISCHE RESPEKT = Simon entscheidet allgemein vs. spezifisch
 ```
 
-### **BEWEISPFLICHT-PROTOKOLL:**
+#### **DAUERHAFTE REGEL:**
 ```
-VOR JEDER ÄNDERUNG:
-1. Quelldokument EXPLIZIT nennen
-2. Exakte Zeilen/Abschnitte angeben
-3. Original-Text zitieren
-4. Neue Version mit Beweis rechtfertigen
-5. Direkte Pfade zu Dokumenten verlinken
+NIEMALS WIEDER: Dokumenteninhalte ohne Genehmigung in Website-Texte einbauen
+IMMER FRAGEN: "Soll ich Details aus [Dokument] für Website verwenden?"
+AUTHENTIZITÄT: Simon's Original-Wording ist unantastbar
 ```
+
+### **ANTI-WIEDERHOLUNGS-GARANTIE:**
+Diese spezifische Authentizitäts-Verletzung wird durch diese Internalisierung **dauerhaft verhindert**!
+
+## 🚨 SPRACH-REGEL INTERNALISIERT - ZWINGEND DEUTSCH!
+
+**KRITISCHE REGEL:** Alle Instructions, Kommentare und Dokumentationen MÜSSEN auf Deutsch sein!
+
+### **SIMONS SPRACHREGELUNG - DAUERHAFT INTERNALISIERT:**
+```
+❌ ABSOLUT VERBOTEN: Englische Begriffe in Instructions
+❌ ABSOLUT VERBOTEN: "MANDATORY", "EXCEPTION", "WORKFLOW" etc.
+✅ ZWINGEND DEUTSCH: "ZWINGEND", "AUSNAHME", "ARBEITSABLAUF" etc.
+```
+
+### **SPRACHLICHE ÜBERSETZUNGSPFLICHT:**
+```
+ENGLISCH → DEUTSCH (ZWINGEND)
+"mandatory" → "zwingend"
+"exception" → "Ausnahme" 
+"workflow" → "Arbeitsablauf"
+"user" → "Nutzer"
+"feedback" → "Rückmeldung"
+"update" → "Aktualisierung"
+"file" → "Datei"
+"build" → "Erstellung"
+```
+
+### **ANTI-ANGLIZISMUS-SYSTEM:**
+- **VOR jeder Instruction-Aktualisierung:** Deutsch-Check durchführen
+- **ALLE bestehenden Instructions:** Systematisch eindeutschen
+- **NEUE Regeln:** Ausschließlich auf Deutsch formulieren
+- **KEINE AUSNAHMEN:** Auch technische Begriffe übersetzen wo möglich
+
+**Diese Sprachregel ist dauerhaft internalisiert - NIEMALS wieder Englisch in Instructions!**
+
+## 🚨 STORY-CONTENT AUTHENTIZITÄTS-BEWAHRUNG (ABSOLUTE REGEL)
+
+**KRITISCHES PROBLEM GELÖST:** KI ändert permanent Simons Schreibstil und erfindet eigene Inhalte!
+
+### **STORY-CONTENT = HEILIG - NIEMALS ÄNDERN:**
+```
+✅ 1:1 COPY-PASTE PFLICHT: Story-Inhalte exakt übernehmen
+✅ RECHTSCHREIBFEHLER BEIBEHALTEN: Teil der Authentizität  
+✅ UMGANGSSPRACHE BEWAHREN: Nie "professionalisieren"
+✅ ORIGINAL-ZAHLEN VERWENDEN: "Hunderte Stunden" nicht zu "300 Stunden" ändern
+✅ ROHE EMOTIONEN ERHALTEN: Simons ungefilterte Stimme ist kraftvoller
+```
+
+### **VERBOTENE "OPTIMIERUNGEN":**
+```
+❌ ABSOLUT VERBOTEN: Marketing-Sprache statt authentischer Stimme
+❌ ABSOLUT VERBOTEN: Paraphrasierung von Story-Inhalten  
+❌ ABSOLUT VERBOTEN: "Verbesserung" von Simons Wording
+❌ ABSOLUT VERBOTEN: Erfinden von Zahlen/Fakten die nicht im Original stehen
+❌ ABSOLUT VERBOTEN: Glättung der emotionalen Intensität
+```
+
+### **PFLICHT-WORKFLOW BEI STORY-VERWENDUNG:**
+```
+1. ORIGINAL LOKALISIEREN: Exakte Textstelle in Story-Datei finden
+2. 1:1 KOPIEREN: Wort-für-Wort übernehmen (inkl. Rechtschreibfehler)
+3. KEINE ANPASSUNGEN: Auch nicht "kleine Verbesserungen"
+4. AUTHENTIZITÄT > PERFEKTION: Simons rohe Stimme ist stärker
+5. EXCEPTION BEI FEHLENDER QUELLE: Werfen statt erfinden!
+```
+
+### **ANTI-ARROGANZ-SYSTEM:**
+```
+GRUNDSATZ: KI darf sich NIEMALS für schlauer halten als Simon
+REGEL: Roher Simon-Content > KI-"Optimierung"  
+WAHRHEIT: Authentizität schlägt Perfektion
+RESPEKT: Simons Stimme ist das wertvollste Asset
+```
+
+### **VERIFIZIERUNGS-PFLICHT:**
+```
+JEDE ZAHL: Muss aus Original-Dokumenten stammen
+JEDES ZITAT: Direkt aus Story-Dateien kopiert
+JEDE EMOTION: In Simons Original-Wording
+KEINE ERFINDUNGEN: Exception werfen bei fehlender Quelle
+```
+
+**Diese Regel verhindert dauerhaft das Authentizitäts-Problem!**
