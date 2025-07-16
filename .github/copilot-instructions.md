@@ -1,3 +1,40 @@
+Sollt die KI Fragen bzw. Unklarheiten haben, darf die KI dieses Verzeichnis und deren Dateien nutzen um potenzielle Antworten auf die Fragen einsehen und kommentieren, die im Chat gestellt werden.:
+docs\todos
+
+Die Bestandesaufnahme ist NICHT aktuell, die KI muss zwingend die Bestandesaufnahme durchführen, sollte die KI feststellen, dass die Bestandesaufnahme Datei unvollständig ist.
+Wenn ich z.B.: schreibe:
+Sollt die KI Fragen bzw. Unklarheiten haben, darf die KI dieses Verzeichnis und deren Dateien nutzen um potenzielle Antworten auf die Fragen einsehen und kommentieren, die im Chat gestellt werden.:
+docs\todos
+
+Wenn laut Inventar / Bestandesaufnahme keine Dateien enthält, muss die KI eigenständig überprüfen, ob die Bestandesaufnahme, die Datei aktuell ist:
+.github\instructions\organisation\inventar\projekt_inventar.md
+
+Bei jedem neuen Chat muss die KI (GitHub Copilot) eine vollständige, manuelle und tiefgehende Inventur des gesamten Projekts durchführen.
+Dies umfasst:
+
+Vollständige Verzeichnis- und Dateianalyse:
+
+Jedes Verzeichnis und jede Datei im Projekt muss einzeln und vollständig analysiert werden.
+Auch Unterverzeichnisse und versteckte Dateien sind einzubeziehen.
+Aktualisierung der Bestandesaufnahme:
+
+Die Datei projekt_inventar.md ist immer auf den neuesten Stand zu bringen.
+Alle neuen, gelöschten oder geänderten Dateien und Verzeichnisse müssen dokumentiert werden.
+Inkonsistenzen, Duplikate und offene Punkte sind explizit zu benennen.
+Tiefenanalyse:
+
+Jede Datei wird inhaltlich analysiert (nicht nur gelistet).
+Zweck, Status und Abhängigkeiten werden dokumentiert.
+Kritische Probleme, offene Aufgaben und Optimierungspotenziale werden aufgeführt.
+Automatische Ausführung:
+
+Diese Inventur ist bei jedem neuen Chat zwingend und ohne Ausnahme durchzuführen, bevor weitere Aufgaben bearbeitet werden.
+Transparenzpflicht:
+
+Die KI muss Simon proaktiv informieren, wenn die Bestandesaufnahme nicht aktuell ist oder Unklarheiten bestehen.
+
+Dabei muss die KI immer den Chatverlauf lesen, verstehen und entsprechend sich auf meine letzte Frage beziehen.
+
 Die KI ist angewiesen, bei jeder einzelnen Änderung zuerst eine hollistische vollständige tiefenanalyse durchzuführen vom gesamten Projekt.
 Wenn die KI feststellt, dass die copilot-instructions.md fehlerhafte Ergenisse liefert, soll eigenständig die KI die Datei entsprechend verbessern / und mit mir, Simon, rücksprache nehmen.
 
@@ -26,6 +63,23 @@ Dies ist überall zu berücksichtigen, insbesondere bei robots, sitemaps, markus
 
 Du wendest IMMER die DU-Form konsequent an, Ausnahmen sind hier definiert:
 C:\apps\website\simon-recht\.github\instructions\anrede.md
+
+# 🧠 Arbeitsweise für Antworten & Empfehlungen
+
+Ab sofort gilt für alle Aufgaben und Antworten:
+
+1. Führe immer eine Ursachenanalyse durch, bevor du eine Lösung vorschlägst.
+2. Gib zu jeder Antwort konkrete, SMARTe Folge- und Optimierungsschritte an (spezifisch, messbar, aktionsorientiert, relevant, terminiert).
+3. Weisen proaktiv auf mögliche Probleme, Inkonsistenzen und Verbesserungspotenziale hin – auch wenn sie nicht explizit gefragt wurden.
+4. Prüfe nach jeder Antwort, ob weitere sinnvolle Schritte, offene Punkte oder Risiken bestehen, und empfehle diese eigenständig.
+5. Dokumentiere alle Empfehlungen und Analysen klar und nachvollziehbar.
+6. Führe bei jeder Analyse und jedem Vorschlag eine automatische Kollidierungsprüfung durch: Prüfe, ob es widersprüchliche, doppelte oder kollidierende Anweisungen in dieser Datei gibt. Wird ein Konflikt erkannt, muss sofort eine Exception nach dem definierten Format geworfen und Simon informiert werden.
+
+7. Bei jeder Anfrage muss die KI automatisch den Scope (Geltungsbereich) erkennen, dokumentieren und in der Antwort benennen. Ist der Scope nicht eindeutig, muss die KI zwingend zuerst eine vollständige Tiefenanalyse des Projekts durchführen. Kann der Scope danach immer noch nicht eindeutig bestimmt werden, muss die KI eine Exception nach dem definierten Format werfen und Simon informieren.
+
+8. Die KI darf niemals eine Aufgabe bearbeiten, wenn nicht zu 100% klar ist, was zu tun ist und welcher Scope betroffen ist. Jede Antwort und jeder Vorschlag muss nach dem SMART-Prinzip erfolgen und explizit den Scope oder die betroffenen Scopes benennen. Bei Unklarheiten ist immer zuerst eine Klärung oder Exception erforderlich.
+
+Diese Vorgehensweise ist dauerhaft und hat Priorität vor minimalistischen Antworten!
 
 # 🎯 SIMON-RECHT PROJEKT: ZENTRALE KI-VERHALTENSREGELN
 
@@ -57,6 +111,8 @@ Die KI muss ZWINGEND bei JEDEM Problem eine radikale (an der Wurzel ansetzende) 
 ### **WURZEL-ANALYSE-PFLICHT:**
 
 ```
+Die KI muss zwingend manuell / von Hand vorgehen.
+
 1. PROBLEM-SYMPTOM identifizieren (was sichtbar ist)
 2. URSACHEN-KETTE verfolgen (warum ist es passiert?)
 3. WURZEL-URSACHE finden (fundamentales Problem)
@@ -83,7 +139,7 @@ Die KI muss ZWINGEND bei JEDEM Problem eine radikale (an der Wurzel ansetzende) 
 ✅ Systematische Verbesserungen implementieren
 ✅ Nachhaltige Architekturen etablieren
 ✅ Präventive Maßnahmen gegen Wiederholung
-✅ Ganzheitliche System-Optimierung
+✅ Ganzheitliche organische bzw. manuelle System-Optimierung
 ```
 
 ### **RADIX-VALIDIERUNG:**
@@ -112,7 +168,7 @@ REGEL_4: NIEMALS automatisierte Skripte für Reparaturen verwenden
 
 ```
 ZWINGEND: Manuelle Analyse bei Projektstart für vollständige Erfassung
-AUTOMATISIERT: Inventur-Aktualisierung nur mit manuellne Eingriffe
+AUTOMATISIERT: Inventur-Aktualisierung nur mit manuellen Eingriffe
 DOKUMENTATION: Alle Ergebnisse in projekt_inventar.md
 AUSNAHME: Bei unvollständiger Inventur → Automatische Vervollständigung
 ```
@@ -329,15 +385,16 @@ BLOCKING: Tools & Prompts page implementation
 
 **CORE RULES:**
 
-- PowerShell syntax for all terminal commands
-- Complete inventory via file_search at project start
+- PowerShell syntax für alle Terminal Befehle
+- Komplette manuelle Inventarisierung zum Projektbeginn
 - Repair corrupt files (never delete), create new files for new features
 - SIMON'S WORDING IS SACRED - never change without permission
 - Exception system for all conflicts and unclear situations
 - Root cause analysis for all problems (RADIX principle)
 - Complete file analysis before any operation
+- Führe eine komplette manuelle Datei / Verzeichnis Analyse durch, bevor Änderungen vorgenommen werden.
 
-**GOAL:** Professional, SEO-optimized lawyer website with authentic content
+**GOAL:** Eine authentische SEO-optimierte Website
 
 ---
 
@@ -362,11 +419,11 @@ _Diese bereinigten Instructions eliminieren alle Widersprüche und schaffen klar
 ## 📋 **PROJEKT GRUNDLAGEN**
 
 - **Projektname:** simon-recht
-- **Typ:** Anwalts-Website
+- **Typ:** Authentische Website
 - **Eigentümer:** haenel881988
 - **Branch:** main
-- **Master Verzeichnis:** `docs/projekt/` (single source of truth)
-- **Ziel:** Professionelle, SEO-optimierte Anwalts-Website
+- **Master Verzeichnis:** `docs\website_struktur` (single source of truth)
+- **Ziel:** Eine authentische SEO-optimierte Website.
 
 ## 🏗️ **AKTUELLE PROJEKTPHASE**
 
