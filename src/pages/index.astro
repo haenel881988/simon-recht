@@ -1,237 +1,314 @@
 ---
+import Layout from "../layouts/Layout.astro";
+
 const title = "Mindset schlägt Grosskonzern";
-const description = "Du willst wissen wie ich einen Grosskonzern juristisch in die Schranken wies?";
+const description =
+  "Vom Sektenkind mit ADHS zum Gerichtssieg - ohne Anwalt, gegen alle Erwartungen. Ich zeige dir, wie ich einen Grosskonzern vor Gericht geschlagen habe.";
 ---
 
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{title}</title>
-  <meta name="description" content={description}>
-</head>
-<body class="bg-gray-900 text-white">
-  <!-- Navigation -->
-  <nav class="bg-black shadow-lg border-b border-gray-700">
-    <div class="max-w-4xl mx-auto px-8 py-4">
-      <div class="flex justify-between items-center">
-        <a href="/" class="text-xl font-bold text-white">
-          🎯 Mindset schlägt Grosskonzern
-        </a>
-        <div class="flex space-x-6">
-          <a href="/" class="text-gray-300 hover:text-white">Home</a>
-          <a href="/blog" class="text-gray-300 hover:text-white">Meine Geschichte</a>
-          <a href="/beweise" class="text-gray-300 hover:text-white">Beweise</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+<Layout title={title}>
+  <!-- HERO-SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div
+        style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;"
+      >
+        <!-- Linke Spalte: Text -->
+        <div style="space-y: 2rem;">
+          <h1>Mindset schlägt Grosskonzern.</h1>
 
-  <!-- Main Content -->
-  <div class="min-h-screen">
-    
-    <!-- HERO-SECTION: Problem (PAS Framework) -->
-    <section class="bg-black py-20">
-      <div class="max-w-6xl mx-auto px-8">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-          
-          <!-- Linke Spalte: Text -->
-          <div class="space-y-8">
-            <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Du kämpfst nach den Regeln.<br>
-              Dein Gegner nicht.<br>
-              <span class="text-red-400">Deshalb verlierst du.</span>
-            </h1>
-            
-            <p class="text-xl text-gray-300 leading-relaxed">
-              Wenn du das Gefühl hast, gegen eine unsichtbare Wand aus Bürokratie, 
-              Willkür und internen Spielchen anzukämpfen, dann ist das kein Zufall. 
-              <strong class="text-white">Es ist das System.</strong>
-            </p>
-
-            <div class="bg-gray-900 border border-gray-700 p-6 rounded-lg">
-              <p class="text-green-400 font-bold text-lg">
-                ⚖️ Gerichtsurteil BV.2024.00062 - GEWONNEN
-              </p>
-            </div>
-          </div>
-          
-          <!-- Rechte Spalte: Bild (OHNE Animation) -->
-          <div class="flex justify-center lg:justify-end">
-            <img 
-              src="/assets/images/simon_haenel_entschlossen.webp" 
-              alt="Simon Haenel - Entschlossen im Kampf gegen Grosskonzerne"
-              class="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl shadow-2xl"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROBLEM-KONKRETISIERUNG -->
-    <section class="bg-gray-900 py-16">
-      <div class="max-w-6xl mx-auto px-8">
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <span class="text-2xl">😤</span>
-              <p class="text-gray-300">
-                <strong class="text-white">Du lieferst Fakten,</strong> aber diese werden nach den Interessen der Grosskonzerne ausgelegt!
-              </p>
-            </div>
-            
-            <div class="flex items-start space-x-4">
-              <span class="text-2xl">💸</span>
-              <p class="text-gray-300">
-                <strong class="text-white">Du bist loyal,</strong> aber deine Gutmütigkeit wird als Beweis für deinen Fehler umgedreht!
-              </p>
-            </div>
-          </div>
-          
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <span class="text-2xl">⚖️</span>
-              <p class="text-gray-300">
-                <strong class="text-white">Du hast Recht,</strong> aber du bekommst es nicht, weil die Interessen der Grosskonzerne größer sind als deine Wenigkeit!
-              </p>
-            </div>
-            
-            <div class="flex items-start space-x-4">
-              <span class="text-2xl">🏛️</span>
-              <p class="text-gray-300">
-                <strong class="text-white">Anwälte sind zu teuer</strong> und stellen dubiose Empfehlungen aus!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- AGITATION -->
-    <section class="bg-gray-800 py-16">
-      <div class="max-w-6xl mx-auto px-8 text-center">
-        <h2 class="text-4xl font-bold text-white mb-12">
-          Diese selbsternannten 'Jura-Anwälte' schätzen eine 10% Gewinn-Chance.<br>
-          <span class="text-green-400">Die KI rechnet mit einer Erfolgswahrscheinlichkeit von 95%!</span>
-        </h2>
-        
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <div class="text-center">
-            <p class="text-gray-300 italic">
-              "Suchen Sie das Gespräch", sagen sie.<br>
-              <span class="text-red-400">Als ob du das nicht schon versucht hättest.</span>
-            </p>
-          </div>
-          
-          <div class="text-center">
-            <p class="text-gray-300 italic">
-              "Bleiben Sie positiv", raten sie.<br>
-              <span class="text-red-400">Ein Ratschlag von jemandem, der noch nie wirklich gekämpft hat.</span>
-            </p>
-          </div>
-          
-          <div class="text-center">
-            <p class="text-gray-300 italic">
-              "Dokumentieren Sie alles", flüstern sie.<br>
-              <span class="text-red-400">Aber was nützt ein Berg an Beweisen, wenn Grosskonzerne diese willkürlich ignorieren?</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-gray-900 border border-gray-700 p-8 rounded-lg">
-          <h3 class="text-2xl font-bold text-white mb-4">
-            Die bittere Wahrheit:
-          </h3>
-          <div class="space-y-3 text-gray-300">
-            <p>Jeder Tag, den du zögerst, ist ein Tag, an dem das System gewinnt</p>
-            <p>Du bist nicht ausgebrannt, weil du zu schwach bist. Du bist ausgebrannt, weil du ein faires Spiel spielst, das nie fair sein sollte</p>
-            <p class="text-red-400 font-bold">Deine Freunde sagen dir, du seist nicht ganz dicht. Alleine mit KI gegen einen Grosskonzern? Das wäre einfach nur dumm!</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOLUTION -->
-    <section class="bg-black py-16">
-      <div class="max-w-6xl mx-auto px-8 text-center">
-        <h2 class="text-4xl font-bold text-white mb-8">
-          Es gibt einen Weg, das Spiel zu ändern. Hier ist der Beweis.
-        </h2>
-        
-        <div class="bg-gray-900 border border-green-600 p-8 rounded-lg mb-12">
-          <h3 class="text-2xl font-bold text-white mb-6">Die Fallstudie</h3>
-          <div class="space-y-4 text-gray-300">
-            <p>Ein Mann. Ein Schweizer Grosskonzern. Ein Rechtsstreit, der unmöglich schien.</p>
-            <p>Ohne Anwalt, nur mit radikal anderem Mindset und strategischem KI-Einsatz</p>
-            <p class="text-green-400 font-bold text-xl">
-              Ergebnis: Offizielles Urteil (BV.2024.00062) - Es ist einfach nur auf das Mindset zurückzuführen!
-            </p>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mb-12">
-          <div class="bg-gray-900 border border-gray-700 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-white mb-3">Die Goliath-Analyse</h4>
-            <p class="text-gray-300">Schwachstellen bürokratischer Systeme verstehen</p>
-          </div>
-          
-          <div class="bg-gray-900 border border-gray-700 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-white mb-3">Das KI-Playbook für Laien</h4>
-            <p class="text-gray-300">Ohne Vorkenntnisse zum Rechts-Analysten</p>
-          </div>
-          
-          <div class="bg-gray-900 border border-gray-700 p-6 rounded-lg">
-            <h4 class="text-xl font-bold text-white mb-3">Psychologische Kriegsführung</h4>
-            <p class="text-gray-300">Marathon bis zum Sieg durchhalten</p>
-          </div>
-        </div>
-
-        <!-- CALL TO ACTION -->
-        <div class="space-y-6">
-          <h3 class="text-3xl font-bold text-white">
-            Sichere dir deinen unfairen Vorteil. Jetzt.
-          </h3>
-          
-          <p class="text-xl text-gray-300 mb-8">
-            Erfahre meine komplette Strategie - von der ersten KI-Analyse bis zum Gerichtssieg
+          <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;">
+            Hast du juristische Probleme und suchst jemand, der den Weg gegangen
+            ist?
+            <strong
+              >Vom Sektenkind mit ADHS zum Gerichtssieg - ohne Anwalt, gegen
+              alle Erwartungen.</strong
+            >
+            Ich zeige dir, wie ich einen Grosskonzern vor Gericht geschlagen habe.
           </p>
-          
-          <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <a 
-              href="/blog"
-              class="bg-orange-600 text-white px-10 py-4 rounded-lg text-xl font-bold hover:bg-orange-700 transition"
-            >
-              Meine Geschichte lesen
-            </a>
-            
-            <a 
-              href="/beweise"
-              class="border-2 border-white text-white px-10 py-4 rounded-lg text-xl font-bold hover:bg-white hover:text-black transition"
-            >
-              Beweise ansehen
-            </a>
-          </div>
+        </div>
+
+        <!-- Rechte Spalte: Bild -->
+        <div style="text-align: center;">
+          <img
+            src="/assets/images/simon_haenel_entschlossen.webp"
+            alt="Simon Haenel - Entschlossen im Kampf gegen Grosskonzerne"
+            style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);"
+          />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <!-- PROOF OF CONCEPT -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">
+        Gerichtsurteil: Rechtskräftig bestätigt
+      </h2>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 border-t border-gray-700 text-gray-300 py-8">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="/impressum" class="text-gray-400 hover:text-gray-200">Impressum</a>
-        <a href="/datenschutz" class="text-gray-400 hover:text-gray-200">Datenschutz</a>
-        <a href="/disclaimer" class="text-gray-400 hover:text-gray-200">Disclaimer</a>
+      <div class="card" style="border: 2px solid #10B981; margin-bottom: 2rem;">
+        <blockquote
+          style="font-size: 1.25rem; font-style: italic; margin-bottom: 1rem;"
+        >
+          "Entsprechend ist nicht erwiesen, dass die Beschwerdeführerin eine
+          Falschangabe begangen hat, die den Entscheid des Grosskonzernes
+          rechtfertigen würde."
+        </blockquote>
+        <cite style="color: #10B981; font-weight: bold;">
+          Gerichtsurteil: BV.2024.00062 - Sozialversicherungsgericht des Kantons
+          Zürichs
+        </cite>
       </div>
-      <p class="text-gray-400">
-        Gerichtsurteil BV.2024.00062 - Der Beweis, dass Mindset Grosskonzern schlägt
-      </p>
-      <p class="text-gray-500 text-sm mt-2">
-        © 2025 Simon Haenel - Keine Rechtsberatung, nur persönliche Erfahrungen
+
+      <p style="font-size: 1.125rem; text-align: center;">
+        <strong
+          >Mit Hunderten Stunden systematischer Eigenarbeit, KI-Unterstützung
+          und unerschütterlichem Mindset</strong
+        >
+        habe ich einen Grosskonzern in die Schranken verwiesen. Als "Problemfall"
+        mit ADHS, der sich von Kindheit an nie unterordnen wollte -
+        <strong style="color: #10B981;"
+          >genau das wurde zu meiner Stärke.</strong
+        >
       </p>
     </div>
-  </footer>
-</body>
-</html>
+  </section>
+
+  <!-- DAS SYSTEM ARBEITET GEGEN DICH -->
+  <section
+    style="padding: 4rem 0; background-color: rgba(255, 255, 255, 0.05);"
+  >
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">
+        Das System arbeitet gegen dich
+      </h2>
+      <h3 style="text-align: center; margin-bottom: 2rem; color: #EF4444;">
+        Die bittere Wahrheit
+      </h3>
+
+      <div style="margin-bottom: 3rem;">
+        <p
+          style="font-size: 1.125rem; text-align: center; margin-bottom: 1.5rem;"
+        >
+          Ehrlichkeit wird bestraft. Grosskonzerne interpretieren Fakten zu
+          ihren Gunsten. Du fühlst dich machtlos gegen Bürokratie und
+          Verzögerungstaktiken.
+        </p>
+
+        <div
+          class="card"
+          style="border: 2px solid #EF4444; text-align: center;"
+        >
+          <p style="font-size: 1.25rem; font-weight: bold;">
+            Eine Anwaltskanzlei in Bern schätzte meine Chancen auf nur <span
+              style="color: #EF4444;">5%</span
+            >. ChatGPT hingegen auf <span style="color: #10B981;">95%</span>.
+          </p>
+        </div>
+
+        <p style="font-size: 1.125rem; text-align: center; margin-top: 1.5rem;">
+          Meine Mutter musste mich als Baby nach schwerer Geburt eine Woche lang
+          missen. Später Mobbing in der Schule, Verstecken auf Toiletten,
+          Sektenkindheit.
+          <strong
+            >Das System wollte mich klein halten - aber genau diese
+            "Anpassungsstörung" machte mich unbeugsam.</strong
+          >
+        </p>
+      </div>
+
+      <div style="text-align: center;">
+        <a
+          href="/blog/wenn-ehrlichkeit-bestraft-wird"
+          style="color: #F97316; text-decoration: underline;"
+        >
+          → Warum das System gegen dich arbeitet - vollständige Analyse
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEINE 3-SÄULEN-METHODE -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 2rem;">
+        Meine 3-Säulen-Methode
+      </h2>
+      <h3 style="text-align: center; margin-bottom: 3rem; opacity: 0.8;">
+        Wie ich es geschafft habe
+      </h3>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;"
+      >
+        <div class="card">
+          <h4 style="margin-bottom: 1rem;">A) Analytische Überlegenheit</h4>
+          <p style="opacity: 0.9;">
+            Das Problem wie ein Informatiker behandeln – als System mit
+            ausnutzbaren Bugs.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-bottom: 1rem;">B) Radikale Selbstverantwortung</h4>
+          <p style="opacity: 0.9;">
+            Der wahre Gegner ist nicht der Konzern, sondern das eigene Ego und
+            die eigenen Unzulänglichkeiten.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4 style="margin-bottom: 1rem;">C) Strategische Resilienz</h4>
+          <p style="opacity: 0.9;">
+            Rückschläge als Daten und Treibstoff für eine überlegene Strategie
+            nutzen.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; space-y: 1rem;">
+        <p>
+          <a
+            href="/blog/der-wendepunkt-meine-story"
+            style="color: #F97316; text-decoration: underline;"
+          >
+            → Meine komplette Geschichte lesen
+          </a>
+        </p>
+        <p>
+          <a
+            href="/blog/drei-saeulen-methode-detail"
+            style="color: #F97316; text-decoration: underline;"
+          >
+            → 3-Säulen-Methode im Detail
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEINE CHANCE - BETA ANMELDUNG -->
+  <section
+    style="padding: 4rem 0; background-color: rgba(255, 255, 255, 0.05);"
+  >
+    <div class="container" style="text-align: center;">
+      <h2 style="margin-bottom: 2rem;">
+        Jetzt gratis Zugang sichern zum schriftlichen Onlinekurs
+      </h2>
+
+      <div
+        style="background-color: rgba(16, 185, 129, 0.2); border: 2px solid #10B981; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem;"
+      >
+        <p style="font-size: 1.5rem; font-weight: bold; color: #10B981;">
+          Beta-Release: 15. September 2025
+        </p>
+      </div>
+
+      <h3 style="margin-bottom: 2rem;">
+        Die ersten 15 Personen die sich anmelden erhalten:
+      </h3>
+
+      <div style="max-width: 800px; margin: 0 auto 3rem auto;">
+        <div
+          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
+        >
+          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
+          <p style="text-align: left;">
+            <strong>Kostenloser Zugang zum schriftlichen Onlinekurs</strong>
+          </p>
+        </div>
+
+        <div
+          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
+        >
+          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
+          <p style="text-align: left;">
+            <strong>Analytische Überlegenheit:</strong> Die Fähigkeit, juristische
+            Probleme wie ein Informatiker strukturiert und systematisch zu analysieren
+            und anzugehen.
+          </p>
+        </div>
+
+        <div
+          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
+        >
+          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
+          <p style="text-align: left;">
+            <strong>Radikale Selbstverantwortung:</strong> Du lernst, wie strukturierte
+            Selbstreflexion Ordnung in dein Denken und deinen Desktop bringst.
+          </p>
+        </div>
+
+        <div
+          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
+        >
+          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
+          <p style="text-align: left;">
+            <strong>Strategische Resilienz:</strong> Du beginnst, Rückschläge als
+            Chancen zu sehen. Wer nicht kämpft, hat schon verloren.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 2rem;">
+        <h4 style="margin-bottom: 1rem;">Voraussetzungen für die Teilnahme:</h4>
+        <div style="opacity: 0.9;">
+          <p style="margin-bottom: 0.5rem;">
+            1. Du verpflichtest dich für ein Video-Testimonial. Ich will wissen,
+            was gut war, was schlecht.
+          </p>
+          <p style="margin-bottom: 0.5rem;">2. Du bist mind. 18 Jahre alt</p>
+          <p style="margin-bottom: 0.5rem;">
+            3. Du bist bereit, dein Ego zurückzustellen und neues zu lernen
+          </p>
+          <p>
+            4. Du bist bereit, Zeit und Energie in deine persönliche Entwicklung
+            zu investieren.
+          </p>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        onclick="window.location.href='#beta-anmeldung'"
+        style="font-size: 1.25rem; padding: 1rem 3rem;"
+      >
+        📧 JETZT KOSTENLOS AN DER BETA ANMELDEN
+      </button>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 4rem 0;">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 3rem;">
+        FAQ - Kurz & Knapp
+      </h2>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div style="margin-bottom: 2rem;">
+          <h3 style="margin-bottom: 1rem;">❓ "Ist das Rechtsberatung?"</h3>
+          <p style="opacity: 0.9;">
+            <strong>Nein.</strong> Ich bin kein Anwalt. Das ist systematisches Vorgehen
+            und Mindset-Schulung.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+          <h3 style="margin-bottom: 1rem;">❓ "Für wen geeignet?"</h3>
+          <p style="opacity: 0.9;">
+            Für <strong>Menschen</strong> mit Durchhaltevermögen und der Bereitschaft,
+            über sich hinauszuwachsen.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <p style="font-size: 1.5rem; font-weight: bold; color: #EF4444;">
+          NIEMALS AUFGEBEN, NIEMALS UNTERORDNEN, NIEMALS UNTERWERFEN!
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
