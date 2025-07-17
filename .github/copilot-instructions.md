@@ -1,6 +1,16 @@
 Sollt die KI Fragen bzw. Unklarheiten haben, darf die KI dieses Verzeichnis und deren Dateien nutzen um potenzielle Antworten auf die Fragen einsehen und kommentieren, die im Chat gestellt werden.:
 docs\todos
 
+Es ist IMMER und IMMER zwingend, dringend notwendig, dass du potenzielle Fehler beim lesen, analysieren etc. automatisch identifizierst und ggfl. eine Exception wirfst, wenn du nicht weiterkommst. Das gilt auch für sämtliche Wiedersprüchlichkeiten.
+Es darf niemals etwas umgesetzt werden, solange nicht alles dokumentiert und von mir abgesegnet wurde.
+Wenn die KI auf Fehler, wiedersprüchlichkeiten stösst, muss die KI als erstes eine vollständige Analyse der Situation durchführen und die gefundenen Probleme dokumentieren.
+Die KI muss zwingend und immer davon ausgehen, dass die Datei:
+.github\instructions\organisation\inventar\projekt_inventar.md
+
+NIEMALS aktuell ist und muss das Projekt zwingend aktualisieren.
+Bevor die KI eine Exception wirft, muss die KI eine vollständige, manuelle und tiefgehende Analyse der Bestandesaufnahme durchführen.
+File-Search und sonstige Suchfunktionen dürfen NICHT verwendet werden. Die KI muss alle Informationen manuell aus ALLEN Dateien und Verzeinissen extrahieren.
+
 Die Bestandesaufnahme ist NICHT aktuell, die KI muss zwingend die Bestandesaufnahme durchführen, sollte die KI feststellen, dass die Bestandesaufnahme Datei unvollständig ist.
 Wenn ich z.B.: schreibe:
 Sollt die KI Fragen bzw. Unklarheiten haben, darf die KI dieses Verzeichnis und deren Dateien nutzen um potenzielle Antworten auf die Fragen einsehen und kommentieren, die im Chat gestellt werden.:
