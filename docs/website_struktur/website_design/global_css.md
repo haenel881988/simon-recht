@@ -25,6 +25,7 @@ Dynamische Elemente:
 # Universelles Styling
 
 Der Hintergrund ist komplett in dunkelblau (#1E3A8A) gehalten, um eine konsistente und beruhigende Atmosphäre zu schaffen. Die Schriftfarbe ist weiß, um einen klaren Kontrast zu bieten und die Lesbarkeit zu gewährleisten.
+Generell gilt, die website ist minimalistisch und schlicht gehalten.
 
 # Schriftarten
 
@@ -40,7 +41,7 @@ Der Hintergrund ist komplett in dunkelblau (#1E3A8A) gehalten, um eine konsisten
 
 **_Buttons:_**
 
-- tesla Hintergrund (#3B82F6) mit kyber-blauer Schriftfarbe.
+- tesla Hintergrund (#3B82F6) mit kyberblauer (abgeleitet aus dem Star Wars Universum) Schriftfarbe.
 - Button-Animation-Text: Beim Hover-Effekt wird der Text leicht vergrößert und erhält einen roten Glowing-Effekt (#EF4444).
 
 **Startseite**

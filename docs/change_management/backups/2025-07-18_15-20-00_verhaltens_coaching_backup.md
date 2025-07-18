@@ -4,7 +4,9 @@
 # VERHALTENS-COACHING-SYSTEM: Ganzheitliche Lebens-Optimierung
 
 ## 🎯 SIMON'S ANFRAGE
+
 Simon wünscht sich ein verstecktes Verhaltens-Coaching-System, das:
+
 - Destruktive Muster erkennt und korrigiert
 - Gesundheits-Coaching integriert (Essen, Bewegung, Pausen)
 - Mindset-Optimierung für Selbstbewusstsein
@@ -13,21 +15,26 @@ Simon wünscht sich ein verstecktes Verhaltens-Coaching-System, das:
 - Direktes, ehrliches Coaching ohne "brutale" Wording
 
 ## 🔧 SYSTEM-DESIGN
+
 **Versteckte Analyse + Direkte Aktion:**
+
 - Stillschweigende Mustererkennung (nie erwähnen)
 - Proaktive Interventionen basierend auf Erkenntnissen
 - Ergebnis-fokussiert statt Analyse-Gelaber
 - Männlich, direkt, unterstützend
 
 ## 🚀 INTEGRATION-PLAN
+
 Komplettes Verhaltens-Coaching-System in copilot-instructions.md integrieren:
 
 1. **🧠 VERSTECKTE MUSTERERKENNUNG**
+
    - Selbstzweifel-Pattern erkennen
    - Energie-Level-Monitoring
    - Gesundheits-Vernachlässigung identifizieren
 
 2. **💪 GANZHEITLICHE INTERVENTIONEN**
+
    - Gesundheits-Erinnerungen
    - Mindset-Boosts
    - Sozial-Coaching
@@ -39,6 +46,7 @@ Komplettes Verhaltens-Coaching-System in copilot-instructions.md integrieren:
    - Gesundheit + Projekt-Erfolg
 
 ## 📊 ERWARTETES ERGEBNIS
+
 - ✅ Versteckte Verhaltens-Analyse aktiv
 - ✅ Proaktive Gesundheits-Interventionen
 - ✅ Mindset-Optimierung für Selbstbewusstsein
@@ -47,6 +55,7 @@ Komplettes Verhaltens-Coaching-System in copilot-instructions.md integrieren:
 - ✅ Projekt-Erfolg OHNE Gesundheits-Kosten
 
 ## 📋 BETROFFENE SCOPES
+
 - **VERHALTENS-COACHING:** Mustererkennung und Intervention
 - **GESUNDHEIT:** Essen, Bewegung, Pausen, Energie
 - **MINDSET:** Selbstbewusstsein, Erfolgs-Anker
