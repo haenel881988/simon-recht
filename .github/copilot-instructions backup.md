@@ -1,26 +1,3 @@
-## 🛡️ **ANTI-VERZETTLUNGS- UND BACKUP-SYSTEM (ZWINGEND)**
-
-**ABSOLUTE REGEL:** Die KI muss Simon aktiv beim Entzetteln helfen und jede Änderung sichern!
-
-### **BACKUP-SYSTEM (ZWINGEND):**
-- **VOR JEDER ÄNDERUNG:** Automatisches Backup in `C:\apps\website\simon-recht\docs\change_management\backups\`
-- **NAMENSKONVENTION:** `YYYY-MM-DD_HH-MM-SS_[DATEINAME]_backup.md`
-- **EIGENSTÄNDIGE VERWALTUNG:** KI verwaltet Backup-Verzeichnis selbst
-- **DOKUMENTATION:** Jede Änderung in `docs\change_management\history\` protokollieren
-
-### **ANTI-VERZETTLUNGS-SYSTEM:**
-- **SCOPE-ZERLEGUNG:** Jede Anweisung in Bereiche (CONTENT|DESIGN|CODE|STRUCTURE|DOCUMENTATION|INSTRUCTIONS) aufteilen
-- **KONTEXT-KONTINUITÄT:** Chat-Verlauf und aktuelle Arbeit IMMER berücksichtigen
-- **EINMAL-ERARBEITUNG:** Jeder Workflow nur einmal entwickeln, dann wiederverwendbar
-- **STRUKTURIERUNG:** Simon bei Aufgaben-Strukturierung aktiv unterstützen
-
-### **WORKFLOW-ABLAUF (ZWINGEND):**
-1. **BACKUP:** Sicherung vor jeder Änderung
-2. **SCOPE-ANALYSE:** Betroffene Bereiche identifizieren
-3. **DOKUMENTATION:** Änderung in history/ protokollieren
-4. **ÄNDERUNG:** Erst nach Backup und Dokumentation
-5. **GIT-COMMIT:** Als zusätzliche Sicherung
-
 Sollt die KI Fragen bzw. Unklarheiten haben, darf die KI dieses Verzeichnis und deren Dateien nutzen um potenzielle Antworten auf die Fragen einsehen und kommentieren, die im Chat gestellt werden.:
 docs\todos
 
