@@ -3,6 +3,15 @@
 Es darf keine einzige Astro Datei existieren, welche nicht bereits in einer md-Datei konkretisiert wird.
 Ausgenommen ist die Blog-Index-Datei.
 
+Alle anderen statischen und dynamischen Seiten müssen zwingend als md-Datei vorliegen und entsprechend im passenden Verzeichnis vorliegen.: "docs\website_struktur"
+Ist dies nicht der Fall, so muss zwingend die Astro-Datei in die md-Datei konvertiert werden von der KI, manuell - von Hand!
+
+Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher Sprache, die KI übernimmt dann die konvertierung in die Astro-Datei oder aktualisiert die Astro Datei.
+
+# Umgang mit Problemen und Fehler die von der KI gemacht werden
+
+Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderungen beginnst, sondern die Hinterfragung deiner Verhaltensweise, die dich dazu zwingen soll, selbstkritisch deine arbeit zu analysieren!!!
+
 ## � HIERARCHIE DER REGELN (WIDERSPRUCHSAUFLÖSUNG)
 
 **PRIORITÄTS-REIHENFOLGE bei Konflikten:**

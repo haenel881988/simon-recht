@@ -19,7 +19,7 @@ html {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: white;
-  background-color: #1E3A8A; /* Primärfarbe dunkelblau laut Dokumentation */
+  background-color: #1e3a8a; /* Primärfarbe dunkelblau laut Dokumentation */
 }
 
 body {
@@ -154,7 +154,7 @@ main {
 .section h3 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #EF4444;
+  color: #ef4444;
 }
 
 .subtitle {
@@ -215,23 +215,23 @@ main {
 }
 
 .cite {
-  color: #10B981;
+  color: #10b981;
   font-weight: bold;
 }
 
 .highlight-text {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #EF4444;
+  color: #ef4444;
   margin-bottom: 2rem;
 }
 
 .text-success {
-  color: #10B981;
+  color: #10b981;
 }
 
 .text-error {
-  color: #EF4444;
+  color: #ef4444;
 }
 
 /* =============================================================================
@@ -239,18 +239,18 @@ main {
    ============================================================================= */
 
 .card-success {
-  border: 2px solid #10B981;
+  border: 2px solid #10b981;
   margin-bottom: 2rem;
 }
 
 .card-warning {
-  border: 2px solid #EF4444;
+  border: 2px solid #ef4444;
   text-align: center;
 }
 
 .card-beta {
   background-color: rgba(16, 185, 129, 0.2);
-  border: 2px solid #10B981;
+  border: 2px solid #10b981;
   padding: 1rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
@@ -259,7 +259,7 @@ main {
 .card-beta p {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #10B981;
+  color: #10b981;
 }
 
 /* =============================================================================
@@ -291,12 +291,12 @@ main {
    ============================================================================= */
 
 .link-orange {
-  color: #F97316;
+  color: #f97316;
   text-decoration: underline;
 }
 
 .link-orange:hover {
-  color: #FB923C;
+  color: #fb923c;
 }
 
 /* =============================================================================
@@ -308,11 +308,11 @@ main {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .hero h1 {
     font-size: 2rem;
   }
-  
+
   .hero-image img {
     width: 250px;
     height: 250px;

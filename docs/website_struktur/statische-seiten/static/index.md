@@ -12,7 +12,7 @@ rechts - Bild von Simon Haenel - entschlossen
 
 **Linke Spalte:**
 Headline: "Mindset schlägt Grosskonzern."
-Subheadline: "Hast du juristische Probleme und suchst jemand, der den Weg gegangen ist? Vom Sektenkind mit ADHS zum Gerichtssieg - ohne Anwalt, gegen alle Erwartungen. Ich zeige dir, wie ich einen Grosskonzern vor Gericht geschlagen habe."
+Subheadline: "Hast du juristische Probleme und suchst jemand, der den Weg gegangen ist? Ich zeige dir, wie ich einen Grosskonzern vor Gericht geschlagen habe."
 
 **Rechte Spalte:**
 Bild: public\assets\images\simon_haenel_entschlossen.webp
