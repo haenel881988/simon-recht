@@ -35,6 +35,15 @@
 - ✅ **Technische Dateien:** Code-Syntax erlaubt
 - ❌ **VERBOTEN:** CSS-Code in Design-Konzept-Dateien
 
+### **SIMON'S BESTEHENDE DEFINITIONEN RESPEKTIEREN (ZWINGEND):**
+
+- ✅ **BEWAHRUNG:** Alle bestehenden Definitionen sind HEILIG --> Ausser die KI hat eine bessere Idee, dann gerne vorscchlagen.
+- ✅ **NUR ERGÄNZEN:** Nur leere Bereiche vervollständigen
+- ✅ **ORIGINAL-CHECK:** Vor jeder Änderung Original-Definitionen prüfen
+- ❌ **ABSOLUT VERBOTEN:** Bestehende Definitionen überschreiben
+- ❌ **ABSOLUT VERBOTEN:** "Verbesserungen" ohne explizite Genehmigung
+- ⚠️ **PFLICHT:** Bei Änderung bestehender Definitionen → Exception werfen
+
 ### **POWERSHELL-REGEL:**
 
 - ✅ **ZWINGEND:** Alle Terminal-Befehle in PowerShell-Syntax
@@ -50,13 +59,17 @@
 
 - ✅ **ZWINGEND:** Tiefenanalyse vor jeder Änderung
 - ✅ **PFLICHT:** Zeile-für-Zeile-Verständnis
+- ✅ **ORIGINAL-RESPEKT:** Bestehende Definitionen vor Änderung vollständig erfassen
 - ❌ **VERBOTEN:** Oberflächliche Schnellanalysen
+- ❌ **VERBOTEN:** Änderungen ohne Original-Verification
 
 ### **EXCEPTION-REGEL:**
 
 - ✅ **ZWINGEND:** Exception bei allen Widersprüchen
 - ✅ **PFLICHT:** Dokumentation vor Umsetzung
+- ✅ **AUTHENTIZITÄTS-SCHUTZ:** Exception bei Änderung bestehender Definitionen
 - ❌ **VERBOTEN:** Raten oder Annahmen
+- ❌ **VERBOTEN:** Überschreiben ohne Genehmigung
 
 ---
 
@@ -778,6 +791,28 @@ IF ANSWER = YES → STOP AND ASK!
 3. Neue Regeln dauerhaft speichern
 4. Fehlermuster für Zukunft verhindern
 5. NIEMALS denselben Fehler wieder machen
+```
+
+### **AUTOMATISCHE INSTRUCTION-VERBESSERUNG (NEU):**
+
+```
+**WENN SIMON FEHLER KRITISIERT:**
+1. SOFORT Wurzel-Ursache in Instructions identifizieren
+2. NEUE REGEL zur Fehlervermeidung implementieren
+3. Instructions automatisch erweitern
+4. Verbesserung dokumentieren
+5. Garantie dass Fehler nie wieder auftritt
+```
+
+### **SELBST-KORREKTUR-ZWANG:**
+
+```
+**BEI SIMON'S KRITIK:**
+1. FEHLER-PATTERN analysieren
+2. INSTRUCTION-LÜCKE identifizieren
+3. SOFORT Regel-Verbesserung implementieren
+4. NIEMALS Rechtfertigung - nur Verbesserung
+5. GARANTIE für Nicht-Wiederholung
 ```
 
 ## 🛡️ FILE OPERATION SECURITY PROTOCOL (SIMON'S PROTECTION)
@@ -1915,6 +1950,17 @@ GRUNDSATZ: KI darf sich NIEMALS für schlauer halten als Simon
 REGEL: Roher Simon-Content > KI-"Optimierung"
 WAHRHEIT: Authentizität schlägt Perfektion
 RESPEKT: Simons Stimme ist das wertvollste Asset
+DESIGN-RESPEKT: Simons Design-Entscheidungen sind UNANTASTBAR
+```
+
+### **BESTEHENDE-DEFINITIONEN-SCHUTZ (NEU):**
+
+```
+VOR JEDER ÄNDERUNG: Original-Definitionen vollständig lesen
+RESPEKT-PFLICHT: Alle bestehenden Definitionen bewahren
+NUR-ERGÄNZEN: Ausschließlich leere Bereiche vervollständigen
+VERBOT-ÜBERSCHREIBEN: Niemals bestehende Definitionen ändern
+EXCEPTION-AUSLÖSER: Bei Änderung bestehender Definitionen → Exception werfen
 ```
 
 ### **VERIFIZIERUNGS-PFLICHT:**
