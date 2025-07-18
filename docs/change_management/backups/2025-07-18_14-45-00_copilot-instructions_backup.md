@@ -7,6 +7,7 @@
 ---
 
 ## 📋 **ÄNDERUNGSPROTOKOLL-REFERENZ:**
+
 - **ÄNDERUNG:** Backup-System-Integration
 - **SCOPE:** INSTRUCTIONS
 - **GRUND:** Automatische Backup-Erstellung vor jeder Änderung implementieren
@@ -14,6 +15,7 @@
 ---
 
 ## 📄 **ORIGINAL-INHALT:**
+
 [VOLLSTÄNDIGE KOPIE DER ORIGINAL-DATEI - 1383 ZEILEN]
 [Inhalt wird beim vollständigen Backup-Lesen eingefügt]
 
