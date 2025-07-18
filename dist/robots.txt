@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://simon-haenel.com/sitemap-index.xml
