@@ -45,17 +45,21 @@ Verhindere Verzettlung, sichere jede Änderung, dokumentiere Workflows und berü
 ## 🔄 WORKFLOW (DETAILLIERT)
 
 1. **Analyse der Quelldatei und/oder Quellverzeichnisse**
+
    - Dafür muss die KI die Quelldatei/das Quellverzeichnis analysieren
    - Bereiche (Scopes) identifizieren und prüfen, ob die Quelle verschiedene Scopes besitzt
 
 2. **Änderungsprotokoll erstellen** (wenn nicht vorhanden)
+
    - Verzeichnis: `C:\apps\website\simon-recht\docs\change_management\history`
 
 3. **Backup-Datei erstellen**
+
    - Sicherungskopie der Quelldatei/des Quellverzeichnisses erstellen vor Änderungen
    - Verzeichnis: `backups/`
 
 4. **Dokumentation jeder Änderung (SMART-Prinzip):**
+
    - Beschreibung des Fehlers/Problems/der Änderung (SMART)
    - Zeitpunkt der Änderung
    - Exakte und detaillierte SMART-Kriterien für die Änderung/Lösungsvorschlag
