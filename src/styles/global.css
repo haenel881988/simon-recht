@@ -19,7 +19,7 @@ html {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
   color: white;
-  background-color: #111827; /* Konsistente Blog-Hintergrundfarbe (bg-gray-900) */
+  background-color: #1E3A8A; /* Primärfarbe dunkelblau laut Dokumentation */
 }
 
 body {
@@ -106,6 +106,219 @@ main {
   color: white;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  text-align: center;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* =============================================================================
+   SECTION STYLING - Konsistente Abstände
+   ============================================================================= */
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  padding: 4rem 0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #EF4444;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  color: white !important;
+}
+
+.section-center {
+  text-align: center;
+}
+
+.section-center p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.link-group {
+  margin-top: 2rem;
+}
+
+.link-group p {
+  margin-bottom: 0.5rem;
+}
+
+/* =============================================================================
+   CARD CONTENT
+   ============================================================================= */
+
+.card h4 {
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  opacity: 0.9;
+}
+
+/* =============================================================================
+   GRID LAYOUTS
+   ============================================================================= */
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* =============================================================================
+   QUOTES & TESTIMONIALS
+   ============================================================================= */
+
+.quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cite {
+  color: #10B981;
+  font-weight: bold;
+}
+
+.highlight-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #EF4444;
+  margin-bottom: 2rem;
+}
+
+.text-success {
+  color: #10B981;
+}
+
+.text-error {
+  color: #EF4444;
+}
+
+/* =============================================================================
+   SPECIAL CARDS
+   ============================================================================= */
+
+.card-success {
+  border: 2px solid #10B981;
+  margin-bottom: 2rem;
+}
+
+.card-warning {
+  border: 2px solid #EF4444;
+  text-align: center;
+}
+
+.card-beta {
+  background-color: rgba(16, 185, 129, 0.2);
+  border: 2px solid #10B981;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-beta p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #10B981;
+}
+
+/* =============================================================================
+   LISTS & FEATURES
+   ============================================================================= */
+
+.feature-list {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.feature-text {
+  text-align: left;
+}
+
+/* =============================================================================
+   LINKS & NAVIGATION
+   ============================================================================= */
+
+.link-orange {
+  color: #F97316;
+  text-decoration: underline;
+}
+
+.link-orange:hover {
+  color: #FB923C;
+}
+
+/* =============================================================================
+   MOBILE RESPONSIVE HERO
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
 /* =============================================================================
    BUTTONS - Tesla-inspiriert mit kyberblauer Schrift
    ============================================================================= */
@@ -124,11 +337,115 @@ button,
   display: inline-block;
 }
 
+.btn-large {
+  font-size: 1.25rem;
+  padding: 1rem 3rem;
+}
+
 button:hover,
 .btn:hover {
   transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
   box-shadow: 0 0 15px #ef4444; /* Roten Glowing-Effekt */
   color: #00d4ff; /* Kyberblauer Schrift bleibt */
+}
+
+/* =============================================================================
+   REQUIREMENTS & LISTS
+   ============================================================================= */
+
+.requirements {
+  opacity: 0.9;
+}
+
+.requirements p {
+  margin-bottom: 0.5rem;
+}
+
+.requirements p:last-child {
+  margin-bottom: 0;
+}
+
+/* =============================================================================
+   FAQ SECTION
+   ============================================================================= */
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+  margin-bottom: 1rem;
+  color: white;
+  text-align: left;
+}
+
+.faq-item p {
+  opacity: 0.9;
+}
+
+/* =============================================================================
+   LAYOUT COMPONENTS
+   ============================================================================= */
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-container {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.footer-main {
+  margin-bottom: 2rem;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-subtitle {
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.footer-updated {
+  opacity: 0.7;
+  font-size: 0.875rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 /* =============================================================================

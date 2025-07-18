@@ -10,14 +10,12 @@ const description =
   <!-- HERO-SECTION -->
   <section class="hero">
     <div class="container">
-      <div
-        style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1200px; margin: 0 auto;"
-      >
+      <div class="hero-grid">
         <!-- Linke Spalte: Text -->
-        <div style="space-y: 2rem;">
+        <div class="hero-text">
           <h1>Mindset schlägt Grosskonzern.</h1>
 
-          <p style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2rem;">
+          <p>
             Hast du juristische Probleme und suchst jemand, der den Weg gegangen
             ist?
             <strong
@@ -29,11 +27,10 @@ const description =
         </div>
 
         <!-- Rechte Spalte: Bild -->
-        <div style="text-align: center;">
+        <div class="hero-image">
           <img
             src="/assets/images/simon_haenel_entschlossen.webp"
             alt="Simon Haenel - Entschlossen im Kampf gegen Grosskonzerne"
-            style="width: 300px; height: 300px; object-fit: cover; border-radius: 1rem; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);"
           />
         </div>
       </div>
@@ -41,34 +38,30 @@ const description =
   </section>
 
   <!-- PROOF OF CONCEPT -->
-  <section style="padding: 4rem 0;">
+  <section class="section">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 3rem;">
-        Gerichtsurteil: Rechtskräftig bestätigt
-      </h2>
+      <h2>Gerichtsurteil: Rechtskräftig bestätigt</h2>
 
-      <div class="card" style="border: 2px solid #10B981; margin-bottom: 2rem;">
-        <blockquote
-          style="font-size: 1.25rem; font-style: italic; margin-bottom: 1rem;"
-        >
+      <div class="card card-success">
+        <blockquote class="quote">
           "Entsprechend ist nicht erwiesen, dass die Beschwerdeführerin eine
           Falschangabe begangen hat, die den Entscheid des Grosskonzernes
           rechtfertigen würde."
         </blockquote>
-        <cite style="color: #10B981; font-weight: bold;">
+        <cite class="cite">
           Gerichtsurteil: BV.2024.00062 - Sozialversicherungsgericht des Kantons
           Zürichs
         </cite>
       </div>
 
-      <p style="font-size: 1.125rem; text-align: center;">
+      <p class="section-center">
         <strong
           >Mit Hunderten Stunden systematischer Eigenarbeit, KI-Unterstützung
           und unerschütterlichem Mindset</strong
         >
         habe ich einen Grosskonzern in die Schranken verwiesen. Als "Problemfall"
         mit ADHS, der sich von Kindheit an nie unterordnen wollte -
-        <strong style="color: #10B981;"
+        <strong class="text-success"
           >genau das wurde zu meiner Stärke.</strong
         >
       </p>
@@ -76,38 +69,27 @@ const description =
   </section>
 
   <!-- DAS SYSTEM ARBEITET GEGEN DICH -->
-  <section
-    style="padding: 4rem 0; background-color: rgba(255, 255, 255, 0.05);"
-  >
+  <section class="section-alt">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 2rem;">
-        Das System arbeitet gegen dich
-      </h2>
-      <h3 style="text-align: center; margin-bottom: 2rem; color: #EF4444;">
-        Die bittere Wahrheit
-      </h3>
+      <h2>Das System arbeitet gegen dich</h2>
+      <h3>Die bittere Wahrheit</h3>
 
-      <div style="margin-bottom: 3rem;">
-        <p
-          style="font-size: 1.125rem; text-align: center; margin-bottom: 1.5rem;"
-        >
+      <div class="section-center">
+        <p>
           Ehrlichkeit wird bestraft. Grosskonzerne interpretieren Fakten zu
           ihren Gunsten. Du fühlst dich machtlos gegen Bürokratie und
           Verzögerungstaktiken.
         </p>
 
-        <div
-          class="card"
-          style="border: 2px solid #EF4444; text-align: center;"
-        >
-          <p style="font-size: 1.25rem; font-weight: bold;">
+        <div class="card card-warning">
+          <p class="highlight-text">
             Eine Anwaltskanzlei in Bern schätzte meine Chancen auf nur <span
-              style="color: #EF4444;">5%</span
-            >. ChatGPT hingegen auf <span style="color: #10B981;">95%</span>.
+              class="text-error">5%</span
+            >. ChatGPT hingegen auf <span class="text-success">95%</span>.
           </p>
         </div>
 
-        <p style="font-size: 1.125rem; text-align: center; margin-top: 1.5rem;">
+        <p>
           Meine Mutter musste mich als Baby nach schwerer Geburt eine Woche lang
           missen. Später Mobbing in der Schule, Verstecken auf Toiletten,
           Sektenkindheit.
@@ -118,11 +100,8 @@ const description =
         </p>
       </div>
 
-      <div style="text-align: center;">
-        <a
-          href="/blog/wenn-ehrlichkeit-bestraft-wird"
-          style="color: #F97316; text-decoration: underline;"
-        >
+      <div class="section-center">
+        <a href="/blog/wenn-ehrlichkeit-bestraft-wird" class="link-orange">
           → Warum das System gegen dich arbeitet - vollständige Analyse
         </a>
       </div>
@@ -130,57 +109,45 @@ const description =
   </section>
 
   <!-- MEINE 3-SÄULEN-METHODE -->
-  <section style="padding: 4rem 0;">
+  <section class="section">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 2rem;">
-        Meine 3-Säulen-Methode
-      </h2>
-      <h3 style="text-align: center; margin-bottom: 3rem; opacity: 0.8;">
-        Wie ich es geschafft habe
-      </h3>
+      <h2>Meine 3-Säulen-Methode</h2>
+      <h3 class="subtitle">Wie ich es geschafft habe</h3>
 
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;"
-      >
+      <div class="three-column-grid">
         <div class="card">
-          <h4 style="margin-bottom: 1rem;">A) Analytische Überlegenheit</h4>
-          <p style="opacity: 0.9;">
+          <h4>A) Analytische Überlegenheit</h4>
+          <p class="card-text">
             Das Problem wie ein Informatiker behandeln – als System mit
             ausnutzbaren Bugs.
           </p>
         </div>
 
         <div class="card">
-          <h4 style="margin-bottom: 1rem;">B) Radikale Selbstverantwortung</h4>
-          <p style="opacity: 0.9;">
+          <h4>B) Radikale Selbstverantwortung</h4>
+          <p class="card-text">
             Der wahre Gegner ist nicht der Konzern, sondern das eigene Ego und
             die eigenen Unzulänglichkeiten.
           </p>
         </div>
 
         <div class="card">
-          <h4 style="margin-bottom: 1rem;">C) Strategische Resilienz</h4>
-          <p style="opacity: 0.9;">
+          <h4>C) Strategische Resilienz</h4>
+          <p class="card-text">
             Rückschläge als Daten und Treibstoff für eine überlegene Strategie
             nutzen.
           </p>
         </div>
       </div>
 
-      <div style="text-align: center; space-y: 1rem;">
+      <div class="section-center link-group">
         <p>
-          <a
-            href="/blog/der-wendepunkt-meine-story"
-            style="color: #F97316; text-decoration: underline;"
-          >
+          <a href="/blog/der-wendepunkt-meine-story" class="link-orange">
             → Meine komplette Geschichte lesen
           </a>
         </p>
         <p>
-          <a
-            href="/blog/drei-saeulen-methode-detail"
-            style="color: #F97316; text-decoration: underline;"
-          >
+          <a href="/blog/drei-saeulen-methode-detail" class="link-orange">
             → 3-Säulen-Methode im Detail
           </a>
         </p>
@@ -189,77 +156,59 @@ const description =
   </section>
 
   <!-- DEINE CHANCE - BETA ANMELDUNG -->
-  <section
-    style="padding: 4rem 0; background-color: rgba(255, 255, 255, 0.05);"
-  >
-    <div class="container" style="text-align: center;">
-      <h2 style="margin-bottom: 2rem;">
-        Jetzt gratis Zugang sichern zum schriftlichen Onlinekurs
-      </h2>
+  <section class="section-alt">
+    <div class="container section-center">
+      <h2>Jetzt gratis Zugang sichern zum schriftlichen Onlinekurs</h2>
 
-      <div
-        style="background-color: rgba(16, 185, 129, 0.2); border: 2px solid #10B981; padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem;"
-      >
-        <p style="font-size: 1.5rem; font-weight: bold; color: #10B981;">
-          Beta-Release: 15. September 2025
-        </p>
+      <div class="card-beta">
+        <p>Beta-Release: 15. September 2025</p>
       </div>
 
-      <h3 style="margin-bottom: 2rem;">
-        Die ersten 15 Personen die sich anmelden erhalten:
-      </h3>
+      <h3 class="subtitle">Die ersten 15 Personen die sich anmelden erhalten:</h3>
 
-      <div style="max-width: 800px; margin: 0 auto 3rem auto;">
-        <div
-          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
-        >
-          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
-          <p style="text-align: left;">
+      <div class="feature-list">
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <p class="feature-text">
             <strong>Kostenloser Zugang zum schriftlichen Onlinekurs</strong>
           </p>
         </div>
 
-        <div
-          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
-        >
-          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
-          <p style="text-align: left;">
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <p class="feature-text">
             <strong>Analytische Überlegenheit:</strong> Die Fähigkeit, juristische
             Probleme wie ein Informatiker strukturiert und systematisch zu analysieren
             und anzugehen.
           </p>
         </div>
 
-        <div
-          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
-        >
-          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
-          <p style="text-align: left;">
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <p class="feature-text">
             <strong>Radikale Selbstverantwortung:</strong> Du lernst, wie strukturierte
             Selbstreflexion Ordnung in dein Denken und deinen Desktop bringst.
           </p>
         </div>
 
-        <div
-          style="display: flex; align-items: flex-start; margin-bottom: 1.5rem;"
-        >
-          <span style="font-size: 1.5rem; margin-right: 1rem;">✅</span>
-          <p style="text-align: left;">
+        <div class="feature-item">
+          <span class="feature-icon">✅</span>
+          <p class="feature-text">
             <strong>Strategische Resilienz:</strong> Du beginnst, Rückschläge als
             Chancen zu sehen. Wer nicht kämpft, hat schon verloren.
           </p>
         </div>
       </div>
 
-      <div class="card" style="margin-bottom: 2rem;">
-        <h4 style="margin-bottom: 1rem;">Voraussetzungen für die Teilnahme:</h4>
-        <div style="opacity: 0.9;">
-          <p style="margin-bottom: 0.5rem;">
+      <div class="card">
+        <h4>Voraussetzungen für die Teilnahme:</h4>
+        <div class="requirements">
+          <p>
             1. Du verpflichtest dich für ein Video-Testimonial. Ich will wissen,
             was gut war, was schlecht.
           </p>
-          <p style="margin-bottom: 0.5rem;">2. Du bist mind. 18 Jahre alt</p>
-          <p style="margin-bottom: 0.5rem;">
+          <p>2. Du bist mind. 18 Jahre alt</p>
+          <p>
             3. Du bist bereit, dein Ego zurückzustellen und neues zu lernen
           </p>
           <p>
@@ -272,7 +221,7 @@ const description =
       <button
         type="button"
         onclick="window.location.href='#beta-anmeldung'"
-        style="font-size: 1.25rem; padding: 1rem 3rem;"
+        class="btn btn-large"
       >
         📧 JETZT KOSTENLOS AN DER BETA ANMELDEN
       </button>
@@ -280,32 +229,30 @@ const description =
   </section>
 
   <!-- FAQ -->
-  <section style="padding: 4rem 0;">
+  <section class="section">
     <div class="container">
-      <h2 style="text-align: center; margin-bottom: 3rem;">
-        FAQ - Kurz & Knapp
-      </h2>
+      <h2>FAQ - Kurz & Knapp</h2>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div style="margin-bottom: 2rem;">
-          <h3 style="margin-bottom: 1rem;">❓ "Ist das Rechtsberatung?"</h3>
-          <p style="opacity: 0.9;">
+      <div class="faq-container">
+        <div class="faq-item">
+          <h3>❓ "Ist das Rechtsberatung?"</h3>
+          <p>
             <strong>Nein.</strong> Ich bin kein Anwalt. Das ist systematisches Vorgehen
             und Mindset-Schulung.
           </p>
         </div>
 
-        <div style="margin-bottom: 2rem;">
-          <h3 style="margin-bottom: 1rem;">❓ "Für wen geeignet?"</h3>
-          <p style="opacity: 0.9;">
+        <div class="faq-item">
+          <h3>❓ "Für wen geeignet?"</h3>
+          <p>
             Für <strong>Menschen</strong> mit Durchhaltevermögen und der Bereitschaft,
             über sich hinauszuwachsen.
           </p>
         </div>
       </div>
 
-      <div style="text-align: center; margin-top: 3rem;">
-        <p style="font-size: 1.5rem; font-weight: bold; color: #EF4444;">
+      <div class="section-center">
+        <p class="highlight-text">
           NIEMALS AUFGEBEN, NIEMALS UNTERORDNEN, NIEMALS UNTERWERFEN!
         </p>
       </div>

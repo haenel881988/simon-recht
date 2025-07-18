@@ -26,15 +26,13 @@ import "../styles/global.css";
     <header>
       <nav>
         <div class="container">
-          <div
-            style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;"
-          >
+          <div class="nav-container">
             <!-- Logo links: Simon Haenel -->
-            <a href="/" style="font-size: 1.25rem; font-weight: bold;">
+            <a href="/" class="nav-brand">
               Simon Haenel
             </a>
             <!-- Desktop-Menü (Burger-Menü wird später implementiert) -->
-            <div style="display: flex; gap: 2rem;">
+            <div class="nav-menu">
               <a href="/">Startseite</a>
               <a href="/blog">Über mich</a>
               <a href="/blog">Blog</a>
@@ -52,32 +50,30 @@ import "../styles/global.css";
 
     <!-- Footer mit Design-Vorgaben: Dunkelblauer Hintergrund (#1E3A8A) -->
     <footer>
-      <div class="container" style="text-align: center; padding: 3rem 0;">
-        <div style="margin-bottom: 2rem;">
-          <p style="font-weight: 600; margin-bottom: 0.5rem;">
+      <div class="container footer-container">
+        <div class="footer-main">
+          <p class="footer-title">
             <strong>Simon Haenel</strong> - Informatiker, der mit KI eine Pensionskasse
             besiegte
           </p>
-          <p style="opacity: 0.8; margin-bottom: 1rem;">
+          <p class="footer-subtitle">
             Gerichtsurteil BV.2024.00062 - Der Beweis, dass Mindset Grosskonzern
             schlägt
           </p>
-          <p style="opacity: 0.7; font-size: 0.875rem;">
+          <p class="footer-updated">
             Aktualisiert am: {new Date().toLocaleString("de-CH")}
           </p>
         </div>
 
         <!-- Rechtliche Links -->
-        <div
-          style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 1.5rem; font-size: 0.875rem;"
-        >
+        <div class="footer-links">
           <a href="/impressum">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
           <a href="/disclaimer">Disclaimer</a>
         </div>
 
         <!-- Social Media Links -->
-        <div style="display: flex; justify-content: center; gap: 1.5rem;">
+        <div class="footer-social">
           <a
             href="https://www.facebook.com/profile.php?id=100016063715869"
             target="_blank"

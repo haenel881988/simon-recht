@@ -1,4 +1,7 @@
-# 🎯 SIMON-RECHT PROJEKT: BEREINIGTE KI-INSTRUCTIONS
+# 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS
+
+Es darf keine einzige Astro Datei existieren, welche nicht bereits in einer md-Datei konkretisiert wird.
+Ausgenommen ist die Blog-Index-Datei.
 
 ## � HIERARCHIE DER REGELN (WIDERSPRUCHSAUFLÖSUNG)
 
