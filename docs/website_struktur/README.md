@@ -45,7 +45,7 @@ Dazu gehören:
 
 - Startseite
 - Über mich
-- Blog ✅ **MIGRIERT:** `src/content/blog/`
+- Blog
 - Kontakt
 
 **LEGACY PFADE:** `C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT\website_struktur\website_text`

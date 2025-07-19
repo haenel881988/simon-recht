@@ -1,167 +1,133 @@
 ---
-// Impressum - Rechtliche Informationen
+import Layout from "../layouts/Layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Impressum - Simon Haenel" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum - Simon Haenel</title>
-</head>
-<body class="bg-gray-900 text-white">
-  <nav class="bg-black shadow-lg border-b border-gray-700">
-    <div class="max-w-4xl mx-auto px-8 py-4">
-      <div class="flex justify-between items-center">
-        <a href="/" class="text-xl font-bold text-white">
-          🎯 Mindset schlägt Grosskonzern
-        </a>
-        <div class="flex space-x-6">
-          <a href="/" class="text-gray-300 hover:text-white">Home</a>
-          <a href="/blog" class="text-gray-300 hover:text-white">Meine Geschichte</a>
-          <a href="/beweise" class="text-gray-300 hover:text-white">Beweise</a>
+<Layout title="Impressum - Simon Haenel">
+  <main class="content-main">
+    <section class="page-header">
+      <h1 class="page-title">📄 Impressum</h1>
+    </section>
+
+    <div class="impressum-container">
+      <div class="impressum-section">
+        <h2 class="section-title">Angaben gemäß § 5 TMG</h2>
+        <div class="contact-details">
+          <p><strong>Simon Haenel</strong></p>
+          <p>Informatiker & Autor</p>
+          <p>Schweiz</p>
+        </div>
+      </div>
+
+      <div class="impressum-section">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact-details">
+          <p><strong>E-Mail:</strong> [Kontakt über die Website]</p>
+        </div>
+      </div>
+
+      <div class="impressum-section">
+        <h2 class="section-title">
+          Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+        </h2>
+        <div class="contact-details">
+          <p><strong>Simon Haenel</strong></p>
+          <p>Schweiz</p>
+        </div>
+      </div>
+
+      <div class="info-box danger">
+        <h2 class="info-title">⚠️ Wichtiger Haftungsausschluss</h2>
+        <div class="info-content">
+          <p>
+            <strong>Keine Rechtsberatung:</strong> Diese Website dient ausschließlich
+            der Information über meinen persönlichen Fall. Ich biete <strong
+              >KEINE Rechtsberatung</strong
+            > an und bin <strong>KEIN Anwalt</strong>.
+          </p>
+          <p>
+            <strong>Persönliche Erfahrung:</strong> Ich teile lediglich meine eigenen
+            Erfahrungen, wie ich KI (ChatGPT) für juristische Recherche und Strategieentwicklung
+            genutzt habe.
+          </p>
+          <p>
+            <strong>Keine Garantie:</strong> Jeder Fall ist einzigartig. Meine Erfahrungen
+            garantieren nicht, dass ähnliche Strategien in anderen Fällen erfolgreich
+            sind.
+          </p>
+          <p>
+            <strong>Professionelle Beratung empfohlen:</strong> Bei rechtlichen Problemen
+            konsultieren Sie bitte einen qualifizierten Anwalt oder Rechtsexperten.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box warning">
+        <h2 class="info-title">🛡️ Rechtsschutzversicherung - Reality Check</h2>
+        <div class="info-content">
+          <p>
+            <strong>Wichtige Erkenntnis:</strong> Meine Rechtsschutzversicherung
+            hat <strong>NICHT geholfen</strong>, weil Sozialversicherungsfälle
+            (wie Pensionskassen-Streitigkeiten) grundsätzlich
+            <strong>NICHT gedeckt</strong> sind.
+          </p>
+          <p>
+            <strong>Realität:</strong> Die meisten Rechtsschutzversicherungen schließen
+            genau die Fälle aus, wo man sie am meisten bräuchte. Lesen Sie das Kleingedruckte!
+          </p>
+          <p>
+            <strong>Lösung:</strong> Selbstständige Recherche mit KI-Unterstützung
+            kann eine Alternative sein - aber immer mit professioneller Validierung.
+          </p>
+        </div>
+      </div>
+
+      <div class="impressum-section">
+        <h2 class="section-title">Haftung für Inhalte</h2>
+        <div class="legal-text">
+          <p>
+            Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte
+            auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach
+            §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der
+            Verpflichtung, übermittelte oder gespeicherte fremde Informationen
+            zu überwachen oder nach Umständen zu forschen, die auf eine
+            rechtswidrige Tätigkeit hinweisen.
+          </p>
+          <p>
+            Verpflichtungen zur Entfernung oder Sperrung der Nutzung von
+            Informationen nach den allgemeinen Gesetzen bleiben hiervon
+            unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem
+            Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
+          </p>
+        </div>
+      </div>
+
+      <div class="impressum-section">
+        <h2 class="section-title">Haftung für Links</h2>
+        <div class="legal-text">
+          <p>
+            Unser Angebot enthält Links zu externen Websites Dritter, auf deren
+            Inhalte wir keinen Einfluss haben. Deshalb können wir für diese
+            fremden Inhalte auch keine Gewähr übernehmen.
+          </p>
+        </div>
+      </div>
+
+      <div class="impressum-section">
+        <h2 class="section-title">Urheberrecht</h2>
+        <div class="legal-text">
+          <p>
+            Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
+            diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+            Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
+            Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der
+            schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
         </div>
       </div>
     </div>
-  </nav>
 
-  <div class="min-h-screen bg-gray-900 py-12">
-    <div class="max-w-4xl mx-auto px-8">
-      <h1 class="text-4xl font-bold text-white mb-8">
-        📄 Impressum
-      </h1>
-      
-      <div class="bg-gray-800 border border-gray-700 rounded-lg p-8 space-y-6">
-        
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
-          <div class="text-gray-300 space-y-2">
-            <p><strong class="text-white">Simon Haenel</strong></p>
-            <p>Informatiker & Autor</p>
-            <p>Schweiz</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Kontakt</h2>
-          <div class="text-gray-300 space-y-2">
-            <p><strong class="text-white">E-Mail:</strong> [Kontakt über die Website]</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-          <div class="text-gray-300">
-            <p><strong class="text-white">Simon Haenel</strong></p>
-            <p>Schweiz</p>
-          </div>
-        </div>
-
-        <div class="bg-red-900 border border-red-700 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-red-200 mb-4">⚠️ Wichtiger Haftungsausschluss</h2>
-          <div class="text-red-200 space-y-4">
-            <p>
-              <strong>Keine Rechtsberatung:</strong> Diese Website dient ausschließlich der Information über meinen persönlichen Fall. 
-              Ich biete <strong>KEINE Rechtsberatung</strong> an und bin <strong>KEIN Anwalt</strong>.
-            </p>
-            <p>
-              <strong>Persönliche Erfahrung:</strong> Ich teile lediglich meine eigenen Erfahrungen, wie ich KI (ChatGPT) 
-              für juristische Recherche und Strategieentwicklung genutzt habe.
-            </p>
-            <p>
-              <strong>Keine Garantie:</strong> Jeder Fall ist einzigartig. Meine Erfahrungen garantieren nicht, 
-              dass ähnliche Strategien in anderen Fällen erfolgreich sind.
-            </p>
-            <p>
-              <strong>Professionelle Beratung empfohlen:</strong> Bei rechtlichen Problemen konsultieren Sie 
-              bitte einen qualifizierten Anwalt oder Rechtsexperten.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-yellow-900 border border-yellow-700 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-yellow-200 mb-4">🛡️ Rechtsschutzversicherung - Reality Check</h2>
-          <div class="text-yellow-200 space-y-4">
-            <p>
-              <strong>Wichtige Erkenntnis:</strong> Meine Rechtsschutzversicherung hat <strong>NICHT geholfen</strong>, 
-              weil Sozialversicherungsfälle (wie Pensionskassen-Streitigkeiten) grundsätzlich 
-              <strong>NICHT gedeckt</strong> sind.
-            </p>
-            <p>
-              <strong>Realität:</strong> Die meisten Rechtsschutzversicherungen schließen genau die Fälle aus, 
-              wo man sie am meisten bräuchte. Lesen Sie das Kleingedruckte!
-            </p>
-            <p>
-              <strong>Lösung:</strong> Selbstständige Recherche mit KI-Unterstützung kann eine Alternative sein - 
-              aber immer mit professioneller Validierung.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Haftung für Inhalte</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den 
-              allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht 
-              unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach 
-              Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-            </p>
-            <p>
-              Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen 
-              Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt 
-              der Kenntnis einer konkreten Rechtsverletzung möglich.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Haftung für Links</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
-              Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">Urheberrecht</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem 
-              deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung 
-              außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen 
-              Autors bzw. Erstellers.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a 
-          href="/"
-          class="text-blue-400 hover:text-blue-300 font-medium"
-        >
-          ← Zurück zur Startseite
-        </a>
-      </div>
+    <div class="back-link">
+      <a href="/" class="link-primary"> ← Zurück zur Startseite </a>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 border-t border-gray-700 text-gray-300 py-8">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="/impressum" class="text-gray-400 hover:text-gray-200">Impressum</a>
-        <a href="/datenschutz" class="text-gray-400 hover:text-gray-200">Datenschutz</a>
-        <a href="/disclaimer" class="text-gray-400 hover:text-gray-200">Disclaimer</a>
-      </div>
-      <p class="text-gray-500 text-sm">
-        © 2025 Simon Haenel - Keine Rechtsberatung, nur persönliche Erfahrungen
-      </p>
-    </div>
-  </footer>
-</body>
-</html>
+  </main>
+</Layout>

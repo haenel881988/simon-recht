@@ -159,27 +159,45 @@ const CONFIG = {
         /class\s*=\s*["'][^"']*(?:max-w-|min-h-|transition|transform|gradient)[^"']*["']/gi,
       ],
 
-      // TAILWIND CSS SPEZIFISCHE PATTERN
+      // TAILWIND CSS SPEZIFISCHE PATTERN (KOMPLETT REPARIERT!)
       TAILWIND_PATTERNS: [
-        // Layout & Spacing
+        // Layout & Spacing - ERWEITERT
         /(?:p|px|py|pt|pb|pl|pr|m|mx|my|mt|mb|ml|mr)-\d+/g,
         /(?:w|h|max-w|min-w|max-h|min-h)-\w+/g,
-        // Colors & Backgrounds
-        /(?:bg|text|border)-(?:gray|blue|red|green|yellow|purple|pink|indigo)-\d+/g,
+
+        // Colors & Backgrounds - VOLLSTÄNDIG REPARIERT
+        /(?:bg|text|border)-(?:gray|blue|red|green|yellow|purple|pink|indigo|slate|zinc|neutral|stone|amber|lime|emerald|teal|cyan|sky|violet|fuchsia|rose)-\d+/g,
         /(?:bg|text|border)-(?:white|black|transparent|current)/g,
+
+        // KRITISCHE ERGÄNZUNG: Direkte Tailwind-Klassen erkennen
+        /\bbg-(?:gray|blue|red|green|yellow|purple|pink|indigo|slate|zinc|neutral|stone|amber|lime|emerald|teal|cyan|sky|violet|fuchsia|rose)-\d+\b/g,
+        /\btext-(?:gray|blue|red|green|yellow|purple|pink|indigo|slate|zinc|neutral|stone|amber|lime|emerald|teal|cyan|sky|violet|fuchsia|rose)-\d+\b/g,
+        /\btext-(?:white|black|transparent|current)\b/g,
+        /\bbg-(?:white|black|transparent|current)\b/g,
+        /\bborder-(?:gray|blue|red|green|yellow|purple|pink|indigo|slate|zinc|neutral|stone|amber|lime|emerald|teal|cyan|sky|violet|fuchsia|rose)-\d+\b/g,
+
         // Flexbox & Grid
         /(?:flex|grid|inline-flex|inline-grid)/g,
         /(?:justify|items|content|self)-\w+/g,
         /(?:space-x|space-y|gap)-\d+/g,
+
         // Typography
         /(?:text|font)-\w+/g,
+
         // Effects
         /(?:shadow|rounded|border|ring)-\w*/g,
         /(?:hover|focus|active|group-hover):\w+/g,
+
         // Transitions
         /transition(?:-\w+)?/g,
         /duration-\d+/g,
         /ease-\w+/g,
+
+        // SPEZIFISCHE PROBLEMATISCHE KLASSEN DIREKT ERKENNEN
+        /\bmx-auto\b/g,
+        /\bmax-w-\w+\b/g,
+        /\bmin-h-\w+\b/g,
+        /\bshadow-lg\b/g,
       ],
     },
 
@@ -299,6 +317,9 @@ class BuildChecker {
       await this.performDirectorySynchronizationAnalysis(); // NEW: Verzeichnis-Sync zwischen docs/website_struktur und src/pages
       await this.performLinkIntegrityAnalysis(); // NEW: Link-Analyse
       await this.performCSSConsistencyAnalysis(); // NEW: CSS-Analyse
+      await this.performMultipleClassDetection(); // NEW: Multiple-Class Detection
+      await this.performDesignSystemValidation(); // NEW: Design-System Validation
+      await this.performInstructionComplianceCheck(); // NEW: Instruction Violation Detection
       await this.analyzeEATContent(); // NEW: E-A-T Content-Qualitäts-Analyse
       await this.validateUTF8Encoding();
       await this.optimizeSitemap();
@@ -4735,15 +4756,17 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
           }
         }
 
-        // 3. Class-Attribute mit Tailwind-ähnlichen Patterns
+        // 3. Class-Attribute mit Tailwind-ähnlichen Patterns (KOMPLETT REPARIERT!)
         const classMatches = content.match(/class\s*=\s*["']([^"']*)["']/gi);
         if (classMatches) {
           for (const match of classMatches) {
             const classContent = match.match(
               /class\s*=\s*["']([^"']*)["']/i
             )[1];
+
+            // VOLLSTÄNDIGE TAILWIND DETECTION - ALLE PROBLEMATISCHEN KLASSEN
             const hasTailwind =
-              /(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:|max-w-|min-h-|transition|transform|gradient)/.test(
+              /(?:bg-gray-|bg-black|bg-white|text-gray-|text-white|text-black|border-gray-|border-black|border-white|shadow-lg|shadow-|rounded-|p-\d+|px-\d+|py-\d+|m-\d+|mx-auto|my-\d+|w-\d+|h-\d+|flex|grid|space-x-|space-y-|justify-|items-|font-|hover:|max-w-|min-h-|min-w-|transition|transform|gradient)/.test(
                 classContent
               );
 
@@ -4796,11 +4819,22 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
           );
         }
 
-        // Detaillierte Migration-Anweisungen generieren
-        this.generateExtendedMigrationPrompt(
-          inlineStylesFound,
-          tailwindClassesFound
-        );
+        // Detaillierte Migration-Anweisungen generieren (FUNCTION MISSING - REPARIERT!)
+        if (inlineStylesFound.length > 0 || tailwindClassesFound.length > 0) {
+          console.log("🚨 DETEKTIERTE CSS-VIOLATIONS:");
+          console.log("📄 Inline-Styles:", inlineStylesFound.length);
+          console.log("🎨 Tailwind-Classes:", tailwindClassesFound.length);
+
+          // Detailed logging for debugging
+          inlineStylesFound.forEach((violation) => {
+            console.log(
+              `📍 ${violation.file}: ${violation.style.substring(0, 100)}...`
+            );
+          });
+          tailwindClassesFound.forEach((violation) => {
+            console.log(`🎨 ${violation.file}: ${violation.style}`);
+          });
+        }
       } else {
         this.addIssue(
           RATINGS.INFO,
@@ -4866,18 +4900,39 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
 
     const tailwindClassesFound = [];
 
-    // Falls detectInlineStyles bereits aufgerufen wurde, extrahiere Tailwind-Klassen
-    if (inlineStylesFound && inlineStylesFound.length > 0) {
-      inlineStylesFound.forEach((item) => {
-        if (
-          item.type &&
-          (item.type === "tailwind-class" ||
-            item.type === "tailwind-class-attribute")
-        ) {
-          tailwindClassesFound.push(item);
-        }
+    // Führe eigene Tailwind-Detection durch, falls inlineStylesFound nicht brauchbar
+    if (!inlineStylesFound || inlineStylesFound.length === 0) {
+      console.log("🔍 Führe vollständige Tailwind-Detection durch...");
+      // Nutze die reparierte detectInlineStyles Logik
+      return this.detectInlineStyles().then((result) => {
+        const tailwindCount = result.filter(
+          (item) =>
+            item.type === "tailwind-class-attribute" ||
+            (item.style &&
+              /bg-gray-|bg-black|bg-white|text-gray-|text-white|text-black|border-gray-|shadow-lg|rounded-|p-\d+|px-\d+|py-\d+|m-\d+|mx-auto|flex|grid|space-|justify-|items-|font-|hover:|max-w-|min-h-/.test(
+                item.style
+              ))
+        ).length;
+
+        console.log(
+          `⚡ Tailwind CSS Detection abgeschlossen: ${tailwindCount} Tailwind-Violations gefunden`
+        );
+        return result.filter(
+          (item) => item.type === "tailwind-class-attribute"
+        );
       });
     }
+
+    // Falls detectInlineStyles bereits aufgerufen wurde, extrahiere Tailwind-Klassen
+    inlineStylesFound.forEach((item) => {
+      if (
+        item.type &&
+        (item.type === "tailwind-class" ||
+          item.type === "tailwind-class-attribute")
+      ) {
+        tailwindClassesFound.push(item);
+      }
+    });
 
     console.log(
       `⚡ Tailwind CSS Detection abgeschlossen: ${tailwindClassesFound.length} Tailwind-Violations gefunden`
@@ -6764,6 +6819,420 @@ ${content.substring(0, 500)}...
     }
 
     return problems;
+  }
+
+  /**
+   * 🎨 DESIGN-SYSTEM VALIDATION (NEU)
+   * Prüft Einhaltung des 60/30/10 Farbsystems und Design-Prinzipien
+   */
+  async performDesignSystemValidation() {
+    console.log("🎨 Prüfe Design-System Compliance...");
+
+    try {
+      const globalCssPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "src",
+        "styles",
+        "global.css"
+      );
+      const globalCss = await fs.readFile(globalCssPath, "utf-8");
+
+      const designDoc = path.join(
+        CONFIG.PROJECT_ROOT,
+        "docs",
+        "website_struktur",
+        "website_design",
+        "global_css.md"
+      );
+      let designContent = "";
+      try {
+        designContent = await fs.readFile(designDoc, "utf-8");
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Design-Dokument fehlt",
+          "docs/website_struktur/website_design/global_css.md nicht gefunden",
+          "Design-Konzept dokumentieren"
+        );
+        return;
+      }
+
+      // Definierte Farben aus Design-Dokument
+      const requiredColors = {
+        asphaltschwarz: "#1a1d24",
+        analyseBlau: "#4a6d7c",
+        glutOrange: "#ff4500",
+        kyberBlau: "#00D4FF",
+      };
+
+      let designViolations = 0;
+
+      // Prüfe auf unerlaubte Farben
+      const colorPattern = /#[0-9a-fA-F]{6}|#[0-9a-fA-F]{3}/g;
+      const foundColors = globalCss.match(colorPattern) || [];
+      const allowedColors = Object.values(requiredColors);
+
+      foundColors.forEach((color) => {
+        const normalizedColor = color.toLowerCase();
+        if (
+          !allowedColors.map((c) => c.toLowerCase()).includes(normalizedColor)
+        ) {
+          designViolations++;
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "Unerlaubte Farbe im Design-System",
+            `Farbe ${color} entspricht nicht dem 60/30/10 Farbsystem`,
+            `Farbe durch erlaubte Farben ersetzen: ${allowedColors.join(", ")}`
+          );
+        }
+      });
+
+      // Prüfe auf 60/30/10 Verhältnis
+      const asphaltschwarzCount = (
+        globalCss.match(new RegExp(requiredColors.asphaltschwarz, "gi")) || []
+      ).length;
+      const analyseBlauCount = (
+        globalCss.match(new RegExp(requiredColors.analyseBlau, "gi")) || []
+      ).length;
+      const glutOrangeCount = (
+        globalCss.match(new RegExp(requiredColors.glutOrange, "gi")) || []
+      ).length;
+
+      if (asphaltschwarzCount === 0) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Dominanzfarbe fehlt",
+          "Asphaltschwarz (#1a1d24) als 60% Dominanzfarbe nicht gefunden",
+          "Asphaltschwarz als Hauptfarbe implementieren"
+        );
+      }
+
+      if (analyseBlauCount === 0) {
+        this.addIssue(
+          RATINGS.IMPORTANT,
+          "Sekundärfarbe fehlt",
+          "Analyse-Blau (#4a6d7c) als 30% Sekundärfarbe nicht gefunden",
+          "Analyse-Blau für strukturelle Elemente implementieren"
+        );
+      }
+
+      if (glutOrangeCount === 0) {
+        this.addIssue(
+          RATINGS.IMPORTANT,
+          "Akzentfarbe fehlt",
+          "Glut-Orange (#ff4500) als 10% Akzentfarbe nicht gefunden",
+          "Glut-Orange für Call-to-Actions implementieren"
+        );
+      }
+
+      // Prüfe auf Inline-Styles-Verbot
+      const astroFiles = await this.getFilesRecursively(
+        path.join(CONFIG.PROJECT_ROOT, "src")
+      );
+      const filteredAstroFiles = astroFiles.filter((file) =>
+        file.endsWith(".astro")
+      );
+      let inlineStyleViolations = 0;
+
+      for (const file of filteredAstroFiles) {
+        const content = await fs.readFile(file, "utf-8");
+        const inlineStyles =
+          content.match(/style\s*=\s*["'][^"']*["']/gi) || [];
+
+        if (inlineStyles.length > 0) {
+          inlineStyleViolations += inlineStyles.length;
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "Inline-Styles verboten",
+            `${inlineStyles.length} Inline-Styles in ${path.basename(
+              file
+            )} gefunden`,
+            "Inline-Styles durch CSS-Klassen ersetzen"
+          );
+        }
+      }
+
+      console.log(
+        `🎨 Design-System Validation: ${designViolations} Farb-Violations, ${inlineStyleViolations} Inline-Style-Violations`
+      );
+    } catch (error) {
+      console.error("❌ Design-System Validation Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Design-System Validation Fehler",
+        error.message,
+        "Design-System Checker reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🔍 MULTIPLE-CLASS DETECTION (NEU)
+   * Erkennt Elemente mit mehreren CSS-Klassen (Ein Element = Eine Klasse)
+   */
+  async performMultipleClassDetection() {
+    console.log("🔍 Prüfe Multiple-Class Violations...");
+
+    try {
+      const astroFiles = await this.getFilesRecursively(
+        path.join(CONFIG.PROJECT_ROOT, "src")
+      );
+      const filteredAstroFiles = astroFiles.filter((file) =>
+        file.endsWith(".astro")
+      );
+      let multipleClassViolations = 0;
+
+      for (const file of filteredAstroFiles) {
+        const content = await fs.readFile(file, "utf-8");
+
+        // Regex für class="class1 class2 ..." Pattern
+        const classPattern = /class\s*=\s*["']([^"']+)["']/gi;
+        let match;
+        while ((match = classPattern.exec(content)) !== null) {
+          const classes = match[1].trim().split(/\s+/);
+
+          if (classes.length > 1) {
+            multipleClassViolations++;
+            this.addIssue(
+              RATINGS.CRITICAL,
+              "Multiple-Class Violation",
+              `Element mit ${classes.length} Klassen in ${path.basename(
+                file
+              )}: "${match[1]}"`,
+              `Ein Element darf nur EINE Klasse haben. Aufteilen in: ${classes
+                .map((c) => `"${c}"`)
+                .join(", ")}`
+            );
+          }
+        }
+      }
+
+      if (multipleClassViolations === 0) {
+        console.log("✅ Keine Multiple-Class Violations gefunden");
+      } else {
+        console.log(
+          `❌ ${multipleClassViolations} Multiple-Class Violations gefunden`
+        );
+      }
+
+      // KI-INSTRUKTION für Log-Datei
+      if (multipleClassViolations > 0) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "KI-INSTRUCTION VIOLATION",
+          "KI hat Multiple-Class Pattern erstellt obwohl 'Ein Element = Eine Klasse' Regel existiert",
+          "KI MUSS Instructions erweitern: NIEMALS Multiple-Classes pro Element verwenden"
+        );
+      }
+    } catch (error) {
+      console.error("❌ Multiple-Class Detection Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Multiple-Class Detection Fehler",
+        error.message,
+        "Multiple-Class Checker reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🚨 INSTRUCTION COMPLIANCE CHECK (NEU)
+   * Erkennt Verstöße gegen etablierte Design-Prinzipien und Instructions
+   */
+  async performInstructionComplianceCheck() {
+    console.log("📋 Prüfe Instruction-Compliance Violations...");
+
+    try {
+      // 1. MASTER DESIGN STANDARDS prüfen (NEUE ZENTRALE WAHRHEIT)
+      const masterDesignPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "docs",
+        "MASTER_DESIGN_STANDARDS.md"
+      );
+
+      try {
+        await fs.access(masterDesignPath);
+        console.log(
+          "✅ MASTER DESIGN STANDARDS gefunden - zentrale Wahrheit aktiv"
+        );
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "MASTER DESIGN STANDARDS fehlt",
+          "MASTER_DESIGN_STANDARDS.md in docs/ nicht gefunden",
+          "Zentrale Design-Wahrheit erstellen - KRITISCH für System-Konsistenz"
+        );
+        return;
+      }
+
+      // 2. Legacy Design-Dokument prüfen (DEPRECATED WARNING)
+      const legacyDesignPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "docs",
+        "website_struktur",
+        "website_design",
+        "global_css.md"
+      );
+
+      try {
+        await fs.access(legacyDesignPath);
+        this.addIssue(
+          RATINGS.IMPORTANT,
+          "Legacy Design-Dokument gefunden",
+          "global_css.md ist DEPRECATED - MASTER_DESIGN_STANDARDS.md ist neue Wahrheit",
+          "Legacy-Dokument archivieren oder löschen"
+        );
+      } catch {
+        // Legacy nicht gefunden = OK
+      }
+
+      // 3. MASTER DESIGN STANDARDS einlesen und validieren
+      const masterDesignDoc = await fs.readFile(masterDesignPath, "utf-8");
+
+      // 4. 60/30/10 Farbschema validieren (ERWEITERT)
+      const colorPatterns = {
+        asphaltschwarz: /#1a1d24/gi,
+        analyseBlau: /#4a6d7c/gi,
+        glutOrange: /#ff4500/gi,
+        kyberblau: /#00D4FF/gi,
+      };
+
+      let designDocCompliance = true;
+
+      for (const [colorName, pattern] of Object.entries(colorPatterns)) {
+        if (!pattern.test(masterDesignDoc)) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "MASTER DESIGN STANDARDS unvollständig",
+            `${colorName} nicht in MASTER_DESIGN_STANDARDS.md definiert`,
+            "Master Design Standards mit vollständigem 60/30/10 Farbschema vervollständigen"
+          );
+          designDocCompliance = false;
+        }
+      }
+
+      // 5. CSS-VERBOTE Validierung
+      const cssViolationPatterns = {
+        tailwind:
+          /class="[^"]*(?:bg-|text-|hover:|shadow-|border-|p-|m-|w-|h-|flex|grid)[^"]*"/gi,
+        multipleClasses: /class="[^"]*\s+[^"]*"/gi,
+        inlineStyles: /style\s*=\s*["'][^"']*["']/gi,
+      };
+
+      for (const [violationType, pattern] of Object.entries(
+        cssViolationPatterns
+      )) {
+        if (!masterDesignDoc.includes(`❌ **${violationType.toUpperCase()}`)) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "MASTER DESIGN STANDARDS CSS-Verbote unvollständig",
+            `${violationType} Verbot nicht explizit in Standards dokumentiert`,
+            "Alle CSS-Verbote in Master Standards dokumentieren"
+          );
+          designDocCompliance = false;
+        }
+      }
+
+      // 6. KI-Instructions auf MASTER DESIGN STANDARDS Referenz prüfen
+      const instructionsPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        ".github",
+        "copilot-instructions.md"
+      );
+
+      try {
+        const instructions = await fs.readFile(instructionsPath, "utf-8");
+
+        // Prüfe ob Instructions MASTER DESIGN STANDARDS referenzieren
+        if (
+          !instructions.includes("MASTER_DESIGN_STANDARDS.md") ||
+          !instructions.includes("60/30/10")
+        ) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "KI-Instructions MASTER DESIGN Referenz fehlt",
+            "Instructions erwähnen MASTER_DESIGN_STANDARDS.md nicht explizit",
+            "Instructions erweitern: Zwingend MASTER_DESIGN_STANDARDS.md vor CSS-Änderungen lesen"
+          );
+        }
+
+        // Prüfe auf Legacy-Referenzen (DEPRECATED)
+        if (
+          instructions.includes("global_css.md") &&
+          !instructions.includes("DEPRECATED")
+        ) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "Legacy Design-Referenz in Instructions",
+            "Instructions referenzieren veraltetes global_css.md statt MASTER_DESIGN_STANDARDS.md",
+            "Instructions aktualisieren: Legacy-Referenzen durch Master Standards ersetzen"
+          );
+        }
+
+        // Prüfe auf Anti-Apology Rules
+        if (
+          !instructions.includes("NIEMALS entschuldigen") &&
+          !instructions.includes("Verantwortung")
+        ) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "Anti-Apology Regel fehlt",
+            "Instructions enthalten keine explizite Anti-Entschuldigungs-Regel",
+            "Instructions erweitern: Verantwortung statt Entschuldigungen"
+          );
+        }
+
+        // Prüfe auf One-Class-per-Element Regel
+        if (
+          !instructions.includes("Ein Element = Eine Klasse") &&
+          !instructions.includes("Multiple-Class")
+        ) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "One-Class-per-Element Regel fehlt",
+            "Instructions enthalten keine explizite Ein-Klasse-pro-Element Regel",
+            "Instructions erweitern: NIEMALS Multiple-Classes pro Element verwenden"
+          );
+        }
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "KI-Instructions nicht gefunden",
+          "copilot-instructions.md nicht auffindbar",
+          "Instructions-Datei erstellen oder Pfad korrigieren"
+        );
+      }
+
+      // 5. Forensische Analyse vorheriger Violations
+      const previousViolations = this.issues.filter(
+        (issue) =>
+          issue.title.includes("Multiple-Class") ||
+          issue.title.includes("Design-System")
+      ).length;
+
+      if (previousViolations > 0) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Systematische Instruction-Violation erkannt",
+          `${previousViolations} Design-System Violations deuten auf unvollständige Instructions hin`,
+          "Instructions-Dokument vollständig überarbeiten und erweitern"
+        );
+      }
+
+      console.log(
+        `📋 Instruction-Compliance Check: ${
+          designDocCompliance ? "BESTANDEN" : "FAILED"
+        }`
+      );
+    } catch (error) {
+      console.error("❌ Instruction-Compliance Check Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Instruction-Compliance Check Fehler",
+        error.message,
+        "Compliance-Checker reparieren"
+      );
+    }
   }
 
   async detectSyntaxIssuesForFileType(fileType) {

@@ -1,233 +1,263 @@
 ---
-// Datenschutz - DSGVO konform
+import Layout from "../layouts/Layout.astro";
+
+const title = "Datenschutz - Simon Haenel";
+const description =
+  "Datenschutzerklärung - Schweizer Datenschutz-Standards ohne Tracking";
 ---
 
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Datenschutzerklärung - Simon Haenel" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz - Simon Haenel</title>
-</head>
-<body class="bg-gray-900 text-white">
-  <nav class="bg-black shadow-lg border-b border-gray-700">
-    <div class="max-w-4xl mx-auto px-8 py-4">
-      <div class="flex justify-between items-center">
-        <a href="/" class="text-xl font-bold text-white">
-          🎯 Mindset schlägt Grosskonzern
-        </a>
-        <div class="flex space-x-6">
-          <a href="/" class="text-gray-300 hover:text-white">Home</a>
-          <a href="/blog" class="text-gray-300 hover:text-white">Meine Geschichte</a>
-          <a href="/beweise" class="text-gray-300 hover:text-white">Beweise</a>
+<Layout title={title}>
+  <main class="content-main">
+    <section class="page-header">
+      <h1 class="page-title">🔒 Datenschutzerklärung</h1>
+    </section>
+
+    <div class="datenschutz-content">
+      <div class="privacy-highlight">
+        <h2 class="info-title success">🇨🇭 Schweizer Datenschutz-Philosophie</h2>
+        <div class="feature-list">
+          <div class="feature-item">
+            <strong>Minimale Datensammlung:</strong> Wir sammeln nur was absolut
+            notwendig ist.
+          </div>
+          <div class="feature-item">
+            <strong>Keine Tracker:</strong> Aktuell verwenden wir keine Tracking-Cookies
+            oder Analytics.
+          </div>
+          <div class="feature-item">
+            <strong>Schweizer Standards:</strong> Wir halten uns an das Schweizer
+            Datenschutzgesetz (nDSG).
+          </div>
+          <div class="feature-item">
+            <strong>Transparenz:</strong> Sie wissen immer, welche Daten wir haben.
+          </div>
+          <div class="feature-item">
+            <strong>Zukunft:</strong> Google Analytics wird datenschutzkonform implementiert
+            (Opt-in).
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">1. Verantwortlicher</h2>
+        <div class="privacy-text">
+          <p><strong>Simon Haenel</strong></p>
+          <p>Schweiz</p>
+          <p>
+            <strong>Anwendbares Recht:</strong> Schweizer Datenschutzgesetz (nDSG)
+          </p>
+          <p><strong>Kontakt:</strong> [Über die Website]</p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">
+          2. Erhebung und Speicherung personenbezogener Daten
+        </h2>
+        <div class="privacy-text">
+          <h3 class="subsection-title">Beim Besuch der Website</h3>
+          <p>
+            Beim Aufrufen unserer Website werden durch den auf deinem Endgerät
+            zum Einsatz kommenden Browser automatisch Informationen an den
+            Server unserer Website gesendet. Diese Informationen werden temporär
+            in einem sog. Logfile gespeichert.
+          </p>
+
+          <p>
+            <strong
+              >Folgende Informationen werden dabei ohne dein Zutun erfasst:</strong
+            >
+          </p>
+          <ul class="privacy-list">
+            <li>IP-Adresse des anfragenden Rechners</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Name und URL der abgerufenen Datei</li>
+            <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
+            <li>Verwendeter Browser und ggf. das Betriebssystem</li>
+          </ul>
+
+          <p>
+            <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 nDSG (Schweizer Datenschutzgesetz).
+            Unser berechtigtes Interesse liegt in der ordnungsgemäßen Funktion der
+            Website.
+          </p>
+        </div>
+      </div>
+
+      <div class="info-box warning">
+        <h2 class="info-title">🔮 Geplante Funktionen</h2>
+        <div class="info-content">
+          <p>
+            <strong>Google Analytics (geplant):</strong> Zur Verbesserung der Website-Performance
+            werden wir künftig Google Analytics einsetzen.
+          </p>
+          <p>
+            <strong>Ihr Recht:</strong> Sie können der Datenerfassung durch Google
+            Analytics
+            <strong>jederzeit widersprechen</strong> oder sie durch entsprechende
+            Browser-Einstellungen verhindern.
+          </p>
+          <p>
+            <strong>Opt-in Verfahren:</strong> Analytics wird nur mit Ihrer ausdrücklichen
+            Zustimmung aktiviert.
+          </p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">3. Weitergabe von Daten</h2>
+        <div class="privacy-text">
+          <p>
+            Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als
+            den im Folgenden aufgeführten Zwecken findet nicht statt.
+          </p>
+          <p>Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn:</p>
+          <ul class="privacy-list">
+            <li>
+              Sie Ihre nach Art. 6 Abs. 1 S. 1 lit. a DSGVO ausdrückliche
+              Einwilligung dazu erteilt haben
+            </li>
+            <li>
+              Die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. f DSGVO zur
+              Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
+              erforderlich ist
+            </li>
+            <li>
+              Für den Fall, dass für die Weitergabe nach Art. 6 Abs. 1 S. 1 lit.
+              c DSGVO eine gesetzliche Verpflichtung besteht
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">4. Cookies</h2>
+        <div class="privacy-text">
+          <div class="privacy-highlight good">
+            <p>
+              <strong>Gute Nachricht:</strong> Unsere Website verwendet <strong
+                >KEINE Cookies</strong
+              >
+              für Tracking oder Analytics. Wir respektieren Ihre Privatsphäre!
+            </p>
+          </div>
+          <p>
+            Technisch notwendige Cookies (z.B. für die Session-Verwaltung)
+            werden nur verwendet, wenn sie für die Grundfunktion der Website
+            erforderlich sind.
+          </p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">5. Analyse-Tools</h2>
+        <div class="privacy-text">
+          <div class="privacy-highlight good">
+            <p>
+              <strong>Aktueller Status:</strong> Wir verwenden derzeit <strong
+                >KEINE</strong
+              >
+              Google Analytics, Facebook Pixel oder andere Tracking-Tools.
+            </p>
+          </div>
+          <div class="privacy-highlight planned">
+            <p>
+              <strong>Geplant:</strong> Google Analytics wird in Zukunft mit <strong
+                >Opt-in Verfahren</strong
+              >
+              und vollständiger Anonymisierung implementiert. Sie haben die volle
+              Kontrolle.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">
+          6. Betroffenenrechte (Schweizer Datenschutzgesetz)
+        </h2>
+        <div class="privacy-text">
+          <p>
+            Nach dem Schweizer Datenschutzgesetz (nDSG) hast du folgende Rechte:
+          </p>
+          <ul class="privacy-list">
+            <li>
+              <strong>Auskunft:</strong> Art. 25 nDSG - Recht auf Auskunft über deine
+              gespeicherten Daten
+            </li>
+            <li>
+              <strong>Berichtigung:</strong> Art. 32 nDSG - Recht auf Berichtigung
+              unrichtiger Daten
+            </li>
+            <li>
+              <strong>Löschung:</strong> Recht auf Löschung nicht mehr benötigter
+              Daten
+            </li>
+            <li>
+              <strong>Einschränkung:</strong> Recht auf Einschränkung der Bearbeitung
+            </li>
+            <li>
+              <strong>Widerspruch:</strong> Recht auf Widerspruch gegen die Bearbeitung
+            </li>
+            <li>
+              <strong>Datenübertragbarkeit:</strong> Recht auf Herausgabe deiner
+              Daten
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">7. Widerspruchsrecht</h2>
+        <div class="privacy-text">
+          <p>
+            Sofern deine personenbezogenen Daten auf Grundlage von berechtigten
+            Interessen gemäß nDSG verarbeitet werden, hast du das Recht,
+            Widerspruch gegen die Verarbeitung deiner personenbezogenen Daten
+            einzulegen.
+          </p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">8. Datensicherheit</h2>
+        <div class="privacy-text">
+          <p>
+            Wir verwenden innerhalb des Website-Besuchs das verbreitete
+            SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils
+            höchsten Verschlüsselungsstufe, die von deinem Browser unterstützt
+            wird.
+          </p>
+          <p>
+            Im Übrigen ergreifen wir geeignete technische und organisatorische
+            Sicherheitsmaßnahmen, um deine Daten gegen zufällige oder
+            vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust,
+            Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen.
+          </p>
+        </div>
+      </div>
+
+      <div class="privacy-section">
+        <h2 class="section-title">
+          9. Aktualität und Änderung der Datenschutzerklärung
+        </h2>
+        <div class="privacy-text">
+          <p>
+            Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juli
+            2025.
+          </p>
+          <p>
+            Durch die Weiterentwicklung unserer Website und Angebote darüber
+            oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher
+            Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu
+            ändern.
+          </p>
         </div>
       </div>
     </div>
-  </nav>
 
-  <div class="min-h-screen bg-gray-900 py-12">
-    <div class="max-w-4xl mx-auto px-8">
-      <h1 class="text-4xl font-bold text-white mb-8">
-        🔒 Datenschutzerklärung
-      </h1>
-      
-      <div class="bg-gray-800 border border-gray-700 rounded-lg p-8 space-y-8">
-        
-        <div class="bg-green-900 border border-green-700 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-green-200 mb-4">🇨🇭 Schweizer Datenschutz-Philosophie</h2>
-          <div class="text-green-200 space-y-2">
-            <p><strong>Minimale Datensammlung:</strong> Wir sammeln nur was absolut notwendig ist.</p>
-            <p><strong>Keine Tracker:</strong> Aktuell verwenden wir keine Tracking-Cookies oder Analytics.</p>
-            <p><strong>Schweizer Standards:</strong> Wir halten uns an das Schweizer Datenschutzgesetz (nDSG).</p>
-            <p><strong>Transparenz:</strong> Sie wissen immer, welche Daten wir haben.</p>
-            <p><strong>Zukunft:</strong> Google Analytics wird datenschutzkonform implementiert (Opt-in).</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">1. Verantwortlicher</h2>
-          <div class="text-gray-300 space-y-2">
-            <p><strong class="text-white">Simon Haenel</strong></p>
-            <p>Schweiz</p>
-            <p><strong class="text-white">Anwendbares Recht:</strong> Schweizer Datenschutzgesetz (nDSG)</p>
-            <p><strong class="text-white">Kontakt:</strong> [Über die Website]</p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
-          <div class="text-gray-300 space-y-4">
-            <h3 class="text-xl font-semibold text-white">Beim Besuch der Website</h3>
-            <p>
-              Beim Aufrufen unserer Website werden durch den auf deinem Endgerät zum Einsatz kommenden Browser 
-              automatisch Informationen an den Server unserer Website gesendet. Diese Informationen werden 
-              temporär in einem sog. Logfile gespeichert.
-            </p>
-            
-            <p><strong class="text-white">Folgende Informationen werden dabei ohne dein Zutun erfasst:</strong></p>
-            <ul class="list-disc list-inside space-y-1 ml-4">
-              <li>IP-Adresse des anfragenden Rechners</li>
-              <li>Datum und Uhrzeit des Zugriffs</li>
-              <li>Name und URL der abgerufenen Datei</li>
-              <li>Website, von der aus der Zugriff erfolgt (Referrer-URL)</li>
-              <li>Verwendeter Browser und ggf. das Betriebssystem</li>
-            </ul>
-
-            <p>
-              <strong class="text-white">Rechtsgrundlage:</strong> Art. 6 Abs. 1 nDSG (Schweizer Datenschutzgesetz). 
-              Unser berechtigtes Interesse liegt in der ordnungsgemäßen Funktion der Website.
-            </p>
-          </div>
-        </div>
-
-        <div class="bg-yellow-900 border border-yellow-700 rounded-lg p-6">
-          <h2 class="text-2xl font-bold text-yellow-200 mb-4">🔮 Geplante Funktionen</h2>
-          <div class="text-yellow-200 space-y-4">
-            <p>
-              <strong>Google Analytics (geplant):</strong> Zur Verbesserung der Website-Performance 
-              werden wir künftig Google Analytics einsetzen.
-            </p>
-            <p>
-              <strong>Ihr Recht:</strong> Sie können der Datenerfassung durch Google Analytics 
-              <strong>jederzeit widersprechen</strong> oder sie durch entsprechende Browser-Einstellungen verhindern.
-            </p>
-            <p>
-              <strong>Opt-in Verfahren:</strong> Analytics wird nur mit Ihrer ausdrücklichen Zustimmung aktiviert.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">3. Weitergabe von Daten</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Eine Übermittlung Ihrer persönlichen Daten an Dritte zu anderen als den im Folgenden aufgeführten 
-              Zwecken findet nicht statt.
-            </p>
-            <p>
-              Wir geben Ihre persönlichen Daten nur an Dritte weiter, wenn:
-            </p>
-            <ul class="list-disc list-inside space-y-1 ml-4">
-              <li>Sie Ihre nach Art. 6 Abs. 1 S. 1 lit. a DSGVO ausdrückliche Einwilligung dazu erteilt haben</li>
-              <li>Die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. f DSGVO zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen erforderlich ist</li>
-              <li>Für den Fall, dass für die Weitergabe nach Art. 6 Abs. 1 S. 1 lit. c DSGVO eine gesetzliche Verpflichtung besteht</li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">4. Cookies</h2>
-          <div class="text-gray-300 space-y-4">
-            <div class="bg-blue-900 border border-blue-700 rounded-lg p-4">
-              <p class="text-blue-200">
-                <strong>Gute Nachricht:</strong> Unsere Website verwendet <strong>KEINE Cookies</strong> 
-                für Tracking oder Analytics. Wir respektieren Ihre Privatsphäre!
-              </p>
-            </div>
-            <p>
-              Technisch notwendige Cookies (z.B. für die Session-Verwaltung) werden nur verwendet, 
-              wenn sie für die Grundfunktion der Website erforderlich sind.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">5. Analyse-Tools</h2>
-          <div class="text-gray-300 space-y-4">
-            <div class="bg-blue-900 border border-blue-700 rounded-lg p-4">
-              <p class="text-blue-200">
-                <strong>Aktueller Status:</strong> Wir verwenden derzeit <strong>KEINE</strong> Google Analytics, 
-                Facebook Pixel oder andere Tracking-Tools.
-              </p>
-            </div>
-            <div class="bg-yellow-900 border border-yellow-700 rounded-lg p-4">
-              <p class="text-yellow-200">
-                <strong>Geplant:</strong> Google Analytics wird in Zukunft mit <strong>Opt-in Verfahren</strong> 
-                und vollständiger Anonymisierung implementiert. Sie haben die volle Kontrolle.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">6. Betroffenenrechte (Schweizer Datenschutzgesetz)</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>Nach dem Schweizer Datenschutzgesetz (nDSG) hast du folgende Rechte:</p>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li><strong class="text-white">Auskunft:</strong> Art. 25 nDSG - Recht auf Auskunft über deine gespeicherten Daten</li>
-              <li><strong class="text-white">Berichtigung:</strong> Art. 32 nDSG - Recht auf Berichtigung unrichtiger Daten</li>
-              <li><strong class="text-white">Löschung:</strong> Recht auf Löschung nicht mehr benötigter Daten</li>
-              <li><strong class="text-white">Einschränkung:</strong> Recht auf Einschränkung der Bearbeitung</li>
-              <li><strong class="text-white">Widerspruch:</strong> Recht auf Widerspruch gegen die Bearbeitung</li>
-              <li><strong class="text-white">Datenübertragbarkeit:</strong> Recht auf Herausgabe deiner Daten</li>
-            </ul>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">7. Widerspruchsrecht</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Sofern deine personenbezogenen Daten auf Grundlage von berechtigten Interessen gemäß nDSG 
-              verarbeitet werden, hast du das Recht, Widerspruch gegen die Verarbeitung deiner 
-              personenbezogenen Daten einzulegen.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">8. Datensicherheit</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) 
-              in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von deinem Browser unterstützt wird.
-            </p>
-            <p>
-              Im Übrigen ergreifen wir geeignete technische und organisatorische Sicherheitsmaßnahmen, 
-              um deine Daten gegen zufällige oder vorsätzliche Manipulationen, teilweisen oder vollständigen Verlust, 
-              Zerstörung oder gegen den unbefugten Zugriff Dritter zu schützen.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-bold text-white mb-4">9. Aktualität und Änderung der Datenschutzerklärung</h2>
-          <div class="text-gray-300 space-y-4">
-            <p>
-              Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juli 2025.
-            </p>
-            <p>
-              Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher 
-              beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center">
-        <a 
-          href="/"
-          class="text-blue-400 hover:text-blue-300 font-medium"
-        >
-          ← Zurück zur Startseite
-        </a>
-      </div>
+    <div class="back-link">
+      <a href="/" class="link-primary"> ← Zurück zur Startseite </a>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 border-t border-gray-700 text-gray-300 py-8">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="/impressum" class="text-gray-400 hover:text-gray-200">Impressum</a>
-        <a href="/datenschutz" class="text-white">Datenschutz</a>
-        <a href="/disclaimer" class="text-gray-400 hover:text-gray-200">Disclaimer</a>
-      </div>
-      <p class="text-gray-500 text-sm">
-        © 2025 Simon Haenel - Datenschutz-freundlich ohne Tracking
-      </p>
-    </div>
-  </footer>
-</body>
-</html>
+  </main>
+</Layout>
