@@ -156,15 +156,15 @@ const CONFIG = {
         /<[^>]+style\s*=\s*["'][^"']*["'][^>]*>/gi,
         // TAILWIND CSS DETECTION PATTERNS
         /class\s*=\s*["'][^"']*(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:)[^"']*["']/gi,
-        /class\s*=\s*["'][^"']*(?:max-w-|min-h-|transition|transform|gradient)[^"']*["']/gi
+        /class\s*=\s*["'][^"']*(?:max-w-|min-h-|transition|transform|gradient)[^"']*["']/gi,
       ],
-      
+
       // TAILWIND CSS SPEZIFISCHE PATTERN
       TAILWIND_PATTERNS: [
         // Layout & Spacing
         /(?:p|px|py|pt|pb|pl|pr|m|mx|my|mt|mb|ml|mr)-\d+/g,
         /(?:w|h|max-w|min-w|max-h|min-h)-\w+/g,
-        // Colors & Backgrounds  
+        // Colors & Backgrounds
         /(?:bg|text|border)-(?:gray|blue|red|green|yellow|purple|pink|indigo)-\d+/g,
         /(?:bg|text|border)-(?:white|black|transparent|current)/g,
         // Flexbox & Grid
@@ -179,7 +179,7 @@ const CONFIG = {
         // Transitions
         /transition(?:-\w+)?/g,
         /duration-\d+/g,
-        /ease-\w+/g
+        /ease-\w+/g,
       ],
     },
 
@@ -4514,13 +4514,16 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
 
       // Inline-Style und Tailwind CSS Erkennung (KORRIGIERT: awaited)
       const inlineStylesFound = await this.detectInlineStyles();
-      const tailwindClassesFound = this.detectTailwindClasses(inlineStylesFound);
+      const tailwindClassesFound =
+        this.detectTailwindClasses(inlineStylesFound);
 
       // Verwende erweiterte Migration-Prompt wenn sowohl Inline als auch Tailwind gefunden
       if (inlineStylesFound.length > 0 || tailwindClassesFound.length > 0) {
-        this.generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound);
+        this.generateExtendedMigrationPrompt(
+          inlineStylesFound,
+          tailwindClassesFound
+        );
       }
-      
     } catch (error) {
       this.addIssue(
         RATINGS.CRITICAL,
@@ -4641,8 +4644,12 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
    * 🚫 Inline-Styles & Tailwind Detection (ERWEITERT)
    */
   async detectInlineStyles() {
-    console.log("🚫 Suche nach Inline-Styles UND Tailwind CSS in Astro-Dateien...");
-    console.log("🆕 ERWEITERT: Erkennt jetzt auch Tailwind CSS utility classes");
+    console.log(
+      "🚫 Suche nach Inline-Styles UND Tailwind CSS in Astro-Dateien..."
+    );
+    console.log(
+      "🆕 ERWEITERT: Erkennt jetzt auch Tailwind CSS utility classes"
+    );
 
     try {
       const astroFiles = await this.findAstroFiles();
@@ -4651,11 +4658,11 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
 
       for (const file of astroFiles) {
         const content = await fs.readFile(file, "utf-8");
-        
+
         // 1. Standard Inline-Styles Detection
         const inlinePatterns = [
           /style\s*=\s*["'][^"']*["']/gi,
-          /<[^>]+style\s*=\s*["'][^"']*["'][^>]*>/gi
+          /<[^>]+style\s*=\s*["'][^"']*["'][^>]*>/gi,
         ];
 
         for (const pattern of inlinePatterns) {
@@ -4666,15 +4673,16 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
                 file: path.basename(file),
                 style: match,
                 fullPath: file,
-                type: 'inline-style'
+                type: "inline-style",
               });
             }
           }
         }
 
         // 2. TAILWIND CSS Detection (KRITISCH!)
-        const tailwindPatterns = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.TAILWIND_PATTERNS;
-        
+        const tailwindPatterns =
+          CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.TAILWIND_PATTERNS;
+
         for (const pattern of tailwindPatterns) {
           const matches = content.match(pattern);
           if (matches) {
@@ -4683,7 +4691,7 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
                 file: path.basename(file),
                 style: match,
                 fullPath: file,
-                type: 'tailwind-class'
+                type: "tailwind-class",
               });
             }
           }
@@ -4693,15 +4701,20 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
         const classMatches = content.match(/class\s*=\s*["']([^"']*)["']/gi);
         if (classMatches) {
           for (const match of classMatches) {
-            const classContent = match.match(/class\s*=\s*["']([^"']*)["']/i)[1];
-            const hasTailwind = /(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:|max-w-|min-h-|transition|transform|gradient)/.test(classContent);
-            
+            const classContent = match.match(
+              /class\s*=\s*["']([^"']*)["']/i
+            )[1];
+            const hasTailwind =
+              /(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:|max-w-|min-h-|transition|transform|gradient)/.test(
+                classContent
+              );
+
             if (hasTailwind) {
               tailwindClassesFound.push({
                 file: path.basename(file),
                 style: match,
                 fullPath: file,
-                type: 'tailwind-class-attribute'
+                type: "tailwind-class-attribute",
               });
             }
           }
@@ -4709,7 +4722,8 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
       }
 
       // KRITISCHE BEWERTUNG: Tailwind = genauso schlimm wie Inline-Styles!
-      const totalViolations = inlineStylesFound.length + tailwindClassesFound.length;
+      const totalViolations =
+        inlineStylesFound.length + tailwindClassesFound.length;
 
       if (totalViolations > 0) {
         // Gruppiere Violations nach Datei
@@ -4718,7 +4732,7 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
           if (!violationsByFile[item.file]) {
             violationsByFile[item.file] = { inline: [], tailwind: [] };
           }
-          if (item.type === 'inline-style') {
+          if (item.type === "inline-style") {
             violationsByFile[item.file].inline.push(item.style);
           } else {
             violationsByFile[item.file].tailwind.push(item.style);
@@ -4728,11 +4742,12 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
         for (const [fileName, violations] of Object.entries(violationsByFile)) {
           const inlineCount = violations.inline.length;
           const tailwindCount = violations.tailwind.length;
-          
+
           let description = `${fileName}: `;
           if (inlineCount > 0) description += `${inlineCount} Inline-Style(s)`;
           if (inlineCount > 0 && tailwindCount > 0) description += ` + `;
-          if (tailwindCount > 0) description += `${tailwindCount} Tailwind CSS Class(es)`;
+          if (tailwindCount > 0)
+            description += `${tailwindCount} Tailwind CSS Class(es)`;
           description += ` gefunden`;
 
           this.addIssue(
@@ -4744,8 +4759,10 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
         }
 
         // Detaillierte Migration-Anweisungen generieren
-        this.generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound);
-        
+        this.generateExtendedMigrationPrompt(
+          inlineStylesFound,
+          tailwindClassesFound
+        );
       } else {
         this.addIssue(
           RATINGS.INFO,
@@ -4757,7 +4774,6 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
 
       // Return both arrays for further processing
       return inlineStylesFound;
-
     } catch (error) {
       this.addIssue(
         RATINGS.IMPORTANT,
@@ -4809,19 +4825,25 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
    */
   detectTailwindClasses(inlineStylesFound) {
     console.log("⚡ Separate Tailwind CSS Detection gestartet...");
-    
+
     const tailwindClassesFound = [];
-    
+
     // Falls detectInlineStyles bereits aufgerufen wurde, extrahiere Tailwind-Klassen
     if (inlineStylesFound && inlineStylesFound.length > 0) {
       inlineStylesFound.forEach((item) => {
-        if (item.type && (item.type === 'tailwind-class' || item.type === 'tailwind-class-attribute')) {
+        if (
+          item.type &&
+          (item.type === "tailwind-class" ||
+            item.type === "tailwind-class-attribute")
+        ) {
           tailwindClassesFound.push(item);
         }
       });
     }
-    
-    console.log(`⚡ Tailwind CSS Detection abgeschlossen: ${tailwindClassesFound.length} Tailwind-Violations gefunden`);
+
+    console.log(
+      `⚡ Tailwind CSS Detection abgeschlossen: ${tailwindClassesFound.length} Tailwind-Violations gefunden`
+    );
     return tailwindClassesFound;
   }
 
@@ -4874,7 +4896,8 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
    * 🚀 ERWEITERTE Migration-Prompt für Inline-Styles + Tailwind (NEU)
    */
   generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound) {
-    let prompt = "\n\n## 🚀 KI-AUFFORDERUNG: VOLLSTÄNDIGE CSS-ARCHITEKTUR MIGRATION\n\n";
+    let prompt =
+      "\n\n## 🚀 KI-AUFFORDERUNG: VOLLSTÄNDIGE CSS-ARCHITEKTUR MIGRATION\n\n";
     prompt += "**KRITISCH: TAILWIND CSS + INLINE-STYLES ERKANNT!**\n\n";
     prompt += "**ZWINGEND MANUELLE MIGRATION - KEINE SCRIPTS VERWENDEN!**\n\n";
 
@@ -4896,7 +4919,7 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
       }
     }
 
-    // Tailwind Classes Section  
+    // Tailwind Classes Section
     if (tailwindClassesFound.length > 0) {
       prompt += "### ⚡ GEFUNDENE TAILWIND CSS CLASSES (KRITISCH!):\n\n";
       const tailwindByFile = {};
@@ -4919,15 +4942,20 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
     }
 
     prompt += "### 🎨 60/30/10 MIGRATION-ANWEISUNGEN:\n\n";
-    prompt += "1. **ZUERST:** Vollständige Bestandsaufnahme aller verwendeten Styles\n";
-    prompt += "2. **DESIGN-DOC:** Alle Elemente in global_css.md in natürlicher Sprache definieren\n";
+    prompt +=
+      "1. **ZUERST:** Vollständige Bestandsaufnahme aller verwendeten Styles\n";
+    prompt +=
+      "2. **DESIGN-DOC:** Alle Elemente in global_css.md in natürlicher Sprache definieren\n";
     prompt += "3. **60/30/10 PRINZIP:** Farbschema anwenden:\n";
     prompt += "   - Primär: #1E3A8A (dunkelblau - 60%)\n";
     prompt += "   - Sekundär: #2563EB (mittleres Blau - 30%)\n";
     prompt += "   - Akzent: #EF4444 (rot - 10%)\n";
-    prompt += "4. **CSS-IMPLEMENTIERUNG:** CSS-Klassen in global.css erstellen\n";
-    prompt += "5. **MANUELLE BEREINIGUNG:** ALLE Tailwind + Inline-Styles von Hand entfernen\n";
-    prompt += "6. **KLASSEN-ERSETZUNG:** Durch saubere, semantische CSS-Klassen ersetzen\n\n";
+    prompt +=
+      "4. **CSS-IMPLEMENTIERUNG:** CSS-Klassen in global.css erstellen\n";
+    prompt +=
+      "5. **MANUELLE BEREINIGUNG:** ALLE Tailwind + Inline-Styles von Hand entfernen\n";
+    prompt +=
+      "6. **KLASSEN-ERSETZUNG:** Durch saubere, semantische CSS-Klassen ersetzen\n\n";
 
     prompt += "### ❌ ABSOLUT VERBOTEN:\n";
     prompt += "- Search-Funktionen verwenden\n";
@@ -4941,7 +4969,8 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
     prompt += "- Semantische CSS-Klassen-Namen\n";
     prompt += "- Vollständige Dokumentation in global_css.md\n\n";
 
-    prompt += "**PRIORITÄT: KRITISCH** - Diese Architektur-Verletzung blockiert sauberes Design!\n\n";
+    prompt +=
+      "**PRIORITÄT: KRITISCH** - Diese Architektur-Verletzung blockiert sauberes Design!\n\n";
 
     // Füge zu Issues hinzu für Log-Datei
     this.addIssue(
