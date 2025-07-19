@@ -9,7 +9,9 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node tools/build_check/scripte/build-checker.cjs",
+    "build:astro-only": "astro build",
+    "build:checker-only": "node tools/build_check/scripte/build-checker.cjs",
     "preview": "astro preview",
     "astro": "astro"
   },

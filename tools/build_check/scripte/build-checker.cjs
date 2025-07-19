@@ -49,7 +49,7 @@ const CONFIG = {
 
   // Erweiterte SEO Standards basierend auf Portfolio Blueprints
   SEO_STANDARDS: {
-    MIN_CONTENT_LENGTH: 800, // Blog-Mindestlänge für SEO
+    MIN_CONTENT_LENGTH: 2300, // Blog-Mindestlänge für SEO
     TARGET_CONTENT_LENGTH: 2300, // Premium Content-Ziel für organisches SEO
     MAX_TITLE_LENGTH: 60,
 
@@ -342,12 +342,12 @@ class BuildChecker {
    * 🚀 Build-Prozess ausführen (NUR pnpm build)
    */
   async runBuildProcess() {
-    console.log("🚀 Führe Build-Prozess aus: npm run build");
+    console.log("🚀 Führe Build-Prozess aus: pnpm build:astro-only");
     try {
       const buildStart = Date.now();
 
-      // WICHTIG: npm run build für Astro-Projekt verwenden
-      const output = execSync("npm run build", {
+      // WICHTIG: NUR Astro-Build ohne Checker um Endlosschleife zu vermeiden
+      const output = execSync("pnpm build:astro-only", {
         cwd: CONFIG.PROJECT_ROOT,
         encoding: "utf8",
         stdio: "pipe",
