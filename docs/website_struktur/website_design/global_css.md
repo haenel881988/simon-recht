@@ -2,191 +2,44 @@ Diese Datei dient dazu, in einfacher Sprache das Design zu beschreiben.
 
 # Website Design - Global CSS
 
-Statische Elemente:
-**Header**
+Diese Hinweise müssen in CSS umgesetzt werden.:
+Das "Nachtstahl & Warnsignal" Farbsystem
+Dieses Farbsystem ist nicht einfach nur "dunkel". Es ist eine visuelle Strategie, die unsere Mission widerspiegelt: Wir sind nicht die Underdogs, wir sind die strategische Bedrohung. Die Tonalität ist kühl, analytisch und präzise, mit einem Akzent, der keine Zweifel an unserer Entschlossenheit lässt.
 
-- Primärfarbe hellblau als Hintergrund mit weißer Schrift
-- Beim Hochscrollen wird der Header sanft eingeblendet
-- Beim Runterscrollen verschwindet der Header elegant
-- Minimalistisches Design ohne überflüssige Effekte
+60% – Die Dominanzfarbe: #1a1d24 (Asphaltschwarz)
+Beschreibung: Das ist unsere Basis. Kein reines Schwarz, das billig und ermüdend wirkt, sondern ein tiefes, fast schwarzes Anthrazit mit einem minimalen blauen Unterton. Es wirkt wie der Asphalt in einer Grossstadt bei Nacht oder der polierte Stahl einer Maschine.
 
-**Menüleiste:**
+Psychologische Wirkung: Seriosität, Stärke, Fokus. Diese Farbe schafft eine konzentrierte Umgebung, in der der Inhalt im Mittelpunkt steht. Sie signalisiert, dass wir uns in einem ernsten Territorium befinden, in dem Oberflächlichkeit keinen Platz hat. Das ist der Raum, in dem Strategien geschmiedet werden.
 
-- Burger-Menü-Symbol mit drei horizontalen Strichen
-- Sekundärfarbe mittleres Blau (#2563EB) als Hintergrund beim Öffnen
-- Weiße Schrift für optimale Lesbarkeit
-- Automatisches Schließen nach drei Sekunden ohne Interaktion
+Anwendung: Hintergrund der Website, grossflächige Sektionen.
 
-**Footer**
+30% – Die Sekundärfarbe: #4a6d7c (Analyse-Blau)
+Beschreibung: Ein kühles, gedecktes Stahlblau. Es ist die Farbe von technischen Blueprints, von Code-Editoren und von tiefem, klarem Wasser. Es ist nicht emotional, sondern intellektuell.
 
-- Primärfarbe dunkelblau (#1E3A8A) als Hintergrund mit weißer Schrift
-- Schlichtes Design ohne Animationen
-- Konsistente Farbgebung mit Rest der Website
+Psychologische Wirkung: Intelligenz, Analyse, Systematik. Diese Farbe bricht die Dunkelheit des Hintergrunds auf und schafft Struktur. Sie strahlt Ruhe und logische Kompetenz aus. Das ist die Farbe, die unsere Methode und unsere analytische Überlegenheit repräsentiert.
 
-Dynamische Elemente:
+Anwendung: Info-Boxen, Blockquotes (für Zitate aus Gesetzen oder Urteilen), sekundäre Buttons, hervorgehobene Bereiche, die den systematischen Ansatz verdeutlichen.
 
-# Universelles Styling
+10% – Die Akzentfarbe: #ff4500 (Glut-Orange)
+Beschreibung: Ein kräftiges, leuchtendes Orangerot. Es ist die Farbe von glühenden Kohlen, einem Warnsignal oder dem entscheidenden Button in einem Cockpit. Es ist ein kontrollierter Ausbruch von Energie in einer ansonsten kühlen Umgebung.
 
-Der Hintergrund ist komplett in dunkelblau (#1E3A8A) gehalten, um eine konsistente und beruhigende Atmosphäre zu schaffen. Die Schriftfarbe ist weiß, um einen klaren Kontrast zu bieten und die Lesbarkeit zu gewährleisten.
-Generell gilt, die website ist minimalistisch und schlicht gehalten.
+Psychologische Wirkung: Entschlossenheit, Aktion, Warnung. Diese Farbe ist unser "Call to Action". Sie durchbricht die analytische Kühle und fordert zur Handlung auf. Sie ist das visuelle Ausrufezeichen hinter unseren Aussagen. Sie signalisiert Dringlichkeit und die Konsequenz, die aus unserer Analyse folgt.
 
-Dabei muss die Farbgestaltung folgendermassen aussehen. Wir gehen nach dem 60/30/10-Prinzip vor:
-Primär: #1E3A8A - dunkelblau - 60% --> Hintergrund
-Sekundär: #2563EB - mittleres Blau - 30% --> Card-Border, Eingabefelder, Hervorhebungen
-Akzent: #EF4444 - rot - 10% --> Buttons, Warnungen, Call-to-Actions
+Anwendung: Primäre Call-to-Action-Buttons ("Jetzt bewerben", "Kurs kaufen"), Links im Fliesstext, Hervorhebung von kritischen Informationen, Icons.
 
-💡 **KI-VORSCHLAG FÜR SEKUNDÄRFARBE:** #2563EB (mittleres Blau) - harmoniert perfekt mit deinem dunkelblau, bleibt minimalistisch und modern, schafft subtile Tiefe ohne aufdringlich zu sein.
+Zusammengefasst:
 
-**DEZENTES TIEFE-MUSTER:** Sehr subtile, kaum sichtbare geometrische Linien oder Punkte in einer noch dunkleren Blau-Nuance (#1A326B) - nur für visuelle Tiefe, nicht ablenkend.
+60% Asphaltschwarz (#1a1d24): Schafft eine fokussierte, ernste und starke Basis.
 
-Schriftfarbe: weiss
+30% Analyse-Blau (#4a6d7c): Strukturiert den Inhalt und kommuniziert intellektuelle, systematische Kompetenz.
 
-Diese Farbgestaltung ist universell. Jeder Abschnitt hat die gleiche Farbgestaltung.
-Für die tiefe, kann die KI leichtes Muster einfügen, dezent.
+10% Glut-Orange (#ff4500): Führt den Nutzer, fordert zur Handlung auf und signalisiert unmissverständliche Entschlossenheit.
 
-# Schriftarten
+Dieses Styling ist eine visuelle Umsetzung unserer Kernstrategie: Aus einer Position der analytischen Stärke (Asphaltschwarz & Analyse-Blau) setzen wir gezielte, wirkungsvolle Aktionen (Glut-Orange). Es ist kein "böses" oder "depressives" dunkles Design, sondern ein Ausdruck von Kontrolle und strategischer Überlegenheit.
 
-**H1:**
+kyberblauer Schriftfarbe schlage ich #00D4FF vor - authentisch Star Wars-inspiriert und kontrastreich auf dem blauen Hintergrund.
 
-- Große, kraftvolle Hauptüberschriften für Seitentitel
-- Weiße Schrift auf dunkelblauen Hintergrund
-- Imposante Wirkung und hervorragende Lesbarkeit
-- Zentriert oder linksbündig je nach Seitenkontext
+Das Design gilt auf der gesamten Website und muss als solches auch implementiert werden.
 
-**_H2:_**
-
-- Mittlere Schriftgröße für wichtige Abschnittsüberschriften
-- Weiße Schrift mit ausreichend Abstand zum nachfolgenden Text
-- Strukturiert die Inhalte klar und übersichtlich
-- Konsistente Formatierung über alle Seiten
-
-**_H3:_**
-
-- Kleinere Überschriften für Unterpunkte und Detailbereiche
-- Teilweise mit Farb-Akzenten (rot #EF4444 für wichtige Warnungen)
-- Können mit Emojis kombiniert werden für bessere Erkennbarkeit
-- Harmonische Integration in den Textfluss
-
-**_H4:_**
-
-- Feine Überschriften für spezifische Punkte und Säulen-Titel
-- Konsistente weiße Schrift mit guter Lesbarkeit
-- Verwendet für kleinere Abschnitte und Untergliederungen
-- Passend zur minimalistischen Website-Ästhetik
-
-**_Text:_**
-
-- Standardtext in weißer Farbe auf dunkelblauen Hintergrund
-- Angenehme Schriftgröße für optimales Leseerlebnis
-- Ausreichender Zeilenabstand für entspannte Augen
-- Verschiedene Größen je nach Wichtigkeit des Inhalts
-
-**Buttons:**
-
-- Tesla-inspirierte Sekundärfarbe mittleres Blau (#2563EB) als Hintergrund
-- Kyberblauer Schriftfarbe (inspiriert vom Star Wars Universum) für futuristische Ästhetik
-- Beim Darüberfahren wird der Text leicht vergrößert für bessere Interaktion
-- Zusätzlicher Leucht-Effekt in Akzentfarbe rot (#EF4444) beim Hover
-- Minimalistisches Design ohne überflüssige Schatten oder Effekte
-
-💡 **KI-PRÄZISIERUNG:** Deine Tesla-Inspiration und kyberblauer Schrift-Idee ist genial! Für die kyberblauer Schriftfarbe schlage ich #00D4FF vor - authentisch Star Wars-inspiriert und kontrastreich auf dem blauen Hintergrund.
-
-**Startseite**
-
-**Hero-Section**
-
-- Zweispaltiges Layout mit großzügigen Abständen
-- Linke Spalte: Kraftvolle H1-Überschrift mit größerem Einleitungstext
-- Rechte Spalte: Professionelles Bild mit abgerundeten Ecken und dezenten Schatten
-- Mobile Version: Einspaltig und zentriert für optimale Lesbarkeit
-
-**1. Abschnitt: Proof of Concept**
-
-- H2-Überschrift zentriert mit ausreichend Abstand
-- Sekundärfarbe mittleres Blau (#2563EB) für Card-Rahmen um Gerichtsurteil
-- Blockzitat in kursiver Schrift für bessere Hervorhebung
-- Minimalistisches Design ohne überflüssige Schatten-Effekte
-
-**2. Abschnitt: Das System**
-
-- Konsistente Primärfarbe dunkelblau (#1E3A8A) als Hintergrund
-- Akzentfarbe rot (#EF4444) für wichtige Warnungen und H3-Überschriften
-- Sekundärfarbe mittleres Blau (#2563EB) für Card-Rahmen
-- Zentrierter Text mit angenehmer Schriftgröße
-
-**3. Abschnitt: 3-Säulen-Methode**
-
-- Dreispaltiges Layout mit automatischer Anpassung
-- Sekundärfarbe mittleres Blau (#2563EB) für Card-Design jeder Säule
-- H4-Überschriften für Säulen-Titel in weißer Schrift
-- Akzentfarbe rot (#EF4444) für wichtige Links und Informationen
-
-**4. Abschnitt: Beta-Anmeldung (Call-to-Action)**
-
-- Sekundärfarbe mittleres Blau (#2563EB) für Highlight-Box-Hintergrund
-- Sekundärfarbe für dezente Rahmen-Hervorhebung
-- Checkmark-Liste mit übersichtlicher Anordnung
-- Großer Button in Akzentfarbe rot (#EF4444) für maximale Aufmerksamkeit
-
-**5. Abschnitt: FAQ**
-
-- Primärfarbe dunkelblau (#1E3A8A) als Standard-Hintergrund
-- H3-Überschriften mit Fragezeichen-Symbol für bessere Erkennbarkeit
-- Maximale Textbreite für angenehmes Lesen
-- Abschließender Motivations-Aufruf in Akzentfarbe rot (#EF4444)
-
-**Über mich Seite**
-
-- Primärfarbe dunkelblau (#1E3A8A) für konsistente Optik
-- Persönliche Texte in gut lesbaren Blöcken mit weißer Schrift
-- Sekundärfarbe mittleres Blau (#2563EB) für Hervorhebung wichtiger Karriere-Stationen
-- Professionelles aber authentisches Layout ohne überflüssige Dekoration
-
-**Kontaktformular**
-
-- Eingabefelder mit Sekundärfarbe mittleres Blau (#2563EB) als Rahmen
-- Weiße Schrift auf Primärfarbe dunkelblau (#1E3A8A) Hintergrund
-- Klare Beschriftungen über jedem Eingabefeld
-- Große, fingerfreundliche Bereiche für einfache Bedienung
-- Erfolgsmeldung in Sekundärfarbe mittleres Blau (#2563EB) nach dem Senden
-
-**Blog-Indexseite und Artikel**
-
-- Primärfarbe dunkelblau (#1E3A8A) als durchgängiger Hintergrund
-- Übersichtliches Raster-Layout für Blog-Beiträge
-- Sekundärfarbe mittleres Blau (#2563EB) für Links und Navigation
-- Vorschau-Texte mit optimaler Länge für schnelle Orientierung
-- Konsistente Farbgebung bei Navigation zwischen Artikeln
-
-# 💡 **KI-VORSCHLÄGE FÜR ZUSÄTZLICHE BEREICHE:**
-
-**Barrierefreiheit-Aspekte:**
-
-- Hohe Kontrastverhältnisse (weiß auf dunkelblau) für bessere Lesbarkeit
-- Große, fingerfreundliche Buttons für Touch-Bedienung
-- Klare Fokus-Indikatoren bei Tastaturnavigation
-- Logische Tab-Reihenfolge durch alle Seiten
-
-**Fehlerseiten (404, etc.):**
-
-- Gleicher dunkelblauer Hintergrund für Konsistenz
-- Freundliche Fehlermeldungen ohne technischen Jargon
-- Hilfreiche Navigation zurück zur Startseite
-- Humorvolle aber professionelle Tonalität
-
-**Ladeanimationen:**
-
-- Dezente Ladebalken in Sekundärfarbe mittleres Blau (#2563EB)
-- Minimale Animationen für flüssige Übergänge
-- Kein übermäßiger Einsatz von Bewegung - schlicht und modern
-- Fokus auf Funktionalität statt auf überflüssige visuelle Effekte
-
-**Mobile Optimierung:**
-
-- Einspaltige Layouts auf kleineren Bildschirmen
-- Optimierte Touch-Bereiche für Buttons und Links
-- Konsistente Farbgebung mit 60/30/10 Prinzip auch auf mobilen Geräten
-- Schnelle Ladezeiten durch minimalistisches Design
-- Responsive Navigation ohne überflüssige Animationen
-- Vergrößerte Abstände für Touch-Bedienung
-- Vereinfachte Navigation mit Burger-Menü
+Inline-Styles sind restriktiv und universell verboten.
+Dies muss durch die Verwendung von CSS-Klassen und -IDs ersetzt werden.

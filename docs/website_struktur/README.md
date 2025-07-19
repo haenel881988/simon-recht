@@ -53,15 +53,10 @@ Dazu gehören:
 
 **Design**
 
-Das gesamte Design der Website wird hier definiert:
-`docs\website_struktur\website_design\global_css.md`
+Die Design Richtlinien der Website wird hier definiert: "docs\website_struktur\website_design\global_css.md"
 
 **⚠️ DESIGN-HINWEIS:**
-Sollten einige Angaben fehlen in der Datei:
-`docs\website_struktur\website_design\global_css.md`
-
-Muss die KI zuerst mit mir Rücksprache nehmen und mir die Styling / Design-Fragen direkt in der Datei angeben, vorschläge machen, gemäß der Datei:
-`docs\website_struktur\website_design\global_css.md`
+Die KI muss sicherstellen, dass das Design konsistent umgesetzt wird.
 
 ---
 
