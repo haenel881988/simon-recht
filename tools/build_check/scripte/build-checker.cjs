@@ -118,6 +118,36 @@ const CONFIG = {
         "nachvollziehbar",
         "anwendbar",
       ],
+
+      // 🎯 SIMON'S AUTHENTIZITÄTS-SPRACHE VALIDATION
+      GROSSKONZERN_SPRACHE: {
+        REQUIRED_TERMS: [
+          "grosskonzern",
+          "konzern",
+          "unternehmen",
+          "organisation",
+          "system",
+          "strukturen",
+          "macht",
+          "gegner",
+        ],
+        FORBIDDEN_TERMS: [
+          "pensionskasse",
+          "kasse",
+          "vorsorgeeinrichtung",
+          "pk",
+          "pensionskassen",
+          "rente",
+          "bvg-rente",
+        ],
+        CONTEXT_PHRASES: [
+          "mindset gegen grosskonzern",
+          "grosskonzern besiegt",
+          "gegen den konzern",
+          "konzern geschlagen",
+          "system überwunden",
+        ],
+      },
     },
 
     // 🎨 CSS-DESIGN-VALIDIERUNG (60/30/10 PRINZIP)
@@ -320,6 +350,9 @@ class BuildChecker {
       await this.performMultipleClassDetection(); // NEW: Multiple-Class Detection
       await this.performDesignSystemValidation(); // NEW: Design-System Validation
       await this.performInstructionComplianceCheck(); // NEW: Instruction Violation Detection
+      await this.performLanguageAuthenticityCheck(); // NEU: Großkonzern vs. Pensionskasse
+      await this.performCSSGuidelinesCheck(); // NEU: CSS Guidelines Validation
+      await this.performRedundancyCheck(); // NEU: Anti-Redundanz System
       await this.analyzeEATContent(); // NEW: E-A-T Content-Qualitäts-Analyse
       await this.validateUTF8Encoding();
       await this.optimizeSitemap();
@@ -7311,6 +7344,276 @@ ${content.substring(0, 500)}...
     }
 
     return files;
+  }
+
+  /**
+   * 🎯 SPRACH-AUTHENTIZITÄTS-PRÜFUNG (NEU)
+   * Prüft ob Content Großkonzern-Sprache verwendet statt Pensionskassen-Sprache
+   */
+  async performLanguageAuthenticityCheck() {
+    console.log(
+      "🎯 Prüfe Sprach-Authentizität (Großkonzern vs. Pensionskasse)..."
+    );
+
+    try {
+      const contentFiles = await this.getFilesRecursively(
+        path.join(CONFIG.PROJECT_ROOT, "src", "content")
+      );
+      const astroFiles = await this.getFilesRecursively(
+        path.join(CONFIG.PROJECT_ROOT, "src", "pages")
+      );
+
+      const allFiles = [...contentFiles, ...astroFiles].filter(
+        (file) => file.endsWith(".md") || file.endsWith(".astro")
+      );
+
+      let languageViolations = 0;
+
+      for (const file of allFiles) {
+        const content = await fs.readFile(file, "utf-8");
+        const fileName = path.basename(file);
+
+        // Prüfe auf verbotene Pensionskassen-Sprache
+        const forbiddenTerms =
+          CONFIG.SEO_STANDARDS.LEGAL_LANGUAGE_PATTERNS.GROSSKONZERN_SPRACHE
+            .FORBIDDEN_TERMS;
+
+        for (const term of forbiddenTerms) {
+          const regex = new RegExp(term, "gi");
+          const matches = content.match(regex);
+
+          if (matches) {
+            languageViolations++;
+            this.addIssue(
+              RATINGS.CRITICAL,
+              "🚫 SPRACH-AUTHENTIZITÄTS-VERLETZUNG",
+              `Datei ${fileName} verwendet "${term}" statt Großkonzern-Sprache`,
+              `Ersetze "${term}" durch authentische Großkonzern-Terminologie wie "Konzern", "Unternehmen", "System"`
+            );
+          }
+        }
+
+        // Prüfe auf fehlende Großkonzern-Kontexte
+        const requiredTerms =
+          CONFIG.SEO_STANDARDS.LEGAL_LANGUAGE_PATTERNS.GROSSKONZERN_SPRACHE
+            .REQUIRED_TERMS;
+        const contextPhrases =
+          CONFIG.SEO_STANDARDS.LEGAL_LANGUAGE_PATTERNS.GROSSKONZERN_SPRACHE
+            .CONTEXT_PHRASES;
+
+        let hasGrosskonzernContext = false;
+        for (const phrase of contextPhrases) {
+          if (content.toLowerCase().includes(phrase.toLowerCase())) {
+            hasGrosskonzernContext = true;
+            break;
+          }
+        }
+
+        if (!hasGrosskonzernContext && content.length > 500) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "🎯 GROSSKONZERN-KONTEXT FEHLT",
+            `Datei ${fileName} fehlt authentische Großkonzern-Sprache`,
+            `Füge Kontext wie "Mindset gegen Großkonzern" oder "Konzern besiegt" hinzu`
+          );
+        }
+      }
+
+      if (languageViolations === 0) {
+        console.log(
+          "✅ Sprach-Authentizität korrekt - Großkonzern-Sprache verwendet"
+        );
+      } else {
+        console.log(
+          `❌ ${languageViolations} Sprach-Authentizitäts-Verletzungen gefunden`
+        );
+      }
+    } catch (error) {
+      console.error("❌ Sprach-Authentizitäts-Check Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Sprach-Authentizitäts-Check Fehler",
+        error.message,
+        "Language-Authenticity-Checker reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🎨 CSS-GUIDELINES-VALIDIERUNG (NEU)
+   * Prüft ob CSS-Implementierung den natürlichen Design-Guidelines entspricht
+   */
+  async performCSSGuidelinesCheck() {
+    console.log("🎨 Prüfe CSS-Guidelines Compliance...");
+
+    try {
+      const guidelinesPath =
+        CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.DESIGN_DOC_PATH;
+      const cssPath = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.CSS_FILE_PATH;
+
+      // 1. Guidelines-Datei prüfen
+      try {
+        const guidelines = await fs.readFile(guidelinesPath, "utf-8");
+        console.log("✅ CSS-Guidelines Dokument gefunden");
+
+        // 2. CSS-Datei prüfen
+        try {
+          const cssContent = await fs.readFile(cssPath, "utf-8");
+
+          // Farbschema-Validierung
+          const colorScheme =
+            CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.COLOR_SCHEME;
+          const missingColors = [];
+
+          for (const [colorName, colorValue] of Object.entries(colorScheme)) {
+            if (!cssContent.includes(colorValue)) {
+              missingColors.push(`${colorName}: ${colorValue}`);
+            }
+          }
+
+          if (missingColors.length > 0) {
+            this.addIssue(
+              RATINGS.CRITICAL,
+              "🎨 CSS-FARBSCHEMA UNVOLLSTÄNDIG",
+              `CSS-Datei fehlt definierte Farben: ${missingColors.join(", ")}`,
+              "Implementiere vollständiges 60/30/10 Farbschema aus Guidelines"
+            );
+          }
+
+          // Required Elements Check
+          const requiredElements =
+            CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.REQUIRED_ELEMENTS;
+          const missingElements = [];
+
+          for (const element of requiredElements) {
+            if (
+              !cssContent.includes(`.${element}`) &&
+              !cssContent.includes(`#${element}`)
+            ) {
+              missingElements.push(element);
+            }
+          }
+
+          if (missingElements.length > 0) {
+            this.addIssue(
+              RATINGS.IMPORTANT,
+              "🧩 CSS-ELEMENTE FEHLEN",
+              `CSS-Datei fehlt required Elements: ${missingElements.join(
+                ", "
+              )}`,
+              "Implementiere alle UI-Elemente aus Guidelines-Dokument"
+            );
+          }
+
+          console.log("✅ CSS-Guidelines-Check abgeschlossen");
+        } catch {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "❌ CSS-DATEI FEHLT",
+            `CSS-Datei nicht gefunden: ${cssPath}`,
+            "Erstelle CSS-Datei basierend auf natürlichen Guidelines aus global_css.md"
+          );
+        }
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "❌ CSS-GUIDELINES FEHLEN",
+          `Guidelines-Dokument nicht gefunden: ${guidelinesPath}`,
+          "CSS-Guidelines in natürlicher Sprache erstellen"
+        );
+      }
+    } catch (error) {
+      console.error("❌ CSS-Guidelines-Check Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "CSS-Guidelines-Check Fehler",
+        error.message,
+        "CSS-Guidelines-Checker reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🚫 REDUNDANZ-PRÜFUNG (NEU)
+   * Prüft auf redundante Dateien und fehlende Inventar-Updates
+   */
+  async performRedundancyCheck() {
+    console.log("🚫 Prüfe Anti-Redundanz-System...");
+
+    try {
+      const inventarPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        ".github",
+        "instructions",
+        "organisation",
+        "inventar",
+        "projekt_inventar.md"
+      );
+
+      try {
+        const inventarContent = await fs.readFile(inventarPath, "utf-8");
+        const inventarDate = inventarContent.match(
+          /\*\*Letzte Aktualisierung:\*\* (\d{4}-\d{2}-\d{2})/
+        );
+
+        if (inventarDate) {
+          const lastUpdate = new Date(inventarDate[1]);
+          const today = new Date();
+          const daysDiff = Math.floor(
+            (today - lastUpdate) / (1000 * 60 * 60 * 24)
+          );
+
+          if (daysDiff > 2) {
+            this.addIssue(
+              RATINGS.IMPORTANT,
+              "📋 INVENTAR VERALTET",
+              `Projekt-Inventar ${daysDiff} Tage alt (letztes Update: ${inventarDate[1]})`,
+              "Führe vollständige manuelle Inventur durch und aktualisiere projekt_inventar.md"
+            );
+          }
+        }
+
+        // Prüfe auf potenzielle Redundanzen in docs/
+        const docsDir = path.join(CONFIG.PROJECT_ROOT, "docs");
+        const designFiles = await this.getFilesRecursively(docsDir);
+        const designRelatedFiles = designFiles.filter(
+          (file) =>
+            file.includes("design") ||
+            file.includes("css") ||
+            file.includes("style")
+        );
+
+        if (designRelatedFiles.length > 1) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "🔄 POTENZIELLE REDUNDANZ",
+            `${
+              designRelatedFiles.length
+            } Design-bezogene Dateien gefunden: ${designRelatedFiles
+              .map((f) => path.basename(f))
+              .join(", ")}`,
+            "Prüfe ob Redundanzen vorliegen und konsolidiere ähnliche Dateien"
+          );
+        }
+
+        console.log("✅ Anti-Redundanz-Check abgeschlossen");
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "❌ INVENTAR FEHLT",
+          `Projekt-Inventar nicht gefunden: ${inventarPath}`,
+          "Erstelle vollständiges Projekt-Inventar für Redundanz-Prävention"
+        );
+      }
+    } catch (error) {
+      console.error("❌ Redundanz-Check Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Redundanz-Check Fehler",
+        error.message,
+        "Anti-Redundanz-System reparieren"
+      );
+    }
   }
 }
 

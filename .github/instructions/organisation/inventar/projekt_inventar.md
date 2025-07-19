@@ -1,9 +1,38 @@
 # 📋 Projekt-Inventar
 
-**Letzte Aktualisierung:** 2025-07-17 - **KORREKTE MANUELLE VOLLSTÄNDIGE INVENTUR**  
-**Manuell erstellt durch KI - OHNE FILE-SEARCH - VOLLSTÄNDIG KORREKT**
+**Letzte Aktualisierung:** 2025-07-19 - **ENHANCED BUILD-CHECKER v6.0.0 INSTALLIERT**  
+**Erweitert mit Sprachprüfung, CSS-Guidelines und Anti-Redundanz-System**
 
-## 🔍 **KORREKTE BEFUNDE NACH VOLLSTÄNDIGER MANUELLER INVENTUR:**
+## 🔍 **ENHANCED BUILD-CHECKER v6.0.0 - NEUE FEATURES:**
+
+### **🎯 SPRACHPRÜFUNG (GROSSKONZERN vs. PENSIONSKASSE):**
+
+- ✅ **Terminologie-Validation:** Prüft "Großkonzern" vs. "Pensionskasse" Sprache
+- ✅ **24 Verletzungen erkannt:** Pensionskasse-Terminologie in Großkonzern-Content
+- ✅ **Required Terms:** Systemadministration, IT-Infrastruktur, kritische Systeme
+- ✅ **Forbidden Terms:** Pensionskasse, BVG-Rente, Sozialversicherung
+
+### **🎨 CSS-GUIDELINES COMPLIANCE:**
+
+- ✅ **Design-System-Prüfung:** Validiert global_css.md Compliance
+- ✅ **60/30/10 Farbsystem:** Prüft Einhaltung der Farbaufteilung
+- ✅ **Natürliche Sprache:** Keine Code-Syntax in Design-Dokumenten
+- ✅ **Guidelines gefunden:** CSS-Guidelines Dokument erfolgreich validiert
+
+### **🚫 ANTI-REDUNDANZ-SYSTEM:**
+
+- ✅ **Redundanz-Prevention:** Verhindert doppelte Datei-Erstellung
+- ✅ **Inventory-Check:** Zwingender projekt_inventar.md Check vor Datei-Erstellung
+- ✅ **Directory-Scanning:** Manuelle Verzeichnis-Analyse erforderlich
+- ✅ **Exception-System:** Wirft Exceptions bei Redundanz-Verstößen
+
+### **📊 AKTUELLER BUILD-STATUS (2025-07-19 18:20:20):**
+
+- **Health Score:** 0/100 (Massive Verbesserung erforderlich)
+- **Total Issues:** 250 (150 kritisch, 26 wichtig, 59 Optimierung)
+- **Sprachprüfung:** 24 Authentizitäts-Verletzungen
+- **CSS-Violations:** 22 Tailwind-Classes, 46 Multiple-Class-Violations
+- **Content-Issues:** 3 Dateien unter 2300 Wörter Minimum
 
 ### **📊 REALE STATISTIKEN (MANUELL ERFASST):**
 
@@ -355,19 +384,25 @@ simon-recht/
 | -------------------- | ---------- | ----------------- | --------------------- | -------- |
 | `convert-to-webp.js` | JavaScript | Bildkonvertierung | `/convert-to-webp.js` | ✅ Aktiv |
 
-### **Build-Check Tools (tools/build_check/scripte/)**
+### **Build-Check Tools (tools/build_check/scripte/) - ENHANCED v6.0.0**
 
-| Script                          | Sprache    | Zweck                            | Status   |
-| ------------------------------- | ---------- | -------------------------------- | -------- |
-| `build-checker.cjs`             | Node.js    | Haupt Build-Checker              | ✅ Aktiv |
-| `aar-metrics-collector.js/.cjs` | Node.js    | AAR Metrics Sammlung             | ✅ Aktiv |
-| `build-logger-seo.js`           | Node.js    | SEO Build Logger                 | ✅ Aktiv |
-| `frontmatter-seo-validator.js`  | Node.js    | SEO Frontmatter Validator        | ✅ Aktiv |
-| `internal-linking.js`           | Node.js    | Internal Link Checker            | ✅ Aktiv |
-| `lcp-monitor.js`                | Node.js    | Largest Contentful Paint Monitor | ✅ Aktiv |
-| `run-build-checker.ps1`         | PowerShell | Build-Checker Runner             | ✅ Aktiv |
-| `integrate-build-check.ps1`     | PowerShell | Build-Check Integration          | ✅ Aktiv |
-| `build-checker-config.json`     | Config     | Build-Checker Konfiguration      | ✅ Aktiv |
+| Script                          | Sprache    | Zweck                                      | Status              |
+| ------------------------------- | ---------- | ------------------------------------------ | ------------------- |
+| `build-checker.cjs`             | Node.js    | **Haupt Build-Checker mit neuen Features** | ✅ **v6.0.0 AKTIV** |
+| `aar-metrics-collector.js/.cjs` | Node.js    | AAR Metrics Sammlung                       | ✅ Aktiv            |
+| `build-logger-seo.js`           | Node.js    | SEO Build Logger                           | ✅ Aktiv            |
+| `frontmatter-seo-validator.js`  | Node.js    | SEO Frontmatter Validator                  | ✅ Aktiv            |
+| `internal-linking.js`           | Node.js    | Internal Link Checker                      | ✅ Aktiv            |
+| `lcp-monitor.js`                | Node.js    | Largest Contentful Paint Monitor           | ✅ Aktiv            |
+| `run-build-checker.ps1`         | PowerShell | Build-Checker Runner                       | ✅ Aktiv            |
+| `integrate-build-check.ps1`     | PowerShell | Build-Check Integration                    | ✅ Aktiv            |
+| `build-checker-config.json`     | Config     | Build-Checker Konfiguration                | ✅ Aktiv            |
+
+**🆕 NEUE BUILD-CHECKER FEATURES:**
+
+- **Sprachprüfung:** Großkonzern vs. Pensionskasse Terminologie-Validation
+- **CSS-Guidelines:** Natürliche Sprache Design-System Compliance
+- **Anti-Redundanz:** Verhindert doppelte Datei-Erstellung automatisch
 
 ### **Astro Framework**
 
@@ -423,5 +458,6 @@ simon-recht/
 
 ---
 
-**✅ Inventur Status:** VOLLSTÄNDIG - 172 Dateien analysiert, alle kritischen Probleme identifiziert
+**✅ Inventur Status:** VOLLSTÄNDIG - Enhanced Build-Checker v6.0.0 installiert mit Sprachprüfung, CSS-Guidelines und Anti-Redundanz-System
 **📅 Nächste Inventur:** Bei strukturellen Änderungen oder auf Anfrage
+**🎯 Build-Checker:** 250 Issues erkannt, 24 Sprachverletzungen, Health Score 0/100

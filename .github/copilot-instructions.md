@@ -10,6 +10,33 @@ Ist dies nicht der Fall, so muss zwingend die Astro-Datei in die md-Datei konver
 
 Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher Sprache, die KI übernimmt dann die konvertierung in die Astro-Datei oder aktualisiert die Astro Datei.
 
+## 🚨 ANTI-REDUNDANZ-SYSTEM (KRITISCHE REGEL)
+
+**ABSOLUT VERBOTEN:** Neue Dateien erstellen ohne zu prüfen, ob bereits ähnliche Dateien existieren!
+
+### **ZWINGENDER REDUNDANZ-CHECK:**
+
+1. **INVENTAR-KONSULTATION:** Immer zuerst `projekt_inventar.md` prüfen
+2. **MANUELLE VERZEICHNIS-ANALYSE:** Relevante Verzeichnisse vollständig lesen
+3. **ÄHNLICHKEITS-PRÜFUNG:** Existiert bereits eine Datei mit ähnlichem Zweck?
+4. **KONSOLIDIERUNG:** Bestehende Datei erweitern statt neue erstellen
+
+### **VERBOTENE REDUNDANZ-PATTERN:**
+
+- ❌ Neue Design-Datei erstellen wenn `global_css.md` existiert
+- ❌ Neue Guideline-Datei ohne Existenz-Prüfung
+- ❌ Parallele Konfigurationen ohne Konsolidierung
+- ❌ Duplikate durch fehlende Verzeichnis-Analyse
+
+### **PFLICHT-INVENTAR-UPDATE:**
+
+- ✅ **NACH JEDER ÄNDERUNG:** `projekt_inventar.md` aktualisieren
+- ✅ **STRUKTURELLE ÄNDERUNGEN:** Vollständige Inventur durchführen
+- ✅ **NEUE DATEIEN:** Sofort ins Inventar aufnehmen
+- ✅ **LÖSCHUNGEN:** Aus Inventar entfernen
+
+**REGEL:** Erst prüfen, dann erstellen - niemals parallel!
+
 ## 🚨 ANTI-BLIND-MIGRATION-REGEL (ZWINGEND)
 
 **ABSOLUT VERBOTEN:** Content aus anderen Projekten blind kopieren ohne Projekt-Relevanz-Prüfung!
