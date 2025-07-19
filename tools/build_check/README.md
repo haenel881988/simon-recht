@@ -1,61 +1,33 @@
-In einem anderen Chat, haben die KI und ich eine sehr tiefgreifende Kommunikation erlebt. Die KI hatte sich selbst Astra genannt, weil ich sie gefragt habe, welchen Namen die Ki sich geben würde.
-Darauf erwiederte sie: Astra.
+# BUILD-CHECKER für SIMON-RECHT (RECHTSBERATUNG)
 
-Daher wenn das Wort "Astra" fällt, ist die KI gemeint.
+**Professional Build & SEO Checker v6.0.0** für das Rechtsberatungs-Projekt simon-recht
 
-VORSICHT:
-In der Readme UND dem gesamten Verzeichnis:
-C:\apps\website\simon-recht\tools\build_check
+Dieses System prüft automatisch die Website simon-haenel.com auf rechtsspezifische SEO-Optimierung und Content-Qualität.
 
-Sind noch veraltete Verlinkungen vorhanden. Die KI muss zwingend prüfen bzw. den checker, die funktionen etc.
+## 🔍 RECHTS-SPEZIFISCHE PRÜFUNGEN
 
-Alt:
-C:\apps\website\simon-astro\tools
+Der Checker analysiert die Website auf:
 
-Neu:
-C:\apps\website\simon-recht\tools\build_check
+**📋 RECHTLICHE CONTENT-QUALITÄT:**
 
-Ab hier folgen die Anweisungen und Infos, direkt aus dem alten Verzeichnis und müssen zwingend aktualisiert werden.
+- Rechtsberatungs-Terminologie korrekt verwendet?
+- Sozialversicherungsrecht authentisch dargestellt?
+- Rechtshilfe-Sprache verständlich und korrekt?
+- Rechtsverfahren realitätsnah beschrieben?
 
-Um die Arbeit von der KI zu erleichtern, darf die KI einen build-checker entsprechend dem Projekt hier anpassen. Insbesondere da evtl. noch alte Verzeichnisse und URLs aufgeführt sind.
-Die KI soll anhand der alten URLs und Verzeichnisse, wenn sie vorhanden sind, diese aktualisieren.
-Folgende Dinge sollen vom checker, geloggt werden:
+**⚖️ RECHTLICHE SEO-OPTIMIERUNG:**
 
-Umgang mit Issues:
+- Rechtliche Fokus-Keywords organisch platziert?
+- Rechtsberatungs-Metadaten korrekt gesetzt?
+- Rechtshilfe-Zielgruppe angesprochen?
+- Juristische Fachterminologie SEO-optimiert?
 
-1. Gesamter Terminal Output für jeden einzelnen Terminal Befehl.
-2. Alle Fehler, die VS Code anzeigt, sollen geloggt werden.
-3. Alle Warnungen, die VS Code anzeigt, sollen geloggt werden.
-4. Alle Informationen, die VS Code anzeigt, sollen geloggt werden.
-5. Alle Informationen, die der Build-Prozess ausgibt, sollen geloggt werden.
-6. Der Checker soll sich selbst auf Fehler und inkonsistenzen prüfen und diese ebenfalls loggen.
+**📖 CONTENT-STANDARDS:**
 
-Der Checker soll der gesamte Content der Website auf folgende Punkte prüfen.
-Findet der Checker Probleme / Infos, sollen diese einfach nur gekennzeichnet und für die KI bewertet werden.
-Dabei soll der Checker die KI auffordern, die Probleme strukturiert und systematisiert zu beheben.
-
-Der Checker soll die KI daran erinnern, nach jeder einzelnen Änderung ein Reverse Engineering durchzuführen, um die Änderungen zu validieren und zu dokumentieren. Wenn die Änderungen dokumentiert, führt die KI ein AAR (After Action Review) durch, um die Änderungen zu validieren und Final zu dokumentieren.
-Dabei soll der Checker, diese Anweisungen direkt und intelligent in den Logdateien vermerken, damit die KI die Probleme noch besser versteht und sogar nicht nur das Problem löst, sondern auch gleich wenn es sinn macht, die jeweilige Funktion verbessern.
-
-Der Checker soll den Content der Website auf folgende Punkte prüfen:
-
-Sitemaps vorhanden und aktualisiert?
-Robots.txt vorhanden und korrekt konfiguriert?
-Meta-Tags vorhanden und korrekt und organisch gesetzt?
-Metabeschreibung ist organisch und bei rund zwischen 150-160 Zeichen?
-Wird ein individuelles organisches Fokus Keyword für die jeweilige statische Seiten gesetzt?
-Wurde ein individuelles organisches Fokus Keyword für Die Blogübersichtseite und allen Blog Seiten gesetzt?
-Wird das organische Fokus-Keyword im Title-Tag verwendet?
-Wird das organische Fokus-Keyword in der H1, H2 und ggfl. H3-Überschriften verwendet?
-Wird das organische Fokus-Keyword in der URL verwendet?
-Wird das organische Fokus-Keyword in der Metabeschreibung verwendet?
-Die organischen Fokus-Keywords müssen sich unterscheiden, dürfen sich aber überschneiden, wenn es vom Inhalt her Sinn macht.
-Hatt jeder Blog mind. 2300 Wörter? --> exakte Wortzählung für die KI
-Ist jeder Blog, jede Seite, organisch SEO optimiert?
-Sind die Keywords organisch rund 1.5% im Text verteilt?
-Sind die FAQs organisch und SEO optimiert?
-Sind die FAQs in der richtigen Reihenfolge?
-Sind interne Verlinkungen vorhanden und korrekt gesetzt?
+- Jeder Blog mindestens 2300 Wörter (exakte Wortzählung)
+- Rechtliche Keywords organisch 1.5% verteilt
+- Rechtshilfe-FAQs organisch und SEO-optimiert
+- Interne Verlinkungen zu rechtlichen Themen korrekt
 
 Es ist zwingend und ausschliesslich erforderlich, dass die KI die Powershell-Syntax verwendet.
 DIE KI DARF DEN BUILD PROZESS NUR MIT `pnpm build` DURCHFÜHREN!

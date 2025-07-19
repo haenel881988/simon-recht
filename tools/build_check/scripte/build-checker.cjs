@@ -47,6 +47,21 @@ const CONFIG = {
     "c:\\apps\\website\\simon-recht\\docs\\build_logs\\comprehensive-seo-report.md",
   DOMAIN: "https://simon-haenel.com",
 
+  // Simon-Recht spezifische Asset-Struktur
+  ASSETS: {
+    IMAGES_BASE: "c:\\apps\\website\\simon-recht\\public\\assets\\images",
+    VIDEOS_BASE: "c:\\apps\\website\\simon-recht\\public\\assets\\videos",
+    STARTSEITE_INDEX:
+      "c:\\apps\\website\\simon-recht\\public\\assets\\images\\startseite-index",
+    STARTSEITE_UEBERMICH:
+      "c:\\apps\\website\\simon-recht\\public\\assets\\images\\startseite_uebermich",
+    BLOGS_IMAGES:
+      "c:\\apps\\website\\simon-recht\\public\\assets\\images\\blogs",
+    // YouTube-Integration für Videos (hosting-kostenlos + Reichweite)
+    VIDEO_STRATEGY:
+      "YouTube-Upload für 0€ Hosting + potenzielle Werbeeinnahmen",
+  },
+
   // Erweiterte SEO Standards basierend auf Portfolio Blueprints
   SEO_STANDARDS: {
     MIN_CONTENT_LENGTH: 2300, // Blog-Mindestlänge für SEO
@@ -82,26 +97,89 @@ const CONFIG = {
       ],
     },
 
-    // IT-Zielgruppen-Sprache (nach ideen_checklisten.md)
-    IT_LANGUAGE_PATTERNS: {
-      TECHNICAL_METAPHORS: [
-        "backup",
-        "firewall",
-        "server",
-        "netzwerk",
-        "infrastruktur",
+    // RECHTS-Zielgruppen-Sprache (nach Projektkontext simon-recht)
+    LEGAL_LANGUAGE_PATTERNS: {
+      LEGAL_METAPHORS: [
+        "rechtsberatung",
+        "rechtshilfe",
+        "rechtsstreit",
+        "gerichtsverfahren",
+        "rechtsschutz",
       ],
-      MSP_TERMINOLOGY: [
-        "managed services",
-        "msp",
-        "it-dienstleister",
-        "systemhaus",
+      LEGAL_TERMINOLOGY: [
+        "sozialversicherungsrecht",
+        "rechtsberatung",
+        "rechtshilfe",
+        "rechtsverfahren",
       ],
       AUDIENCE_ALIGNMENT: [
         "verständlich",
         "praxisnah",
         "nachvollziehbar",
         "anwendbar",
+      ],
+    },
+
+    // 🎨 CSS-DESIGN-VALIDIERUNG (60/30/10 PRINZIP)
+    CSS_DESIGN_VALIDATION: {
+      DESIGN_DOC_PATH:
+        "c:\\apps\\website\\simon-recht\\docs\\website_struktur\\website_design\\global_css.md",
+      CSS_FILE_PATH: "c:\\apps\\website\\simon-recht\\src\\styles\\global.css",
+      ASTRO_PAGES_DIR: "c:\\apps\\website\\simon-recht\\src\\pages",
+      ASTRO_LAYOUTS_DIR: "c:\\apps\\website\\simon-recht\\src\\layouts",
+
+      // 60/30/10 Farbprinzip-Validierung
+      COLOR_SCHEME: {
+        PRIMARY: "#1E3A8A", // dunkelblau - 60% (Hintergrund)
+        SECONDARY: "#2563EB", // mittleres Blau - 30% (Card-Border, Eingabefelder)
+        ACCENT: "#EF4444", // rot - 10% (Buttons, Warnungen, Call-to-Actions)
+        KYBER_BLUE: "#00D4FF", // kyberblauer Schrift (Star Wars-inspiriert)
+        TEXT_PRIMARY: "#FFFFFF", // weiße Schrift
+      },
+
+      // Definierte UI-Elemente aus global_css.md
+      REQUIRED_ELEMENTS: [
+        "header",
+        "burger-menu",
+        "footer",
+        "buttons",
+        "hero-section",
+        "cards",
+        "three-column-grid",
+        "kontaktformular",
+        "blog-layout",
+      ],
+
+      // Verbotene Inline-Styles Detection (ERWEITERT MIT TAILWIND)
+      INLINE_STYLE_PATTERNS: [
+        /style\s*=\s*["'][^"']*["']/gi,
+        /<[^>]+style\s*=\s*["'][^"']*["'][^>]*>/gi,
+        // TAILWIND CSS DETECTION PATTERNS
+        /class\s*=\s*["'][^"']*(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:)[^"']*["']/gi,
+        /class\s*=\s*["'][^"']*(?:max-w-|min-h-|transition|transform|gradient)[^"']*["']/gi
+      ],
+      
+      // TAILWIND CSS SPEZIFISCHE PATTERN
+      TAILWIND_PATTERNS: [
+        // Layout & Spacing
+        /(?:p|px|py|pt|pb|pl|pr|m|mx|my|mt|mb|ml|mr)-\d+/g,
+        /(?:w|h|max-w|min-w|max-h|min-h)-\w+/g,
+        // Colors & Backgrounds  
+        /(?:bg|text|border)-(?:gray|blue|red|green|yellow|purple|pink|indigo)-\d+/g,
+        /(?:bg|text|border)-(?:white|black|transparent|current)/g,
+        // Flexbox & Grid
+        /(?:flex|grid|inline-flex|inline-grid)/g,
+        /(?:justify|items|content|self)-\w+/g,
+        /(?:space-x|space-y|gap)-\d+/g,
+        // Typography
+        /(?:text|font)-\w+/g,
+        // Effects
+        /(?:shadow|rounded|border|ring)-\w*/g,
+        /(?:hover|focus|active|group-hover):\w+/g,
+        // Transitions
+        /transition(?:-\w+)?/g,
+        /duration-\d+/g,
+        /ease-\w+/g
       ],
     },
 
@@ -3109,7 +3187,7 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
     validation += `  • Schema.org Article fehlt keywords Property\n`;
     validation += `**💡 Required Fix:**\n`;
     validation += `\`\`\`yaml\n`;
-    validation += `tags: ["MSP", "Marketing", "SEO"]  # Relevante Keywords\n`;
+    validation += `tags: ["Rechtsberatung", "Rechtshilfe", "SEO"]  # Relevante Keywords\n`;
     validation += `\`\`\`\n`;
     validation += `**🔬 Root Cause:** Frontmatter Template missing tags field validation\n`;
     return validation;
@@ -4318,12 +4396,21 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
   }
 
   /**
-   * 🎨 CSS-Konsistenz-Analyse (ERWEITERT mit Browser Error Detection)
+   * 🎨 CSS-Konsistenz-Analyse (ERWEITERT mit 60/30/10 Prinzip + Inline-Style Detection)
    */
   async performCSSConsistencyAnalysis() {
     console.log("🎨 Führe erweiterte CSS-Konsistenz-Analyse durch...");
+    console.log(
+      "🎨 NEUE FEATURES: 60/30/10 Prinzip + Inline-Style Detection + Design-Doc Validierung"
+    );
 
     try {
+      // NEUE FUNKTION: 60/30/10 Design-Prinzip Validierung
+      await this.validateDesignDocumentation();
+
+      // CSS-Design-Dokumentation validieren (enthält Inline-Style + Tailwind Detection)
+      await this.validateDesignDocumentation();
+
       // NEUE FUNKTION: Browser Console Errors prüfen
       await this.checkBrowserConsoleErrors();
 
@@ -4397,6 +4484,471 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
       "Organische Performance-Analyse",
       "Browser Console Errors erkannt - Organische Optimierung möglich",
       "KEINE Performance-Tools verwenden! Organische Lösungen bevorzugen"
+    );
+  }
+
+  /**
+   * 🎨 60/30/10 Design-Dokumentation Validierung (NEU)
+   */
+  async validateDesignDocumentation() {
+    console.log("🎨 Validiere 60/30/10 Design-Dokumentation...");
+
+    try {
+      const designDocPath =
+        CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.DESIGN_DOC_PATH;
+      const cssFilePath =
+        CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.CSS_FILE_PATH;
+
+      // Design-Dokumentation lesen
+      const designDoc = await fs.readFile(designDocPath, "utf-8");
+      const cssFile = await fs.readFile(cssFilePath, "utf-8");
+
+      // 60/30/10 Farbschema prüfen
+      await this.validateColorScheme(designDoc, cssFile);
+
+      // UI-Elemente Vollständigkeit prüfen
+      await this.validateUIElementsCompleteness(designDoc, cssFile);
+
+      // Fehlende Definitionen identifizieren
+      await this.identifyMissingDefinitions(designDoc, cssFile);
+
+      // Inline-Style und Tailwind CSS Erkennung (KORRIGIERT: awaited)
+      const inlineStylesFound = await this.detectInlineStyles();
+      const tailwindClassesFound = this.detectTailwindClasses(inlineStylesFound);
+
+      // Verwende erweiterte Migration-Prompt wenn sowohl Inline als auch Tailwind gefunden
+      if (inlineStylesFound.length > 0 || tailwindClassesFound.length > 0) {
+        this.generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound);
+      }
+      
+    } catch (error) {
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Design-Dokumentation Fehler",
+        `Kann Design-Dokumentation nicht lesen: ${error.message}`,
+        "ZWINGEND: global_css.md muss vollständig in natürlicher Sprache ergänzt werden bevor CSS-Änderungen"
+      );
+    }
+  }
+
+  /**
+   * 🎨 60/30/10 Farbschema Validierung
+   */
+  async validateColorScheme(designDoc, cssFile) {
+    const colorScheme = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.COLOR_SCHEME;
+
+    // Prüfe ob Farben in CSS-Datei korrekt definiert sind
+    const missingColors = [];
+
+    if (!cssFile.includes(colorScheme.PRIMARY)) {
+      missingColors.push(
+        `Primärfarbe ${colorScheme.PRIMARY} (60% - Hintergrund)`
+      );
+    }
+
+    if (!cssFile.includes(colorScheme.SECONDARY)) {
+      missingColors.push(
+        `Sekundärfarbe ${colorScheme.SECONDARY} (30% - Card-Border, Eingabefelder)`
+      );
+    }
+
+    if (!cssFile.includes(colorScheme.ACCENT)) {
+      missingColors.push(
+        `Akzentfarbe ${colorScheme.ACCENT} (10% - Buttons, Call-to-Actions)`
+      );
+    }
+
+    if (missingColors.length > 0) {
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "60/30/10 Farbschema Verletzung",
+        `Fehlende Farben in global.css: ${missingColors.join(", ")}`,
+        "KI MUSS ZWINGEND zuerst global_css.md vollständig in natürlicher Sprache ergänzen"
+      );
+    }
+  }
+
+  /**
+   * 🎨 UI-Elemente Vollständigkeit prüfen
+   */
+  async validateUIElementsCompleteness(designDoc, cssFile) {
+    const requiredElements =
+      CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.REQUIRED_ELEMENTS;
+    const missingElements = [];
+
+    for (const element of requiredElements) {
+      // Prüfe ob Element in Design-Doc definiert ist
+      const elementInDoc = designDoc
+        .toLowerCase()
+        .includes(element.toLowerCase());
+
+      // Prüfe ob Element in CSS implementiert ist
+      const elementInCSS =
+        cssFile.toLowerCase().includes(element.toLowerCase()) ||
+        cssFile.includes(`.${element}`) ||
+        cssFile.includes(`#${element}`);
+
+      if (elementInDoc && !elementInCSS) {
+        missingElements.push(element);
+      }
+    }
+
+    if (missingElements.length > 0) {
+      this.addIssue(
+        RATINGS.IMPORTANT,
+        "Fehlende CSS-Implementierung",
+        `UI-Elemente in global_css.md definiert aber nicht in global.css: ${missingElements.join(
+          ", "
+        )}`,
+        "KI MUSS alle in global_css.md definierten Elemente in global.css implementieren"
+      );
+    }
+  }
+
+  /**
+   * 🎨 Fehlende Definitionen identifizieren
+   */
+  async identifyMissingDefinitions(designDoc, cssFile) {
+    // Extrahiere CSS-Klassen aus CSS-Datei
+    const cssClassMatches =
+      cssFile.match(/\.[a-zA-Z][a-zA-Z0-9_-]*\s*\{/g) || [];
+    const cssClasses = cssClassMatches.map((match) =>
+      match.replace(/\s*\{$/, "").substring(1)
+    );
+
+    // Prüfe welche CSS-Klassen nicht in Design-Doc dokumentiert sind
+    const undocumentedClasses = [];
+
+    for (const cssClass of cssClasses) {
+      if (!designDoc.toLowerCase().includes(cssClass.toLowerCase())) {
+        undocumentedClasses.push(cssClass);
+      }
+    }
+
+    if (undocumentedClasses.length > 0) {
+      this.addIssue(
+        RATINGS.IMPORTANT,
+        "Undokumentierte CSS-Klassen",
+        `CSS-Klassen in global.css ohne Definition in global_css.md: ${undocumentedClasses
+          .slice(0, 10)
+          .join(", ")}${undocumentedClasses.length > 10 ? "..." : ""}`,
+        "ZWINGEND: Alle CSS-Klassen müssen zuerst in global_css.md in natürlicher Sprache definiert werden"
+      );
+    }
+  }
+
+  /**
+   * 🚫 Inline-Styles & Tailwind Detection (ERWEITERT)
+   */
+  async detectInlineStyles() {
+    console.log("🚫 Suche nach Inline-Styles UND Tailwind CSS in Astro-Dateien...");
+    console.log("🆕 ERWEITERT: Erkennt jetzt auch Tailwind CSS utility classes");
+
+    try {
+      const astroFiles = await this.findAstroFiles();
+      const inlineStylesFound = [];
+      const tailwindClassesFound = [];
+
+      for (const file of astroFiles) {
+        const content = await fs.readFile(file, "utf-8");
+        
+        // 1. Standard Inline-Styles Detection
+        const inlinePatterns = [
+          /style\s*=\s*["'][^"']*["']/gi,
+          /<[^>]+style\s*=\s*["'][^"']*["'][^>]*>/gi
+        ];
+
+        for (const pattern of inlinePatterns) {
+          const matches = content.match(pattern);
+          if (matches) {
+            for (const match of matches) {
+              inlineStylesFound.push({
+                file: path.basename(file),
+                style: match,
+                fullPath: file,
+                type: 'inline-style'
+              });
+            }
+          }
+        }
+
+        // 2. TAILWIND CSS Detection (KRITISCH!)
+        const tailwindPatterns = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.TAILWIND_PATTERNS;
+        
+        for (const pattern of tailwindPatterns) {
+          const matches = content.match(pattern);
+          if (matches) {
+            for (const match of matches) {
+              tailwindClassesFound.push({
+                file: path.basename(file),
+                style: match,
+                fullPath: file,
+                type: 'tailwind-class'
+              });
+            }
+          }
+        }
+
+        // 3. Class-Attribute mit Tailwind-ähnlichen Patterns
+        const classMatches = content.match(/class\s*=\s*["']([^"']*)["']/gi);
+        if (classMatches) {
+          for (const match of classMatches) {
+            const classContent = match.match(/class\s*=\s*["']([^"']*)["']/i)[1];
+            const hasTailwind = /(?:bg-|text-|border-|shadow-|rounded-|p-|px-|py-|m-|mx-|my-|w-|h-|flex|grid|space-|justify-|items-|font-|hover:|max-w-|min-h-|transition|transform|gradient)/.test(classContent);
+            
+            if (hasTailwind) {
+              tailwindClassesFound.push({
+                file: path.basename(file),
+                style: match,
+                fullPath: file,
+                type: 'tailwind-class-attribute'
+              });
+            }
+          }
+        }
+      }
+
+      // KRITISCHE BEWERTUNG: Tailwind = genauso schlimm wie Inline-Styles!
+      const totalViolations = inlineStylesFound.length + tailwindClassesFound.length;
+
+      if (totalViolations > 0) {
+        // Gruppiere Violations nach Datei
+        const violationsByFile = {};
+        [...inlineStylesFound, ...tailwindClassesFound].forEach((item) => {
+          if (!violationsByFile[item.file]) {
+            violationsByFile[item.file] = { inline: [], tailwind: [] };
+          }
+          if (item.type === 'inline-style') {
+            violationsByFile[item.file].inline.push(item.style);
+          } else {
+            violationsByFile[item.file].tailwind.push(item.style);
+          }
+        });
+
+        for (const [fileName, violations] of Object.entries(violationsByFile)) {
+          const inlineCount = violations.inline.length;
+          const tailwindCount = violations.tailwind.length;
+          
+          let description = `${fileName}: `;
+          if (inlineCount > 0) description += `${inlineCount} Inline-Style(s)`;
+          if (inlineCount > 0 && tailwindCount > 0) description += ` + `;
+          if (tailwindCount > 0) description += `${tailwindCount} Tailwind CSS Class(es)`;
+          description += ` gefunden`;
+
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "CSS-Architektur Verletzung",
+            description,
+            `ZWINGEND: Alle Styles in global.css migrieren + 60/30/10 Prinzip anwenden. VERBOTEN: Scripts oder Search-Funktionen!`
+          );
+        }
+
+        // Detaillierte Migration-Anweisungen generieren
+        this.generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound);
+        
+      } else {
+        this.addIssue(
+          RATINGS.INFO,
+          "CSS-Architektur Validierung",
+          "Keine Inline-Styles oder Tailwind Classes gefunden - Saubere 60/30/10 CSS-Architektur bestätigt",
+          "Design-Prinzip wird korrekt eingehalten"
+        );
+      }
+
+      // Return both arrays for further processing
+      return inlineStylesFound;
+
+    } catch (error) {
+      this.addIssue(
+        RATINGS.IMPORTANT,
+        "CSS-Architektur Detection Fehler",
+        error.message,
+        "Astro-Dateien manuell auf Inline-Styles und Tailwind prüfen"
+      );
+      return [];
+    }
+  }
+
+  /**
+   * 📁 Astro-Dateien finden
+   */
+  async findAstroFiles() {
+    const pagesDir = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.ASTRO_PAGES_DIR;
+    const layoutsDir =
+      CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.ASTRO_LAYOUTS_DIR;
+
+    const astroFiles = [];
+
+    try {
+      const pagesFiles = await fs.readdir(pagesDir);
+      for (const file of pagesFiles) {
+        if (file.endsWith(".astro")) {
+          astroFiles.push(path.join(pagesDir, file));
+        }
+      }
+    } catch (error) {
+      // Pages directory might not exist or be accessible
+    }
+
+    try {
+      const layoutFiles = await fs.readdir(layoutsDir);
+      for (const file of layoutFiles) {
+        if (file.endsWith(".astro")) {
+          astroFiles.push(path.join(layoutsDir, file));
+        }
+      }
+    } catch (error) {
+      // Layouts directory might not exist or be accessible
+    }
+
+    return astroFiles;
+  }
+
+  /**
+   * ⚡ Separate Tailwind CSS Detection für validateDesignDocumentation
+   */
+  detectTailwindClasses(inlineStylesFound) {
+    console.log("⚡ Separate Tailwind CSS Detection gestartet...");
+    
+    const tailwindClassesFound = [];
+    
+    // Falls detectInlineStyles bereits aufgerufen wurde, extrahiere Tailwind-Klassen
+    if (inlineStylesFound && inlineStylesFound.length > 0) {
+      inlineStylesFound.forEach((item) => {
+        if (item.type && (item.type === 'tailwind-class' || item.type === 'tailwind-class-attribute')) {
+          tailwindClassesFound.push(item);
+        }
+      });
+    }
+    
+    console.log(`⚡ Tailwind CSS Detection abgeschlossen: ${tailwindClassesFound.length} Tailwind-Violations gefunden`);
+    return tailwindClassesFound;
+  }
+
+  /**
+   * 🤖 Inline-Style Migration KI-Prompt generieren
+   */
+  generateInlineStyleMigrationPrompt(inlineStylesFound) {
+    let prompt = "\n\n## 🤖 KI-AUFFORDERUNG: INLINE-STYLES MIGRATION\n\n";
+    prompt += "**ZWINGEND MANUELLE MIGRATION - KEINE SCRIPTS VERWENDEN!**\n\n";
+
+    prompt += "### 📋 GEFUNDENE INLINE-STYLES:\n\n";
+
+    const stylesByFile = {};
+    inlineStylesFound.forEach((item) => {
+      if (!stylesByFile[item.file]) {
+        stylesByFile[item.file] = [];
+      }
+      stylesByFile[item.file].push(item.style);
+    });
+
+    for (const [fileName, styles] of Object.entries(stylesByFile)) {
+      prompt += `**${fileName}:**\n`;
+      styles.forEach((style, index) => {
+        prompt += `${index + 1}. \`${style}\`\n`;
+      });
+      prompt += "\n";
+    }
+
+    prompt += "### 🔧 MIGRATION-ANWEISUNGEN:\n\n";
+    prompt +=
+      "1. **ZUERST:** Alle Inline-Styles in global_css.md in natürlicher Sprache definieren\n";
+    prompt += "2. **DANN:** CSS-Klassen in global.css implementieren\n";
+    prompt +=
+      "3. **DANACH:** Inline-Styles MANUELL von Hand aus Astro-Dateien entfernen\n";
+    prompt += "4. **ERSETZEN:** Durch entsprechende CSS-Klassen\n\n";
+    prompt +=
+      "**❌ VERBOTEN:** Search-Funktionen, Scripts, automatisierte Tools\n";
+    prompt += "**✅ PFLICHT:** Manuelle Analyse, manuelle Bearbeitung\n\n";
+
+    // Füge zu Issues hinzu für Log-Datei
+    this.addIssue(
+      RATINGS.INFO,
+      "KI-Migration-Prompt",
+      "Detaillierte Inline-Style Migration Anweisungen generiert",
+      prompt
+    );
+  }
+
+  /**
+   * 🚀 ERWEITERTE Migration-Prompt für Inline-Styles + Tailwind (NEU)
+   */
+  generateExtendedMigrationPrompt(inlineStylesFound, tailwindClassesFound) {
+    let prompt = "\n\n## 🚀 KI-AUFFORDERUNG: VOLLSTÄNDIGE CSS-ARCHITEKTUR MIGRATION\n\n";
+    prompt += "**KRITISCH: TAILWIND CSS + INLINE-STYLES ERKANNT!**\n\n";
+    prompt += "**ZWINGEND MANUELLE MIGRATION - KEINE SCRIPTS VERWENDEN!**\n\n";
+
+    // Inline-Styles Section
+    if (inlineStylesFound.length > 0) {
+      prompt += "### 🚫 GEFUNDENE INLINE-STYLES:\n\n";
+      const inlineByFile = {};
+      inlineStylesFound.forEach((item) => {
+        if (!inlineByFile[item.file]) inlineByFile[item.file] = [];
+        inlineByFile[item.file].push(item.style);
+      });
+
+      for (const [fileName, styles] of Object.entries(inlineByFile)) {
+        prompt += `**${fileName}:**\n`;
+        styles.forEach((style, index) => {
+          prompt += `${index + 1}. \`${style}\`\n`;
+        });
+        prompt += "\n";
+      }
+    }
+
+    // Tailwind Classes Section  
+    if (tailwindClassesFound.length > 0) {
+      prompt += "### ⚡ GEFUNDENE TAILWIND CSS CLASSES (KRITISCH!):\n\n";
+      const tailwindByFile = {};
+      tailwindClassesFound.forEach((item) => {
+        if (!tailwindByFile[item.file]) tailwindByFile[item.file] = [];
+        tailwindByFile[item.file].push(item.style);
+      });
+
+      for (const [fileName, styles] of Object.entries(tailwindByFile)) {
+        prompt += `**${fileName}:**\n`;
+        // Nur die ersten 10 anzeigen, sonst wird es zu lang
+        styles.slice(0, 10).forEach((style, index) => {
+          prompt += `${index + 1}. \`${style}\`\n`;
+        });
+        if (styles.length > 10) {
+          prompt += `... und ${styles.length - 10} weitere Tailwind Classes\n`;
+        }
+        prompt += "\n";
+      }
+    }
+
+    prompt += "### 🎨 60/30/10 MIGRATION-ANWEISUNGEN:\n\n";
+    prompt += "1. **ZUERST:** Vollständige Bestandsaufnahme aller verwendeten Styles\n";
+    prompt += "2. **DESIGN-DOC:** Alle Elemente in global_css.md in natürlicher Sprache definieren\n";
+    prompt += "3. **60/30/10 PRINZIP:** Farbschema anwenden:\n";
+    prompt += "   - Primär: #1E3A8A (dunkelblau - 60%)\n";
+    prompt += "   - Sekundär: #2563EB (mittleres Blau - 30%)\n";
+    prompt += "   - Akzent: #EF4444 (rot - 10%)\n";
+    prompt += "4. **CSS-IMPLEMENTIERUNG:** CSS-Klassen in global.css erstellen\n";
+    prompt += "5. **MANUELLE BEREINIGUNG:** ALLE Tailwind + Inline-Styles von Hand entfernen\n";
+    prompt += "6. **KLASSEN-ERSETZUNG:** Durch saubere, semantische CSS-Klassen ersetzen\n\n";
+
+    prompt += "### ❌ ABSOLUT VERBOTEN:\n";
+    prompt += "- Search-Funktionen verwenden\n";
+    prompt += "- Automatisierte Scripts\n";
+    prompt += "- Tailwind CSS beibehalten\n";
+    prompt += "- CSS-Änderungen ohne global_css.md Definition\n\n";
+
+    prompt += "### ✅ ZWINGEND ERFORDERLICH:\n";
+    prompt += "- Manuelle Datei-für-Datei Bearbeitung\n";
+    prompt += "- 60/30/10 Design-Prinzip einhalten\n";
+    prompt += "- Semantische CSS-Klassen-Namen\n";
+    prompt += "- Vollständige Dokumentation in global_css.md\n\n";
+
+    prompt += "**PRIORITÄT: KRITISCH** - Diese Architektur-Verletzung blockiert sauberes Design!\n\n";
+
+    // Füge zu Issues hinzu für Log-Datei
+    this.addIssue(
+      RATINGS.CRITICAL,
+      "Erweiterte CSS-Migration erforderlich",
+      `${inlineStylesFound.length} Inline-Styles + ${tailwindClassesFound.length} Tailwind Classes gefunden`,
+      prompt
     );
   }
 
@@ -4485,9 +5037,15 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
       if (content.toLowerCase().includes(indicator)) score += 20;
     }
 
-    // IT-spezifische Expertise prüfen
-    const techTerms = ["zertifizierung", "iso 27001", "cissp", "mcp", "itil"];
-    for (const term of techTerms) {
+    // RECHTS-spezifische Expertise prüfen
+    const legalTerms = [
+      "sozialversicherungsrecht",
+      "gerichtsverfahren",
+      "rechtsberatung",
+      "bvg",
+      "rechtshilfe",
+    ];
+    for (const term of legalTerms) {
       if (content.toLowerCase().includes(term)) score += 15;
     }
 
@@ -4576,16 +5134,16 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
    * 💻 IT-Zielgruppen-Sprache prüfen (nach ideen_checklisten.md)
    */
   checkITLanguageAlignment(content) {
-    const patterns = CONFIG.SEO_STANDARDS.IT_LANGUAGE_PATTERNS;
+    const patterns = CONFIG.SEO_STANDARDS.LEGAL_LANGUAGE_PATTERNS;
     let score = 0;
 
     // Technische Metaphern verwenden?
-    for (const metaphor of patterns.TECHNICAL_METAPHORS) {
+    for (const metaphor of patterns.LEGAL_METAPHORS) {
       if (content.toLowerCase().includes(metaphor)) score += 10;
     }
 
-    // MSP-Terminologie korrekt?
-    for (const term of patterns.MSP_TERMINOLOGY) {
+    // RECHTS-Terminologie korrekt?
+    for (const term of patterns.LEGAL_TERMINOLOGY) {
       if (content.toLowerCase().includes(term)) score += 15;
     }
 

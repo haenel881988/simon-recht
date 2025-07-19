@@ -10,6 +10,57 @@ Ist dies nicht der Fall, so muss zwingend die Astro-Datei in die md-Datei konver
 
 Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher Sprache, die KI übernimmt dann die konvertierung in die Astro-Datei oder aktualisiert die Astro Datei.
 
+## 🚨 ANTI-BLIND-MIGRATION-REGEL (ZWINGEND)
+
+**ABSOLUT VERBOTEN:** Content aus anderen Projekten blind kopieren ohne Projekt-Relevanz-Prüfung!
+
+### **PFLICHT-VALIDIERUNG vor jeder Content-Migration:**
+
+1. **PROJEKT-FOKUS PRÜFEN:** "simon-recht" = RECHTLICHE Themen, NICHT IT!
+2. **INHALTLICHE KONSISTENZ:** Passt der Content zum aktuellen Projekt?
+3. **DOMAIN-VALIDIERUNG:** simon-haenel.com = Rechtsberatung/Rechtshilfe
+4. **AUTHENTIZITÄTS-CHECK:** Entspricht es Simon's tatsächlicher Expertise?
+
+### **VERBOTENE FEHLER-PATTERN:**
+
+- ❌ IT-Expertise in Rechts-Projekt kopieren
+- ❌ Fremde Projekt-Inhalte ohne Anpassung übernehmen
+- ❌ Template-Content ohne Projekt-Spezifikation verwenden
+- ❌ Domains/URLs aus anderen Projekten kopieren
+
+### **KORREKTE ARBEITSWEISE:**
+
+- ✅ Projektname analysieren: "simon-recht" → Rechtliches Thema
+- ✅ Content-Relevanz prüfen: Passt es zum Rechtsbereich?
+- ✅ Simon's echte Expertise verwenden: Was ist dokumentiert?
+- ✅ Bei Unklarheit: Simon direkt fragen statt raten
+
+**REGEL:** Lieber fragen als falsch migrieren!
+
+## 🎯 SIMON-RECHT ASSET-STRUKTUR (ZWINGEND)
+
+### **BILDER-ORGANISATION:**
+
+- **Startseite Index:** `public\assets\images\startseite-index\`
+- **Über-mich Seite:** `public\assets\images\startseite_uebermich\`
+- **Blog-Bilder:** `public\assets\images\blogs\[blog-name]\` (separates Verzeichnis pro Blog)
+- **Allgemeine Bilder:** `public\assets\images\`
+
+### **VIDEO-STRATEGIE (YOUTUBE-FIRST):**
+
+- **Hosting:** YouTube (0€ Kosten + potenzielle Werbeeinnahmen)
+- **Reichweite:** Millionen potenzielle Zuschauer
+- **Integration:** YouTube-Videos in Website einbetten
+- **Lernplattform:** Visuelle Kurse + Podcast-Funktionen
+- **Emotionale Bindung:** Lerninhalte mit Gefühlen/Emotionen kombiniert
+- **Lokaler Pfad:** `public\assets\videos\` (nur für readme-datei und videoverzeichnis)
+
+### **CONTENT-STANDARDS:**
+
+- **Blog-Mindestlänge:** 2300 Wörter (für optimales SEO)
+- **Domain:** simon-haenel.com
+- **Fokus:** RECHTLICHE Expertise und Beratung (NICHT IT!)
+
 # Umgang mit Problemen und Fehler die von der KI gemacht werden
 
 Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderungen beginnst, sondern die Hinterfragung deiner Verhaltensweise, die dich dazu zwingen soll, selbstkritisch deine arbeit zu analysieren!!!
