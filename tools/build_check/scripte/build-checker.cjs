@@ -4540,38 +4540,71 @@ Dieser Report fokussiert sich auf organische Verbesserungen ohne Performance-Too
   }
 
   /**
-   * 🎨 60/30/10 Farbschema Validierung
+   * 🎨 60/30/10 Farbschema Validierung - NACHTSTAHL & WARNSIGNAL SYSTEM
    */
   async validateColorScheme(designDoc, cssFile) {
-    const colorScheme = CONFIG.SEO_STANDARDS.CSS_DESIGN_VALIDATION.COLOR_SCHEME;
+    // NEUE FARBEN nach "Nachtstahl & Warnsignal" Farbsystem
+    const NACHTSTAHL_WARNSIGNAL_COLORS = {
+      PRIMARY: "#1a1d24", // 60% Asphaltschwarz - fokussierte, ernste Basis
+      SECONDARY: "#4a6d7c", // 30% Analyse-Blau - intellektuelle Kompetenz
+      ACCENT: "#ff4500", // 10% Glut-Orange - entschlossene Aktion
+      KYBER_BLUE: "#00d4ff", // Kyberblau für Schrift - Star Wars-inspiriert
+      SUCCESS: "#10b981", // Erfolgs-Grün für positive Elemente
+      TEXT_PRIMARY: "#ffffff", // Weißer Text für optimalen Kontrast
+    };
 
     // Prüfe ob Farben in CSS-Datei korrekt definiert sind
     const missingColors = [];
 
-    if (!cssFile.includes(colorScheme.PRIMARY)) {
+    if (!cssFile.includes(NACHTSTAHL_WARNSIGNAL_COLORS.PRIMARY)) {
       missingColors.push(
-        `Primärfarbe ${colorScheme.PRIMARY} (60% - Hintergrund)`
+        `Asphaltschwarz ${NACHTSTAHL_WARNSIGNAL_COLORS.PRIMARY} (60% - Hintergrund, ernste Basis)`
       );
     }
 
-    if (!cssFile.includes(colorScheme.SECONDARY)) {
+    if (!cssFile.includes(NACHTSTAHL_WARNSIGNAL_COLORS.SECONDARY)) {
       missingColors.push(
-        `Sekundärfarbe ${colorScheme.SECONDARY} (30% - Card-Border, Eingabefelder)`
+        `Analyse-Blau ${NACHTSTAHL_WARNSIGNAL_COLORS.SECONDARY} (30% - Struktur, Kompetenz)`
       );
     }
 
-    if (!cssFile.includes(colorScheme.ACCENT)) {
+    if (!cssFile.includes(NACHTSTAHL_WARNSIGNAL_COLORS.ACCENT)) {
       missingColors.push(
-        `Akzentfarbe ${colorScheme.ACCENT} (10% - Buttons, Call-to-Actions)`
+        `Glut-Orange ${NACHTSTAHL_WARNSIGNAL_COLORS.ACCENT} (10% - Call-to-Actions, Entschlossenheit)`
+      );
+    }
+
+    if (!cssFile.includes(NACHTSTAHL_WARNSIGNAL_COLORS.KYBER_BLUE)) {
+      missingColors.push(
+        `Kyberblau ${NACHTSTAHL_WARNSIGNAL_COLORS.KYBER_BLUE} (Schrift auf blauem Hintergrund)`
+      );
+    }
+
+    // Prüfe auf VERBOTENE alte Farben
+    const DEPRECATED_COLORS = ["#1e3a8a", "#2563eb", "#ef4444"];
+    const deprecatedFound = [];
+
+    DEPRECATED_COLORS.forEach((color) => {
+      if (cssFile.includes(color)) {
+        deprecatedFound.push(color);
+      }
+    });
+
+    if (deprecatedFound.length > 0) {
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "VERALTETE FARBEN GEFUNDEN",
+        `Alte Farben müssen entfernt werden: ${deprecatedFound.join(", ")}`,
+        "ZWINGEND: Nur 'Nachtstahl & Warnsignal' Farbsystem verwenden - global_css.md als einzige Quelle"
       );
     }
 
     if (missingColors.length > 0) {
       this.addIssue(
         RATINGS.CRITICAL,
-        "60/30/10 Farbschema Verletzung",
+        "NACHTSTAHL & WARNSIGNAL Farbschema Verletzung",
         `Fehlende Farben in global.css: ${missingColors.join(", ")}`,
-        "KI MUSS ZWINGEND zuerst global_css.md vollständig in natürlicher Sprache ergänzen"
+        "KI MUSS ZWINGEND 'Nachtstahl & Warnsignal' Farbsystem vollständig implementieren"
       );
     }
   }
