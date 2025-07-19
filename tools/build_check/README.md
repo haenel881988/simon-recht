@@ -5,19 +5,20 @@ Daher wenn das Wort "Astra" fällt, ist die KI gemeint.
 
 VORSICHT:
 In der Readme UND dem gesamten Verzeichnis:
-C:\apps\website\simon-recht\tools
+C:\apps\website\simon-recht\tools\build_check
 
-Sind noch veraltete Verlinkungen vorhanden.
+Sind noch veraltete Verlinkungen vorhanden. Die KI muss zwingend prüfen bzw. den checker, die funktionen etc.
 
 Alt:
 C:\apps\website\simon-astro\tools
 
 Neu:
-C:\apps\website\simon-recht\tools
+C:\apps\website\simon-recht\tools\build_check
 
 Ab hier folgen die Anweisungen und Infos, direkt aus dem alten Verzeichnis und müssen zwingend aktualisiert werden.
 
-Um die Arbeit von der KI zu erleichtern, darf die KI einen build-checker erstellen. Dabei geht es darum, dass dieser build-checker (checker) vom build prozess angetriggert wird.
+Um die Arbeit von der KI zu erleichtern, darf die KI einen build-checker entsprechend dem Projekt hier anpassen. Insbesondere da evtl. noch alte Verzeichnisse und URLs aufgeführt sind.
+Die KI soll anhand der alten URLs und Verzeichnisse, wenn sie vorhanden sind, diese aktualisieren.
 Folgende Dinge sollen vom checker, geloggt werden:
 
 Umgang mit Issues:
@@ -83,7 +84,7 @@ Ankertext-Qualität Bewertung
 Bewertungssystem (gut/empfohlen)
 
 Ich habe dazu ein verzeichnis erstellst:
-C:\apps\website\simon-astro\tools\build_check
+C:\apps\website\simon-recht\tools\build_check
 
 Unter diesem Verzeichnis darf die KI die scripte ablegen:
 C:\apps\website\simon-recht\tools\build_check\scripte
@@ -271,14 +272,14 @@ Der Build-Checker wurde erfolgreich implementiert und getestet. Hier ist die fin
 **Manuell:**
 
 ```powershell
-cd c:\apps\website\simon-astro
-.\tools\build_check\scripte\run-build-checker.ps1
+cd c:\apps\website\simon-recht
+.\tools\build_check\scripte\run-build-checker.ps1 --> Achtung, immer den befehl an pnpm run build oder npm run build koppeln aber so, dass das vercel building NIEMALS gefährdet wird.
 ```
 
 **Programmatisch:**
 
 ```powershell
-node tools\build_check\scripte\build-checker.cjs
+node tools\build_check\scripte\build-checker.cjs --> Achtung, immer den befehl an pnpm run build oder npm run build koppeln aber so, dass das vercel building NIEMALS gefährdet wird.
 ```
 
 #### 📊 **ERSTER TEST ERFOLGREICH:**

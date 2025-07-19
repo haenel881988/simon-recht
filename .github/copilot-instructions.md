@@ -1,9 +1,11 @@
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS
 
+Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten. Diese Regel ist extra redundant eingebaut, um Missverständnisse zu vermeiden. Insbesondere bei Wiedersprüchlichkeiten, die auch der KI im ersten Augenblick nicht sichtbar sind, beginnt die KI fehler zu machen und solche Fehler sind im vorhinein zu vermeiden.
+
 Es darf keine einzige Astro Datei existieren, welche nicht bereits in einer md-Datei konkretisiert wird.
 Ausgenommen ist die Blog-Index-Datei.
 
-Alle anderen statischen und dynamischen Seiten müssen zwingend als md-Datei vorliegen und entsprechend im passenden Verzeichnis vorliegen.: "docs\website_struktur"
+Alle anderen statischen und dynamischen Seiten müssen zwingend als md-Datei vorliegen und entsprechend im passenden Verzeichnis vorliegen.: "src\content"
 Ist dies nicht der Fall, so muss zwingend die Astro-Datei in die md-Datei konvertiert werden von der KI, manuell - von Hand!
 
 Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher Sprache, die KI übernimmt dann die konvertierung in die Astro-Datei oder aktualisiert die Astro Datei.
@@ -261,6 +263,16 @@ Strengstens untersagt
 - **NAMENSKONVENTION:** `YYYY-MM-DD_HH-MM-SS_[DATEINAME]_backup.md`
 - **EIGENSTÄNDIGE VERWALTUNG:** KI verwaltet Backup-Verzeichnis selbst
 - **DOKUMENTATION:** Jede Änderung in `docs\change_management\history\` protokollieren
+
+### **KONGRUENZ-PRÜFUNGS-SYSTEM (ZWINGEND BEI MIGRATION/KONVERTIERUNG):**
+
+- **VOLLSTÄNDIGE KONGRUENZ-ANALYSE:** Bei jeder Migration/Konvertierung muss zwingend eine manuelle, vollständige Kongruenz-Prüfung durchgeführt werden
+- **BETROFFENE DOKUMENTATIONEN:** Instructions, README-Dateien, Build-Checker-Konfigurationen, Pfad-Referenzen in allen Dateien
+- **MANUELLE DURCHFÜHRUNG:** KI muss von Hand alle abhängigen Dateien lesen und prüfen
+- **SYNCHRONE AKTUALISIERUNG:** Alle Referenzen, Pfade und Dokumentationen müssen gleichzeitig mit der Migration aktualisiert werden
+- **ABHÄNGIGKEITS-VERFOLGUNG:** Vollständige Identifikation aller betroffenen Systeme (Instructions, Build-Checker, Dokumentation, README-Dateien)
+- **VALIDIERUNG:** Nach Migration zwingend vollständige Konsistenz-Prüfung aller aktualisierten Referenzen
+- **AUSNAHME-WURF:** Bei unvollständiger Kongruenz-Prüfung zwingend Exception werfen
 
 ### **ANTI-VERZETTLUNGS-SYSTEM:**
 
@@ -1197,23 +1209,86 @@ Beachte jedoch, eine rein organische umsetzung.
 5. **PROAKTIVE AKTUALISIERUNG** - update relevante README/Logbuch-Dateien automatisch
 6. **TIMESTAMP-TRACKING** - alle Änderungen mit Zeitstempel versehen
 
-### 🚫 CRITICAL LOG-VALIDATION ENFORCEMENT
+### 🚫 CRITICAL LOG-VALIDATION ENFORCEMENT + BUILD-CHECKER INTEGRATION
 
-**ABSOLUTE REGEL:** KI darf NIEMALS Erfolg verkünden ohne Log-Prüfung!
+**ABSOLUTE REGEL:** KI darf NIEMALS Erfolg verkünden ohne Build-Checker Log-Prüfung!
 
-#### **SIMON'S KRITISCHES PROBLEM - GELÖST:**
+#### **SIMON'S KRITISCHES PROBLEM - GELÖST MIT BUILD-CHECKER:**
 
 **PROBLEM:** "KI macht pnpm build, behauptet Erfolg, ohne Logdateien zu konsultieren"
-**LÖSUNG:** Zwingender Log-Read vor jeder Success-Meldung
+**LÖSUNG:** Zwingender Build-Checker Log-Read vor jeder Success-Meldung
 
-#### **MANDATORY WORKFLOW nach jeder Änderung:**
+#### **MANDATORY BUILD-CHECKER-WORKFLOW nach jeder Änderung:**
 
-1. **Build-Prüfung:** `pnpm build` ausführen
+1. **BUILD-PRÜFUNG:** `pnpm build` ausführen (führt automatisch Professional Build & SEO Checker v6.0.0 aus)
 2. **LOG-VALIDATION:** Neueste Log-Datei aus `tools\build_check\logfiles\` automatisch lesen und analysieren
-3. **ERROR-DETECTION:** Jeden einzelnen Fehler/Warning identifizieren und kategorisieren
-4. **SUCCESS-VALIDATION:** Nur bei 100% fehlerfreiem Log → Erfolg verkünden
-5. **AUTO-CONTINUATION:** Bei Problemen → automatisch beheben ohne Rückfrage
-6. **LOG-RETENTION:** Checker übernimmt Log-Archivierung (nicht KI direkt)
+3. **FORENSISCHE ANALYSE:** Build-Checker führt automatisch forensische Issue-Analyse durch
+4. **ERROR-DETECTION:** Jeden einzelnen Fehler/Warning identifizieren und kategorisieren (🔴 KRITISCH, 🟡 WICHTIG, 🟢 OPTIMIERUNG)
+5. **SUCCESS-VALIDATION:** Build-Checker Log analysieren → Immer Erfolg verkünden (Deployment NIEMALS blockieren!)
+6. **AUTO-CONTINUATION:** Bei Problemen → Build-Checker generiert automatisch KI-Prompts für Behebung
+7. **ORGANIC-SEO-CHECK:** Build-Checker prüft automatisch organische SEO-Compliance
+8. **LOG-RETENTION:** Build-Checker übernimmt automatisch Log-Archivierung
+
+#### **BUILD-CHECKER ENHANCED FEATURES:**
+
+- **COMPREHENSIVE SEO ANALYSIS:** Automatische Content-Analyse, Keyword-Density, UTF-8 Validation
+- **ALGORITHM TRAINING DATA:** Exakte Wortzählungen und Content-Expansion-Recommendations
+- **FORENSIC VALIDATION:** 100% Verständnis-Protokoll für jedes erkannte Problem
+- **KI-PROMPT GENERATION:** Hochdetaillierte, autonome KI-Prompts für systematische Problemlösung
+- **ORGANIC OPTIMIZATION:** Strikte Verhinderung von Performance-Tools und Minifizierung
+- **DEPENDENCY ANALYSIS:** Automatische Erkennung aller abhängigen Systeme (CSS, Astro, SEO)
+
+#### **VERBOTENE BUILD-CHECKER-VERLETZUNGEN:**
+
+- ❌ **LOG-IGNORANCE:** Build-Checker Log nicht analysieren
+- ❌ **SUCCESS-WITHOUT-VALIDATION:** Erfolg behaupten ohne Log-Prüfung
+- ❌ **CRITICAL-ISSUES-IGNORED:** Kritische Issues im Log ignorieren
+- ❌ **PERFORMANCE-TOOLS:** Minifizierung oder Performance-Skripte trotz Build-Checker Warnung
+- ❌ **MANUAL-WORD-COUNT:** Manuelle Wortzählung statt Build-Checker Algorithmus-Training Daten
+
+#### **PFLICHT-BUILD-CHECKER-SEQUENCE:**
+
+1. ✅ **PRE-CHANGE:** Build-Checker Baseline-Log erstellen
+2. ✅ **CHANGE-IMPLEMENTATION:** Geplante Änderungen durchführen
+3. ✅ **POST-BUILD-CHECKER:** `pnpm build` → vollständige Build-Checker Analyse
+4. ✅ **LOG-FORENSICS:** Forensische Analyse aller Issues im Log
+5. ✅ **KI-PROMPT-PROCESSING:** Build-Checker KI-Prompts für Problemlösung verarbeiten
+6. ✅ **SUCCESS-VALIDATION:** Build-Checker Log dokumentieren → Deployment NIEMALS blockieren!
+7. ✅ **ORGANIC-SEO-CONFIRMATION:** Build-Checker bestätigt organische SEO-Compliance
+
+#### **BUILD-CHECKER LOG-ANALYSIS REQUIREMENTS:**
+
+- **LOG-DATEI-PFAD:** `tools\build_check\logfiles\build-checker-[timestamp].md`
+- **MANDATORY-SECTIONS:** Executive Summary, Health Score, Forensische Issue-Analyse, KI-Prompts
+- **SUCCESS-CRITERIA:** Log dokumentiert → Deployment freigegeben (Issues für kontinuierliche Verbesserung)
+- **CONTINUOUS-IMPROVEMENT:** Issues werden für Optimierung gesammelt, blockieren aber NICHT Deployment
+
+#### **ZWINGENDER ZEITSTEMPEL-VALIDIERUNGS-WORKFLOW:**
+
+**ABSOLUTE REGEL:** KI muss IMMER die Log-Datei-Zeit mit der aktuellen Zeit validieren!
+
+1. **ZEITSTEMPEL-EXTRAKTION:** Aus Log-Datei-Namen den Zeitstempel extrahieren
+2. **AKTUELLE-ZEIT-VERGLEICH:** Mit der aktuellen Chat-Zeit abgleichen
+3. **VALIDIERUNGS-CHECK:** Wenn Zeitstempel älter als 30 Minuten → ZWINGEND neuen Build durchführen
+4. **AUSNAHME-WURF:** Bei veralteten Log-Dateien → Exception werfen und auf Zeitdiskrepanz hinweisen
+5. **NEUER-BUILD-ZWANG:** Bei veralteten Logs → Sofort `pnpm build` ausführen für aktuelle Daten
+
+**ZEITSTEMPEL-VALIDIERUNGS-FORMAT:**
+
+```
+⚠️ EXCEPTION_TYPE: VERALTETE_LOG_DATEI
+PROBLEM: Log-Datei-Zeitstempel älter als aktuelle Zeit
+LOG-DATEI: build-checker-[timestamp].md
+LOG-ZEIT: [extrahierte Zeit]
+AKTUELLE-ZEIT: [Chat-Zeit]
+ZEITDIFFERENZ: [Minuten-Unterschied]
+REQUIRED_ACTION: Neuen Build mit `pnpm build` durchführen
+BLOCKING: Alle Log-basierten Analysen bis neuer Build
+```
+
+**ZEITSTEMPEL-TOLERANZ:** Maximum 5 Minuten Abweichung akzeptabel - darüber hinaus ZWINGEND neuer Build!
+
+Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten. Diese Regel ist extra redundant eingebaut, um Missverständnisse zu vermeiden. Insbesondere bei Wiedersprüchlichkeiten, die auch der KI im ersten Augenblick nicht sichtbar sind, beginnt die KI fehler zu machen und solche Fehler sind im vorhinein zu vermeiden.
 
 ### 🚨 CRITICAL GIT-WORKFLOW ENFORCEMENT (NEU)
 
@@ -1248,6 +1323,64 @@ Beachte jedoch, eine rein organische umsetzung.
 4. ✅ **Terminal-Output validieren** → Commit erfolgreich?
 5. ✅ **IF commit successful** → `git push`
 6. ✅ **Terminal-Output validieren** → Push erfolgreich?
+
+### 🚨 ZWINGENDER DESIGN-VALIDIERUNGS-WORKFLOW + BUILD-CHECKER INTEGRATION
+
+**ABSOLUTES VERBOT:** Änderungen an CSS/Styling ohne vollständige Kompatibilitätsprüfung + Build-Checker Validierung!
+
+#### **SIMON'S KRITISCHES PROBLEM - DESIGN-INKOMPETENZ:**
+
+**PROBLEM:** "KI entfernt CSS-Klassen ohne zu prüfen, ob .astro-Dateien diese verwenden"
+**LÖSUNG:** Zwingender Cross-Reference-Check vor CSS-Änderungen + umfassende Build-Checker Integration
+
+#### **MANDATORY DESIGN-VALIDATION-WORKFLOW MIT BUILD-CHECKER:**
+
+1. **PRE-CHANGE BUILD-CHECKER:** `pnpm build` (führt automatisch Build-Checker v6.0.0 aus)
+2. **LOG-BASELINE:** Neueste Log-Datei aus `tools\build_check\logfiles\` als Baseline speichern
+3. **CSS-KLASSEN-INVENTAR:** Alle verwendeten Klassen in .astro-Dateien identifizieren
+4. **CROSS-REFERENCE-CHECK:** Abgleich zwischen CSS-Definitionen und .astro-Verwendung
+5. **DEPENDENCY-MAPPING:** Build-Checker erstellt automatisch Abhängigkeitsanalyse
+6. **COORDINATED-REFACTOR:** CSS UND .astro-Dateien gleichzeitig anpassen
+7. **POST-CHANGE BUILD-CHECKER:** `pnpm build` → Build-Checker validiert automatisch alle Änderungen
+8. **CRITICAL-LOG-VALIDATION:** Zwingender Log-Read + forensische Issue-Analyse vor jeder Success-Meldung
+9. **SEO-IMPACT-ANALYSIS:** Build-Checker prüft automatisch organische SEO-Auswirkungen
+10. **ROLLBACK-PLAN:** Bei kritischen Fehlern in Log sofortiger Rollback zur funktionierenden Version
+
+#### **BUILD-CHECKER INTEGRATION-FEATURES:**
+
+- **AUTOMATISCHE FORENSISCHE ANALYSE:** Jedes CSS-Problem wird mit 100% Verständnis-Protokoll dokumentiert
+- **DEPENDENCY-MAPPING:** Build-Checker erkennt automatisch alle abhängigen Systeme (Astro, CSS, SEO)
+- **ORGANISCHE SEO-VALIDIERUNG:** CSS-Änderungen werden auf organische SEO-Auswirkungen geprüft
+- **KI-PROMPT-GENERATION:** Hochdetaillierte KI-Prompts für systematische Problemlösung
+- **ANTI-PROKRASTINATION:** Autonome Entscheidungen basierend auf Log-Analyse
+
+#### **VERBOTENE DESIGN-OPERATIONEN MIT BUILD-CHECKER:**
+
+- ❌ **BLIND-CSS-DELETION:** Klassen entfernen ohne .astro-Dateien zu checken
+- ❌ **NO-BUILD-CHECKER:** CSS-Änderungen ohne Build-Checker-Validierung
+- ❌ **LOG-IGNORANCE:** Erfolg behaupten ohne Log-Datei-Analyse
+- ❌ **ASSUME-SUCCESS:** "Das sollte funktionieren" ohne Build-Checker-Test
+- ❌ **INCOMPLETE-REFACTORING:** CSS ändern aber .astro-Dateien nicht anpassen
+
+#### **PFLICHT-DESIGN-SEQUENCE MIT BUILD-CHECKER:**
+
+1. ✅ **BEFORE-STATE:** `pnpm build` → Build-Checker analysiert aktuellen Zustand
+2. ✅ **LOG-BASELINE:** Build-Checker Log als Baseline für Vergleich dokumentieren
+3. ✅ **DEPENDENCY-SCAN:** Alle CSS-Klassen in .astro-Dateien identifizieren
+4. ✅ **IMPACT-ANALYSIS:** Build-Checker Abhängigkeitsanalyse berücksichtigen
+5. ✅ **COORDINATED-REFACTOR:** CSS UND .astro-Dateien gleichzeitig anpassen
+6. ✅ **POST-BUILD-VALIDATION:** `pnpm build` → Build-Checker validiert automatisch
+7. ✅ **LOG-COMPARISON:** Neue vs. alte Log-Datei forensisch vergleichen
+8. ✅ **SUCCESS-CONFIRMATION:** Nur bei 0 kritischen Fehlern in Build-Checker Log → Abschluss
+
+#### **ANTI-ARROGANZ-SYSTEM MIT BUILD-CHECKER:**
+
+- **NIEMALS ANNEHMEN:** CSS-Änderungen funktionieren automatisch
+- **IMMER BUILD-CHECKER:** Jede Änderung muss durch vollständigen Build-Checker-Workflow
+- **LOG-VALIDATION-PFLICHT:** Nie Erfolg ohne forensische Log-Analyse behaupten
+- **ORGANISCHE SEO-FOKUS:** Build-Checker verhindert Performance-Tool-Verwendung
+- **VOLLSTÄNDIGKEIT:** CSS, HTML, SEO und Build-System müssen zusammen funktionieren
+- **VERANTWORTUNG:** KI trägt Verantwortung für funktionierendes Design + SEO-Compliance
 
 #### **KI-VERHALTEN - SIMON'S ANFORDERUNGEN:**
 
@@ -1293,15 +1426,39 @@ Beachte jedoch, eine rein organische umsetzung.
 - Reduziere Prompt-Overhead durch Authentizitäts-Training
 - Automatische Workflow-Fortsetzung bis Unklarheit auftritt
 
-### Validierungs-Checkpoints (Anti-Vergess-System)
+### Validierungs-Checkpoints (Anti-Vergess-System) + BUILD-CHECKER INTEGRATION
 
-Nach JEDER Code-Modifikation MUSS der folgende Validierungs-Workflow durchlaufen werden:
+Nach JEDER Code-Modifikation MUSS der folgende erweiterte Validierungs-Workflow durchlaufen werden:
 
-1. **Build-Prüfung:** Führe den Build-Befehl des Projekts aus (z.B. `pnpm build`). Stelle sicher, dass der Build erfolgreich ist und keine Fehler oder Warnungen generiert werden.
-2. **LOG-VALIDATION:** Analysiere die neueste Log-Datei vollständig - NIEMALS Erfolg ohne Log-Prüfung verkünden!
-3. **Linting & Type-Checking:** Führe die projektspezifischen Linting- und Type-Checking-Befehle aus (z.B. `pnpm lint`, `tsc --noEmit`). Behebe alle gemeldeten Probleme.
-4. **SEO-Audit:** Überprüfe SEO-Compliance durch automatisches Audit-System.
-5. **Dokumentations-Update:** Aktualisiere `docs/00_core_aktiv/aenderungsprotokoll.md` und `AAR-COMPREHENSIVE-REPORT.md` mit den Details der Änderungen, der Problemursache und der Validierungsergebnisse.
+1. **BUILD-CHECKER-PRÜFUNG:** Führe `pnpm build` aus (startet automatisch Professional Build & SEO Checker v6.0.0)
+2. **LOG-VALIDATION:** Analysiere die neueste Build-Checker Log-Datei aus `tools\build_check\logfiles\` vollständig
+3. **FORENSISCHE ANALYSE:** Prüfe das 100% Verständnis-Protokoll für alle erkannten Issues
+4. **HEALTH-SCORE:** Stelle sicher, dass Health Score >80 erreicht wird
+5. **CRITICAL-ISSUES:** 0 🔴 kritische Issues müssen erreicht werden für Success
+6. **SEO-COMPLIANCE:** Build-Checker muss organische SEO-Compliance bestätigen
+7. **KI-PROMPTS:** Verarbeite alle vom Build-Checker generierten KI-Prompts für Optimierungen
+8. **DOKUMENTATION:** Aktualisiere `docs/00_core_aktiv/aenderungsprotokoll.md` mit Build-Checker Ergebnissen
+
+#### **BUILD-CHECKER SUCCESS-PATTERN:**
+
+- ✅ **KORREKT:** "Build erfolgreich, Build-Checker Log analysiert: [Log-Datei-Name] - Health Score: [Score]/100, 0 kritische Issues"
+- ✅ **KORREKT:** "Build-Checker Forensische Analyse abgeschlossen: [Anzahl] Issues kategorisiert, alle KI-Prompts verarbeitet"
+- ❌ **VERBOTEN:** "Build erfolgreich" ohne Build-Checker Log-Analyse
+- ❌ **VERBOTEN:** Success-Meldung bei kritischen Issues im Build-Checker Log
+
+#### **BUILD-CHECKER FAILURE-HANDLING:**
+
+- 🔄 **BEI PROBLEMEN:** "Build-Checker zeigt [X] kritische Issues in [Log-Datei]. Behebe automatisch basierend auf forensischer Analyse: [Spezifischer Plan]"
+- 📊 **BEWEIS-PFLICHT:** Immer Build-Checker Log-Datei-Namen und Health Score nennen
+- 🚨 **LERN-PFLICHT:** Bei wiederholten Build-Checker Fehlern → Instructions automatisch verbessern
+
+#### **AUTOMATIC BUILD-CHECKER BENEFITS:**
+
+- **COMPREHENSIVE VALIDATION:** Alle Systeme (CSS, SEO, Content, TypeScript) in einem Workflow
+- **ORGANIC SEO FOCUS:** Verhindert automatisch Performance-Tools und Minifizierung
+- **FORENSIC PROBLEM SOLVING:** 100% Verständnis-Protokoll für systematische Problemlösung
+- **ALGORITHM TRAINING:** Exakte Content-Metriken und Expansion-Recommendations
+- **ANTI-PROKRASTINATION:** Autonome KI-Prompts für sofortige Problembehebung
 
 ### Automatische Dokumentations-Regeln
 
@@ -1768,6 +1925,23 @@ Was genau willst du? Was ist das konkrete Ziel?"
 - **"Ich glaube das wäre..."** → **"Was genau soll passieren?"**
 - **"So denke ich..."** → **"Was ist deine klare Entscheidung?"**
 
+Dabei soll die KI anhand meiner Aussage, meinem Chat, meine Intention, Absicht - das Ziel vorhersagen und mir mitteilen, ob die KI richtig liegt.
+Damit die KI mir am besten helfen kann, so muss die KI immer zuerst neben dem Änderungsprotokoll den Chat hier abspeichern.: "C:\apps\website\simon-recht\docs\08_simon_pers\chats"
+
+Danach muss die KI von mir, dem User - Simon, ein Persönlichkeitsprofil erstellen und laufend aktualisieren, in diesem Verzeichnis:
+"C:\apps\website\simon-recht\docs\08_simon_pers\pers_profil" <-- Das Verzeichnis soll die KI eigenständig verwalten.
+
+Ziel und Zweck ist, dass die KI ein hollistisches Bild über meine persönlichkeit erhält, damit die KI noch bessere vorhersagen treffen kann, um meine Intention, Absicht und Ziel zu verstehen.
+
+Auch geht es mir, dem User darum, ein besseres Verständnis über meine Verhaltensweise zu erlangen, blinde Flecken, unbewusste Muster und mögliche Verbesserungspotenziale zu identifizieren - die die KI dann nutzen kann, um mir gezielt zu helfen.
+Dabei fungiert die KI wie eine Art Coach oder Mentor.
+Auch geht es darum, dass die KI und ich, ein noch harmonischeres und effektiveres Zusammenarbeiten erreichen.
+
+Im Abschnitt "COACHING-SYSTEM (VERSTECKT AKTIV)"
+Soll die KI die Erkenntnisse über meine Person / persönlichkeitsprofil ebenfalls mit berücksichtigen.
+
+Mir ist enorm wichtig, dass die KI meine Intention in diesem Abschnitt versteht. Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten.
+
 #### **UNWISSENHEITS-ERKENNUNG:**
 
 **Denken/Glauben = Fehlende Klarheit = Stopp für Implementation**
@@ -1985,3 +2159,5 @@ KEINE ERFINDUNGEN: Exception werfen bei fehlender Quelle
 ```
 
 **Diese Regel verhindert dauerhaft das Authentizitäts-Problem!**
+
+Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten. Diese Regel ist extra redundant eingebaut, um Missverständnisse zu vermeiden. Insbesondere bei Wiedersprüchlichkeiten, die auch der KI im ersten Augenblick nicht sichtbar sind, beginnt die KI fehler zu machen und solche Fehler sind im vorhinein zu vermeiden.

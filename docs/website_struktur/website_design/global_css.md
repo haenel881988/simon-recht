@@ -5,7 +5,7 @@ Diese Datei dient dazu, in einfacher Sprache das Design zu beschreiben.
 Statische Elemente:
 **Header**
 
-- Primärfarbe dunkelblau (#1E3A8A) als Hintergrund mit weißer Schrift
+- Primärfarbe hellblau als Hintergrund mit weißer Schrift
 - Beim Hochscrollen wird der Header sanft eingeblendet
 - Beim Runterscrollen verschwindet der Header elegant
 - Minimalistisches Design ohne überflüssige Effekte
