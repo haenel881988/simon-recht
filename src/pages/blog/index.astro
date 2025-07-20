@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
 
 const allBlogPosts = await getCollection("blog", ({ data }) => {
   return data.draft !== true;
@@ -10,72 +11,55 @@ const sortedPosts = allBlogPosts.sort(
 );
 ---
 
-<!doctype html>
-<html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Blog - Mindset schlägt Grosskonzern" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Mindset schlägt Grosskonzern</title>
-  </head>
-  <body class="page-container">
-    <nav class="navigation">
-      <div class="nav-container">
-        <div class="nav-content">
-          <a href="/" class="nav-brand"> 🎯 Mindset schlägt Grosskonzern </a>
-          <div class="nav-links">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/blog" class="nav-active">Meine Geschichte</a>
-            <a href="/beweise" class="nav-link">Beweise</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <div class="content-main">
-      <div class="container">
-        <div class="page-header">
-          <h1 class="page-title">📖 Meine Geschichte</h1>
-          <p class="page-subtitle">
-            Wie ich einen Grosskonzern besiegte - mit Mindset und KI
-          </p>
-        </div>
-
-        <div class="blog-grid">
-          {
-            sortedPosts.map((post) => (
-              <article class="blog-card">
-                <div class="blog-meta">
-                  <time class="blog-date">
-                    {post.data.pubDate.toLocaleDateString("de-DE")}
-                  </time>
-                  {post.data.tags && (
-                    <div class="blog-tags">
-                      {post.data.tags.slice(0, 3).map((tag) => (
-                        <span class="blog-tag">{tag}</span>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <h2 class="blog-title">
-                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-                </h2>
-
-                <p class="blog-description">{post.data.description}</p>
-
-                <a href={`/blog/${post.slug}`} class="blog-link">
-                  Weiterlesen →
-                </a>
-              </article>
-            ))
-          }
-        </div>
-
-        <div class="page-footer">
-          <a href="/" class="back-link"> ← Zurück zur Startseite </a>
-        </div>
-      </div>
+<Layout
+  title="Blog - Mindset schlägt Grosskonzern"
+  description="Blog - Mindset schlägt Grosskonzern"
+>
+  <div class="hero">
+    <div class="container">
+      <h1 class="hero-title">📖 Meine Geschichte</h1>
+      <p class="hero-subtitle">
+        Wie ich einen Grosskonzern besiegte - mit Mindset und KI
+      </p>
     </div>
-  </body>
-</html>
+  </div>
+
+  <div class="container">
+    <div class="blog-grid">
+      {
+        sortedPosts.map((post) => (
+          <article class="blog-card">
+            <div class="blog-card-content">
+              <div class="blog-card-meta">
+                <time>{post.data.pubDate.toLocaleDateString("de-DE")}</time>
+                {post.data.tags && (
+                  <div class="mt-1">
+                    {post.data.tags.slice(0, 3).map((tag) => (
+                      <span class="blog-card-meta">{tag}</span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <h2 class="blog-card-title">
+                <a href={`/blog/${post.slug}`} class="blog-card-link">
+                  {post.data.title}
+                </a>
+              </h2>
+
+              <p class="blog-card-excerpt">{post.data.description}</p>
+
+              <a href={`/blog/${post.slug}`} class="blog-card-link">
+                Weiterlesen →
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-secondary"> ← Zurück zur Startseite </a>
+    </div>
+  </div>
+</Layout>

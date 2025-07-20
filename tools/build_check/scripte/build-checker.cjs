@@ -26,6 +26,7 @@ const { execSync } = require("child_process");
 
 // Import AAR Metrics Collector
 const AARMetricsCollector = require("./aar-metrics-collector.cjs");
+const HelperMethods = require("./helper-methods.cjs");
 
 // 📁 Erweiterte Pfad-Konfiguration mit Blueprint Standards
 const CONFIG = {
@@ -344,6 +345,9 @@ class BuildChecker {
       await this.performTODOAnalysis(); // NEW: TODO-Tracking Integration
       await this.performVSCodeProblemsAnalysis(); // NEW: VS Code PROBLEMS Integration
       await this.performAdvancedContentAnalysis();
+      await this.validateImageReferences(); // NEW: Bilder-Referenz-Validierung + Anti-Dummy-Links
+      await this.validateMobileNavigation(); // NEW: Mobile Navigation Check
+      await this.validateMobileStyling(); // NEW: Mobile Styling & Content-Ausrichtung
       await this.performDirectorySynchronizationAnalysis(); // NEW: Verzeichnis-Sync zwischen docs/website_struktur und src/pages
       await this.performLinkIntegrityAnalysis(); // NEW: Link-Analyse
       await this.performCSSConsistencyAnalysis(); // NEW: CSS-Analyse
@@ -5536,6 +5540,10 @@ ${content.substring(0, 500)}...
         }
       }
 
+      // NEUE ERWEITERTE VALIDIERUNGEN: Kontrast und Alignment
+      await this.validateContrastRatio(content, relativePath);
+      await this.validateElementAlignment(content, relativePath);
+
       // Issues hinzufügen
       for (const issue of issues) {
         this.addIssue(
@@ -5551,6 +5559,224 @@ ${content.substring(0, 500)}...
         error.message
       );
     }
+  }
+
+  /**
+   * 🎨 ERWEITERTE KONTRAST-VALIDIERUNG (NEU für Simon)
+   * Prüft WCAG 2.1 AA Kontrast-Verhältnisse in CSS
+   */
+  async validateContrastRatio(cssContent, filePath) {
+    console.log("🎨 Validiere Kontrast-Verhältnisse...");
+
+    // Extrahiere Farbkombinationen aus CSS
+    const colorCombinations = this.extractColorCombinations(cssContent);
+
+    for (const combination of colorCombinations) {
+      const contrastRatio = this.calculateContrastRatio(
+        combination.foreground,
+        combination.background
+      );
+
+      // WCAG 2.1 AA Standards: Normal text 4.5:1, Large text 3:1
+      const requiredRatio = combination.isLargeText ? 3.0 : 4.5;
+
+      if (contrastRatio < requiredRatio) {
+        this.addIssue(
+          RATINGS.IMPORTANT,
+          "Kontrast-Verletzung",
+          `${filePath}: Kontrast ${contrastRatio.toFixed(2)}:1 in ${
+            combination.selector
+          } (benötigt: ${requiredRatio}:1)`,
+          `Farbe ${combination.foreground} auf ${combination.background} erfüllt nicht WCAG 2.1 AA Standard. Empfehlung: Dunklere Vordergrund- oder hellere Hintergrundfarbe verwenden.`
+        );
+      }
+    }
+  }
+
+  /**
+   * 🎯 ELEMENT-AUSRICHTUNGS-VALIDIERUNG (NEU für Simon)
+   * Prüft CSS-Alignment-Konsistenz und Grid-Strukturen
+   */
+  async validateElementAlignment(cssContent, filePath) {
+    console.log("🎯 Validiere Element-Ausrichtung...");
+
+    const alignmentIssues = [];
+
+    // Prüfe auf inkonsistente Grid-Definitionen
+    const gridMatches = cssContent.match(/display:\s*grid[^}]*/g) || [];
+    for (const gridMatch of gridMatches) {
+      if (
+        !gridMatch.includes("grid-template") &&
+        !gridMatch.includes("grid-auto")
+      ) {
+        alignmentIssues.push("Grid ohne Template-Definition gefunden");
+      }
+    }
+
+    // Prüfe auf inkonsistente Flexbox-Ausrichtung
+    const flexMatches = cssContent.match(/display:\s*flex[^}]*/g) || [];
+    for (const flexMatch of flexMatches) {
+      if (
+        !flexMatch.includes("justify-content") &&
+        !flexMatch.includes("align-items")
+      ) {
+        alignmentIssues.push("Flexbox ohne Ausrichtungs-Properties gefunden");
+      }
+    }
+
+    // Prüfe auf gemischte Positioning-Methoden
+    const positioningCount = {
+      absolute: (cssContent.match(/position:\s*absolute/g) || []).length,
+      fixed: (cssContent.match(/position:\s*fixed/g) || []).length,
+      relative: (cssContent.match(/position:\s*relative/g) || []).length,
+    };
+
+    if (positioningCount.absolute > 3 && positioningCount.fixed > 1) {
+      alignmentIssues.push(
+        "Gemischte Positioning-Methoden können Layout-Konflikte verursachen"
+      );
+    }
+
+    // Prüfe auf inkonsistente Margin/Padding-Patterns
+    const spacingUnits = this.extractSpacingUnits(cssContent);
+    if (spacingUnits.length > 5) {
+      alignmentIssues.push(
+        `Zu viele verschiedene Spacing-Einheiten: ${spacingUnits.join(", ")}`
+      );
+    }
+
+    // Issues hinzufügen
+    for (const issue of alignmentIssues) {
+      this.addIssue(
+        RATINGS.OPTIMIZATION,
+        "Element-Ausrichtung",
+        `${filePath}: ${issue}`,
+        "Verwende konsistente Ausrichtungs-Methoden. Bevorzuge CSS Grid für Layout, Flexbox für Komponenten-Alignment."
+      );
+    }
+  }
+
+  /**
+   * 🔍 HILFSFUNKTIONEN FÜR KONTRAST-BERECHNUNG
+   */
+  extractColorCombinations(cssContent) {
+    const combinations = [];
+    const rules = cssContent.match(/[^{}]+\{[^{}]*\}/g) || [];
+
+    for (const rule of rules) {
+      const selector = rule.split("{")[0].trim();
+      const properties = rule.split("{")[1]?.replace("}", "") || "";
+
+      const colorMatch = properties.match(/color:\s*([^;]+)/);
+      const backgroundMatch = properties.match(
+        /background(?:-color)?:\s*([^;]+)/
+      );
+
+      if (colorMatch && backgroundMatch) {
+        const isLargeText =
+          selector.includes("h1") ||
+          selector.includes("h2") ||
+          (properties.includes("font-size") && this.isLargeFont(properties));
+
+        combinations.push({
+          selector,
+          foreground: this.normalizeColor(colorMatch[1].trim()),
+          background: this.normalizeColor(backgroundMatch[1].trim()),
+          isLargeText,
+        });
+      }
+    }
+
+    return combinations;
+  }
+
+  calculateContrastRatio(color1, color2) {
+    // Vereinfachte Kontrast-Berechnung für häufige Fälle
+    const rgb1 = this.hexToRgb(color1);
+    const rgb2 = this.hexToRgb(color2);
+
+    if (!rgb1 || !rgb2) return 4.5; // Fallback für unbekannte Farben
+
+    const l1 = this.getLuminance(rgb1);
+    const l2 = this.getLuminance(rgb2);
+
+    const lighter = Math.max(l1, l2);
+    const darker = Math.min(l1, l2);
+
+    return (lighter + 0.05) / (darker + 0.05);
+  }
+
+  normalizeColor(color) {
+    // Bekannte CSS-Variablen zu Hex-Werten konvertieren
+    const colorMap = {
+      "var(--asphaltschwarz)": "#1a1d24",
+      "var(--analyse-blau)": "#4a6d7c",
+      "var(--analyse-blau-hell)": "#6b8a9a",
+      "var(--glut-orange)": "#ff4500",
+      white: "#ffffff",
+      black: "#000000",
+    };
+
+    return colorMap[color.toLowerCase()] || color;
+  }
+
+  hexToRgb(hex) {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result
+      ? {
+          r: parseInt(result[1], 16),
+          g: parseInt(result[2], 16),
+          b: parseInt(result[3], 16),
+        }
+      : null;
+  }
+
+  getLuminance(rgb) {
+    const rsRGB = rgb.r / 255;
+    const gsRGB = rgb.g / 255;
+    const bsRGB = rgb.b / 255;
+
+    const r =
+      rsRGB <= 0.03928 ? rsRGB / 12.92 : Math.pow((rsRGB + 0.055) / 1.055, 2.4);
+    const g =
+      gsRGB <= 0.03928 ? gsRGB / 12.92 : Math.pow((gsRGB + 0.055) / 1.055, 2.4);
+    const b =
+      bsRGB <= 0.03928 ? bsRGB / 12.92 : Math.pow((bsRGB + 0.055) / 1.055, 2.4);
+
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  }
+
+  isLargeFont(properties) {
+    const fontSizeMatch = properties.match(
+      /font-size:\s*(\d+(?:\.\d+)?)(px|em|rem)/
+    );
+    if (!fontSizeMatch) return false;
+
+    const size = parseFloat(fontSizeMatch[1]);
+    const unit = fontSizeMatch[2];
+
+    // WCAG "Large Text" Definition: 18pt+ (24px+) oder 14pt+ bold (18.5px+)
+    if (unit === "px") return size >= 24;
+    if (unit === "em" || unit === "rem") return size >= 1.5;
+
+    return false;
+  }
+
+  extractSpacingUnits(cssContent) {
+    const units = new Set();
+    const spacingMatches = cssContent.match(/(margin|padding):\s*[^;]+/g) || [];
+
+    for (const match of spacingMatches) {
+      const values = match.split(":")[1].trim();
+      const unitMatches = values.match(/\d+(\w+)/g) || [];
+
+      for (const unitMatch of unitMatches) {
+        const unit = unitMatch.replace(/\d+/, "");
+        if (unit) units.add(unit);
+      }
+    }
+
+    return Array.from(units);
   }
 
   /**
@@ -7534,7 +7760,142 @@ ${content.substring(0, 500)}...
   }
 
   /**
-   * 🚫 REDUNDANZ-PRÜFUNG (NEU)
+   * �️ BILDER-REFERENZ-VALIDIERUNG (NEU)
+   * Prüft alle Bild-Links auf korrekte Referenzierung und verhindert Dummy-Links
+   */
+  async validateImageReferences() {
+    console.log("🖼️ Validiere Bilder-Referenzen...");
+
+    try {
+      // Sammle alle verwendeten Bild-Referenzen aus HTML/Astro-Dateien
+      const sourceFiles = [
+        ...(await HelperMethods.getAstroFiles(CONFIG.PROJECT_ROOT)),
+        ...(await this.getMarkdownFiles(CONFIG.CONTENT_DIR)),
+      ];
+
+      const imageReferences = [];
+      const dummyLinkPatterns = [
+        /placeholder\.jpg/gi,
+        /dummy\.png/gi,
+        /example\.svg/gi,
+        /test\.jpg/gi,
+        /sample\.png/gi,
+        /lorem\.jpg/gi,
+        /temp\.png/gi,
+        /mock\.jpg/gi,
+        /demo\.png/gi,
+        /fake\.jpg/gi,
+        /#$/g, // Links die mit # enden
+        /javascript:void\(0\)/gi,
+        /href=""/gi,
+        /src=""/gi,
+      ];
+
+      for (const filePath of sourceFiles) {
+        const content = await fs.readFile(filePath, "utf8");
+        const relativePath = path.relative(CONFIG.PROJECT_ROOT, filePath);
+
+        // Finde alle Bild-Referenzen
+        const imgMatches = [
+          ...content.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi),
+          ...content.matchAll(/!\[.*?\]\(([^)]+)\)/gi), // Markdown Bilder
+          ...content.matchAll(
+            /background-image:\s*url\(["']?([^"')]+)["']?\)/gi
+          ),
+        ];
+
+        for (const match of imgMatches) {
+          const imagePath = match[1];
+          if (imagePath) {
+            imageReferences.push({
+              file: relativePath,
+              imagePath: imagePath,
+              fullMatch: match[0],
+            });
+
+            // Prüfe auf Dummy-Pattern
+            for (const pattern of dummyLinkPatterns) {
+              if (pattern.test(imagePath)) {
+                this.addIssue(
+                  RATINGS.CRITICAL,
+                  "🚫 DUMMY-BILD-REFERENZ",
+                  `${relativePath}: Dummy-Bild gefunden: "${imagePath}"`,
+                  "Ersetze durch echte Bild-Datei oder entferne Element"
+                );
+              }
+            }
+
+            // Prüfe ob Bilddatei tatsächlich existiert
+            if (!imagePath.startsWith("http") && !imagePath.startsWith("//")) {
+              let fullImagePath;
+              
+              if (imagePath.startsWith("/")) {
+                // Absoluter Pfad von public/ aus
+                fullImagePath = path.join(CONFIG.PROJECT_ROOT, "public", imagePath);
+              } else if (imagePath.startsWith("./") || imagePath.startsWith("../")) {
+                // Relativer Pfad
+                fullImagePath = path.resolve(path.dirname(filePath), imagePath);
+              } else {
+                // Assume assets path
+                fullImagePath = path.join(CONFIG.PROJECT_ROOT, "public", "assets", "images", imagePath);
+              }
+
+              try {
+                await fs.access(fullImagePath);
+                console.log(`✅ Bild gefunden: ${imagePath}`);
+              } catch {
+                // Versuche korrekte Referenzierung zu finden
+                const correctPath = await this.suggestCorrectImagePath(imagePath, relativePath);
+                
+                this.addIssue(
+                  RATINGS.CRITICAL,
+                  "🖼️ BILD-DATEI FEHLT",
+                  `${relativePath}: Bilddatei nicht gefunden: "${imagePath}"${correctPath ? ` | Vorschlag: "${correctPath}"` : ''}`,
+                  correctPath ? `Korrigiere Pfad zu: ${correctPath}` : "Erstelle fehlende Bilddatei oder korrigiere Pfad"
+                );
+              }
+            }
+          }
+        }
+
+        // Prüfe auf allgemeine Dummy-Links
+        const linkMatches = content.matchAll(
+          /<a[^>]+href=["']([^"']+)["'][^>]*>/gi
+        );
+
+        for (const match of linkMatches) {
+          const linkPath = match[1];
+          if (linkPath) {
+            for (const pattern of dummyLinkPatterns) {
+              if (pattern.test(linkPath)) {
+                this.addIssue(
+                  RATINGS.CRITICAL,
+                  "🚫 DUMMY-LINK",
+                  `${relativePath}: Dummy-Link gefunden: "${linkPath}"`,
+                  "Ersetze durch echten Link oder entferne Element"
+                );
+              }
+            }
+          }
+        }
+      }
+
+      console.log(
+        `✅ Bilder-Referenz-Validierung abgeschlossen: ${imageReferences.length} Referenzen geprüft`
+      );
+    } catch (error) {
+      console.error("❌ Bilder-Referenz-Validierung Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Bilder-Validierung Fehler",
+        error.message,
+        "Bilder-Validierungs-System reparieren"
+      );
+    }
+  }
+
+  /**
+   * �🚫 REDUNDANZ-PRÜFUNG (NEU)
    * Prüft auf redundante Dateien und fehlende Inventar-Updates
    */
   async performRedundancyCheck() {

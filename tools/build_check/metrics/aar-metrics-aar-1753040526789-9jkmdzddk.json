@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-07-20T19:42:06.788Z",
+  "sessionId": "aar-1753040526789-9jkmdzddk",
+  "issues": [],
+  "fixes": [
+    {
+      "issueId": "system-error",
+      "fixType": "system_error",
+      "fixDescription": "this.validateMobileNavigation is not a function",
+      "codeChanges": null,
+      "outcome": "failed",
+      "appliedAt": "2025-07-20T19:42:10.949Z",
+      "verificationResult": null
+    }
+  ],
+  "patterns": [],
+  "confidence": {}
+}
