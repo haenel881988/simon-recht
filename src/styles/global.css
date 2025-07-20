@@ -1484,6 +1484,58 @@ html {
   }
 }
 
+/* FEHLENDE GRID- UND LAYOUT-KLASSEN - DESIGN-FIX */
+.grid {
+  display: grid;
+}
+
+.content-header {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.content-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.content-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
 /* RESPONSIVE ANPASSUNGEN FÜR BEWEISE SEITE */
 @media (max-width: 768px) {
   .hero-title {
@@ -1491,6 +1543,18 @@ html {
   }
 
   .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
