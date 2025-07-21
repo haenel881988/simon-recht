@@ -348,6 +348,9 @@ class BuildChecker {
       await this.validateImageReferences(); // NEW: Bilder-Referenz-Validierung + Anti-Dummy-Links
       await this.validateMobileNavigation(); // NEW: Mobile Navigation Check
       await this.validateMobileStyling(); // NEW: Mobile Styling & Content-Ausrichtung
+      await this.performVisualLayoutValidation(); // NEW: Visual Layout & Kontrast-Analyse für optimale Darstellung
+      await this.performAdvancedContrastAnalysis(); // NEW: Detaillierte Kontrast-Berechnung für WCAG 2.1 AA/AAA Compliance
+      await this.performElementPositioningAnalysis(); // NEW: Element-Positionierung und visuelle Hierarchie-Prüfung
       await this.performDirectorySynchronizationAnalysis(); // NEW: Verzeichnis-Sync zwischen docs/website_struktur und src/pages
       await this.performLinkIntegrityAnalysis(); // NEW: Link-Analyse
       await this.performCSSConsistencyAnalysis(); // NEW: CSS-Analyse
@@ -7828,16 +7831,29 @@ ${content.substring(0, 500)}...
             // Prüfe ob Bilddatei tatsächlich existiert
             if (!imagePath.startsWith("http") && !imagePath.startsWith("//")) {
               let fullImagePath;
-              
+
               if (imagePath.startsWith("/")) {
                 // Absoluter Pfad von public/ aus
-                fullImagePath = path.join(CONFIG.PROJECT_ROOT, "public", imagePath);
-              } else if (imagePath.startsWith("./") || imagePath.startsWith("../")) {
+                fullImagePath = path.join(
+                  CONFIG.PROJECT_ROOT,
+                  "public",
+                  imagePath
+                );
+              } else if (
+                imagePath.startsWith("./") ||
+                imagePath.startsWith("../")
+              ) {
                 // Relativer Pfad
                 fullImagePath = path.resolve(path.dirname(filePath), imagePath);
               } else {
                 // Assume assets path
-                fullImagePath = path.join(CONFIG.PROJECT_ROOT, "public", "assets", "images", imagePath);
+                fullImagePath = path.join(
+                  CONFIG.PROJECT_ROOT,
+                  "public",
+                  "assets",
+                  "images",
+                  imagePath
+                );
               }
 
               try {
@@ -7845,13 +7861,20 @@ ${content.substring(0, 500)}...
                 console.log(`✅ Bild gefunden: ${imagePath}`);
               } catch {
                 // Versuche korrekte Referenzierung zu finden
-                const correctPath = await this.suggestCorrectImagePath(imagePath, relativePath);
-                
+                const correctPath = await this.suggestCorrectImagePath(
+                  imagePath,
+                  relativePath
+                );
+
                 this.addIssue(
                   RATINGS.CRITICAL,
                   "🖼️ BILD-DATEI FEHLT",
-                  `${relativePath}: Bilddatei nicht gefunden: "${imagePath}"${correctPath ? ` | Vorschlag: "${correctPath}"` : ''}`,
-                  correctPath ? `Korrigiere Pfad zu: ${correctPath}` : "Erstelle fehlende Bilddatei oder korrigiere Pfad"
+                  `${relativePath}: Bilddatei nicht gefunden: "${imagePath}"${
+                    correctPath ? ` | Vorschlag: "${correctPath}"` : ""
+                  }`,
+                  correctPath
+                    ? `Korrigiere Pfad zu: ${correctPath}`
+                    : "Erstelle fehlende Bilddatei oder korrigiere Pfad"
                 );
               }
             }
@@ -7890,6 +7913,286 @@ ${content.substring(0, 500)}...
         "Bilder-Validierung Fehler",
         error.message,
         "Bilder-Validierungs-System reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🔍 INTELLIGENTE BILD-PFAD-VORSCHLÄGE (NEU)
+   * Schlägt korrekte Bild-Pfade vor basierend auf vorhandenen Dateien
+   */
+  async suggestCorrectImagePath(brokenPath, sourceFile) {
+    try {
+      const assetsImagesDir = path.join(
+        CONFIG.PROJECT_ROOT,
+        "public",
+        "assets",
+        "images"
+      );
+      const availableImages = await this.getFilesRecursively(assetsImagesDir);
+
+      // Extrahiere Dateiname ohne Pfad
+      const fileName = path.basename(brokenPath);
+      const fileNameLower = fileName.toLowerCase();
+
+      // Suche nach ähnlichen Dateinamen
+      for (const imagePath of availableImages) {
+        const availableFileName = path.basename(imagePath).toLowerCase();
+
+        // Exakte Übereinstimmung
+        if (availableFileName === fileNameLower) {
+          const relativePath = path.relative(
+            path.join(CONFIG.PROJECT_ROOT, "public"),
+            imagePath
+          );
+          return "/" + relativePath.replace(/\\/g, "/");
+        }
+
+        // Ähnlichkeits-Check (ohne Dateierweiterung)
+        const baseNameBroken = path.parse(fileName).name.toLowerCase();
+        const baseNameAvailable = path
+          .parse(availableFileName)
+          .name.toLowerCase();
+
+        if (
+          baseNameAvailable.includes(baseNameBroken) ||
+          baseNameBroken.includes(baseNameAvailable)
+        ) {
+          const relativePath = path.relative(
+            path.join(CONFIG.PROJECT_ROOT, "public"),
+            imagePath
+          );
+          return "/" + relativePath.replace(/\\/g, "/");
+        }
+      }
+
+      // Fallback: Schlage Standard-Placeholder vor
+      const placeholderPath = "/assets/images/simon-placeholder.svg";
+      const placeholderFullPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "public",
+        placeholderPath
+      );
+
+      try {
+        await fs.access(placeholderFullPath);
+        return placeholderPath;
+      } catch {
+        return null;
+      }
+    } catch (error) {
+      console.error("❌ Fehler bei Bild-Pfad-Vorschlag:", error.message);
+      return null;
+    }
+  }
+
+  /**
+   * 📱 MOBILE NAVIGATION VALIDIERUNG (NEU)
+   * Prüft ob Navigation in mobiler Ansicht korrekt funktioniert
+   */
+  async validateMobileNavigation() {
+    console.log("📱 Validiere Mobile Navigation...");
+
+    try {
+      const layoutPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "src",
+        "layouts",
+        "Layout.astro"
+      );
+
+      try {
+        const layoutContent = await fs.readFile(layoutPath, "utf8");
+
+        // Prüfe auf mobile Navigation Elemente
+        const mobileNavPatterns = [
+          /burger|hamburger|menu-toggle|mobile-menu/gi,
+          /\.navbar-toggle|\.mobile-nav|\.nav-toggle/gi,
+        ];
+
+        let hasMobileNav = false;
+
+        // Layout.astro prüfen
+        for (const pattern of mobileNavPatterns) {
+          if (pattern.test(layoutContent)) {
+            hasMobileNav = true;
+            break;
+          }
+        }
+
+        // CSS-Datei prüfen
+        const cssPath = path.join(
+          CONFIG.PROJECT_ROOT,
+          "src",
+          "styles",
+          "global.css"
+        );
+        try {
+          const cssContent = await fs.readFile(cssPath, "utf8");
+
+          // Prüfe spezifische mobile Navigation CSS
+          if (
+            !cssContent.includes(".navbar") ||
+            !cssContent.includes("@media")
+          ) {
+            this.addIssue(
+              RATINGS.CRITICAL,
+              "📱 MOBILE NAVIGATION CSS FEHLT",
+              "global.css: Keine responsive Navigation CSS gefunden",
+              "Implementiere mobile-optimierte Navigation mit @media queries"
+            );
+          }
+        } catch {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "📱 CSS-DATEI FEHLT",
+            "global.css nicht gefunden für Mobile Navigation Check",
+            "Erstelle CSS-Datei mit responsiver Navigation"
+          );
+        }
+
+        if (!hasMobileNav) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "📱 MOBILE NAVIGATION FEHLT",
+            "Layout.astro: Keine mobile Navigation Elemente gefunden",
+            "Implementiere Burger-Menu oder Mobile Navigation Toggle"
+          );
+        }
+
+        console.log(
+          `✅ Mobile Navigation Check: ${hasMobileNav ? "OK" : "FEHLT"}`
+        );
+      } catch (error) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "📱 LAYOUT-DATEI FEHLT",
+          `Layout.astro nicht gefunden: ${error.message}`,
+          "Erstelle Layout.astro mit mobiler Navigation"
+        );
+      }
+    } catch (error) {
+      console.error("❌ Mobile Navigation Validierung Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Mobile Navigation Check Fehler",
+        error.message,
+        "Mobile Navigation Validierung reparieren"
+      );
+    }
+  }
+
+  /**
+   * 📱 MOBILE STYLING VALIDIERUNG (NEU)
+   * Prüft Content-Ausrichtung und Styling in mobiler Ansicht
+   */
+  async validateMobileStyling() {
+    console.log("📱 Validiere Mobile Styling & Content-Ausrichtung...");
+
+    try {
+      const cssPath = path.join(
+        CONFIG.PROJECT_ROOT,
+        "src",
+        "styles",
+        "global.css"
+      );
+
+      try {
+        const cssContent = await fs.readFile(cssPath, "utf8");
+
+        // Wichtige mobile CSS Patterns
+        const mobileRequirements = {
+          flexbox:
+            /display:\s*flex|flex-direction|justify-content|align-items/gi,
+          grid: /display:\s*grid|grid-template|grid-gap/gi,
+          responsive: /@media.*max-width.*768px/gi,
+          mobileBreakpoint: /@media.*max-width.*480px/gi,
+          textAlignment: /text-align:\s*(center|left|right)/gi,
+          containerWidth: /max-width|width:\s*100%/gi,
+        };
+
+        const findings = {};
+        for (const [key, pattern] of Object.entries(mobileRequirements)) {
+          const matches = cssContent.match(pattern);
+          findings[key] = matches ? matches.length : 0;
+        }
+
+        // Validiere mobile Styling Completeness
+        if (findings.responsive === 0) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "📱 MOBILE CSS FEHLT",
+            "global.css: Keine @media queries für Tablet-Ansicht (768px) gefunden",
+            "Implementiere responsive CSS für mobile Geräte"
+          );
+        }
+
+        if (findings.mobileBreakpoint === 0) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "📱 SMARTPHONE CSS FEHLT",
+            "global.css: Keine @media queries für Smartphone-Ansicht (480px) gefunden",
+            "Füge spezifische CSS für kleine Bildschirme hinzu"
+          );
+        }
+
+        if (findings.flexbox === 0 && findings.grid === 0) {
+          this.addIssue(
+            RATINGS.IMPORTANT,
+            "📱 MODERNE LAYOUT-TECHNOLOGIE FEHLT",
+            "global.css: Weder Flexbox noch CSS Grid für responsive Layout gefunden",
+            "Implementiere moderne CSS Layout-Technologien"
+          );
+        }
+
+        // Prüfe auf potenzielle mobile UX Probleme
+        const mobileUXIssues = [
+          {
+            pattern: /font-size:\s*[0-9]{1}px/gi,
+            issue: "Zu kleine Schriftgrößen für mobile Geräte",
+          },
+          {
+            pattern: /padding:\s*[0-4]px/gi,
+            issue: "Zu kleine Touch-Bereiche für mobile Bedienung",
+          },
+          {
+            pattern: /width:\s*[0-9]{4,}px/gi,
+            issue: "Feste Breiten die mobile Ansicht brechen können",
+          },
+        ];
+
+        for (const { pattern, issue } of mobileUXIssues) {
+          const matches = cssContent.match(pattern);
+          if (matches && matches.length > 0) {
+            this.addIssue(
+              RATINGS.IMPORTANT,
+              "📱 MOBILE UX PROBLEM",
+              `global.css: ${issue} - ${matches.length} Stellen gefunden`,
+              "Optimiere CSS für bessere mobile Benutzerfreundlichkeit"
+            );
+          }
+        }
+
+        console.log(
+          `✅ Mobile Styling Check: ${Object.entries(findings)
+            .map(([k, v]) => `${k}:${v}`)
+            .join(", ")}`
+        );
+      } catch {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "📱 CSS-DATEI NICHT GEFUNDEN",
+          "global.css fehlt für Mobile Styling Validation",
+          "Erstelle global.css mit responsive Design"
+        );
+      }
+    } catch (error) {
+      console.error("❌ Mobile Styling Validierung Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Mobile Styling Check Fehler",
+        error.message,
+        "Mobile Styling Validierung reparieren"
       );
     }
   }
@@ -7976,9 +8279,1030 @@ ${content.substring(0, 500)}...
       );
     }
   }
-}
 
-// 🚀 Professional Build & SEO Checker - Enhanced Execution
+  /**
+   * 🎨 VISUAL LAYOUT VALIDATION
+   * Prüft Layout-Struktur, visuelle Hierarchie und responsive Design
+   */
+  async performVisualLayoutValidation() {
+    console.log("🎨 Prüfe Visual Layout Validation...");
+
+    try {
+      // Layout-Struktur-Analyse
+      const astroFiles = await this.findAstroFiles();
+      const cssFiles = await this.findCSSFiles();
+
+      for (const astroFile of astroFiles) {
+        await this.analyzeLayoutStructure(astroFile);
+        await this.checkVisualHierarchy(astroFile);
+        await this.validateResponsiveBreakpoints(astroFile);
+      }
+
+      // CSS Layout-Konsistenz
+      for (const cssFile of cssFiles) {
+        await this.validateCSSLayoutRules(cssFile);
+        await this.checkLayoutBestPractices(cssFile);
+      }
+
+      console.log("✅ Visual Layout Validation abgeschlossen");
+    } catch (error) {
+      console.error("❌ Visual Layout Validation Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Visual Layout Check Fehler",
+        error.message,
+        "Visual Layout Validation reparieren"
+      );
+    }
+  }
+
+  /**
+   * 🌈 ADVANCED CONTRAST ANALYSIS
+   * WCAG 2.1 AA/AAA Kontrast-Compliance basierend auf Screenshot-Feedback
+   */
+  async performAdvancedContrastAnalysis() {
+    console.log("🌈 Prüfe Advanced Contrast Analysis...");
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+      const astroFiles = await this.findAstroFiles();
+
+      // WCAG Kontrast-Compliance
+      for (const cssFile of cssFiles) {
+        await this.analyzeColorDefinitions(cssFile);
+        await this.validateContrastRatios(cssFile);
+        await this.checkWCAGCompliance(cssFile);
+      }
+
+      // Screenshot-basierte Problem-Erkennung
+      for (const astroFile of astroFiles) {
+        await this.detectContrastIssues(astroFile);
+        await this.analyzeBackgroundTextCombinations(astroFile);
+      }
+
+      console.log("✅ Advanced Contrast Analysis abgeschlossen");
+    } catch (error) {
+      console.error("❌ Advanced Contrast Analysis Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Advanced Contrast Check Fehler",
+        error.message,
+        "Advanced Contrast Analysis reparieren"
+      );
+    }
+  }
+
+  /**
+   * 📐 ELEMENT POSITIONING ANALYSIS
+   * Strukturmuster-Analyse und visuelle Balance-Prüfung
+   */
+  async performElementPositioningAnalysis() {
+    console.log("📐 Prüfe Element Positioning Analysis...");
+
+    try {
+      const astroFiles = await this.findAstroFiles();
+      const cssFiles = await this.findCSSFiles();
+
+      // Struktur-Pattern-Analyse
+      for (const astroFile of astroFiles) {
+        await this.analyzeStructurePatterns(astroFile);
+        await this.detectPositioningProblems(astroFile);
+        await this.validateElementSpacing(astroFile);
+      }
+
+      // Visuelle Balance-Prüfung
+      for (const cssFile of cssFiles) {
+        await this.checkVisualBalance(cssFile);
+        await this.validateFlexboxGridUsage(cssFile);
+        await this.analyzeResponsivePositioning(cssFile);
+      }
+
+      console.log("✅ Element Positioning Analysis abgeschlossen");
+    } catch (error) {
+      console.error("❌ Element Positioning Analysis Fehler:", error.message);
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "Element Positioning Check Fehler",
+        error.message,
+        "Element Positioning Analysis reparieren"
+      );
+    }
+  }
+
+  // ================================================================
+  // HELPER METHODS FOR VISUAL LAYOUT VALIDATION
+  // ================================================================
+
+  async analyzeLayoutStructure(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe Layout-Struktur-Muster
+      const layoutPatterns = [
+        /<header[\s>]/i,
+        /<main[\s>]/i,
+        /<nav[\s>]/i,
+        /<aside[\s>]/i,
+        /<footer[\s>]/i,
+      ];
+
+      const foundPatterns = layoutPatterns.filter((pattern) =>
+        pattern.test(content)
+      );
+
+      if (foundPatterns.length < 3) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Unvollständige HTML5-Layout-Struktur",
+          `${astroFile}: Nur ${foundPatterns.length} von 5 semantischen Layout-Elementen gefunden`,
+          "HTML5-Layout-Struktur mit <header>, <main>, <nav>, <aside>, <footer> vervollständigen"
+        );
+      }
+
+      // Prüfe Container-Hierarchie
+      const containerHierarchy = content.match(
+        /<div class="[^"]*container[^"]*"/gi
+      );
+      if (!containerHierarchy || containerHierarchy.length === 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende Container-Struktur",
+          `${astroFile}: Keine .container-Klassen für Layout-Organisation gefunden`,
+          "Container-Wrapper für bessere Layout-Organisation hinzufügen"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Layout-Struktur-Analyse für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async checkVisualHierarchy(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe Heading-Hierarchie
+      const headings = content.match(/<h[1-6][^>]*>/gi) || [];
+      const headingLevels = headings.map((h) =>
+        parseInt(h.match(/h([1-6])/i)[1])
+      );
+
+      // Validiere logische Heading-Reihenfolge
+      for (let i = 1; i < headingLevels.length; i++) {
+        const currentLevel = headingLevels[i];
+        const previousLevel = headingLevels[i - 1];
+
+        if (currentLevel > previousLevel + 1) {
+          this.addIssue(
+            RATINGS.WARNING,
+            "Unterbrochene Heading-Hierarchie",
+            `${astroFile}: Sprung von H${previousLevel} zu H${currentLevel} ohne H${
+              previousLevel + 1
+            }`,
+            "Heading-Hierarchie reparieren für bessere Accessibility und SEO"
+          );
+        }
+      }
+
+      // Prüfe auf mehrfache H1-Tags
+      const h1Count = (content.match(/<h1[^>]*>/gi) || []).length;
+      if (h1Count > 1) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Mehrfache H1-Tags",
+          `${astroFile}: ${h1Count} H1-Tags gefunden - nur einer pro Seite erlaubt`,
+          "Nur ein H1-Tag pro Seite verwenden für optimales SEO"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Visuelle Hierarchie-Prüfung für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async validateResponsiveBreakpoints(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe auf responsive Klassen (Tailwind CSS)
+      const responsiveClasses = content.match(/\b(sm|md|lg|xl|2xl):/g) || [];
+
+      if (responsiveClasses.length === 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende Responsive Design-Klassen",
+          `${astroFile}: Keine responsive Breakpoint-Klassen gefunden`,
+          "Responsive Design-Klassen (sm:, md:, lg:, xl:) für Mobile-First Design hinzufügen"
+        );
+      }
+
+      // Prüfe Viewport Meta-Tag
+      if (content.includes("<head>") && !content.includes("viewport")) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Fehlender Viewport Meta-Tag",
+          `${astroFile}: Viewport Meta-Tag für Mobile-Optimierung fehlt`,
+          'Viewport Meta-Tag hinzufügen: <meta name="viewport" content="width=device-width, initial-scale=1">'
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Responsive Breakpoint-Validation für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // HELPER METHODS FOR CONTRAST ANALYSIS
+  // ================================================================
+
+  async analyzeColorDefinitions(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Extrahiere Farbdefinitionen
+      const colorPatterns = [
+        /color\s*:\s*([#\w\s(),.-]+);/gi,
+        /background-color\s*:\s*([#\w\s(),.-]+);/gi,
+        /background\s*:\s*([#\w\s(),.-]+);/gi,
+      ];
+
+      const colors = [];
+      colorPatterns.forEach((pattern) => {
+        let match;
+        while ((match = pattern.exec(content)) !== null) {
+          colors.push(match[1].trim());
+        }
+      });
+
+      // Prüfe auf problematische Farbkombinationen
+      const darkColors = colors.filter(
+        (color) =>
+          color.includes("#000") ||
+          color.includes("black") ||
+          color.includes("rgb(0") ||
+          color.includes("gray-900") ||
+          color.includes("slate-900")
+      );
+
+      const lightColors = colors.filter(
+        (color) =>
+          color.includes("#fff") ||
+          color.includes("white") ||
+          color.includes("rgb(255") ||
+          color.includes("gray-100") ||
+          color.includes("slate-100")
+      );
+
+      if (darkColors.length > 0 && lightColors.length > 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Potenzielle Kontrast-Probleme erkannt",
+          `${cssFile}: Mischung aus sehr dunklen (${darkColors.length}) und sehr hellen (${lightColors.length}) Farben`,
+          "WCAG 2.1 AA Kontrast-Compliance prüfen (min. 4.5:1 für normalen Text)"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Farbdefinitions-Analyse für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async validateContrastRatios(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Suche nach problematischen Farbkombinationen basierend auf Screenshot-Feedback
+      const problematicPatterns = [
+        // Dunkler Hintergrund mit dunklem Text
+        /background[^}]*#[0-4][0-4][0-4][^}]*color[^}]*#[0-6][0-6][0-6]/gi,
+        // Sehr geringer Kontrast zwischen ähnlichen Grautönen
+        /background[^}]*gray-[89][^}]*color[^}]*gray-[2-5]/gi,
+        // Helle Texte auf hellen Hintergründen
+        /background[^}]*#[e-f][e-f][e-f][^}]*color[^}]*#[c-f][c-f][c-f]/gi,
+      ];
+
+      problematicPatterns.forEach((pattern, index) => {
+        const matches = content.match(pattern);
+        if (matches) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "WCAG Kontrast-Ratio Verletzung",
+            `${cssFile}: Potenzielle Kontrast-Probleme erkannt (Pattern ${
+              index + 1
+            })`,
+            "Farb-Kontrast auf min. 4.5:1 (WCAG 2.1 AA) oder 7:1 (WCAG 2.1 AAA) erhöhen"
+          );
+        }
+      });
+
+      // Spezifische Prüfung für Screenshot-Problem (dunkler Hintergrund)
+      if (content.includes("bg-gray-900") || content.includes("bg-black")) {
+        const hasLightText =
+          content.includes("text-white") ||
+          content.includes("text-gray-100") ||
+          content.includes("text-gray-200");
+
+        if (!hasLightText) {
+          this.addIssue(
+            RATINGS.CRITICAL,
+            "Screenshot-Problem: Dunkler Hintergrund ohne hellen Text",
+            `${cssFile}: Dunkler Hintergrund (bg-gray-900/bg-black) ohne entsprechenden hellen Text`,
+            "Helle Textfarben (text-white, text-gray-100) für dunkle Hintergründe verwenden"
+          );
+        }
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Kontrast-Ratio-Validation für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async checkWCAGCompliance(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // WCAG 2.1 AA/AAA Compliance-Checks
+      const complianceIssues = [];
+
+      // Prüfe auf fehlende Focus-Styles
+      const focusStyles = content.match(/:focus[^{]*{[^}]*}/g) || [];
+      if (focusStyles.length === 0) {
+        complianceIssues.push("Fehlende :focus Styles für Keyboard-Navigation");
+      }
+
+      // Prüfe auf ausreichende Click/Touch-Target-Größen
+      const buttonStyles = content.match(/\.btn[^{]*{[^}]*}/g) || [];
+      buttonStyles.forEach((style) => {
+        if (!style.includes("min-height") && !style.includes("height")) {
+          complianceIssues.push(
+            "Button ohne definierte Mindesthöhe (WCAG: min. 44px)"
+          );
+        }
+      });
+
+      // Prüfe auf Color-Only Information
+      if (
+        content.includes("color:") &&
+        !content.includes("border") &&
+        !content.includes("background")
+      ) {
+        complianceIssues.push(
+          "Mögliche Color-Only Information (WCAG: nicht nur Farbe für wichtige Info)"
+        );
+      }
+
+      // Berichte Compliance-Issues
+      if (complianceIssues.length > 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "WCAG 2.1 Compliance-Probleme",
+          `${cssFile}: ${complianceIssues.join(", ")}`,
+          "WCAG 2.1 AA Accessibility-Standards implementieren"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ WCAG Compliance-Check für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // HELPER METHODS FOR ELEMENT POSITIONING
+  // ================================================================
+
+  async analyzeStructurePatterns(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe auf konsistente Grid/Flexbox-Nutzung
+      const layoutClasses =
+        content.match(/class="[^"]*(?:grid|flex|container)[^"]*"/g) || [];
+
+      if (layoutClasses.length === 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende moderne Layout-Systeme",
+          `${astroFile}: Keine Grid-, Flexbox- oder Container-Klassen gefunden`,
+          "Moderne CSS Layout-Systeme (CSS Grid, Flexbox) für bessere Struktur verwenden"
+        );
+      }
+
+      // Prüfe auf semantische HTML-Struktur
+      const semanticElements = [
+        /<article[\s>]/i,
+        /<section[\s>]/i,
+        /<header[\s>]/i,
+        /<footer[\s>]/i,
+        /<nav[\s>]/i,
+      ];
+
+      const foundSemantic = semanticElements.filter((pattern) =>
+        pattern.test(content)
+      );
+
+      if (foundSemantic.length < 2) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Unzureichende semantische HTML-Struktur",
+          `${astroFile}: Nur ${foundSemantic.length} semantische HTML5-Elemente gefunden`,
+          "Mehr semantische HTML5-Elemente für bessere Struktur und SEO verwenden"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Strukturmuster-Analyse für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async detectPositioningProblems(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe auf problematische absolute/fixed Positionierung
+      const absolutePositioning =
+        content.match(/class="[^"]*absolute[^"]*"/g) || [];
+      const fixedPositioning = content.match(/class="[^"]*fixed[^"]*"/g) || [];
+
+      if (absolutePositioning.length > 3) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Übermäßige absolute Positionierung",
+          `${astroFile}: ${absolutePositioning.length} absolute-positionierte Elemente`,
+          "Absolute Positionierung reduzieren, mehr Flexbox/Grid für Layout verwenden"
+        );
+      }
+
+      // Prüfe auf responsive Spacing-Probleme
+      const spacingClasses = content.match(/\b[pm][tblrxy]?-\d+/g) || [];
+      const responsiveSpacing = spacingClasses.filter(
+        (cls) => content.includes(`sm:${cls}`) || content.includes(`md:${cls}`)
+      );
+
+      if (spacingClasses.length > 0 && responsiveSpacing.length === 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende responsive Spacing-Anpassungen",
+          `${astroFile}: ${spacingClasses.length} Spacing-Klassen ohne responsive Varianten`,
+          "Responsive Spacing-Klassen (sm:p-4, md:m-8) für bessere Mobile-Darstellung hinzufügen"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Positionierungs-Problem-Erkennung für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async validateElementSpacing(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Prüfe auf konsistente Spacing-Werte
+      const marginClasses = content.match(/\bm[tblrxy]?-\d+/g) || [];
+      const paddingClasses = content.match(/\bp[tblrxy]?-\d+/g) || [];
+
+      // Extrahiere Spacing-Werte
+      const spacingValues = [...marginClasses, ...paddingClasses]
+        .map((cls) => parseInt(cls.match(/-(\d+)/)[1]))
+        .filter((val) => !isNaN(val));
+
+      // Prüfe auf konsistente Spacing-Skala (Tailwind: 1,2,3,4,6,8,12,16,20,24...)
+      const inconsistentSpacing = spacingValues.filter(
+        (val) =>
+          ![1, 2, 3, 4, 6, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64].includes(val)
+      );
+
+      if (inconsistentSpacing.length > 0) {
+        this.addIssue(
+          RATINGS.INFO,
+          "Inkonsistente Spacing-Werte",
+          `${astroFile}: Ungewöhnliche Spacing-Werte: ${[
+            ...new Set(inconsistentSpacing),
+          ].join(", ")}`,
+          "Tailwind-Standard-Spacing-Skala (4,8,12,16,20,24...) für Konsistenz verwenden"
+        );
+      }
+
+      // Prüfe auf zu enge/weite Abstände
+      const tightSpacing = spacingValues.filter((val) => val <= 1);
+      const wideSpacing = spacingValues.filter((val) => val >= 32);
+
+      if (tightSpacing.length > spacingValues.length * 0.7) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Zu enge Element-Abstände",
+          `${astroFile}: ${Math.round(
+            (tightSpacing.length / spacingValues.length) * 100
+          )}% sehr enge Spacing-Werte`,
+          "Größere Spacing-Werte für bessere Lesbarkeit und Touch-Targets verwenden"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Element-Spacing-Validation für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // ADDITIONAL CSS LAYOUT HELPER METHODS
+  // ================================================================
+
+  async validateCSSLayoutRules(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Prüfe auf moderne Layout-Systeme
+      const layoutSystems = {
+        flexbox: (content.match(/display\s*:\s*flex/gi) || []).length,
+        grid: (content.match(/display\s*:\s*grid/gi) || []).length,
+        float: (content.match(/float\s*:\s*[left|right]/gi) || []).length,
+      };
+
+      // Warnung bei veralteten Float-Layouts
+      if (layoutSystems.float > layoutSystems.flexbox + layoutSystems.grid) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Veraltete Float-Layout-Nutzung",
+          `${cssFile}: ${layoutSystems.float} Float-Properties vs. ${
+            layoutSystems.flexbox + layoutSystems.grid
+          } moderne Layout-Systeme`,
+          "Modernere Layout-Systeme (Flexbox, CSS Grid) statt Float verwenden"
+        );
+      }
+
+      // Prüfe responsive Layout-Regeln
+      const mediaQueries = (content.match(/@media[^{]+{/gi) || []).length;
+      if (mediaQueries === 0 && content.length > 1000) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende responsive Layout-Regeln",
+          `${cssFile}: Keine Media Queries für responsive Design gefunden`,
+          "Media Queries für Mobile-First responsive Design hinzufügen"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ CSS Layout-Regel-Validation für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async checkLayoutBestPractices(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Prüfe auf Box-Sizing Best Practice
+      if (
+        !content.includes("box-sizing: border-box") &&
+        !content.includes("box-sizing:border-box")
+      ) {
+        this.addIssue(
+          RATINGS.INFO,
+          "Box-Sizing Best Practice",
+          `${cssFile}: border-box Box-Sizing für konsistente Layout-Berechnung empfohlen`,
+          "* { box-sizing: border-box; } für konsistente Element-Größen hinzufügen"
+        );
+      }
+
+      // Prüfe auf konsistente Einheiten
+      const units = {
+        px: (content.match(/\d+px/g) || []).length,
+        rem: (content.match(/\d+rem/g) || []).length,
+        em: (content.match(/\d+em/g) || []).length,
+        percent: (content.match(/\d+%/g) || []).length,
+      };
+
+      const totalUnits = Object.values(units).reduce((a, b) => a + b, 0);
+      if (totalUnits > 0 && units.rem / totalUnits < 0.3) {
+        this.addIssue(
+          RATINGS.INFO,
+          "rem-Einheiten für bessere Accessibility",
+          `${cssFile}: Nur ${Math.round(
+            (units.rem / totalUnits) * 100
+          )}% rem-Einheiten - mehr für bessere Skalierung empfohlen`,
+          "rem-Einheiten für Font-Sizes und Spacing für bessere Accessibility verwenden"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Layout Best Practice-Check für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // ADDITIONAL CONTRAST HELPER METHODS
+  // ================================================================
+
+  async detectContrastIssues(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Erkenne potenzielle Kontrast-Probleme basierend auf Klassen-Kombinationen
+      const contrastProblems = [];
+
+      // Dunkle Hintergründe ohne helle Texte
+      const darkBackgrounds =
+        content.match(
+          /class="[^"]*(?:bg-gray-[89]|bg-black|bg-slate-[89])[^"]*"/g
+        ) || [];
+      darkBackgrounds.forEach((bg) => {
+        const element = content.substring(
+          content.indexOf(bg) - 100,
+          content.indexOf(bg) + 200
+        );
+        if (
+          !element.includes("text-white") &&
+          !element.includes("text-gray-1") &&
+          !element.includes("text-yellow")
+        ) {
+          contrastProblems.push(`Dunkler Hintergrund ohne hellen Text: ${bg}`);
+        }
+      });
+
+      // Helle Hintergründe mit hellen Texten
+      const lightBackgrounds =
+        content.match(
+          /class="[^"]*(?:bg-white|bg-gray-[12]|bg-slate-[12])[^"]*"/g
+        ) || [];
+      lightBackgrounds.forEach((bg) => {
+        const element = content.substring(
+          content.indexOf(bg) - 100,
+          content.indexOf(bg) + 200
+        );
+        if (
+          element.includes("text-white") ||
+          element.includes("text-gray-1") ||
+          element.includes("text-yellow-2")
+        ) {
+          contrastProblems.push(`Heller Hintergrund mit hellem Text: ${bg}`);
+        }
+      });
+
+      // Berichte Kontrast-Probleme
+      if (contrastProblems.length > 0) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Screenshot-identifizierte Kontrast-Probleme",
+          `${astroFile}: ${contrastProblems.length} potenzielle Kontrast-Verletzungen erkannt`,
+          "Kontrast-Verhältnisse auf WCAG 2.1 AA Standard (min. 4.5:1) anpassen"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Kontrast-Problem-Erkennung für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async analyzeBackgroundTextCombinations(astroFile) {
+    try {
+      const content = await fs.readFile(astroFile, "utf-8");
+
+      // Analysiere Text-Hintergrund-Kombinationen systematisch
+      const combinations = [];
+
+      // Extrahiere alle class-Attribute
+      const classAttributes = content.match(/class="([^"]*)"/g) || [];
+
+      classAttributes.forEach((classAttr) => {
+        const classes = classAttr.match(/class="([^"]*)"/)[1].split(/\s+/);
+
+        const bgClass = classes.find((cls) => cls.startsWith("bg-"));
+        const textClass = classes.find((cls) => cls.startsWith("text-"));
+
+        if (bgClass && textClass) {
+          combinations.push({ bg: bgClass, text: textClass });
+        }
+      });
+
+      // Analysiere problematische Kombinationen
+      const problematicCombos = combinations.filter((combo) => {
+        // Dunkle Hintergründe mit dunklen Texten
+        if (
+          (combo.bg.includes("gray-8") ||
+            combo.bg.includes("gray-9") ||
+            combo.bg.includes("black")) &&
+          (combo.text.includes("gray-6") ||
+            combo.text.includes("gray-7") ||
+            combo.text.includes("dunkel"))
+        ) {
+          return true;
+        }
+        // Helle Hintergründe mit hellen Texten
+        if (
+          (combo.bg.includes("white") ||
+            combo.bg.includes("gray-1") ||
+            combo.bg.includes("gray-2")) &&
+          (combo.text.includes("white") ||
+            combo.text.includes("gray-1") ||
+            combo.text.includes("yellow-2"))
+        ) {
+          return true;
+        }
+        return false;
+      });
+
+      if (problematicCombos.length > 0) {
+        this.addIssue(
+          RATINGS.CRITICAL,
+          "Systematische Hintergrund-Text-Kontrast-Probleme",
+          `${astroFile}: ${problematicCombos.length} problematische Farb-Kombinationen identifiziert`,
+          "Hintergrund-Text-Kombinationen für ausreichenden Kontrast (4.5:1) optimieren"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Hintergrund-Text-Kombinations-Analyse für ${astroFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // ADDITIONAL VISUAL BALANCE HELPER METHODS
+  // ================================================================
+
+  async checkVisualBalance(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Analysiere visuelle Balance durch Spacing-Konsistenz
+      const spacingValues = [];
+      const marginMatches =
+        content.match(/margin[^:]*:\s*(\d+(?:px|rem|em))/g) || [];
+      const paddingMatches =
+        content.match(/padding[^:]*:\s*(\d+(?:px|rem|em))/g) || [];
+
+      [...marginMatches, ...paddingMatches].forEach((match) => {
+        const value = match.match(/(\d+)/)[1];
+        spacingValues.push(parseInt(value));
+      });
+
+      // Prüfe auf konsistente Spacing-Rhythmus
+      const uniqueValues = [...new Set(spacingValues)].sort((a, b) => a - b);
+
+      if (uniqueValues.length > 10 && spacingValues.length > 20) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Inkonsistenter visueller Rhythmus",
+          `${cssFile}: ${uniqueValues.length} verschiedene Spacing-Werte bei ${spacingValues.length} Verwendungen`,
+          "Konsistentere Spacing-Skala für bessere visuelle Harmonie verwenden"
+        );
+      }
+
+      // Prüfe auf symmetrische Layout-Prinzipien
+      const flexboxAlignments =
+        content.match(/(?:justify-content|align-items):\s*([^;]+)/g) || [];
+      const centerAlignments = flexboxAlignments.filter((align) =>
+        align.includes("center")
+      ).length;
+
+      if (
+        flexboxAlignments.length > 5 &&
+        centerAlignments / flexboxAlignments.length < 0.3
+      ) {
+        this.addIssue(
+          RATINGS.INFO,
+          "Mögliche visuelle Unbalance",
+          `${cssFile}: Nur ${Math.round(
+            (centerAlignments / flexboxAlignments.length) * 100
+          )}% zentrierte Elemente`,
+          "Mehr zentrierte Layouts für bessere visuelle Balance erwägen"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Visuelle Balance-Check für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async validateFlexboxGridUsage(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Analysiere Flexbox-Nutzung
+      const flexboxProperties = {
+        "display: flex": (content.match(/display\s*:\s*flex/gi) || []).length,
+        "flex-direction": (content.match(/flex-direction/gi) || []).length,
+        "justify-content": (content.match(/justify-content/gi) || []).length,
+        "align-items": (content.match(/align-items/gi) || []).length,
+      };
+
+      // Analysiere Grid-Nutzung
+      const gridProperties = {
+        "display: grid": (content.match(/display\s*:\s*grid/gi) || []).length,
+        "grid-template": (content.match(/grid-template/gi) || []).length,
+        "grid-gap": (content.match(/grid-gap|gap/gi) || []).length,
+      };
+
+      // Bewerte Layout-System-Vollständigkeit
+      if (flexboxProperties["display: flex"] > 0) {
+        const flexboxCompleteness =
+          Object.values(flexboxProperties).reduce((a, b) => a + b, 0) / 4;
+        if (flexboxCompleteness < flexboxProperties["display: flex"] * 0.5) {
+          this.addIssue(
+            RATINGS.INFO,
+            "Unvollständige Flexbox-Implementierung",
+            `${cssFile}: Flexbox-Container ohne vollständige Property-Nutzung`,
+            "Flexbox-Properties (justify-content, align-items, flex-direction) für bessere Kontrolle vervollständigen"
+          );
+        }
+      }
+
+      if (gridProperties["display: grid"] > 0) {
+        const gridCompleteness =
+          Object.values(gridProperties).reduce((a, b) => a + b, 0) / 3;
+        if (gridCompleteness < gridProperties["display: grid"] * 0.5) {
+          this.addIssue(
+            RATINGS.INFO,
+            "Unvollständige Grid-Implementierung",
+            `${cssFile}: Grid-Container ohne vollständige Property-Nutzung`,
+            "Grid-Properties (grid-template, gap) für vollständige Grid-Layouts vervollständigen"
+          );
+        }
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Flexbox/Grid-Usage-Validation für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async analyzeResponsivePositioning(cssFile) {
+    try {
+      const content = await fs.readFile(cssFile, "utf-8");
+
+      // Analysiere responsive Positionierungs-Patterns
+      const mediaQueries = content.match(/@media[^{]+\{[^}]+\}/gi) || [];
+
+      if (mediaQueries.length === 0) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Fehlende responsive Positionierung",
+          `${cssFile}: Keine Media Queries für responsive Layout-Anpassungen`,
+          "Responsive Breakpoints für Mobile-First Design implementieren"
+        );
+        return;
+      }
+
+      // Prüfe Mobile-First Ansatz
+      const mobileFirstQueries = mediaQueries.filter(
+        (query) => query.includes("min-width") && !query.includes("max-width")
+      ).length;
+
+      const desktopFirstQueries = mediaQueries.filter(
+        (query) => query.includes("max-width") && !query.includes("min-width")
+      ).length;
+
+      if (desktopFirstQueries > mobileFirstQueries) {
+        this.addIssue(
+          RATINGS.WARNING,
+          "Desktop-First statt Mobile-First Ansatz",
+          `${cssFile}: ${desktopFirstQueries} max-width vs. ${mobileFirstQueries} min-width Media Queries`,
+          "Mobile-First Ansatz mit min-width Media Queries für bessere Performance verwenden"
+        );
+      }
+
+      // Prüfe auf Standard-Breakpoints
+      const standardBreakpoints = ["768px", "1024px", "1280px", "1536px"];
+      const usedBreakpoints = mediaQueries
+        .map((query) => {
+          const match = query.match(/(\d+px)/);
+          return match ? match[1] : null;
+        })
+        .filter((bp) => bp !== null);
+
+      const nonStandardBreakpoints = usedBreakpoints.filter(
+        (bp) => !standardBreakpoints.includes(bp)
+      );
+
+      if (nonStandardBreakpoints.length > 0) {
+        this.addIssue(
+          RATINGS.INFO,
+          "Nicht-Standard Responsive Breakpoints",
+          `${cssFile}: Ungewöhnliche Breakpoints: ${nonStandardBreakpoints.join(
+            ", "
+          )}`,
+          "Standard-Breakpoints (768px, 1024px, 1280px) für bessere Konsistenz verwenden"
+        );
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Responsive Positionierungs-Analyse für ${cssFile} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  // ================================================================
+  // DIRECTORY SYNC HELPER METHOD
+  // ================================================================
+
+  async validateAstroContentIntegration(directory) {
+    try {
+      // Prüfe Integration zwischen Astro-Komponenten und Content-Collections
+      const astroFiles = await this.findAstroFiles();
+      const contentFiles = await this.findContentFiles();
+
+      // Analysiere Content-Collection-Referenzen
+      for (const astroFile of astroFiles) {
+        const content = await fs.readFile(astroFile, "utf-8");
+
+        // Suche nach getCollection-Aufrufen
+        const collectionCalls =
+          content.match(/getCollection\(['"`]([^'"`]+)['"`]\)/g) || [];
+
+        collectionCalls.forEach((call) => {
+          const collectionName = call.match(
+            /getCollection\(['"`]([^'"`]+)['"`]\)/
+          )[1];
+          const expectedPath = path.join("src", "content", collectionName);
+
+          // Prüfe ob Collection-Verzeichnis existiert
+          try {
+            const stats = require("fs").statSync(expectedPath);
+            if (!stats.isDirectory()) {
+              this.addIssue(
+                RATINGS.CRITICAL,
+                "Fehlende Content-Collection",
+                `${astroFile}: Collection '${collectionName}' referenziert aber ${expectedPath} nicht gefunden`,
+                `Content-Collection-Verzeichnis '${expectedPath}' erstellen`
+              );
+            }
+          } catch (error) {
+            this.addIssue(
+              RATINGS.CRITICAL,
+              "Fehlende Content-Collection",
+              `${astroFile}: Collection '${collectionName}' referenziert aber ${expectedPath} nicht gefunden`,
+              `Content-Collection-Verzeichnis '${expectedPath}' erstellen`
+            );
+          }
+        });
+      }
+    } catch (error) {
+      console.warn(
+        `⚠️ Astro-Content-Integration-Validation für ${directory} fehlgeschlagen:`,
+        error.message
+      );
+    }
+  }
+
+  async findContentFiles() {
+    try {
+      const contentDir = path.join(CONFIG.PROJECT_ROOT, "src", "content");
+      const files = [];
+
+      const scanDirectory = async (dir) => {
+        try {
+          const entries = await fs.readdir(dir, { withFileTypes: true });
+          for (const entry of entries) {
+            const fullPath = path.join(dir, entry.name);
+            if (entry.isDirectory()) {
+              await scanDirectory(fullPath);
+            } else if (
+              entry.name.endsWith(".md") ||
+              entry.name.endsWith(".mdx")
+            ) {
+              files.push(fullPath);
+            }
+          }
+        } catch (error) {
+          // Verzeichnis existiert nicht oder kann nicht gelesen werden
+        }
+      };
+
+      await scanDirectory(contentDir);
+      return files;
+    } catch (error) {
+      console.warn("⚠️ Content-Dateien-Suche fehlgeschlagen:", error.message);
+      return [];
+    }
+  }
+}
 if (require.main === module) {
   console.log(
     "🌟 Starting Professional Build & SEO Checker with Portfolio Blueprint Features..."
