@@ -27,6 +27,16 @@ Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher
 - ❌ Neue Guideline-Datei ohne Existenz-Prüfung
 - ❌ Parallele Konfigurationen ohne Konsolidierung
 - ❌ Duplikate durch fehlende Verzeichnis-Analyse
+- ❌ **NIEMALS TEMPORÄRE DATEIEN FÜR FEHLERBEHEBUNG** (z.B. build-checker-corrected.cjs)
+- ❌ **NIEMALS BACKUP-DATEIEN ZUR REPARATUR** (z.B. file-fixed.js, file-new.js)
+- ❌ **NIEMALS MEHRERE VERSIONEN DERSELBEN DATEI** (z.B. v1, v2, v3 Dateien)
+
+### **SIMON'S EXPLIZITE FEHLERBEHEBUNGS-REGEL:**
+
+- ✅ **NUR ORIGINAL-DATEI REPARIEREN:** Bestehende Datei direkt korrigieren
+- ✅ **KEINE TEMPORÄREN COPIES:** Niemals "...-corrected", "...-fixed", "...-new" Dateien
+- ✅ **IN-PLACE REPARATUR:** Fehler direkt in der Original-Datei beheben
+- ❌ **ABSOLUT VERBOTEN:** Neue Dateien für Fehlerbehebung anlegen
 
 ### **PFLICHT-INVENTAR-UPDATE:**
 
@@ -35,7 +45,44 @@ Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher
 - ✅ **NEUE DATEIEN:** Sofort ins Inventar aufnehmen
 - ✅ **LÖSCHUNGEN:** Aus Inventar entfernen
 
-**REGEL:** Erst prüfen, dann erstellen - niemals parallel!
+**REGEL:** Erst prüfen, dann erstellen - niemals parallel! NIEMALS temporäre Dateien für Fixes!
+
+## 🚨 LOG-FIRST INTELLIGENZ-REGEL (ZWINGEND)
+
+**ABSOLUT VERBOTEN:** Manuelles Suchen mit grep_search, file_search, semantic_search!
+
+### **ZWINGENDER LOG-FIRST-WORKFLOW:**
+
+1. **BUILD AUSFÜHREN:** `pnpm build` startet automatisch Build-Checker
+2. **LOGDATEI ANALYSIEREN:** Neueste Log-Datei aus `tools\build_check\logfiles\` lesen
+3. **PROBLEME AUS LOG ABLEITEN:** Alle Issues sind bereits kategorisiert und lokalisiert
+4. **GEZIELTE REPARATUR:** Direkt die in der Log-Datei identifizierten Probleme beheben
+5. **KEIN MANUELLES SUCHEN:** Checker erkennt automatisch alle Probleme
+
+### **VERBOTENE SUCH-PATTERN:**
+
+- ❌ **GREP_SEARCH:** Manuelle Textsuche in Dateien
+- ❌ **FILE_SEARCH:** Manuelle Dateisuche nach Mustern
+- ❌ **SEMANTIC_SEARCH:** Manuelle Code-Suche
+- ❌ **SELECT-STRING:** PowerShell-Suche in Dateien
+- ❌ **MANUELLE ANALYSE:** Dateien einzeln durchsuchen
+
+### **SIMON'S INTELLIGENZ-WORKFLOW:**
+
+- ✅ **LOG-DATEI IST WAHRHEIT:** Alle Probleme sind bereits erkannt und kategorisiert
+- ✅ **CHECKER-INTELLIGENCE:** Build-Checker v3.0 findet automatisch alle Issues
+- ✅ **GEZIELTE LÖSUNG:** Direkt aus Log-Analyse die konkreten Probleme beheben
+- ✅ **EFFIZIENZ:** Keine Zeit verschwenden mit manueller Suche
+
+### **PFLICHT-SEQUENCE:**
+
+1. ✅ **BUILD:** `pnpm build` → Checker läuft automatisch
+2. ✅ **READ LOG:** Neueste Log-Datei vollständig analysieren
+3. ✅ **IDENTIFY ISSUES:** Kritische und wichtige TODOs aus Log extrahieren
+4. ✅ **DIRECT FIX:** Probleme direkt in Original-Dateien beheben
+5. ✅ **VALIDATE:** Erneuter Build um Erfolg zu bestätigen
+
+**REGEL:** Log-First Intelligence - Checker weiß bereits alles was zu tun ist!
 
 ## 🚨 ANTI-BLIND-MIGRATION-REGEL (ZWINGEND)
 
