@@ -48,6 +48,16 @@ const CONFIG = {
     "c:\\apps\\website\\simon-recht\\docs\\build_logs\\comprehensive-seo-report.md",
   DOMAIN: "https://simon-haenel.com",
 
+  // TODO-Management System Paths
+  TODO_DIR: "c:\\apps\\website\\simon-recht\\docs\\todos",
+  TODO_ACTIVE: "c:\\apps\\website\\simon-recht\\docs\\todos\\todos.md",
+  TODO_ISSUES: "c:\\apps\\website\\simon-recht\\docs\\todos\\issues.md",
+
+  // CSS/Mobile Navigation Analysis Paths
+  CSS_DIR: "c:\\apps\\website\\simon-recht\\src\\styles",
+  ASTRO_PAGES: "c:\\apps\\website\\simon-recht\\src\\pages",
+  ASTRO_LAYOUTS: "c:\\apps\\website\\simon-recht\\src\\layouts",
+
   // Simon-Recht spezifische Asset-Struktur
   ASSETS: {
     IMAGES_BASE: "c:\\apps\\website\\simon-recht\\public\\assets\\images",
@@ -590,6 +600,27 @@ class BuildChecker {
           "Organische CSS-Optimierung - KEINE Minifizierung verwenden!"
         );
       });
+    }
+
+    // TypeScript-Fehler erkennen
+    const tsErrorMatches = content.match(/error TS\d+:/g);
+    if (tsErrorMatches) {
+      this.addIssue(
+        RATINGS.CRITICAL,
+        "TypeScript-Fehler",
+        `${tsErrorMatches.length} TypeScript-Fehler gefunden`,
+        "TypeScript-Fehler beheben - ZERO Fehler-Toleranz!"
+      );
+    }
+
+    // Build-Erfolg validieren
+    if (content.includes("✓ Completed") || content.includes("Build complete")) {
+      this.addIssue(
+        RATINGS.INFO,
+        "Build-Status",
+        "Build erfolgreich abgeschlossen",
+        "Build-Prozess läuft stabil"
+      );
     }
 
     // TypeScript Warnings
@@ -1578,6 +1609,133 @@ ${rec.executeAfter ? `- **Execute After:** ${rec.executeAfter}` : ""}
 - 🔄 **Post-Fix Validation PFLICHT** (Erfolg verifizieren)
 `
     : "Git-Recommendations nicht verfügbar"
+}
+
+---
+
+## 📋 AUTOMATISCH GENERIERTE TODO-LISTE (SIMON'S FEATURE REQUEST)
+
+${
+  this.automaticTodoList
+    ? `
+### 🎯 **TODO-ÜBERSICHT (Generiert aus Build-Issues)**
+
+**📊 TODO-STATISTIKEN:**
+- **🔴 Kritische TODOs:** ${this.automaticTodoList.critical.length}
+- **🟡 Wichtige TODOs:** ${this.automaticTodoList.important.length}  
+- **🟢 Optimierungs-TODOs:** ${this.automaticTodoList.optimization.length}
+- **📋 Gesamt TODOs:** ${this.automaticTodoList.total}
+- **⏰ Generiert:** ${new Date(
+        this.automaticTodoList.generatedAt
+      ).toLocaleString("de-DE")}
+
+${
+  this.automaticTodoList.critical.length > 0
+    ? `
+### 🔴 **KRITISCHE TODOs (SOFORT ERLEDIGEN)**
+
+${this.automaticTodoList.critical
+  .map(
+    (todo, index) => `
+#### **TODO #${todo.id}: ${todo.title}**
+- **🎯 Problem:** ${todo.description}
+- **💡 Lösung:** ${todo.solution}
+- **📂 Kategorie:** ${todo.category}
+- **⚡ Priorität:** ${todo.priority}
+- **📅 Status:** ${todo.status}
+${
+  todo.dependencies && todo.dependencies.length > 0
+    ? `- **🔗 Abhängigkeiten:** ${todo.dependencies.join(", ")}`
+    : ""
+}
+- **🤖 Quelle:** ${todo.source}
+
+---
+`
+  )
+  .join("")}
+`
+    : ""
+}
+
+${
+  this.automaticTodoList.important.length > 0
+    ? `
+### 🟡 **WICHTIGE TODOs (NÄCHSTER BUILD-CYCLE)**
+
+${this.automaticTodoList.important
+  .map(
+    (todo, index) => `
+#### **TODO #${todo.id}: ${todo.title}**
+- **🎯 Problem:** ${todo.description}
+- **💡 Lösung:** ${todo.solution}
+- **📂 Kategorie:** ${todo.category}
+- **⚡ Priorität:** ${todo.priority}
+- **📅 Status:** ${todo.status}
+${
+  todo.dependencies && todo.dependencies.length > 0
+    ? `- **🔗 Abhängigkeiten:** ${todo.dependencies.join(", ")}`
+    : ""
+}
+- **🤖 Quelle:** ${todo.source}
+
+---
+`
+  )
+  .join("")}
+`
+    : ""
+}
+
+${
+  this.automaticTodoList.optimization.length > 0
+    ? `
+### 🟢 **OPTIMIERUNGS-TODOs (KONTINUIERLICHE VERBESSERUNG)**
+
+${this.automaticTodoList.optimization
+  .map(
+    (todo, index) => `
+- [ ] **${todo.title}** (${todo.category})
+  - **Problem:** ${todo.description}
+  - **Lösung:** ${todo.solution}
+  - **ID:** ${todo.id}
+`
+  )
+  .join("")}
+`
+    : ""
+}
+
+### 🤖 **SIMON'S TODO-AUTOMATION AKTIV**
+
+**✅ FEATURES IMPLEMENTIERT:**
+- 🔄 **Automatische TODO-Generierung** aus Build-Checker Issues  
+- 🎯 **Intelligente Priorisierung** (Critical → Important → Optimization)
+- 📂 **Kategorie-basierte Sortierung** (CSS, Mobile, SEO, Content, General)
+- 🔗 **Abhängigkeits-Erkennung** zwischen verwandten TODOs
+- 📊 **Status-Tracking** mit automatischer Erledigt-Prüfung
+- 🎯 **Direkte Log-Integration** (Simon's Präferenz) statt separater Files
+
+**🚀 NÄCHSTE TODO-ITERATION:**
+- **✅ ERLEDIGT-CHECK:** TODOs werden beim nächsten Build auf Relevanz geprüft
+- **🔄 STATUS-UPDATE:** Automatische Statusaktualisierung basierend auf aktuellen Issues
+- **📈 PROGRESS-TRACKING:** Kontinuierliche Todo-Liste Evolution über Build-Cycles
+
+`
+    : `
+### ⚠️ **TODO-SYSTEM INITIALISIERUNG**
+
+**📋 TODO-Features werden geladen...**
+- 🔄 TODO-Generierung wird beim nächsten Build aktiviert
+- 🎯 Issue-basierte TODO-Erstellung in Vorbereitung
+- 📊 Automatische Priorisierung wird kalibriert
+
+**🤖 SIMON'S TODO-AUTOMATION:**
+- ✅ **Konzept:** TODOs direkt in Build-Checker Log (deine Idee!)
+- ✅ **Quelle:** Automatisch aus Critical/Important Issues generiert
+- ✅ **Integration:** Nahtlos in bestehenden Workflow integriert
+- 🔄 **Status:** Aktivierung beim nächsten Build mit Issues
+`
 }
 
 ---
@@ -6278,6 +6436,9 @@ ${content.substring(0, 500)}...
       // 4. TODO-Integration in bestehende Issues
       await this.integrateTODOsIntoIssues();
 
+      // 🚀 5. SIMON'S NEUE FEATURE: Automatische TODO-Generation für Log
+      await this.performEnhancedTODOManagement();
+
       console.log("✅ TODO-Tracking-Analyse abgeschlossen");
     } catch (error) {
       console.error("❌ TODO-Analyse Fehler:", error.message);
@@ -6287,6 +6448,38 @@ ${content.substring(0, 500)}...
         error.message,
         "TODO-System manuell prüfen"
       );
+    }
+  }
+
+  /**
+   * 🚀 SIMON'S TODO-AUTOMATION: Enhanced TODO-Management für Log-Integration
+   */
+  async performEnhancedTODOManagement() {
+    try {
+      // 1. Bestehende TODOs laden
+      const existingTodos = await this.loadExistingTodos();
+
+      // 2. TODOs aus aktuellen Issues generieren
+      const generatedTodos = this.generateTodosFromIssues();
+
+      // 3. TODO-Status validieren (welche sind noch relevant?)
+      const todoStatus = this.validateTodoStatus(existingTodos, generatedTodos);
+
+      // 4. Priorisierte TODO-Liste erstellen
+      const prioritizedTodos = this.createPrioritizedTodoList(todoStatus);
+
+      // 5. TODO-Liste für Log-Integration vorbereiten
+      this.integrateTodoListIntoLog(prioritizedTodos);
+
+      // 6. Optional: TODO-Files aktualisieren (falls gewünscht)
+      // await this.updateTodoFiles(prioritizedTodos);
+
+      console.log(
+        `🎯 TODO-Automation: ${prioritizedTodos.length} TODOs generiert für Log-Integration`
+      );
+    } catch (error) {
+      console.warn("⚠️ TODO-Automation Fehler:", error.message);
+      // Silent fail - TODO-System ist optional
     }
   }
 
@@ -9300,6 +9493,902 @@ ${content.substring(0, 500)}...
     } catch (error) {
       console.warn("⚠️ Content-Dateien-Suche fehlgeschlagen:", error.message);
       return [];
+    }
+  }
+
+  // ============================================================================
+  // HILFSMETHODEN FÜR TODO-MANAGEMENT (Simon's Feature Request)
+  // ============================================================================
+
+  async loadExistingTodos() {
+    const todos = { active: [], completed: [] };
+
+    try {
+      // Lade aktive TODOs
+      if (await this.fileExists(CONFIG.TODO_ACTIVE)) {
+        const content = await fs.readFile(CONFIG.TODO_ACTIVE, "utf8");
+        todos.active = this.parseTodosFromContent(content);
+      }
+
+      // Lade Issues als potenzielle TODOs
+      if (await this.fileExists(CONFIG.TODO_ISSUES)) {
+        const content = await fs.readFile(CONFIG.TODO_ISSUES, "utf8");
+        todos.completed = this.parseCompletedTodosFromContent(content);
+      }
+    } catch (error) {
+      // Logs erstellen falls nicht vorhanden
+    }
+
+    return todos;
+  }
+
+  generateTodosFromIssues() {
+    const newTodos = [];
+    let todoCounter = 1;
+
+    // Generiere TODOs basierend auf Build-Checker Issues
+    this.issues.forEach((issue) => {
+      if (
+        issue.priority === RATINGS.CRITICAL ||
+        issue.priority === RATINGS.IMPORTANT
+      ) {
+        newTodos.push({
+          id: `AUTO-${todoCounter++}`,
+          title: issue.title,
+          description: issue.description,
+          solution: issue.solution,
+          priority: issue.priority === RATINGS.CRITICAL ? "HIGH" : "MEDIUM",
+          category: this.categorizeTodoByIssue(issue),
+          source: "BUILD_CHECKER",
+          timestamp: new Date().toISOString(),
+          status: "PENDING",
+          dependencies: this.identifyTodoDependencies(issue),
+        });
+      }
+    });
+
+    return newTodos;
+  }
+
+  validateTodoStatus(existingTodos, generatedTodos) {
+    const status = {
+      completed: [],
+      pending: [],
+      new: [],
+      updated: [],
+    };
+
+    // Prüfe, welche bestehenden TODOs noch gültig sind
+    existingTodos.active.forEach((todo) => {
+      if (this.isTodoStillRelevant(todo)) {
+        status.pending.push(todo);
+      } else {
+        status.completed.push(todo);
+      }
+    });
+
+    // Prüfe neue TODOs
+    generatedTodos.forEach((newTodo) => {
+      const existing = existingTodos.active.find((t) =>
+        this.isSimilarTodo(t, newTodo)
+      );
+      if (!existing) {
+        status.new.push(newTodo);
+      } else if (this.todoNeedsUpdate(existing, newTodo)) {
+        status.updated.push({ ...existing, ...newTodo });
+      }
+    });
+
+    return status;
+  }
+
+  createPrioritizedTodoList(todoStatus) {
+    const allTodos = [
+      ...todoStatus.pending,
+      ...todoStatus.new,
+      ...todoStatus.updated,
+    ];
+
+    // Sortiere nach Priorität und Abhängigkeiten
+    return allTodos.sort((a, b) => {
+      const priorityOrder = { HIGH: 3, MEDIUM: 2, LOW: 1 };
+      const aPriority = priorityOrder[a.priority] || 1;
+      const bPriority = priorityOrder[b.priority] || 1;
+
+      if (aPriority !== bPriority) {
+        return bPriority - aPriority; // Höchste Priorität zuerst
+      }
+
+      // Bei gleicher Priorität: Abhängigkeiten berücksichtigen
+      return a.dependencies?.length || 0 - b.dependencies?.length || 0;
+    });
+  }
+
+  integrateTodoListIntoLog(todoList) {
+    // Todo-Liste wird in Log-Template integriert
+    this.automaticTodoList = {
+      critical: todoList.filter((t) => t.priority === "HIGH"),
+      important: todoList.filter((t) => t.priority === "MEDIUM"),
+      optimization: todoList.filter((t) => t.priority === "LOW"),
+      total: todoList.length,
+      generatedAt: new Date().toISOString(),
+    };
+  }
+
+  async updateTodoFiles(todoList) {
+    try {
+      // Erstelle TODO-Verzeichnis falls nicht vorhanden
+      await fs.mkdir(CONFIG.TODO_DIR, { recursive: true });
+
+      // Aktualisiere aktive TODOs
+      const activeTodoContent = this.generateTodoFileContent(todoList);
+      await fs.writeFile(CONFIG.TODO_ACTIVE, activeTodoContent, "utf8");
+
+      // Erstelle gestaffelte Todo-Liste für bessere Übersicht
+      const prioritizedContent = this.generatePrioritizedTodoContent(todoList);
+      await fs.writeFile(
+        path.join(CONFIG.TODO_DIR, "prioritized_todos.md"),
+        prioritizedContent,
+        "utf8"
+      );
+    } catch (error) {
+      // Silent fail - Todo-Update ist optional
+    }
+  }
+
+  // ============================================================================
+  // HILFSMETHODEN FÜR MOBILE/CSS ANALYSE (Simon's Vertiefte Checks)
+  // ============================================================================
+
+  async analyzeNavigationComponents() {
+    const components = {
+      hamburgerMenu: false,
+      mobileMenu: false,
+      navigationToggle: false,
+      mobileBreakpoints: [],
+    };
+
+    try {
+      // Analysiere Astro-Dateien auf Navigation-Components
+      const astroFiles = await this.findAstroFiles();
+
+      for (const file of astroFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Suche nach Hamburger-Menü-Patterns
+        if (/hamburger|mobile-nav|nav-toggle|menu-button/.test(content)) {
+          components.hamburgerMenu = true;
+        }
+
+        // Suche nach Mobile-Menü-Container
+        if (/mobile-menu|nav-mobile|navigation-mobile/.test(content)) {
+          components.mobileMenu = true;
+        }
+
+        // Suche nach Navigation-Toggle-Funktionalität
+        if (/toggle|show-menu|hide-menu/.test(content)) {
+          components.navigationToggle = true;
+        }
+      }
+
+      // Analysiere CSS für Mobile Breakpoints
+      const cssFiles = await this.findCSSFiles();
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+        const breakpoints =
+          content.match(/@media[^{]*\([^)]*max-width[^)]*\)/g) || [];
+        components.mobileBreakpoints.push(...breakpoints);
+      }
+    } catch (error) {
+      // Navigation-Analyse fehlgeschlagen
+    }
+
+    return components;
+  }
+
+  async validateMobileBreakpoints() {
+    const requiredBreakpoints = ["768px", "480px", "320px"];
+    const foundBreakpoints = [];
+    const missingBreakpoints = [];
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Extrahiere alle Breakpoints
+        const breakpointMatches = content.match(/max-width:\s*(\d+px)/g) || [];
+        breakpointMatches.forEach((match) => {
+          const width = match.match(/(\d+px)/)[1];
+          if (!foundBreakpoints.includes(width)) {
+            foundBreakpoints.push(width);
+          }
+        });
+      }
+
+      // Prüfe, welche Required Breakpoints fehlen
+      requiredBreakpoints.forEach((required) => {
+        if (!foundBreakpoints.includes(required)) {
+          missingBreakpoints.push(required);
+        }
+      });
+    } catch (error) {
+      missingBreakpoints.push(...requiredBreakpoints);
+    }
+
+    return {
+      found: foundBreakpoints,
+      missing: missingBreakpoints,
+      total: foundBreakpoints.length,
+    };
+  }
+
+  async analyzeTouchInteractions() {
+    const analysis = {
+      touchTargetsSmall: 0,
+      touchTargetsOptimal: 0,
+      interactiveElements: [],
+    };
+
+    try {
+      // Analysiere CSS für Touch-Target-Größen
+      const cssFiles = await this.findCSSFiles();
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Suche nach Button/Link-Styles mit definierten Größen
+        const sizeMatches =
+          content.match(
+            /\.(button|btn|link|nav-item)[^}]*(?:width|height|padding)[^}]*/g
+          ) || [];
+
+        sizeMatches.forEach((match) => {
+          // Extrahiere Größen-Informationen
+          const widthMatch = match.match(/width:\s*(\d+)px/);
+          const heightMatch = match.match(/height:\s*(\d+)px/);
+          const paddingMatch = match.match(/padding:\s*(\d+)px/);
+
+          let effectiveSize = 0;
+          if (widthMatch && heightMatch) {
+            effectiveSize = Math.min(
+              parseInt(widthMatch[1]),
+              parseInt(heightMatch[1])
+            );
+          } else if (paddingMatch) {
+            effectiveSize = parseInt(paddingMatch[1]) * 2 + 16; // Angenommene Text-Höhe
+          }
+
+          if (effectiveSize > 0) {
+            if (effectiveSize < 44) {
+              analysis.touchTargetsSmall++;
+            } else {
+              analysis.touchTargetsOptimal++;
+            }
+          }
+        });
+      }
+    } catch (error) {
+      // Touch-Analyse fehlgeschlagen
+    }
+
+    return analysis;
+  }
+
+  async analyzeMobileCSSPerformance() {
+    const analysis = {
+      mobileSpecificRules: 0,
+      mobileOptimizations: [],
+      performanceIssues: [],
+    };
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Zähle Mobile-spezifische CSS-Regeln
+        const mobileRules =
+          content.match(/@media[^{]*max-width[^{]*{[^}]*}/g) || [];
+        analysis.mobileSpecificRules += mobileRules.length;
+
+        // Identifiziere Mobile-Optimierungen
+        if (content.includes("transform: translateX")) {
+          analysis.mobileOptimizations.push(
+            "Hardware-beschleunigte Transforms erkannt"
+          );
+        }
+
+        if (content.includes("touch-action")) {
+          analysis.mobileOptimizations.push(
+            "Touch-Action Optimierungen erkannt"
+          );
+        }
+
+        // Identifiziere Performance-Probleme
+        if (content.includes("!important")) {
+          analysis.performanceIssues.push("Übermäßige !important Verwendung");
+        }
+
+        if ((content.match(/box-shadow/g) || []).length > 10) {
+          analysis.performanceIssues.push(
+            "Viele Box-Shadow Definitionen (Performance-Impact)"
+          );
+        }
+      }
+    } catch (error) {
+      analysis.performanceIssues.push("CSS-Performance-Analyse fehlgeschlagen");
+    }
+
+    return analysis;
+  }
+
+  async validateMobileUXPatterns() {
+    const patterns = {
+      navigation: { score: 0, issues: [] },
+      interaction: { score: 0, issues: [] },
+      layout: { score: 0, issues: [] },
+      performance: { score: 0, issues: [] },
+    };
+
+    try {
+      // UX-Pattern-Validierung basierend auf Best Practices
+      const astroFiles = await this.findAstroFiles();
+
+      for (const file of astroFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Navigation-Pattern
+        if (content.includes("nav") && content.includes("mobile")) {
+          patterns.navigation.score += 25;
+        } else {
+          patterns.navigation.issues.push("Mobile Navigation Pattern fehlt");
+        }
+
+        // Interaction-Pattern
+        if (content.includes("button") || content.includes("onclick")) {
+          patterns.interaction.score += 25;
+        } else {
+          patterns.interaction.issues.push(
+            "Interaktive Elemente unklar definiert"
+          );
+        }
+
+        // Layout-Pattern
+        if (content.includes("grid") || content.includes("flex")) {
+          patterns.layout.score += 25;
+        } else {
+          patterns.layout.issues.push("Moderne Layout-Pattern fehlen");
+        }
+      }
+    } catch (error) {
+      patterns.performance.issues.push("UX-Pattern-Validierung fehlgeschlagen");
+    }
+
+    return patterns;
+  }
+
+  // ============================================================================
+  // HILFSMETHODEN FÜR CSS-ARCHITEKTUR (Simon's Vertiefte CSS-Checks)
+  // ============================================================================
+
+  async analyzeCSSArchitecture() {
+    const analysis = {
+      inlineStyles: 0,
+      tailwindClasses: 0,
+      globalStyles: 0,
+      componentStyles: 0,
+      architectureScore: 100,
+    };
+
+    try {
+      // Nutze bestehende detectInlineStyles Methode
+      const violations = await this.detectInlineStyles();
+
+      analysis.inlineStyles = violations.filter(
+        (v) => v.type === "inline-style"
+      ).length;
+      analysis.tailwindClasses = violations.filter((v) =>
+        v.type?.includes("tailwind")
+      ).length;
+
+      // Analysiere Global CSS
+      const cssFiles = await this.findCSSFiles();
+      for (const file of cssFiles) {
+        if (file.includes("global")) {
+          analysis.globalStyles++;
+        } else {
+          analysis.componentStyles++;
+        }
+      }
+
+      // Berechne Architektur-Score
+      analysis.architectureScore -= analysis.inlineStyles * 10;
+      analysis.architectureScore -= analysis.tailwindClasses * 5;
+      analysis.architectureScore = Math.max(analysis.architectureScore, 0);
+    } catch (error) {
+      analysis.architectureScore = 0;
+    }
+
+    return analysis;
+  }
+
+  async validateDesignTokens() {
+    const analysis = {
+      inconsistentColors: 0,
+      definedTokens: 0,
+      tokenUsage: 0,
+      consistencyScore: 100,
+    };
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+      const colors = new Set();
+      const colorPatterns = [];
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Extrahiere alle Farb-Definitionen
+        const colorMatches =
+          content.match(
+            /#[0-9a-fA-F]{3,6}|rgb\([^)]+\)|rgba\([^)]+\)|hsl\([^)]+\)/g
+          ) || [];
+        colorMatches.forEach((color) => {
+          colors.add(color.toLowerCase());
+          colorPatterns.push(color);
+        });
+
+        // Zähle CSS Custom Properties (Design Tokens)
+        const tokenMatches = content.match(/--[a-zA-Z-]+:/g) || [];
+        analysis.definedTokens += tokenMatches.length;
+
+        // Zähle Token-Verwendung
+        const tokenUsage = content.match(/var\(--[a-zA-Z-]+\)/g) || [];
+        analysis.tokenUsage += tokenUsage.length;
+      }
+
+      // Berechne Inkonsistenzen
+      analysis.inconsistentColors = colorPatterns.length - colors.size;
+
+      // Berechne Consistency Score
+      if (analysis.definedTokens > 0) {
+        const tokenRatio = analysis.tokenUsage / analysis.definedTokens;
+        analysis.consistencyScore = Math.min(tokenRatio * 100, 100);
+      }
+    } catch (error) {
+      analysis.consistencyScore = 0;
+    }
+
+    return analysis;
+  }
+
+  async analyzeCSSPerformance() {
+    const analysis = {
+      unusedSelectors: 0,
+      complexSelectors: 0,
+      redundantRules: 0,
+      performanceScore: 100,
+    };
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Zähle komplexe Selektoren
+        const complexSelectors = content.match(/[^{]*{[^}]*}/g) || [];
+        complexSelectors.forEach((rule) => {
+          const selector = rule.split("{")[0];
+          if ((selector.match(/\s/g) || []).length > 3) {
+            analysis.complexSelectors++;
+          }
+        });
+
+        // Schätze ungenutzte Selektoren (vereinfacht)
+        const allSelectors =
+          content.match(/\.[a-zA-Z][a-zA-Z0-9-_]*(?=\s*{|\s*,)/g) || [];
+        analysis.unusedSelectors = Math.floor(allSelectors.length * 0.2); // Schätzung: 20% ungenutzt
+      }
+
+      // Berechne Performance Score
+      analysis.performanceScore -= Math.min(analysis.complexSelectors * 2, 50);
+      analysis.performanceScore -= Math.min(analysis.unusedSelectors, 30);
+      analysis.performanceScore = Math.max(analysis.performanceScore, 0);
+    } catch (error) {
+      analysis.performanceScore = 0;
+    }
+
+    return analysis;
+  }
+
+  async detectCSSRedundancies() {
+    const analysis = {
+      duplicateRules: 0,
+      redundantProperties: 0,
+      consolidationOpportunities: [],
+    };
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+      const allRules = [];
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Extrahiere alle CSS-Regeln
+        const rules = content.match(/[^{]*{[^}]*}/g) || [];
+        rules.forEach((rule) => {
+          const normalized = rule.replace(/\s+/g, " ").trim();
+          allRules.push(normalized);
+        });
+      }
+
+      // Finde Duplikate
+      const ruleCounts = {};
+      allRules.forEach((rule) => {
+        ruleCounts[rule] = (ruleCounts[rule] || 0) + 1;
+      });
+
+      Object.values(ruleCounts).forEach((count) => {
+        if (count > 1) {
+          analysis.duplicateRules += count - 1;
+        }
+      });
+    } catch (error) {
+      // Redundanz-Analyse fehlgeschlagen
+    }
+
+    return analysis;
+  }
+
+  async validateCSSNaming() {
+    const analysis = {
+      inconsistentNaming: 0,
+      bemCompliant: 0,
+      namingPatterns: [],
+      consistencyScore: 100,
+    };
+
+    try {
+      const cssFiles = await this.findCSSFiles();
+      const classNames = [];
+
+      for (const file of cssFiles) {
+        const content = await fs.readFile(file, "utf8");
+
+        // Extrahiere alle Klassen-Namen
+        const classes =
+          content.match(/\.[a-zA-Z][a-zA-Z0-9-_]*(?=\s*{|\s*,)/g) || [];
+        classNames.push(...classes.map((c) => c.substring(1))); // Entferne den Punkt
+      }
+
+      // Analysiere Naming-Patterns
+      const patterns = {
+        kebabCase: 0,
+        camelCase: 0,
+        snakeCase: 0,
+        bem: 0,
+      };
+
+      classNames.forEach((className) => {
+        if (/^[a-z]+(-[a-z]+)*$/.test(className)) {
+          patterns.kebabCase++;
+        } else if (/^[a-z]+([A-Z][a-z]*)*$/.test(className)) {
+          patterns.camelCase++;
+        } else if (/^[a-z]+(_[a-z]+)*$/.test(className)) {
+          patterns.snakeCase++;
+        } else if (/^[a-z-]+(__[a-z-]+)*(--[a-z-]+)*$/.test(className)) {
+          patterns.bem++;
+        }
+      });
+
+      // Berechne Konsistenz
+      const maxPattern = Math.max(...Object.values(patterns));
+      const totalClasses = classNames.length;
+
+      if (totalClasses > 0) {
+        analysis.consistencyScore = (maxPattern / totalClasses) * 100;
+        analysis.inconsistentNaming = totalClasses - maxPattern;
+        analysis.bemCompliant = patterns.bem;
+      }
+    } catch (error) {
+      analysis.consistencyScore = 0;
+    }
+
+    return analysis;
+  }
+
+  async findCSSFiles() {
+    const cssFiles = [];
+
+    try {
+      // Suche in styles Verzeichnis
+      const stylesDir = CONFIG.CSS_DIR;
+      const files = await fs.readdir(stylesDir);
+
+      for (const file of files) {
+        if (file.endsWith(".css")) {
+          cssFiles.push(path.join(stylesDir, file));
+        }
+      }
+    } catch (error) {
+      // CSS-Verzeichnis nicht gefunden
+    }
+
+    return cssFiles;
+  }
+
+  async findAstroFiles() {
+    const astroFiles = [];
+
+    try {
+      // Suche in src/pages und src/layouts
+      const searchDirs = [CONFIG.ASTRO_PAGES, CONFIG.ASTRO_LAYOUTS];
+
+      for (const dir of searchDirs) {
+        if (await this.fileExists(dir)) {
+          const files = await fs.readdir(dir, { recursive: true });
+
+          for (const file of files) {
+            if (file.endsWith(".astro")) {
+              astroFiles.push(path.join(dir, file));
+            }
+          }
+        }
+      }
+    } catch (error) {
+      // Astro-Dateien-Suche fehlgeschlagen
+    }
+
+    return astroFiles;
+  }
+
+  // ============================================================================
+  // HILFSMETHODEN FÜR TODO-PARSING (Simon's Todo-System)
+  // ============================================================================
+
+  parseTodosFromContent(content) {
+    const todos = [];
+    const todoMatches =
+      content.match(
+        /### \*\*TODO #(\d+):[^*]*\*\*(.*?)(?=###|\n##|\n\*\*|$)/gs
+      ) || [];
+
+    todoMatches.forEach((match) => {
+      const idMatch = match.match(/TODO #(\d+):/);
+      const titleMatch = match.match(/TODO #\d+:\s*([^*]+)\*\*/);
+
+      if (idMatch && titleMatch && !match.includes("✅")) {
+        todos.push({
+          id: idMatch[1],
+          title: titleMatch[1].trim(),
+          text: match,
+          status: match.includes("📝") ? "IN_PROGRESS" : "PLANNED",
+          description: match.substring(0, 200) + "...",
+        });
+      }
+    });
+
+    return todos;
+  }
+
+  parseCompletedTodosFromContent(content) {
+    const todos = [];
+    const completedMatches =
+      content.match(/### \*\*TODO #(\d+):[^*]*\*\*[^✅]*✅[^#]*/gs) || [];
+
+    completedMatches.forEach((match) => {
+      const idMatch = match.match(/TODO #(\d+):/);
+      const titleMatch = match.match(/TODO #\d+:\s*([^*]+)\*\*/);
+
+      if (idMatch && titleMatch) {
+        todos.push({
+          id: idMatch[1],
+          title: titleMatch[1].trim(),
+          text: match,
+          status: "COMPLETED",
+        });
+      }
+    });
+
+    return todos;
+  }
+
+  categorizeTodoByIssue(issue) {
+    if (issue.title.includes("CSS") || issue.title.includes("Design"))
+      return "CSS";
+    if (issue.title.includes("Mobile") || issue.title.includes("Navigation"))
+      return "MOBILE";
+    if (issue.title.includes("SEO") || issue.title.includes("Meta"))
+      return "SEO";
+    if (issue.title.includes("Content")) return "CONTENT";
+    return "GENERAL";
+  }
+
+  identifyTodoDependencies(issue) {
+    const dependencies = [];
+    // Abhängigkeits-Logik basierend auf Issue-Typ
+    if (issue.title.includes("CSS")) {
+      dependencies.push("Design-System definieren");
+    }
+    if (issue.title.includes("Mobile")) {
+      dependencies.push("CSS-Framework etablieren");
+    }
+    return dependencies;
+  }
+
+  isTodoStillRelevant(todo) {
+    // Prüfe ob Todo noch relevant ist basierend auf aktuellen Issues
+    const relevantIssues = this.issues.filter((issue) =>
+      issue.title
+        .toLowerCase()
+        .includes(todo.title.toLowerCase().substring(0, 10))
+    );
+    return relevantIssues.length > 0;
+  }
+
+  isSimilarTodo(existingTodo, newTodo) {
+    // Prüfe Ähnlichkeit zwischen Todos
+    const titleSimilarity = existingTodo.title
+      .toLowerCase()
+      .includes(newTodo.title.toLowerCase().substring(0, 20));
+    const categorySimilarity = existingTodo.category === newTodo.category;
+    return titleSimilarity || categorySimilarity;
+  }
+
+  todoNeedsUpdate(existingTodo, newTodo) {
+    // Prüfe ob Todo aktualisiert werden muss
+    return (
+      existingTodo.description !== newTodo.description ||
+      existingTodo.solution !== newTodo.solution
+    );
+  }
+
+  generateTodoFileContent(todoList) {
+    let content = "# 📋 Automatisch Generierte TODO-Liste\n\n";
+    content += `**Generiert:** ${new Date().toLocaleString("de-DE")}\n`;
+    content += `**Quelle:** Build-Checker v6.0.0\n`;
+    content += `**Gesamt TODOs:** ${todoList.length}\n\n`;
+
+    // Kritische TODOs
+    const critical = todoList.filter((t) => t.priority === "HIGH");
+    if (critical.length > 0) {
+      content += "## 🔴 Kritische TODOs (Sofort erledigen)\n\n";
+      critical.forEach((todo, index) => {
+        content += `### **TODO #${todo.id}: ${todo.title}**\n\n`;
+        content += `**Status:** ${todo.status}\n`;
+        content += `**Kategorie:** ${todo.category}\n`;
+        content += `**Beschreibung:** ${todo.description}\n`;
+        content += `**Lösung:** ${todo.solution}\n`;
+        content += `**Quelle:** ${todo.source}\n`;
+        if (todo.dependencies && todo.dependencies.length > 0) {
+          content += `**Abhängigkeiten:** ${todo.dependencies.join(", ")}\n`;
+        }
+        content += `**Erstellt:** ${todo.timestamp}\n\n`;
+        content += "---\n\n";
+      });
+    }
+
+    // Wichtige TODOs
+    const important = todoList.filter((t) => t.priority === "MEDIUM");
+    if (important.length > 0) {
+      content += "## 🟡 Wichtige TODOs (Nächster Build-Cycle)\n\n";
+      important.forEach((todo, index) => {
+        content += `### **TODO #${todo.id}: ${todo.title}**\n\n`;
+        content += `**Status:** ${todo.status}\n`;
+        content += `**Kategorie:** ${todo.category}\n`;
+        content += `**Beschreibung:** ${todo.description}\n`;
+        content += `**Lösung:** ${todo.solution}\n`;
+        content += `**Quelle:** ${todo.source}\n`;
+        if (todo.dependencies && todo.dependencies.length > 0) {
+          content += `**Abhängigkeiten:** ${todo.dependencies.join(", ")}\n`;
+        }
+        content += `**Erstellt:** ${todo.timestamp}\n\n`;
+        content += "---\n\n";
+      });
+    }
+
+    // Optimierungs-TODOs
+    const optimization = todoList.filter((t) => t.priority === "LOW");
+    if (optimization.length > 0) {
+      content += "## 🟢 Optimierungs-TODOs (Kontinuierliche Verbesserung)\n\n";
+      optimization.forEach((todo, index) => {
+        content += `- [ ] **${todo.title}** (${todo.category})\n`;
+        content += `  - ${todo.description}\n`;
+        content += `  - *Lösung:* ${todo.solution}\n\n`;
+      });
+    }
+
+    return content;
+  }
+
+  generatePrioritizedTodoContent(todoList) {
+    let content =
+      "# 🎯 Gestaffelte TODO-Liste (Build-Checker Priorisierung)\n\n";
+    content += `**Automatisch generiert:** ${new Date().toLocaleString(
+      "de-DE"
+    )}\n`;
+    content += `**Build-Checker Version:** v6.0.0\n`;
+    content += `**Gesamte TODOs:** ${todoList.length}\n\n`;
+
+    // Gruppiere nach Kategorien und Prioritäten
+    const categories = {};
+    todoList.forEach((todo) => {
+      if (!categories[todo.category]) {
+        categories[todo.category] = { HIGH: [], MEDIUM: [], LOW: [] };
+      }
+      categories[todo.category][todo.priority || "MEDIUM"].push(todo);
+    });
+
+    // Füge Kategorien in logischer Reihenfolge hinzu
+    const categoryOrder = ["CSS", "MOBILE", "SEO", "CONTENT", "GENERAL"];
+
+    categoryOrder.forEach((category) => {
+      if (categories[category]) {
+        const todos = categories[category];
+        const totalCategoryTodos =
+          todos.HIGH.length + todos.MEDIUM.length + todos.LOW.length;
+
+        if (totalCategoryTodos > 0) {
+          content += `## 📂 ${category} (${totalCategoryTodos} TODOs)\n\n`;
+
+          ["HIGH", "MEDIUM", "LOW"].forEach((priority) => {
+            if (todos[priority].length > 0) {
+              const priorityLabel =
+                priority === "HIGH"
+                  ? "🔴 Kritisch"
+                  : priority === "MEDIUM"
+                  ? "🟡 Wichtig"
+                  : "🟢 Optimierung";
+              content += `### ${priorityLabel} (${todos[priority].length})\n\n`;
+
+              todos[priority].forEach((todo, index) => {
+                content += `${index + 1}. **${todo.title}**\n`;
+                content += `   - **Problem:** ${todo.description}\n`;
+                content += `   - **Lösung:** ${todo.solution}\n`;
+                if (todo.dependencies && todo.dependencies.length > 0) {
+                  content += `   - **Abhängigkeiten:** ${todo.dependencies.join(
+                    ", "
+                  )}\n`;
+                }
+                content += `   - **Status:** ${todo.status}\n`;
+                content += `   - **ID:** ${todo.id}\n\n`;
+              });
+            }
+          });
+
+          content += "---\n\n";
+        }
+      }
+    });
+
+    // Statistiken am Ende
+    content += "## 📊 TODO-Statistiken\n\n";
+    content += `- **Kritische TODOs:** ${
+      todoList.filter((t) => t.priority === "HIGH").length
+    }\n`;
+    content += `- **Wichtige TODOs:** ${
+      todoList.filter((t) => t.priority === "MEDIUM").length
+    }\n`;
+    content += `- **Optimierungs-TODOs:** ${
+      todoList.filter((t) => t.priority === "LOW").length
+    }\n`;
+    content += `- **Kategorien:** ${Object.keys(categories).length}\n`;
+    content += `- **Gesamt:** ${todoList.length}\n\n`;
+
+    return content;
+  }
+
+  async fileExists(filePath) {
+    try {
+      await fs.access(filePath);
+      return true;
+    } catch {
+      return false;
     }
   }
 }

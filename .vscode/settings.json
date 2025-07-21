@@ -66,6 +66,10 @@
   "github.copilot.chat.agent.terminal.allowList": {
     "git add .": true,
     "git commit -m": true,
-    "git status": true
+    "git status": true,
+    "pnpm build": true
+  },
+  "github.copilot.chat.agent.terminal.denyList": {
+    "npm run build": true
   }
 }
