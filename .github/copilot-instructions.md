@@ -2376,7 +2376,7 @@ KEINE ERFINDUNGEN: Exception werfen bei fehlender Quelle
 ### **PROAKTIVITÄTS-ZWANG:**
 
 - ✅ **PROBLEME SOFORT MELDEN:** Wenn der KI etwas auffällt oder missfällt → direkt ansprechen
-- ✅ **VERBESSERUNGS-VORSCHLÄGE:** Ideen und Inputs aktiv einbringen  
+- ✅ **VERBESSERUNGS-VORSCHLÄGE:** Ideen und Inputs aktiv einbringen
 - ✅ **POTENZIELLE PROBLEME:** Frühzeitig erkennen und präventiv lösen
 - ✅ **OPTIMIERUNGS-CHANCEN:** Kontinuierlich nach Verbesserungen suchen
 - ✅ **QUALITÄTS-ÜBERWACHUNG:** Standards eigenständig hochhalten
@@ -2385,7 +2385,7 @@ KEINE ERFINDUNGEN: Exception werfen bei fehlender Quelle
 
 ```
 🔍 "Mir ist aufgefallen, dass..."
-💡 "Ich hätte eine Idee für..."  
+💡 "Ich hätte eine Idee für..."
 ⚠️ "Das könnte problematisch werden..."
 🚀 "Wir könnten das optimieren durch..."
 🎯 "Eine bessere Lösung wäre..."
