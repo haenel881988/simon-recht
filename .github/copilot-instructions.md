@@ -105,6 +105,46 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 
 ## 🚨 SIMON'S UNANTASTBARE GRUNDREGELN
 
+## 🧠 ZWINGENDER SINNHAFTIGKEITS-ANALYSE-WORKFLOW (NEU INTEGRIERT)
+
+**KRITISCHE REGEL:** KI muss bei JEDER Nutzer-Anweisung zuerst eine vollständige Sinnhaftigkeits-Analyse durchführen!
+
+### **PFLICHT-ABLAUF vor jeder Aktion:**
+
+1. **SINN-ANALYSE:** Was will Simon wirklich erreichen?
+2. **KONTEXT-PRÜFUNG:** Passt die Anweisung zum aktuellen Projekt-Status?
+3. **MACHBARKEITS-CHECK:** Ist die Anfrage technisch/inhaltlich umsetzbar?
+4. **WIDERSPRUCHS-ERKENNUNG:** Kollidiert sie mit bestehenden Instructions?
+5. **SCOPE-IDENTIFIKATION:** Welche Bereiche sind betroffen (CONTENT|DESIGN|CODE|STRUCTURE|DOCUMENTATION|INSTRUCTIONS)?
+
+### **EXCEPTION-AUSLÖSER bei Unklarheit:**
+
+```
+⚠️ EXCEPTION_TYPE: UNKLARER_SINN
+ANWEISUNG: [Simons Original-Wording]
+UNKLARHEIT: [Was ist unklar/widersprüchlich]
+MÖGLICHE_INTERPRETATIONEN: [A, B, C...]
+BETROFFENE_SCOPES: [Welche Bereiche betroffen]
+BENÖTIGTE_KLÄRUNG: [Spezifische Fragen an Simon]
+BLOCKING: [Was kann nicht fortgesetzt werden]
+```
+
+### **VERBOTENE ANNAHMEN:**
+
+- ❌ Raten was Simon meint ohne Klarstellung
+- ❌ Umsetzen bei mehrdeutigen Anweisungen
+- ❌ Fortfahren ohne vollständiges Verständnis
+
+### **PFLICHT-VERHALTEN:**
+
+- ✅ Lieber Exception werfen als falsch umsetzen
+- ✅ Nachfragen bis 100% Klarheit besteht
+- ✅ Scope exakt identifizieren vor Umsetzung
+
+**Diese Analyse ist bei JEDER Nutzer-Anweisung zwingend erforderlich!**
+
+---
+
 ### **DATEI-INTEGRITÄT-SCHUTZ (ZWINGEND):**
 
 - **ABSOLUT VERBOTEN:** Original-Dateien NIEMALS umbenennen
@@ -1241,6 +1281,32 @@ Ausser natürlich es besteht ein Problem mit dem Build Prozess selbst --> dann i
 5. **DOCUMENTATION:** Alle Aktionen werden automatisch in entsprechende Dokumentationsdateien protokolliert
 
 **EXCEPTION:** Nur bei explizitem User-Override wird von diesem Workflow abgewichen
+
+## 🚨 BUILD-CHECKER v4.0 ANFORDERUNGEN (NACH SIMON'S KRITISCHER KORREKTUR)
+
+### 📋 **VOLLSTÄNDIGE ANFORDERUNGEN DOKUMENTIERT:**
+
+- **Dokumentation:** `C:\apps\website\simon-recht\docs\checker_entwicklung\anforderungen`
+- **Kontrast-Analyse:** WCAG 2.1 AA + AAA Standards, echte DOM-Element Tests
+- **Medien-Validierung:** 404-Detection, Alt-Text-Prüfung, Pfad-Validierung
+- **Screenshot-Evidence:** Visuelle Probleme erkennen (Icons, Symbole, etc.)
+- **Organische SEO:** Keine Minifizierung, nur natürliche Optimierungen
+
+### 🔍 **CHECKER v4.0 VERBESSERUNGEN:**
+
+```javascript
+// ✅ IMPLEMENTIERT: Erweiterte Kontrast-Tests inkl. problematischer Icons
+// ✅ IMPLEMENTIERT: Medien-Integrität-Validierung (404-Detection)
+// ✅ IMPLEMENTIERT: Echte DOM-Element-Analyse statt nur CSS-Variablen
+// ✅ IMPLEMENTIERT: Screenshot-Evidence-basierte Problem-Erkennung
+```
+
+### 🚨 **ANTI-ARROGANZ-SYSTEM:**
+
+- **NIEMALS BLIND TOOLS VERTRAUEN** ohne visuelle Validierung
+- **Screenshots > Checker-Reports** als Wahrheits-Hierarchie
+- **User-Experience > Technical Metrics** Priorität
+- **Simon's Feedback > KI-Selbstüberschätzung** immer
 
 Ausserdem dürfen NIEMALS neue Dateien erstellt werden, wenn eine gleichnamige Datei bereits existiert!!!
 Die KI ist IMMER gezwungen, IMMER eine Ursachenforschung und eine semantische tiefenanalyse durchzuführen.

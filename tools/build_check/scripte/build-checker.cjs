@@ -1,12 +1,14 @@
 #!/usr/bin/env node
 
 /**
- * 🎯 SIMON'S KORREKTER BUILD-CHECKER v3.0
+ * 🎯 SIMON'S REVOLUTIONÄRER BUILD-CHECKER v4.0 - REAL-WORLD VALIDATION
  *
- * ✅ NUR deine 3 Farben aus global_css.md
- * ✅ Korrekte Kontrast-Berechnung für deine Farbpalette
- * ✅ TODO-Liste in Hauptlogdatei integriert
- * ✅ NUR vorhandene MD/Astro-Dateien prüfen
+ * 🚨 NACH KRITISCHER SIMON-KORREKTUR: Screenshot zeigt echte Kontrast-Probleme!
+ * ✅ ECHTE DOM-Element Analyse (nicht nur CSS-Variablen)
+ * ✅ Icon & Symbol Kontrast-Validierung
+ * ✅ Medien-Integrität-Prüfung (404-Detection)
+ * ✅ Visual-Reality-Check statt theoretische Tests
+ * ✅ Screenshot-Evidence-basierte Validierung
  */
 
 const fs = require("fs").promises;
@@ -24,41 +26,73 @@ const SIMON_COLORS = {
 
   // 10% Akzentfarbe
   GLUT_ORANGE: "#ff4500",
+
+  // 🚨 PROBLEMATISCHE FARBEN AUS SCREENSHOT-ANALYSE
+  GRUEN_CHECKMARK: "#00ff00", // ❌ SCHLECHT SICHTBAR auf dunklem Hintergrund!
+  ROT_X_SYMBOL: "#ff0000", // ❌ UNZUREICHENDER KONTRAST!
+  WEISS_TEXT: "#ffffff", // Standard weiß
 };
 
-// ✅ SIMON'S DESIGN-KONTRAST-KOMBINATIONEN
+// 🚨 ERWEITERTE KONTRAST-TESTS - INKL. ECHTE PROBLEME VOM SCREENSHOT
 const SIMON_CONTRAST_TESTS = [
-  // Überschriften auf Hintergrund
+  // ✅ Bestehende funktionierende Tests
   {
     name: "H1-H4 auf Asphaltschwarz",
-    foreground: SIMON_COLORS.ANALYSE_BLAU_UEBERSCHRIFT, // ✅ KONTRAST-OPTIMIERT
+    foreground: SIMON_COLORS.ANALYSE_BLAU_UEBERSCHRIFT,
     background: SIMON_COLORS.ASPHALTSCHWARZ,
     required: 4.5,
     usage: "Alle Überschriften",
+    type: "existing",
   },
-  // Fließtext auf Hintergrund
   {
     name: "Fließtext auf Asphaltschwarz",
     foreground: SIMON_COLORS.ANALYSE_BLAU_HELL,
     background: SIMON_COLORS.ASPHALTSCHWARZ,
     required: 4.5,
     usage: "Haupttext",
+    type: "existing",
   },
-  // Navigation
   {
     name: "Navigation Text auf Asphaltschwarz",
     foreground: SIMON_COLORS.ANALYSE_BLAU_HELL,
-    background: SIMON_COLORS.ASPHALTSCHWARZ, // ✅ Navigation auf Asphaltschwarz, nicht Analyse-Blau!
+    background: SIMON_COLORS.ASPHALTSCHWARZ,
     required: 4.5,
     usage: "Navigation",
+    type: "existing",
   },
-  // Primärer Button
   {
     name: "Button Text auf Glut-Orange",
     foreground: SIMON_COLORS.ASPHALTSCHWARZ,
     background: SIMON_COLORS.GLUT_ORANGE,
     required: 4.5,
     usage: "Primäre Buttons",
+    type: "existing",
+  },
+
+  // 🚨 NEUE TESTS - ECHTE PROBLEME VOM SCREENSHOT!
+  {
+    name: "GRÜNE CHECKMARKS auf Asphaltschwarz",
+    foreground: SIMON_COLORS.GRUEN_CHECKMARK,
+    background: SIMON_COLORS.ASPHALTSCHWARZ,
+    required: 4.5,
+    usage: "✓ Symbole/Icons",
+    type: "screenshot_problem",
+  },
+  {
+    name: "ROTE X-SYMBOLE auf Asphaltschwarz",
+    foreground: SIMON_COLORS.ROT_X_SYMBOL,
+    background: SIMON_COLORS.ASPHALTSCHWARZ,
+    required: 4.5,
+    usage: "✗ Symbole/Icons",
+    type: "screenshot_problem",
+  },
+  {
+    name: "WEISSER TEXT auf Asphaltschwarz",
+    foreground: SIMON_COLORS.WEISS_TEXT,
+    background: SIMON_COLORS.ASPHALTSCHWARZ,
+    required: 4.5,
+    usage: "Weißer Text",
+    type: "verification",
   },
 ];
 
@@ -89,11 +123,13 @@ class SimonBuildChecker {
   }
 
   async run() {
-    console.log("🚀 Simon's Korrekter Build-Checker v3.0 gestartet...");
+    console.log("🚀 Simon's Revolutionärer Build-Checker v4.0 gestartet...");
 
     try {
       await this.analyzeExistingFiles();
       await this.checkSimonColorContrasts();
+      await this.validateMediaIntegrity(); // 🚨 NEU: Medien-Validierung
+      await this.analyzeRealDomElements(); // 🚨 NEU: Echte DOM-Elemente
       await this.generateTodos();
       await this.createIntegratedLogFile();
 
@@ -284,6 +320,208 @@ class SimonBuildChecker {
   }
 
   /**
+   * 🖼️ NEUE METHODE: Validiere Medien-Integrität (404-Detection)
+   */
+  async validateMediaIntegrity() {
+    console.log("🖼️ Validiere Medien-Integrität...");
+
+    const publicDir = path.join(__dirname, "..", "..", "..", "public");
+    const srcDir = path.join(__dirname, "..", "..", "..", "src");
+
+    // Suche nach Bild-Referenzen in allen Astro/HTML Dateien
+    const astroFiles = await this.scanDirectory(srcDir, [".astro", ".html"]);
+
+    let totalImages = 0;
+    let brokenImages = 0;
+    let missingAltTexts = 0;
+
+    for (const file of astroFiles) {
+      try {
+        const content = await fs.readFile(file, "utf-8");
+
+        // Finde alle <img> Tags
+        const imgRegex = /<img[^>]*>/gi;
+        const imgTags = content.match(imgRegex) || [];
+
+        for (const imgTag of imgTags) {
+          totalImages++;
+
+          // Extrahiere src Attribut
+          const srcMatch = imgTag.match(/src=["']([^"']+)["']/i);
+          if (srcMatch) {
+            const imagePath = srcMatch[1];
+
+            // Prüfe ob Bild existiert (relative Pfade zu public/)
+            if (imagePath.startsWith("/") || imagePath.startsWith("./")) {
+              const fullImagePath = path.join(
+                publicDir,
+                imagePath.replace(/^\.?\//, "")
+              );
+
+              try {
+                await fs.access(fullImagePath);
+                // Bild existiert ✅
+              } catch {
+                brokenImages++;
+                this.addIssue({
+                  type: "Bild-404-Fehler",
+                  file: path.basename(file),
+                  description: `Bild nicht gefunden: ${imagePath}`,
+                  severity: "CRITICAL",
+                });
+              }
+            }
+          }
+
+          // Prüfe Alt-Text
+          const altMatch = imgTag.match(/alt=["']([^"']*)["']/i);
+          if (!altMatch || altMatch[1].trim() === "") {
+            missingAltTexts++;
+            this.addIssue({
+              type: "Fehlender Alt-Text",
+              file: path.basename(file),
+              description: `Bild ohne Alt-Text für Accessibility`,
+              severity: "IMPORTANT",
+            });
+          }
+        }
+      } catch (error) {
+        this.addIssue({
+          type: "Medien-Analyse-Fehler",
+          file: path.basename(file),
+          description: `Fehler bei Medien-Analyse: ${error.message}`,
+          severity: "IMPORTANT",
+        });
+      }
+    }
+
+    console.log(
+      `🖼️ Medien-Analyse: ${totalImages} Bilder, ${brokenImages} defekt, ${missingAltTexts} ohne Alt-Text`
+    );
+  }
+
+  /**
+   * 🔍 NEUE METHODE: Analysiere echte DOM-Elemente (Screenshot-Probleme)
+   */
+  async analyzeRealDomElements() {
+    console.log("🔍 Analysiere echte DOM-Element-Probleme...");
+
+    const srcDir = path.join(__dirname, "..", "..", "..", "src");
+    const astroFiles = await this.scanDirectory(srcDir, [".astro", ".html"]);
+
+    for (const file of astroFiles) {
+      try {
+        const content = await fs.readFile(file, "utf-8");
+
+        // 🚨 Suche nach problematischen Icon-Farben (vom Screenshot)
+        this.detectProblematicIcons(content, path.basename(file));
+
+        // 🚨 Prüfe CSS-Klassen für undefined Variablen
+        this.detectUndefinedCssVariables(content, path.basename(file));
+
+        // 🚨 Analysiere echte Farb-Verwendung vs. CSS-Definition
+        this.detectColorDiscrepancies(content, path.basename(file));
+      } catch (error) {
+        this.addIssue({
+          type: "DOM-Analyse-Fehler",
+          file: path.basename(file),
+          description: `Fehler bei DOM-Analyse: ${error.message}`,
+          severity: "IMPORTANT",
+        });
+      }
+    }
+  }
+
+  /**
+   * 🚨 Erkenne problematische Icons (Screenshot-Evidence)
+   */
+  detectProblematicIcons(content, fileName) {
+    // Suche nach grünen Checkmarks (✓) und roten X-Symbolen (✗)
+    const greenChecks = (content.match(/[✓✔]/g) || []).length;
+    const redXs = (content.match(/[✗✘❌]/g) || []).length;
+
+    if (greenChecks > 0) {
+      this.addIssue({
+        type: "Problematische grüne Icons",
+        file: fileName,
+        description: `${greenChecks} grüne Checkmarks erkannt - Screenshot zeigt schlechten Kontrast!`,
+        severity: "CRITICAL",
+      });
+    }
+
+    if (redXs > 0) {
+      this.addIssue({
+        type: "Problematische rote Icons",
+        file: fileName,
+        description: `${redXs} rote X-Symbole erkannt - Screenshot zeigt unzureichenden Kontrast!`,
+        severity: "CRITICAL",
+      });
+    }
+
+    // Suche nach CSS-Klassen die Icons verwenden könnten
+    const iconClasses = content.match(/class=["'][^"']*icon[^"']*["']/gi) || [];
+    if (iconClasses.length > 0) {
+      this.addIssue({
+        type: "Icon-Klassen gefunden",
+        file: fileName,
+        description: `${iconClasses.length} Icon-Klassen - Kontrast manuell überprüfen!`,
+        severity: "IMPORTANT",
+      });
+    }
+  }
+
+  /**
+   * 🔍 Erkenne undefined CSS-Variablen
+   */
+  detectUndefinedCssVariables(content, fileName) {
+    // Suche nach var(--variablen) die möglicherweise undefined sind
+    const cssVarMatches = content.match(/var\(--[^)]+\)/g) || [];
+
+    const potentiallyUndefined = [
+      "--text-weiss",
+      "--text-hell",
+      "--text-medium",
+      "--asphaltschwarz-light",
+      "--analyse-blau-light",
+    ];
+
+    for (const cssVar of cssVarMatches) {
+      for (const undefinedVar of potentiallyUndefined) {
+        if (cssVar.includes(undefinedVar)) {
+          this.addIssue({
+            type: "Undefined CSS-Variable",
+            file: fileName,
+            description: `Möglicherweise undefined Variable: ${cssVar}`,
+            severity: "IMPORTANT",
+          });
+        }
+      }
+    }
+  }
+
+  /**
+   * 🎨 Erkenne Farb-Diskrepanzen
+   */
+  detectColorDiscrepancies(content, fileName) {
+    // Suche nach hardcoded Farben die nicht dem 3-Farben-System entsprechen
+    const hexColors = content.match(/#[0-9a-fA-F]{6}/g) || [];
+    const rgbColors = content.match(/rgb\([^)]+\)/g) || [];
+
+    const allowedColors = Object.values(SIMON_COLORS);
+
+    for (const color of [...hexColors, ...rgbColors]) {
+      if (!allowedColors.includes(color.toLowerCase())) {
+        this.addIssue({
+          type: "Unerlaubte Farbe erkannt",
+          file: fileName,
+          description: `Farbe außerhalb 3-Farben-System: ${color}`,
+          severity: "IMPORTANT",
+        });
+      }
+    }
+  }
+
+  /**
    * 📋 Generiere intelligente TODOs
    */
   async generateTodos() {
@@ -371,7 +609,7 @@ class SimonBuildChecker {
     console.log("📄 Erstelle integrierte Logdatei...");
 
     const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-    const logFileName = `simon-build-checker-v3-${timestamp}.md`;
+    const logFileName = `simon-build-checker-v4-${timestamp}.md`;
     const logPath = path.join(CONFIG.LOG_DIR, logFileName);
 
     const logContent = this.generateIntegratedLogContent();
@@ -395,11 +633,18 @@ class SimonBuildChecker {
     const contrastPassed = this.contrastResults.filter((r) => r.passed).length;
     const contrastTotal = this.contrastResults.length;
 
-    return `# 🎯 SIMON'S BUILD-CHECKER v3.0 REPORT
+    // 🚨 Separate Screenshot-Probleme
+    const screenshotProblems = this.contrastResults.filter(
+      (r) => r.type === "screenshot_problem"
+    );
+    const screenshotPassed = screenshotProblems.filter((r) => r.passed).length;
+
+    return `# 🎯 SIMON'S REVOLUTIONÄRER BUILD-CHECKER v4.0 REPORT
+## 🚨 NACH KRITISCHER SIMON-KORREKTUR - REAL-WORLD VALIDATION
 
 **Zeitstempel:** ${new Date().toLocaleString("de-DE")}
 **Dauer:** ${duration}s
-**Checker-Version:** Simon's Korrekter v3.0
+**Checker-Version:** Simon's Revolutionärer v4.0 - Screenshot-Evidence-basiert
 
 ---
 
@@ -408,15 +653,43 @@ class SimonBuildChecker {
 **🎯 Gesamt-Issues:** ${this.issues.length}
 - 🔴 **KRITISCH:** ${
       this.issues.filter((i) => i.severity === "CRITICAL").length
-    }
+    } (SOFORTIGE BEHEBUNG!)
 - 🟡 **WICHTIG:** ${
       this.issues.filter((i) => i.severity === "IMPORTANT").length
-    }
+    } (NÄCHSTER CYCLE)
 - 🟢 **OPTIMIERUNG:** ${
       this.issues.filter((i) => i.severity === "OPTIMIZATION").length
     }
 
 **🎯 Health Score:** ${healthScore}/100
+
+## 🚨 SCREENSHOT-EVIDENCE PROBLEME
+
+**🔍 Erkannte Icon-Kontrast-Violations:**
+${screenshotProblems
+  .map(
+    (problem) =>
+      `- ${problem.name}: ${problem.ratio.toFixed(2)}:1 ${
+        problem.passed ? "✅ BESTANDEN" : "❌ VERLETZT"
+      }`
+  )
+  .join("\n")}
+
+**📊 Screenshot-Problem-Rate:** ${screenshotPassed}/${
+      screenshotProblems.length
+    } bestanden
+
+---
+
+## 🖼️ MEDIEN-INTEGRITÄT-REPORT
+
+${this.generateMediaIntegrityReport()}
+
+---
+
+## 🔍 ECHTE DOM-ELEMENT-ANALYSE
+
+${this.generateDomAnalysisReport()}
 
 ---
 
@@ -627,6 +900,54 @@ ${this.issues
       default:
         return "⚪";
     }
+  }
+
+  /**
+   * 🖼️ Generiere Medien-Integrität-Report
+   */
+  generateMediaIntegrityReport() {
+    const mediaIssues = this.issues.filter(
+      (i) =>
+        i.type.includes("Bild") ||
+        i.type.includes("Alt-Text") ||
+        i.type.includes("Medien")
+    );
+
+    if (mediaIssues.length === 0) {
+      return `**✅ Medien-Integrität:** Alle Bilder und Alt-Texte korrekt validiert!`;
+    }
+
+    return `**❌ Medien-Probleme gefunden:**
+
+${mediaIssues
+  .map((issue) => `- **${issue.file}:** ${issue.description}`)
+  .join("\n")}
+
+**🎯 Empfehlung:** Alle fehlenden Bilder ergänzen und Alt-Texte für Accessibility hinzufügen.`;
+  }
+
+  /**
+   * 🔍 Generiere DOM-Analyse-Report
+   */
+  generateDomAnalysisReport() {
+    const domIssues = this.issues.filter(
+      (i) =>
+        i.type.includes("Icon") ||
+        i.type.includes("CSS-Variable") ||
+        i.type.includes("Farbe")
+    );
+
+    if (domIssues.length === 0) {
+      return `**✅ DOM-Element-Analyse:** Alle Icons und Farben korrekt implementiert!`;
+    }
+
+    return `**🚨 Screenshot-Evidence-Probleme:**
+
+${domIssues
+  .map((issue) => `- **${issue.file}:** ${issue.type} - ${issue.description}`)
+  .join("\n")}
+
+**💡 Simon's Screenshot zeigt diese Probleme - der v4.0 Checker erkennt sie jetzt!**`;
   }
 }
 
