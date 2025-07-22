@@ -7,20 +7,33 @@
  * FOKUS: Klarheit, Seriosität, Vertrauen
  */
 
-/* 🎯 SIMON'S EXAKTE 3-FARBEN-REGEL - NACHTSTAHL & WARNSIGNAL */
+/* 🎯 "NACHTSTAHL & WARNSIGNAL" - DIE 3 STRATEGISCHEN FARBEN */
 :root {
-  /* 60% – ASPHALTSCHWARZ: Die dominante Basis (EXACT aus global_css.md) */
+  /* 60% – ASPHALTSCHWARZ: Die dominante Basis für Seriosität */
   --asphaltschwarz: #1a1d24;
+  --asphaltschwarz-light: #2a2d34;
+  --asphaltschwarz-dark: #0f1217;
 
-  /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe (EXACT aus global_css.md) */
+  /* 30% – ANALYSE-BLAU: Die professionelle Sekundärfarbe */
   --analyse-blau: #4a6d7c;
-  --analyse-blau-hell: #6b8a9a; /* Aufgehellt für Fließtext - besserer Kontrast */
+  --analyse-blau-light: #6b8a9a;
+  --analyse-blau-dark: #374f5c;
 
-  /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
+  /* 10% – GLUT-ORANGE: Die kraftvolle Akzentfarbe */
   --glut-orange: #ff4500;
+  --glut-orange-light: #ff6633;
+  --glut-orange-dark: #cc3600;
 
-  /* SIMON'S SCHATTEN-REGEL: Dezente Text-Schatten für bessere Lesbarkeit */
-  --text-schatten: 0 1px 2px rgba(0, 0, 0, 0.5);
+  /* Text-Farben für optimalen Kontrast */
+  --text-weiss: #ffffff;
+  --text-hell: #f0f0f0;
+  --text-medium: #cccccc;
+  --text-dunkel: #666666;
+
+  /* Schatten und Transparenzen */
+  --schatten-leicht: rgba(0, 0, 0, 0.1);
+  --schatten-mittel: rgba(0, 0, 0, 0.2);
+  --schatten-stark: rgba(0, 0, 0, 0.4);
 }
 
 /* 🏗️ GRUNDLAGEN: HTML & BODY - ASPHALTSCHWARZ BASIS (60%) */
@@ -37,13 +50,12 @@ html {
 
 body {
   background-color: var(--asphaltschwarz);
-  color: var(--analyse-blau-hell); /* Simon's 3-Farben-Regel: Fließtext-Farbe */
+  color: var(--text-weiss);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh;
-  text-shadow: var(--text-schatten); /* Simon's Schattierungs-Idee */
 }
 
 /* 🎯 MASTER LAYOUT SYSTEM */
@@ -111,12 +123,9 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(
-    --analyse-blau-hell
-  ); /* Aufgehelltes Analyse-Blau für besseren Kontrast */
+  color: var(--text-weiss);
   text-decoration: none;
   letter-spacing: -0.025em;
-  text-shadow: var(--text-schatten);
 }
 
 .navbar-brand:hover {
@@ -131,25 +140,22 @@ body {
 }
 
 .navbar-link {
-  color: var(
-    --analyse-blau-hell
-  ); /* Aufgehelltes Analyse-Blau für Navigation */
+  color: var(--text-hell);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: all 0.2s ease;
-  text-shadow: var(--text-schatten);
 }
 
 .navbar-link:hover {
   color: var(--glut-orange);
-  background-color: var(--asphaltschwarz);
+  background-color: var(--asphaltschwarz-light);
 }
 
 .navbar-link.active {
   color: var(--glut-orange);
-  background-color: var(--asphaltschwarz);
+  background-color: var(--analyse-blau-dark);
 }
 
 /* Mobile Navigation */
@@ -191,7 +197,7 @@ body {
   }
 }
 
-/* 📝 TYPOGRAFIE-SYSTEM - SIMON'S 3-FARBEN-REGEL */
+/* 📝 TYPOGRAFIE-SYSTEM */
 h1,
 h2,
 h3,
@@ -201,77 +207,57 @@ h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(
-    --analyse-blau
-  ); /* Simon's 3-Farben-Regel: Überschriften in Analyse-Blau */
-  text-shadow: var(--text-schatten); /* Simon's Schattierungs-Idee */
+  color: var(--text-weiss);
 }
 
-/* 🎯 SIMON'S ÜBERSCHRIFTEN-HIERARCHIE - ALLE ANALYSE-BLAU (aus global_css.md) */
 h1 {
   font-size: 3rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H1 */
-  font-weight: 700;
-  text-shadow: var(--text-schatten);
+  color: var(--glut-orange); /* Glut-Orange für Haupttitel */
 }
 
 h2 {
-  font-size: 2.5rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H2 */
-  font-weight: 700;
-  text-shadow: var(--text-schatten);
+  font-size: 2.25rem;
+  color: var(--analyse-blau-light); /* Analyse-Blau für Untertitel */
 }
 
 h3 {
-  font-size: 2rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H3 */
-  font-weight: 700;
-  text-shadow: var(--text-schatten);
+  font-size: 1.875rem;
+  color: var(--text-weiss);
 }
 
 h4 {
   font-size: 1.5rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H4 */
-  font-weight: 700;
-  text-shadow: var(--text-schatten);
+  color: var(--text-hell);
 }
 
 h5 {
   font-size: 1.25rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H5 */
-  font-weight: 600;
-  text-shadow: var(--text-schatten);
+  color: var(--text-hell);
 }
 
 h6 {
   font-size: 1.125rem;
-  color: var(--analyse-blau); /* Standard Analyse-Blau für H6 */
-  font-weight: 600;
-  text-shadow: var(--text-schatten);
+  color: var(--text-medium);
 }
 
-/* 🎯 SIMON'S TEXT-ELEMENTE - ANALYSE-BLAU FAMILIE */
 p {
   margin-bottom: 1rem;
-  color: var(--analyse-blau-hell); /* Aufgehelltes Analyse-Blau für Fließtext */
-  text-shadow: var(--text-schatten);
+  color: var(--text-hell);
 }
 
 a {
-  color: var(--analyse-blau-hell); /* Aufgehelltes Analyse-Blau für Links */
+  color: var(--analyse-blau-light);
   text-decoration: none;
-  text-shadow: var(--text-schatten);
 }
 
 a:hover {
-  color: var(--glut-orange); /* Glut-Orange beim Darüberfahren */
+  color: var(--glut-orange);
   text-decoration: underline;
 }
 
 strong {
-  color: var(--analyse-blau); /* Standard Analyse-Blau für Hervorhebungen */
+  color: var(--text-weiss);
   font-weight: 600;
-  text-shadow: var(--text-schatten);
 }
 
 em {

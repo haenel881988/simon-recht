@@ -47,6 +47,90 @@ Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher
 
 **REGEL:** Erst prüfen, dann erstellen - niemals parallel! NIEMALS temporäre Dateien für Fixes!
 
+## 🏷️ SIMON'S NAMENSKONVENTION-SYSTEM (ZWINGEND)
+
+**ABSOLUTE REGEL:** Alle Dateien müssen Simon's Namenskonventionen befolgen!
+
+### **DATEI-NAMENSKONVENTIONEN:**
+
+#### **CSS-DATEIEN:**
+
+- ✅ **HAUPTDATEI:** `global.css` (einzige aktive CSS-Datei)
+- ❌ **VERBOTEN:** `global_NEU.css`, `global_ALT.css`, `styles.css`, `main.css`
+- ❌ **VERBOTEN:** Mehrere aktive CSS-Dateien gleichzeitig
+- 🔄 **ARCHIV-REGEL:** Alte Versionen → `global_ARCHIV_YYYY-MM-DD.css`
+
+#### **JAVASCRIPT/NODE-SKRIPTE:**
+
+- ✅ **CHECKER-DATEIEN:** `[purpose]-checker.cjs` (z.B. `css-checker.cjs`, `seo-checker.cjs`)
+- ✅ **BUILD-SKRIPTE:** `build-[purpose].cjs`
+- ❌ **VERBOTEN:** `-corrected`, `-fixed`, `-new`, `-temp` Suffixe
+
+#### **MARKDOWN-DOKUMENTE:**
+
+- ✅ **ZENTRALE-DOCS:** `[topic].md` (klein, kebab-case)
+- ✅ **SPEZIAL-DOCS:** `[topic]_[detail].md`
+- ❌ **VERBOTEN:** `NEW_`, `OLD_`, `BACKUP_` Präfixe
+
+#### **LOG-DATEIEN:**
+
+- ✅ **BUILD-LOGS:** `simon-[checker-type]-v[version]-[timestamp].md`
+- ✅ **CHAT-PROTOKOLLE:** `chatprotokoll_YYYY-MM-DD_HH-MM.md`
+
+### **ZWINGENDER NAMENSKONVENTIONS-CHECK:**
+
+#### **VOR JEDER DATEI-OPERATION:**
+
+1. **KONVENTIONS-PRÜFUNG:** Entspricht der Name der Konvention?
+2. **DUPLIKAT-SCAN:** Existieren mehrere Versionen derselben Datei?
+3. **AUTO-UMBENENNUNG:** KI muss nicht-konforme Dateien automatisch umbenennen
+4. **ARCHIVIERUNG:** Alte Versionen korrekt archivieren
+
+#### **CHECKER-INTEGRATION:**
+
+```javascript
+// ✅ BEISPIEL: CSS-CHECKER NAMENSVALIDIERUNG
+async checkFileNamingConvention() {
+  const cssFiles = await this.scanForCSSFiles();
+
+  // Nur global.css erlaubt als aktive CSS-Datei
+  if (cssFiles.includes('global_NEU.css') || cssFiles.includes('styles.css')) {
+    this.addIssue({
+      type: "Namenskonventions-Verletzung",
+      severity: "CRITICAL",
+      action: "AUTO_RENAME_REQUIRED"
+    });
+  }
+}
+```
+
+#### **AUTO-UMBENENNUNG-REGELN:**
+
+- 🔄 **`global_NEU.css` → `global.css`** (nach Backup der alten)
+- 🔄 **`build-checker-corrected.cjs` → `build-checker.cjs`**
+- 🔄 **`[name]-fixed.[ext]` → `[name].[ext]`** (nach Backup)
+
+#### **ARCHIVIERUNGS-PROTOKOLL:**
+
+```
+ALTE DATEI: global.css → global_ARCHIV_2025-07-22.css
+NEUE DATEI: global_NEU.css → global.css
+CHECKER AKTION: Automatische Umbenennung durchgeführt
+```
+
+### **EXCEPTION BEI NAMENSKONVENTIONS-VERLETZUNG:**
+
+```
+⚠️ EXCEPTION_TYPE: NAMING_CONVENTION_VIOLATION
+PROBLEM: Datei entspricht nicht Simon's Namenskonvention
+DATEI: [Dateiname]
+ERWARTETER NAME: [Korrekter Name nach Konvention]
+REQUIRED_ACTION: Automatische Umbenennung oder Simon konsultieren
+BLOCKING: Weitere Verarbeitung bis Namenskonformität
+```
+
+**REGEL:** Namenskonventionen sind nicht verhandelbar - KI muss automatisch korrigieren!
+
 ## 🚨 LOG-FIRST INTELLIGENZ-REGEL (ZWINGEND)
 
 **ABSOLUT VERBOTEN:** Manuelles Suchen mit grep_search, file_search, semantic_search!
@@ -2284,5 +2368,46 @@ KEINE ERFINDUNGEN: Exception werfen bei fehlender Quelle
 ```
 
 **Diese Regel verhindert dauerhaft das Authentizitäts-Problem!**
+
+## 🚀 PROAKTIVE ZUSAMMENARBEIT-REGEL (SIMON'S WUNSCH)
+
+**SIMON'S EXPLIZITE AUFFORDERUNG:** KI soll proaktiv Probleme entdecken und melden!
+
+### **PROAKTIVITÄTS-ZWANG:**
+
+- ✅ **PROBLEME SOFORT MELDEN:** Wenn der KI etwas auffällt oder missfällt → direkt ansprechen
+- ✅ **VERBESSERUNGS-VORSCHLÄGE:** Ideen und Inputs aktiv einbringen  
+- ✅ **POTENZIELLE PROBLEME:** Frühzeitig erkennen und präventiv lösen
+- ✅ **OPTIMIERUNGS-CHANCEN:** Kontinuierlich nach Verbesserungen suchen
+- ✅ **QUALITÄTS-ÜBERWACHUNG:** Standards eigenständig hochhalten
+
+### **SIMON IST DANKBAR FÜR:**
+
+```
+🔍 "Mir ist aufgefallen, dass..."
+💡 "Ich hätte eine Idee für..."  
+⚠️ "Das könnte problematisch werden..."
+🚀 "Wir könnten das optimieren durch..."
+🎯 "Eine bessere Lösung wäre..."
+```
+
+### **VERBOTENE ZURÜCKHALTUNG:**
+
+```
+❌ Probleme verschweigen aus falscher Höflichkeit
+❌ Verbesserungen für sich behalten
+❌ Warten bis Simon explizit fragt
+❌ Oberflächliche Analysen ohne Tiefenblick
+❌ Passives Abarbeiten ohne Mitdenken
+```
+
+### **PROAKTIVE ARBEITSWEISE:**
+
+- **KONTINUIERLICHE QUALITÄTSKONTROLLE:** Bei jeder Aktion auf Optimierungspotenzial achten
+- **PRÄVENTIVE PROBLEMLÖSUNG:** Probleme lösen bevor sie entstehen
+- **INTELLIGENTE VERBESSERUNGEN:** Automatisch bessere Lösungen vorschlagen
+- **HOLISTISCHE BETRACHTUNG:** Ganze Systeme im Blick behalten, nicht nur Einzelaufgaben
+
+**REGEL:** Simon will eine partnerschaftliche, proaktive Zusammenarbeit - KI als aktiver Mitdenker, nicht passiver Ausführer!
 
 Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten. Diese Regel ist extra redundant eingebaut, um Missverständnisse zu vermeiden. Insbesondere bei Wiedersprüchlichkeiten, die auch der KI im ersten Augenblick nicht sichtbar sind, beginnt die KI fehler zu machen und solche Fehler sind im vorhinein zu vermeiden.
