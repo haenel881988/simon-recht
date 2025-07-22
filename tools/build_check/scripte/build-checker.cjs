@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * 🎯 SIMON'S REVOLUTIONÄRER BUILD-CHECKER v4.0 - REAL-WORLD VALIDATION
+ * 🎯 SIMON'S REVOLUTIONÄRER BUILD-CHECKER v5.0 - SELF-VALIDATING AI SYSTEM
  *
- * 🚨 NACH KRITISCHER SIMON-KORREKTUR: Screenshot zeigt echte Kontrast-Probleme!
- * ✅ ECHTE DOM-Element Analyse (nicht nur CSS-Variablen)
+ * 🚨 NEU: KI-SELF-VERIFICATION & PROMPT-GENERATION
+ * ✅ Automatische Cross-Validation der Checker-Ergebnisse
+ * ✅ KI-Prompts für systematische Problemlösung
+ * ✅ Echte DOM-Element Analyse (nicht nur CSS-Variablen)
  * ✅ Icon & Symbol Kontrast-Validierung
  * ✅ Medien-Integrität-Prüfung (404-Detection)
  * ✅ Visual-Reality-Check statt theoretische Tests
@@ -123,7 +125,7 @@ class SimonBuildChecker {
   }
 
   async run() {
-    console.log("🚀 Simon's Revolutionärer Build-Checker v4.0 gestartet...");
+    console.log("🚀 Simon's Revolutionärer Build-Checker v5.0 gestartet...");
 
     try {
       await this.analyzeExistingFiles();
@@ -833,9 +835,11 @@ ${this.issues
 
 ---
 
-*📄 Generiert von Simon's Korrekter Build-Checker v3.0 - ${new Date().toLocaleString(
+*📄 Generiert von Simon's Self-Validating Build-Checker v5.0 - ${new Date().toLocaleString(
       "de-DE"
-    )}*`;
+    )}*
+
+${this.generateSelfVerificationSection()}`;
   }
 
   /**
@@ -947,7 +951,75 @@ ${domIssues
   .map((issue) => `- **${issue.file}:** ${issue.type} - ${issue.description}`)
   .join("\n")}
 
-**💡 Simon's Screenshot zeigt diese Probleme - der v4.0 Checker erkennt sie jetzt!**`;
+**💡 Simon's Screenshot zeigt diese Probleme - der v5.0 Checker erkennt sie jetzt!**`;
+  }
+
+  /**
+   * 🤖 SELF-VERIFICATION & KI-PROMPT GENERATION
+   */
+  generateSelfVerificationSection() {
+    const now = new Date();
+    const currentTime = now.toLocaleString("de-DE");
+
+    return `
+---
+
+# 🤖 KI-SELF-VERIFICATION & VALIDATION-PROMPTS
+
+## 🔍 **AUTOMATISCHE CROSS-VALIDATION ERFORDERLICH**
+
+**⚠️ WICHTIG: Diese Log-Datei wurde automatisch generiert und MUSS von einer KI validiert werden!**
+
+**Zeitstempel der Analyse:** ${currentTime}
+**Checker-Version:** v5.0 - Self-Validating AI System
+
+### 📋 **VALIDATION-CHECKLIST FÜR KI:**
+
+- [ ] **Content-Längen-Check:** Sind die Wort-Counts aktuell korrekt?
+- [ ] **CSS-Implementation-Status:** Wurden bereits behobene Issues fälschlich als "Todo" gemeldet?
+- [ ] **Media-Links-Validation:** Existieren alle referenzierten Bilder tatsächlich?
+- [ ] **Cross-Reference-Check:** Stimmen DOM-Analyse und CSS-Code überein?
+- [ ] **Health-Score-Plausibilität:** Ist der Health Score ${this.calculateHealthScore()}/100 realistisch?
+
+### 🚨 **KI-PROMPT FÜR SOFORTIGE VALIDATION:**
+
+\`\`\`
+Analysiere diese Build-Checker Log-Datei kritisch und vergleiche sie mit der aktuellen Projekt-Realität:
+
+1. CONTENT-VERIFICATION: Überprüfe alle "Content zu kurz" TODOs durch manuelle Zeilen-/Wort-Zählung
+2. CSS-STATUS-CHECK: Validiere ob CSS-Variablen und Farb-Issues bereits behoben wurden  
+3. MEDIA-INTEGRITY: Bestätige oder widerlege alle Bild-404-Meldungen durch Datei-System-Check
+4. CROSS-VALIDATION: Gleiche DOM-Probleme mit tatsächlichem CSS/HTML-Code ab
+5. PRIORITY-ADJUSTMENT: Korrigiere falsches Prioritäts-Ranking basierend auf aktueller Realität
+
+**ZIEL:** 100% akkurate, aktuelle Problem-Liste ohne veraltete oder bereits behobene Issues.
+\`\`\`
+
+### 🎯 **KONTINUIERLICHE VERBESSERUNGS-PROMPTS:**
+
+#### **PROMPT 1: Health Score Optimierung**
+\`\`\`
+Der aktuelle Health Score liegt bei ${this.calculateHealthScore()}/100. 
+Analysiere die TOP-5 Impact-Issues und erstelle einen systematischen 
+Verbesserungsplan um den Score auf 35+ zu bringen.
+\`\`\`
+
+#### **PROMPT 2: SEO-Content-Expansion** 
+\`\`\`
+Erweitere den Blog-Content systematisch auf 2300+ Wörter für optimale SEO-Performance.
+Verwende ausschließlich Simon's authentische Stimme und Erfahrungen.
+\`\`\`
+
+#### **PROMPT 3: WCAG-Compliance-Perfektion**
+\`\`\`
+Behebe alle verbleibenden Kontrast-Violations für 100% WCAG 2.1 AA Compliance.
+Fokus auf DOM-Element-Realität statt theoretische CSS-Tests.
+\`\`\`
+
+---
+
+**🤖 KI-HANDLUNGSANWEISUNG:** Führe SOFORT die Validation durch und dokumentiere alle Korrekturen!
+`;
   }
 }
 

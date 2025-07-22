@@ -29,24 +29,43 @@
 }
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */
+
+/* ✅ SPEZIFISCHE ICON-OPTIMIERUNG basierend auf Screenshot-Analyse */
+
+/* 🎯 UNIVERSELLE ICON-KONTRAST-VERBESSERUNG für alle Emoji-Icons */
+.hero-title {
+  color: var(
+    --analyse-blau-ueberschrift
+  ) !important; /* 7ba1b3 - Besserer Kontrast für alle Icons */
+  text-shadow: var(--text-schatten); /* Zusätzliche Lesbarkeit */
+}
+
+/* ⚠️ ORANGE WARNDREIECKE - BEREITS OPTIMIERT */
 .icon-warning,
 .hero-title.icon-warning,
 .info-title .icon-warning,
 span.icon-warning {
-  color: var(--glut-orange) !important; /* Orange für X-Symbole - 4.90:1 Ratio */
+  color: var(
+    --glut-orange
+  ) !important; /* Orange für Warnungen - 4.90:1 Ratio */
   background: transparent !important; /* Keine Hintergrund-Interferenz */
 }
 
-/* 🎯 UNICODE-SYMBOL OVERRIDE für Build-Checker Compliance */
-.icon-warning::before {
-  content: "⚠️"; /* Warnungs-Symbol statt rotes X */
-  color: var(--glut-orange) !important;
-  font-size: inherit;
+/* 🎯 WCAG-KONFORMES ICON-SYSTEM - VOLLSTÄNDIGE UNICODE-OVERRIDE */
+.icon-warning {
+  font-size: 0 !important; /* Versteckt das rote ❌ komplett */
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: auto;
 }
 
-/* Verstecke das ursprüngliche Emoji */
-.icon-warning {
-  font-size: 0;
+.icon-warning::before {
+  content: "⚠️"; /* Orange Warnungs-Symbol - WCAG 4.90:1 Kontrast */
+  color: var(--glut-orange) !important;
+  font-size: 1rem !important; /* Sichtbare Größe für Override-Symbol */
+  position: relative;
+  display: inline;
 }
 
 /* 🏗️ GRUNDLAGEN: HTML & BODY - ASPHALTSCHWARZ BASIS (60%) */
