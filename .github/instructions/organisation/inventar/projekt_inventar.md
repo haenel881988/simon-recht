@@ -1,463 +1,597 @@
 # 📋 Projekt-Inventar
 
-**Letzte Aktualisierung:** 2025-07-19 - **ENHANCED BUILD-CHECKER v6.0.0 INSTALLIERT**  
-**Erweitert mit Sprachprüfung, CSS-Guidelines und Anti-Redundanz-System**
+**Letzte Aktualisierung:** 22.7.2025, 20:25:24 - **AUTOMATISCH GENERIERT**  
+**Script:** tools/inventory/auto-inventory.js
 
-## 🔍 **ENHANCED BUILD-CHECKER v6.0.0 - NEUE FEATURES:**
+## 📊 **ÜBERSICHT**
 
-### **🎯 SPRACHPRÜFUNG (GROSSKONZERN vs. PENSIONSKASSE):**
+- **📁 Verzeichnisse:** 81
+- **📄 Gesamt-Dateien:** 482
+- **⚙️ Scripts:** 10
+- **🔧 Konfigurationen:** 178
+- **📝 Dokumentation:** 277
 
-- ✅ **Terminologie-Validation:** Prüft "Großkonzern" vs. "Pensionskasse" Sprache
-- ✅ **24 Verletzungen erkannt:** Pensionskasse-Terminologie in Großkonzern-Content
-- ✅ **Required Terms:** Systemadministration, IT-Infrastruktur, kritische Systeme
-- ✅ **Forbidden Terms:** Pensionskasse, BVG-Rente, Sozialversicherung
+## 📁 **VERZEICHNISSTRUKTUR**
 
-### **🎨 CSS-GUIDELINES COMPLIANCE:**
+- 00_ROHMATERIAL_ARCHIV/
+- 01_PLAYBOOK_CONTENT/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/simon_geschichte/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/archiv/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/archiv/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/archiv/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/erfolgserlebnisse/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/medien/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/medien/bilder/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/rechtliche_dokumente/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/blogs/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/landingpage/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/publikation_laien/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/publikation_vollstaendig/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/00_origin/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/01_konzepte_und_entscheidungen/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/archiv/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/archiv/legacy_migration/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/authentizitaet/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/build_logs/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/fails_learnings/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/fallbeispiel/
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/fallbeispiel/mindsetschlaegtgrosskonzern/
+- docs/
+- docs/08_simon_pers/
+- docs/08_simon_pers/chats/
+- docs/08_simon_pers/pers_profil/
+- docs/09_protokolle/
+- docs/change_management/
+- docs/change_management/backups/
+- docs/change_management/history/
+- docs/change_management/scopes/
+- docs/checker_entwicklung/
+- docs/checker_entwicklung/anforderungen/
+- docs/checker_entwicklung/anforderungen/css/
+- docs/checker_entwicklung/anforderungen/seo/
+- docs/todos/
+- docs/todos/archiv/
+- docs/website_struktur/
+- docs/website_struktur/dynamische-seiten/
+- docs/website_struktur/dynamische-seiten/blog/
+- docs/website_struktur/origin/
+- docs/website_struktur/recherche/
+- docs/website_struktur/recherche/tiefen_recherche/
+- docs/website_struktur/statische-seiten/
+- docs/website_struktur/statische-seiten/static/
+- docs/website_struktur/website_design/
+- docs/website_struktur/website_elemente/
+- public/
+- public/assets/
+- public/assets/images/
+- public/assets/images/blogs/
+- public/assets/images/startseite-index/
+- public/assets/images/startseite_uebermich/
+- public/assets/videos/
+- src/
+- src/content/
+- src/content/blog/
+- src/content/pages/
+- src/layouts/
+- src/pages/
+- src/pages/blog/
+- src/styles/
+- tools/
+- tools/build_check/
+- tools/build_check/logfiles/
+- tools/build_check/logfiles/archiv/
+- tools/build_check/logfiles/archiv/juli/
+- tools/build_check/metrics/
+- tools/build_check/scripte/
+- tools/inventory/
 
-- ✅ **Design-System-Prüfung:** Validiert global_css.md Compliance
-- ✅ **60/30/10 Farbsystem:** Prüft Einhaltung der Farbaufteilung
-- ✅ **Natürliche Sprache:** Keine Code-Syntax in Design-Dokumenten
-- ✅ **Guidelines gefunden:** CSS-Guidelines Dokument erfolgreich validiert
+## ⚙️ **SCRIPTS & TOOLS**
 
-### **🚫 ANTI-REDUNDANZ-SYSTEM:**
+- astro.config.mjs
+- convert-to-webp.js
+- src/content/config.ts
+- tailwind.config.mjs
+- tools/build_check/scripte/aar-metrics-collector.cjs
+- tools/build_check/scripte/build-checker-ARCHIV-2025-07-22.cjs
+- tools/build_check/scripte/build-checker.cjs
+- tools/build_check/scripte/css-checker.cjs
+- tools/build_check/scripte/helper-methods.cjs
+- tools/inventory/auto-inventory.js
 
-- ✅ **Redundanz-Prevention:** Verhindert doppelte Datei-Erstellung
-- ✅ **Inventory-Check:** Zwingender projekt_inventar.md Check vor Datei-Erstellung
-- ✅ **Directory-Scanning:** Manuelle Verzeichnis-Analyse erforderlich
-- ✅ **Exception-System:** Wirft Exceptions bei Redundanz-Verstößen
+## 🔧 **KONFIGURATIONSDATEIEN**
 
-### **📊 AKTUELLER BUILD-STATUS (2025-07-19 18:20:20):**
+- package.json
+- tools/build_check/metrics/aar-metrics-aar-1752319234579-9nm5djepr.json
+- tools/build_check/metrics/aar-metrics-aar-1752319680415-zkfeix4qc.json
+- tools/build_check/metrics/aar-metrics-aar-1752319805323-m3yjvkb85.json
+- tools/build_check/metrics/aar-metrics-aar-1752349641474-p6mmkqymb.json
+- tools/build_check/metrics/aar-metrics-aar-1752906717877-sji1jw6zt.json
+- tools/build_check/metrics/aar-metrics-aar-1752908580851-36rxkxjtn.json
+- tools/build_check/metrics/aar-metrics-aar-1752910729563-u0fqu1xbv.json
+- tools/build_check/metrics/aar-metrics-aar-1752910734809-d7rmghild.json
+- tools/build_check/metrics/aar-metrics-aar-1752910740151-vtjzh194x.json
+- tools/build_check/metrics/aar-metrics-aar-1752910745252-ozfnw0559.json
+- tools/build_check/metrics/aar-metrics-aar-1752910750713-thqbjzubi.json
+- tools/build_check/metrics/aar-metrics-aar-1752910756045-4xmzuhzei.json
+- tools/build_check/metrics/aar-metrics-aar-1752910761086-ojzszhkm6.json
+- tools/build_check/metrics/aar-metrics-aar-1752910766451-jaiie76o5.json
+- tools/build_check/metrics/aar-metrics-aar-1752910771698-57o53rlku.json
+- tools/build_check/metrics/aar-metrics-aar-1752910777338-wwo2w0rvu.json
+- tools/build_check/metrics/aar-metrics-aar-1752910782604-bdptcxssv.json
+- tools/build_check/metrics/aar-metrics-aar-1752910787781-bpubs98jn.json
+- tools/build_check/metrics/aar-metrics-aar-1752910792995-pczjc4og8.json
+- tools/build_check/metrics/aar-metrics-aar-1752910798150-oagztw2t3.json
+- tools/build_check/metrics/aar-metrics-aar-1752910803290-l3w4ul0ad.json
+- tools/build_check/metrics/aar-metrics-aar-1752910808544-aibrf1ynu.json
+- tools/build_check/metrics/aar-metrics-aar-1752910813682-r8huoz7ev.json
+- tools/build_check/metrics/aar-metrics-aar-1752910819085-756fzpqpz.json
+- tools/build_check/metrics/aar-metrics-aar-1752910824509-fi5w9ddl1.json
+- tools/build_check/metrics/aar-metrics-aar-1752910829868-ptaxzm27a.json
+- tools/build_check/metrics/aar-metrics-aar-1752910835212-nhafkk2x9.json
+- tools/build_check/metrics/aar-metrics-aar-1752910840352-bcki4yhoe.json
+- tools/build_check/metrics/aar-metrics-aar-1752910845773-joxavt25w.json
+- tools/build_check/metrics/aar-metrics-aar-1752910850757-umh0pobzk.json
+- tools/build_check/metrics/aar-metrics-aar-1752910855763-lf8ydligx.json
+- tools/build_check/metrics/aar-metrics-aar-1752910860700-zjiw6qgze.json
+- tools/build_check/metrics/aar-metrics-aar-1752910865554-lyp0zeqk0.json
+- tools/build_check/metrics/aar-metrics-aar-1752910870689-3uk4k8jn6.json
+- tools/build_check/metrics/aar-metrics-aar-1752910875679-tneeqhf7o.json
+- tools/build_check/metrics/aar-metrics-aar-1752910880683-o3thnvcr9.json
+- tools/build_check/metrics/aar-metrics-aar-1752910885508-59ttucf0s.json
+- tools/build_check/metrics/aar-metrics-aar-1752910890522-ljs3ehf19.json
+- tools/build_check/metrics/aar-metrics-aar-1752910895914-b68n0jljr.json
+- tools/build_check/metrics/aar-metrics-aar-1752910901338-f3yts97f2.json
+- tools/build_check/metrics/aar-metrics-aar-1752910998022-5jc9ar3u9.json
+- tools/build_check/metrics/aar-metrics-aar-1752912280731-s475x6vce.json
+- tools/build_check/metrics/aar-metrics-aar-1752912975631-opeudh83j.json
+- tools/build_check/metrics/aar-metrics-aar-1752913692509-g6vpcrmgi.json
+- tools/build_check/metrics/aar-metrics-aar-1752915455812-tmh82xm3p.json
+- tools/build_check/metrics/aar-metrics-aar-1752915550515-1bj1estuu.json
+- tools/build_check/metrics/aar-metrics-aar-1752918236525-kwnscdh5a.json
+- tools/build_check/metrics/aar-metrics-aar-1752920940408-tf7ic9hv2.json
+- tools/build_check/metrics/aar-metrics-aar-1752920951613-uwzcnccx3.json
+- tools/build_check/metrics/aar-metrics-aar-1752926129708-tlcwkb0bu.json
+- tools/build_check/metrics/aar-metrics-aar-1752927863249-1wepnr8g8.json
+- tools/build_check/metrics/aar-metrics-aar-1752928923722-bl6mg04za.json
+- tools/build_check/metrics/aar-metrics-aar-1752929364972-dkimyjhd1.json
+- tools/build_check/metrics/aar-metrics-aar-1752931046161-dp44du0hv.json
+- tools/build_check/metrics/aar-metrics-aar-1752933477008-lga8c58uz.json
+- tools/build_check/metrics/aar-metrics-aar-1752933570285-c6ye58g1j.json
+- tools/build_check/metrics/aar-metrics-aar-1752933610662-umbvq8jpu.json
+- tools/build_check/metrics/aar-metrics-aar-1752933762394-cwxi7jccr.json
+- tools/build_check/metrics/aar-metrics-aar-1752933772336-mryqdfpag.json
+- tools/build_check/metrics/aar-metrics-aar-1752934796113-ceyabo3v4.json
+- tools/build_check/metrics/aar-metrics-aar-1752936567683-94q74j4d3.json
+- tools/build_check/metrics/aar-metrics-aar-1752938668460-10wwdpzxq.json
+- tools/build_check/metrics/aar-metrics-aar-1752938862847-gyxsau4w6.json
+- tools/build_check/metrics/aar-metrics-aar-1752939144544-awna4f6vz.json
+- tools/build_check/metrics/aar-metrics-aar-1752939418832-073jztmid.json
+- tools/build_check/metrics/aar-metrics-aar-1752939527018-7aw25hgyd.json
+- tools/build_check/metrics/aar-metrics-aar-1752942020856-cnpgv1fys.json
+- tools/build_check/metrics/aar-metrics-aar-1752946567186-qmp6czi4a.json
+- tools/build_check/metrics/aar-metrics-aar-1752946654232-w8qn8tjry.json
+- tools/build_check/metrics/aar-metrics-aar-1752946994513-02wclod1m.json
+- tools/build_check/metrics/aar-metrics-aar-1753014222099-duqly65ic.json
+- tools/build_check/metrics/aar-metrics-aar-1753027073530-9p87ntwl5.json
+- tools/build_check/metrics/aar-metrics-aar-1753028022412-37ty1vv08.json
+- tools/build_check/metrics/aar-metrics-aar-1753029631531-59yy27ztw.json
+- tools/build_check/metrics/aar-metrics-aar-1753030643770-1pnzzik8d.json
+- tools/build_check/metrics/aar-metrics-aar-1753031963089-lj6lg5wtg.json
+- tools/build_check/metrics/aar-metrics-aar-1753038361200-6lbq5c3oi.json
+- tools/build_check/metrics/aar-metrics-aar-1753039216532-tu87zqad4.json
+- tools/build_check/metrics/aar-metrics-aar-1753039522419-ew4se8hbl.json
+- tools/build_check/metrics/aar-metrics-aar-1753040526789-9jkmdzddk.json
+- tools/build_check/metrics/aar-metrics-aar-1753040963380-u2rk94o54.json
+- tools/build_check/metrics/aar-metrics-aar-1753042051112-zl5cmsfs7.json
+- tools/build_check/metrics/aar-metrics-aar-1753042216261-epto9yel2.json
+- tools/build_check/metrics/aar-metrics-aar-1753091803265-g9d071fvp.json
+- tools/build_check/metrics/aar-metrics-aar-1753092191760-t3wh6v9jd.json
+- tools/build_check/metrics/aar-metrics-aar-1753092997192-wv8fa15fn.json
+- tools/build_check/metrics/aar-metrics-aar-1753094250792-3ibgohpjr.json
+- tools/build_check/metrics/aar-metrics-aar-1753096305684-llsi5bjz3.json
+- tools/build_check/metrics/learned-patterns.json
+- tools/build_check/metrics/learning-report-aar-1752319234579-9nm5djepr.json
+- tools/build_check/metrics/learning-report-aar-1752319680415-zkfeix4qc.json
+- tools/build_check/metrics/learning-report-aar-1752319805323-m3yjvkb85.json
+- tools/build_check/metrics/learning-report-aar-1752349641474-p6mmkqymb.json
+- tools/build_check/metrics/learning-report-aar-1752906717877-sji1jw6zt.json
+- tools/build_check/metrics/learning-report-aar-1752908580851-36rxkxjtn.json
+- tools/build_check/metrics/learning-report-aar-1752910729563-u0fqu1xbv.json
+- tools/build_check/metrics/learning-report-aar-1752910734809-d7rmghild.json
+- tools/build_check/metrics/learning-report-aar-1752910740151-vtjzh194x.json
+- tools/build_check/metrics/learning-report-aar-1752910745252-ozfnw0559.json
+- tools/build_check/metrics/learning-report-aar-1752910750713-thqbjzubi.json
+- tools/build_check/metrics/learning-report-aar-1752910756045-4xmzuhzei.json
+- tools/build_check/metrics/learning-report-aar-1752910761086-ojzszhkm6.json
+- tools/build_check/metrics/learning-report-aar-1752910766451-jaiie76o5.json
+- tools/build_check/metrics/learning-report-aar-1752910771698-57o53rlku.json
+- tools/build_check/metrics/learning-report-aar-1752910777338-wwo2w0rvu.json
+- tools/build_check/metrics/learning-report-aar-1752910782604-bdptcxssv.json
+- tools/build_check/metrics/learning-report-aar-1752910787781-bpubs98jn.json
+- tools/build_check/metrics/learning-report-aar-1752910792995-pczjc4og8.json
+- tools/build_check/metrics/learning-report-aar-1752910798150-oagztw2t3.json
+- tools/build_check/metrics/learning-report-aar-1752910803290-l3w4ul0ad.json
+- tools/build_check/metrics/learning-report-aar-1752910808544-aibrf1ynu.json
+- tools/build_check/metrics/learning-report-aar-1752910813682-r8huoz7ev.json
+- tools/build_check/metrics/learning-report-aar-1752910819085-756fzpqpz.json
+- tools/build_check/metrics/learning-report-aar-1752910824509-fi5w9ddl1.json
+- tools/build_check/metrics/learning-report-aar-1752910829868-ptaxzm27a.json
+- tools/build_check/metrics/learning-report-aar-1752910835212-nhafkk2x9.json
+- tools/build_check/metrics/learning-report-aar-1752910840352-bcki4yhoe.json
+- tools/build_check/metrics/learning-report-aar-1752910845773-joxavt25w.json
+- tools/build_check/metrics/learning-report-aar-1752910850757-umh0pobzk.json
+- tools/build_check/metrics/learning-report-aar-1752910855763-lf8ydligx.json
+- tools/build_check/metrics/learning-report-aar-1752910860700-zjiw6qgze.json
+- tools/build_check/metrics/learning-report-aar-1752910865554-lyp0zeqk0.json
+- tools/build_check/metrics/learning-report-aar-1752910870689-3uk4k8jn6.json
+- tools/build_check/metrics/learning-report-aar-1752910875679-tneeqhf7o.json
+- tools/build_check/metrics/learning-report-aar-1752910880683-o3thnvcr9.json
+- tools/build_check/metrics/learning-report-aar-1752910885508-59ttucf0s.json
+- tools/build_check/metrics/learning-report-aar-1752910890522-ljs3ehf19.json
+- tools/build_check/metrics/learning-report-aar-1752910895914-b68n0jljr.json
+- tools/build_check/metrics/learning-report-aar-1752910901338-f3yts97f2.json
+- tools/build_check/metrics/learning-report-aar-1752910998022-5jc9ar3u9.json
+- tools/build_check/metrics/learning-report-aar-1752912280731-s475x6vce.json
+- tools/build_check/metrics/learning-report-aar-1752912975631-opeudh83j.json
+- tools/build_check/metrics/learning-report-aar-1752913692509-g6vpcrmgi.json
+- tools/build_check/metrics/learning-report-aar-1752915455812-tmh82xm3p.json
+- tools/build_check/metrics/learning-report-aar-1752915550515-1bj1estuu.json
+- tools/build_check/metrics/learning-report-aar-1752918236525-kwnscdh5a.json
+- tools/build_check/metrics/learning-report-aar-1752920940408-tf7ic9hv2.json
+- tools/build_check/metrics/learning-report-aar-1752920951613-uwzcnccx3.json
+- tools/build_check/metrics/learning-report-aar-1752926129708-tlcwkb0bu.json
+- tools/build_check/metrics/learning-report-aar-1752927863249-1wepnr8g8.json
+- tools/build_check/metrics/learning-report-aar-1752928923722-bl6mg04za.json
+- tools/build_check/metrics/learning-report-aar-1752929364972-dkimyjhd1.json
+- tools/build_check/metrics/learning-report-aar-1752931046161-dp44du0hv.json
+- tools/build_check/metrics/learning-report-aar-1752933477008-lga8c58uz.json
+- tools/build_check/metrics/learning-report-aar-1752933570285-c6ye58g1j.json
+- tools/build_check/metrics/learning-report-aar-1752933610662-umbvq8jpu.json
+- tools/build_check/metrics/learning-report-aar-1752933762394-cwxi7jccr.json
+- tools/build_check/metrics/learning-report-aar-1752933772336-mryqdfpag.json
+- tools/build_check/metrics/learning-report-aar-1752934796113-ceyabo3v4.json
+- tools/build_check/metrics/learning-report-aar-1752936567683-94q74j4d3.json
+- tools/build_check/metrics/learning-report-aar-1752938668460-10wwdpzxq.json
+- tools/build_check/metrics/learning-report-aar-1752938862847-gyxsau4w6.json
+- tools/build_check/metrics/learning-report-aar-1752939144544-awna4f6vz.json
+- tools/build_check/metrics/learning-report-aar-1752939418832-073jztmid.json
+- tools/build_check/metrics/learning-report-aar-1752939527018-7aw25hgyd.json
+- tools/build_check/metrics/learning-report-aar-1752942020856-cnpgv1fys.json
+- tools/build_check/metrics/learning-report-aar-1752946567186-qmp6czi4a.json
+- tools/build_check/metrics/learning-report-aar-1752946654232-w8qn8tjry.json
+- tools/build_check/metrics/learning-report-aar-1752946994513-02wclod1m.json
+- tools/build_check/metrics/learning-report-aar-1753014222099-duqly65ic.json
+- tools/build_check/metrics/learning-report-aar-1753027073530-9p87ntwl5.json
+- tools/build_check/metrics/learning-report-aar-1753028022412-37ty1vv08.json
+- tools/build_check/metrics/learning-report-aar-1753029631531-59yy27ztw.json
+- tools/build_check/metrics/learning-report-aar-1753030643770-1pnzzik8d.json
+- tools/build_check/metrics/learning-report-aar-1753031963089-lj6lg5wtg.json
+- tools/build_check/metrics/learning-report-aar-1753038361200-6lbq5c3oi.json
+- tools/build_check/metrics/learning-report-aar-1753039216532-tu87zqad4.json
+- tools/build_check/metrics/learning-report-aar-1753039522419-ew4se8hbl.json
+- tools/build_check/metrics/learning-report-aar-1753040963380-u2rk94o54.json
+- tools/build_check/metrics/learning-report-aar-1753042051112-zl5cmsfs7.json
+- tools/build_check/metrics/learning-report-aar-1753042216261-epto9yel2.json
+- tools/build_check/metrics/learning-report-aar-1753091803265-g9d071fvp.json
+- tools/build_check/metrics/learning-report-aar-1753092191760-t3wh6v9jd.json
+- tools/build_check/metrics/learning-report-aar-1753092997192-wv8fa15fn.json
+- tools/build_check/metrics/learning-report-aar-1753094250792-3ibgohpjr.json
+- tools/build_check/metrics/learning-report-aar-1753096305684-llsi5bjz3.json
+- tools/build_check/scripte/build-checker-config.json
 
-- **Health Score:** 0/100 (Massive Verbesserung erforderlich)
-- **Total Issues:** 250 (150 kritisch, 26 wichtig, 59 Optimierung)
-- **Sprachprüfung:** 24 Authentizitäts-Verletzungen
-- **CSS-Violations:** 22 Tailwind-Classes, 46 Multiple-Class-Violations
-- **Content-Issues:** 3 Dateien unter 2300 Wörter Minimum
+## 📝 **DOKUMENTATION**
 
-### **📊 REALE STATISTIKEN (MANUELL ERFASST):**
+- 00_ROHMATERIAL_ARCHIV/README.md
+- 01_PLAYBOOK_CONTENT/Kern-Story_Faktenbasis.md
+- 01_PLAYBOOK_CONTENT/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/briefing_dokument.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/grundrecherche.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/tiefenrecherche.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/016_simon_haenel/umpositionierungs-konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/archiv/Startseite_Text.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/archiv/Startseite_Text_VORSCHLAG_ANONYM.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/design_system.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/ideen_aufgearbeitet.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/ideen_roh.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/SIMON_IDEEN_ZENTRALE.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/ideen/wiederspruchs_regelung.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/chatprotokoll.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/erfolgserlebnisse/2025-07-12_ehrliche_kritik_github_struktur.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/erfolgserlebnisse/2025-07-12_epic_fail_annahmen_fehler.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/erfolgserlebnisse/2025-07-12_ki_unterwebsite_konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/erfolgserlebnisse/2025-07-12_perfekter_slogan_gefunden.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/chats/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/design_konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/inhalt_website.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/konzept/technisches_konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/medien/bilder/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/projekt-konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/projekt_zentrale.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/rechtliche_dokumente/fallbeispiel_Story.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/rechtliche_dokumente/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/blogs/blog_strategie.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/blogs/blog_struktur.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/design_farbpalette_spezifikation.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/globales_design_system.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/landingpage/landingpage.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/simon_design_kontrolle.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/publikation_laien/gerichtsurteil_vereinfacht.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/publikation_vollstaendig/gerichtsurteil_vollstaendig.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/meine_ki_geschichte.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/mensch_ki_synergie.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/simons_erfolgsgeschichte.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_ki/website_struktur_konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/struktur_website/ueber_mich/ueber_mich.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/technisches_master_konzept.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/00_origin/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/01_konzepte_und_entscheidungen/strategie_ausrichtung.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/archiv/legacy_migration/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/build_logs/comprehensive-seo-report.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/fails_learnings/README.md
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/playbook.md
+- docs/08_simon_pers/chats/SMART-PROMPT-CSS-FIXES-2025-07-22.md
+- docs/change_management/backups/2025-07-18_14-45-00_copilot-instructions_backup.md
+- docs/change_management/backups/2025-07-18_15-14-00_README_backup.md
+- docs/change_management/backups/2025-07-18_15-16-00_copilot-instructions_backup.md
+- docs/change_management/backups/2025-07-18_15-20-00_verhaltens_coaching_backup.md
+- docs/change_management/backups/2025-07-18_16-30-00_copilot-instructions_WIDERSPRUCH-BEREINIGUNG_backup.md
+- docs/change_management/backups/2025-07-18_16-30-00_tiefenanalyse_copilot_instructions_backup.md
+- docs/change_management/backups/2025-07-18_16-35-00_copilot-instructions_vor_bereinigung_backup.md
+- docs/change_management/backups/2025-07-18_16-35-00_copilot-instructions_vor_korrektur_backup.md
+- docs/change_management/backups/2025-07-18_16-45-00_global_css_vor_verbesserung_backup.md
+- docs/change_management/backups/2025-07-18_17-00-00_global_css_vor_respektvoller_verbesserung_backup.md
+- docs/change_management/backups/README.md
+- docs/change_management/history/2025-07-18_anti_verzettlungs_system.md
+- docs/change_management/history/2025-07-18_backup_system_integration.md
+- docs/change_management/history/2025-07-18_build_checker_integration.md
+- docs/change_management/history/2025-07-18_coaching_system_integration.md
+- docs/change_management/history/2025-07-18_instruction_verbesserung_design_authentizitaet.md
+- docs/change_management/history/2025-07-18_readme_bereinigung.md
+- docs/change_management/history/2025-07-18_verhaltens_coaching_system.md
+- docs/change_management/history/2025-07-18_widerspruchs_korrekturen_abgeschlossen.md
+- docs/change_management/history/2025-07-18_widerspruch_bereinigung_komplett.md
+- docs/change_management/history/2025-07-19_14-50_index-astro-transformation-completed.md
+- docs/change_management/history/2025-07-19_phase_1_instructions_migration.md
+- docs/change_management/history/2025-07-19_phase_2_documentation_updates.md
+- docs/change_management/history/2025-07-19_phase_3_content_migration.md
+- docs/change_management/history/2025-07-22_tiefenanalyse_zwang_internalisierung.md
+- docs/change_management/history/README.md
+- docs/change_management/README.md
+- docs/change_management/TODO_ANTI_VERZETTLUNGS_SYSTEM.md
+- docs/checker_entwicklung/anforderungen/css/kontrast_anforderungen.md
+- docs/checker_entwicklung/anforderungen/seo/organische_optimierung.md
+- docs/checker_entwicklung/anforderungen/verbesserungs_protokoll.md
+- docs/checker_entwicklung/anforderungen/vollstaendige_anforderungen.md
+- docs/checker_entwicklung/css_checker_entwicklung.md
+- docs/checker_entwicklung/entscheidungen_log.md
+- docs/checker_entwicklung/naechste_schritte.md
+- docs/checker_entwicklung/probleme_und_loesungen.md
+- docs/checker_entwicklung/README.md
+- docs/MASTER_DESIGN_STANDARDS.md
+- docs/todos/archiv/erledigte_todos_2025-07-19.md
+- docs/todos/issues.md
+- docs/todos/README.md
+- docs/todos/todos.md
+- docs/todos/todo_001_ui_komponenten_bestandsaufnahme.md
+- docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md
+- docs/website_struktur/origin/fallbeispiel_Story_formatted.md
+- docs/website_struktur/origin/fallbeispiel_story_original_2025-07-12.md
+- docs/website_struktur/origin/simons_authentische_sprache.md
+- docs/website_struktur/origin/startseite.md
+- docs/website_struktur/README.md
+- docs/website_struktur/recherche/grundrecherche.md
+- docs/website_struktur/recherche/tiefenrecherche.md
+- docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md
+- docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md
+- docs/website_struktur/recherche/tiefen_recherche/ph03_Go-to-Market-Plan für Coaching-Launch_.md
+- docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md
+- docs/website_struktur/statische-seiten/README.md
+- docs/website_struktur/statische-seiten/static/index.md
+- docs/website_struktur/website_design/global_css.md
+- docs/website_struktur/website_elemente/footer.md
+- docs/website_struktur/website_elemente/header.md
+- public/assets/README.md
+- public/assets/videos/README.md
+- public/robots.txt
+- README.md
+- src/content/blog/mindset-gegen-grosskonzern.md
+- src/content/pages/index.md
+- src/content/pages/ueber-mich.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-03T09-46-58-995Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-03T09-54-31-257Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T12-22-27-997Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T12-40-03-515Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T12-40-51-259Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-03-29-035Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-07-45-873Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-20-12-806Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-47-02-504Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-47-57-722Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-48-40-050Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-54-55-479Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-57-21-373Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T13-59-07-731Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T14-04-01-476Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T14-07-11-867Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T14-42-12-811Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T14-59-45-017Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T15-20-31-255Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T15-23-01-623Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T18-21-39-706Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-18-53-465Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-32-15-434Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-45-06-960Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-54-24-426Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-57-02-033Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T19-58-43-721Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T20-00-06-032Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T20-08-58-743Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-06T20-12-11-838Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-12T11-28-00-414Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-12T11-30-05-322Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-12T19-47-21-473Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T06-31-57-876Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-03-00-850Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-38-49-562Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-38-54-808Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-00-150Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-05-251Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-10-712Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-16-043Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-21-085Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-26-450Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-31-697Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-37-337Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-42-603Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-47-780Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-52-994Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-39-58-149Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-03-289Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-08-543Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-13-681Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-19-085Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-24-508Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-29-867Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-35-211Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-40-351Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-45-772Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-50-756Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-40-55-762Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-00-699Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-05-553Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-10-688Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-15-678Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-20-682Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-25-507Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-30-521Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-35-912Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-41-41-337Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T07-43-18-020Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T08-04-40-728Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T08-16-15-630Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T08-28-12-507Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T08-57-35-811Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T08-59-10-514Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T09-43-56-524Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T10-29-00-406Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T10-29-11-611Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T11-55-29-706Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T12-24-23-248Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T12-42-03-721Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T12-49-24-971Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T13-17-26-160Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T13-57-57-007Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T13-59-30-284Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T14-00-10-661Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T14-02-42-393Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T14-02-52-334Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T14-19-56-112Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T14-49-27-682Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T15-24-28-459Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T15-27-42-845Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T15-32-24-543Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T15-36-58-831Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T15-38-47-017Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T16-20-20-855Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T17-36-07-184Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T17-37-34-231Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-19T17-43-14-512Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T12-23-42-097Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T15-57-53-528Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T16-13-42-409Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T16-40-31-530Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T16-57-23-769Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T17-19-23-088Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T19-06-01-199Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T19-20-16-530Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T19-25-22-418Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T19-42-06-787Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T19-49-23-378Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T20-07-31-111Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-20T20-10-16-260Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-21T09-56-43-264Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-21T10-03-11-759Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-21T10-16-37-190Z.md
+- tools/build_check/logfiles/archiv/juli/build-checker-2025-07-21T10-37-30-790Z.md
+- tools/build_check/logfiles/archiv/juli/simplified-build-check-2025-07-20T13-33-36-150Z.md
+- tools/build_check/logfiles/archiv/juli/simplified-build-check-2025-07-20T13-34-06-309Z.md
+- tools/build_check/logfiles/archiv/juli/simplified-build-check-2025-07-20T13-34-55-279Z.md
+- tools/build_check/logfiles/build-checker-2025-07-21T11-11-45-682Z.md
+- tools/build_check/logfiles/enhanced-build-checker-v2-2025-07-21T12-40-04-578Z.md
+- tools/build_check/logfiles/enhanced-build-checker-v2-2025-07-21T13-02-26-499Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T13-51-20-361Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T13-55-03-690Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T20-04-45-815Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T20-06-05-215Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-22T06-05-58-899Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-22T06-13-33-506Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-22T06-17-09-307Z.md
+- tools/build_check/logfiles/simon-build-checker-v3-2025-07-22T06-18-04-424Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-36-07-614Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-42-25-571Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-44-20-810Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-48-06-046Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-49-40-064Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-50-39-681Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-54-04-060Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T06-54-37-433Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T07-08-37-984Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T07-15-19-735Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T07-30-03-156Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T07-49-02-359Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T07-51-19-724Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T11-05-01-939Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T11-06-02-715Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T11-23-38-879Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T11-32-34-283Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T11-41-42-647Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T12-26-02-675Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T18-25-23-841Z.md
+- tools/build_check/logfiles/simon-css-checker-v1-2025-07-21T20-18-46-041Z.md
+- tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T05-15-26-852Z.md
+- tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T06-06-23-568Z.md
+- tools/build_check/README.md
 
-- **Gesamtdateien:** Ca. 40 relevante Dateien (korrekt erfasst)
-- **Markdown-Dateien:** 20+ MD-Dateien
-- **Verzeichnisse:** 8 Hauptverzeichnisse
-- **Build-Tools:** 10 Build-Check Scripte
-- **Astro-Build:** Funktionsfähig aber CSS fehlt
-- **Archiv-Struktur:** 1 Legacy-Archiv in 01_PLAYBOOK_CONTENT
+## 📄 **SONSTIGE DATEIEN**
 
-## 🗂️ **KORREKTE VERZEICHNISSTRUKTUR (MANUELL ERFASST):**
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/medien/bilder/simon_haenel_entschlossen.webp
+- 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/projekt/medien/bilder/simon_haenel_natur_froehlich.webp
+- public/assets/images/simon-placeholder.svg
+- public/assets/images/startseite-index/simon_haenel_natur_froehlich.webp
+- public/assets/images/startseite_uebermich/simon_haenel_entschlossen.webp
+- src/layouts/Layout.astro
+- src/pages/blog/index.astro
+- src/pages/blog/[slug].astro
+- src/pages/datenschutz.astro
+- src/pages/disclaimer.astro
+- src/pages/impressum.astro
+- src/pages/index.astro
+- src/styles/global.css
+- tools/build_check/scripte/build-checker-broken.cjs.bak
+- tools/build_check/scripte/build-checker-old-broken.cjs.bak
+- tools/build_check/scripte/integrate-build-check.ps1
+- tools/build_check/scripte/run-build-checker.ps1
 
-```
-simon-recht/
-├── .astro/                  # Astro Build Cache
-├── .git/                    # Git Repository
-├── .github/                 # GitHub Instructions & Prompts
-│   ├── instructions/        # KI-Instructions
-│   │   ├── organisation/    # Organisations-Struktur
-│   │   │   ├── inventar/    # Projekt-Inventar
-│   │   │   └── hook-training/ # Hook-Training
-│   │   ├── agent.md         # KI-Agent Config
-│   │   ├── anrede.md        # Sprachregelung
-│   │   ├── original_content_management.md
-│   │   └── settings.md      # KI-Einstellungen
-│   ├── copilot-instructions.md # Zentrale Instructions
-│   └── prompts/             # Prompt-Templates
-├── 00_ROHMATERIAL_ARCHIV/   # Rohmaterial-Archiv
-│   └── README.md
-├── 01_PLAYBOOK_CONTENT/     # Playbook Content
-│   ├── Kern-Story_Faktenbasis.md
-│   ├── README.md
-│   └── _altes_chaos_archiv/ # Legacy-Chaos-Archiv
-│       ├── 016_simon_haenel/
-│       ├── archiv/
-│       ├── design_system.md
-│       ├── ideen/
-│       ├── projekt/
-│       └── _ARCHIV_CHAOS/
-├── docs/                    # Dokumentation
-│   ├── todos/              # Todo-Management
-│   │   ├── issues.md       # Issues
-│   │   ├── README.md       # Todo-README
-│   │   └── todos.md        # Todos
-│   └── website_struktur/   # Website-Struktur
-│       ├── statische-seiten/ # Statische Seiten
-│       │   ├── static/     # MD-Dateien für statische Seiten
-│       │   │   ├── index.md     # Homepage MD
-│       │   │   └── ueber_mich.md # Über-mich MD
-│       │   └── README.md   # Statische Seiten README
-│       ├── dynamische-seiten/ # Dynamische Seiten
-│       │   └── blog/       # Blog-MD-Dateien (LEER)
-│       ├── origin/         # Simon's Original-Content
-│       │   ├── fallbeispiel_Story_formatted.md
-│       │   ├── fallbeispiel_story_original_2025-07-12.md
-│       │   ├── simons_authentische_sprache.md
-│       │   └── startseite.md
-│       ├── recherche/      # Recherche-Dateien
-│       │   ├── grundrecherche.md
-│       │   ├── tiefenrecherche.md
-│       │   └── tiefen_recherche/
-│       │       ├── ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md
-│       │       ├── ph02_SEO- und Content-Strategie DACH_.md
-│       │       ├── ph03_Go-to-Market-Plan für Coaching-Launch_.md
-│       │       └── ph04_Digitale Bildung_ Selbstvertretung für Laien_.md
-│       ├── website_design/ # Design-System
-│       │   └── global_css.md # CSS-Design in natürlicher Sprache
-│       ├── website_elemente/ # Website-Elemente
-│       │   ├── footer.md
-│       │   └── header.md
-│       └── README.md       # Website-Struktur README
-├── dist/                   # Astro Build Output (bei erfolgreichem Build)
-├── node_modules/           # NPM Dependencies
-├── public/                 # Static Assets
-│   ├── assets/
-│   │   └── images/
-│   │       ├── simon-placeholder.svg
-│   │       ├── simon_haenel_entschlossen.webp
-│   │       └── simon_haenel_natur_froehlich.webp
-│   └── robots.txt
-├── src/                    # Astro Source Code
-│   ├── content/            # Content Collections
-│   │   ├── blog/
-│   │   │   └── mindset-gegen-grosskonzern.md
-│   │   └── config.ts       # Content Config
-│   ├── layouts/            # Astro Layouts
-│   │   └── Layout.astro    # Basis-Layout (referenziert fehlendes CSS)
-│   ├── pages/              # Astro Pages
-│   │   ├── blog/
-│   │   │   ├── index.astro # Blog-Index
-│   │   │   └── [slug].astro # Blog-Slug
-│   │   ├── beweise.astro
-│   │   ├── datenschutz.astro
-│   │   ├── disclaimer.astro
-│   │   ├── impressum.astro
-│   │   ├── index.astro     # Homepage (mit Inline-Styles)
-│   │   └── urteil.astro
-│   └── styles/             # CSS-Dateien (LEER - CSS fehlt)
-├── tools/                  # Build Tools & Scripts
-│   └── build_check/        # Build-Check-System
-│       ├── logfiles/       # Build-Log-Dateien
-│       ├── metrics/        # Metrics-Dateien
-│       ├── scripte/        # Build-Check-Scripte
-│       │   ├── aar-metrics-collector.cjs
-│       │   ├── aar-metrics-collector.js
-│       │   ├── build-checker-config.json
-│       │   ├── build-checker.cjs
-│       │   ├── build-logger-seo.js
-│       │   ├── frontmatter-seo-validator.js
-│       │   ├── integrate-build-check.ps1
-│       │   ├── internal-linking.js
-│       │   ├── lcp-monitor.js
-│       │   └── run-build-checker.ps1
-│       └── README.md       # Build-Check README
-├── astro.config.mjs        # Astro Configuration
-├── convert-to-webp.js      # Bild-Konvertierung
-├── package.json            # Node.js Config
-├── package-lock.json       # NPM Lock
-├── tailwind.config.mjs     # Tailwind Config
-└── README.md               # Projekt-README
-```
-
-## 📄 **DETAILLIERTE DATEI-INVENTUR (MANUELL ERFASST)**
-
-### **✅ KORREKTE WEBSITE-STRUKTUR (SIMON'S SYSTEM):**
-
-| Kategorie                  | Pfad                                                          | Status              | Zweck                             |
-| -------------------------- | ------------------------------------------------------------- | ------------------- | --------------------------------- |
-| **Statische Seiten (MD)**  | `docs/website_struktur/statische-seiten/static/`              | ✅ Existiert        | MD-Dateien für statische Seiten   |
-| **Homepage MD**            | `docs/website_struktur/statische-seiten/static/index.md`      | ✅ Existiert        | Homepage-Content                  |
-| **Über-mich MD**           | `docs/website_struktur/statische-seiten/static/ueber_mich.md` | ✅ Existiert        | Über-mich-Content                 |
-| **Dynamische Seiten (MD)** | `docs/website_struktur/dynamische-seiten/blog/`               | ✅ Existiert (LEER) | MD-Dateien für Blogs              |
-| **Design-System**          | `docs/website_struktur/website_design/global_css.md`          | ✅ Existiert        | CSS-Design in natürlicher Sprache |
-| **Original-Content**       | `docs/website_struktur/origin/`                               | ✅ Existiert        | Simon's authentische Inhalte      |
-
-### **⚠️ KRITISCHE PROBLEME:**
-
-| Problem                 | Pfad                                            | Status                   | Lösung                         |
-| ----------------------- | ----------------------------------------------- | ------------------------ | ------------------------------ |
-| **CSS fehlt**           | `src/styles/global.css`                         | ❌ Fehlt                 | Aus `global_css.md` generieren |
-| **Inline-Styles**       | `src/pages/index.astro`                         | ❌ Problematisch         | Aus `index.md` neu generieren  |
-| **Build-Fehler**        | Layout.astro                                    | ❌ Kann CSS nicht finden | CSS-Datei erstellen            |
-| **Leere Verzeichnisse** | `docs/website_struktur/dynamische-seiten/blog/` | ⚠️ Leer                  | Blog-MD-Dateien erstellen      |
-
-### **🔧 SIMON'S WORKFLOW (KORREKT VERSTANDEN):**
-
-1. **MD-Dateien erstellen/bearbeiten** → Simon arbeitet in natürlicher Sprache
-2. **global_css.md** → Design-System in natürlicher Sprache
-3. **KI konvertiert** → MD zu Astro mit CSS-Klassen
-4. **Build-Prozess** → Generiert finale Website
-
-### **🎯 NÄCHSTE SCHRITTE (BASIEREND AUF SIMON'S SYSTEM):**
-
-1. **CSS-Datei erstellen** → Aus `global_css.md` generieren
-2. **Astro-Dateien reparieren** → Aus MD-Dateien neu generieren
-3. **Build-Fehler beheben** → CSS-Referenzen reparieren
-4. **Workflow etablieren** → MD → Astro Pipeline
-
-## ⚠️ **ERKANNTE WIDERSPRÜCHE (GELÖST):**
-
-### **🔍 ALTE INVENTAR-PROBLEME:**
-
-- ❌ **FALSCH:** Behauptete 172 Dateien (übertrieben)
-- ❌ **FALSCH:** Verwendete verbotene file-search
-- ❌ **FALSCH:** Erwähnte nicht-existente Verzeichnisse
-- ❌ **FALSCH:** Verwirrende Archiv-Strukturen
-
-### **✅ KORREKTE REALITÄT:**
-
-- ✅ **KORREKT:** Ca. 40 relevante Dateien
-- ✅ **KORREKT:** Manuelle Erfassung ohne file-search
-- ✅ **KORREKT:** Existierende Verzeichnisse dokumentiert
-- ✅ **KORREKT:** Klare Archiv-Struktur erkannt
-
-## 🎯 **PROJEKT-STATUS (KORREKT):**
-
-### **✅ FUNKTIONIERT:**
-
-- Astro-Framework konfiguriert
-- Content-Collections eingerichtet
-- Build-Check-System vorhanden
-- Simon's MD-Workflow-Struktur existiert
-
-### **❌ PROBLEME:**
-
-- CSS-Datei fehlt (Build-Fehler)
-- Inline-Styles statt CSS-Klassen
-- Dynamische Blog-Seiten leer
-- Workflow nicht implementiert
 
 ---
 
-**✅ Inventur Status:** KORREKT UND VOLLSTÄNDIG - Manuell erfasst ohne file-search
-**📅 Letzte Aktualisierung:** 2025-07-17
-**🔄 Nächste Inventur:** Bei strukturellen Änderungen
-
-## 📄 **KOMPLETTES DATEI-INVENTAR**
-
-### **Root-Ebene**
-
-| Datei                 | Typ           | Zweck                         | Status   |
-| --------------------- | ------------- | ----------------------------- | -------- |
-| `astro.config.mjs`    | Config        | Astro Framework Konfiguration | ✅ Aktiv |
-| `convert-to-webp.js`  | Script        | Bildkonvertierung zu WebP     | ✅ Aktiv |
-| `package.json`        | Config        | Node.js Projektconfig         | ✅ Aktiv |
-| `package-lock.json`   | Lock          | NPM Dependency Lock           | ✅ Aktiv |
-| `tailwind.config.mjs` | Config        | TailwindCSS Konfiguration     | ✅ Aktiv |
-| `README.md`           | Dokumentation | Projekt-Hauptdokumentation    | ✅ Aktiv |
-| `.gitignore`          | Config        | Git Ignore Rules              | ✅ Aktiv |
-
-### **Source Code (src/)**
-
-| Datei                                            | Typ     | Zweck                      | Status              |
-| ------------------------------------------------ | ------- | -------------------------- | ------------------- |
-| `src/content/config.ts`                          | Config  | Content Collections Schema | ✅ Aktiv            |
-| `src/content/blog/mindset-gegen-grosskonzern.md` | Content | Blog-Artikel               | ✅ Aktiv            |
-| `src/layouts/Layout.astro`                       | Layout  | Astro Basis-Layout         | ✅ Aktiv            |
-| `src/pages/index.astro`                          | Page    | Homepage                   | ✅ Aktiv            |
-| `src/pages/index_new.astro`                      | Page    | Neue Homepage Version      | ⚠️ Parallel Version |
-| `src/pages/urteil.astro`                         | Page    | Gerichtsurteil Seite       | ✅ Aktiv            |
-| `src/pages/beweise.astro`                        | Page    | Beweise Seite              | ✅ Aktiv            |
-| `src/pages/impressum.astro`                      | Page    | Impressum                  | ✅ Aktiv            |
-| `src/pages/datenschutz.astro`                    | Page    | Datenschutz                | ✅ Aktiv            |
-| `src/pages/disclaimer.astro`                     | Page    | Disclaimer                 | ✅ Aktiv            |
-| `src/pages/blog/index.astro`                     | Page    | Blog Index                 | ✅ Aktiv            |
-| `src/pages/blog/[slug].astro`                    | Page    | Blog Dynamic Pages         | ✅ Aktiv            |
-
-### **Public Assets (public/)**
-
-| Datei                                                    | Typ   | Zweck                        | Status   |
-| -------------------------------------------------------- | ----- | ---------------------------- | -------- |
-| `public/robots.txt`                                      | SEO   | Robots.txt für Suchmaschinen | ✅ Aktiv |
-| `public/assets/images/simon_haenel_natur_froehlich.webp` | Image | Simon Portrait #1            | ✅ Aktiv |
-| `public/assets/images/simon_haenel_entschlossen.webp`    | Image | Simon Portrait #2            | ✅ Aktiv |
-| `public/assets/images/simon-placeholder.svg`             | Image | Placeholder SVG              | ✅ Aktiv |
-
-### **Build Output (dist/)**
-
-| Datei                                             | Typ   | Zweck               | Status       |
-| ------------------------------------------------- | ----- | ------------------- | ------------ |
-| `dist/index.html`                                 | Build | Homepage Build      | ✅ Generated |
-| `dist/urteil/index.html`                          | Build | Urteil Seite Build  | ✅ Generated |
-| `dist/beweise/index.html`                         | Build | Beweise Seite Build | ✅ Generated |
-| `dist/blog/index.html`                            | Build | Blog Index Build    | ✅ Generated |
-| `dist/blog/mindset-gegen-grosskonzern/index.html` | Build | Blog Article Build  | ✅ Generated |
-| `dist/impressum/index.html`                       | Build | Impressum Build     | ✅ Generated |
-| `dist/datenschutz/index.html`                     | Build | Datenschutz Build   | ✅ Generated |
-| `dist/disclaimer/index.html`                      | Build | Disclaimer Build    | ✅ Generated |
-| `dist/sitemap-index.xml`                          | SEO   | Sitemap Index       | ✅ Generated |
-| `dist/sitemap-0.xml`                              | SEO   | Sitemap             | ✅ Generated |
-| `dist/robots.txt`                                 | SEO   | Robots.txt Build    | ✅ Generated |
-
-### **.github/instructions/ (VOLLSTÄNDIG)**
-
-| Datei                            | Typ           | Zweck                     | Status               |
-| -------------------------------- | ------------- | ------------------------- | -------------------- |
-| `index.md`                       | Dokumentation | Zentrale KI-Übersicht     | ✅ Aktiv - Erweitert |
-| `agent.md`                       | Anleitung     | KI-Agent Konfiguration    | ✅ Aktiv             |
-| `ANLEITUNG_FÜR_LAIEN.md`         | Anleitung     | Benutzerhandbuch          | ⚠️ Umbenennung nötig |
-| `anrede.md`                      | Richtlinie    | Sprachregelung DU/Sie     | ✅ Aktiv             |
-| `beispiel-instruction.md`        | Vorlage       | Template für Instructions | ⚠️ Umbenennung nötig |
-| `original_content_management.md` | Richtlinie    | Content-Archivierung      | ✅ Aktiv             |
-| `settings.md`                    | Konfiguration | KI-Einstellungen          | ✅ Aktiv             |
-
-### **.github/instructions/organisation/ (VOLLSTÄNDIG)**
-
-| Datei                                    | Typ           | Zweck                          | Status         |
-| ---------------------------------------- | ------------- | ------------------------------ | -------------- |
-| `README.md`                              | Dokumentation | Organisations-Übersicht        | ✅ Aktiv       |
-| `namenskonvention.md`                    | Richtlinie    | Namens- & Strukturkonventionen | ✅ Erweitert   |
-| `inventar/projekt_inventar.md`           | Inventar      | **DIESE DATEI**                | ✅ Live Update |
-| `hook-training/README.md`                | Training      | Hook Training Übersicht        | ✅ Aktiv       |
-| `hook-training/generelles.md`            | Training      | Generelle Hook Regeln          | ✅ Aktiv       |
-| `hook-training/anti_meta_instruction.md` | Training      | Anti-Meta Rules                | ✅ Aktiv       |
-
-### **.github/prompts/**
-
-| Datei                | Typ     | Zweck           | Status               |
-| -------------------- | ------- | --------------- | -------------------- |
-| `beispiel-prompt.md` | Vorlage | Prompt-Template | ⚠️ Umbenennung nötig |
-
-### **docs/projekt/ (HAUPTDOKUMENTATION)**
-
-| Verzeichnis/Datei               | Typ           | Zweck                          | Status   |
-| ------------------------------- | ------------- | ------------------------------ | -------- |
-| `projekt_zentrale.md`           | Zentrale      | Projekt-Hauptzentrale          | ✅ Aktiv |
-| `projekt-konzept.md`            | Dokumentation | Hauptkonzept                   | ✅ Aktiv |
-| `technisches_master_konzept.md` | Dokumentation | Technisches Master-Konzept     | ✅ Aktiv |
-| `README.md`                     | Navigation    | Projekt-Navigation             | ✅ Aktiv |
-| `konzept/`                      | Verzeichnis   | Detailkonzepte (5 Dateien)     | ✅ Aktiv |
-| `struktur_website/`             | Verzeichnis   | Website-Struktur (15+ Dateien) | ✅ Aktiv |
-| `medien/bilder/`                | Verzeichnis   | Projekt-Medien (3 Dateien)     | ✅ Aktiv |
-| `rechtliche_dokumente/`         | Verzeichnis   | Rechtsinhalte (2 Dateien)      | ✅ Aktiv |
-| `chats/`                        | Verzeichnis   | Chat-Protokolle & Erfolge      | ✅ Aktiv |
-
-### **docs/projekt/struktur_website/ (KRITISCH FÜR DESIGN)**
-
-| Datei                                  | Typ         | Zweck                            | Status               |
-| -------------------------------------- | ----------- | -------------------------------- | -------------------- |
-| `globales_design_system.md`            | Design      | Global Design System             | ✅ Aktiv - Erweitert |
-| `design_farbpalette_spezifikation.md`  | Design      | Farbpalette Spezifikation        | ✅ Aktiv             |
-| `simon_design_kontrolle.md`            | Design      | **SIMONS PERSÖNLICHE KONTROLLE** | ✅ NEU               |
-| `landingpage/landingpage.md`           | Landingpage | PAS Framework Spec               | ✅ Aktiv             |
-| `README.md`                            | Navigation  | Struktur Navigation              | ✅ Aktiv             |
-| `blogs/blog_struktur.md`               | Blog        | Blog Struktur                    | ✅ Aktiv             |
-| `blogs/blog_strategie.md`              | Blog        | Blog Strategie                   | ✅ Aktiv             |
-| `ueber_mich/ueber_mich.md`             | Content     | Über Mich Seite                  | ✅ Aktiv             |
-| `ueber_mich/ueber_ki/`                 | Verzeichnis | KI-Themen (6 Dateien)            | ✅ Aktiv             |
-| `ueber_mich/publikation_vollstaendig/` | Content     | Vollständige Publikation         | ✅ Aktiv             |
-| `ueber_mich/publikation_laien/`        | Content     | Laien-Publikation                | ✅ Aktiv             |
-
-### **docs/ideen/ (SIMONS IDEENSAMMLUNG)**
-
-| Datei                       | Typ        | Zweck                      | Status   |
-| --------------------------- | ---------- | -------------------------- | -------- |
-| `SIMON_IDEEN_ZENTRALE.md`   | Zentrale   | Simons Haupt-Ideensammlung | ✅ Aktiv |
-| `ideen_aufgearbeitet.md`    | Ideen      | Aufgearbeitete Ideen       | ✅ Aktiv |
-| `ideen_roh.md`              | Ideen      | Rohe Ideen-Sammlung        | ✅ Aktiv |
-| `wiederspruchs_regelung.md` | Regelung   | Widerspruchs-Protokoll     | ✅ Aktiv |
-| `README.md`                 | Navigation | Ideen Navigation           | ✅ Aktiv |
-
-### **docs/\_ARCHIV_CHAOS/ (LEGACY STRUKTUR - PROBLEMATISCH)**
-
-| Verzeichnis                       | Dateien           | Problem                      | Aktion          |
-| --------------------------------- | ----------------- | ---------------------------- | --------------- |
-| `00_origin/`                      | 1 README          | Legacy Origin                | ⚠️ Archivierung |
-| `01_konzepte_und_entscheidungen/` | 1 Strategie-Datei | DUPLIKAT zu projekt/         | ⚠️ Migration    |
-| `016_simon_haenel/`               | 12+ Dateien       | Alte Simon-Recherche         | ⚠️ Archivierung |
-| `archiv/legacy_migration/`        | 1 README          | Doppelte Archivierung        | ⚠️ Cleanup      |
-| `authentizitaet/`                 | 1 Sprach-Datei    | Simons authentische Sprache  | ⚠️ Migration    |
-| `build_logs/`                     | 1 SEO Report      | Build-Logs gehören zu tools/ | ⚠️ Migration    |
-| `fails_learnings/`                | 1 README          | Fails & Learnings            | ⚠️ Behalten     |
-| `fallbeispiel/`                   | 1 Story           | Fallbeispiel Mindset         | ⚠️ Migration    |
-
-### **tools/build_check/ (BUILD TOOLS)**
-
-| Kategorie    | Anzahl    | Zweck                          | Status        |
-| ------------ | --------- | ------------------------------ | ------------- |
-| **Scripts**  | 9 Dateien | Build-Checking, SEO, AAR       | ✅ Aktiv      |
-| **Metrics**  | 8 JSON    | AAR Metrics & Learning Reports | ✅ Generiert  |
-| **Logfiles** | 20+ MD    | Build-Check Logs (Archiviert)  | ✅ Archiviert |
-| **Config**   | 1 JSON    | Build-Checker Konfiguration    | ✅ Aktiv      |
-
-## 🔧 **Scripts und Tools (VOLLSTÄNDIG)**
-
-### **Root-Level Scripts**
-
-| Script               | Sprache    | Zweck             | Pfad                  | Status   |
-| -------------------- | ---------- | ----------------- | --------------------- | -------- |
-| `convert-to-webp.js` | JavaScript | Bildkonvertierung | `/convert-to-webp.js` | ✅ Aktiv |
-
-### **Build-Check Tools (tools/build_check/scripte/) - ENHANCED v6.0.0**
-
-| Script                          | Sprache    | Zweck                                      | Status              |
-| ------------------------------- | ---------- | ------------------------------------------ | ------------------- |
-| `build-checker.cjs`             | Node.js    | **Haupt Build-Checker mit neuen Features** | ✅ **v6.0.0 AKTIV** |
-| `aar-metrics-collector.js/.cjs` | Node.js    | AAR Metrics Sammlung                       | ✅ Aktiv            |
-| `build-logger-seo.js`           | Node.js    | SEO Build Logger                           | ✅ Aktiv            |
-| `frontmatter-seo-validator.js`  | Node.js    | SEO Frontmatter Validator                  | ✅ Aktiv            |
-| `internal-linking.js`           | Node.js    | Internal Link Checker                      | ✅ Aktiv            |
-| `lcp-monitor.js`                | Node.js    | Largest Contentful Paint Monitor           | ✅ Aktiv            |
-| `run-build-checker.ps1`         | PowerShell | Build-Checker Runner                       | ✅ Aktiv            |
-| `integrate-build-check.ps1`     | PowerShell | Build-Check Integration                    | ✅ Aktiv            |
-| `build-checker-config.json`     | Config     | Build-Checker Konfiguration                | ✅ Aktiv            |
-
-**🆕 NEUE BUILD-CHECKER FEATURES:**
-
-- **Sprachprüfung:** Großkonzern vs. Pensionskasse Terminologie-Validation
-- **CSS-Guidelines:** Natürliche Sprache Design-System Compliance
-- **Anti-Redundanz:** Verhindert doppelte Datei-Erstellung automatisch
-
-### **Astro Framework**
-
-| Config                | Typ    | Zweck                      | Status   |
-| --------------------- | ------ | -------------------------- | -------- |
-| `astro.config.mjs`    | Config | Astro Framework Config     | ✅ Aktiv |
-| `tailwind.config.mjs` | Config | TailwindCSS Config         | ✅ Aktiv |
-| `package.json`        | Config | NPM Dependencies & Scripts | ✅ Aktiv |
-
-## ⚠️ **ERKANNTE INKONSISTENZEN & PROBLEME (AKTUALISIERT)**
-
-### **� KRITISCHE NAMENSKONVENTIONS-VERSTÖSSE:**
-
-1. `ANLEITUNG_FÜR_LAIEN.md` → sollte `laien_anleitung.md` heißen
-2. `beispiel-instruction.md` → sollte `beispiel_instruction.md` heißen
-3. `beispiel-prompt.md` → sollte `beispiel_prompt.md` heißen
-4. `design_system.md` (docs/) → DUPLIKAT zu `globales_design_system.md`
-
-### **� STRUKTUR-OPTIMIERUNGEN:**
-
-1. **LEGACY CHAOS:** `docs/_ARCHIV_CHAOS/` enthält 7 Unterverzeichnisse mit veralteten Inhalten
-2. **DUPLIKATE:** Mehrere Design-System Dateien mit überlappenden Inhalten
-3. **PARALLEL VERSIONEN:** `src/pages/index.astro` vs `src/pages/index_new.astro`
-4. **ARCHIV HIERARCHIE:** 3-stufige Archiv-Struktur (ineffizient)
-
-### **🟢 POSITIVE BEFUNDE:**
-
-1. **BUILD SYSTEM:** Funktionsfähig mit 14 generierten HTML-Seiten
-2. **ASTRO FRAMEWORK:** Vollständig konfiguriert und funktional
-3. **CONTENT COLLECTIONS:** Ordnungsgemäß eingerichtet
-4. **SEO SETUP:** Sitemaps und robots.txt generiert
-5. **DESIGN CONTROL:** Simon's persönliche Kontrolldatei erstellt
-
-## 🎯 **NÄCHSTE REPARATUR-SCHRITTE (PRIORISIERT):**
-
-### **Phase 1: Sofortige Reparaturen**
-
-1. ✅ **Inventur vollständig** - ERLEDIGT
-2. 🔧 **Namenskonventions-Fixes:** 4 Dateien umbenennen
-3. 🗑️ **Duplikat-Elimination:** `docs/design_system.md` entfernen
-
-### **Phase 2: Strukturelle Optimierung**
-
-1. 📦 **Legacy-Archivierung:** `docs/_ARCHIV_CHAOS/` konsolidieren
-2. 🔗 **Referenz-Reparatur:** README-Links aktualisieren
-3. 🎨 **Design-Implementation:** Simons Farbspezifikationen
-
-### **Phase 3: Langfristige Optimierung**
-
-1. 📄 **Parallel-Versionen auflösen:** index.astro vs index_new.astro
-2. 🧹 **Archiv-Hierarchie vereinfachen**
-3. 📊 **Build-Tool Integration verbessern**
-
----
-
-**✅ Inventur Status:** VOLLSTÄNDIG - Enhanced Build-Checker v6.0.0 installiert mit Sprachprüfung, CSS-Guidelines und Anti-Redundanz-System
-**📅 Nächste Inventur:** Bei strukturellen Änderungen oder auf Anfrage
-**🎯 Build-Checker:** 250 Issues erkannt, 24 Sprachverletzungen, Health Score 0/100
+**🤖 Dieses Inventar wurde automatisch generiert.**  
+**Manuelle Ausführung:** `node tools/inventory/auto-inventory.js`  
+**Build-Integration:** Läuft automatisch vor jedem Build-Prozess.

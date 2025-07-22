@@ -407,13 +407,14 @@ em {
 .hero {
   background-color: var(--asphaltschwarz);
   padding: 4rem 0;
-  text-align: center;
+  text-align: left; /* Links statt Center für 2-Spalten */
 }
 
 .hero-title {
   font-size: 3.5rem;
   color: var(--glut-orange);
   margin-bottom: 1rem;
+  line-height: 1.1; /* Bessere Zeilenhöhe für lange Titel */
 }
 
 .hero-subtitle {
@@ -426,9 +427,20 @@ em {
   font-size: 1.125rem;
   color: var(--text-hell);
   margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  /* ENTFERNT: max-width für 2-Spalten-Layout */
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero-cta {
@@ -482,7 +494,8 @@ pre code {
 /* 🗂️ GRID-SYSTEME */
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem; /* Vergrößert von 1.5rem für bessere Abstände */
+  align-items: center; /* Vertikale Zentrierung für Hero-Section */
 }
 
 .grid-2 {
@@ -497,11 +510,34 @@ pre code {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* 📱 RESPONSIVE GRID-BREAKPOINTS */
+@media (max-width: 1024px) {
+  .grid-2 {
+    grid-template-columns: 1fr; /* Tablet: Single Column */
+    gap: 3rem; /* Größerer Abstand bei Stapelung */
+  }
+}
+
 @media (max-width: 768px) {
   .grid-2,
   .grid-3,
   .grid-4 {
     grid-template-columns: 1fr;
+    gap: 2rem; /* Mobile: Kompakte Abstände */
+  }
+
+  /* Hero-spezifische Mobile-Optimierung */
+  .hero {
+    padding: 2rem 0; /* Weniger Padding auf Mobile */
+    text-align: center; /* Zentriert auf Mobile */
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Kleinere Schrift auf Mobile */
+  }
+
+  .hero-image {
+    order: -1; /* Bild vor Text auf Mobile */
   }
 }
 

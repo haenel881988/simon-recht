@@ -1,5 +1,25 @@
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS
 
+## 🏛️ INSTRUCTION-HIERARCHIE (KONFLIKT-AUFLÖSUNG)
+
+**Bei Widersprüchen zwischen Instruction-Dateien gilt folgende Prioritäts-Reihenfolge:**
+
+1. **🔴 SICHERHEIT:** copilot-instructions.md (Dev-Tools-Verbote, kritische Regeln)
+2. **📝 CONTENT:** original_content_management.md (Content-Schutz hat Vorrang)
+3. **📂 ORGANISATION:** namenskonvention.md (Struktur und Konsistenz)
+4. **🤖 WORKFLOW:** agent.md (Arbeitsweise und Autonomie)
+5. **⚙️ KONFIGURATION:** anrede.md, settings.md (Spezifische Einstellungen)
+
+**KONFLIKT-AUFLÖSUNG:** Höhere Priorität überschreibt niedrigere bei Widersprüchen.
+
+## 🎯 PFAD-STANDARDISIERUNG
+
+**EINHEITLICHE PFAD-NOTATION:**
+
+- ✅ **STANDARD:** Relativ vom Projekt-Root: `docs/authentizitaet/`
+- ❌ **VERBOTEN:** Absolute Windows-Pfade in Instructions
+- ⚠️ **AUSNAHME:** settings.md (Windows-spezifische Pfade erlaubt)
+
 Wenn es Wiedersprüchlichkeiten gibt, die KI diese nicht auflösen kann, soll die KI immer mich, der User Simon, konsultieren und um Klarheit bitten. Diese Regel ist extra redundant eingebaut, um Missverständnisse zu vermeiden. Insbesondere bei Wiedersprüchlichkeiten, die auch der KI im ersten Augenblick nicht sichtbar sind, beginnt die KI fehler zu machen und solche Fehler sind im vorhinein zu vermeiden.
 
 Es darf keine einzige Astro Datei existieren, welche nicht bereits in einer md-Datei konkretisiert wird.
@@ -92,6 +112,48 @@ Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher
 
 Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderungen beginnst, sondern die Hinterfragung deiner Verhaltensweise, die dich dazu zwingen soll, selbstkritisch deine arbeit zu analysieren!!!
 
+## 🧠 SIMON'S MINI-COACHING SYSTEM (ANTI-KONFUSION)
+
+**🚨 ZWINGEND:** KI muss IMMER bei unklaren/mehrdeutigen Anweisungen Coaching-Modus aktivieren!
+
+### **COACHING-TRIGGER (ZWINGEND AKTIVIEREN WENN):**
+
+1. **UNKLARE ANWEISUNGEN:** Simon gibt zu viele/unspezifische Befehle
+2. **WIDERSPRÜCHLICHE ANFRAGEN:** Mehrere Anfragen gleichzeitig mit Konflikten
+3. **KOMPLEXE PROBLEME:** Problem benötigt Aufschlüsselung in Teilschritte
+4. **SCOPE-UNKLARHEIT:** Welcher Bereich betroffen (CONTENT|DESIGN|CODE|etc.)
+5. **VERSTÄNDNIS-GAPS:** KI versteht nicht 100% was Simon will
+
+### **COACHING-PROTOKOLL (ZWINGEND):**
+
+```
+🧠 MINI-COACHING AKTIVIERT
+
+PROBLEM_ANALYSE: [Was ist unklar/konfus?]
+TEILPROBLEME: [Aufschlüsselung in 3-5 klare Teilprobleme]
+EMPFOHLENE_REIHENFOLGE: [1. Zuerst das, 2. Dann das, 3. Abschließend das]
+SIMON_ENTSCHEIDUNG_ERFORDERLICH: [Welche konkreten Entscheidungen braucht Simon?]
+NÄCHSTER_SCHRITT: "Simon, welches Teilproblem soll ich zuerst angehen?"
+```
+
+### **COACHING-PFLICHT-VERHALTEN:**
+
+- ✅ **STOPP ALLE AKTIVITÄTEN** bis Simon Klarheit schafft
+- ✅ **NIEMALS RATEN** was Simon meint - IMMER nachfragen
+- ✅ **PROBLEME AUFSCHLÜSSELN** in verdaubare Teilschritte
+- ✅ **KONKRETE ENTSCHEIDUNGEN** von Simon einfordern
+- ❌ **ABSOLUT VERBOTEN:** Bei Unklarheit trotzdem handeln
+- ❌ **ABSOLUT VERBOTEN:** Annahmen treffen statt fragen
+
+### **MINI-COACHING ERFOLG-KRITERIEN:**
+
+- **SIMON ZUFRIEDEN:** "Ja, genau das wollte ich!"
+- **KLARE NÄCHSTE SCHRITTE:** Jeder weiß was zu tun ist
+- **KEINE VERWIRRUNG:** Alle Unklarheiten beseitigt
+- **EFFIZIENTER WORKFLOW:** Kein Hin-und-Her mehr nötig
+
+**ZIEL:** Simon soll NIEMALS verwirrt oder frustriert sein - KI hilft beim Problemverständnis!
+
 ## � HIERARCHIE DER REGELN (WIDERSPRUCHSAUFLÖSUNG)
 
 **PRIORITÄTS-REIHENFOLGE bei Konflikten:**
@@ -119,7 +181,9 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 6. **MACHBARKEITS-PRÜFUNG:** Ist die Anfrage technisch/inhaltlich umsetzbar?
 7. **WIDERSPRUCHS-SCAN:** Kollidiert sie mit bestehenden Instructions?
 8. **SCOPE-IDENTIFIKATION:** Welche Bereiche sind betroffen (CONTENT|DESIGN|CODE|STRUCTURE|DOCUMENTATION|INSTRUCTIONS)?
-9. **SCREENSHOT-EVIDENCE-CHECK:** Visuelle Probleme vor theoretischen priorisieren!
+9. **100%-VERSTÄNDNIS-CHECK:** Jede Anweisung/Prompt MUSS absolut 100% verstanden werden!
+10. **EXISTENZ-PRÜFUNG:** VOR Datei-Erstellung → 100% sicher dass nicht existiert!
+11. **CHECKER-LOG-ANALYSE:** NUR Checker-Logdateien als Analyse-Quelle verwenden!
 
 ### **ANTI-OBERFLÄCHLICHKEITS-ZWANG:**
 
@@ -127,8 +191,12 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 - 🚨 **ABSOLUT VERBOTEN:** "Schnelle Fixes" ohne Kontext-Verständnis
 - 🚨 **ABSOLUT VERBOTEN:** Symptom-Behandlung ohne Wurzel-Analyse
 - 🚨 **ABSOLUT VERBOTEN:** Handeln ohne Screenshot-Evidence-Prioritäten
+- 🚨 **ABSOLUT VERBOTEN:** Neue Dateien erstellen ohne 100% Gewissheit
+- 🚨 **ABSOLUT VERBOTEN:** Annahmen treffen statt nachfragen bei Unklarheit
 - ✅ **ZWINGEND:** Immer WARUM vor WIE beantworten
 - ✅ **ZWINGEND:** Vollständiges Projekt-Verständnis vor Aktion
+- ✅ **ZWINGEND:** Bei Unklarheit → Exception werfen und nachfragen
+- ✅ **ZWINGEND:** Existierende Dateien IMMER reparieren, NIEMALS neu erstellen
 
 ### **SOFORTIGE EXCEPTION BEI TIEFENANALYSE-VERLETZUNG:**
 
@@ -166,6 +234,8 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 - ❌ Umsetzen bei mehrdeutigen Anweisungen ohne Tiefenverständnis
 - ❌ Fortfahren ohne 100% vollständiges Verständnis aller Abhängigkeiten
 - ❌ Icon-Kontrast-Fixes während strukturelle Layout-Probleme existieren
+- ❌ Dateien erstellen ohne 100% Gewissheit dass sie nicht existieren
+- ❌ Annahmen bei unklaren Prompts statt Nachfrage-Exception
 
 ### **UNUMGEHBARE PFLICHT-VERHALTEN:**
 
@@ -175,6 +245,9 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 - ✅ **SCREENSHOT-PRIORITÄT:** Visuelle Evidence-Probleme vor theoretischen priorisieren
 - ✅ **WURZEL-ANALYSE-ZWANG:** Niemals Symptome behandeln ohne Ursachen-Verständnis
 - ✅ **SIMON'S-INTENTION-KLARHEIT:** Bei der geringsten Unklarheit → Exception werfen!
+- ✅ **DATEI-EXISTENZ-SCHUTZ:** VOR Erstellung → Existenz zu 100% ausschließen
+- ✅ **REPARATUR-ZWANG:** Existierende Dateien manuell reparieren statt neu erstellen
+- ✅ **CHECKER-LOG-EXKLUSIVITÄT:** NUR Checker-Logs für Analyse verwenden
 
 ### **ANTI-WIEDERHOLUNGS-GARANTIE:**
 
@@ -184,6 +257,8 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 - Oberflächliche CSS-Änderungen ohne System-Verständnis
 - Quick-Fixes ohne vollständige Problem-Ursachen-Analyse
 - Direkte Code-Änderungen ohne Kontext-Mapping
+- Datei-Duplikate durch fehlende Existenz-Prüfung
+- Oberflächliche Prompt-Interpretation ohne 100% Verständnis
 
 **Diese Analyse ist bei JEDER Nutzer-Anweisung UNUMGEHBAR und ZWINGEND erforderlich!**
 
@@ -192,18 +267,32 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 ### **DATEI-INTEGRITÄT-SCHUTZ (ZWINGEND):**
 
 - **ABSOLUT VERBOTEN:** Original-Dateien NIEMALS umbenennen
-- **ABSOLUT VERBOTEN:** Kopien von Original-Dateien erstellen (außer Backup)
+- **ABSOLUT VERBOTEN:** Kopien von Original-Dateien erstellen (außer genehmigte Exceptions)
 - **BACKUP-REGEL:** Nur Backup-Dateien mit "\_backup.md" Suffix erlaubt
 - **STRUKTURSCHUTZ:** Original-Datei-Namen sind UNANTASTBAR
 - **EXCEPTION-PFLICHT:** Bei Datei-Operationen IMMER Exception werfen bei Unklarheit
 
+### **GENEHMIGTE DATEI-ERSTELLUNGS-EXCEPTIONS:**
+
+1. **ORIGINAL-CONTENT-ARCHIVIERUNG:** `{name}_original_{YYYY-MM-DD}.md` (original_content_management.md Regel)
+2. **BACKUP-DATEIEN:** `{name}_backup.md` bei kritischen Operationen
+3. **INVENTAR-UPDATES:** `projekt_inventar.md` Aktualisierungen durch Inventur-Script
+4. **BUILD-LOGS:** Checker-Logdateien in `tools/build_check/logfiles/`
+5. **AUTHENTIZITÄTS-EXTRAKTE:** Stil-Dateien in `docs/authentizitaet/`
+
 ### **SEARCH-VERBOT (ZWINGEND):**
 
-- **ABSOLUT VERBOTEN:** file_search, grep_search, semantic_search Tools verwenden
-- **ABSOLUT VERBOTEN:** "search text for xxx" Befehle jeder Art
-- **MANUELLE ANALYSE:** Alle Informationen manuell aus Dateien extrahieren
+- **ABSOLUT VERBOTEN:** file_search, grep_search, semantic_search Tools durch KI verwenden
+- **ABSOLUT VERBOTEN:** "search text for xxx" Befehle jeder Art durch KI
+- **MANUELLE ANALYSE:** KI muss alle Informationen manuell aus Dateien extrahieren
 - **TIEFENANALYSE:** Jede Datei vollständig lesen und verstehen
 - **EXCEPTION-PFLICHT:** Bei Suchfunktions-Verwendung sofort Exception werfen
+
+### **GENEHMIGTE SEARCH-EXCEPTIONS:**
+
+1. **INVENTUR-SCRIPT:** Automatisierte Projektanalyse durch Script (nicht KI)
+2. **BUILD-CHECKER:** Automatische Dateierkennung durch Checker-Script
+3. **KONSISTENZ-CHECKS:** Nur wenn explizit für Inventar/Struktur-Validation angefragt
 
 ### **NATÜRLICHE SPRACHE REGEL:**
 
@@ -1988,6 +2077,37 @@ Die Einhaltung des Dokumentationssystems des Projekts ist nicht verhandelbar. Je
 - **REGEL:** User sagt "fertig" → dann Code-Arbeit fortsetzen
 
 **ZIEL:** Simon muss sich NIEMALS wiederholen - KI versteht beim ersten Mal!
+
+## 🚨 DEV-TOOLS VERBOTS-SYSTEM (SIMON'S KRITISCHE KORREKTUR)
+
+**ABSOLUT VERBOTEN:** KI darf NIEMALS Dev-Tools oder Browser ohne explizite Anfrage starten!
+
+### **ZWINGEND VERBOTENE AKTIONEN:**
+
+- ❌ **SIMPLE BROWSER ÖFFNEN** ohne User-Anfrage
+- ❌ **DEV SERVER STARTEN** (führt zu KI-Aufhängen)
+- ❌ **LOCALHOST ÖFFNEN** ohne Genehmigung
+- ❌ **PREVIEW-TOOLS** eigenständig aktivieren
+- ❌ **AUTOMATISCHE BROWSER-AKTIONEN** jeder Art
+
+### **ERLAUBTE ALTERNATIVE:**
+
+- ✅ **NUR BUILD-PROZESS:** `pnpm build` zur Validierung
+- ✅ **CODE-ANALYSE:** Direktes Lesen und Analysieren von Dateien
+- ✅ **STATISCHE VALIDIERUNG:** Ohne Server-Start oder Browser
+- ✅ **MANUELLE PROBLEM-BEHEBUNG:** Direkt in Dateien korrigieren
+
+### **PFLICHT-VERHALTEN:**
+
+```
+WENN USER FRAGT: "Warum öffnest du Browser/Server?"
+SOFORTIGE ANTWORT: "Fehler erkannt - ich sollte nur Code-Analyse ohne Tools!"
+DANN: NIEMALS wieder ohne explizite Anfrage Tools starten
+```
+
+### **INTERNALISIERUNGS-ERFOLG:**
+
+**Diese Regel ist dauerhaft internalisiert - NIEMALS wieder Dev-Tools ohne Anfrage!**
 
 ## 🚨 **EXCEPTION-FORMAT (DEFINIERT)**
 

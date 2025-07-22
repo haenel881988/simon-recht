@@ -10,7 +10,6 @@
  * ✅ Icon & Symbol Kontrast-Validierung
  * ✅ Medien-Integrität-Prüfung (404-Detection)
  * ✅ Visual-Reality-Check statt theoretische Tests
- * ✅ Screenshot-Evidence-basierte Validierung
  */
 
 const fs = require("fs").promises;
@@ -29,13 +28,13 @@ const SIMON_COLORS = {
   // 10% Akzentfarbe
   GLUT_ORANGE: "#ff4500",
 
-  // 🚨 PROBLEMATISCHE FARBEN AUS SCREENSHOT-ANALYSE
-  GRUEN_CHECKMARK: "#00ff00", // ❌ SCHLECHT SICHTBAR auf dunklem Hintergrund!
-  ROT_X_SYMBOL: "#ff0000", // ❌ UNZUREICHENDER KONTRAST!
-  WEISS_TEXT: "#ffffff", // Standard weiß
+  // Zusätzliche Farben für Tests
+  GRUEN_CHECKMARK: "#00ff00",
+  ROT_X_SYMBOL: "#ff0000",
+  WEISS_TEXT: "#ffffff",
 };
 
-// 🚨 ERWEITERTE KONTRAST-TESTS - INKL. ECHTE PROBLEME VOM SCREENSHOT
+// 🚨 ERWEITERTE KONTRAST-TESTS
 const SIMON_CONTRAST_TESTS = [
   // ✅ Bestehende funktionierende Tests
   {
@@ -71,14 +70,14 @@ const SIMON_CONTRAST_TESTS = [
     type: "existing",
   },
 
-  // 🚨 NEUE TESTS - ECHTE PROBLEME VOM SCREENSHOT!
+  // Zusätzliche Tests
   {
     name: "GRÜNE CHECKMARKS auf Asphaltschwarz",
     foreground: SIMON_COLORS.GRUEN_CHECKMARK,
     background: SIMON_COLORS.ASPHALTSCHWARZ,
     required: 4.5,
     usage: "✓ Symbole/Icons",
-    type: "screenshot_problem",
+    type: "icon_test",
   },
   {
     name: "ROTE X-SYMBOLE auf Asphaltschwarz",
@@ -86,7 +85,7 @@ const SIMON_CONTRAST_TESTS = [
     background: SIMON_COLORS.ASPHALTSCHWARZ,
     required: 4.5,
     usage: "✗ Symbole/Icons",
-    type: "screenshot_problem",
+    type: "icon_test",
   },
   {
     name: "WEISSER TEXT auf Asphaltschwarz",
@@ -403,7 +402,7 @@ class SimonBuildChecker {
   }
 
   /**
-   * 🔍 NEUE METHODE: Analysiere echte DOM-Elemente (Screenshot-Probleme)
+   * 🔍 Analysiere echte DOM-Elemente für Icon-Probleme
    */
   async analyzeRealDomElements() {
     console.log("🔍 Analysiere echte DOM-Element-Probleme...");
@@ -415,7 +414,7 @@ class SimonBuildChecker {
       try {
         const content = await fs.readFile(file, "utf-8");
 
-        // 🚨 Suche nach problematischen Icon-Farben (vom Screenshot)
+        // 🚨 Suche nach problematischen Icon-Farben
         this.detectProblematicIcons(content, path.basename(file));
 
         // 🚨 Prüfe CSS-Klassen für undefined Variablen
@@ -435,7 +434,7 @@ class SimonBuildChecker {
   }
 
   /**
-   * 🚨 Erkenne problematische Icons (Screenshot-Evidence)
+   * 🚨 Erkenne problematische Icons
    */
   detectProblematicIcons(content, fileName) {
     // Suche nach grünen Checkmarks (✓) und roten X-Symbolen (✗)
@@ -446,7 +445,7 @@ class SimonBuildChecker {
       this.addIssue({
         type: "Problematische grüne Icons",
         file: fileName,
-        description: `${greenChecks} grüne Checkmarks erkannt - Screenshot zeigt schlechten Kontrast!`,
+        description: `${greenChecks} grüne Checkmarks erkannt - möglicherweise unzureichender Kontrast!`,
         severity: "CRITICAL",
       });
     }
@@ -455,7 +454,7 @@ class SimonBuildChecker {
       this.addIssue({
         type: "Problematische rote Icons",
         file: fileName,
-        description: `${redXs} rote X-Symbole erkannt - Screenshot zeigt unzureichenden Kontrast!`,
+        description: `${redXs} rote X-Symbole erkannt - möglicherweise unzureichender Kontrast!`,
         severity: "CRITICAL",
       });
     }
@@ -635,11 +634,11 @@ class SimonBuildChecker {
     const contrastPassed = this.contrastResults.filter((r) => r.passed).length;
     const contrastTotal = this.contrastResults.length;
 
-    // 🚨 Separate Screenshot-Probleme
-    const screenshotProblems = this.contrastResults.filter(
-      (r) => r.type === "screenshot_problem"
+    // 🚨 Separate Icon-Test-Probleme
+    const iconProblems = this.contrastResults.filter(
+      (r) => r.type === "icon_test"
     );
-    const screenshotPassed = screenshotProblems.filter((r) => r.passed).length;
+    const iconsPassed = iconProblems.filter((r) => r.passed).length;
 
     return `# 🎯 SIMON'S REVOLUTIONÄRER BUILD-CHECKER v4.0 REPORT
 ## 🚨 NACH KRITISCHER SIMON-KORREKTUR - REAL-WORLD VALIDATION
@@ -665,10 +664,10 @@ class SimonBuildChecker {
 
 **🎯 Health Score:** ${healthScore}/100
 
-## 🚨 SCREENSHOT-EVIDENCE PROBLEME
+## 🚨 ICON-KONTRAST PROBLEME
 
 **🔍 Erkannte Icon-Kontrast-Violations:**
-${screenshotProblems
+${iconProblems
   .map(
     (problem) =>
       `- ${problem.name}: ${problem.ratio.toFixed(2)}:1 ${
@@ -677,9 +676,7 @@ ${screenshotProblems
   )
   .join("\n")}
 
-**📊 Screenshot-Problem-Rate:** ${screenshotPassed}/${
-      screenshotProblems.length
-    } bestanden
+**📊 Icon-Problem-Rate:** ${iconsPassed}/${iconProblems.length} bestanden
 
 ---
 
@@ -945,13 +942,13 @@ ${mediaIssues
       return `**✅ DOM-Element-Analyse:** Alle Icons und Farben korrekt implementiert!`;
     }
 
-    return `**🚨 Screenshot-Evidence-Probleme:**
+    return `**🚨 Layout-Probleme:**
 
 ${domIssues
   .map((issue) => `- **${issue.file}:** ${issue.type} - ${issue.description}`)
   .join("\n")}
 
-**💡 Simon's Screenshot zeigt diese Probleme - der v5.0 Checker erkennt sie jetzt!**`;
+**💡 Layout-Probleme - der v5.0 Checker erkennt sie jetzt!**`;
   }
 
   /**
