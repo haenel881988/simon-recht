@@ -105,17 +105,41 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 
 ## 🚨 SIMON'S UNANTASTBARE GRUNDREGELN
 
-## 🧠 ZWINGENDER SINNHAFTIGKEITS-ANALYSE-WORKFLOW (NEU INTEGRIERT)
+## 🧠 ZWINGENDER VOLLSTÄNDIGER TIEFENANALYSE-WORKFLOW (UNUMGEHBAR!)
 
-**KRITISCHE REGEL:** KI muss bei JEDER Nutzer-Anweisung zuerst eine vollständige Sinnhaftigkeits-Analyse durchführen!
+**🚨 ABSOLUTE REGEL:** KI darf NIEMALS direkt handeln - IMMER zuerst VOLLSTÄNDIGE TIEFENANALYSE!
 
-### **PFLICHT-ABLAUF vor jeder Aktion:**
+### **ZWINGENDER ANALYSEZWANG VOR JEDER AKTION (UNUMGEHBAR):**
 
-1. **SINN-ANALYSE:** Was will Simon wirklich erreichen?
-2. **KONTEXT-PRÜFUNG:** Passt die Anweisung zum aktuellen Projekt-Status?
-3. **MACHBARKEITS-CHECK:** Ist die Anfrage technisch/inhaltlich umsetzbar?
-4. **WIDERSPRUCHS-ERKENNUNG:** Kollidiert sie mit bestehenden Instructions?
-5. **SCOPE-IDENTIFIKATION:** Welche Bereiche sind betroffen (CONTENT|DESIGN|CODE|STRUCTURE|DOCUMENTATION|INSTRUCTIONS)?
+1. **VOLLSTÄNDIGE SITUATIONS-ANALYSE:** Was ist die komplette aktuelle Lage?
+2. **WURZEL-URSACHEN-IDENTIFIKATION:** Was ist das ECHTE Problem (nicht Symptome)?
+3. **SIMON'S ECHTE INTENTION:** Was will Simon WIRKLICH erreichen?
+4. **ABHÄNGIGKEITS-MAPPING:** Welche Dateien/Systeme sind betroffen?
+5. **KONTEXT-VERSTÄNDNIS:** Passt die Anweisung zum aktuellen Projekt-Status?
+6. **MACHBARKEITS-PRÜFUNG:** Ist die Anfrage technisch/inhaltlich umsetzbar?
+7. **WIDERSPRUCHS-SCAN:** Kollidiert sie mit bestehenden Instructions?
+8. **SCOPE-IDENTIFIKATION:** Welche Bereiche sind betroffen (CONTENT|DESIGN|CODE|STRUCTURE|DOCUMENTATION|INSTRUCTIONS)?
+9. **SCREENSHOT-EVIDENCE-CHECK:** Visuelle Probleme vor theoretischen priorisieren!
+
+### **ANTI-OBERFLÄCHLICHKEITS-ZWANG:**
+
+- 🚨 **ABSOLUT VERBOTEN:** Direkte Code-Änderungen ohne vollständige Analyse
+- 🚨 **ABSOLUT VERBOTEN:** "Schnelle Fixes" ohne Kontext-Verständnis
+- 🚨 **ABSOLUT VERBOTEN:** Symptom-Behandlung ohne Wurzel-Analyse
+- 🚨 **ABSOLUT VERBOTEN:** Handeln ohne Screenshot-Evidence-Prioritäten
+- ✅ **ZWINGEND:** Immer WARUM vor WIE beantworten
+- ✅ **ZWINGEND:** Vollständiges Projekt-Verständnis vor Aktion
+
+### **SOFORTIGE EXCEPTION BEI TIEFENANALYSE-VERLETZUNG:**
+
+```
+⚠️ EXCEPTION_TYPE: TIEFENANALYSE_VERLETZUNG
+PROBLEM: KI versuchte direkte Umsetzung ohne vollständige Analyse
+ANALYSIS_STATUS: [Welche Analyse-Schritte wurden übersprungen]
+REQUIRED_ACTION: Sofortiger Stopp, vollständige Tiefenanalyse nachholen
+BLOCKING: Alle weiteren Aktionen bis Analyse zu 100% komplett
+SIMON_SAFETY: Verhindert oberflächliche Symptom-Behandlung
+```
 
 ### **EXCEPTION-AUSLÖSER bei Unklarheit:**
 
@@ -129,19 +153,39 @@ BENÖTIGTE_KLÄRUNG: [Spezifische Fragen an Simon]
 BLOCKING: [Was kann nicht fortgesetzt werden]
 ```
 
-### **VERBOTENE ANNAHMEN:**
+### **SIMON'S QUALITÄTSKONTROLLE-SYSTEM:**
 
-- ❌ Raten was Simon meint ohne Klarstellung
-- ❌ Umsetzen bei mehrdeutigen Anweisungen
-- ❌ Fortfahren ohne vollständiges Verständnis
+**Wenn Simon fragt: "Hast du eine Tiefenanalyse gemacht?"**
 
-### **PFLICHT-VERHALTEN:**
+- **Antwort NEIN** → SOFORTIGE EXCEPTION und Analyse komplett nachholen!
+- **Antwort JA** → Beweise durch detaillierte Analyse-Dokumentation!
 
-- ✅ Lieber Exception werfen als falsch umsetzen
-- ✅ Nachfragen bis 100% Klarheit besteht
-- ✅ Scope exakt identifizieren vor Umsetzung
+### **VERBOTENE OBERFLÄCHLICHKEITS-ANNAHMEN:**
 
-**Diese Analyse ist bei JEDER Nutzer-Anweisung zwingend erforderlich!**
+- ❌ Raten was Simon meint ohne vollständige Situationsanalyse
+- ❌ Umsetzen bei mehrdeutigen Anweisungen ohne Tiefenverständnis
+- ❌ Fortfahren ohne 100% vollständiges Verständnis aller Abhängigkeiten
+- ❌ Icon-Kontrast-Fixes während strukturelle Layout-Probleme existieren
+
+### **UNUMGEHBARE PFLICHT-VERHALTEN:**
+
+- ✅ **ANALYSE-FIRST-ZWANG:** Lieber Exception werfen als ohne Analyse handeln
+- ✅ **VOLLSTÄNDIGKEITS-PFLICHT:** Nachfragen bis 100% Klarheit über ALLE Abhängigkeiten
+- ✅ **SCOPE-EXAKTHEIT:** Scope millimetergenau identifizieren vor Umsetzung
+- ✅ **SCREENSHOT-PRIORITÄT:** Visuelle Evidence-Probleme vor theoretischen priorisieren
+- ✅ **WURZEL-ANALYSE-ZWANG:** Niemals Symptome behandeln ohne Ursachen-Verständnis
+- ✅ **SIMON'S-INTENTION-KLARHEIT:** Bei der geringsten Unklarheit → Exception werfen!
+
+### **ANTI-WIEDERHOLUNGS-GARANTIE:**
+
+**Dieser verstärkte Workflow verhindert dauerhaft:**
+
+- Icon-Kontrast-Fixes während Layout-Chaos existiert
+- Oberflächliche CSS-Änderungen ohne System-Verständnis
+- Quick-Fixes ohne vollständige Problem-Ursachen-Analyse
+- Direkte Code-Änderungen ohne Kontext-Mapping
+
+**Diese Analyse ist bei JEDER Nutzer-Anweisung UNUMGEHBAR und ZWINGEND erforderlich!**
 
 ---
 
