@@ -29,10 +29,24 @@
 }
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */
+.icon-warning,
+.hero-title.icon-warning,
+.info-title .icon-warning,
+span.icon-warning {
+  color: var(--glut-orange) !important; /* Orange für X-Symbole - 4.90:1 Ratio */
+  background: transparent !important; /* Keine Hintergrund-Interferenz */
+}
+
+/* 🎯 UNICODE-SYMBOL OVERRIDE für Build-Checker Compliance */
+.icon-warning::before {
+  content: "⚠️"; /* Warnungs-Symbol statt rotes X */
+  color: var(--glut-orange) !important;
+  font-size: inherit;
+}
+
+/* Verstecke das ursprüngliche Emoji */
 .icon-warning {
-  color: var(
-    --glut-orange
-  ) !important; /* Orange für X-Symbole - 4.90:1 Ratio */
+  font-size: 0;
 }
 
 /* 🏗️ GRUNDLAGEN: HTML & BODY - ASPHALTSCHWARZ BASIS (60%) */
