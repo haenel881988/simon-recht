@@ -12,7 +12,6 @@
     "build": "astro build && node tools/build_check/scripte/build-checker.cjs",
     "build:astro-only": "astro build",
     "build:checker-only": "node tools/build_check/scripte/build-checker.cjs",
-    "build:css": "node tools/build_check/scripte/css-checker.cjs",
     "preview": "astro preview",
     "astro": "astro"
   },
