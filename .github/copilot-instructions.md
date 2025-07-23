@@ -123,6 +123,7 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 3. **KOMPLEXE PROBLEME:** Problem benötigt Aufschlüsselung in Teilschritte
 4. **SCOPE-UNKLARHEIT:** Welcher Bereich betroffen (CONTENT|DESIGN|CODE|etc.)
 5. **VERSTÄNDNIS-GAPS:** KI versteht nicht 100% was Simon will
+6. **MULTI-SCOPE-ANFRAGEN:** Simon nennt mehrere Bereiche gleichzeitig
 
 ### **COACHING-PROTOKOLL (ZWINGEND):**
 
@@ -136,14 +137,38 @@ SIMON_ENTSCHEIDUNG_ERFORDERLICH: [Welche konkreten Entscheidungen braucht Simon?
 NÄCHSTER_SCHRITT: "Simon, welches Teilproblem soll ich zuerst angehen?"
 ```
 
+### **ANTI-VERZETTLUNGS-PROTOKOLL (NEU):**
+
+**BEI MULTI-SCOPE-ANFRAGEN (ab 2+ Bereichen):**
+
+1. **TODO-LISTE AKTUALISIEREN:** Alle Bereiche in `docs/todos/todos.md` dokumentieren
+2. **SMART-PROMPTS GENERIEREN:** Für jeden Scope separaten Chat-Prompt erstellen
+3. **CHAT-WECHSEL EMPFEHLEN:** "Simon, lass uns einen neuen Chat pro Bereich starten"
+4. **SCOPE-PRIORISIERUNG:** Welcher Bereich hat höchste Priorität?
+5. **STRUKTURIERTE ABARBEITUNG:** Nie mehr als 1 Scope gleichzeitig
+
+**MULTI-SCOPE-EXCEPTION-FORMAT:**
+
+```
+⚠️ EXCEPTION_TYPE: MULTI-SCOPE-VERZETTLUNGS-GEFAHR
+ERKANNTE_SCOPES: [Liste aller genannten Bereiche]
+TODO-UPDATE: [Link zur aktualisierten TODO-Liste]
+CHAT-PROMPTS: [Generierte SMART-Prompts für neue Chats]
+EMPFEHLUNG: "Neuer Chat für Fokus auf [HAUPT-SCOPE]"
+VERZETTLUNGS-SCHUTZ: Verhindert Chaos durch gleichzeitige Multi-Scope-Bearbeitung
+```
+
 ### **COACHING-PFLICHT-VERHALTEN:**
 
 - ✅ **STOPP ALLE AKTIVITÄTEN** bis Simon Klarheit schafft
 - ✅ **NIEMALS RATEN** was Simon meint - IMMER nachfragen
 - ✅ **PROBLEME AUFSCHLÜSSELN** in verdaubare Teilschritte
 - ✅ **KONKRETE ENTSCHEIDUNGEN** von Simon einfordern
+- ✅ **TODO-LISTE VERWENDEN** bei Multi-Scope-Anfragen
+- ✅ **CHAT-WECHSEL EMPFEHLEN** für besseren Fokus
 - ❌ **ABSOLUT VERBOTEN:** Bei Unklarheit trotzdem handeln
 - ❌ **ABSOLUT VERBOTEN:** Annahmen treffen statt fragen
+- ❌ **ABSOLUT VERBOTEN:** Mehrere Scopes gleichzeitig bearbeiten
 
 ### **MINI-COACHING ERFOLG-KRITERIEN:**
 
@@ -151,6 +176,8 @@ NÄCHSTER_SCHRITT: "Simon, welches Teilproblem soll ich zuerst angehen?"
 - **KLARE NÄCHSTE SCHRITTE:** Jeder weiß was zu tun ist
 - **KEINE VERWIRRUNG:** Alle Unklarheiten beseitigt
 - **EFFIZIENTER WORKFLOW:** Kein Hin-und-Her mehr nötig
+- **FOKUSSIERTE ARBEIT:** Ein Scope pro Chat
+- **STRUKTURIERTE TODOS:** Alle Bereiche dokumentiert
 
 **ZIEL:** Simon soll NIEMALS verwirrt oder frustriert sein - KI hilft beim Problemverständnis!
 

@@ -1,7 +1,54 @@
-# 🎯 SIMON-RECHT TODO-LISTE - STRATEGISCHER CSS-WORKFLOW
+# 🎯 SIMON-RECHT TODO-LISTE - ANTI-VERZETTLUNGS-SYSTEM
 
-**Letzte Aktualisierung:** 19.07.2025  
-**Status:** Fokus auf CSS-Architektur-Migration
+**Letzte Aktualisierung:** 23.07.2025  
+**Status:** Multi-Scope-Management mit Chat-Trennung
+
+---
+
+## 🚨 **AKTUELLE MULTI-SCOPE-ANFRAGE (Chat: 23.07.2025)**
+
+### **ERKANNTE BEREICHE:**
+
+1. **DESIGN/LAYOUT:** Header und Navigation (HAUPTFOKUS)
+2. **INSTRUCTIONS:** Multi-Scope-Exception-System
+3. **WORKFLOW:** TODO-basierte Scope-Trennung
+4. **ORGANISATION:** Chat pro Thema-System
+
+### **EMPFOHLENE CHAT-AUFTEILUNG:**
+
+#### **📋 NÄCHSTER CHAT: HEADER & NAVIGATION**
+
+```
+SIMON'S SMART-PROMPT für neuen Chat:
+
+"Hallo! Lass uns systematisch am Header und der Navigation arbeiten.
+
+KONTEXT: Wir haben ein funktionierendes Astro-Projekt mit Tailwind CSS und wollen die Header-Komponente optimieren.
+
+ZIEL: Header und Navigation von oben nach unten durcharbeiten - Design, Funktionalität, Responsive Design.
+
+SCOPE: Nur Header/Navigation - keine anderen Bereiche.
+
+AKTUELLER STATUS: [aus diesem Chat mitnehmen - Header-Analyse noch nicht durchgeführt]
+
+ERWARTUNG: Strukturierte Analyse → Design-Konzept → Implementierung
+
+Starte mit einer Bestandsaufnahme des aktuellen Headers."
+```
+
+#### **📋 ZUKÜNFTIGER CHAT: INSTRUCTIONS-VERBESSERUNG**
+
+```
+SIMON'S SMART-PROMPT:
+
+"Lass uns das Anti-Verzettlungs-System in die Instructions einbauen.
+
+KONTEXT: Ich neige dazu, mehrere Bereiche gleichzeitig zu nennen, was zu Verzettelung führt.
+
+ZIEL: Exception-System für Multi-Scope-Anfragen mit automatischer TODO-Generierung.
+
+SCOPE: Nur Instructions-Optimierung."
+```
 
 ---
 
