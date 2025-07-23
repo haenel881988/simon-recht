@@ -64,9 +64,9 @@ Eine Anwaltskanzlei bestätigte sogar in ihrer Antwort auf meine Frage nach den 
 
 Warum dieser Unterschied? **Die Anwaltskanzlei hatte kein Interesse daran, mich zu vertreten:**
 
-- ❌ Keine Gerichtskosten bei Sozialversicherungsrecht = kein Risiko für mich
-- ❌ Keine Anwaltskosten-Übernahme = kein Gewinn für Kanzlei
-- ❌ Systematische Abschreckung um profitable Mandate zu priorisieren
+- ⚠️ Keine Gerichtskosten bei Sozialversicherungsrecht = kein Risiko für mich
+- ⚠️ Keine Anwaltskosten-Übernahme = kein Gewinn für Kanzlei
+- ⚠️ Systematische Abschreckung um profitable Mandate zu priorisieren
 
 **Mindset schlägt Grosskonzern bedeutet:** Das System durchschauen und selbst handeln.
 

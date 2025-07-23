@@ -70,9 +70,9 @@ Als ich aufhörte zu zweifeln und anfing zu planen, veränderte sich meine gesam
 
 Als Informatiker hatte ich:
 
-- ❌ Keine juristische Ausbildung
-- ❌ Keine Rechtserfahrung
-- ❌ Keinen Anwalt
+- ⚠️ Keine juristische Ausbildung
+- ⚠️ Keine Rechtserfahrung
+- ⚠️ Keinen Anwalt
 - ✅ **Das richtige Mindset**
 - ✅ **KI als strategischen Partner**
 
@@ -333,9 +333,9 @@ Wenn andere nach 2 Stunden müde werden, kann ich 12 Stunden am Stück Gesetze a
 
 **Was du NICHT brauchst:**
 
-- ❌ Jurastudium (KI erklärt alles)
-- ❌ Teuren Anwalt (für Standard-Fälle)
-- ❌ Jahrelange Erfahrung (Pattern sind erkennbar)
+- ⚠️ Jurastudium (KI erklärt alles)
+- ⚠️ Teuren Anwalt (für Standard-Fälle)
+- ⚠️ Jahrelange Erfahrung (Pattern sind erkennbar)
 
 ### 3. David schlägt Goliath - aber nur mit System
 

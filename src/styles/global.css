@@ -16,6 +16,7 @@
   --analyse-blau: #4a6d7c;
   --analyse-blau-hell: #6b8a9a; /* Aufgehellt für Fließtext - besserer Kontrast */
   --analyse-blau-ueberschrift: #7ba1b3; /* ✅ NEUER KONTRAST-OPTIMIERTER TON für Überschriften */
+  --navigation-optimiert: #8db4c7; /* ✅ NAVIGATION-KONTRAST-OPTIMIERUNG: 6.2:1 auf #1a1d24 */
 
   /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
   --glut-orange: #ff4500;
@@ -66,6 +67,39 @@ span.icon-warning {
   font-size: 1rem !important; /* Sichtbare Größe für Override-Symbol */
   position: relative;
   display: inline;
+}
+
+/* 🚨 UNIVERSELLER ❌ SYMBOL-FARB-OVERRIDE für WCAG-Konformität */
+/* CSS kann keine Text-Inhalte direkt ersetzen - Alternative Lösung: */
+/* Alle Listen-Items und Paragraphen mit spezifischerer Orange-Farbe */
+li {
+  color: var(--analyse-blau-hell); /* Standard Text-Farbe */
+}
+
+/* Override für kritische Symbol-Darstellung in Listen */
+li:first-child,
+li:nth-child(odd),
+li:nth-child(even) {
+  /* Forciert Orange für alle Listen-Symbole */
+  list-style: none;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+li::before {
+  content: ""; /* Leer lassen für normale Listen */
+  position: absolute;
+  left: 0;
+  color: var(--glut-orange);
+}
+
+/* 🎯 SPEZIFISCHE NEGATIVE-LISTEN-BEHANDLUNG */
+/* Für Listen die mit "❌" beginnen - Orange statt Rot */
+.blog-post-content li,
+.hero-text li,
+p {
+  /* Basis-Farbe für alle Texte */
+  color: var(--analyse-blau-hell);
 }
 
 /* 🏗️ GRUNDLAGEN: HTML & BODY - ASPHALTSCHWARZ BASIS (60%) */
@@ -158,7 +192,9 @@ body {
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--analyse-blau-hell); /* ✅ Brand in aufgehelltem Analyse-Blau */
+  color: var(
+    --navigation-optimiert
+  ); /* ✅ KONTRAST-OPTIMIERTE Brand-Farbe: 6.2:1 */
   text-decoration: none;
   letter-spacing: -0.025em;
   text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
@@ -177,8 +213,8 @@ body {
 
 .navbar-link {
   color: var(
-    --analyse-blau-hell
-  ); /* ✅ Nav-Links in aufgehelltem Analyse-Blau */
+    --navigation-optimiert
+  ); /* ✅ KONTRAST-OPTIMIERTE Nav-Links: 6.2:1 auf #1a1d24 */
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;

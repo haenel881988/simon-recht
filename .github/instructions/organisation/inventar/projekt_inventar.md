@@ -1,15 +1,15 @@
 # 📋 Projekt-Inventar
 
-**Letzte Aktualisierung:** 23.7.2025, 09:22:27 - **AUTOMATISCH GENERIERT**  
+**Letzte Aktualisierung:** 23.7.2025, 10:30:04 - **AUTOMATISCH GENERIERT**  
 **Script:** tools/inventory/auto-inventory.js
 
 ## 📊 **ÜBERSICHT**
 
 - **📁 Verzeichnisse:** 81
-- **📄 Gesamt-Dateien:** 483
+- **📄 Gesamt-Dateien:** 490
 - **⚙️ Scripts:** 10
 - **🔧 Konfigurationen:** 178
-- **📝 Dokumentation:** 278
+- **📝 Dokumentation:** 285
 
 ## 📁 **VERZEICHNISSTRUKTUR**
 
@@ -374,6 +374,7 @@
 - docs/change_management/history/2025-07-22_tiefenanalyse_zwang_internalisierung.md
 - docs/change_management/history/README.md
 - docs/change_management/README.md
+- docs/change_management/scopes/DESIGN_KONTRAST_SCOPE.md
 - docs/change_management/TODO_ANTI_VERZETTLUNGS_SYSTEM.md
 - docs/checker_entwicklung/anforderungen/css/kontrast_anforderungen.md
 - docs/checker_entwicklung/anforderungen/seo/organische_optimierung.md
@@ -565,6 +566,12 @@
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T12-26-02-675Z.md
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-22T18-25-23-841Z.md
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T07-22-27-408Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T07-25-08-738Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T07-49-25-827Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T07-55-24-313Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-09-49-275Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-12-15-662Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-30-04-317Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-21T20-18-46-041Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T05-15-26-852Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T06-06-23-568Z.md
