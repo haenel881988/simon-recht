@@ -16,7 +16,7 @@
   --analyse-blau: #4a6d7c;
   --analyse-blau-hell: #6b8a9a; /* Aufgehellt für Fließtext - besserer Kontrast */
   --analyse-blau-ueberschrift: #7ba1b3; /* ✅ NEUER KONTRAST-OPTIMIERTER TON für Überschriften */
-  --navigation-optimiert: #a0c4d2; /* ✅ VERBESSERTE NAVIGATION: 5.8:1 Kontrast auf #1a1d24 */
+  --navigation-optimiert: #8db4c7; /* ✅ NAVIGATION-KONTRAST-OPTIMIERUNG: 6.2:1 auf #1a1d24 */
 
   /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
   --glut-orange: #ff4500;

@@ -1,15 +1,15 @@
 # 📋 Projekt-Inventar
 
-**Letzte Aktualisierung:** 23.7.2025, 10:58:31 - **AUTOMATISCH GENERIERT**  
+**Letzte Aktualisierung:** 23.7.2025, 13:38:39 - **AUTOMATISCH GENERIERT**  
 **Script:** tools/inventory/auto-inventory.js
 
 ## 📊 **ÜBERSICHT**
 
-- **📁 Verzeichnisse:** 81
-- **📄 Gesamt-Dateien:** 494
+- **📁 Verzeichnisse:** 82
+- **📄 Gesamt-Dateien:** 502
 - **⚙️ Scripts:** 10
 - **🔧 Konfigurationen:** 178
-- **📝 Dokumentation:** 289
+- **📝 Dokumentation:** 297
 
 ## 📁 **VERZEICHNISSTRUKTUR**
 
@@ -71,6 +71,7 @@
 - docs/website_struktur/statische-seiten/static/
 - docs/website_struktur/website_design/
 - docs/website_struktur/website_elemente/
+- docs/website_struktur/zielgruppe/
 - public/
 - public/assets/
 - public/assets/images/
@@ -408,6 +409,7 @@
 - docs/website_struktur/website_design/global_css.md
 - docs/website_struktur/website_elemente/footer.md
 - docs/website_struktur/website_elemente/header.md
+- docs/website_struktur/zielgruppe/persona.md
 - public/assets/README.md
 - public/assets/videos/README.md
 - public/robots.txt
@@ -576,6 +578,13 @@
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-37-36-702Z.md
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-52-55-391Z.md
 - tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T08-58-31-502Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-29-15-855Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-30-06-428Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-30-56-685Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-31-34-047Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-32-08-518Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-34-29-566Z.md
+- tools/build_check/logfiles/simon-build-checker-v4-2025-07-23T11-38-39-104Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-21T20-18-46-041Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T05-15-26-852Z.md
 - tools/build_check/logfiles/simon-css-checker-v1-2025-07-22T06-06-23-568Z.md

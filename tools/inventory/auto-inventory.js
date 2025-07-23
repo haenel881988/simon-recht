@@ -1,12 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * 🎯 SIMON'S AUTOMATISCHES INVENTUR-SCRIPT v1.0
+ * 🎯 SIMON'S AUTOMATISCHES INVENTUR-SCRIPT v2.0
  *
  * WORKFLOW:
- * 1. Build-Checker durchlaufen lassen
+ * 1. Multi-Scope Build-Checker durchlaufen lassen
  * 2. Vollständige Projekt-Inventur
  * 3. projekt_inventar.md aktualisieren
+ *
+ * ✅ NEU: Multi-Scope-Integration
+ * ✅ Scope-basierte Build-Checker v2.0
+ * ✅ Modulare Architektur-Unterstützung
  *
  * AUSFÜHRUNG:
  * - Manuell: node tools/inventory/auto-inventory.js
@@ -74,8 +78,7 @@ class AutoInventory {
         this.projectRoot,
         "tools",
         "build_check",
-        "scripte",
-        "build-checker.cjs"
+        "multi-scope-checker.cjs"
       );
 
       const checker = spawn("node", [checkerPath], {

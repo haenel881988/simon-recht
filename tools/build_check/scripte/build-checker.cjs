@@ -124,6 +124,7 @@ class SimonBuildChecker {
     this.issues = [];
     this.todos = [];
     this.contrastResults = [];
+    this.projectRoot = process.cwd(); // 🔧 FIX: Project Root definieren
     this.contentStats = {
       totalFiles: 0,
       totalWords: 0,
@@ -256,11 +257,206 @@ class SimonBuildChecker {
   }
 
   /**
-   * 🎨 Prüfe SIMON'S 3-Farben Kontraste
+   * 🎨 CSS-REALITY-SIMULATOR: Prüfe SIMON'S 3-Farben Kontraste MIT ECHTER CSS-ANALYSE
    */
   async checkSimonColorContrasts() {
     console.log("🎨 Prüfe Simon's 3-Farben-Palette Kontraste...");
 
+    // 🔍 SCHRITT 1: CSS-VARIABLEN AUS GLOBAL.CSS EXTRAHIEREN
+    const cssVariables = await this.extractCSSVariables();
+
+    // 🔍 SCHRITT 2: ECHTE CSS-REGELN ANALYSIEREN
+    const appliedStyles = await this.simulateAppliedCSS(cssVariables);
+
+    // 🔍 SCHRITT 3: REALITÄTS-BASIERTE KONTRAST-TESTS
+    await this.performRealityBasedContrastTests(appliedStyles);
+  }
+
+  /**
+   * 🔍 EXTRAHIERE CSS-VARIABLEN AUS GLOBAL.CSS - ERWEITERT MIT DEBUG
+   */
+  async extractCSSVariables() {
+    const globalCSSPath = path.join(this.projectRoot, "src/styles/global.css");
+    const cssVariables = {};
+
+    try {
+      // 🔥 FORCE FRESH READ - NO CACHE!
+      const cssContent = await fs.readFile(globalCSSPath, "utf-8");
+
+      console.log(`🔍 FRESH-READ CSS-Länge: ${cssContent.length} Zeichen`);
+      console.log(`🔍 CSS-Datei-Pfad: ${globalCSSPath}`);
+
+      // CSS-Variablen-Pattern: --variable-name: #color;
+      const variablePattern = /--([a-zA-Z-]+):\s*([^;]+);/g;
+      let match;
+
+      while ((match = variablePattern.exec(cssContent)) !== null) {
+        const varName = match[1];
+        const varValue = match[2].trim();
+
+        // 🔍 DEBUG: Zeige JEDE gefundene Variable mit Context
+        if (varName === "navigation-optimiert") {
+          console.log(
+            `🔍 FRESH-READ CSS-VAR GEFUNDEN: --${varName}: ${varValue}`
+          );
+          console.log(`🔍 FRESH-READ MATCH-DETAILS:`, match);
+          console.log(`🔍 FRESH-READ RAW-VALUE:`, match[2]);
+
+          // 📍 ZEILEN-SUCHE für genaue Position
+          const lines = cssContent.split("\n");
+          lines.forEach((line, index) => {
+            if (line.includes("--navigation-optimiert")) {
+              console.log(`🔍 ZEILE ${index + 1}: ${line.trim()}`);
+            }
+          });
+        }
+
+        cssVariables[varName] = varValue;
+      }
+
+      console.log(
+        `🔍 CSS-VARIABLEN EXTRAHIERT: ${
+          Object.keys(cssVariables).length
+        } Variablen`
+      );
+      console.log(`🔍 ALLE CSS-VARIABLEN:`, cssVariables);
+      console.log(
+        `🔍 NAVIGATION-OPTIMIERT WERT:`,
+        cssVariables["navigation-optimiert"]
+      );
+      return cssVariables;
+    } catch (error) {
+      console.log(`❌ FEHLER beim CSS-Variablen-Lesen: ${error.message}`);
+      return {};
+    }
+  }
+
+  /**
+   * 🎯 SIMULIERE ANGEWENDETE CSS-REGELN (OHNE DEV-SERVER) - MEHRZEILEN-SUPPORT
+   */
+  async simulateAppliedCSS(cssVariables) {
+    const globalCSSPath = path.join(this.projectRoot, "src/styles/global.css");
+    const appliedStyles = {};
+
+    try {
+      const cssContent = await fs.readFile(globalCSSPath, "utf-8");
+
+      // 🎯 NAVIGATION-BRAND CSS-REGEL ANALYSIEREN (MEHRZEILEN-SUPPORT)
+      const navBrandMatch = cssContent.match(/\.navbar-brand\s*{([^}]+)}/s);
+      if (navBrandMatch) {
+        const brandRules = navBrandMatch[1];
+        const colorMatch = brandRules.match(/color:\s*var\(\s*--([^)]+)\s*\)/);
+        if (colorMatch) {
+          const varName = colorMatch[1].trim();
+          appliedStyles["navbar-brand"] = {
+            color: cssVariables[varName] || "UNDEFINED",
+            background: cssVariables["asphaltschwarz"] || "#1a1d24",
+            varName: varName,
+          };
+          console.log(
+            `🎯 NAVBAR-BRAND GEFUNDEN: var(--${varName}) = ${cssVariables[varName]}`
+          );
+        }
+      }
+
+      // 🎯 NAVIGATION-LINK CSS-REGEL ANALYSIEREN (MEHRZEILEN-SUPPORT)
+      const navLinkMatch = cssContent.match(/\.navbar-link\s*{([^}]+)}/s);
+      if (navLinkMatch) {
+        const linkRules = navLinkMatch[1];
+        const colorMatch = linkRules.match(/color:\s*var\(\s*--([^)]+)\s*\)/);
+        if (colorMatch) {
+          const varName = colorMatch[1].trim();
+          appliedStyles["navbar-link"] = {
+            color: cssVariables[varName] || "UNDEFINED",
+            background: cssVariables["asphaltschwarz"] || "#1a1d24",
+            varName: varName,
+          };
+          console.log(
+            `🎯 NAVBAR-LINK GEFUNDEN: var(--${varName}) = ${cssVariables[varName]}`
+          );
+        }
+      }
+
+      // 🎯 ÜBERSCHRIFTEN CSS-REGEL ANALYSIEREN (MEHRZEILEN-SUPPORT)
+      const headingMatch = cssContent.match(
+        /h1,\s*h2,\s*h3,\s*h4,\s*h5,\s*h6\s*{([^}]+)}/s
+      );
+      if (headingMatch) {
+        const headingRules = headingMatch[1];
+        const colorMatch = headingRules.match(
+          /color:\s*var\(\s*--([^)]+)\s*\)/
+        );
+        if (colorMatch) {
+          const varName = colorMatch[1].trim();
+          appliedStyles["headings"] = {
+            color: cssVariables[varName] || "UNDEFINED",
+            background: cssVariables["asphaltschwarz"] || "#1a1d24",
+            varName: varName,
+          };
+          console.log(
+            `🎯 HEADINGS GEFUNDEN: var(--${varName}) = ${cssVariables[varName]}`
+          );
+        }
+      }
+
+      console.log(
+        `🎯 CSS-REGELN SIMULIERT: ${
+          Object.keys(appliedStyles).length
+        } Selektoren`
+      );
+      console.log(`🔍 GEFUNDENE SELEKTOREN:`, Object.keys(appliedStyles));
+      return appliedStyles;
+    } catch (error) {
+      console.log(`❌ FEHLER bei CSS-Simulation: ${error.message}`);
+      return {};
+    }
+  }
+
+  /**
+   * 🧪 REALITÄTS-BASIERTE KONTRAST-TESTS
+   */
+  async performRealityBasedContrastTests(appliedStyles) {
+    console.log("🧪 STARTE REALITÄTS-BASIERTE KONTRAST-TESTS...");
+
+    for (const [selector, styles] of Object.entries(appliedStyles)) {
+      if (styles.color && styles.background && styles.color !== "UNDEFINED") {
+        const ratio = this.calculateContrastRatio(
+          styles.color,
+          styles.background
+        );
+        const passed = ratio >= 4.5; // WCAG AA Standard
+
+        const result = {
+          name: `REALITY-TEST: ${selector}`,
+          foreground: styles.color,
+          background: styles.background,
+          ratio: ratio,
+          required: 4.5,
+          passed: passed,
+          usage: `CSS-Selektor: .${selector}`,
+          realityBased: true,
+        };
+
+        this.contrastResults.push(result);
+
+        if (!passed) {
+          this.addIssue({
+            type: "REALITY-Kontrast-Verletzung",
+            file: "global.css",
+            description: `ECHTER CSS-TEST ${selector}: ${ratio.toFixed(
+              2
+            )}:1 (Benötigt: 4.5:1) - Farbe: ${styles.color}`,
+            severity: "CRITICAL",
+          });
+        } else {
+          console.log(
+            `✅ REALITY-TEST BESTANDEN: ${selector} = ${ratio.toFixed(2)}:1`
+          );
+        }
+      }
+    }
+
+    // 🔍 FALLBACK: Original Tests als Backup
     for (const test of SIMON_CONTRAST_TESTS) {
       const ratio = this.calculateContrastRatio(
         test.foreground,
@@ -276,6 +472,7 @@ class SimonBuildChecker {
         required: test.required,
         passed: passed,
         usage: test.usage,
+        realityBased: false,
       };
 
       this.contrastResults.push(result);

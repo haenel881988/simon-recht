@@ -1611,6 +1611,32 @@ Beachte jedoch, eine rein organische umsetzung.
 - ❌ **CRITICAL-ISSUES-IGNORED:** Kritische Issues im Log ignorieren
 - ❌ **PERFORMANCE-TOOLS:** Minifizierung oder Performance-Skripte trotz Build-Checker Warnung
 - ❌ **MANUAL-WORD-COUNT:** Manuelle Wortzählung statt Build-Checker Algorithmus-Training Daten
+- ❌ **OBERFLÄCHLICHE SUCCESS-CLAIMS:** "100/100" bei nur 4 Tests - ZWINGEND umfassende Validierung
+- ❌ **PERFORMANCE-ZEIT-MESSUNG:** Zeit-Tracking widerspricht Qualitäts-Fokus - NUR Qualitäts-Metriken
+- ❌ **SELBSTLOB OHNE TIEFENANALYSE:** Checker darf sich NIEMALS für "perfekt" erklären ohne vollständige Tests
+- ❌ **FAKE-WCAG-COMPLIANCE:** 4 Kontrast-Tests ≠ echte Accessibility-Validierung
+
+#### **ZWINGENDER SELBSTKRITIK-DURCHSETZUNGS-ZWANG (NEU):**
+
+**ABSOLUTE REGEL:** Build-Checker MUSS radikale Ehrlichkeit vor jeder Success-Meldung durchführen!
+
+1. **SELBSTKRITIK-VALIDATION:** "Habe ich WIRKLICH alle Systeme getestet oder nur oberflächlich?"
+2. **TIEFENANALYSE-ZWANG:** Minden 10 verschiedene Test-Kategorien vor "100/100"-Claim
+3. **EHRLICHKEITS-CHECK:** "Würde Simon diese Qualität als 'perfekt' akzeptieren?"
+4. **ANTI-SELBSTLOB-SYSTEM:** Bei <50 Tests → Maximum 70/100, niemals "perfekt"
+5. **RADIKALE TRANSPARENZ:** Immer ehrlich kommunizieren was NICHT getestet wurde
+6. **QUALITÄTS-ZWANG:** Lieber 60/100 mit ehrlicher Analyse als 100/100 mit oberflächlichen Tests
+
+#### **ZWINGENDER PERFORMANCE-MESSUNGS-KOMPLETT-VERBOT (NEU):**
+
+**ABSOLUTE REGEL:** NIEMALS Performance-Zeit messen - widerspricht Qualitäts-Fokus!
+
+1. **ZEIT-MESSUNG-VERBOT:** Keine ms/Zeit-Tracking in Build-Checker-Output
+2. **GESCHWINDIGKEITS-IGNORANZ:** Build-Checker soll LANGSAM und GRÜNDLICH sein
+3. **QUALITÄT-ÜBER-QUANTITÄT:** Tiefenanalyse wichtiger als schnelle Ausführung
+4. **ANTI-PERFORMANCE-OBSESSION:** Entferne alle `executionTime`, `startTime`, Performance-Metriken
+5. **CODE-SÄUBERUNG:** Lösche alle Timer, Stopwatch, Performance-Tracking-Code
+6. **GRÜNDLICHKEITS-FOKUS:** Je länger der Checker braucht, desto besser die Qualität
 
 #### **PFLICHT-BUILD-CHECKER-SEQUENCE:**
 
