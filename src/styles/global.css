@@ -272,7 +272,7 @@ body {
     width: 100%;
     text-align: center;
     padding: 1rem;
-    border-bottom: 1px solid var(--asphaltschwarz-light);
+    border-bottom: 1px solid var(--analyse-blau); /* ✅ FIX: Definierte Variable */
   }
 }
 

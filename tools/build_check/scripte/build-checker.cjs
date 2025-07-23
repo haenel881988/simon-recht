@@ -143,8 +143,12 @@ class SimonBuildChecker {
       await this.generateTodos();
       await this.createIntegratedLogFile();
 
+      // 🚨 DEBUG: Health Score Berechnung tracken
+      const finalHealthScore = this.calculateHealthScore();
+      console.log(`🔍 DEBUG: Berechneter Health Score: ${finalHealthScore}`);
+
       console.log(
-        `✅ Build-Check abgeschlossen! Health Score: ${this.calculateHealthScore()}/100`
+        `✅ Build-Check abgeschlossen! Health Score: ${finalHealthScore}/100`
       );
       console.log(`📋 TODOs generiert: ${this.todos.length}`);
       console.log(`🎨 Kontrast-Tests: ${this.contrastResults.length}`);
@@ -863,20 +867,47 @@ ${this.generateSelfVerificationSection()}`;
     const contrastTotal = this.contrastResults.length;
 
     let score = 100;
+    console.log(`🔍 DEBUG-SCORE: Start-Score: ${score}`);
 
     // Abzüge für Issues
     score -= criticalIssues * 25; // Kritische Issues: -25 Punkte
-    score -= importantIssues * 2; // Wichtige Issues: -2 Punkte (reduziert für realistische Scores)
+    console.log(
+      `🔍 DEBUG-SCORE: Nach ${criticalIssues} kritischen Issues: ${score}`
+    );
 
-    // Bonus für bestandene Kontrast-Tests
+    score -= importantIssues * 2; // Wichtige Issues: -2 Punkte
+    console.log(
+      `🔍 DEBUG-SCORE: Nach ${importantIssues} wichtigen Issues: ${score}`
+    );
+
+    // 🎯 KORRIGIERTE KONTRAST-BONUS-BERECHNUNG
     if (contrastTotal > 0) {
-      const contrastBonus = (contrastPassed / contrastTotal) * 20;
-      score = Math.max(0, score - 20) + contrastBonus;
+      const contrastSuccessRate = contrastPassed / contrastTotal;
+      const contrastBonus = contrastSuccessRate * 10; // Max 10 Punkte Bonus für perfekte Kontraste
+      console.log(
+        `🔍 DEBUG-SCORE: Kontrast-Bonus (${contrastPassed}/${contrastTotal}): +${contrastBonus}`
+      );
+      score += contrastBonus; // PLUS nicht Minus!
     }
 
-    const finalScore = Math.max(0, Math.min(100, Math.round(score)));
+    // 🚨 FINALE SCORE-VALIDIERUNG mit Anomalie-Erkennung
+    const rawScore = Math.round(score);
+    const finalScore = Math.max(0, Math.min(100, rawScore));
 
-    // 🚨 ANOMALIE-ERKENNUNG: Unmögliche Score-Sprünge
+    console.log(
+      `🔍 DEBUG-SCORE: Raw-Score: ${rawScore}, Final-Score: ${finalScore}`
+    );
+
+    // 🚨 ANOMALIE-ERKENNUNG: Mathematische Unmöglichkeiten
+    if (rawScore > 100) {
+      this.addIssue({
+        type: "SCORE-OVERFLOW-ANOMALIE",
+        file: "build-checker.cjs",
+        description: `🚨 SCORE OVERFLOW: Roher Score ${rawScore} über Maximum! Algorithmus-Fehler erkannt.`,
+        severity: "CRITICAL",
+      });
+    }
+
     this.detectHealthScoreAnomalies(finalScore);
 
     return finalScore;
