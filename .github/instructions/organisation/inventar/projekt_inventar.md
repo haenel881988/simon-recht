@@ -1,15 +1,15 @@
 # 📋 Projekt-Inventar
 
-**Letzte Aktualisierung:** 23.7.2025, 13:38:39 - **AUTOMATISCH GENERIERT**  
+**Letzte Aktualisierung:** 23.7.2025, 23:08:55 - **AUTOMATISCH GENERIERT**  
 **Script:** tools/inventory/auto-inventory.js
 
 ## 📊 **ÜBERSICHT**
 
-- **📁 Verzeichnisse:** 82
-- **📄 Gesamt-Dateien:** 502
-- **⚙️ Scripts:** 10
+- **📁 Verzeichnisse:** 85
+- **📄 Gesamt-Dateien:** 522
+- **⚙️ Scripts:** 15
 - **🔧 Konfigurationen:** 178
-- **📝 Dokumentation:** 297
+- **📝 Dokumentation:** 312
 
 ## 📁 **VERZEICHNISSTRUKTUR**
 
@@ -89,11 +89,14 @@
 - src/styles/
 - tools/
 - tools/build_check/
+- tools/build_check/core/
 - tools/build_check/logfiles/
 - tools/build_check/logfiles/archiv/
 - tools/build_check/logfiles/archiv/juli/
 - tools/build_check/metrics/
+- tools/build_check/scopes/
 - tools/build_check/scripte/
+- tools/build_check/utils/
 - tools/inventory/
 
 ## ⚙️ **SCRIPTS & TOOLS**
@@ -102,8 +105,13 @@
 - convert-to-webp.js
 - src/content/config.ts
 - tailwind.config.mjs
+- tools/build_check/core/base-checker.cjs
+- tools/build_check/multi-scope-checker.cjs
+- tools/build_check/scopes/css-scope.cjs
+- tools/build_check/scopes/seo-scope.cjs
 - tools/build_check/scripte/aar-metrics-collector.cjs
 - tools/build_check/scripte/build-checker-ARCHIV-2025-07-22.cjs
+- tools/build_check/scripte/build-checker-simple.cjs
 - tools/build_check/scripte/build-checker.cjs
 - tools/build_check/scripte/css-checker.cjs
 - tools/build_check/scripte/helper-methods.cjs
@@ -347,6 +355,7 @@
 - 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/build_logs/comprehensive-seo-report.md
 - 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/fails_learnings/README.md
 - 01_PLAYBOOK_CONTENT/_altes_chaos_archiv/_ARCHIV_CHAOS/playbook.md
+- docs/08_simon_pers/chats/chat_23072025.md
 - docs/08_simon_pers/chats/SMART-PROMPT-CSS-FIXES-2025-07-22.md
 - docs/change_management/backups/2025-07-18_14-45-00_copilot-instructions_backup.md
 - docs/change_management/backups/2025-07-18_15-14-00_README_backup.md
@@ -387,11 +396,15 @@
 - docs/checker_entwicklung/probleme_und_loesungen.md
 - docs/checker_entwicklung/README.md
 - docs/MASTER_DESIGN_STANDARDS.md
+- docs/todos/ANTI_OBERFLÄCHLICHKEITS_ZWANGS_SYSTEM.md
 - docs/todos/archiv/erledigte_todos_2025-07-19.md
+- docs/todos/INSTRUCTIONS_SCOPE_SYSTEM.md
 - docs/todos/issues.md
+- docs/todos/MASTER_TODO_SCOPE_SYSTEM.md
 - docs/todos/README.md
 - docs/todos/todos.md
 - docs/todos/todo_001_ui_komponenten_bestandsaufnahme.md
+- docs/todos/TODO_DOKUMENTATIONSZWANG_SYSTEM.md
 - docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md
 - docs/website_struktur/origin/fallbeispiel_Story_formatted.md
 - docs/website_struktur/origin/fallbeispiel_story_original_2025-07-12.md
@@ -406,6 +419,7 @@
 - docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md
 - docs/website_struktur/statische-seiten/README.md
 - docs/website_struktur/statische-seiten/static/index.md
+- docs/website_struktur/website_design/60-30-10-PLUS-FLEX-SYSTEM.md
 - docs/website_struktur/website_design/global_css.md
 - docs/website_struktur/website_elemente/footer.md
 - docs/website_struktur/website_elemente/header.md
@@ -539,6 +553,15 @@
 - tools/build_check/logfiles/build-checker-2025-07-21T11-11-45-682Z.md
 - tools/build_check/logfiles/enhanced-build-checker-v2-2025-07-21T12-40-04-578Z.md
 - tools/build_check/logfiles/enhanced-build-checker-v2-2025-07-21T13-02-26-499Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T12-01-11-209Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T12-01-38-464Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T12-21-01-073Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T12-27-15-038Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T13-03-27-618Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T15-40-09-310Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T15-54-37-706Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T20-43-57-928Z.md
+- tools/build_check/logfiles/multi-scope-build-report-2025-07-23T21-08-55-910Z.md
 - tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T13-51-20-361Z.md
 - tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T13-55-03-690Z.md
 - tools/build_check/logfiles/simon-build-checker-v3-2025-07-21T20-04-45-815Z.md

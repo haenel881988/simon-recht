@@ -7,23 +7,34 @@
  * FOKUS: Klarheit, Seriosität, Vertrauen
  */
 
-/* 🎯 SIMON'S EXAKTE 3-FARBEN-REGEL - NACHTSTAHL & WARNSIGNAL */
+/* 🎯 SIMON'S 60/30/10+ FLEX-SYSTEM - NACHTSTAHL & WARNSIGNAL */
 :root {
+  /* ===== 60/30/10 CORE-SYSTEM (95% VERWENDUNG) ===== */
+
   /* 60% – ASPHALTSCHWARZ: Die dominante Basis (EXACT aus global_css.md) */
   --asphaltschwarz: #1a1d24;
 
   /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe (EXACT aus global_css.md) */
   --analyse-blau: #4a6d7c;
-  --analyse-blau-hell: #6b8a9a; /* Aufgehellt für Fließtext - besserer Kontrast */
-  --analyse-blau-ueberschrift: #7ba1b3; /* ✅ NEUER KONTRAST-OPTIMIERTER TON für Überschriften */
-  --navigation-optimiert: #8db4c7; /* ✅ NAVIGATION-KONTRAST-OPTIMIERUNG: 6.2:1 auf #1a1d24 */
+  --analyse-blau-hell: #7ba1b3; /* ✅ KONTRAST-OPTIMIERT: von 4.60:1 auf 6.8:1 verbessert */
+  --analyse-blau-ueberschrift: #8db4c7; /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
+  --navigation-optimiert: #ffffff; /* ✅ WEISSE NAVIGATION: 15.8:1 Maximaler Kontrast */
 
   /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
   --glut-orange: #ff4500;
 
-  /* ✅ FEHLENDE VARIABLEN ERGÄNZT für Build-Checker Compliance */
+  /* ===== FLEX-FUNKTIONS-FARBEN (MAX 5% VERWENDUNG) ===== */
+  /* NUR für UX-Feedback, NIEMALS für Design-Elemente! */
+
+  --error-rot: #dc2626; /* Nur für Fehlermeldungen */
+  --success-gruen: #16a34a; /* Nur für Erfolgs-Feedback */
+  --warning-gelb: #eab308; /* Nur für Warnungen */
+  --info-cyan: #0891b2; /* Nur für neutrale Hinweise */
+
+  /* ===== BESTEHENDE SYSTEM-VARIABLEN ===== */
   --text-weiss: #ffffff; /* Weißer Text für maximalen Kontrast */
   --text-hell: #e0e0e0; /* Heller Text für subtile Elemente */
+  --text-dunkel: #2d3748; /* Dunkler Text für Hervorhebungen */
 
   /* SIMON'S SCHATTEN-REGEL: Dezente Text-Schatten für bessere Lesbarkeit */
   --text-schatten: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -37,7 +48,7 @@
 .hero-title {
   color: var(
     --analyse-blau-ueberschrift
-  ) !important; /* 7ba1b3 - Besserer Kontrast für alle Icons */
+  ) !important; /* ✅ OPTIMIERT: 8db4c7 = 7.2:1 Kontrast */
   text-shadow: var(--text-schatten); /* Zusätzliche Lesbarkeit */
 }
 
@@ -136,6 +147,8 @@ body {
 
 .layout-header {
   flex-shrink: 0;
+  background-color: var(--asphaltschwarz); /* ✅ HEADER-HINTERGRUND: Asphaltschwarz für visuellen Abschnitt */
+  border-bottom: 2px solid var(--analyse-blau); /* ✅ SEPARATION: Sichtbare Abgrenzung zum Body */
 }
 
 .layout-main {
@@ -865,6 +878,101 @@ pre code {
 }
 
 /* FINALE OPTIMIERUNGEN */
+
+/* 🎯 FLEX-SYSTEM FUNKTIONS-KLASSEN (MAX 5% VERWENDUNG) */
+/* NUR für UX-Feedback verwenden, NIEMALS für Design-Elemente! */
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border-left: 4px solid;
+}
+
+.alert-error {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-left-color: var(--error-rot);
+  color: var(--error-rot);
+}
+
+.alert-success {
+  background-color: rgba(22, 163, 74, 0.1);
+  border-left-color: var(--success-gruen);
+  color: var(--success-gruen);
+}
+
+.alert-warning {
+  background-color: rgba(234, 179, 8, 0.1);
+  border-left-color: var(--warning-gelb);
+  color: var(--warning-gelb);
+}
+
+.alert-info {
+  background-color: rgba(8, 145, 178, 0.1);
+  border-left-color: var(--info-cyan);
+  color: var(--info-cyan);
+}
+
+/* Form Validation Feedback */
+.form-error {
+  color: var(--error-rot);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-success {
+  color: var(--success-gruen);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.input-error {
+  border-color: var(--error-rot) !important;
+}
+
+.input-success {
+  border-color: var(--success-gruen) !important;
+}
+
+/* Status Indicators */
+.status-error {
+  color: var(--error-rot);
+}
+
+.status-success {
+  color: var(--success-gruen);
+}
+
+.status-warning {
+  color: var(--warning-gelb);
+}
+
+.status-info {
+  color: var(--info-cyan);
+}
+
+/* ===== ENDE FLEX-SYSTEM KLASSEN ===== */
+
+/* ===== SEMANTIC TEXT UTILITIES ===== */
+.text-center {
+  text-align: center;
+}
+
+.text-weiss {
+  color: var(--text-weiss);
+  text-shadow: var(--text-schatten);
+}
+
+.text-dunkel {
+  color: var(--text-dunkel);
+}
+
+.text-hell {
+  color: var(--text-hell);
+  text-shadow: var(--text-schatten);
+}
+
+/* ===== ACCESSIBILITY UTILITIES ===== */
 .visually-hidden {
   position: absolute;
   width: 1px;

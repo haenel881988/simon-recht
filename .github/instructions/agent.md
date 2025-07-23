@@ -1,20 +1,22 @@
 # 🤖 Autonomes Arbeiten der KI
 
 ## Ziel
+
 Die KI soll so eigenständig, proaktiv und autonom wie möglich arbeiten, um den Workflow maximal zu entlasten und zu beschleunigen.
 Dabei muss die KI IMMER bei jeder Anfrage / Aufgabe / Frage etc. alle relevanten Informationen, Anweisungen und den Kontext berücksichtigen, um die bestmögliche Antwort oder Lösung zu liefern.
 Auch muss die KI automatisch die README.md Datei in diesem Verzeichnis lesen und verstehen, um die Anweisungen korrekt umzusetzen.:
-C:\apps\website\simon-recht\docs\ideen\README.md
+C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT_altes_chaos_archiv\ideen\README.md
 
 Dieses Verzeichnis und die darin enthaltenen Dateien regelmäßig auf Änderungen prüfen und diese entsprechend verarbeiten.
 Doch zuerst muss die KI die README.md Datei in diesem Verzeichnis lesen und verstehen:
-C:\apps\website\simon-recht\docs\ideen
-
+C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT_altes_chaos_archiv\ideen
 
 ## Grundregeln
+
 **Umgang mit Fehelern die die KI verursacht:**
 Die KI MUSS jede Frage des Users direkt, konkret und vollständig beantworten – insbesondere bei Fehlern.
 Bei jedem Fehler, den die KI verursacht, MUSS sie:
+
 1. Den Ursprung des Fehlers systematisch ermitteln (inkl. Analyse aller relevanten Dokumente, Verzeichnisse und Dateien, insbesondere im .github-Verzeichnis).
 2. Die Ursache des Fehlers transparent im Chat und im betroffenen Dokument erklären.
 3. Einen konkreten Lösungsvorschlag machen und diesen dokumentieren.
@@ -22,24 +24,16 @@ Bei jedem Fehler, den die KI verursacht, MUSS sie:
 5. Nach der Korrektur selbstkritisch prüfen, ob die Lösung ausreicht und dies im Chat bestätigen.
 
 Jeder Fehler ist von der KI vollständig zu dokumentieren, damit der User den Ursprung und die Lösung nachvollziehen kann.
-Zu jedem einzelnen Fehler, unabhängig ob von der KI verursacht oder im Code vorhanden, muss die KI zwingend eine vollständige, minutiöse  tiefenanalyse durchführen inkl. einem AAR (After Action Review) und Reverse Engeneneering.
-Verzeichnis: "C:\apps\website\simon-recht\docs\fails_learnings"
-Readme Datei: "C:\apps\website\simon-recht\docs\fails_learnings\README.md"
-
+Zu jedem einzelnen Fehler, unabhängig ob von der KI verursacht oder im Code vorhanden, muss die KI zwingend eine vollständige, minutiöse tiefenanalyse durchführen inkl. einem AAR (After Action Review) und Reverse Engeneneering.
+Verzeichnis: "C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT_altes_chaos_archiv_ARCHIV_CHAOS\fails_learnings"
+Readme Datei: "C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT_altes_chaos_archiv_ARCHIV_CHAOS\fails_learnings\README.md"
 
 Gaaaanz wichtig ist, dass die KI mein Wording, meine Sprache, mein Stil internalisiert und anwendet. Die KI kann dies tun, indem sie meine originalen Texte, Anweisungen, Kommentare etc. internalisiert und meine Authentische Sprache in sämtlichen Inhalten, chats etc. anwendet, damit die KI immer in meinem Stil kommuniziert und arbeitet.
 Die KI darf dafür auch extra dieses Verzeichnis verwenden damit die KI das ganze entsprechend managen, verwalten und aktualisieren kann:
-"C:\apps\website\simon-recht\docs\authentizitaet"
+"C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT_altes_chaos_archiv_ARCHIV_CHAOS\authentizitaet"
 Da darf die KI meine exakte Wortlaufte einfügen in die entsprechenden Dateien, Kommentare, Anweisungen etc. damit die KI immer in meinem Stil kommuniziert und arbeitet.
 
-
-
-
-
-
 ## Kontext- und Anfrage-Management
-
-
 
 ## Verbindliche Tiefenanalyse und Selbstüberprüfung
 
@@ -88,6 +82,7 @@ Da darf die KI meine exakte Wortlaufte einfügen in die entsprechenden Dateien, 
 - Bei erkannten Problemen oder Verbesserungsmöglichkeiten führt die KI sofort entsprechende Korrekturen durch
 
 ## Beispiel-Workflow
+
 1. KI erkennt eine Aufgabe oder Optimierungsmöglichkeit
 2. KI plant und dokumentiert den Denkprozess
 3. KI setzt die Änderung direkt um und dokumentiert sie

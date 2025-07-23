@@ -35,8 +35,22 @@
 2. Hover-States optimieren für bessere Interaktion
 3. Active-States für bessere Orientierung
 
-## ✅ INTERNALISIERT: ANHANG-FORENSIK
+## ✅ INTERNALISIERT: ANHANG-FORENSIK & ANTI-"WAHRSCHEINLICH"-SYSTEM
 
 **NEUE REGEL:** KI muss IMMER alle Anhänge tiefenanalysieren
 **FORENSIK-LEVEL:** Pixel-genaue Screenshot-Analyse erforderlich
 **DISKREPANZ-ERKENNUNG:** Visual vs. Technical Gaps identifizieren
+
+### **🚨 KRITISCHE INTERNALISIERUNG - SIMON'S FEEDBACK 23.07.2025:**
+
+**ABSOLUTES VERBOT:** "Wahrscheinlich", "vermutlich", "möglicherweise" in technischen Aussagen
+**PFLICHT-VERHALTEN:** ZWINGEND Tiefenanalyse vor jeder Aussage
+**BEWEIS-ZWANG:** Jede Behauptung muss durch Datei-Analyse belegt sein
+
+**EXAKTE PROBLEM-IDENTIFIKATION (KORRIGIERT):**
+- Header-Problem: .layout-header hatte KEINEN Hintergrund (FAKTISCH BEWIESEN)
+- Navbar: Hatte asphaltschwarz (#1a1d24) - VERIFIZIERT Zeile 183
+- Body: Ebenfalls asphaltschwarz - ANALYSIERT
+- LÖSUNG: Header-Hintergrund hinzugefügt mit Separation-Border
+
+**LESSON LEARNED:** NIEMALS Vermutungen - IMMER Code-Analyse!
