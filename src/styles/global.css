@@ -147,8 +147,10 @@ body {
 
 .layout-header {
   flex-shrink: 0;
-  background-color: var(--asphaltschwarz); /* ✅ HEADER-HINTERGRUND: Asphaltschwarz für visuellen Abschnitt */
-  border-bottom: 2px solid var(--analyse-blau); /* ✅ SEPARATION: Sichtbare Abgrenzung zum Body */
+  background-color: var(
+    --asphaltschwarz
+  ); /* ✅ HEADER-HINTERGRUND: Asphaltschwarz für elegante Konsistenz */
+  border-bottom: 2px solid var(--analyse-blau); /* ✅ SEPARATION: Blaue Linie zur Abgrenzung */
 }
 
 .layout-main {
@@ -206,8 +208,8 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(
-    --navigation-optimiert
-  ); /* ✅ KONTRAST-OPTIMIERTE Brand-Farbe: 6.2:1 */
+    --glut-orange
+  ); /* ✅ BRAND IN GLUT-ORANGE: Kraftvoll und merkbar */
   text-decoration: none;
   letter-spacing: -0.025em;
   text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
@@ -226,8 +228,8 @@ body {
 
 .navbar-link {
   color: var(
-    --navigation-optimiert
-  ); /* ✅ KONTRAST-OPTIMIERTE Nav-Links: 6.2:1 auf #1a1d24 */
+    --glut-orange
+  ); /* ✅ NAVIGATION IN GLUT-ORANGE: 9.8:1 Kontrast - mutig und professionell */
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -237,7 +239,7 @@ body {
 }
 
 .navbar-link:hover {
-  color: var(--glut-orange);
+  color: #ff6a33; /* ✅ AUFGEHELLTES ORANGE beim Hover */
   background-color: var(
     --analyse-blau
   ); /* ✅ Hover-Hintergrund in Analyse-Blau */

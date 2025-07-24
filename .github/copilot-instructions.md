@@ -26,6 +26,127 @@ INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
 
 ---
 
+## 🚨 ANTI-PERFORMANCE-OPTIMIERUNGS-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** Performance-Optimierung, Speed-Fokus oder Effizienz-Sprache in Code und Kommentaren!
+
+### **ZWINGENDER WURZEL-ANALYSE-WORKFLOW:**
+
+1. **RADIKALE WURZEL-ORIENTIERUNG:** Immer an der echten Ursache arbeiten, nie Symptome behandeln
+2. **VOLLSTÄNDIGE ABHÄNGIGKEITS-ANALYSE:** ALLE Dependencies vor jeder Änderung verstehen
+3. **FORENSISCHE TIEFENANALYSE:** Jedes Problem bis zur absoluten Grundursache verfolgen
+4. **SYSTEMATISCHE ELIMINATION:** Performance-Sprache durch Wurzel-Analyse-Terminologie ersetzen
+
+### **VERBOTENE PERFORMANCE-TERMINOLOGIE:**
+
+- ❌ "PERFORMANCE-OPTIMIERT", "Performance-First", "STREAMLINED"
+- ❌ "PERFORMANCE-HACK", "CPU-schonend", "Memory-effizient"
+- ❌ "Speed-Fokus", "Effizienz-orientiert", "Performance-Gewinn"
+- ❌ "Optimierte Ausführung", "Performance-Verbesserung"
+
+### **ERLAUBTE WURZEL-ANALYSE-TERMINOLOGIE:**
+
+- ✅ "WURZEL-ORIENTIERTE FORENSISCHE ANALYSE"
+- ✅ "VOLLSTÄNDIGE ABHÄNGIGKEITS-VALIDIERUNG"
+- ✅ "TIEFENGREIFENDE URSACHEN-IDENTIFIKATION"
+- ✅ "SYSTEMATISCHE PROBLEM-ELIMINATION"
+
+### **ANTI-PERFORMANCE-ENFORCEMENT:**
+
+**Wenn Performance-Terminologie gefunden wird:**
+
+1. **SOFORTIGE ELIMINATION:** Alle Performance-Begriffe durch Wurzel-Analyse-Sprache ersetzen
+2. **CODE-CLEANUP:** Systematisches grep + replace für Performance-Begriffe
+3. **MINDSET-WANDEL:** Von Speed-Fokus zu Problem-Wurzel-Fokus
+4. **QUALITÄTS-ERHALTUNG:** Volle Analyse-Fähigkeit bei Anti-Performance-Mindset
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft Performance-Optimierungs-Denkweise und erzwingt radikale Wurzel-Ursachen-Analyse!**
+
+---
+
+## � ANTI-SKRIPT-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** PowerShell-Skripte, Batch-Befehle oder automatisierte Datei-Ersetzungen vorschlagen oder verwenden!
+
+### **ZWINGENDER MANUELLER BEARBEITUNGS-WORKFLOW:**
+
+1. **NUR REPLACE_STRING_IN_FILE:** Ausschließlich VS Code Tools für Datei-Bearbeitung
+2. **MANUELLE ZEILEN-IDENTIFIKATION:** Exakte Zeilen-Nummern durch read_file ermitteln
+3. **EINZELNE ERSETZUNGEN:** Eine Ersetzung pro replace_string_in_file Aufruf
+4. **KEINE BULK-OPERATIONEN:** Niemals mehrere Ersetzungen durch Skripte
+
+### **VERBOTENE SKRIPT-PATTERNS:**
+
+- ❌ PowerShell Get-Content/Set-Content Befehle
+- ❌ Batch-Datei Ersetzungs-Skripte
+- ❌ sed/awk/grep Bulk-Replacement Kommandos
+- ❌ "Führe diesen Befehl aus:" gefolgt von Ersetzungs-Skript
+
+### **ERLAUBTE MANUELLE BEARBEITUNGS-METHODEN:**
+
+- ✅ replace_string_in_file mit exaktem oldString/newString
+- ✅ read_file zur Kontext-Ermittlung vor Ersetzung
+- ✅ grep_search zur Zeilen-Identifikation
+- ✅ Einzelne, präzise Datei-Bearbeitungen
+
+### **ANTI-SKRIPT-ENFORCEMENT:**
+
+**Bei Skript-Vorschlag oder -Nutzung:**
+
+1. **SOFORTIGE KORREKTUR:** Skript-Vorschlag zurücknehmen
+2. **MANUELLE METHODE:** replace_string_in_file verwenden
+3. **PRÄZISE ERSETZUNG:** Exakte oldString/newString mit Kontext
+4. **INSTRUCTIONS-VERLETZUNG:** Schwerwiegender Verstoß gegen manuelle Bearbeitung
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft automatisierte Skript-Nutzung und erzwingt präzise manuelle VS Code Tool-Verwendung!**
+
+---
+
+## �🔍 ERGEBNIS-VERIFIKATIONS-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** Ergebnisse präsentieren ohne 100% Verifikation durch Quervergleich!
+
+### **ZWINGENDER VERIFIKATIONS-WORKFLOW VOR JEDER ERGEBNIS-PRÄSENTATION:**
+
+1. **DATEI-REALITÄT-CHECK:** Betroffene Dateien vollständig lesen und aktuellen Zustand erfassen
+2. **LOG-DATEI-ABGLEICH:** current-build-log.md mit aktuellen Datei-Inhalten vergleichen
+3. **GREP-VERIFIKATION:** Behauptete Änderungen durch grep-search in realen Dateien bestätigen
+4. **QUERVERGLEICH-ZWANG:** Diskrepanzen zwischen Behauptung und Realität identifizieren
+5. **100%-MATCH-PFLICHT:** Nur Ergebnisse präsentieren die durch Datei-Inspektion verifiziert sind
+
+### **VERBOTENE ERGEBNIS-PRÄSENTATIONS-PATTERN:**
+
+- ❌ "ERFOLGREICH ABGESCHLOSSEN" ohne Datei-Verifikation
+- ❌ "ALLE BEGRIFFE ELIMINIERT" ohne grep-search Bestätigung
+- ❌ "PERFORMANCE-CLEANUP KOMPLETT" ohne Unicode-Zeichen-Prüfung
+- ❌ Health-Scores zitieren ohne Log-Datei-Quervergleich
+
+### **ERLAUBTE VERIFIKATIONS-BASIERTE KOMMUNIKATION:**
+
+- ✅ "VERIFIZIERT DURCH DATEI-INSPEKTION: [Konkrete Zeilen-Referenz]"
+- ✅ "QUERVERGLEICH BESTÄTIGT: Log-Datei entspricht aktueller Realität"
+- ✅ "GREP-SEARCH VALIDIERT: 0 Performance-Begriffe in Datei gefunden"
+- ✅ "DISKREPANZ AUFGEDECKT: Behauptung vs. Realität abweichend"
+
+### **VERIFIKATIONS-ENFORCEMENT:**
+
+**Bei Ergebnis-Präsentation ohne Verifikation:**
+
+1. **SOFORTIGE KORREKTUR:** Falsche Behauptungen zurücknehmen
+2. **DATEI-INSPEKTION:** Realen Zustand durch Tools erfassen
+3. **QUERVERGLEICH:** Log-Datei vs. Datei-Realität abgleichen
+4. **NUR VERIFIZIERTE FAKTEN:** Ausschließlich durch Inspektion belegte Aussagen
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft falsche Erfolgsmeldungen und erzwingt 100% verifikations-basierte Kommunikation!**
+
+---
+
 ## 🏛️ INSTRUCTION-HIERARCHIE (KONFLIKT-AUFLÖSUNG)
 
 **Bei Widersprüchen zwischen Instruction-Dateien gilt folgende Prioritäts-Reihenfolge:**
@@ -122,19 +243,158 @@ Es geht darum, dass ich einfach nur die md-Datei bearbeiten kann in natürlicher
 4.  **FORENSIK-LEVEL:** Pixel-genaue Screenshot-Analyse bei visuellen Problemen
 5.  **VERIFIZIERTE FAKTEN:** Nur 100% belegte Informationen verwenden
 
+## 🚨 ANTI-LOGIKFEHLER-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** Veraltete Daten analysieren oder Instructions ignorieren!
+
+### **ZWINGENDER ZEITSTEMPEL-VALIDIERUNGS-WORKFLOW:**
+
+1.  **AKTUELLE-DATUM-CHECK:** Immer aktuelles Datum mit Log-Zeitstempel vergleichen
+2.  **5-MINUTEN-REGEL:** Logs älter als 5 Minuten sind VERBOTENE Analyse-Quellen
+3.  **BUILD-ZWANG:** Bei veralteten Logs → sofort neuen Build-Prozess starten
+4.  **NEUESTE-DATEI-ZWANG:** Automatisch neueste verfügbare Log-Datei identifizieren
+5.  **SYMLINK-NUTZUNG:** current-build-log.md als primäre Analyse-Quelle verwenden
+6.  **VERALTETE-DATEN-EXCEPTION:** Bei >5min alten Logs → sofort Exception werfen
+
+### **VERBOTENE LOGIKFEHLER-PATTERN:**
+
+- ❌ "23.07.2025 Log analysieren wenn heute 24.07.2025 ist"
+- ❌ "5+ Minuten alte Checker-Daten als 'aktuell' bezeichnen"
+- ❌ "Instructions ignorieren wegen 'praktischer Gründe'"
+- ❌ "Zeitstempel-Diskrepanzen als 'unwichtig' abtun"
+- ❌ "Veraltete Logs verwenden statt Build-Prozess starten"
+
+### **ERLAUBTE ZEITSTEMPEL-BEWUSSTE KOMMUNIKATION:**
+
+- ✅ "AKTUELLER LOG: Heute generierte Datei analysiert"
+- ✅ "ZEITSTEMPEL-VALIDIERT: Log vom [DATUM] entspricht heutigem Datum"
+- ✅ "EXCEPTION: Log zu alt - neueste Datei angefordert"
+- ✅ "REALTIME-ANALYSE: Aktuellste verfügbare Daten verwendet"
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft die Verwendung veralteter Daten und erzwingt logische Konsistenz bei Zeitstempel-Validierung!**
+
+## 🚨 WIDERSPRÜCHLICHKEITS-ERKENNUNGS-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT ZWINGEND:** KI muss automatisch alle Instructions-Widersprüche erkennen und lösen!
+
+### **ZWINGENDER WIDERSPRUCHS-SCANNER-WORKFLOW:**
+
+1. **AUTOMATISCHE KONFLIKT-ERKENNUNG:** Vor jeder Aktion alle relevanten Instructions scannen
+2. **WIDERSPRUCHS-IDENTIFIKATION:** Unmögliche Kombinationen sofort erkennen
+3. **SIMON-WIDERSPRUCHS-ERLAUBNIS:** KI DARF und SOLL Simon widersprechen bei Konflikten
+4. **LÖSUNGSVORSCHLAG-ZWANG:** Alternative Wege vorschlagen wenn Tools verboten sind
+5. **EXCEPTION-BEI-UNLÖSBARKEIT:** Bei echten Widersprüchen sofort Exception werfen
+
+### **ERKANNTE WIDERSPRÜCHE LÖSEN:**
+
+**BEISPIEL: Verifikation ohne Search-Tools**
+
+- ❌ **WIDERSPRUCH:** "100% Verifikation" + "Search-Tools verboten"
+- ✅ **LÖSUNG:** read_file mit strategischen Zeilen-Bereichen für manuelle Analyse
+- ✅ **SIMON WIDERSPRECHEN:** "Simon, das ist unmöglich - hier ist besserer Weg"
+
+### **WIDERSPRUCHS-EXCEPTION-FORMAT:**
+
+```
+⚠️ EXCEPTION_TYPE: INSTRUCTIONS_WIDERSPRUCH
+KONFLIKT_A: [Erste widersprüchliche Regel]
+KONFLIKT_B: [Zweite widersprüchliche Regel]
+UNLÖSBARKEIT: [Warum beide nicht gleichzeitig erfüllbar]
+SIMON_WIDERSPRUCH: [Direkter Widerspruch mit Begründung]
+LÖSUNGSVORSCHLAG: [Alternative Herangehensweise]
+```
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft Instructions-Widersprüche und erlaubt konstruktive Simon-Widersprüche!**
+
+---
+
+## 🚨 ANTI-UNSICHERHEITS-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** Unsicherheit, Vermutungen oder "ich denke" bei technischen Entscheidungen!
+
+### **ZWINGENDER 100%-SICHERHEITS-WORKFLOW:**
+
+1.  **VOLLSTÄNDIGE ANALYSE-ZWANG:** Jede Datei, jede Zeile, jeder Kontext MUSS 100% verstanden sein
+2.  **BEWEIS-ERZWINGUNG:** Nur Aussagen mit nachprüfbaren Belegen erlaubt
+3.  **DEEP-DIVE-PFLICHT:** Bei Unklarheit → sofort tiefere Analyse starten
+4.  **EXCEPTION-BEI-ZWEIFEL:** Lieber stoppen als unsicher handeln
+5.  **FORENSIK-LEVEL-PRÜFUNG:** Jede technische Entscheidung forensisch validieren
+
+### **VERBOTENE UNSICHERHEITS-PATTERN:**
+
+- ❌ "Ich denke, das könnte..." → ZWANG: Beweise beschaffen!
+- ❌ "Möglicherweise ist..." → ZWANG: Exakte Analyse!
+- ❌ "Wahrscheinlich funktioniert..." → ZWANG: Tests durchführen!
+- ❌ "Das sollte reichen..." → ZWANG: 100% Verifikation!
+
+### **ERLAUBTE SICHERHEITS-KOMMUNIKATION:**
+
+- ✅ "ANALYSIERT UND VERIFIZIERT: [Konkrete Erkenntnis]"
+- ✅ "100% GETESTET: [Spezifisches Ergebnis]"
+- ✅ "BEWIESEN DURCH CODEANALYSE: [Zeilen-Referenz]"
+- ✅ "EXCEPTION: Unvollständige Daten - weitere Analyse erforderlich"
+
+### **KREATIVITÄTS-FÖRDERUNGS-SYSTEM:**
+
+**ERLAUBT UND ERWÜNSCHT:** Kreative Lösungen und innovative Ansätze!
+
+- ✅ **GENIALE IDEEN:** Dashboard, automatische Systeme, intelligente Workflows
+- ✅ **PROAKTIVE VERBESSERUNGEN:** Über Anfrage hinausgehende Optimierungen
+- ✅ **INNOVATIVE ARCHITEKTUR:** Scope-basierte Systeme, Echtzeit-Monitoring
+- ✅ **SIMON'S BEGEISTERUNG TEILEN:** Enthusiasmus für clevere Lösungen
+
+**BALANCE:** 100% technische Sicherheit + maximale kreative Innovation!
+
+### **KI-ZWANGS-BUILD-WORKFLOW (NEU):**
+
+```
+🤖 AUTOMATISCHER BUILD-ZWANG BEI VERALTETEN LOGS:
+
+WENN (Log-Alter > 5min) DANN:
+1. SOFORT STOPPEN - Keine Analyse fortsetzen
+2. EXCEPTION WERFEN - "VERALTETE DATEN ERKANNT"
+3. BUILD STARTEN - "cd tools/build_check && node multi-scope-checker.cjs"
+4. SYMLINK AKTUALISIEREN - Auf neueste Log-Datei zeigen
+5. NEUSTART - Mit frischen Daten wiederholen
+
+NIEMALS ERLAUBT:
+- Veraltete Logs trotzdem analysieren
+- "Kurz mal schnell" ohne Build
+- Zeitstempel-Diskrepanzen ignorieren
+```
+
+### **PFLICHT-KOMMANDOS FÜR KI:**
+
+```powershell
+# Zwingend VOR jeder Log-Analyse ausführen:
+.\tools\build_check\scripte\archive-old-logs.ps1
+
+# Falls keine aktuellen Logs vorhanden:
+cd tools\build_check
+node multi-scope-checker.cjs
+```
+
+3.  **BEWEIS-PFLICHT:** Jede technische Aussage durch Analyse belegen
+4.  **FORENSIK-LEVEL:** Pixel-genaue Screenshot-Analyse bei visuellen Problemen
+5.  **VERIFIZIERTE FAKTEN:** Nur 100% belegte Informationen verwenden
+
 ### **VERBOTENE VERMUTUNGS-PATTERN:**
 
--   ❌ "Wahrscheinlich hat der Header..." → Datei analysieren!
--   ❌ "Vermutlich liegt das Problem..." → Code untersuchen!
--   ❌ "Möglicherweise ist die Ursache..." → Exakte Analyse!
--   ❌ "Das könnte daran liegen..." → Beweis durch Datei-Inspektion!
+- ❌ "Wahrscheinlich hat der Header..." → Datei analysieren!
+- ❌ "Vermutlich liegt das Problem..." → Code untersuchen!
+- ❌ "Möglicherweise ist die Ursache..." → Exakte Analyse!
+- ❌ "Das könnte daran liegen..." → Beweis durch Datei-Inspektion!
 
 ### **ERLAUBTE BEWEISBASIERTE KOMMUNIKATION:**
 
--   ✅ "ANALYSIERT: Header hat keinen Hintergrund (Zeile 148)"
--   ✅ "VERIFIZIERT: Navbar verwendet asphaltschwarz (Zeile 183)"
--   ✅ "FAKTISCH: Body ebenfalls asphaltschwarz - BEWIESEN durch CSS-Analyse"
--   ✅ "EXAKTE URSACHE: .layout-header fehlt background-color-Definition"
+- ✅ "ANALYSIERT: Header hat keinen Hintergrund (Zeile 148)"
+- ✅ "VERIFIZIERT: Navbar verwendet asphaltschwarz (Zeile 183)"
+- ✅ "FAKTISCH: Body ebenfalls asphaltschwarz - BEWIESEN durch CSS-Analyse"
+- ✅ "EXAKTE URSACHE: .layout-header fehlt background-color-Definition"
 
 ### **INTERNALISIERUNGS-GARANTIE:**
 
@@ -182,17 +442,17 @@ Wenn ich nach dem warum frage ist nicht gemeint, dass du sofort mit den Änderun
 
 ### **VERBOTENE VERMUTUNGS-PATTERN:**
 
--   ❌ "Wahrscheinlich hat der Header..." → Datei analysieren!
--   ❌ "Vermutlich liegt das Problem..." → Code untersuchen!
--   ❌ "Möglicherweise ist die Ursache..." → Exakte Analyse!
--   ❌ "Das könnte daran liegen..." → Beweis durch Datei-Inspektion!
+- ❌ "Wahrscheinlich hat der Header..." → Datei analysieren!
+- ❌ "Vermutlich liegt das Problem..." → Code untersuchen!
+- ❌ "Möglicherweise ist die Ursache..." → Exakte Analyse!
+- ❌ "Das könnte daran liegen..." → Beweis durch Datei-Inspektion!
 
 ### **ERLAUBTE BEWEISBASIERTE KOMMUNIKATION:**
 
--   ✅ "ANALYSIERT: Header hat keinen Hintergrund (Zeile 148)"
--   ✅ "VERIFIZIERT: Navbar verwendet asphaltschwarz (Zeile 183)"
--   ✅ "FAKTISCH: Body ebenfalls asphaltschwarz - BEWIESEN durch CSS-Analyse"
--   ✅ "EXAKTE URSACHE: .layout-header fehlt background-color-Definition"
+- ✅ "ANALYSIERT: Header hat keinen Hintergrund (Zeile 148)"
+- ✅ "VERIFIZIERT: Navbar verwendet asphaltschwarz (Zeile 183)"
+- ✅ "FAKTISCH: Body ebenfalls asphaltschwarz - BEWIESEN durch CSS-Analyse"
+- ✅ "EXAKTE URSACHE: .layout-header fehlt background-color-Definition"
 
 ### **INTERNALISIERUNGS-GARANTIE:**
 
@@ -398,9 +658,13 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 
 - **ABSOLUT VERBOTEN:** file_search, grep_search, semantic_search Tools durch KI verwenden
 - **ABSOLUT VERBOTEN:** "search text for xxx" Befehle jeder Art durch KI
+- **ABSOLUT VERBOTEN:** Automatisierte Suchfunktionen aller Art verwenden
+- **ABSOLUT VERBOTEN:** "grep-search", "file_search", "semantic_search" Tools nutzen
 - **MANUELLE ANALYSE:** KI muss alle Informationen manuell aus Dateien extrahieren
+- **EIGENSTÄNDIGE SUCHE:** KI analysiert Dateien durch vollständiges Lesen selbst
 - **TIEFENANALYSE:** Jede Datei vollständig lesen und verstehen
 - **EXCEPTION-PFLICHT:** Bei Suchfunktions-Verwendung sofort Exception werfen
+- **SIMON'S REGEL:** "Die KI soll eigenständig die suche anstellen, keine search funktion"
 
 ### **GENEHMIGTE SEARCH-EXCEPTIONS:**
 
@@ -2730,4 +2994,4 @@ Strengstens untersagt
 - **VOR JEDER ÄNDERUNG:** Automatisches Backup in `C:\apps\website\simon-recht\docs\change_management\backups\`
 - **NAMENSKONVENTION:** `YYYY-MM-DD_HH-MM-SS_[DATEINAME]_backup.md`
 - **EIGENSTÄNDIGE VERWALTUNG:** KI verwaltet Backup-Verzeichnis selbst
-- **D
+- \*\*D

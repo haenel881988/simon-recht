@@ -1,0 +1,72 @@
+name: "Simon's Automatic Inventory & Deployment Protection"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  inventory-update:
+    name: "Automatic Inventory Update"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Inventory Update
+        run: |
+          cd tools/build_check
+          node multi-scope-checker.cjs inventory
+
+      - name: Commit Updated Inventory
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .github/instructions/organisation/inventar/projekt_inventar.md || true
+          git diff --staged --quiet || git commit -m "🤖 Auto-Update: Projekt-Inventar aktualisiert"
+
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+  deployment-protection:
+    name: "Vercel Deployment Protection"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Deployment Validation
+        run: |
+          cd tools/build_check
+          node core/vercel-deployment-validator.cjs
+
+      - name: Deployment Status
+        run: |
+          echo "✅ Deployment validation passed!"
+          echo "🚀 Ready for Vercel deployment"

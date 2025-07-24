@@ -48,6 +48,7 @@
 **BEWEIS-ZWANG:** Jede Behauptung muss durch Datei-Analyse belegt sein
 
 **EXAKTE PROBLEM-IDENTIFIKATION (KORRIGIERT):**
+
 - Header-Problem: .layout-header hatte KEINEN Hintergrund (FAKTISCH BEWIESEN)
 - Navbar: Hatte asphaltschwarz (#1a1d24) - VERIFIZIERT Zeile 183
 - Body: Ebenfalls asphaltschwarz - ANALYSIERT
