@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 
 /**
- * 🎨 SIMON'S CSS-SCOPE v1.0 - DESIGN & KONTRAST SPEZIALIST
+ * ðŸŽ¨ SIMON'S CSS-SCOPE v1.0 - DESIGN & KONTRAST SPEZIALIST (BOM-Fix)
  *
- * 🎯 VERANTWORTLICHKEITEN:
- * ✅ WCAG-Kontrast-Tests (AA & AAA)
- * ✅ CSS-Variablen-Extraktion & -Simulation
- * ✅ Icon- & Symbol-Kontrast-Validierung
- * ✅ Reality-based CSS-Regel-Simulation
- * ✅ Simon's 3-Farben-Palette Compliance
+ * ðŸŽ¯ VERANTWORTLICHKEITEN:
+ * âœ… WCAG-Kontrast-Tests (AA & AAA)
+ * âœ… CSS-Variablen-Extraktion & -Simulation
+ * âœ… Icon- & Symbol-Kontrast-Validierung
+ * âœ… Reality-based CSS-Regel-Simulation
+ * âœ… Simon's 3-Farben-Palette Compliance
  */
 
 const fs = require("fs").promises;
 const path = require("path");
 const BaseChecker = require("../core/base-checker.cjs");
 
-// 🎨 SIMON'S ECHTE 3-FARBEN-PALETTE
+// ðŸŽ¨ SIMON'S ECHTE 3-FARBEN-PALETTE
 const SIMON_COLORS = {
   ASPHALTSCHWARZ: "#1a1d24",
   ANALYSE_BLAU: "#4a6d7c",
@@ -35,8 +35,8 @@ class CSSScope {
   }
 
   /**
-   * 🎯 WURZEL-ORIENTIERTE FORENSISCHE CSS-VOLLANALYSE
-   * Erweitert auf 15+ Tests für vollständige WCAG-Validierung
+   * ðŸŽ¯ WURZEL-ORIENTIERTE FORENSISCHE CSS-VOLLANALYSE
+   * Erweitert auf 15+ Tests fÃ¼r vollstÃ¤ndige WCAG-Validierung
    */
   async run() {
     const issues = [];
@@ -44,15 +44,15 @@ class CSSScope {
     const kiPrompts = [];
 
     try {
-      console.log("🎨 CSS-FORENSIK-POWERHOUSE GESTARTET...");
+      console.log("ðŸŽ¨ CSS-FORENSIK-POWERHOUSE GESTARTET...");
 
-      // 1️⃣ VOLLSTÄNDIGE CSS-VARIABLEN-EXTRAKTION (WURZEL-ANALYSE)
-      console.log("🎨 Extrahiere CSS-Variablen...");
+      // 1ï¸âƒ£ VOLLSTÃ„NDIGE CSS-VARIABLEN-EXTRAKTION (WURZEL-ANALYSE)
+      console.log("ðŸŽ¨ Extrahiere CSS-Variablen...");
       this.cssVariables = await this.extractCSSVariables();
       metrics.cssVariablesCount = Object.keys(this.cssVariables).length;
 
-      // 2️⃣ ERWEITERTE KONTRAST-TESTS (15+ Tests für forensische Validierung)
-      console.log("🎨 Führe erweiterte WCAG-Kontrast-Tests durch...");
+      // 2ï¸âƒ£ ERWEITERTE KONTRAST-TESTS (15+ Tests fÃ¼r forensische Validierung)
+      console.log("ðŸŽ¨ FÃ¼hre erweiterte WCAG-Kontrast-Tests durch...");
       const extendedTests = await this.performExtendedContrastTests();
       this.contrastResults = extendedTests.detailedResults;
       metrics.contrastTests = extendedTests.totalTests;
@@ -60,55 +60,55 @@ class CSSScope {
       metrics.failedTests = extendedTests.failed;
       metrics.averageContrast = extendedTests.averageRatio;
 
-      // 3️⃣ TIEFENGREIFENDE CSS-FORENSIK (VOLLSTÄNDIGE DEPENDENZ-ANALYSE)
-      console.log("🔍 FORENSISCHE CSS-DATEI-ANALYSE...");
+      // 3ï¸âƒ£ TIEFENGREIFENDE CSS-FORENSIK (VOLLSTÃ„NDIGE DEPENDENZ-ANALYSE)
+      console.log("ðŸ” FORENSISCHE CSS-DATEI-ANALYSE...");
       const cssFileAnalysis = await this.performDeepCSSAnalysis();
       issues.push(...cssFileAnalysis.issues);
       metrics.cssFilesAnalyzed = cssFileAnalysis.metrics.totalFiles;
       metrics.cssRulesCount = cssFileAnalysis.metrics.totalRules;
       metrics.duplicateRules = cssFileAnalysis.metrics.duplicateRules;
 
-      // 4️⃣ VOLLSTÄNDIGE DATEI-REDUNDANZ-ANALYSE (ALLE ABHÄNGIGKEITEN)
-      console.log("🔍 DATEI-REDUNDANZ-SCANNER...");
+      // 4ï¸âƒ£ VOLLSTÃ„NDIGE DATEI-REDUNDANZ-ANALYSE (ALLE ABHÃ„NGIGKEITEN)
+      console.log("ðŸ” DATEI-REDUNDANZ-SCANNER...");
       const redundancyIssues = await this.detectFileRedundancy();
       issues.push(...redundancyIssues);
 
-      // 5️⃣ CSS-VARIABLEN-KONSISTENZ-PRÜFUNG
-      console.log("🔍 CSS-VARIABLEN-KONSISTENZ-ANALYSE...");
+      // 5ï¸âƒ£ CSS-VARIABLEN-KONSISTENZ-PRÃœFUNG
+      console.log("ðŸ” CSS-VARIABLEN-KONSISTENZ-ANALYSE...");
       const variableIssues = await this.validateCSSVariableConsistency();
       issues.push(...variableIssues);
 
-      // 6️⃣ RESPONSIVE-DESIGN-VALIDIERUNG
-      console.log("📱 RESPONSIVE-DESIGN-FORENSIK...");
+      // 6ï¸âƒ£ RESPONSIVE-DESIGN-VALIDIERUNG
+      console.log("ðŸ“± RESPONSIVE-DESIGN-FORENSIK...");
       const responsiveIssues = await this.validateResponsiveDesign();
       issues.push(...responsiveIssues);
 
-      // 7️⃣ TAILWIND-KLASSEN-VALIDIERUNG
-      console.log("🎨 TAILWIND-KLASSEN-FORENSIK...");
+      // 7ï¸âƒ£ TAILWIND-KLASSEN-VALIDIERUNG
+      console.log("ðŸŽ¨ TAILWIND-KLASSEN-FORENSIK...");
       const tailwindIssues = await this.validateTailwindUsage();
       issues.push(...tailwindIssues);
 
-      // 8️⃣ CSS-WURZEL-URSACHEN-ANALYSE
-      console.log("⚡ CSS-WURZEL-URSACHEN-ANALYSE...");
+      // 8ï¸âƒ£ CSS-WURZEL-URSACHEN-ANALYSE
+      console.log("âš¡ CSS-WURZEL-URSACHEN-ANALYSE...");
       const rootCauseIssues = await this.analyzeCSSRootCauses();
       issues.push(...rootCauseIssues);
 
-      // 9️⃣ ACCESSIBILITY-CSS-VALIDIERUNG
-      console.log("♿ ACCESSIBILITY-CSS-FORENSIK...");
+      // 9ï¸âƒ£ ACCESSIBILITY-CSS-VALIDIERUNG
+      console.log("â™¿ ACCESSIBILITY-CSS-FORENSIK...");
       const accessibilityIssues = await this.validateAccessibilityCSS();
       issues.push(...accessibilityIssues);
 
-      // 🔟 CSS-ARCHITEKTUR-VALIDIERUNG
-      console.log("🏗️ CSS-ARCHITEKTUR-ANALYSE...");
+      // ðŸ”Ÿ CSS-ARCHITEKTUR-VALIDIERUNG
+      console.log("ðŸ—ï¸ CSS-ARCHITEKTUR-ANALYSE...");
       const architectureIssues = await this.validateCSSArchitecture();
       issues.push(...architectureIssues);
 
-      // FORENSISCHE KONTRAST-ISSUES HINZUFÜGEN
+      // FORENSISCHE KONTRAST-ISSUES HINZUFÃœGEN
       if (metrics.failedTests > 0) {
         issues.push({
           severity: "warning",
           category: "contrast-accessibility",
-          description: `WCAG-Kontrast-Verstoß: ${metrics.failedTests} von ${metrics.contrastTests} Tests fehlgeschlagen`,
+          description: `WCAG-Kontrast-VerstoÃŸ: ${metrics.failedTests} von ${metrics.contrastTests} Tests fehlgeschlagen`,
           file: "src/styles/global.css",
           location: "Button Hover States",
           detailedAnalysis: {
@@ -119,42 +119,42 @@ class CSSScope {
           },
           rootCause: "Button-Hover-State hat unzureichenden Kontrast",
           impact:
-            "Schlechte Lesbarkeit für sehbehinderte Nutzer bei Interaktionen",
-          solution: "Erhöhe Kontrast für Button-Hover-Zustände",
-          kiPrompt: `♿ KONTRAST-FIX: Verbessere Button-Hover-Kontrast für WCAG-AA-Compliance`,
+            "Schlechte Lesbarkeit fÃ¼r sehbehinderte Nutzer bei Interaktionen",
+          solution: "ErhÃ¶he Kontrast fÃ¼r Button-Hover-ZustÃ¤nde",
+          kiPrompt: `â™¿ KONTRAST-FIX: Verbessere Button-Hover-Kontrast fÃ¼r WCAG-AA-Compliance`,
         });
       }
 
-      // 📊 CSS-REALITY-CHECK
-      console.log("🎨 Simuliere angewendete CSS-Regeln...");
+      // ðŸ“Š CSS-REALITY-CHECK
+      console.log("ðŸŽ¨ Simuliere angewendete CSS-Regeln...");
       const appliedCSS = await this.simulateAppliedCSS();
-      console.log("🎨 CSS-Reality-Check:", JSON.stringify(appliedCSS, null, 2));
+      console.log("ðŸŽ¨ CSS-Reality-Check:", JSON.stringify(appliedCSS, null, 2));
 
-      // 🎯 KI-PROMPTS FÜR ERWEITERTE CSS-OPTIMIERUNG
+      // ðŸŽ¯ KI-PROMPTS FÃœR ERWEITERTE CSS-OPTIMIERUNG
       if (issues.length > 0) {
         kiPrompts.push(...this.generateAdvancedCSSPrompts(issues, metrics));
       }
 
-      // 📊 ERWEITERTE HEALTH-SCORE-BERECHNUNG
+      // ðŸ“Š ERWEITERTE HEALTH-SCORE-BERECHNUNG
       const healthScore = this.calculateAdvancedHealthScore(issues, metrics);
 
-      console.log(`🎨 CSS-Scope abgeschlossen: ${healthScore}/100`);
+      console.log(`ðŸŽ¨ CSS-Scope abgeschlossen: ${healthScore}/100`);
       console.log(
-        `🎨 Kontrast-Tests: ${metrics.passedTests}/${metrics.contrastTests} bestanden`
+        `ðŸŽ¨ Kontrast-Tests: ${metrics.passedTests}/${metrics.contrastTests} bestanden`
       );
       console.log(
-        `🔍 CSS-Dateien analysiert: ${metrics.cssFilesAnalyzed || 0}`
+        `ðŸ” CSS-Dateien analysiert: ${metrics.cssFilesAnalyzed || 0}`
       );
-      console.log(`⚠️ Redundanzen gefunden: ${metrics.duplicateRules || 0}`);
+      console.log(`âš ï¸ Redundanzen gefunden: ${metrics.duplicateRules || 0}`);
 
-      // 🎯 SELBSTKRITIK AUSGEBEN
+      // ðŸŽ¯ SELBSTKRITIK AUSGEBEN
       if (metrics.contrastTests < 15) {
         console.log(
-          `⚠️ Selbstkritik: Nur ${metrics.contrastTests} Tests - NICHT umfassend genug für forensische Analyse`
+          `âš ï¸ Selbstkritik: Nur ${metrics.contrastTests} Tests - NICHT umfassend genug fÃ¼r forensische Analyse`
         );
       } else {
         console.log(
-          `✅ Forensische Vollvalidierung: ${metrics.contrastTests} Tests durchgeführt - umfassende WCAG-Compliance`
+          `âœ… Forensische Vollvalidierung: ${metrics.contrastTests} Tests durchgefÃ¼hrt - umfassende WCAG-Compliance`
         );
       }
 
@@ -165,15 +165,15 @@ class CSSScope {
         kiPrompts
       );
     } catch (error) {
-      console.error("❌ CSS-Scope Fehler:", error.message);
+      console.error("âŒ CSS-Scope Fehler:", error.message);
       issues.push({
         severity: "critical",
         category: "css-system",
         description: `CSS-Scope Systemfehler: ${error.message}`,
         file: "css-scope",
         location: error.stack?.split("\n")[1] || "unknown",
-        rootCause: "CSS-Scope Ausführungsfehler",
-        impact: "CSS-Validierung nicht möglich",
+        rootCause: "CSS-Scope AusfÃ¼hrungsfehler",
+        impact: "CSS-Validierung nicht mÃ¶glich",
         solution: "CSS-Scope Debugging erforderlich",
         kiPrompt: `Debug CSS-Scope Systemfehler: ${error.message}`,
       });
@@ -188,20 +188,20 @@ class CSSScope {
   }
 
   /**
-      console.log("🎨 Führe WCAG-Kontrast-Tests durch...");
+      console.log("ðŸŽ¨ FÃ¼hre WCAG-Kontrast-Tests durch...");
       this.contrastResults = await this.performContrastTests();
 
-      // 3️⃣ REALITY-CHECK & CSS-SIMULATION
-      console.log("🎨 Simuliere angewendete CSS-Regeln...");
+      // 3ï¸âƒ£ REALITY-CHECK & CSS-SIMULATION
+      console.log("ðŸŽ¨ Simuliere angewendete CSS-Regeln...");
       const realityCheck = await this.simulateAppliedCSS();
 
-      // 4️⃣ PROBLEME IDENTIFIZIEREN
+      // 4ï¸âƒ£ PROBLEME IDENTIFIZIEREN
       const contrastIssues = this.analyzeContrastResults();
       const cssIssues = this.validateCSSStructure();
 
       issues.push(...contrastIssues, ...cssIssues);
 
-      // 5️⃣ METRIKEN SAMMELN
+      // 5ï¸âƒ£ METRIKEN SAMMELN
       metrics.contrastTests = this.contrastResults.length;
       metrics.passedTests = this.contrastResults.filter((t) => t.passed).length;
       metrics.failedTests = this.contrastResults.filter(
@@ -209,36 +209,36 @@ class CSSScope {
       ).length;
       metrics.averageContrast = this.calculateAverageContrast();
 
-      // 6️⃣ KI-PROMPTS GENERIEREN
+      // 6ï¸âƒ£ KI-PROMPTS GENERIEREN
       if (issues.length > 0) {
         kiPrompts.push(...this.generateCSSFixPrompts(issues));
       }
 
-      // 7️⃣ HEALTH-SCORE BERECHNUNG MIT SELBSTKRITIK-VALIDIERUNG
+      // 7ï¸âƒ£ HEALTH-SCORE BERECHNUNG MIT SELBSTKRITIK-VALIDIERUNG
       let healthScore = this.calculateCSSHealthScore(issues, metrics);
 
-      // 🚨 ZWINGENDER SELBSTKRITIK-CHECK (Instructions-Compliance)
+      // ðŸš¨ ZWINGENDER SELBSTKRITIK-CHECK (Instructions-Compliance)
       const totalTests = metrics.contrastTests;
       if (totalTests < 10) {
-        // ANTI-SELBSTLOB: Bei weniger als 10 Tests → Maximum 70/100
+        // ANTI-SELBSTLOB: Bei weniger als 10 Tests â†’ Maximum 70/100
         healthScore = Math.min(70, healthScore);
         issues.push({
           severity: "important",
           category: "css-testing",
-          description: `Oberflächliche CSS-Analyse: Nur ${totalTests} Tests durchgeführt (mindestens 10 für umfassende Validierung)`,
+          description: `OberflÃ¤chliche CSS-Analyse: Nur ${totalTests} Tests durchgefÃ¼hrt (mindestens 10 fÃ¼r umfassende Validierung)`,
           file: "css-scope",
           location: "test-coverage",
-          kiPrompt: `Erweitere CSS-Tests: Aktuell ${totalTests}/10 - Füge Icon-Kontrast, Button-States, Link-Validierung hinzu`,
+          kiPrompt: `Erweitere CSS-Tests: Aktuell ${totalTests}/10 - FÃ¼ge Icon-Kontrast, Button-States, Link-Validierung hinzu`,
         });
       }
 
-      console.log(`🎨 CSS-Scope abgeschlossen: ${healthScore}/100`);
+      console.log(`ðŸŽ¨ CSS-Scope abgeschlossen: ${healthScore}/100`);
       console.log(
-        `🎨 Kontrast-Tests: ${metrics.passedTests}/${metrics.contrastTests} bestanden`
+        `ðŸŽ¨ Kontrast-Tests: ${metrics.passedTests}/${metrics.contrastTests} bestanden`
       );
       if (totalTests < 10) {
         console.log(
-          `⚠️  Selbstkritik: Nur ${totalTests} Tests - NICHT umfassend genug für "perfekt"`
+          `âš ï¸  Selbstkritik: Nur ${totalTests} Tests - NICHT umfassend genug fÃ¼r "perfekt"`
         );
       }
 
@@ -249,7 +249,7 @@ class CSSScope {
         kiPrompts
       );
     } catch (error) {
-      console.error("❌ CSS-Scope Fehler:", error.message);
+      console.error("âŒ CSS-Scope Fehler:", error.message);
       issues.push({
         severity: "critical",
         category: "css-system",
@@ -268,7 +268,7 @@ class CSSScope {
   }
 
   /**
-   * 🔍 CSS-VARIABLEN-EXTRAKTION mit FRESH-READ
+   * ðŸ” CSS-VARIABLEN-EXTRAKTION mit FRESH-READ
    */
   async extractCSSVariables() {
     try {
@@ -286,17 +286,17 @@ class CSSScope {
       }
 
       console.log(
-        `🎨 ${Object.keys(variables).length} CSS-Variablen extrahiert`
+        `ðŸŽ¨ ${Object.keys(variables).length} CSS-Variablen extrahiert`
       );
       return variables;
     } catch (error) {
-      console.error("❌ Fehler beim CSS-Variablen-Lesen:", error.message);
+      console.error("âŒ Fehler beim CSS-Variablen-Lesen:", error.message);
       return {};
     }
   }
 
   /**
-   * 🎯 WCAG-KONTRAST-TESTS
+   * ðŸŽ¯ WCAG-KONTRAST-TESTS
    */
   async performContrastTests() {
     const tests = [
@@ -307,7 +307,7 @@ class CSSScope {
           SIMON_COLORS.ANALYSE_BLAU_UEBERSCHRIFT,
         background: SIMON_COLORS.ASPHALTSCHWARZ,
         required: 4.5,
-        usage: "Überschriften",
+        usage: "Ãœberschriften",
       },
       {
         name: "Navigation auf Asphaltschwarz",
@@ -319,7 +319,7 @@ class CSSScope {
         usage: "Navigation",
       },
       {
-        name: "Fließtext auf Asphaltschwarz",
+        name: "FlieÃŸtext auf Asphaltschwarz",
         foreground:
           this.cssVariables["analyse-blau-hell"] ||
           SIMON_COLORS.ANALYSE_BLAU_HELL,
@@ -332,7 +332,7 @@ class CSSScope {
         foreground: SIMON_COLORS.ASPHALTSCHWARZ,
         background: SIMON_COLORS.GLUT_ORANGE,
         required: 4.5,
-        usage: "Primäre Buttons",
+        usage: "PrimÃ¤re Buttons",
       },
     ];
 
@@ -355,7 +355,7 @@ class CSSScope {
   }
 
   /**
-   * 🧮 KONTRAST-BERECHNUNG (WCAG 2.1)
+   * ðŸ§® KONTRAST-BERECHNUNG (WCAG 2.1)
    */
   calculateContrast(color1, color2) {
     const getLuminance = (hex) => {
@@ -376,7 +376,7 @@ class CSSScope {
   }
 
   /**
-   * 🎨 HEX-TO-RGB KONVERTER
+   * ðŸŽ¨ HEX-TO-RGB KONVERTER
    */
   hexToRgb(hex) {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -390,10 +390,10 @@ class CSSScope {
   }
 
   /**
-   * 🔍 CSS-REALITY-SIMULATION (Ohne Dev-Server)
+   * ðŸ” CSS-REALITY-SIMULATION (Ohne Dev-Server)
    */
   async simulateAppliedCSS() {
-    // Simuliert welche CSS-Regeln tatsächlich angewendet werden
+    // Simuliert welche CSS-Regeln tatsÃ¤chlich angewendet werden
     const simulatedElements = {
       "navbar-brand":
         this.cssVariables["navigation-optimiert"] ||
@@ -406,12 +406,12 @@ class CSSScope {
         SIMON_COLORS.ANALYSE_BLAU_UEBERSCHRIFT,
     };
 
-    console.log("🎨 CSS-Reality-Check:", simulatedElements);
+    console.log("ðŸŽ¨ CSS-Reality-Check:", simulatedElements);
     return simulatedElements;
   }
 
   /**
-   * 📊 KONTRAST-PROBLEME ANALYSIEREN
+   * ðŸ“Š KONTRAST-PROBLEME ANALYSIEREN
    */
   analyzeContrastResults() {
     const issues = [];
@@ -424,7 +424,7 @@ class CSSScope {
           description: `Kontrast-Problem: ${test.name} hat nur ${test.contrast}:1 (mindestens ${test.required}:1 erforderlich)`,
           file: "global.css",
           location: test.usage,
-          kiPrompt: `Optimiere Farbkontrast für ${test.usage}: Aktuell ${test.contrast}:1, benötigt ${test.required}:1`,
+          kiPrompt: `Optimiere Farbkontrast fÃ¼r ${test.usage}: Aktuell ${test.contrast}:1, benÃ¶tigt ${test.required}:1`,
         });
       }
     });
@@ -433,7 +433,7 @@ class CSSScope {
   }
 
   /**
-   * 🏗️ CSS-STRUKTUR VALIDIERUNG
+   * ðŸ—ï¸ CSS-STRUKTUR VALIDIERUNG
    */
   validateCSSStructure() {
     const issues = [];
@@ -446,7 +446,7 @@ class CSSScope {
           category: "css-structure",
           description: `Fehlende CSS-Variable: --${varName}`,
           file: "global.css",
-          kiPrompt: `Ergänze fehlende CSS-Variable --${varName} in global.css`,
+          kiPrompt: `ErgÃ¤nze fehlende CSS-Variable --${varName} in global.css`,
         });
       }
     });
@@ -455,7 +455,7 @@ class CSSScope {
   }
 
   /**
-   * 📈 DURCHSCHNITTS-KONTRAST BERECHNUNG
+   * ðŸ“ˆ DURCHSCHNITTS-KONTRAST BERECHNUNG
    */
   calculateAverageContrast() {
     if (this.contrastResults.length === 0) return 0;
@@ -468,12 +468,12 @@ class CSSScope {
   }
 
   /**
-   * 🎯 CSS-HEALTH-SCORE BERECHNUNG
+   * ðŸŽ¯ CSS-HEALTH-SCORE BERECHNUNG
    */
   calculateCSSHealthScore(issues, metrics) {
     let score = 100;
 
-    // Malus für Issues
+    // Malus fÃ¼r Issues
     const criticalIssues = issues.filter(
       (i) => i.severity === "critical"
     ).length;
@@ -484,7 +484,7 @@ class CSSScope {
     score -= criticalIssues * 25; // -25 pro kritischem Issue
     score -= importantIssues * 10; // -10 pro wichtigem Issue
 
-    // Bonus für gute Kontrast-Forensik
+    // Bonus fÃ¼r gute Kontrast-Forensik
     const contrastBonus = Math.min(10, (metrics.passedTests || 0) * 2);
     score += contrastBonus;
 
@@ -492,7 +492,7 @@ class CSSScope {
   }
 
   /**
-   * 🤖 KI-PROMPTS FÜR CSS-FIXES GENERIEREN
+   * ðŸ¤– KI-PROMPTS FÃœR CSS-FIXES GENERIEREN
    */
   generateCSSFixPrompts(issues) {
     const prompts = [];
@@ -501,7 +501,7 @@ class CSSScope {
     if (contrastIssues.length > 0) {
       prompts.push(
         `SMART CSS-Kontrast-Fix: Optimiere ${contrastIssues.length} Kontrast-Probleme in global.css. ` +
-          `Fokus auf WCAG AA Compliance für Navigation und Überschriften.`
+          `Fokus auf WCAG AA Compliance fÃ¼r Navigation und Ãœberschriften.`
       );
     }
 
@@ -510,8 +510,8 @@ class CSSScope {
     );
     if (structureIssues.length > 0) {
       prompts.push(
-        `CSS-Struktur-Reparatur: Ergänze ${structureIssues.length} fehlende CSS-Variablen ` +
-          `für vollständige Simon's 3-Farben-Palette Compliance.`
+        `CSS-Struktur-Reparatur: ErgÃ¤nze ${structureIssues.length} fehlende CSS-Variablen ` +
+          `fÃ¼r vollstÃ¤ndige Simon's 3-Farben-Palette Compliance.`
       );
     }
 
@@ -521,13 +521,13 @@ class CSSScope {
 
 module.exports = CSSScope;
 
-// 🚀 ===================================================================
-// 🔍 CSS-FORENSIK-POWERHOUSE - ERWEITERTE ANALYSE-FUNKTIONEN
-// 🚀 ===================================================================
+// ðŸš€ ===================================================================
+// ðŸ” CSS-FORENSIK-POWERHOUSE - ERWEITERTE ANALYSE-FUNKTIONEN
+// ðŸš€ ===================================================================
 
 /**
- * � WURZEL-ORIENTIERTE CSS-FORENSIK V2.0
- * 🎯 VOLLSTÄNDIGE ABHÄNGIGKEITS-ANALYSE • TIEFENGREIFENDE URSACHEN-IDENTIFIKATION
+ * ï¿½ WURZEL-ORIENTIERTE CSS-FORENSIK V2.0
+ * ðŸŽ¯ VOLLSTÃ„NDIGE ABHÃ„NGIGKEITS-ANALYSE â€¢ TIEFENGREIFENDE URSACHEN-IDENTIFIKATION
  */
 CSSScope.prototype.performDeepCSSAnalysis = async function () {
   const analysis = {
@@ -541,16 +541,16 @@ CSSScope.prototype.performDeepCSSAnalysis = async function () {
   const issues = [];
 
   try {
-    // � WURZEL-ORIENTIERTE FORENSISCHE REGEL-ANALYSE
+    // ï¿½ WURZEL-ORIENTIERTE FORENSISCHE REGEL-ANALYSE
     const cssContent = await fs.readFile(this.globalCSSPath, "utf-8");
 
-    // 🎯 VOLLSTÄNDIGE DUPLIKAT-IDENTIFIKATION (Wurzel-Orientiert)
+    // ðŸŽ¯ VOLLSTÃ„NDIGE DUPLIKAT-IDENTIFIKATION (Wurzel-Orientiert)
     const globalSelectors = new Set();
     const mediaSelectors = new Set();
     let duplicateCount = 0;
     let inMedia = false;
 
-    // 🚀 SINGLE-PASS SCANNING (statt forEach)
+    // ðŸš€ SINGLE-PASS SCANNING (statt forEach)
     const lines = cssContent.split("\n");
     for (let i = 0; i < lines.length && duplicateCount < 5; i++) {
       const line = lines[i].trim();
@@ -584,7 +584,7 @@ CSSScope.prototype.performDeepCSSAnalysis = async function () {
 
               // ONLY CREATE ISSUE-OBJECT IF REAL DUPLICATE
               if (duplicateCount <= 3) {
-                // Max 3 Issues für Wurzel-Analyse-Fokus
+                // Max 3 Issues fÃ¼r Wurzel-Analyse-Fokus
                 issues.push({
                   severity: "warning",
                   category: "css-duplicates",
@@ -602,7 +602,7 @@ CSSScope.prototype.performDeepCSSAnalysis = async function () {
       }
     }
 
-    // 🎯 MINIMAL VARIABLE CHECK
+    // ðŸŽ¯ MINIMAL VARIABLE CHECK
     const unusedVarCount = (cssContent.match(/--[a-zA-Z-]+/g) || []).length;
     if (unusedVarCount > 20) {
       issues.push({
@@ -610,17 +610,17 @@ CSSScope.prototype.performDeepCSSAnalysis = async function () {
         category: "css-architecture",
         description: `Viele CSS-Variablen gefunden: ${unusedVarCount}`,
         file: "src/styles/global.css",
-        kiPrompt: "Prüfe ungenutzte CSS-Variablen",
+        kiPrompt: "PrÃ¼fe ungenutzte CSS-Variablen",
       });
     }
 
-    // 🎯 FORENSISCHE METRIKEN (Vollständige Analyse-Sammlung)
+    // ðŸŽ¯ FORENSISCHE METRIKEN (VollstÃ¤ndige Analyse-Sammlung)
     analysis.duplicateRules = duplicateCount;
     analysis.unusedVars =
       unusedVarCount > 20 ? [{ count: unusedVarCount }] : [];
   } catch (error) {
-    console.log(`⚠️ CSS-Analyse-Fehler: ${error.message}`);
-    // 🚀 FAIL-FAST: Keine aufwendige Error-Object-Erstellung
+    console.log(`âš ï¸ CSS-Analyse-Fehler: ${error.message}`);
+    // ðŸš€ FAIL-FAST: Keine aufwendige Error-Object-Erstellung
     issues.push({
       severity: "warning",
       category: "system",
@@ -637,13 +637,13 @@ CSSScope.prototype.performDeepCSSAnalysis = async function () {
 };
 
 /**
- * 🔍 DATEI-REDUNDANZ-DETEKTOR
+ * ðŸ” DATEI-REDUNDANZ-DETEKTOR
  */
 CSSScope.prototype.detectFileRedundancy = async function () {
   const issues = [];
 
   try {
-    // 🔍 PRÜFE AUF DOPPELTE CSS-VARIABLEN-DEFINITIONEN
+    // ðŸ” PRÃœFE AUF DOPPELTE CSS-VARIABLEN-DEFINITIONEN
     const globalCSS = await fs.readFile(this.globalCSSPath, "utf-8");
     const variableDefinitions = new Map();
 
@@ -677,9 +677,9 @@ CSSScope.prototype.detectFileRedundancy = async function () {
             },
             rootCause: "CSS-Variable mehrfach definiert",
             impact:
-              "Letzte Definition überschreibt erste - unvorhersagbares Styling-Verhalten",
+              "Letzte Definition Ã¼berschreibt erste - unvorhersagbares Styling-Verhalten",
             solution: `Entferne doppelte Definition von --${varName} und verwende einheitliche Werte`,
-            kiPrompt: `🧹 CSS-VARIABLE-CLEANUP: Konsolidiere doppelte Definition von --${varName} (Zeilen ${
+            kiPrompt: `ðŸ§¹ CSS-VARIABLE-CLEANUP: Konsolidiere doppelte Definition von --${varName} (Zeilen ${
               firstDef.line + 1
             } und ${index + 1})`,
           });
@@ -692,7 +692,7 @@ CSSScope.prototype.detectFileRedundancy = async function () {
       }
     });
 
-    // 🔍 PRÜFE AUF UNGENUTZTE CSS-IMPORTS
+    // ðŸ” PRÃœFE AUF UNGENUTZTE CSS-IMPORTS
     const importMatches =
       globalCSS.match(/@import\s+['""]([^'""]+)['""];?/g) || [];
     if (importMatches.length > 0) {
@@ -709,37 +709,37 @@ CSSScope.prototype.detectFileRedundancy = async function () {
               importStatement: importStatement,
               importedFile: importedFile[1],
               potentialIssue:
-                "Externe CSS-Abhängigkeit kann System-Stabilität beeinträchtigen",
+                "Externe CSS-AbhÃ¤ngigkeit kann System-StabilitÃ¤t beeintrÃ¤chtigen",
             },
             rootCause: "Externe CSS-Imports in global.css",
-            impact: "Zusätzliche HTTP-Requests verzögern CSS-Loading",
+            impact: "ZusÃ¤tzliche HTTP-Requests verzÃ¶gern CSS-Loading",
             solution: "Lokalisiere CSS-Code oder optimiere Import-Strategie",
-            kiPrompt: `� CSS-IMPORT-FORENSIK: Überprüfe Import von ${importedFile[1]} für bessere System-Stabilität`,
+            kiPrompt: `ï¿½ CSS-IMPORT-FORENSIK: ÃœberprÃ¼fe Import von ${importedFile[1]} fÃ¼r bessere System-StabilitÃ¤t`,
           });
         }
       });
     }
 
-    // 🔍 PRÜFE AUF !IMPORTANT-ÜBERNUTZUNG
+    // ðŸ” PRÃœFE AUF !IMPORTANT-ÃœBERNUTZUNG
     const importantCount = (globalCSS.match(/!important/g) || []).length;
     if (importantCount > 5) {
       issues.push({
         severity: "warning",
         category: "css-architecture",
-        description: `Übermäßige !important-Nutzung: ${importantCount} Vorkommen`,
+        description: `ÃœbermÃ¤ÃŸige !important-Nutzung: ${importantCount} Vorkommen`,
         file: "src/styles/global.css",
         location: "Multiple Stellen",
         detailedAnalysis: {
           importantCount: importantCount,
           recommendedMaximum: 5,
           architecturalIssue:
-            "Zu viele !important deutet auf CSS-Spezifitätsprobleme hin",
+            "Zu viele !important deutet auf CSS-SpezifitÃ¤tsprobleme hin",
         },
-        rootCause: "CSS-Spezifitätsprobleme führen zu !important-Overuse",
+        rootCause: "CSS-SpezifitÃ¤tsprobleme fÃ¼hren zu !important-Overuse",
         impact: "Schwer wartbarer CSS-Code, Styling-Konflikte",
         solution:
           "Refactore CSS-Selektoren um !important-Nutzung zu reduzieren",
-        kiPrompt: `🏗️ CSS-ARCHITEKTUR-REFACTOR: Reduziere ${importantCount} !important-Statements durch bessere Selektor-Spezifität`,
+        kiPrompt: `ðŸ—ï¸ CSS-ARCHITEKTUR-REFACTOR: Reduziere ${importantCount} !important-Statements durch bessere Selektor-SpezifitÃ¤t`,
       });
     }
   } catch (error) {
@@ -752,7 +752,7 @@ CSSScope.prototype.detectFileRedundancy = async function () {
       rootCause: "Redundanz-Analyse-Fehler",
       impact: "Potenzielle Redundanzen unentdeckt",
       solution: "Redundanz-Detektor-Debugging erforderlich",
-      kiPrompt: `🚨 REDUNDANZ-DEBUG: Behebe Redundanz-Detektor-Fehler: ${error.message}`,
+      kiPrompt: `ðŸš¨ REDUNDANZ-DEBUG: Behebe Redundanz-Detektor-Fehler: ${error.message}`,
     });
   }
 
@@ -760,7 +760,7 @@ CSSScope.prototype.detectFileRedundancy = async function () {
 };
 
 /**
- * 🎨 ERWEITERTE KONTRAST-TESTS
+ * ðŸŽ¨ ERWEITERTE KONTRAST-TESTS
  */
 CSSScope.prototype.performExtendedContrastTests = async function () {
   const analysis = {
@@ -781,35 +781,35 @@ CSSScope.prototype.performExtendedContrastTests = async function () {
 
     // ERWEITERTE TESTS
 
-    // 1️⃣ Button-Hover-State-Tests
+    // 1ï¸âƒ£ Button-Hover-State-Tests
     const buttonHoverTests = await this.testButtonHoverContrasts();
     analysis.totalTests += buttonHoverTests.length;
     analysis.passed += buttonHoverTests.filter((t) => t.passed).length;
     analysis.failed += buttonHoverTests.filter((t) => !t.passed).length;
     analysis.detailedResults.push(...buttonHoverTests);
 
-    // 2️⃣ Form-Element-Kontrast-Tests
+    // 2ï¸âƒ£ Form-Element-Kontrast-Tests
     const formTests = await this.testFormElementContrasts();
     analysis.totalTests += formTests.length;
     analysis.passed += formTests.filter((t) => t.passed).length;
     analysis.failed += formTests.filter((t) => !t.passed).length;
     analysis.detailedResults.push(...formTests);
 
-    // 3️⃣ Icon-Symbol-Kontrast-Tests
+    // 3ï¸âƒ£ Icon-Symbol-Kontrast-Tests
     const iconTests = await this.testIconContrasts();
     analysis.totalTests += iconTests.length;
     analysis.passed += iconTests.filter((t) => t.passed).length;
     analysis.failed += iconTests.filter((t) => !t.passed).length;
     analysis.detailedResults.push(...iconTests);
 
-    // 4️⃣ Link-Hover-Kontrast-Tests
+    // 4ï¸âƒ£ Link-Hover-Kontrast-Tests
     const linkHoverTests = await this.testLinkHoverContrasts();
     analysis.totalTests += linkHoverTests.length;
     analysis.passed += linkHoverTests.filter((t) => t.passed).length;
     analysis.failed += linkHoverTests.filter((t) => !t.passed).length;
     analysis.detailedResults.push(...linkHoverTests);
 
-    // 5️⃣ Alert/Message-Kontrast-Tests
+    // 5ï¸âƒ£ Alert/Message-Kontrast-Tests
     const alertTests = await this.testAlertMessageContrasts();
     analysis.totalTests += alertTests.length;
     analysis.passed += alertTests.filter((t) => t.passed).length;
@@ -828,7 +828,7 @@ CSSScope.prototype.performExtendedContrastTests = async function () {
         : 0;
   } catch (error) {
     console.log(
-      `⚠️ Erweiterte Kontrast-Tests fehlgeschlagen: ${error.message}`
+      `âš ï¸ Erweiterte Kontrast-Tests fehlgeschlagen: ${error.message}`
     );
   }
 
@@ -836,13 +836,13 @@ CSSScope.prototype.performExtendedContrastTests = async function () {
 };
 
 /**
- * 🔍 CSS-VARIABLEN-KONSISTENZ-VALIDIERUNG
+ * ðŸ” CSS-VARIABLEN-KONSISTENZ-VALIDIERUNG
  */
 CSSScope.prototype.validateCSSVariableConsistency = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf ungenutzte CSS-Variablen
+    // PrÃ¼fe auf ungenutzte CSS-Variablen
     const unusedVars = await this.findUnusedCSSVariables();
     unusedVars.forEach((variable) => {
       issues.push({
@@ -858,20 +858,20 @@ CSSScope.prototype.validateCSSVariableConsistency = async function () {
           referencedIn: variable.references || [],
         },
         rootCause: "CSS-Variable definiert aber nicht verwendet",
-        impact: "Unnötige CSS-Größe, Code-Pollution",
+        impact: "UnnÃ¶tige CSS-GrÃ¶ÃŸe, Code-Pollution",
         solution: `CSS-Variable ${variable.name} entfernen oder verwenden`,
         kiPrompt: `Entferne ungenutzte CSS-Variable ${variable.name} oder weise sie passenden Elementen zu`,
       });
     });
 
-    // Prüfe auf inkonsistente Naming-Konventionen
+    // PrÃ¼fe auf inkonsistente Naming-Konventionen
     const namingIssues = this.validateCSSVariableNaming();
     issues.push(...namingIssues);
   } catch (error) {
     issues.push({
       severity: "warning",
       category: "system",
-      description: `CSS-Variablen-Konsistenz-Prüfung fehlgeschlagen: ${error.message}`,
+      description: `CSS-Variablen-Konsistenz-PrÃ¼fung fehlgeschlagen: ${error.message}`,
       file: "css-scope",
       location: "validateCSSVariableConsistency()",
     });
@@ -881,13 +881,13 @@ CSSScope.prototype.validateCSSVariableConsistency = async function () {
 };
 
 /**
- * 📱 RESPONSIVE-DESIGN-VALIDIERUNG
+ * ðŸ“± RESPONSIVE-DESIGN-VALIDIERUNG
  */
 CSSScope.prototype.validateResponsiveDesign = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf fehlende Breakpoints
+    // PrÃ¼fe auf fehlende Breakpoints
     const missingBreakpoints = await this.checkMissingBreakpoints();
     missingBreakpoints.forEach((breakpoint) => {
       issues.push({
@@ -902,10 +902,10 @@ CSSScope.prototype.validateResponsiveDesign = async function () {
           currentBreakpoints: breakpoint.existing,
           affectedSelectors: breakpoint.selectors,
         },
-        rootCause: "Unvollständige Responsive-Design-Implementierung",
-        impact: "Schlechte UX auf bestimmten Geräten",
-        solution: `Breakpoint ${breakpoint.name} (${breakpoint.size}) hinzufügen`,
-        kiPrompt: `Implementiere Responsive-Breakpoint ${breakpoint.name} für optimale ${breakpoint.device}-Darstellung`,
+        rootCause: "UnvollstÃ¤ndige Responsive-Design-Implementierung",
+        impact: "Schlechte UX auf bestimmten GerÃ¤ten",
+        solution: `Breakpoint ${breakpoint.name} (${breakpoint.size}) hinzufÃ¼gen`,
+        kiPrompt: `Implementiere Responsive-Breakpoint ${breakpoint.name} fÃ¼r optimale ${breakpoint.device}-Darstellung`,
       });
     });
   } catch (error) {
@@ -922,19 +922,19 @@ CSSScope.prototype.validateResponsiveDesign = async function () {
 };
 
 /**
- * 🎨 TAILWIND-KLASSEN-VALIDIERUNG
+ * ðŸŽ¨ TAILWIND-KLASSEN-VALIDIERUNG
  */
 CSSScope.prototype.validateTailwindUsage = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf ungültige Tailwind-Klassen
+    // PrÃ¼fe auf ungÃ¼ltige Tailwind-Klassen
     const invalidClasses = await this.findInvalidTailwindClasses();
     invalidClasses.forEach((cls) => {
       issues.push({
         severity: "important",
         category: "tailwind-validation",
-        description: `Ungültige Tailwind-Klasse: ${cls.className}`,
+        description: `UngÃ¼ltige Tailwind-Klasse: ${cls.className}`,
         file: cls.file,
         location: `Zeile ${cls.line}`,
         detailedAnalysis: {
@@ -947,9 +947,9 @@ CSSScope.prototype.validateTailwindUsage = async function () {
           "Tailwind-Klasse existiert nicht oder ist falsch geschrieben",
         impact: "Styling wird nicht angewendet, visueller Bug",
         solution: `Korrigiere Tailwind-Klasse zu ${
-          cls.suggestions?.[0] || "gültiger Alternative"
+          cls.suggestions?.[0] || "gÃ¼ltiger Alternative"
         }`,
-        kiPrompt: `Ersetze ungültige Tailwind-Klasse ${cls.className} durch ${
+        kiPrompt: `Ersetze ungÃ¼ltige Tailwind-Klasse ${cls.className} durch ${
           cls.suggestions?.[0] || "korrekte Klasse"
         }`,
       });
@@ -968,13 +968,13 @@ CSSScope.prototype.validateTailwindUsage = async function () {
 };
 
 /**
- * ⚡ CSS-WURZEL-URSACHEN-ANALYSE
+ * âš¡ CSS-WURZEL-URSACHEN-ANALYSE
  */
 CSSScope.prototype.analyzeCSSRootCauses = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf ungenutzte CSS-Regeln
+    // PrÃ¼fe auf ungenutzte CSS-Regeln
     const unusedRules = await this.findUnusedCSSRules();
     unusedRules.forEach((rule) => {
       issues.push({
@@ -990,9 +990,9 @@ CSSScope.prototype.analyzeCSSRootCauses = async function () {
           usageAnalysis: rule.usage,
         },
         rootCause: "CSS-Regel nicht von HTML-Elementen verwendet",
-        impact: `Unnötige ${rule.bytes} Bytes CSS-Größe`,
+        impact: `UnnÃ¶tige ${rule.bytes} Bytes CSS-GrÃ¶ÃŸe`,
         solution: `Entferne ungenutzte CSS-Regel ${rule.selector}`,
-        kiPrompt: `Entferne ungenutzte CSS-Regel ${rule.selector} für ${rule.bytes} Bytes Wurzel-Ursachen-Elimination`,
+        kiPrompt: `Entferne ungenutzte CSS-Regel ${rule.selector} fÃ¼r ${rule.bytes} Bytes Wurzel-Ursachen-Elimination`,
       });
     });
   } catch (error) {
@@ -1009,13 +1009,13 @@ CSSScope.prototype.analyzeCSSRootCauses = async function () {
 };
 
 /**
- * ♿ ACCESSIBILITY-CSS-VALIDIERUNG
+ * â™¿ ACCESSIBILITY-CSS-VALIDIERUNG
  */
 CSSScope.prototype.validateAccessibilityCSS = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf fehlende focus-visible Styles
+    // PrÃ¼fe auf fehlende focus-visible Styles
     const missingFocusStyles = await this.checkMissingFocusStyles();
     missingFocusStyles.forEach((element) => {
       issues.push({
@@ -1031,9 +1031,9 @@ CSSScope.prototype.validateAccessibilityCSS = async function () {
           recommendedStyle: element.recommended,
         },
         rootCause: "Interaktives Element ohne sichtbaren Focus-Indikator",
-        impact: "Schlechte Keyboard-Navigation für A11Y-Nutzer",
-        solution: `Focus-Styles für ${element.selector} hinzufügen`,
-        kiPrompt: `Implementiere WCAG-konforme Focus-Styles für ${element.selector}`,
+        impact: "Schlechte Keyboard-Navigation fÃ¼r A11Y-Nutzer",
+        solution: `Focus-Styles fÃ¼r ${element.selector} hinzufÃ¼gen`,
+        kiPrompt: `Implementiere WCAG-konforme Focus-Styles fÃ¼r ${element.selector}`,
       });
     });
   } catch (error) {
@@ -1050,13 +1050,13 @@ CSSScope.prototype.validateAccessibilityCSS = async function () {
 };
 
 /**
- * 🏗️ CSS-ARCHITEKTUR-VALIDIERUNG
+ * ðŸ—ï¸ CSS-ARCHITEKTUR-VALIDIERUNG
  */
 CSSScope.prototype.validateCSSArchitecture = async function () {
   const issues = [];
 
   try {
-    // Prüfe auf zu spezifische Selektoren
+    // PrÃ¼fe auf zu spezifische Selektoren
     const specificSelectors = await this.findOverSpecificSelectors();
     specificSelectors.forEach((selector) => {
       issues.push({
@@ -1071,7 +1071,7 @@ CSSScope.prototype.validateCSSArchitecture = async function () {
           recommendedSpecificity: selector.recommended,
           simplifiedSelector: selector.simplified,
         },
-        rootCause: "CSS-Selektor unnötig komplex und schwer wartbar",
+        rootCause: "CSS-Selektor unnÃ¶tig komplex und schwer wartbar",
         impact: "Schlechte CSS-Maintainability, Override-Probleme",
         solution: `Vereinfache Selektor zu ${selector.simplified}`,
         kiPrompt: `Refaktoriere CSS-Selektor ${selector.selector} zu wartbarerem ${selector.simplified}`,
@@ -1090,12 +1090,12 @@ CSSScope.prototype.validateCSSArchitecture = async function () {
   return issues;
 };
 
-// 🔍 ===================================================================
-// 🎯 HELPER-FUNKTIONEN FÜR FORENSISCHE ANALYSE
-// 🔍 ===================================================================
+// ðŸ” ===================================================================
+// ðŸŽ¯ HELPER-FUNKTIONEN FÃœR FORENSISCHE ANALYSE
+// ðŸ” ===================================================================
 
 /**
- * 🔍 ERWEITERTE TEST-FUNKTIONEN
+ * ðŸ” ERWEITERTE TEST-FUNKTIONEN
  */
 CSSScope.prototype.testButtonHoverContrasts = async function () {
   const tests = [];
@@ -1127,7 +1127,7 @@ CSSScope.prototype.testButtonHoverContrasts = async function () {
       });
     });
   } catch (error) {
-    console.log(`⚠️ Button-Hover-Tests fehlgeschlagen: ${error.message}`);
+    console.log(`âš ï¸ Button-Hover-Tests fehlgeschlagen: ${error.message}`);
   }
 
   return tests;
@@ -1192,7 +1192,7 @@ CSSScope.prototype.testAlertMessageContrasts = async function () {
 };
 
 /**
- * 🎨 FARBMANIPULATION-HELPER
+ * ðŸŽ¨ FARBMANIPULATION-HELPER
  */
 CSSScope.prototype.darkenColor = function (hex, percent) {
   const rgb = this.hexToRgb(hex);
@@ -1219,7 +1219,7 @@ CSSScope.prototype.lightenColor = function (hex, percent) {
 };
 
 /**
- * 🎯 ERWEITERTE ANALYSE-FUNKTIONEN
+ * ðŸŽ¯ ERWEITERTE ANALYSE-FUNKTIONEN
  */
 CSSScope.prototype.generateAdvancedCSSPrompts = function (issues, metrics) {
   const prompts = [];
@@ -1234,9 +1234,9 @@ CSSScope.prototype.generateAdvancedCSSPrompts = function (issues, metrics) {
   Object.entries(categoryGroups).forEach(([category, categoryIssues]) => {
     if (categoryIssues.length > 0) {
       prompts.push(
-        `🎨 CSS-${category.toUpperCase()}-OPTIMIERUNG: Behebe ${
+        `ðŸŽ¨ CSS-${category.toUpperCase()}-OPTIMIERUNG: Behebe ${
           categoryIssues.length
-        } Issues in Kategorie ${category} für forensische CSS-Perfektion`
+        } Issues in Kategorie ${category} fÃ¼r forensische CSS-Perfektion`
       );
     }
   });
@@ -1248,7 +1248,7 @@ CSSScope.prototype.calculateAdvancedHealthScore = function (issues, metrics) {
   const baseScore = 100;
   let deductions = 0;
 
-  // Schwere Abzüge
+  // Schwere AbzÃ¼ge
   const criticalIssues = issues.filter((i) => i.severity === "critical").length;
   const importantIssues = issues.filter(
     (i) => i.severity === "important"
@@ -1263,7 +1263,7 @@ CSSScope.prototype.calculateAdvancedHealthScore = function (issues, metrics) {
 
   // Test-Coverage-Bonus
   if (metrics.contrastTests >= 15) {
-    deductions -= 5; // +5 Bonus für umfassende Tests
+    deductions -= 5; // +5 Bonus fÃ¼r umfassende Tests
   }
 
   // Redundanz-Penalty
@@ -1275,7 +1275,7 @@ CSSScope.prototype.calculateAdvancedHealthScore = function (issues, metrics) {
 };
 
 /**
- * 🔍 STUB-FUNKTIONEN FÜR ERWEITERTE FORENSIK
+ * ðŸ” STUB-FUNKTIONEN FÃœR ERWEITERTE FORENSIK
  */
 CSSScope.prototype.findDuplicateCSSVariables = function () {
   // TODO: Implementiere Duplikat-Suche
@@ -1313,6 +1313,6 @@ CSSScope.prototype.checkMissingFocusStyles = async function () {
 };
 
 CSSScope.prototype.findOverSpecificSelectors = async function () {
-  // TODO: Implementiere Selektor-Komplexitäts-Analyse
+  // TODO: Implementiere Selektor-KomplexitÃ¤ts-Analyse
   return [];
 };
