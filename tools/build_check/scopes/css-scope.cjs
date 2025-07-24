@@ -128,7 +128,10 @@ class CSSScope {
       // ðŸ“Š CSS-REALITY-CHECK
       console.log("ðŸŽ¨ Simuliere angewendete CSS-Regeln...");
       const appliedCSS = await this.simulateAppliedCSS();
-      console.log("ðŸŽ¨ CSS-Reality-Check:", JSON.stringify(appliedCSS, null, 2));
+      console.log(
+        "ðŸŽ¨ CSS-Reality-Check:",
+        JSON.stringify(appliedCSS, null, 2)
+      );
 
       // ðŸŽ¯ KI-PROMPTS FÃœR ERWEITERTE CSS-OPTIMIERUNG
       if (issues.length > 0) {
