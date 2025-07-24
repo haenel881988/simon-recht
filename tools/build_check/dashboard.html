@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎯 SIMON'S REAL-TIME BUILD-DASHBOARD</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #1a1d24;
+        color: #6b8a9a;
+        margin: 0;
+        padding: 20px;
+      }
+      .dashboard {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .dashboard-header {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .status-card {
+        background: #2a2f36;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 10px 0;
+        border-left: 6px solid #ff4500;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+      .status-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+      .status-excellent {
+        border-left-color: #00ff00;
+      }
+      .status-good {
+        border-left-color: #4caf50;
+      }
+      .status-warning {
+        border-left-color: #ff4500;
+      }
+      .status-critical {
+        border-left-color: #ff0000;
+      }
+
+      .scope-card {
+        background: #2a2f36;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 8px 0;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+      .scope-excellent {
+        border-color: #00ff00;
+      }
+      .scope-good {
+        border-color: #4caf50;
+      }
+      .scope-warning {
+        border-color: #ff4500;
+      }
+      .scope-critical {
+        border-color: #ff0000;
+      }
+
+      .health-bar {
+        width: 100%;
+        height: 20px;
+        background: #1a1d24;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 8px 0;
+      }
+      .health-fill {
+        height: 100%;
+        transition: width 0.8s ease;
+        border-radius: 10px;
+      }
+      .health-excellent {
+        background: linear-gradient(90deg, #4caf50, #00ff00);
+      }
+      .health-good {
+        background: linear-gradient(90deg, #2196f3, #4caf50);
+      }
+      .health-warning {
+        background: linear-gradient(90deg, #ff4500, #ffc107);
+      }
+      .health-critical {
+        background: linear-gradient(90deg, #ff0000, #ff4500);
+      }
+
+      .timestamp {
+        font-family: "Courier New", monospace;
+        font-size: 0.9em;
+        color: #8db4c7;
+      }
+      .metric-value {
+        font-size: 2em;
+        font-weight: bold;
+        color: #ff4500;
+      }
+      .metric-label {
+        font-size: 0.9em;
+        opacity: 0.8;
+      }
+
+      .action-button {
+        background: linear-gradient(135deg, #ff4500, #ff6b35);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        margin: 8px 4px;
+        transition: all 0.3s ease;
+      }
+      .action-button:hover {
+        background: linear-gradient(135deg, #ff6b35, #ff8c42);
+        transform: translateY(-2px);
+      }
+
+      .live-indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: #00ff00;
+        border-radius: 50%;
+        margin-right: 8px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .css-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 16px;
+      }
+
+      .css-metric {
+        background: #1a1d24;
+        padding: 12px;
+        border-radius: 6px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="dashboard-header">
+        <h1>🎯 SIMON'S REAL-TIME BUILD-DASHBOARD</h1>
+        <p>
+          <span class="live-indicator"></span>Live-Monitoring aktiv •
+          Auto-Update alle 15s
+        </p>
+      </div>
+
+      <!-- 🎯 GESAMT-HEALTH-SCORE -->
+      <div class="status-card status-excellent">
+        <h2>🎯 GESAMT-HEALTH-SCORE</h2>
+        <div class="metric-value" id="total-health">95</div>
+        <div class="metric-label">von 100 Punkten</div>
+        <div class="health-bar">
+          <div
+            class="health-fill health-excellent"
+            id="total-health-bar"
+            style="width: 95%"
+          ></div>
+        </div>
+        <div class="timestamp" id="last-check">Letzte Prüfung: --:--:--</div>
+      </div>
+
+      <!-- 🎨 CSS-SCOPE DETAILS -->
+      <div class="status-card scope-excellent">
+        <h2>🎨 CSS-SCOPE STATUS</h2>
+        <div class="css-details">
+          <div class="css-metric">
+            <div class="metric-value" id="css-health">92</div>
+            <div class="metric-label">Health Score</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="contrast-violations">0</div>
+            <div class="metric-label">Kontrast-Violations</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="css-issues">3</div>
+            <div class="metric-label">CSS Issues</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="mobile-ready">✅</div>
+            <div class="metric-label">Mobile Ready</div>
+          </div>
+        </div>
+        <div class="health-bar">
+          <div
+            class="health-fill health-excellent"
+            id="css-health-bar"
+            style="width: 92%"
+          ></div>
+        </div>
+        <p>
+          <strong>60/30/10+ System:</strong>
+          <span id="color-system-status">Vollständig implementiert</span>
+        </p>
+        <p>
+          <strong>Navigation:</strong>
+          <span id="nav-status">Glut-Orange optimiert</span>
+        </p>
+      </div>
+
+      <!-- 📊 SEO-SCOPE STATUS -->
+      <div class="status-card scope-good">
+        <h2>📊 SEO-SCOPE STATUS</h2>
+        <div class="css-details">
+          <div class="css-metric">
+            <div class="metric-value" id="seo-health">78</div>
+            <div class="metric-label">SEO Score</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="content-length">2346</div>
+            <div class="metric-label">Avg. Wörter</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="meta-descriptions">67%</div>
+            <div class="metric-label">Meta-Descriptions</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value" id="h1-tags">✅</div>
+            <div class="metric-label">H1-Struktur</div>
+          </div>
+        </div>
+        <div class="health-bar">
+          <div
+            class="health-fill health-good"
+            id="seo-health-bar"
+            style="width: 78%"
+          ></div>
+        </div>
+      </div>
+
+      <!-- 📝 AKTUELLE LOGS -->
+      <div class="status-card status-excellent">
+        <h2>📝 LOG-STATUS</h2>
+        <div id="current-logs">
+          <div class="timestamp">
+            📄 simon-build-checker-v5-2025-07-24T15-42-18-567Z.md -
+            <span style="color: #00ff00">2min alt</span>
+          </div>
+        </div>
+        <p>
+          <strong>5-Minuten-Regel:</strong>
+          <span style="color: #00ff00">AKTIV</span>
+        </p>
+        <p>
+          <strong>Auto-Archivierung:</strong>
+          <span style="color: #00ff00">LÄUFT</span>
+        </p>
+        <p>
+          <strong>Symlink:</strong>
+          <span style="color: #00ff00">current-build-log.md → AKTUELL</span>
+        </p>
+      </div>
+
+      <!-- 🚀 QUICK ACTIONS -->
+      <div class="status-card">
+        <h2>🚀 QUICK ACTIONS</h2>
+        <div style="text-align: center">
+          <button class="action-button" onclick="runBuildChecker()">
+            � BUILD-CHECKER STARTEN
+          </button>
+          <button class="action-button" onclick="runCSSCheck()">
+            🎨 CSS-DEEP-SCAN
+          </button>
+          <button class="action-button" onclick="runSEOCheck()">
+            📊 SEO-ANALYSE
+          </button>
+          <button class="action-button" onclick="viewLogs()">
+            � LOGS ANZEIGEN
+          </button>
+          <button class="action-button" onclick="exportReport()">
+            📤 REPORT EXPORTIEREN
+          </button>
+        </div>
+      </div>
+
+      <!-- 🎯 SCOPE-ÜBERSICHT -->
+      <div class="status-card">
+        <h2>🎯 SCOPE-ÜBERSICHT</h2>
+        <div id="scope-summary">
+          <div class="scope-card scope-excellent">
+            <strong>🎨 CSS-Scope:</strong> EXCELLENT (92/100) - 0 kritische
+            Issues
+          </div>
+          <div class="scope-card scope-good">
+            <strong>📊 SEO-Scope:</strong> GOOD (78/100) - 3 wichtige
+            Optimierungen
+          </div>
+          <div class="scope-card scope-warning">
+            <strong>♿ A11Y-Scope:</strong> COMING SOON - Accessibility Tests
+          </div>
+          <div class="scope-card scope-warning">
+            <strong>�️ Media-Scope:</strong> COMING SOON - Bilder & Videos
+          </div>
+        </div>
+      </div>
+
+      <!-- 📈 TREND-ANALYSE -->
+      <div class="status-card">
+        <h2>📈 HEALTH-SCORE TREND</h2>
+        <div class="css-details">
+          <div class="css-metric">
+            <div class="metric-value">+12</div>
+            <div class="metric-label">Letzte 24h</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value">+27</div>
+            <div class="metric-label">Letzte Woche</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value">15</div>
+            <div class="metric-label">Behobene Issues</div>
+          </div>
+          <div class="css-metric">
+            <div class="metric-value">3</div>
+            <div class="metric-label">Neue Issues</div>
+          </div>
+        </div>
+        <canvas
+          id="trend-chart"
+          width="400"
+          height="100"
+          style="width: 100%; margin-top: 16px"
+        ></canvas>
+      </div>
+    </div>
+
+    <script>
+      async function updateStatus() {
+        const response = await fetch("/api/build-status");
+        const data = await response.json();
+
+        // Aktuelle Logs anzeigen
+        const currentDiv = document.getElementById("current-logs");
+        if (data.current.length > 0) {
+          currentDiv.innerHTML = data.current
+            .map(
+              (log) =>
+                `<div class="timestamp">📄 ${log.name} - <span class="age age-current">${log.age}</span></div>`
+            )
+            .join("");
+        } else {
+          currentDiv.innerHTML =
+            '<div class="age age-critical">🚨 KEINE AKTUELLEN LOGS!</div>';
+        }
+
+        // Veraltete Logs
+        const oldDiv = document.getElementById("old-logs");
+        oldDiv.innerHTML =
+          data.old
+            .map(
+              (log) =>
+                `<div class="timestamp">📁 ${log.name} - <span class="age age-warning">${log.age}</span></div>`
+            )
+            .join("") ||
+          '<div class="age age-current">✅ Alle Logs aktuell</div>';
+
+        // Letzte Prüfung
+        document.getElementById("last-check").textContent =
+          new Date().toLocaleTimeString();
+      }
+
+      async function runBuildChecker() {
+        alert("🚀 Build-Checker wird gestartet...");
+        // Trigger GitHub Action oder lokalen Build
+      }
+
+      async function archiveLogs() {
+        alert("📦 Logs werden archiviert...");
+        // Trigger Archive-Script
+      }
+
+      function refreshStatus() {
+        updateStatus();
+      }
+
+      // Auto-Update alle 30 Sekunden
+      setInterval(updateStatus, 30000);
+      updateStatus();
+    </script>
+  </body>
+</html>

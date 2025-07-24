@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 
 /**
- * 🚀 SIMON'S REVOLUTIONÄRER MULTI-SCOPE BUILD-CHECKER v2.0
+ * 🚀 SIMON'S REVOLUTIONÄRER MULTI-SCOPE BUILD-CHECKER v5.1
  *
  * 🎯 SCOPE-BASIERTE ARCHITEKTUR:
  * ✅ CSS-Scope: Design & Kontrast-Spezialist
  * ✅ SEO-Scope: Content & Authentizitäts-Spezialist
+ * ✅ VS Code-Scope: TypeScript & Linting-Spezialist
  * ✅ A11Y-Scope: Accessibility-Experte (Coming Soon)
  * ✅ ESLint-Scope: Code-Qualitäts-Inspektor (Coming Soon)
  * ✅ Media-Scope: Bilder & Videos-Validator (Coming Soon)
@@ -16,11 +17,15 @@
  * ✅ Scope-spezifische Health-Scores
  * ✅ Automatische KI-Prompt-Generation
  * ✅ Detaillierte Metriken pro Scope
+ * ✅ AUTOMATISCHE LOG-ARCHIVIERUNG (5-Minuten-Regel)
+ * ✅ REAL-TIME DASHBOARD SUPPORT
  */
 
 const BaseChecker = require("./core/base-checker.cjs");
 const CSSScope = require("./scopes/css-scope.cjs");
 const SEOScope = require("./scopes/seo-scope.cjs");
+const VSCodeScope = require("./scopes/vscode-scope.cjs");
+const InventoryScope = require("./scopes/inventory-scope.cjs");
 const path = require("path");
 const fs = require("fs").promises;
 
@@ -28,6 +33,13 @@ class MultiScopeBuildChecker extends BaseChecker {
   constructor(projectRoot) {
     super(projectRoot);
     this.availableScopes = new Map();
+    this.logDir = path.join(
+      this.projectRoot,
+      "tools",
+      "build_check",
+      "logfiles"
+    );
+    this.archiveDir = path.join(this.logDir, "archive");
     this.registerScopes();
   }
 
@@ -38,6 +50,11 @@ class MultiScopeBuildChecker extends BaseChecker {
     // Aktive Scopes registrieren
     this.availableScopes.set("css", () => new CSSScope(this.projectRoot));
     this.availableScopes.set("seo", () => new SEOScope(this.projectRoot));
+    this.availableScopes.set("vscode", () => new VSCodeScope(this.projectRoot));
+    this.availableScopes.set(
+      "inventory",
+      () => new InventoryScope(this.projectRoot)
+    );
 
     // Zukünftige Scopes (Coming Soon)
     // this.availableScopes.set('a11y', () => new A11YScope(this.projectRoot));
@@ -46,11 +63,137 @@ class MultiScopeBuildChecker extends BaseChecker {
   }
 
   /**
-   * 🚀 HAUPT-AUSFÜHRUNG
+   * �️ AUTOMATISCHE LOG-ARCHIVIERUNG (5-MINUTEN-REGEL)
+   */
+  async archiveOldLogs() {
+    try {
+      // Erstelle Archiv-Verzeichnis falls nicht vorhanden
+      const todayArchive = path.join(
+        this.archiveDir,
+        new Date().toISOString().split("T")[0]
+      );
+      await fs.mkdir(todayArchive, { recursive: true });
+
+      // Finde alle Build-Checker Logs
+      const files = await fs.readdir(this.logDir);
+      const logFiles = files.filter(
+        (file) =>
+          file.startsWith("simon-build-checker-") && file.endsWith(".md")
+      );
+
+      const cutoffTime = Date.now() - 5 * 60 * 1000; // 5 Minuten
+      let archivedCount = 0;
+
+      for (const logFile of logFiles) {
+        const logPath = path.join(this.logDir, logFile);
+        const stats = await fs.stat(logPath);
+
+        if (stats.mtime.getTime() < cutoffTime) {
+          // Verschiebe ins Archiv
+          const archivePath = path.join(todayArchive, logFile);
+          await fs.rename(logPath, archivePath);
+          archivedCount++;
+          console.log(
+            `📦 ARCHIVIERT: ${logFile} (${Math.round(
+              (Date.now() - stats.mtime.getTime()) / 60000
+            )}min alt)`
+          );
+        }
+      }
+
+      // Entferne veraltete Symlinks
+      const symlinkPath = path.join(this.logDir, "current-build-log.md");
+      try {
+        const symlinkStats = await fs.lstat(symlinkPath);
+        if (symlinkStats.isSymbolicLink()) {
+          const target = await fs.readlink(symlinkPath);
+          const targetPath = path.join(this.logDir, target);
+          try {
+            await fs.access(targetPath);
+          } catch {
+            // Target existiert nicht mehr - Symlink entfernen
+            await fs.unlink(symlinkPath);
+            console.log("🗑️ VERALTETER SYMLINK ENTFERNT");
+          }
+        }
+      } catch {
+        // Symlink existiert nicht
+      }
+
+      if (archivedCount > 0) {
+        console.log(
+          `✅ LOG-ARCHIVIERUNG: ${archivedCount} veraltete Logs archiviert`
+        );
+      } else {
+        console.log("✅ LOG-ARCHIVIERUNG: Keine veralteten Logs gefunden");
+      }
+    } catch (error) {
+      console.error(
+        "⚠️ WARNUNG: Log-Archivierung fehlgeschlagen:",
+        error.message
+      );
+    }
+  }
+
+  /**
+   * 🔗 SYMLINK-MANAGEMENT (BULLETPROOF v5.1)
+   */
+  async updateSymlink(logFileName) {
+    const symlinkPath = path.join(this.logDir, "current-build-log.md");
+    const pointerPath = path.join(this.logDir, "current-build-log.json");
+    const fullLogPath = path.join(this.logDir, logFileName);
+
+    try {
+      // STRATEGIE 1: Hardlink versuchen (keine Admin-Rechte nötig)
+      try {
+        await fs.access(symlinkPath);
+        await fs.unlink(symlinkPath);
+      } catch {
+        // Datei existiert nicht - das ist OK
+      }
+      await fs.link(fullLogPath, symlinkPath);
+      console.log(
+        `✅ HARDLINK ERSTELLT: current-build-log.md → ${logFileName}`
+      );
+    } catch (hardlinkError) {
+      try {
+        // STRATEGIE 2: JSON-Pointer System (bulletproof fallback)
+        const pointerData = {
+          currentLog: logFileName,
+          fullPath: fullLogPath,
+          timestamp: new Date().toISOString(),
+          version: "v5.1",
+          fallbackReason: "Hardlink failed - using pointer system",
+        };
+
+        await fs.writeFile(pointerPath, JSON.stringify(pointerData, null, 2));
+
+        // STRATEGIE 3: Kopie als backup
+        try {
+          await fs.access(symlinkPath);
+          await fs.unlink(symlinkPath);
+        } catch {
+          // Datei existiert nicht - das ist OK
+        }
+        await fs.copyFile(fullLogPath, symlinkPath);
+
+        console.log(
+          `� FALLBACK-SYSTEM AKTIV: JSON-Pointer + Kopie erstellt für ${logFileName}`
+        );
+      } catch (fallbackError) {
+        console.error(
+          `❌ ALLE SYMLINK-STRATEGIEN FEHLGESCHLAGEN: ${fallbackError.message}`
+        );
+      }
+    }
+  }
+
+  /**
+   * �🚀 HAUPT-AUSFÜHRUNG
    */
   async run() {
     console.log(
-      "🚀 Simon's Revolutionärer Multi-Scope Build-Checker v2.0 gestartet..."
+      "🚀 Simon's Revolutionärer Multi-Scope Build-Checker v5.1 gestartet..."
     );
     console.log(`🎯 Projekt-Root: ${this.projectRoot}`);
     console.log(
@@ -60,30 +203,81 @@ class MultiScopeBuildChecker extends BaseChecker {
     );
 
     try {
-      // 1️⃣ ALLE SCOPES PARALLEL AUSFÜHREN
-      const scopePromises = Array.from(this.availableScopes.entries()).map(
-        ([scopeName, scopeFactory]) => {
-          const scopeInstance = scopeFactory();
-          return this.runScope(scopeName, scopeInstance);
-        }
+      // 0️⃣ AUTOMATISCHE LOG-ARCHIVIERUNG VOR START
+      await this.archiveOldLogs();
+
+      // 1️⃣ ALLE SCOPES SEQUENZIELL AUSFÜHREN (PERFORMANCE-OPTIMIERT)
+      console.log(
+        "🎯 Starte sequenzielle Scope-Ausführung für Performance-Optimierung..."
       );
 
-      // Warten auf alle Scopes
-      await Promise.all(scopePromises);
+      for (const [scopeName, scopeFactory] of this.availableScopes.entries()) {
+        const scopeInstance = scopeFactory();
+
+        // Resource-Monitor vor Scope-Start
+        const memBefore = process.memoryUsage();
+        console.log(`🔍 Starte ${scopeName}-Scope...`);
+
+        await this.runScope(scopeName, scopeInstance);
+
+        // Resource-Monitor nach Scope-Ende
+        const memAfter = process.memoryUsage();
+        const memDiff = Math.round(
+          (memAfter.heapUsed - memBefore.heapUsed) / 1024 / 1024
+        );
+
+        console.log(
+          `✅ ${scopeName}-Scope abgeschlossen (${
+            memDiff > 0 ? "+" : ""
+          }${memDiff}MB)`
+        );
+
+        // Intelligente Pause zwischen Scopes für System-Recovery
+        if (memDiff > 50) {
+          // Bei >50MB Memory-Verbrauch
+          console.log(
+            `⏸️ System-Recovery-Pause (${memDiff}MB Memory-Verbrauch)...`
+          );
+          await new Promise((resolve) => setTimeout(resolve, 2000)); // 2s Pause
+
+          // Garbage Collection erzwingen
+          if (global.gc) {
+            global.gc();
+            console.log(`🧹 Garbage Collection durchgeführt`);
+          }
+        } else {
+          // Kurze Pause für System-Stabilität
+          await new Promise((resolve) => setTimeout(resolve, 500)); // 0.5s Pause
+        }
+      }
 
       // 2️⃣ FINALE BERICHTSGENERIERUNG
       const finalReport = this.generateReport();
 
       // 3️⃣ LOG-DATEI ERSTELLEN
-      await this.saveDetailedReport(finalReport);
+      const logFileName = await this.saveDetailedReport(finalReport);
 
-      // 4️⃣ KONSOLEN-AUSGABE
+      // 4️⃣ SYMLINK AKTUALISIEREN
+      await this.updateSymlink(logFileName);
+
+      // 5️⃣ KONSOLEN-AUSGABE
       this.printScopeSummary();
 
       console.log(`\n✅ Multi-Scope Build-Check abgeschlossen!`);
       console.log(
         `🎯 Gesamt-Health-Score: ${finalReport.summary.healthScore}/100`
       );
+
+      // 🧹 AUTOMATISCHER TASK-CLEANUP für Simon's Performance
+      console.log("\n🧹 Starte automatischen Task-Cleanup...");
+      try {
+        const TaskCleaner = require("./core/task-cleaner.cjs");
+        const cleaner = new TaskCleaner();
+        await cleaner.cleanupTasks();
+        console.log("✅ Task-Cleanup erfolgreich abgeschlossen!");
+      } catch (cleanupError) {
+        console.log(`⚠️ Task-Cleanup übersprungen: ${cleanupError.message}`);
+      }
 
       return finalReport;
     } catch (error) {
@@ -173,20 +367,19 @@ class MultiScopeBuildChecker extends BaseChecker {
   async saveDetailedReport(report) {
     try {
       const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-      const logFileName = `multi-scope-build-report-${timestamp}.md`;
-      const logPath = path.join(
-        this.projectRoot,
-        "tools/build_check/logfiles",
-        logFileName
-      );
+      const logFileName = `simon-build-checker-v5-${timestamp}.md`;
+      const logPath = path.join(this.logDir, logFileName);
 
       // Markdown-Report generieren
       const markdownReport = this.generateMarkdownReport(report);
 
       await fs.writeFile(logPath, markdownReport, "utf-8");
       console.log(`📄 Detaillierter Bericht gespeichert: ${logFileName}`);
+
+      return logFileName; // Dateiname für Symlink zurückgeben
     } catch (error) {
       console.error("❌ Fehler beim Speichern des Berichts:", error.message);
+      return null;
     }
   }
 
