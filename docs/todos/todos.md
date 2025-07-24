@@ -1,9 +1,53 @@
 # 🎯 SIMON-RECHT TODO-LISTE - ANTI-VERZETTLUNGS-SYSTEM v2.0
 
-**Letzte Aktualisierung:** 24.07.2025 (MULTI-SCOPE BUILD-CHECKER v5.1 IMPLEMENTIERT)  
+**Letzte Aktualisierung:** 24.07.2025 (VERHALTENSANALYSE INTEGRATION + MULTI-SCOPE BUILD-CHECKER v5.1)  
 **Status:** Live-Update-System mit zwingender Synchronisation
 
 ---
+
+# Kritischsten Probleme - Alarmstufe Rot:
+
+[13:16:56.176] Running build in Washington, D.C., USA (East) – iad1
+[13:16:56.177] Build machine configuration: 4 cores, 8 GB
+[13:16:56.197] Cloning github.com/haenel881988/simon-recht (Branch: main, Commit: d138aaf)
+[13:16:57.156] Cloning completed: 959.000ms
+[13:16:57.324] Restored build cache from previous deployment (7GYi5FRSHqGopwyATbZMF2xNfPjg)
+[13:16:57.703] Running "vercel build"
+[13:16:58.383] Vercel CLI 44.5.0
+[13:16:59.366] Installing dependencies...
+[13:17:00.709]
+[13:17:00.709] up to date in 1s
+[13:17:00.710]
+[13:17:00.710] 181 packages are looking for funding
+[13:17:00.710] run `npm fund` for details
+[13:17:00.743] Running "npm run build"
+[13:17:00.862]
+[13:17:00.862] > simon-recht@1.0.0 build
+[13:17:00.862] > node tools/inventory/auto-inventory.js && astro build
+[13:17:00.862]
+[13:17:00.900] 🚀 Starte automatische Inventur...
+[13:17:00.901] 🔍 Führe Build-Checker aus...
+[13:17:00.940] /vercel/path0/tools/build_check/scopes/css-scope.cjs:1
+[13:17:00.940] ﻿#!/usr/bin/env node
+[13:17:00.940] ^
+[13:17:00.940]
+[13:17:00.940] SyntaxError: Invalid or unexpected token
+[13:17:00.940] at wrapSafe (node:internal/modules/cjs/loader:1662:18)
+[13:17:00.940] at Module.\_compile (node:internal/modules/cjs/loader:1704:20)
+[13:17:00.940] at Object..js (node:internal/modules/cjs/loader:1895:10)
+[13:17:00.940] at Module.load (node:internal/modules/cjs/loader:1465:32)
+[13:17:00.940] at Function.\_load (node:internal/modules/cjs/loader:1282:12)
+[13:17:00.940] at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[13:17:00.941] at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+[13:17:00.941] at Module.require (node:internal/modules/cjs/loader:1487:12)
+[13:17:00.941] at require (node:internal/modules/helpers:135:16)
+[13:17:00.941] at Object.<anonymous> (/vercel/path0/tools/build_check/multi-scope-checker.cjs:25:18)
+[13:17:00.941]
+[13:17:00.941] Node.js v22.17.1
+[13:17:00.943] ❌ Inventur-Fehler: Build-Checker fehlgeschlagen: 1
+[13:17:00.955] Error: Command "npm run build" exited with 1
+[13:17:01.126]
+[13:17:03.930] Exiting build container
 
 ## 🔴 **KRITISCHE TODOs (SOFORTIGE AKTION)**
 
@@ -17,7 +61,13 @@
 
 ### **🚨 NÄCHSTE KRITISCHE SCHRITTE (HEUTE)**
 
+**📋 BASIEREND AUF VERHALTENSANALYSE (docs/todos/verhaltensprobleme.md):**
+
+- [ ] 24.07.2025 [INSTRUCTIONS] Instructions-Fundament bereinigen: Falsche Pfade korrigieren (docs/ideen/ → archiv/), Widersprüche auflösen, redundante Regeln entfernen
+- [ ] 24.07.2025 [INSTRUCTIONS] Scope-Struktur einführen: INSTRUCTIONS_SCOPE_SYSTEM v2.0 umsetzen, alle Anweisungen thematisch kategorisieren
+- [ ] 24.07.2025 [VSCODE] VS Code Konfiguration komplettieren: github.copilot.chat.templateFiles um ALLE relevanten MD-Dateien erweitern
 - [ ] 24.07.2025 [CHECKER] CSS-Deep-Analysis erweitern: Von 4 auf 10+ Tests für 95/100 Score
+- [ ] 24.07.2025 [INSTRUCTIONS] Anti-Oberflächlichkeits-Zwangssystem verstärken: Vollständigkeits-Check vor jeder Antwort implementieren
 - [ ] 24.07.2025 [CONTENT] Blog-Content erstellen: Von 1 auf 5+ Blogs für SEO-Momentum
 - [ ] 24.07.2025 [DASHBOARD] Live-Dashboard API-Endpoints implementieren
 - [ ] 24.07.2025 [DOCS] Änderungsprotokoll SMART-Dokumentation erstellen
@@ -25,6 +75,13 @@
 ---
 
 ## 🟡 **WICHTIGE TODOs (DIESE WOCHE)**
+
+**📋 VERHALTENSVERBESSERUNGEN (MITTELFRISTIG):**
+
+- [ ] 25.07.2025 [INSTRUCTIONS] Floskel-Kontrolle einführen: Regex-Suchlauf nach Superlativen ("genial", "revolutionär"), Styleguide für KI-Antworten
+- [ ] 26.07.2025 [INSTRUCTIONS] Ehrlichkeitsgebot verstärken: "Lieber warnen als lügen" Prinzip, Vorfilter mit Exception-Zwang
+- [ ] 27.07.2025 [VALIDATION] Externe Validierung implementieren: Wöchentliche Simulations-Chatprotokolle, Integrationstests für KI-Workflow
+- [ ] 28.07.2025 [INSTRUCTIONS] Kontinuierliche Verbesserung: Monatlicher Health-Check, Internalisierung neuer Regeln
 
 ### **CSS-SYSTEM PERFEKTION**
 

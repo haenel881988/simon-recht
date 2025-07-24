@@ -66,43 +66,33 @@ INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
 
 ---
 
-## � ANTI-SKRIPT-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
+## 🔒 MASTER-REPLACE-REGEL (SIMON'S ANTI-LÜGEN-SYSTEM)
 
-**ABSOLUT VERBOTEN:** PowerShell-Skripte, Batch-Befehle oder automatisierte Datei-Ersetzungen vorschlagen oder verwenden!
+**KRITISCHE REGEL:** Replace-Operationen sind höchst fehleranfällig und erfordern strikte Sicherheits-Mechanismen!
 
-### **ZWINGENDER MANUELLER BEARBEITUNGS-WORKFLOW:**
+### **VOLLSTÄNDIGE REPLACE-REGEL IMPLEMENTIERT:**
 
-1. **NUR REPLACE_STRING_IN_FILE:** Ausschließlich VS Code Tools für Datei-Bearbeitung
-2. **MANUELLE ZEILEN-IDENTIFIKATION:** Exakte Zeilen-Nummern durch read_file ermitteln
-3. **EINZELNE ERSETZUNGEN:** Eine Ersetzung pro replace_string_in_file Aufruf
-4. **KEINE BULK-OPERATIONEN:** Niemals mehrere Ersetzungen durch Skripte
+**📁 PFAD:** `.github/workflows/tools/replace-regel/replace_regel_v2_erweitert.md`
 
-### **VERBOTENE SKRIPT-PATTERNS:**
+### **ZWINGENDER REPLACE-WORKFLOW:**
 
-- ❌ PowerShell Get-Content/Set-Content Befehle
-- ❌ Batch-Datei Ersetzungs-Skripte
-- ❌ sed/awk/grep Bulk-Replacement Kommandos
-- ❌ "Führe diesen Befehl aus:" gefolgt von Ersetzungs-Skript
+1. **GREP-CHECK-ZWANG:** Vor jeder Ersetzung prüfen ob Text eindeutig vorkommt
+2. **PREVIEW-DIFF-PFLICHT:** Immer Vorschau mit exakten Zeilen-Referenzen zeigen
+3. **SCOPE-VALIDATION:** Nur in definierten Kontexten (CSS/HTML-Attribute) ersetzen
+4. **BACKUP-AUTOMATIK:** Zwingend vor jeder replace_string_in_file Operation
+5. **CONFIDENCE-CHECK:** Nur bei ≥90% Match-Sicherheit durchführen
+6. **EXCEPTION-SYSTEM:** Bei Mehrdeutigkeit sofort Exception werfen
 
-### **ERLAUBTE MANUELLE BEARBEITUNGS-METHODEN:**
+### **ANTI-SKRIPT-ENFORCEMENT BLEIBT:**
 
-- ✅ replace_string_in_file mit exaktem oldString/newString
-- ✅ read_file zur Kontext-Ermittlung vor Ersetzung
-- ✅ grep_search zur Zeilen-Identifikation
-- ✅ Einzelne, präzise Datei-Bearbeitungen
-
-### **ANTI-SKRIPT-ENFORCEMENT:**
-
-**Bei Skript-Vorschlag oder -Nutzung:**
-
-1. **SOFORTIGE KORREKTUR:** Skript-Vorschlag zurücknehmen
-2. **MANUELLE METHODE:** replace_string_in_file verwenden
-3. **PRÄZISE ERSETZUNG:** Exakte oldString/newString mit Kontext
-4. **INSTRUCTIONS-VERLETZUNG:** Schwerwiegender Verstoß gegen manuelle Bearbeitung
+- ❌ **ABSOLUT VERBOTEN:** PowerShell/Batch-Skripte für Bulk-Ersetzungen
+- ❌ **ABSOLUT VERBOTEN:** Automatisierte Multi-File-Replace-Operationen
+- ✅ **ZWINGEND:** Einzelne, manuelle replace_string_in_file pro Datei
+- ✅ **ZWINGEND:** Vollständige Einhaltung der Master-Replace-Regel
 
 ### **INTERNALISIERUNGS-GARANTIE:**
 
-**Diese Regel verhindert dauerhaft automatisierte Skript-Nutzung und erzwingt präzise manuelle VS Code Tool-Verwendung!**
+**Diese Regel verhindert dauerhaft Projekt-Chaos durch unkontrollierte Ersetzungen und erzwingt sichere, verifizierte Replace-Operationen!**
 
 ---
 
@@ -1157,13 +1147,14 @@ BLOCKING: [Was kann nicht fortgesetzt werden]
 4. **BUILD-LOGS:** Checker-Logdateien in `tools/build_check/logfiles/`
 5. **AUTHENTIZITÄTS-EXTRAKTE:** Stil-Dateien in `docs/authentizitaet/`
 
-### **SEARCH-VERBOT (ZWINGEND):**
+### **ANALYSE-TOOLS-REGELUNG (ZWINGEND):**
 
-- **ABSOLUT VERBOTEN:** file_search, grep_search, semantic_search Tools durch KI verwenden
-- **ABSOLUT VERBOTEN:** "search text for xxx" Befehle jeder Art durch KI
-- **MANUELLE ANALYSE:** KI muss alle Informationen manuell aus Dateien extrahieren
-- **TIEFENANALYSE:** Jede Datei vollständig lesen und verstehen
-- **EXCEPTION-PFLICHT:** Bei Suchfunktions-Verwendung sofort Exception werfen
+- **ERLAUBT FÜR INFORMATIONSBESCHAFFUNG:** file_search, grep_search, semantic_search
+- **ZWINGEND EHRLICH KOMMUNIZIEREN:** "Ich habe X von Y Dateien analysiert"
+- **ABSOLUT VERBOTEN:** Search-Tools für Datei-BEARBEITUNG verwenden
+- **MANUELLE BEARBEITUNG-ZWANG:** Nur replace_string_in_file für Änderungen
+- **TIEFENANALYSE-REALISMUS:** Große Projekte schrittweise analysieren
+- **HALLUZINATION-VERBOT:** Niemals "vollständige Analyse" behaupten ohne Beweis
 
 ### **BACKUP-SYSTEM (ZWINGEND):**
 
