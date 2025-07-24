@@ -26,6 +26,46 @@ INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
 
 ---
 
+## 🚨 ARCHITEKTUR-UNABHÄNGIGKEITS-ZWANG (SIMON'S INTERNALISIERUNG 24.07.2025)
+
+**ABSOLUT VERBOTEN:** Build-Prozess NIEMALS von Checker-Analysen abhängig machen!
+
+### **ZWINGENDER ARCHITEKTUR-UNABHÄNGIGKEITS-WORKFLOW:**
+
+1. **BUILD-CHECKER-ENTKOPPLUNG:** Build und Analyse-Tools müssen VOLLSTÄNDIG getrennt sein
+2. **PRODUKTIONS-DEPLOYMENT-SCHUTZ:** NIEMALS Checker-Dependencies in npm build einbauen
+3. **VERCEL-SIGKILL-VERMEIDUNG:** Nur `astro build` für Produktions-Deployment verwenden
+4. **OPTIONAL-SCRIPT-SYSTEM:** Checker als separate, optionale npm-Scripte definieren
+
+### **VERBOTENE ARCHITEKTUR-PATTERN:**
+
+- ❌ `"build": "checker && astro build"` (Checker blockiert Build)
+- ❌ `"build": "node tools/inventory/auto-inventory.js && astro build"` (Inventory blockiert Build)
+- ❌ Jede Abhängigkeit zwischen Build-Prozess und Analyse-Tools
+- ❌ Checker-Aufrufe in package.json build-Script
+
+### **ERLAUBTE ARCHITEKTUR-PATTERN:**
+
+- ✅ `"build": "astro build"` (Unabhängig und Vercel-kompatibel)
+- ✅ `"build:with-checker": "astro build && node tools/build_check/multi-scope-checker.cjs"` (Optional)
+- ✅ `"checker": "node tools/build_check/multi-scope-checker.cjs"` (Separates Script)
+- ✅ Checker als Post-Build-Analyse, NIEMALS als Pre-Build-Dependency
+
+### **ARCHITEKTUR-ENFORCEMENT:**
+
+**Bei Build-Checker-Kopplung sofort:**
+
+1. **SOFORTIGE ENTKOPPLUNG:** package.json build-Script auf nur `astro build` reduzieren
+2. **OPTIONALE SCRIPTS:** Checker als separate npm-Scripte definieren
+3. **VERCEL-KOMPATIBILITÄT:** Produktions-Deployment darf NIEMALS durch Checker blockiert werden
+4. **ARCHITEKTUR-VALIDIERUNG:** Build und Analyse-Prozesse komplett getrennt halten
+
+### **INTERNALISIERUNGS-GARANTIE:**
+
+**Diese Regel verhindert dauerhaft Build-Architektur-Chaos und erzwingt saubere Trennung von Produktions-Build und Entwicklungs-Analyse-Tools!**
+
+---
+
 ## 🚨 ANTI-PERFORMANCE-OPTIMIERUNGS-SYSTEM (SIMON'S INTERNALISIERUNG 24.07.2025)
 
 **ABSOLUT VERBOTEN:** Performance-Optimierung, Speed-Fokus oder Effizienz-Sprache in Code und Kommentaren!
