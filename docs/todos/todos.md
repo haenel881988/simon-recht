@@ -1,26 +1,80 @@
-# Ideen / Brainstorming von Simon
+# Inputs / Ideen
 
-Hinweis für die KI: Bitte diesen Abschnitt / Scope mit mir besprechend bevor umgesetzt wird, danke
+Dieser Abschnitt soll bestehen bleiben, damit ich, der User, Simon, meine Gedanken und Ideen festhalten kann.
 
-Vielleicht das analyse-tool entsprechend erweitern, dass es zu jedem Punkt eines bereiches, eine IST- SOLL Zustand bewertung macht, inkl. einer SMART Analyse.
-Dabei wäre es evtl. Sinnvoll, die Ergebnisse in einer Datenbank zu speichern, um sie für zukünftige Analysen und Vergleiche nutzen zu können. Die Datenbank darf ruhig auch historische Daten speichern.
-Dabei ist die Frage, ob wir auf Vercel / oder eine lokale Datenbank setzen sollen.
-Bitte all diese Punkte evtl. entsprechend priorisieren.
-Prioriät hat der Ausbau der Website, bzw. die Struktur gemäss den Dateien:
-docs\todos\todos.md
-docs\todos\verhaltensprobleme.md
-docs\instructions\modell_protokolle\github_copilot_instructions.md
-docs\instructions\modell_protokolle\recherche_chatgpt_agent.md
+Analyzer Übersichtsdatei z.B. unter: "docs\website_struktur\analyzing"
 
-Dabei bitte ich dich, das Tool entsprechend iterativ zu trainieren.
-Auch muss das Analyse-Tool modularisiert werden.
-Es dürfen 1000 Zeilen pro Datei nicht überschritten werden.
-Das Analyse tool soll auch sämtliche Abhängigkeiten, verlinkungen etc. analysieren.
-Jede Inkonsistenz soll vom Tool geprüft werden. Ausserdem muss das Tool entsprechend Rücksicht auf die CPU Auslastung genommen werden. Keine Parallele Ausführungen, sondern eine Ausführung nach der anderen. Auch soll das Tool sämtliche Dateien auflisten sowie redundante Dateien.
-Wenn möglich das Projekt visualisiert werden,z.B.: mit einer html datei, wo ich dann z.B.: selber einfache änderungen vornehmen kann, z.B.: löschen von redundanten / leeren Dateien.
-Dabei sollen die Verzeichnisse und Dateien mit einem Ampel-System daher kommen.
+# 🚨 ANTI-PROKRASTINATIONS-ALARM (25.07.2025)
 
-Was denkst du? Danke
+## 🔴 SIMON'S SELBST-ERKANNTES PROKRASTINATIONS-PATTERN:
+
+**PROBLEM IDENTIFIZIERT:** Permanente Erarbeitung neuer Lösungen/Konzepte/Workflows statt Website-Fortschritt
+
+**BRUTAL EHRLICHE ANALYSE:**
+
+- ❌ **TOOL-VERLIEBTHEIT:** Immer neue Analyse-Systeme entwickeln
+- ❌ **GOLDPLATING:** Dashboard/Visualisierung für Ein-Mann-Projekt
+- ❌ **PERFEKTIONISMUS:** "Erst perfekte Tools, dann Content"
+- ❌ **VERMEIDUNG:** CSS/Content-Arbeit durch Tool-Bau ersetzen
+
+**✅ REALITÄTS-CHECK BESTANDEN:** Simon erkennt eigene Ausreden-Produktion
+
+## 🎯 ANTI-PROKRASTINATIONS-PROTOKOLL (NICHT VERHANDELBAR):
+
+### **🚨 SOFORT-MORATORIUM: ZERO NEUE TOOLS (2 WOCHEN)**
+
+- [ ] **STOPP:** Keine Datenbank-Integration
+- [ ] **STOPP:** Kein HTML-Dashboard
+- [ ] **STOPP:** Keine IST-SOLL-Bewertungssysteme
+- [ ] **STOPP:** Keine weiteren Analyse-Features
+- [ ] **ERLAUBT:** Nur minimale Modularisierung (1 Stunde max)
+
+### **📋 FOKUS-ZWANG: NUR WEBSITE-ARBEIT**
+
+1. **[HEUTE]** CSS-Kontrast-Probleme beheben (Navigation + Icons)
+2. **[26.07]** Blog-Artikel 2: "Arbeitsrecht für IT-Professionals"
+3. **[27.07]** Blog-Artikel 3: "Datenschutz im Homeoffice"
+4. **[28.07]** Responsive Design Mobile-Optimierung
+5. **[31.07]** Website LIVE stellen (Ziel: Ende Juli)
+
+### **🔧 MINIMAL-MODULARISIERUNG (KOMPROMISS)**
+
+**NUR ERLAUBT:** Universal-Analyzer in 3 Module aufteilen (1000-Zeilen-Regel)
+
+```
+tools/analyzer/
+├── analyzer-core.js        # Bestehende Funktionalität
+├── scope-patterns.js      # Scope-Definitionen
+└── universal-project-analyzer.js # Haupt-Tool
+```
+
+**ZEITLIMIT:** Maximal 1 Stunde Aufwand
+
+### **❌ PROKRASTINATIONS-FALLEN (VERBOTEN)**
+
+- **Dashboard-Träume:** "Visualisierung macht Arbeit effizienter"
+- **Tool-Perfektionismus:** "Erst das System, dann die Nutzung"
+- **Feature-Creep:** "Nur noch diese eine Funktion..."
+- **Analyse-Paralyse:** "Ohne vollständige Übersicht kann ich nicht..."
+
+## 🎯 SUCCESS-METRIC: WEBSITE-FORTSCHRITT
+
+**EINZIGER ERFOLGS-INDIKATOR:** Fertige Blog-Artikel + CSS-Fixes + Live-Website
+**TOOL-ERFOLG IST IRRELEVANT** bis Website steht!
+
+---
+
+# Ideen / Brainstorming von Simon (ARCHIVIERT BIS WEBSITE FERTIG)
+
+**STATUS:** 🚫 PAUSIERT bis 31.07.2025 (Website-Launch)
+
+~~Vielleicht das analyse-tool entsprechend erweitern, dass es zu jedem Punkt eines bereiches, eine IST- SOLL Zustand bewertung macht, inkl. einer SMART Analyse.~~
+~~Dabei wäre es evtl. Sinnvoll, die Ergebnisse in einer Datenbank zu speichern...~~
+~~HTML-Dashboard mit Ampel-System...~~
+
+**REALITÄTS-CHECK:** Diese Ideen sind **Tool-Prokrastination** - Website braucht CONTENT, nicht mehr Tools!
+
+**NACH WEBSITE-LAUNCH:** Dann können diese Ideen evaluiert werden (falls überhaupt noch relevant)
 
 # 🎯 SIMO✅ **ARCHITEKTUR-PROBLEM BEHOBEN (24.07.2025 14:35)**
 

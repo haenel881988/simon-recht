@@ -71,5 +71,6 @@
   },
   "github.copilot.chat.agent.terminal.denyList": {
     "npm run build": true
-  }
+  },
+  "github.copilot.chat.virtualTools.enabled": true
 }
