@@ -2,14 +2,14 @@
 
 /**
  * 🔢 TOKEN-COUNTER v2.0 (SELBST-ANALYSIEREND)
- * 
+ *
  * 🎯 ZWECK: Präzise Token-Zählung für sichere KI-Arbeit
  * 🛡️ ANTI-OVERFLOW: Verhindert Context-Limit-Überschreitung
  * 🔄 SELBST-ANALYSE: Analysiert eigene Token-Komplexität
  */
 
-const fs = require('fs').promises;
-const path = require('path');
+const fs = require("fs").promises;
+const path = require("path");
 
 class TokenCounter {
   constructor() {
@@ -18,15 +18,15 @@ class TokenCounter {
       fileTokens: {},
       warnings: [],
       criticalFiles: [],
-      recommendations: []
+      recommendations: [],
     };
-    
+
     // GitHub Copilot Context Limits
     this.limits = {
-      copilotInstructions: 8000,    // Sicheres Limit für Instructions
-      contextWindow: 32000,         // Gesamt-Context für Conversation
-      warningThreshold: 6400,       // 80% Warning
-      criticalThreshold: 7200       // 90% Critical
+      copilotInstructions: 8000, // Sicheres Limit für Instructions
+      contextWindow: 32000, // Gesamt-Context für Conversation
+      warningThreshold: 6400, // 80% Warning
+      criticalThreshold: 7200, // 90% Critical
     };
   }
 
@@ -34,20 +34,20 @@ class TokenCounter {
    * 📊 HAUPT-TOKEN-ANALYSE
    */
   async analyzeTokens(projectRoot) {
-    console.log('🔢 TOKEN-COUNTER: Starte Analyse...');
-    
+    console.log("🔢 TOKEN-COUNTER: Starte Analyse...");
+
     // 1. Instructions-Dateien scannen
     await this.scanInstructionFiles(projectRoot);
-    
+
     // 2. Tool-Dateien scannen (inklusive SELBST)
     await this.scanToolFiles(projectRoot);
-    
+
     // 3. Content-Dateien scannen
     await this.scanContentFiles(projectRoot);
-    
+
     // 4. SELBST-ANALYSE durchführen
     await this.performSelfAnalysis(projectRoot);
-    
+
     return this.generateTokenReport();
   }
 
@@ -55,35 +55,37 @@ class TokenCounter {
    * 🧠 SELBST-ANALYSE: Analyzer analysiert sich selbst
    */
   async performSelfAnalysis(projectRoot) {
-    console.log('🔄 SELBST-ANALYSE: Token-Counter analysiert sich selbst...');
-    
+    console.log("🔄 SELBST-ANALYSE: Token-Counter analysiert sich selbst...");
+
     const selfPath = __filename;
     const selfTokens = await this.countFileTokens(selfPath);
-    
-    this.tokenResults.fileTokens['[SELF] token-counter.cjs'] = {
+
+    this.tokenResults.fileTokens["[SELF] token-counter.cjs"] = {
       tokens: selfTokens,
-      type: 'self-analysis',
-      status: selfTokens > 1000 ? 'KOMPLEX' : 'OPTIMAL'
+      type: "self-analysis",
+      status: selfTokens > 1000 ? "KOMPLEX" : "OPTIMAL",
     };
-    
+
     // Analyzer-Tools analysieren
-    const analyzerDir = path.join(projectRoot, 'tools', 'analyzer');
+    const analyzerDir = path.join(projectRoot, "tools", "analyzer");
     try {
       const files = await fs.readdir(analyzerDir);
       for (const file of files) {
-        if (file.endsWith('.cjs') && file !== 'token-counter.cjs') {
+        if (file.endsWith(".cjs") && file !== "token-counter.cjs") {
           const filePath = path.join(analyzerDir, file);
           const tokens = await this.countFileTokens(filePath);
-          
+
           this.tokenResults.fileTokens[`[ANALYZER] ${file}`] = {
             tokens,
-            type: 'analyzer-tool',
-            status: tokens > 2000 ? 'ZU_GROSS' : 'OK'
+            type: "analyzer-tool",
+            status: tokens > 2000 ? "ZU_GROSS" : "OK",
           };
         }
       }
     } catch (error) {
-      this.tokenResults.warnings.push(`Fehler bei Analyzer-Selbstanalyse: ${error.message}`);
+      this.tokenResults.warnings.push(
+        `Fehler bei Analyzer-Selbstanalyse: ${error.message}`
+      );
     }
   }
 
@@ -92,27 +94,23 @@ class TokenCounter {
    */
   async scanInstructionFiles(projectRoot) {
     const instructionPaths = [
-      '.github/copilot-instructions.md',
-      '.github/instructions/**/*.md'
+      ".github/copilot-instructions.md",
+      ".github/instructions/**/*.md",
     ];
-    
+
     for (const pattern of instructionPaths) {
-      await this.scanPattern(projectRoot, pattern, 'instructions');
+      await this.scanPattern(projectRoot, pattern, "instructions");
     }
   }
 
   /**
-   * 🔧 TOOL-TOKEN-ANALYSE  
+   * 🔧 TOOL-TOKEN-ANALYSE
    */
   async scanToolFiles(projectRoot) {
-    const toolPaths = [
-      'tools/**/*.cjs',
-      'tools/**/*.js',
-      'tools/**/*.md'
-    ];
-    
+    const toolPaths = ["tools/**/*.cjs", "tools/**/*.js", "tools/**/*.md"];
+
     for (const pattern of toolPaths) {
-      await this.scanPattern(projectRoot, pattern, 'tools');
+      await this.scanPattern(projectRoot, pattern, "tools");
     }
   }
 
@@ -120,14 +118,10 @@ class TokenCounter {
    * 📄 CONTENT-TOKEN-ANALYSE
    */
   async scanContentFiles(projectRoot) {
-    const contentPaths = [
-      'src/**/*.astro',
-      'src/**/*.md',
-      'docs/**/*.md'
-    ];
-    
+    const contentPaths = ["src/**/*.astro", "src/**/*.md", "docs/**/*.md"];
+
     for (const pattern of contentPaths) {
-      await this.scanPattern(projectRoot, pattern, 'content');
+      await this.scanPattern(projectRoot, pattern, "content");
     }
   }
 
@@ -139,21 +133,23 @@ class TokenCounter {
       const globPattern = path.join(projectRoot, pattern);
       // Vereinfachtes Glob-Matching (ohne externe Dependencies)
       const files = await this.findFiles(projectRoot, pattern);
-      
+
       for (const file of files) {
         const tokens = await this.countFileTokens(file);
         const relativePath = path.relative(projectRoot, file);
-        
+
         this.tokenResults.fileTokens[relativePath] = {
           tokens,
           type,
-          status: this.getTokenStatus(tokens, type)
+          status: this.getTokenStatus(tokens, type),
         };
-        
+
         this.tokenResults.totalTokens += tokens;
       }
     } catch (error) {
-      this.tokenResults.warnings.push(`Pattern-Scan Fehler (${pattern}): ${error.message}`);
+      this.tokenResults.warnings.push(
+        `Pattern-Scan Fehler (${pattern}): ${error.message}`
+      );
     }
   }
 
@@ -162,11 +158,11 @@ class TokenCounter {
    */
   async findFiles(rootDir, pattern) {
     const files = [];
-    
+
     // Pattern-Parsing (vereinfacht)
-    const cleanPattern = pattern.replace(/\*\*/g, '').replace(/\*/g, '');
+    const cleanPattern = pattern.replace(/\*\*/g, "").replace(/\*/g, "");
     const extension = path.extname(cleanPattern);
-    
+
     await this.walkDirectory(rootDir, files, extension);
     return files;
   }
@@ -177,16 +173,19 @@ class TokenCounter {
   async walkDirectory(dir, files, targetExtension) {
     try {
       const entries = await fs.readdir(dir, { withFileTypes: true });
-      
+
       for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
-        
+
         if (entry.isDirectory()) {
-          if (!entry.name.startsWith('.') && entry.name !== 'node_modules') {
+          if (!entry.name.startsWith(".") && entry.name !== "node_modules") {
             await this.walkDirectory(fullPath, files, targetExtension);
           }
         } else if (entry.isFile()) {
-          if (!targetExtension || path.extname(entry.name) === targetExtension) {
+          if (
+            !targetExtension ||
+            path.extname(entry.name) === targetExtension
+          ) {
             files.push(fullPath);
           }
         }
@@ -201,14 +200,14 @@ class TokenCounter {
    */
   async countFileTokens(filePath) {
     try {
-      const content = await fs.readFile(filePath, 'utf-8');
-      
+      const content = await fs.readFile(filePath, "utf-8");
+
       // Token-Schätzung (approximiert)
       // Durchschnitt: 1 Token = 4 Zeichen für Deutschen Text
       // Code: 1 Token = 3 Zeichen
       const isCode = /\.(js|cjs|ts|astro)$/.test(filePath);
       const tokenRatio = isCode ? 3 : 4;
-      
+
       return Math.ceil(content.length / tokenRatio);
     } catch (error) {
       return 0;
@@ -220,19 +219,19 @@ class TokenCounter {
    */
   getTokenStatus(tokens, type) {
     switch (type) {
-      case 'instructions':
-        if (tokens > this.limits.criticalThreshold) return 'KRITISCH';
-        if (tokens > this.limits.warningThreshold) return 'WARNUNG';
-        return 'OK';
-      
-      case 'tools':
-        if (tokens > 2000) return 'ZU_GROSS';
-        if (tokens > 1000) return 'KOMPLEX';
-        return 'OK';
-      
+      case "instructions":
+        if (tokens > this.limits.criticalThreshold) return "KRITISCH";
+        if (tokens > this.limits.warningThreshold) return "WARNUNG";
+        return "OK";
+
+      case "tools":
+        if (tokens > 2000) return "ZU_GROSS";
+        if (tokens > 1000) return "KOMPLEX";
+        return "OK";
+
       default:
-        if (tokens > 1000) return 'GROSS';
-        return 'OK';
+        if (tokens > 1000) return "GROSS";
+        return "OK";
     }
   }
 
@@ -241,8 +240,12 @@ class TokenCounter {
    */
   generateTokenReport() {
     // Kritische Dateien identifizieren
-    this.tokenResults.criticalFiles = Object.entries(this.tokenResults.fileTokens)
-      .filter(([_, data]) => data.status === 'KRITISCH' || data.status === 'ZU_GROSS')
+    this.tokenResults.criticalFiles = Object.entries(
+      this.tokenResults.fileTokens
+    )
+      .filter(
+        ([_, data]) => data.status === "KRITISCH" || data.status === "ZU_GROSS"
+      )
       .map(([file, data]) => ({ file, ...data }));
 
     // Empfehlungen generieren
@@ -253,10 +256,10 @@ class TokenCounter {
         totalTokens: this.tokenResults.totalTokens,
         fileCount: Object.keys(this.tokenResults.fileTokens).length,
         criticalFiles: this.tokenResults.criticalFiles.length,
-        status: this.getOverallStatus()
+        status: this.getOverallStatus(),
       },
       details: this.tokenResults,
-      recommendations: this.tokenResults.recommendations
+      recommendations: this.tokenResults.recommendations,
     };
   }
 
@@ -266,17 +269,17 @@ class TokenCounter {
   generateRecommendations() {
     if (this.tokenResults.totalTokens > this.limits.contextWindow * 0.8) {
       this.tokenResults.recommendations.push({
-        priority: 'KRITISCH',
-        action: 'Sofortige Modularisierung erforderlich',
-        reason: `Gesamt-Tokens (${this.tokenResults.totalTokens}) nähern sich Context-Limit`
+        priority: "KRITISCH",
+        action: "Sofortige Modularisierung erforderlich",
+        reason: `Gesamt-Tokens (${this.tokenResults.totalTokens}) nähern sich Context-Limit`,
       });
     }
 
-    this.tokenResults.criticalFiles.forEach(file => {
+    this.tokenResults.criticalFiles.forEach((file) => {
       this.tokenResults.recommendations.push({
-        priority: 'HOCH',
+        priority: "HOCH",
         action: `Datei modularisieren: ${file.file}`,
-        reason: `${file.tokens} Tokens (Status: ${file.status})`
+        reason: `${file.tokens} Tokens (Status: ${file.status})`,
       });
     });
   }
@@ -286,10 +289,10 @@ class TokenCounter {
    */
   getOverallStatus() {
     const totalTokens = this.tokenResults.totalTokens;
-    
-    if (totalTokens > this.limits.criticalThreshold) return 'KRITISCH';
-    if (totalTokens > this.limits.warningThreshold) return 'WARNUNG';
-    return 'OK';
+
+    if (totalTokens > this.limits.criticalThreshold) return "KRITISCH";
+    if (totalTokens > this.limits.warningThreshold) return "WARNUNG";
+    return "OK";
   }
 }
 
@@ -299,15 +302,16 @@ module.exports = TokenCounter;
 // CLI-Ausführung
 if (require.main === module) {
   const projectRoot = process.argv[2] || process.cwd();
-  
+
   const counter = new TokenCounter();
-  counter.analyzeTokens(projectRoot)
-    .then(report => {
-      console.log('\n🔢 TOKEN-ANALYSE ABGESCHLOSSEN:\n');
+  counter
+    .analyzeTokens(projectRoot)
+    .then((report) => {
+      console.log("\n🔢 TOKEN-ANALYSE ABGESCHLOSSEN:\n");
       console.log(JSON.stringify(report, null, 2));
     })
-    .catch(error => {
-      console.error('❌ Token-Analyse Fehler:', error);
+    .catch((error) => {
+      console.error("❌ Token-Analyse Fehler:", error);
       process.exit(1);
     });
 }

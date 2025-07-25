@@ -25,6 +25,7 @@ INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
 ### **AUTOMATISCHE INSTRUCTION-VERBESSERUNG:**
 
 **WENN SIMON FEHLER KRITISIERT:**
+
 1. SOFORT Wurzel-Ursache in Instructions identifizieren
 2. NEUE REGEL zur Fehlervermeidung implementieren
 3. Instructions automatisch erweitern
@@ -34,6 +35,7 @@ INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
 ### **SELBST-KORREKTUR-ZWANG:**
 
 **BEI SIMON'S KRITIK:**
+
 1. FEHLER-PATTERN analysieren
 2. INSTRUCTION-LÜCKE identifizieren
 3. SOFORT Regel-Verbesserung implementieren
