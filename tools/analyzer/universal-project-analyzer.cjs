@@ -591,19 +591,24 @@ class UniversalProjectAnalyzer {
 
   /**
    * 🚫 Dateien/Verzeichnisse ignorieren
+   * ERWEITERTE TABU-LISTE für simon-recht Projekt
    */
   shouldIgnore(name) {
     const ignorePatterns = [
       /^\.git/,
       /^\.vscode/,
+      /^\.astro/,        // 🚨 SIMON'S TABU: Astro Build-Cache
       /^node_modules/,
       /^\.next/,
       /^dist/,
       /^build/,
+      /^\.cache/,        // 🚨 CACHE-VERZEICHNISSE 
       /\.log$/,
       /\.tmp$/,
       /^\.DS_Store$/,
       /^Thumbs\.db$/,
+      /package-lock\.json$/,  // 🚨 LOCK-FILES
+      /yarn\.lock$/,
     ];
 
     return ignorePatterns.some((pattern) => pattern.test(name));

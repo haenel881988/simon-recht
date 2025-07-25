@@ -125,6 +125,7 @@ class StructureOptimizerV2 {
 
   /**
    * 🚶 SCHNELLER VERZEICHNIS-DURCHLAUF (mit Tiefenbegrenzung)
+   * 🚨 SIMON'S TABU-VERZEICHNISSE: .astro, .vscode, node_modules
    */
   async quickWalk(dir, files, depth) {
     if (depth > 10) return; // Tiefenbegrenzung gegen Endlosschleifen
@@ -133,9 +134,9 @@ class StructureOptimizerV2 {
       const entries = await fs.readdir(dir, { withFileTypes: true });
 
       for (const entry of entries) {
-        if (entry.name.startsWith(".") && entry.name !== ".github") continue;
-        if (entry.name === "node_modules") continue;
-
+        // 🚨 SIMON'S ERWEITERTE TABU-LISTE
+        if (this.shouldIgnoreDirectory(entry.name)) continue;
+        
         const fullPath = path.join(dir, entry.name);
 
         if (entry.isDirectory()) {
@@ -147,6 +148,26 @@ class StructureOptimizerV2 {
     } catch (error) {
       // Verzeichnis nicht zugänglich - überspringen
     }
+  }
+
+  /**
+   * 🚫 SIMON'S TABU-VERZEICHNISSE (ABSOLUTES VERBOT)
+   */
+  shouldIgnoreDirectory(name) {
+    const SIMON_TABU_DIRS = [
+      '.astro',         // 🚨 Astro Build-Cache  
+      '.vscode',        // 🚨 VS Code Settings
+      'node_modules',   // 🚨 NPM Dependencies
+      '.git',           // Git Repository
+      'dist',           // Build Output
+      'build',          // Build Output
+      '.next',          // Next.js Cache
+      '.cache',         // Generic Cache
+    ];
+
+    // Exakte Übereinstimmung ODER Pattern-Match
+    return SIMON_TABU_DIRS.includes(name) || 
+           name.startsWith('.') && name !== '.github';
   }
 
   /**
