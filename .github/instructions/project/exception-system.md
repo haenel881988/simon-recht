@@ -6,8 +6,25 @@
 - Fehlende/unklare Anweisungen
 - Korrupte Dateien
 - Unklare User-Anfragen
-- Token-Overflow-Risiko
+- Token-Overflow-Risiko (>4800 Tokens)
 - Layout-Zerstörungs-Gefahr
+- **Datei >1200 Zeilen ohne Modularisierung**
+- **Bulk-Replace-Versuche (ABSOLUT VERBOTEN)**
+- **Validierung fehlgeschlagen**
+
+## **🔒 ZWINGENDER VALIDIERUNGS-WORKFLOW:**
+
+### **VOR JEDER OPERATION (NICHT UMGEHBAR):**
+1. **PRE-VALIDATION:** Target-Existenz, Permissions, Dependencies prüfen
+2. **BACKUP-CHECK:** Kritische Dateien automatisch sichern
+3. **TOKEN-LIMIT-CHECK:** Datei-Größe validieren (max 1200 Zeilen)
+4. **OPERATION-TYPE-CHECK:** Keine verbotenen Bulk-Operationen
+
+### **NACH JEDER OPERATION (ZWINGEND):**
+1. **RESULT-VALIDATION:** Ergebnis-Integrität prüfen
+2. **CONSISTENCY-CHECK:** Projekt-Kohärenz validieren
+3. **BUILD-VALIDATION:** Astro-Build funktioniert noch
+4. **CROSS-REFERENCE-CHECK:** Alle Links/Dependencies intakt
 
 ## **EXCEPTION-FORMAT:**
 
@@ -27,10 +44,12 @@ BLOCKIERT: [Welche Arbeit blockiert ist]
 ### **ZWINGENDER TIEFENANALYSE-WORKFLOW VOR JEDER AUSSAGE:**
 
 1. **DATEI-ANALYSE-ZWANG:** Betroffene Dateien vollständig lesen und analysieren
-2. **CODE-VERIFIKATION:** Exakte Zeilen-Referenzen für jede Behauptung
+2. **CODE-VERIFIKATION:** Exakte Zeilen-Referenzen für jede Behauptung  
 3. **BEWEIS-PFLICHT:** Jede technische Aussage durch Analyse belegen
 4. **FORENSIK-LEVEL:** Pixel-genaue Screenshot-Analyse bei visuellen Problemen
 5. **VERIFIZIERTE FAKTEN:** Nur 100% belegte Informationen verwenden
+6. **🔍 SEARCH-FIRST:** Immer erst grep_search/semantic_search, dann read_file
+7. **❌ REPLACE-VERBOT:** NIEMALS bulk_replace, search_and_replace, mass_edit
 
 ### **VERBOTENE VERMUTUNGS-PATTERN:**
 
