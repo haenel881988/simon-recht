@@ -91,11 +91,65 @@ const AUTO_FORBIDDEN_PATTERNS = [
 ### **🔢 1200-ZEILEN-REGEL (ENTERPRISE-STANDARD):**
 
 ```javascript
+// 📊 SIMON'S TOKEN-OPTIMIERTE DATEIGROSSEN (WISSENSCHAFTLICH BASIERT)
+const FILE_SIZE_LIMITS = {
+  OPTIMAL_READ: 800,      // KI kann perfekt verarbeiten
+  WARNING_ZONE: 1000,     // Noch gut lesbar, aber Vorsicht
+  CRITICAL_LIMIT: 1200,   // Absolute Obergrenze für Einzeldateien
+  EMERGENCY_BREAK: 1500   // Sofortige Modularisierung zwingend
+};
+
 // Automatische Modularisierung bei Überschreitung
-if (fileLines > 1200) {
-  // Datei in Unter-Scopes aufteilen
-  createSubModules(file, maxLines: 800);
-  warnUser(`File ${file} exceeds 1200 lines - auto-modularization required`);
+if (fileLines > CRITICAL_LIMIT) {
+  createSubModules(file, maxLines: OPTIMAL_READ);
+  warnUser(`🚨 ${file} exceeds ${CRITICAL_LIMIT} lines - auto-modularization REQUIRED`);
+}
+
+// Präventive Warnung
+if (fileLines > WARNING_ZONE) {
+  warnUser(`⚠️ ${file}: ${fileLines} lines approaching limit - consider splitting`);
+}
+```
+
+### **🔍 SEARCH-ERLAUBT / REPLACE-VERBOTEN REGEL:**
+
+```javascript
+// ✅ ERLAUBTE OPERATIONEN
+const ALLOWED_OPERATIONS = [
+  'grep_search',          // Suchen in Dateien
+  'semantic_search',      // Semantische Suche  
+  'file_search',          // Datei-Pattern-Suche
+  'read_file',           // Dateien lesen
+  'list_dir',            // Verzeichnisse auflisten
+];
+
+// ❌ VERBOTENE BULK-OPERATIONEN
+const FORBIDDEN_OPERATIONS = [
+  'bulk_replace',         // 🚨 NIEMALS Bulk-Replacements
+  'mass_file_edit',       // 🚨 NIEMALS Mass-Edits
+  'auto_refactor',        // 🚨 NIEMALS Auto-Refactoring
+  'search_and_replace',   // 🚨 NIEMALS Search & Replace
+];
+```
+
+### **🔒 ZWINGENDER VALIDIERUNGS-PROTOKOLL:**
+
+```javascript
+// JEDE OPERATION MUSS VALIDIERT WERDEN
+function mandatoryValidation(operation, target) {
+  // 1. PRE-VALIDATION (vor Aktion)
+  validatePreConditions(operation, target);
+  
+  // 2. EXECUTE mit Monitoring
+  const result = executeWithLogging(operation, target);
+  
+  // 3. POST-VALIDATION (nach Aktion)  
+  validatePostConditions(result, target);
+  
+  // 4. CONSISTENCY-CHECK (Konsistenz prüfen)
+  enforceConsistencyCheck(target);
+  
+  return result;
 }
 ```
 
