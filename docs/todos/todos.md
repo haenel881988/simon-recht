@@ -1,3 +1,27 @@
+# Ideen / Brainstorming von Simon
+
+Hinweis für die KI: Bitte diesen Abschnitt / Scope mit mir besprechend bevor umgesetzt wird, danke
+
+Vielleicht das analyse-tool entsprechend erweitern, dass es zu jedem Punkt eines bereiches, eine IST- SOLL Zustand bewertung macht, inkl. einer SMART Analyse.
+Dabei wäre es evtl. Sinnvoll, die Ergebnisse in einer Datenbank zu speichern, um sie für zukünftige Analysen und Vergleiche nutzen zu können. Die Datenbank darf ruhig auch historische Daten speichern.
+Dabei ist die Frage, ob wir auf Vercel / oder eine lokale Datenbank setzen sollen.
+Bitte all diese Punkte evtl. entsprechend priorisieren.
+Prioriät hat der Ausbau der Website, bzw. die Struktur gemäss den Dateien:
+docs\todos\todos.md
+docs\todos\verhaltensprobleme.md
+docs\instructions\modell_protokolle\github_copilot_instructions.md
+docs\instructions\modell_protokolle\recherche_chatgpt_agent.md
+
+Dabei bitte ich dich, das Tool entsprechend iterativ zu trainieren.
+Auch muss das Analyse-Tool modularisiert werden.
+Es dürfen 1000 Zeilen pro Datei nicht überschritten werden.
+Das Analyse tool soll auch sämtliche Abhängigkeiten, verlinkungen etc. analysieren.
+Jede Inkonsistenz soll vom Tool geprüft werden. Ausserdem muss das Tool entsprechend Rücksicht auf die CPU Auslastung genommen werden. Keine Parallele Ausführungen, sondern eine Ausführung nach der anderen. Auch soll das Tool sämtliche Dateien auflisten sowie redundante Dateien.
+Wenn möglich das Projekt visualisiert werden,z.B.: mit einer html datei, wo ich dann z.B.: selber einfache änderungen vornehmen kann, z.B.: löschen von redundanten / leeren Dateien.
+Dabei sollen die Verzeichnisse und Dateien mit einem Ampel-System daher kommen.
+
+Was denkst du? Danke
+
 # 🎯 SIMO✅ **ARCHITEKTUR-PROBLEM BEHOBEN (24.07.2025 14:35)**
 
 **KRITISCHER ARCHITEKTURFEHLER GELÖST:**
@@ -71,20 +95,49 @@ SyntaxError: Invalid or unexpected token
 
 ### **🚨 NÄCHSTE KRITISCHE SCHRITTE (HEUTE)**
 
+**🤖 UNIVERSELLES PROJEKT-ANALYSE-SYSTEM (REVOLUTIONÄRE NEUERUNG):**
+
+- [ ] 25.07.2025 [ANALYZER] **Master-Inventarisierungs-Tool entwickeln:** Vollautomatisches Projekt-Scanning mit Datei/Zeilen/Wörter-Zählung, Bereichs-Erkennung, Überlappungs-Analyse
+- [ ] 25.07.2025 [ANALYZER] **Scope-Auto-Detection-Engine:** KI-Tool identifiziert automatisch alle Bereiche (CSS, SEO, CONTENT, INSTRUCTIONS, etc.) und deren Überschneidungen
+- [ ] 25.07.2025 [ANALYZER] **Token-optimierte Arbeitslogik:** Bereiche getrennt analysieren, nur bei kritischen Überlappungen (CSS-Kontrast→SEO) zusammenführen
+- [ ] 25.07.2025 [ANALYZER] **Modularisierungs-Advisor:** Tool empfiehlt Verzeichnis-Umstrukturierung für cleane Scope-Trennung
+- [ ] 25.07.2025 [CHECKER] **Build-Checker Integration:** Analyzer erweitert bestehenden Multi-Scope-Checker um Inventarisierungs-Features
+
+**📋 KI-BLINDHEITS-ERKENNUNGS-SYSTEM (HÖCHSTE PRIORITÄT):**
+
+- [x] 25.07.2025 [RESEARCH] GitHub Copilot Protokoll implementiert: ✅ ERLEDIGT - Vollständiges Protokoll mit 128k Token-Management, KI-Blindheits-Prevention, Recovery-Strategien
+- [ ] 25.07.2025 [INSTRUCTIONS] KI-Blindheits-Exception-System implementieren: Token-Limits vor jeder Datei-Analyse prüfen, bei >80% Auslastung Exception werfen statt halluzinieren
+- [ ] 25.07.2025 [INSTRUCTIONS] Modell-Identifikation und Token-Limit-Transparenz: GitHub Copilot Modell-Details in Instructions dokumentieren (basierend auf Copilot-Protokoll)
+- [ ] 25.07.2025 [INSTRUCTIONS] Blindheits-Protokollierung einführen: Jeden Kontextüberlauf in `docs/change_management/history/blindheitsprotokoll_YYYY-MM-DD.md` dokumentieren
+- [ ] 25.07.2025 [INSTRUCTIONS] Präventive Token-Schätzung: Vor read_file Operationen Dateigröße × 4 (geschätzte Token) gegen Kontextlimit prüfen
+- [ ] 25.07.2025 [INSTRUCTIONS] Blindheits-Exception-Format definieren: Standardisierte Exception-Nachricht bei Kontextüberschreitung mit Alternativen-Vorschlag
+
 **📋 BASIEREND AUF VERHALTENSANALYSE (docs/todos/verhaltensprobleme.md):**
 
-- [ ] 24.07.2025 [INSTRUCTIONS] Instructions-Fundament bereinigen: Falsche Pfade korrigieren (docs/ideen/ → archiv/), Widersprüche auflösen, redundante Regeln entfernen
-- [ ] 24.07.2025 [INSTRUCTIONS] Scope-Struktur einführen: INSTRUCTIONS_SCOPE_SYSTEM v2.0 umsetzen, alle Anweisungen thematisch kategorisieren
-- [ ] 24.07.2025 [VSCODE] VS Code Konfiguration komplettieren: github.copilot.chat.templateFiles um ALLE relevanten MD-Dateien erweitern
-- [ ] 24.07.2025 [CHECKER] CSS-Deep-Analysis erweitern: Von 4 auf 10+ Tests für 95/100 Score
-- [ ] 24.07.2025 [INSTRUCTIONS] Anti-Oberflächlichkeits-Zwangssystem verstärken: Vollständigkeits-Check vor jeder Antwort implementieren
-- [ ] 24.07.2025 [CONTENT] Blog-Content erstellen: Von 1 auf 5+ Blogs für SEO-Momentum
-- [ ] 24.07.2025 [DASHBOARD] Live-Dashboard API-Endpoints implementieren
-- [ ] 24.07.2025 [DOCS] Änderungsprotokoll SMART-Dokumentation erstellen
+- [ ] 25.07.2025 [INSTRUCTIONS] Instructions-Fundament bereinigen: Falsche Pfade korrigieren (docs/ideen/ → archiv/), Widersprüche auflösen, redundante Regeln entfernen
+- [ ] 25.07.2025 [INSTRUCTIONS] Scope-Struktur einführen: INSTRUCTIONS_SCOPE_SYSTEM v2.0 umsetzen, alle Anweisungen thematisch kategorisieren
+- [ ] 25.07.2025 [VSCODE] VS Code Konfiguration komplettieren: github.copilot.chat.templateFiles um ALLE relevanten MD-Dateien erweitern
+- [ ] 25.07.2025 [CHECKER] CSS-Deep-Analysis erweitern: Von 4 auf 10+ Tests für 95/100 Score
+- [ ] 25.07.2025 [INSTRUCTIONS] Anti-Oberflächlichkeits-Zwangssystem verstärken: Vollständigkeits-Check vor jeder Antwort implementieren
+- [ ] 25.07.2025 [CONTENT] Blog-Content erstellen: Von 1 auf 5+ Blogs für SEO-Momentum
+- [ ] 25.07.2025 [DASHBOARD] Live-Dashboard API-Endpoints implementieren
+- [ ] 25.07.2025 [DOCS] Änderungsprotokoll SMART-Dokumentation erstellen
 
 ---
 
 ## 🟡 **WICHTIGE TODOs (DIESE WOCHE)**
+
+**📋 KI-BLINDHEITS-SYSTEM VOLLINTEGRATION:**
+
+- [ ] 26.07.2025 [INSTRUCTIONS] Modell-spezifisches Protokoll-System erstellen: `docs/instructions/modell_protokolle/` Verzeichnis anlegen mit individuellen Protokollen pro KI-Modell
+- [ ] 26.07.2025 [RESEARCH] GitHub Copilot Token-Limits recherchieren: Manuelle Recherche zu Kontextlänge, Input/Output-Limits, Reasoning-Token-Verbrauch
+- [ ] 26.07.2025 [INSTRUCTIONS] GitHub Copilot Protokoll implementieren: `github_copilot_protokoll.md` mit Token-Limits, Blindheits-Triggern, Exception-Verhalten
+- [ ] 27.07.2025 [RESEARCH] Alternative Modelle dokumentieren: GPT-4, Claude, Gemini Token-Limits für zukünftige Verwendung recherchieren
+- [ ] 27.07.2025 [INSTRUCTIONS] Modell-Auto-Erkennung implementieren: KI erkennt automatisch eigenes Modell und lädt entsprechendes Protokoll
+- [ ] 27.07.2025 [INSTRUCTIONS] Intelligente Datei-Segmentierung implementieren: Bei >50KB Dateien automatisch in 20KB Chunks aufteilen, sequenzielle Analyse statt Volltext-Überlastung
+- [ ] 28.07.2025 [INSTRUCTIONS] Präventive Dateigröße-Warnung: Bei Dateien >30KB automatische Warnung ausgeben und Alternativen vorschlagen (read_file mit offset/limit)
+- [ ] 29.07.2025 [INSTRUCTIONS] Blindheits-Dashboard erstellen: Wöchentliche Statistiken über Kontextüberläufe, häufigste Blindheits-Trigger, Verbesserungsempfehlungen
+- [ ] 30.07.2025 [VALIDATION] Blindheits-Simulationstests: Künstlich große Dateien erstellen und Exception-System validieren
 
 **📋 VERHALTENSVERBESSERUNGEN (MITTELFRISTIG):**
 

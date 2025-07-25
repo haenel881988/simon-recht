@@ -1,15 +1,15 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 25.7.2025, 10:11:34
+**Generiert:** 25.7.2025, 10:10:25
 **Projekt:** simon-recht
-**Gesamt-Health-Score:** 70/100
+**Gesamt-Health-Score:** 53/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 5479ms
+- **Ausführungszeit:** 5384ms
 - **Scopes getestet:** 5
-- **Gesamt-Issues:** 11
-- **Kritische Issues:** 0
+- **Gesamt-Issues:** 12
+- **Kritische Issues:** 1
 - **Wichtige Issues:** 1
 - **Optimierungen:** 0
 
@@ -17,7 +17,7 @@
 
 **Health Score:** 90/100
 **Status:** success
-**Ausführungszeit:** 12ms
+**Ausführungszeit:** 11ms
 **Issues:** 6
 
 ### 📈 Metriken
@@ -91,7 +91,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 2514ms
+**Ausführungszeit:** 2803ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -117,17 +117,17 @@
 
 ## 🎯 INVENTORY-Scope
 
-**Health Score:** 70/100
+**Health Score:** 55/100
 **Status:** success
-**Ausführungszeit:** 57ms
+**Ausführungszeit:** 26ms
 **Issues:** 0
 
 ### 📈 Metriken
 
 - **inventoryScriptExists:** true
-- **inventoryAge:** 1
-- **inventoryOutdated:** false
-- **updateDuration:** 31
+- **inventoryAge:** 891
+- **inventoryOutdated:** true
+- **updateDuration:** 20
 - **inventoryUpdated:** true
 - **usedFallback:** true
 - **scanDataSaved:** true
@@ -138,10 +138,15 @@
 
 ## 🎯 ANALYZER-Scope
 
-**Health Score:** 20/100
-**Status:** success
-**Ausführungszeit:** 290ms
-**Issues:** 0
+**Health Score:** 0/100
+**Status:** error
+**Ausführungszeit:** 0ms
+**Issues:** 1
+
+### 🚨 Issues
+
+1. 🚨 **CRITICAL:** Scope-Ausführungsfehler: scopeInstance.run is not a function
+   - **Datei:** system
 
 ---
 

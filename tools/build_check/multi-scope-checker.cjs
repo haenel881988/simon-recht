@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * 🚀 SIMON'S REVOLUTIONÄRER MULTI-SCOPE BUILD-CHECKER v5.1
+ * 🚀 SIMON'S REVOLUTIONÄRER MULTI-SCOPE BUILD-CHECKER v5.2
  *
  * 🎯 SCOPE-BASIERTE ARCHITEKTUR:
  * ✅ CSS-Scope: Design & Kontrast-Spezialist
  * ✅ SEO-Scope: Content & Authentizitäts-Spezialist
  * ✅ VS Code-Scope: TypeScript & Linting-Spezialist
+ * ✅ ANALYZER-Scope: Universelle Projekt-Inventarisierung (NEU!)
  * ✅ A11Y-Scope: Accessibility-Experte (Coming Soon)
  * ✅ ESLint-Scope: Code-Qualitäts-Inspektor (Coming Soon)
  * ✅ Media-Scope: Bilder & Videos-Validator (Coming Soon)
@@ -19,6 +20,7 @@
  * ✅ Detaillierte Metriken pro Scope
  * ✅ AUTOMATISCHE LOG-ARCHIVIERUNG (5-Minuten-Regel)
  * ✅ REAL-TIME DASHBOARD SUPPORT
+ * 🤖 UNIVERSELLES PROJEKT-ANALYSE-SYSTEM Integration
  */
 
 const BaseChecker = require("./core/base-checker.cjs");
@@ -26,6 +28,7 @@ const CSSScope = require("./scopes/css-scope.cjs");
 const SEOScope = require("./scopes/seo-scope.cjs");
 const VSCodeScope = require("./scopes/vscode-scope.cjs");
 const InventoryScope = require("./scopes/inventory-scope.cjs");
+const UniversalProjectAnalyzer = require("../analyzer/universal-project-analyzer.cjs");
 const path = require("path");
 const fs = require("fs").promises;
 
@@ -55,6 +58,51 @@ class MultiScopeBuildChecker extends BaseChecker {
       "inventory",
       () => new InventoryScope(this.projectRoot)
     );
+
+    // 🤖 NEUER ANALYZER-SCOPE - Universelle Projekt-Analyse
+    const projectRoot = this.projectRoot; // Capture for closure
+    this.availableScopes.set("analyzer", () => ({
+      name: "ANALYZER",
+      description: "Universelle Projekt-Inventarisierung & Scope-Analyse",
+      async run() {
+        console.log("\n🤖 ANALYZER-SCOPE: Universelle Projekt-Analyse...");
+
+        const analyzer = new UniversalProjectAnalyzer(projectRoot);
+        const reportPath = await analyzer.analyzeProject();
+
+        // Build-Checker kompatibles Ergebnis zurückgeben
+        const totalTokens = Array.from(analyzer.stats.scopes.values()).reduce(
+          (sum, data) => sum + data.totalTokens,
+          0
+        );
+
+        const healthScore =
+          totalTokens > 128000
+            ? Math.max(20, 100 - Math.floor((totalTokens - 128000) / 1000))
+            : Math.min(100, 80 + Math.floor((128000 - totalTokens) / 5000));
+
+        return {
+          scope: "ANALYZER",
+          healthScore,
+          criticalIssues: analyzer.stats.modularizationSuggestions.filter(
+            (s) => s.priority === "CRITICAL"
+          ).length,
+          warnings: analyzer.stats.modularizationSuggestions.filter(
+            (s) => s.priority !== "CRITICAL"
+          ).length,
+          details: {
+            totalFiles: analyzer.stats.totalFiles,
+            totalTokens,
+            scopesDetected: analyzer.stats.scopes.size,
+            overlaps: analyzer.stats.overlaps.length,
+            reportPath,
+          },
+          recommendations: analyzer.stats.modularizationSuggestions.map(
+            (s) => `[${s.priority}] ${s.reason} → ${s.action}`
+          ),
+        };
+      },
+    }));
 
     // Zukünftige Scopes (Coming Soon)
     // this.availableScopes.set('a11y', () => new A11YScope(this.projectRoot));
