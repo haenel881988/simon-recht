@@ -597,17 +597,17 @@ class UniversalProjectAnalyzer {
     const ignorePatterns = [
       /^\.git/,
       /^\.vscode/,
-      /^\.astro/,        // 🚨 SIMON'S TABU: Astro Build-Cache
+      /^\.astro/, // 🚨 SIMON'S TABU: Astro Build-Cache
       /^node_modules/,
       /^\.next/,
       /^dist/,
       /^build/,
-      /^\.cache/,        // 🚨 CACHE-VERZEICHNISSE 
+      /^\.cache/, // 🚨 CACHE-VERZEICHNISSE
       /\.log$/,
       /\.tmp$/,
       /^\.DS_Store$/,
       /^Thumbs\.db$/,
-      /package-lock\.json$/,  // 🚨 LOCK-FILES
+      /package-lock\.json$/, // 🚨 LOCK-FILES
       /yarn\.lock$/,
     ];
 

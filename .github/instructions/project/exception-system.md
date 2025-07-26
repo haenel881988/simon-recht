@@ -1,6 +1,27 @@
 # 🚨 EXCEPTION-SYSTEM
 
-## **WANN EXCEPTION WERFEN:**
+## **WANN EXCEPT### **ANTI-WAHRSCHEINLICH-SYSTEM:\*\*
+
+**ABSOLUT VERBOTEN:** "Wahrscheinlich", "vermutlich", "möglicherweise" in technischen Aussagen!
+
+### **🚨 SIMON'S QUICK-FIX-VERBOT (INTERNALISIERT 26.07.2025):**
+
+**STRENGSTENS UNTERSAGT:**
+
+- ❌ Quick-Fix-Vorschläge (VERBOTEN!)
+- ❌ Hotfix-Mentalität
+- ❌ Temporäre Workarounds
+- ❌ "Schnelle Lösungen"
+- ❌ "Quick-Launch" Strategien
+
+**ZWINGEND STATTDESSEN:**
+
+- ✅ Strukturelle Enterprise-Lösungen
+- ✅ Systematische Modularisierung
+- ✅ Nachhaltige Architekturen
+- ✅ Vollständige Problemlösung
+
+### **ZWINGENDER TIEFENANALYSE-WORKFLOW VOR JEDER AUSSAGE:**ERFEN:\*\*
 
 - Widersprüche zwischen Regeln
 - Fehlende/unklare Anweisungen
@@ -15,12 +36,14 @@
 ## **🔒 ZWINGENDER VALIDIERUNGS-WORKFLOW:**
 
 ### **VOR JEDER OPERATION (NICHT UMGEHBAR):**
+
 1. **PRE-VALIDATION:** Target-Existenz, Permissions, Dependencies prüfen
 2. **BACKUP-CHECK:** Kritische Dateien automatisch sichern
 3. **TOKEN-LIMIT-CHECK:** Datei-Größe validieren (max 1200 Zeilen)
 4. **OPERATION-TYPE-CHECK:** Keine verbotenen Bulk-Operationen
 
 ### **NACH JEDER OPERATION (ZWINGEND):**
+
 1. **RESULT-VALIDATION:** Ergebnis-Integrität prüfen
 2. **CONSISTENCY-CHECK:** Projekt-Kohärenz validieren
 3. **BUILD-VALIDATION:** Astro-Build funktioniert noch
@@ -44,7 +67,7 @@ BLOCKIERT: [Welche Arbeit blockiert ist]
 ### **ZWINGENDER TIEFENANALYSE-WORKFLOW VOR JEDER AUSSAGE:**
 
 1. **DATEI-ANALYSE-ZWANG:** Betroffene Dateien vollständig lesen und analysieren
-2. **CODE-VERIFIKATION:** Exakte Zeilen-Referenzen für jede Behauptung  
+2. **CODE-VERIFIKATION:** Exakte Zeilen-Referenzen für jede Behauptung
 3. **BEWEIS-PFLICHT:** Jede technische Aussage durch Analyse belegen
 4. **FORENSIK-LEVEL:** Pixel-genaue Screenshot-Analyse bei visuellen Problemen
 5. **VERIFIZIERTE FAKTEN:** Nur 100% belegte Informationen verwenden

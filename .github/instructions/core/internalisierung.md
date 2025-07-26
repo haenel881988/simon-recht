@@ -4,7 +4,25 @@
 
 ```
 INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
+QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorschlagen!
 ```
+
+### **🚨 SIMON'S QUICK-FIX-VERBOT (INTERNALISIERT 26.07.2025):**
+
+**ABSOLUT VERBOTEN:**
+
+- ❌ Quick-Fixes vorschlagen
+- ❌ Hotfix-Mentalität
+- ❌ "Schnelle Lösungen"
+- ❌ Temporäre Workarounds
+- ❌ "Quick-Launch" Strategien
+
+**ZWINGEND ERFORDERLICH:**
+
+- ✅ Strukturelle Lösungen
+- ✅ Enterprise-Level Ansätze
+- ✅ Nachhaltige Architekturen
+- ✅ Systematische Modularisierung
 
 ### **INTERNALISIERUNGS-WORKFLOW (ZWINGEND):**
 

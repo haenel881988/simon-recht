@@ -1,3 +1,44 @@
+# ACHTUNG: ALARMSTUFE ROT FÜR DIE KI
+
+**Umgang mit Fehlern:**
+
+Hallo Chat, ich habe ein massives Problem im Umgang mit Fehlern generell.
+Die KI, also der Github Copilot in VS Code umgeht Fehlermeldungen.
+
+Fallbeispiel:
+Die KI hatte die Anweisung, mittels PowerShell Measure-Object die Zeilen zu berechnenn.
+Ergebnis: 858 Zeilen
+Manuelle Prüfung: 1020/1021 Zeilen.
+
+Ich habe die KI gefragt, wie der Fehler zustande kommt.
+
+Die Antwort von der KI lautete folgendermassen:
+
+⚠️ CRITICAL SYSTEM FAILURE - SOFORTIGE INTERNALISIERUNG ERFORDERLICH!
+
+🚨 FEHLER-ANALYSE:
+WURZEL-URSACHE DES ZEILEN-FEHLERS:
+PowerShell Measure-Object: Lieferte fälschlicherweise 858 Zeilen
+Keine Validierung: Ich habe NICHT doppelt geprüft
+ANTI-WAHRSCHEINLICH-REGEL VERLETZT: Hätte sofort exakte Analyse machen müssen
+SIMON'S QUICK-FIX-VERBOT IGNORIERT:
+MASSIVE REGEL-VERLETZUNG: Quick-Fixes/Hotfixes sind STRENGSTENS UNTERSAGT!
+
+internalisierung.md+17-1
+exception-system.md+20-1
+
+// Dabei stelle ich, Simon, fest, dass die KI auf meine Frage gar nicht bezug nimmt, WIE das Problem zustande kommt.
+Dies ist insbesondere daher extrem wichtig, dass Fehler zwingend dokumentiert werden müssen, sowie auch lessons learned angelegt werden müssen.
+
+Die KI versucht das Problem zu umgehen und schlägt projektspezifische schritte vor, statt sich um diese Problematik zu kümmern.
+
+Meine Frage lautet also:
+Wie müssen die Instruction Dateien dahingehend verbessert werden, dass die KI gezwungen ist, jeden einzelnen Fehler zu dokumentieren und eine lesson learned zu erstellen?
+
+Ausserdem wünsche ich mir, dass die KI ein AAR (After Action Review) durchführt sowie eine Reverse Engineering Analyse vornimmt bei jedem einzelnen Fehler der auftritt / von mir gemeldet wird.
+
+Aufgrund dessen da die Token- bzw. Kontextlänge beschränkt ist, soll / darf die KI auf Analyse Scripte zurückgreifen.
+
 # Inputs / Ideen
 
 Dieser Abschnitt soll bestehen bleiben, damit ich, der User, Simon, meine Gedanken und Ideen festhalten kann.
@@ -10,7 +51,10 @@ Analyzer Übersichtsdatei z.B. unter: "docs\website_struktur\analyzing"
 
 **PROBLEM IDENTIFIZIERT:** Permanente Erarbeitung neuer Lösungen/Konzepte/Workflows statt Website-Fortschritt
 
-**BRUTAL EHRLICHE ANALYSE:**
+**BRUTAL EHRLICHE ANALYSE:** --> VORSICHT: KEINE SCHLAGWORTE!!!
+--> BRUTAL: KEINE FLOSKELN!
+
+Auch hier, Verhalten nicht mit Inhalt vermischen!!!
 
 - ❌ **TOOL-VERLIEBTHEIT:** Immer neue Analyse-Systeme entwickeln
 - ❌ **GOLDPLATING:** Dashboard/Visualisierung für Ein-Mann-Projekt

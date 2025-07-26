@@ -72,19 +72,19 @@ content.completed → strategy.canPlan
 ```javascript
 // NIEMALS DIESE VERZEICHNISSE ANALYSIEREN:
 const FORBIDDEN_DIRS = [
-  '.astro',         // Astro Build-Cache
-  '.vscode',        // VS Code Settings
-  'node_modules',   // NPM Dependencies
-  'dist',           // Build Output
-  '.git'            // Git Repository Data
+  ".astro", // Astro Build-Cache
+  ".vscode", // VS Code Settings
+  "node_modules", // NPM Dependencies
+  "dist", // Build Output
+  ".git", // Git Repository Data
 ];
 
 // AUTO-DETECTION für neue Installations-Verzeichnisse
 const AUTO_FORBIDDEN_PATTERNS = [
-  /^\./,            // Alle Hidden Directories
-  /node_modules/,   // Package Manager
-  /build|dist/,     // Build Outputs
-  /cache/,          // Cache Directories
+  /^\./, // Alle Hidden Directories
+  /node_modules/, // Package Manager
+  /build|dist/, // Build Outputs
+  /cache/, // Cache Directories
 ];
 ```
 
@@ -116,19 +116,19 @@ if (fileLines > WARNING_ZONE) {
 ```javascript
 // ✅ ERLAUBTE OPERATIONEN
 const ALLOWED_OPERATIONS = [
-  'grep_search',          // Suchen in Dateien
-  'semantic_search',      // Semantische Suche  
-  'file_search',          // Datei-Pattern-Suche
-  'read_file',           // Dateien lesen
-  'list_dir',            // Verzeichnisse auflisten
+  "grep_search", // Suchen in Dateien
+  "semantic_search", // Semantische Suche
+  "file_search", // Datei-Pattern-Suche
+  "read_file", // Dateien lesen
+  "list_dir", // Verzeichnisse auflisten
 ];
 
 // ❌ VERBOTENE BULK-OPERATIONEN
 const FORBIDDEN_OPERATIONS = [
-  'bulk_replace',         // 🚨 NIEMALS Bulk-Replacements
-  'mass_file_edit',       // 🚨 NIEMALS Mass-Edits
-  'auto_refactor',        // 🚨 NIEMALS Auto-Refactoring
-  'search_and_replace',   // 🚨 NIEMALS Search & Replace
+  "bulk_replace", // 🚨 NIEMALS Bulk-Replacements
+  "mass_file_edit", // 🚨 NIEMALS Mass-Edits
+  "auto_refactor", // 🚨 NIEMALS Auto-Refactoring
+  "search_and_replace", // 🚨 NIEMALS Search & Replace
 ];
 ```
 
@@ -139,16 +139,16 @@ const FORBIDDEN_OPERATIONS = [
 function mandatoryValidation(operation, target) {
   // 1. PRE-VALIDATION (vor Aktion)
   validatePreConditions(operation, target);
-  
+
   // 2. EXECUTE mit Monitoring
   const result = executeWithLogging(operation, target);
-  
-  // 3. POST-VALIDATION (nach Aktion)  
+
+  // 3. POST-VALIDATION (nach Aktion)
   validatePostConditions(result, target);
-  
+
   // 4. CONSISTENCY-CHECK (Konsistenz prüfen)
   enforceConsistencyCheck(target);
-  
+
   return result;
 }
 ```

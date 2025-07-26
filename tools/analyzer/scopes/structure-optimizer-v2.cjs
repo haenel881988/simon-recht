@@ -136,7 +136,7 @@ class StructureOptimizerV2 {
       for (const entry of entries) {
         // 🚨 SIMON'S ERWEITERTE TABU-LISTE
         if (this.shouldIgnoreDirectory(entry.name)) continue;
-        
+
         const fullPath = path.join(dir, entry.name);
 
         if (entry.isDirectory()) {
@@ -155,19 +155,21 @@ class StructureOptimizerV2 {
    */
   shouldIgnoreDirectory(name) {
     const SIMON_TABU_DIRS = [
-      '.astro',         // 🚨 Astro Build-Cache  
-      '.vscode',        // 🚨 VS Code Settings
-      'node_modules',   // 🚨 NPM Dependencies
-      '.git',           // Git Repository
-      'dist',           // Build Output
-      'build',          // Build Output
-      '.next',          // Next.js Cache
-      '.cache',         // Generic Cache
+      ".astro", // 🚨 Astro Build-Cache
+      ".vscode", // 🚨 VS Code Settings
+      "node_modules", // 🚨 NPM Dependencies
+      ".git", // Git Repository
+      "dist", // Build Output
+      "build", // Build Output
+      ".next", // Next.js Cache
+      ".cache", // Generic Cache
     ];
 
     // Exakte Übereinstimmung ODER Pattern-Match
-    return SIMON_TABU_DIRS.includes(name) || 
-           name.startsWith('.') && name !== '.github';
+    return (
+      SIMON_TABU_DIRS.includes(name) ||
+      (name.startsWith(".") && name !== ".github")
+    );
   }
 
   /**

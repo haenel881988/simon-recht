@@ -16,22 +16,26 @@ const WARNING_THRESHOLD = 1000;
 ## 🚨 **AUTOMATISCHE ÜBERWACHUNG:**
 
 ### **ALLE ANALYZER/TOOLS MÜSSEN PRÜFEN:**
+
 - [ ] universal-project-analyzer.cjs
-- [ ] structure-optimizer-v2.cjs  
+- [ ] structure-optimizer-v2.cjs
 - [ ] contradiction-scanner.cjs
 - [ ] master-analyzer.cjs
 - [ ] build-checker Scripts
 
 ### **AUTO-MODULARISIERUNG BEI ÜBERSCHREITUNG:**
+
 ```javascript
 function enforceLineLimits(filePath) {
-  const lines = fs.readFileSync(filePath, 'utf8').split('\n').length;
-  
+  const lines = fs.readFileSync(filePath, "utf8").split("\n").length;
+
   if (lines > MAX_LINES_PER_FILE) {
-    console.warn(`🚨 ${filePath}: ${lines} Zeilen > ${MAX_LINES_PER_FILE} Limit!`);
+    console.warn(
+      `🚨 ${filePath}: ${lines} Zeilen > ${MAX_LINES_PER_FILE} Limit!`
+    );
     suggestModularization(filePath);
   }
-  
+
   if (lines > WARNING_THRESHOLD) {
     console.warn(`⚠️ ${filePath}: ${lines} Zeilen nähert sich Limit`);
   }
@@ -43,26 +47,27 @@ function enforceLineLimits(filePath) {
 ## 🚫 **SIMON'S TABU-VERZEICHNISSE (FINAL)**
 
 ### **ABSOLUTES VERBOT FÜR ALLE TOOLS:**
+
 ```javascript
 const SIMON_TABU_DIRS = [
-  '.astro',         // Astro Build-Cache
-  '.vscode',        // VS Code Settings  
-  'node_modules',   // NPM Dependencies
-  '.git',           // Git Repository
-  'dist',           // Build Output
-  'build',          // Build Output
-  '.next',          // Next.js Cache
-  '.cache',         // Generic Cache
-  '.temp',          // Temporary Files
-  '.tmp',           // Temporary Files
+  ".astro", // Astro Build-Cache
+  ".vscode", // VS Code Settings
+  "node_modules", // NPM Dependencies
+  ".git", // Git Repository
+  "dist", // Build Output
+  "build", // Build Output
+  ".next", // Next.js Cache
+  ".cache", // Generic Cache
+  ".temp", // Temporary Files
+  ".tmp", // Temporary Files
 ];
 
 // AUTOMATISCHE ERKENNUNG NEUER INSTALLATIONS-VERZEICHNISSE
 const AUTO_TABU_PATTERNS = [
-  /^\..*cache/i,    // Alle Cache-Verzeichnisse
-  /^\..*temp/i,     // Alle Temp-Verzeichnisse  
-  /node_modules/,   // Package Manager
-  /build|dist/,     // Build Outputs
+  /^\..*cache/i, // Alle Cache-Verzeichnisse
+  /^\..*temp/i, // Alle Temp-Verzeichnisse
+  /node_modules/, // Package Manager
+  /build|dist/, // Build Outputs
 ];
 ```
 
@@ -71,13 +76,15 @@ const AUTO_TABU_PATTERNS = [
 ## ✅ **VALIDATION-PROTOCOL:**
 
 ### **JEDER ANALYZER MUSS:**
+
 1. ✅ Tabu-Verzeichnisse ausschließen
-2. ✅ 1200-Zeilen-Regel überwachen  
+2. ✅ 1200-Zeilen-Regel überwachen
 3. ✅ Automatische Modularisierung vorschlagen
 4. ✅ Token-optimierte Verarbeitung
 5. ✅ Enterprise-Level Logging
 
 ### **REGELMÄSSIGE AUDITS:**
+
 - [ ] Wöchentliche Zeilen-Zählung aller Tools
 - [ ] Automatische Tabu-Verzeichnis-Erkennung
 - [ ] Performance-Monitoring der Analyzer
