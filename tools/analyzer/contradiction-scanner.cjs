@@ -37,7 +37,7 @@ class ContradictionScanner {
       "docs/todos/**/*.md",
     ];
 
-    // Häufige Widerspruchs-Pattern
+    // UNIVERSELLE Widerspruchs-Pattern (erweitert für ALLE Konflikte)
     this.contradictionPatterns = [
       {
         pattern1: /ABSOLUT VERBOTEN.*search/i,
@@ -53,6 +53,58 @@ class ContradictionScanner {
         pattern1: /NUR WEBSITE-ARBEIT/i,
         pattern2: /dashboard|analyse.*system|modularisierung/i,
         description: "Website-Fokus vs. Tool-Features",
+      },
+      // ZAHLEN-WIDERSPRÜCHE (wie 1200/1000-Zeilen)
+      {
+        pattern1: /1200.*Zeilen.*(?:global|regel)/i,
+        pattern2: /1000.*Zeilen.*(?:regel|limit)/i,
+        description: "Zeilenlimit-Konflikt: 1200 vs 1000 Zeilen",
+        severity: "CRITICAL",
+        autoFix: "Global-Regel (1200) sollte lokale Regeln überschreiben",
+      },
+      // TOOL-NUTZUNGS-WIDERSPRÜCHE
+      {
+        pattern1: /replace_string_in_file.*VERBOTEN/i,
+        pattern2: /replace_string_in_file\(/i,
+        description: "Tool-Verbot vs. Tool-Nutzung",
+        severity: "HIGH",
+      },
+      // SCOPE-WIDERSPRÜCHE
+      {
+        pattern1: /SEPARATE.*SCOPES/i,
+        pattern2: /KOMBINIERT.*erlaubt/i,
+        description: "Scope-Isolation vs. Scope-Kombination",
+        severity: "MEDIUM",
+      },
+      // TOKEN-WIDERSPRÜCHE
+      {
+        pattern1: /(\d+)k?\s*Token.*Limit/i,
+        pattern2: /(\d+)k?\s*Token.*Limit/i,
+        description: "Unterschiedliche Token-Limits definiert",
+        severity: "HIGH",
+        customCheck: this.checkTokenLimitConflicts.bind(this),
+      },
+      // PRIORITÄTS-WIDERSPRÜCHE
+      {
+        pattern1: /KRITISCH|CRITICAL|HÖCHSTE PRIORITÄT/i,
+        pattern2: /KRITISCH|CRITICAL|HÖCHSTE PRIORITÄT/i,
+        description: "Multiple kritische Prioritäten",
+        severity: "MEDIUM",
+        customCheck: this.checkMultipleCriticalPriorities.bind(this),
+      },
+      // SPRACH-WIDERSPRÜCHE
+      {
+        pattern1: /DU-Form.*zwingend/i,
+        pattern2: /SIE-Form|Sie\s+(?:sind|haben|können)/i,
+        description: "Du-Form vs. Sie-Form Konflikt",
+        severity: "LOW",
+      },
+      // WORKFLOW-WIDERSPRÜCHE
+      {
+        pattern1: /ZWINGEND.*(?:vor|nach)/i,
+        pattern2: /OPTIONAL|kann.*übersprungen/i,
+        description: "Zwingender vs. optionaler Workflow",
+        severity: "HIGH",
       },
     ];
   }
@@ -188,17 +240,41 @@ class ContradictionScanner {
 
         // Pattern-basierte Widerspruchs-Suche
         for (const contradiction of this.contradictionPatterns) {
+          // Standard Pattern-Matching
           const match1 = content.match(contradiction.pattern1);
           const match2 = content.match(contradiction.pattern2);
 
           if (match1 && match2) {
-            this.results.contradictions.push({
-              file: filePath,
-              description: contradiction.description,
-              evidence1: match1[0],
-              evidence2: match2[0],
-              severity: "HIGH",
-            });
+            // Custom Check falls definiert
+            if (contradiction.customCheck) {
+              const customResult = contradiction.customCheck(
+                content,
+                match1,
+                match2,
+                filePath
+              );
+              if (customResult) {
+                this.results.contradictions.push({
+                  file: filePath,
+                  description: contradiction.description,
+                  evidence1: match1[0],
+                  evidence2: match2[0],
+                  severity: contradiction.severity || "HIGH",
+                  autoFix: contradiction.autoFix || null,
+                  customDetails: customResult,
+                });
+              }
+            } else {
+              // Standard Widerspruch
+              this.results.contradictions.push({
+                file: filePath,
+                description: contradiction.description,
+                evidence1: match1[0],
+                evidence2: match2[0],
+                severity: contradiction.severity || "HIGH",
+                autoFix: contradiction.autoFix || null,
+              });
+            }
           }
         }
       } catch (error) {
@@ -255,7 +331,60 @@ class ContradictionScanner {
   }
 
   /**
-   * 📊 RECOMMENDATIONS GENERIEREN
+   * � CUSTOM CHECK: Token-Limit-Konflikte
+   */
+  checkTokenLimitConflicts(content, match1, match2, filePath) {
+    const tokenLimits = [];
+    const tokenPattern = /(\d+)k?\s*Token.*(?:Limit|limit)/gi;
+    let match;
+
+    while ((match = tokenPattern.exec(content)) !== null) {
+      const tokenValue = parseInt(match[1]);
+      const isKilo = match[0].includes("k");
+      const actualTokens = isKilo ? tokenValue * 1000 : tokenValue;
+
+      tokenLimits.push({
+        value: actualTokens,
+        text: match[0],
+        position: match.index,
+      });
+    }
+
+    // Prüfe auf unterschiedliche Token-Limits
+    const uniqueLimits = [...new Set(tokenLimits.map((t) => t.value))];
+    if (uniqueLimits.length > 1) {
+      return {
+        conflictingLimits: uniqueLimits,
+        recommendation: `Unify token limits. Suggested: ${Math.max(
+          ...uniqueLimits
+        )} tokens`,
+        evidence: tokenLimits.map((t) => t.text),
+      };
+    }
+
+    return null;
+  }
+
+  /**
+   * 🎯 CUSTOM CHECK: Multiple kritische Prioritäten
+   */
+  checkMultipleCriticalPriorities(content, match1, match2, filePath) {
+    const criticalMatches =
+      content.match(/(?:KRITISCH|CRITICAL|HÖCHSTE PRIORITÄT)/gi) || [];
+
+    if (criticalMatches.length > 3) {
+      return {
+        criticalCount: criticalMatches.length,
+        recommendation: "Reduce critical priorities - max 3 per document",
+        suggestion: "Use HIGH/MEDIUM for less critical items",
+      };
+    }
+
+    return null;
+  }
+
+  /**
+   * �📊 RECOMMENDATIONS GENERIEREN
    */
   generateRecommendations() {
     const total =
@@ -339,6 +468,33 @@ class ContradictionScanner {
     console.log(`🚨 Kritische Issues: ${criticalIssues}`);
     console.log(`⚠️ Gesamt-Issues: ${totalIssues}`);
     console.log(`📋 Empfehlungen: ${this.results.recommendations.length}`);
+
+    // ERWEITERTE EXCEPTION-AUSGABE für KI
+    if (criticalIssues > 0) {
+      console.log("\n" + "🚨".repeat(20));
+      console.log("❌ CRITICAL EXCEPTIONS DETECTED ❌");
+      console.log("🚨".repeat(20));
+
+      this.results.contradictions
+        .filter((c) => c.severity === "CRITICAL")
+        .forEach((contradiction, index) => {
+          console.log(`\n🔥 EXCEPTION ${index + 1}:`);
+          console.log(`📁 File: ${contradiction.file}`);
+          console.log(`⚔️ Conflict: ${contradiction.description}`);
+          console.log(`📝 Evidence 1: "${contradiction.evidence1}"`);
+          console.log(`📝 Evidence 2: "${contradiction.evidence2}"`);
+          if (contradiction.autoFix) {
+            console.log(`🔧 Suggested Fix: ${contradiction.autoFix}`);
+          }
+          console.log(
+            `❓ USER ACTION REQUIRED: Please clarify which rule should take precedence.`
+          );
+        });
+
+      console.log("\n" + "🚨".repeat(20));
+      console.log("⚠️ KI: STOP WORK UNTIL CONFLICTS RESOLVED!");
+      console.log("🚨".repeat(20));
+    }
 
     if (criticalIssues === 0) {
       console.log("✅ KI KANN SICHER ARBEITEN!");

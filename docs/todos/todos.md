@@ -7,8 +7,8 @@ Dies ist um alles in der Welt zu verhindern und ist daher zwingend als höchste 
 **🔧 ZWINGENDER WORKFLOW VOR JEDER ÄNDERUNG:**
 Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Analyzing tool durchführen. Das Analyzing-Tool, muss für jede Datei, die exakte Zeilenzahl evaluieren und identifizieren.
 
-**📏 1000-ZEILEN-REGEL (UNUMSTÖSSLICH):**
-Wenn 1000 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
+**📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG):**
+Wenn 1200 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
 Wenn der Code betroffen ist, müssen sämtliche Abhängigkeiten berücksichtigt und angepasst werden.
 
 **🔍 ANALYZER-ENTWICKLUNG (KRITISCH):**
@@ -45,8 +45,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 ### **2. KRITISCHE ISSUES MIGRATION (AUS ISSUES.MD)**
 
 - [ ] **[HEUTE]** CSS-Architektur-Verletzungen beheben
-  - [ ] 304+ Tailwind Classes in beweise.astro migrieren
-  - [ ] Systematische Migration zu semantischen CSS-Klassen
+  - [x] ~~304+ Tailwind Classes in beweise.astro migrieren~~ **OBSOLET - Datei existiert nicht mehr**
+  - [ ] Systematische Migration zu semantischen CSS-Klassen in vorhandenen Dateien
   - [ ] 60/30/10 Design-Prinzip wiederherstellen
 - [ ] **[HEUTE]** Instructions-Pfade korrigieren
   - [ ] docs/projekt/ Verweise entfernen (existiert nicht)
@@ -74,14 +74,15 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **[HEUTE]** Auto-Kategorisierung von TODOs aktivieren
 - [ ] **[HEUTE]** Context-Handoff-System etablieren
 
-### **5. SEPARATE TODO-DATEIEN BEREINIGUNG**
+### **5. SEPARATE TODO-DATEIEN BEREINIGUNG ✅ ABGESCHLOSSEN**
 
-- [x] **[VALIDIERT]** issues.md (90 Zeilen) → MIGRIERT
-- [x] **[VALIDIERT]** 1200-zeilen-regel.md (95 Zeilen) → MIGRIERT
-- [x] **[VALIDIERT]** workflow-automation.md (159 Zeilen) → MIGRIERT
-- [x] **[VALIDIERT]** inhalt/content-todos.md (81 Zeilen) → MIGRIERT
-- [x] **[VALIDIERT]** tec/technische-todos.md (57 Zeilen) → MIGRIERT
-- [ ] **[HEUTE]** Veraltete Dateien nach Migration löschen
+**✅ ALLE DATEIEN ERFOLGREICH MIGRIERT UND GELÖSCHT:**
+
+- ✅ issues.md (90 Zeilen) → MIGRIERT & GELÖSCHT
+- ✅ 1200-zeilen-regel.md (95 Zeilen) → MIGRIERT & GELÖSCHT
+- ✅ workflow-automation.md (159 Zeilen) → MIGRIERT & GELÖSCHT
+- ✅ inhalt/content-todos.md (81 Zeilen) → MIGRIERT & GELÖSCHT
+- ✅ tec/technische-todos.md (57 Zeilen) → MIGRIERT & GELÖSCHT
 
 ### **6. CONTENT-PIPELINE MIGRATION (AUS INHALT/)**
 

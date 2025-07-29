@@ -387,18 +387,45 @@ class UniversalProjectAnalyzer {
   }
 
   /**
-   * � NEUE VERIFICATION-PHASE
+   * 🔍 PHASE 5: Analysis-Verification + Conflict-Detection
    */
   async performAnalysisVerification() {
     try {
+      // NEUE: Widerspruchs-Scanner Integration
+      const ContradictionScanner = require("./contradiction-scanner.cjs");
+      const SmartExceptionHandler = require("./modules/smart-exception-handler.cjs");
+
+      const scanner = new ContradictionScanner(this.projectRoot);
+      const contradictionResults = await scanner.scanProject();
+
+      // Bei kritischen Widersprüchen → Smart Exception werfen
+      if (contradictionResults.contradictions.length > 0) {
+        const exceptionHandler = new SmartExceptionHandler();
+        const exception = exceptionHandler.throwConflictException(
+          contradictionResults.contradictions
+        );
+
+        console.log(
+          "\n🚨 ANALYSE GESTOPPT - REGEL-KONFLIKTE MÜSSEN GELÖST WERDEN!"
+        );
+        return {
+          summary: {
+            validationStatus: "CONFLICT_DETECTED",
+            overallConfidence: 0,
+            conflicts: contradictionResults.contradictions,
+            exception: exception,
+          },
+        };
+      }
+
+      // Original Verification (wenn keine Konflikte)
       const AnalysisVerifier = require("./core/analysis-verifier.cjs");
       const verifier = new AnalysisVerifier();
 
-      // Aktuelle Analyse-Resultate als Objekt strukturieren
       const currentResults = {
         tokens: {
           summary: {
-            totalTokens: this.stats.totalWords * 1.3, // Token-Schätzung
+            totalTokens: this.stats.totalWords * 1.3,
             totalFiles: this.stats.totalFiles,
           },
         },
@@ -407,7 +434,6 @@ class UniversalProjectAnalyzer {
         modularization: this.stats.modularizationSuggestions,
       };
 
-      // Verification durchführen
       const verificationReport = await verifier.verifyAnalysisResults(
         this.projectRoot,
         currentResults

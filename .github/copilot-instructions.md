@@ -216,6 +216,7 @@ Diese Tools müssen hier in dieser Datei von der KI bei jedem neuen Chat geprüf
 ### **WICHTIG: Token-Überwachung verwenden**
 
 Die KI muss berücksichtigen, dass der Code nicht über 1200 Zeilen lang sein darf, ansonsten muss modularisiert werden.
+Diese Regel ist global gültig. Sollten Widersprüche auftreten, und in anderen Dateien etwas anderes stehen, so muss die KI dies eigenständig erkennen, und die entsprechenden Dateien deren Inhalt gemäss der globalen Regel überschreiben.
 
 ### **Automatische Token-Optimierung:**
 
