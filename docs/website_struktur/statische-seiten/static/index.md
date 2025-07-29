@@ -19,17 +19,22 @@ Bild: public\assets\images\simon_haenel_entschlossen.webp
 
 ---
 
-## **Proof of Concept** <!-- I - Interest -->
+## **1. Abschnitt: Proof of Concept** <!-- I - Interest -->
 
-### **Gerichtsurteil: Rechtskräftig bestätigt**
+### **Gerichtsurteil: BV.2024.00062 - Sozialversicherungsgericht des Kantons Zürichs\_**
 
 > **"Entsprechend ist nicht erwiesen, dass die Beschwerdeführerin eine Falschangabe begangen hat, die den Entscheid des Grosskonzernes rechtfertigen würde."**
->
-> _Gerichtsurteil: BV.2024.00062 - Sozialversicherungsgericht des Kantons Zürichs_
 
-**Mit Hunderten Stunden systematischer Eigenarbeit, KI-Unterstützung und unerschütterlichem Mindset habe ich einen Grosskonzern in die Schranken verwiesen. Als "Problemfall" mit ADHS, der sich von Kindheit an nie unterordnen wollte - genau das wurde zu meiner Stärke.**
+**Mit Hunderten Stunden systematischer Eigenarbeit, KI-Unterstützung und unerschütterlichem Mindset habe ich einen Grosskonzern in die Schranken verwiesen. Meine IV-Diagnose: Anpassungsstörung ist ein Segen. Niemals sich unterordnen, niemals auf andere hören, niemals sich untreu werden!**
 
----
+Erkenne, dass du Gott bist! Nicht umsonst steht: Ich bin dein Herr dein Gott. Wohlgemerkt, jede Affirmation beginnt mit _Ich bin_ an. Nur wer bereit ist, das Paradigma der Angst zu durchbrechen und hinter sich zu lassen, kann wahre Freiheit erlangen. Der wahre dschihad ist der innere Kampf gegen seine Komfortzone, gegen seine negativen Stimmen, gegen sein eigenes Ego.
+Jemand der behauptet, die Wahrheit für sich zu beanspruchen ist aus meiner Sicht nichts anderes als ein Hochstapler mit schizophrenen und narzistischen Zügen, geprägt von halluzinierenden Persönlichkeitsstörungen. Gilt auch für die Kirche und alle die am Sonntag in die Kirche rennen.
+
+Warum erzähle ich das? weil wenn du nicht bereit dich als das anzuerkennen was du wirklich bist, als inkarnierter, individueller Gott deines eigenen Lebens. Du musst bereit sein, veraltete Paradigmen / der Status Quo nicht nur zu hinterfragen, sondern auch durchbrechen zu können.
+Und dies ist nur möglich, wenn du selbstbewusst bist. Sonst hättest du ja die juristischen Fragen nicht, schlimmer, du verschenkst einem Rechtsverdreher mehrere tausend Franken, ohne Erfolgsgarantie.
+Mit der KI riskierst du höchstens 20.- CHF auszugeben, für eine fundierte Rechtsberatung. Und wie das geht, erkläre ich dir gerne.
+
+## Wenn du jetzt sagst, komm zum Punkt, dann bist du hier an der falschen Stelle. Informationen sind überall im Netz vorhanden. Aber die korrekte Verwendung der Informationen bedarf einer fundierten Analyse und Strategie.
 
 ## **Recht haben ist nicht gleich Recht bekommen!** <!-- D - Desire / Problem -->
 

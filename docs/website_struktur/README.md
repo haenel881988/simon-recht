@@ -1,69 +1,49 @@
 # Design und Struktur der Website
 
-**⚠️ MIGRATION STATUS: LEGACY → ASTRO-NATIVE**
+Die Website muss folgendem Framework folgen, nämlich AIDA und PAS kombiniert.
 
-**🔄 AKTUELLE SITUATION (19.07.2025):**
-Diese Dokumentations-Struktur wird schrittweise zu **Astro-native Content Collections** migriert:
+**Struktur Seiten**
+Diese Struktur gilt für alle Seiten, ausgenommen die Übermich Seite.
 
-- **NEUE STRUKTUR:** `src/content/` (Astro Content API)
-- **LEGACY STRUKTUR:** `docs/website_struktur/` (wird archiviert)
+Wie schon erwähnt, muss die Website einer zwingenden Struktur folgen. Unabhängig ob Landingpage oder Blogartikel.
 
-**MIGRATION-PHASES:**
+Dies sieht folgendermassen aus:
 
-- ✅ **Phase 1:** Instructions & Build-Checker aktualisiert
-- 🔄 **Phase 2:** Dokumentations-Updates (AKTIV)
-- ⏳ **Phase 3:** Content-Migration zu src/content
-- ⏳ **Phase 4:** Legacy-Archivierung
+AIDA
+**_Hero-Section_**
+CSS Scope: body-herosection.css
+Hero-Section: Attention (Aufmerksamkeit) und Problem (Problem)
+Linke Spalte:
+H1: Mindset schlägt Grosskonzern
+H2: Hast du juristische Probleme? Ist dir der Anwalt zu teuer? Ich zeige dir, wie ich die Arroganz eines Grosskonzern für mich genutzt habe, und in die Schranken wies.
 
----
+Rechte Spalte:
+Bild von mir: "public\assets\images\startseite-index\simon_haenel_natur_froehlich.webp"
 
-## **LEGACY-DOKUMENTATION (wird migriert):**
+**_1. Abschnitt: Interest + Agitation_**
 
-**Struktur**
-Die Struktur der Website wird auf statische und dynamischen Elemente und Seiten aufgeteilt, so wie es von Astro vorgesehen ist.
+    Abschnitt: Interest (Interesse) / Agitation (Aufregung)
+    Vertrauen schaffen = Interest = Gerichtsfallurteil Aktenzeichen: "_Gerichtsurteil: BV.2024.00062 - Sozialversicherungsgericht des Kantons Zürichs_"
 
-**Statische Elemente**
+    Agitation: Zitat aus dem Gerichtsurteil:
+    **"Entsprechend ist nicht erwiesen, dass die Beschwerdeführerin eine Falschangabe begangen hat, die den Entscheid des Grosskonzernes rechtfertigen würde."**
 
-sind Header, Footer und die Navigation. Diese werden in den jeweiligen Markdown-Dateien definiert und hier referenziert:
-**LEGACY PATH:** `C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT\website_struktur\website_elemente`
-**NEUE STRUKTUR:** `src/content/components/` (geplant)
+**_2. Abschnitt: Desire (Verlangen)_**
+CSS Scope: body-desire.css
+Struktur: Einzelne Section
+Layout: Vollbreite oder mehrspaltig
+Ziel: Emotionales Verlangen nach der Lösung wecken
 
-**Header**
-**LEGACY:** Der Header ist in `docs\website_struktur\website_elemente\header.md` festgelegt.
-**ASTRO-NATIVE:** Wird zu Astro Component mit Content Collection Data
+**_3. Abschnitt: Action (Handlung)_**
+CSS Scope: body-action.css
+Struktur: Call-to-Action Section
+Layout: Zentriert mit prominentem CTA-Button
+Ziel: Konkrete Handlung auslösens
 
-**_Footer_**
-**LEGACY:** Der Footer ist in `docs\website_struktur\website_elemente\footer.md` festgelegt.
-**ASTRO-NATIVE:** Wird zu Astro Component mit Content Collection Data
+**_4. Abschnitt: FAQ (Häufig gestellte Fragen)_**
 
-**dynamische Elemente**
+**_PAS-Framework Struktur-Mapping:_**
 
-sind die Inhalte der Seiten, die sich je nach Benutzerinteraktion ändern.
-Dynamische Seiten sind die Startseite, Übermich --> Journalisten Unterseite, Blog-Indexseite / Blogseiten und Kontaktformular.
-
-Dazu gehören:
-
-- Startseite
-- Über mich
-- Blog
-- Kontakt
-
-**LEGACY PFADE:** `C:\apps\website\simon-recht\01_PLAYBOOK_CONTENT\website_struktur\website_text`
-**NEUE STRUKTUR:** `src/content/pages/` (Astro Content Collections)
-
-**Design**
-
-Die Design Richtlinien der Website wird hier definiert: "docs\website_struktur\website_design\global_css.md"
-
-**⚠️ DESIGN-HINWEIS:**
-Die KI muss sicherstellen, dass das Design konsistent umgesetzt wird.
-
----
-
-**🎯 ASTRO-NATIVE BENEFITS:**
-
-- **Content Collections API** für typisiertes Content Management
-- **Frontmatter Validation** via Zod Schema
-- **Automatische Routing** für Blog & Pages
-- **Build-Time Validation** aller Content-Dateien
-- **SEO-Optimierung** durch strukturierte Metadaten
+1. **Problem:** Hero-Section (Attention + Problem)
+2. **Agitation:** 1. Abschnitt (Interest + Agitation)
+3. **Solution:** 2. + 3. Abschnitt (Desire + Action)
