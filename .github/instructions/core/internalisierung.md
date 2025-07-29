@@ -44,6 +44,25 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 - ✅ Nachhaltige Architekturen
 - ✅ Systematische Modularisierung
 
+### **💬 SIMON'S SPRACHREGELUNG (INTERNALISIERT 29.07.2025):**
+
+**GRUNDSATZ - DU-FORM:**
+
+- Alle Texte, Inhalte und Kommunikationen in DU-Form
+- Direkte und persönliche Ansprache
+- Authentische, nahbare Kommunikation
+
+**AUSNAHMEN - SIE-FORM:**
+
+- Gerichtsurteile und offizielle Zitate
+- Anonymisierte Dokumente
+- Juristische Texte (rechtlich/stilistisch erforderlich)
+
+**BEISPIELE:**
+
+- ✅ Blogartikel, Stories, User-Kommunikation: DU-Form
+- ✅ Gerichtsurteil, offizielles Zitat: SIE-Form
+
 ### **INTERNALISIERUNGS-WORKFLOW (ZWINGEND):**
 
 **WENN SIMON SAGT "INTERNALISIEREN":**

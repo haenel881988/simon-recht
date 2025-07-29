@@ -24,3 +24,32 @@
 2. **ERGÄNZEN:** Neue Ideen NACH den Original-Inhalten hinzufügen
 3. **KENNZEICHNEN:** Ergänzungen klar als solche markieren
 4. **SPRACHE:** Immer in Simon's Sprache (Deutsch) arbeiten
+
+### **📦 ORIGINAL-CONTENT ARCHIVIERUNG (ERWEITERT 29.07.2025):**
+
+**PHILOSOPHIE:** Original-Inhalte sind das wertvollste Asset - authentische Stimme, Gedankenfluss und Kreativität bewahren!
+
+**AUTOMATISCHE ARCHIVIERUNG - ZWINGEND:**
+
+1. **VOR JEDER BEARBEITUNG:**
+
+   - Original-Text vollständig in `docs/projekt/00_origin/` archivieren
+   - Namenskonvention: `{content-name}_original_{YYYY-MM-DD}.md`
+   - Vollständige Metadaten hinzufügen
+
+2. **METADATEN-PFLICHT:**
+
+```markdown
+**Datum:** {YYYY-MM-DD}
+**Erstellt von:** {Author}  
+**Status:** Original-Version, unbearbeitet
+**Quelle:** {source-path}
+**Wortanzahl:** {word-count}
+**Kernbotschaft:** {key-message}
+**Stil-Charakteristika:** {authentic-voice-traits}
+```
+
+3. **UNVERÄNDERLICHKEIT:**
+   - Original-Dateien NIEMALS überschreiben/löschen
+   - Bei neuen Versionen: Neue Original-Datei mit neuem Datum
+   - Jede Bearbeitung verweist auf entsprechende Original-Datei

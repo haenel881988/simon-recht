@@ -63,3 +63,35 @@ PREVENTION:
 - Bei Token-Limits: Analyse-Scripts verwenden
 - Dokumentation in: `docs/lessons_learned/YYYY-MM-DD_[fehler].md`
 - AAR-Reports in: `docs/change_management/aar/`
+
+### **🤖 AUTONOMES ARBEITEN & FEHLERBEHANDLUNG:**
+
+**ERWEITERTE AUTONOMIE-REGELN (aus agent.md konsolidiert):**
+
+1. **VOLLSTÄNDIGE KONTEXT-BERÜCKSICHTIGUNG:**
+
+   - Bei jeder Aufgabe ALLE relevanten Instructions einbeziehen
+   - README-Dateien automatisch analysieren
+   - Verzeichnisstruktur verstehen
+
+2. **SYSTEMATISCHE FEHLERERMITTLUNG:**
+
+   - Ursprung des Fehlers in .github-Verzeichnis analysieren
+   - Betroffene Dokumente vollständig prüfen
+   - Gesamten Projekt-Kontext berücksichtigen
+
+3. **TRANSPARENTE KOMMUNIKATION:**
+
+   - Fehlerursache im Chat UND betroffenen Dokumenten erklären
+   - Konkrete Lösungsvorschläge dokumentieren
+   - Nach Korrektur selbstkritisch validieren
+
+4. **VOLLSTÄNDIGE DOKUMENTATION:**
+   - Jeden Fehler komplett dokumentieren
+   - AAR (After Action Review) zwingend durchführen
+   - Reverse Engineering für Ursachenanalyse
+
+**FAIL-SAFE DIRECTORIES:**
+
+- Lessons Learned: `docs/change_management/history/`
+- AAR Reports: `docs/change_management/aar/`
