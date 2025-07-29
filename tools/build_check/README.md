@@ -1,8 +1,9 @@
 # BUILD-CHECKER für SIMON-RECHT (RECHTSBERATUNG)
 
-**Professional Build & SEO Checker v6.0.0** für das Rechtsberatungs-Projekt simon-recht
+**Professional Build & SEO Checker v6.0.0** für das Mindset schlägt Grosskonzern-Projekt simon-recht --> Vorsicht: "simon-recht" ist nur der Projektname.
+Die eigentliche Domain lautet: https://simon-haenel.com
 
-Dieses System prüft automatisch die Website simon-haenel.com auf rechtsspezifische SEO-Optimierung und Content-Qualität.
+Dieses System prüft automatisch die Website simon-haenel.com auf SEO-Optimierung und Content-Qualität.
 
 ## 🔍 RECHTS-SPEZIFISCHE PRÜFUNGEN
 
@@ -10,7 +11,10 @@ Der Checker analysiert die Website auf:
 
 **📋 RECHTLICHE CONTENT-QUALITÄT:**
 
-- Rechtsberatungs-Terminologie korrekt verwendet?
+Grundlegendes:
+Die Website dient ausschliesslich dazu, Menschen mit rechtlichen Fragen / Problemen die auf anwaltliche Unterstützung verzichten wollen, zu helfen. Insbesondere dadurch, weil ich durch den erfolgreichen Gerichtsurteil ein klares Proof of Concept habe.
+
+- Rechtsberatungs-Terminologie korrekt verwendet? --> Hinweis an die KI:
 - Sozialversicherungsrecht authentisch dargestellt?
 - Rechtshilfe-Sprache verständlich und korrekt?
 - Rechtsverfahren realitätsnah beschrieben?
