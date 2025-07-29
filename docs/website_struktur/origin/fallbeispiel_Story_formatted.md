@@ -7,7 +7,7 @@ Hier beginnst du deine Geschichte. Male ein Bild von der Ausgangslage. Wie hast 
 Mein Leben begann bei der Geburt nicht mit einem Schrei, sondern mit einer Stille. Die Nabelschnur schlang sich um mein zerbrechlichen Hals.
 Die Geburt war die Hölle, für meine Mutter, für mein Vater und mich.
 Mein Vater (RIP: 2007) war damals 1988 Chefarzt Gynäkologie im Spital Grenchen.
-Für alle beteiligten war es eine traumatische Geburt. Schon bei der Geburt konnte ich meine Persönlichkeit entfalten, die eines Kämpfers. Meine Mutter berichtete, dass solche Geburten 
+Für alle beteiligten war es eine traumatische Geburt. Schon bei der Geburt konnte ich meine Persönlichkeit entfalten, die eines Kämpfers. Meine Mutter berichtete, dass solche Geburten
 Ich wurde meiner Mutter für eine Woche entrissen - sie durfte mich auch nicht sehen. Mein Leben begann bereits mit einem Kampf, der sich wie eine Silberschnur durch mein Leben zog.
 Jede Mutter weiss, wie traumatisch es ist, wenn ihr das Kind für eine Woche entrissen wird, auch für das Kind.
 Bei den meisten Menschen führen diese nicht aufgearbeiteten Traumata zu einem Leben voller Ängste, Unsicherheiten und einem Gefühl der Ohnmacht. Doch für mich ist das heute eine riesenchance, nicht wegen der Geburt habe ich ADHS, einen leichten chronischen Tinnitus, erhalte mit 36 Jahren eine IV-Rente, sondern DANK meiner Mutter, meinem Vater und ihrem Einsatz der auf der bedingungslose Liebe basiert - mir ein Leben zu ermöglichen das ich durch den Schmerz, durch die Hölle, nich kaputt gehe, sondern mir hilft, mich verletzlich zu machen und es auch zu zeigen. Dies wiederum garantiert für eine durchwegs offene und fast obsessive radikale Entschlossenheit, meine Unzulänglichkeiten zu überwinden.
@@ -33,11 +33,13 @@ Beim Autofahren lernen haben wir gelernt, wie wichtig Achtsamkeit ist, wie wicht
 Das ist ein klarer Fall von einer durch-und-durch wiedersprüchlichen, narzisstischen und egoistischen Gesellschaft, die sich selbst belügt.
 
 
+
 **Beispiel:** "Der Brief lag auf meinem Tisch, und mit jedem Wort spürte ich, wie der Boden unter meinen Füssen nachgab. Eine riesige Versicherung teilte mir mit, dass meine Zukunft, für die ich jahrelang gearbeitet hatte, auf ein Minimum gekürzt wird. Ich war nur eine Nummer in ihren Akten, und ich fühlte mich komplett machtlos."
 
-Als dann meine 100% IV-Rente bewilligt wurde, kam der Grosskonzern dessen Pensionskasse und strich meine volle reglementarische Invalidenrente, weil sie der Meinung waren, ich hätte bei meinem Eintritt Gesundheitsfragen nicht korrekt beantwortet.
+Als dann meine 100% IV-Rente bewilligt wurde, kam der Grosskonzern dessen Pensionskasse und strich meine volle reglementarische Invalidenrente, weil sie der Meinung waren, ich hätte bei meinem Eintritt bei den  Gesundheitsfragen gelogen.
 Nun, mache mehrmaligem hin-und-her, beharrte die Pensionskasse darauf, ich hätte eine Anzeigepflichtverletzung begangen, was ich klar und eindeutig wiederlegen konnte.
-Im Prozess / selbst in der Klageantwort haben sie sich nicht einmal auf die offizielle IV-Verfügung und IV-Bericht bezogen, sondern nur auf klar selektierte Akten, die sie aus eigeninteresse extra so um-konstituert haben, zu rechtfertigen, dass sie mir die volle reglementarische BVG-Rente streichen konnten.
+
+Nichts desto trotz und selbst während dem Prozess, in der Klageantwort hielten sie an ihrer Feststellung fest, die IV-Akten wurden seitens der Pensionkasse schon gar nicht berücksichtigt. Sie hatten sich auf klar selektierte Akten, die sie aus eigeninteresse extra so um-konstituert haben, zu rechtfertigen, dass sie mir die volle reglementarische BVG-Rente streichen konnten.
 Dem Wiedersprach das Gericht im Gerichtsurteil vom 02.07.2025 und wies die Pensionskasse an, eine neuberechnung vorzunehmen und mir die volle reglementarische BVG-Rente zu bezahlen.
 Was mich noch nachdenklicher macht ist, dass die Pensionskassen sich einfach über medizinische Gutachten hinwegsetzen können, ohne dass es Konsequenzen hat.
 Ja sogar mit der Begründung, ich habe extra eine Anzeigepflichtverletzung begangen, sie unterstellten mir also, ich wäre ein Heuchler, ein Lügner, der absichtlich falsche Angaben gemacht hat, um sich Vorteile zu verschaffen.
@@ -126,16 +128,16 @@ Als ich ihr sagte, moment mal - ich zeige dir wie das funktioniert, weil sie ja 
 Als ich ihr sagte: "Der Desktop spiegelt dein innerer geistiger Zustand wieder" wurde sie übergriff und sagte tatsächlich: "Halt die Fre....Klappe du bist bei mir und ich du willst Geld verdienen, du bist der Depp."
 Ich erwiederte nur: "Meinst du, ich bin auf dein sch... Geld angewiesen? Was denkst du warum ich da bin? um dich abzuzocken? Meinst du ich will dein erbärmliches Geld womit du dich identifizierst? Nein, ich will dir helfen, ich will dir zeigen, wie du dein Laptop und Leben in den Griff bekommst."
 Dieser Moment, diese Erlösung, diese Erkenntnis, dass hätte ich eine Frau, hätte ich klein beigegeben, ich meine Frustration meiner Frau ausgelassen hätte - was ja gang und gäbe ist, Nein. Ich entschied mich, ihr knallhart die Wahrheit zu sagen.
-Das sie es Verstand, dass niemand ihr helfen möchte, nicht mal ihr Sohn. 
+Das sie es Verstand, dass niemand ihr helfen möchte, nicht mal ihr Sohn.
 Diese Frau ist ein Paradebeispiel für Menschen - die danach schreien abgezockt zu werden. Auch gab sie allen anderen die Schuld. als ich sie darauf verwies, dass es auf ihrem Unvermögen beruhte wurde sie ausfällig. Ich war und bin mit mir im reinen.
 Auch weiss ich, dass ich so meine Feinde im innen und aussen in die Schranken verweise, wenn sie ihre Grenzen überschreiten.
 Viel zu lange habe ich mich schikanieren lassen, viel zu lange ich mich diskriminieren, unterdrücken, auslachen lassen.
 Der Gerichtsfall dient auch als Mahnfall für alle Menschen, Institutionen, Firmen etc. die meinen, mit mir respektlos umgehen zu können.
-Ausserdem habe ich einen Sicherheitsraum geschaffen für mich geschaffen, wo ich mich nicht nur psychisch, juristisch, finanziell verteidigen kann, sondern auch physisch. Alleine wenn man Muskeln hat, und das kann ich durch div. Erfahrungen bestätigen - dass man viel mehr Respekt erhält, viel mehr Achtung, viel mehr Anerkennung. Ich bin Single und meine Traumfrau soll auch zudem Wissen, dass sie schwach sein darf, dass sie sich fallen lassen kann, dass sie sich nicht verstellen muss. Dass ich als einziger Typ sogar juristisch sie schützen kann. Meine liebsten dürfen meinen Präzedenzfall zeigen denn meine Mutter, Bruder, Stiefvater und Traumfrau, mein Sohn, gehören in meinen engsten Kreis. Das Gerichtsurteil beweist dass ich in der Lage bin, sogar juristisch gegen Pensionskassen, Grosskonzernen vorzugehen, die ihre eigenen Interesse höher gewichten als der Mensch. Eine Diskriminierung verstösst gegen das Grundgesetz. 
+Ausserdem habe ich einen Sicherheitsraum geschaffen für mich geschaffen, wo ich mich nicht nur psychisch, juristisch, finanziell verteidigen kann, sondern auch physisch. Alleine wenn man Muskeln hat, und das kann ich durch div. Erfahrungen bestätigen - dass man viel mehr Respekt erhält, viel mehr Achtung, viel mehr Anerkennung. Ich bin Single und meine Traumfrau soll auch zudem Wissen, dass sie schwach sein darf, dass sie sich fallen lassen kann, dass sie sich nicht verstellen muss. Dass ich als einziger Typ sogar juristisch sie schützen kann. Meine liebsten dürfen meinen Präzedenzfall zeigen denn meine Mutter, Bruder, Stiefvater und Traumfrau, mein Sohn, gehören in meinen engsten Kreis. Das Gerichtsurteil beweist dass ich in der Lage bin, sogar juristisch gegen Pensionskassen, Grosskonzernen vorzugehen, die ihre eigenen Interesse höher gewichten als der Mensch. Eine Diskriminierung verstösst gegen das Grundgesetz.
 
 Art. 7 BV - Menschenwürde: "Die Würde des Menschen ist zu achten und zu schützen."
-Die Pensionskasse hat durch ihre Verweigerung der BVG-Rente und die Unterstellung einer Anzeigepflichtverletzung meine Menschenwürde verletzt. Das Gericht bestätigte dies im Urteil vom 02.07.2025. 
-Auch wenn das Gericht gegenteiliges behauptet, so ist doch zutreffend, dass das Gericht schlussfolgert: 
+Die Pensionskasse hat durch ihre Verweigerung der BVG-Rente und die Unterstellung einer Anzeigepflichtverletzung meine Menschenwürde verletzt. Das Gericht bestätigte dies im Urteil vom 02.07.2025.
+Auch wenn das Gericht gegenteiliges behauptet, so ist doch zutreffend, dass das Gericht schlussfolgert:
 "Die Beschwerdeführerin hat nicht gegen ihre Anzeigepflicht verstossen, was die Pensionskasse zu Unrecht unterstellt hat."
 Somit wurde explizit Art. 7 BV verletzt.
 Zusätzlich relevant:
@@ -146,7 +148,7 @@ Ich weiss noch, als mir eine bekannte Person sagte:
 "Simon, Recht haben und Recht bekommen sind zwei verschiedene Dinge."
 Nun, dass diese Person völlig falsch lag, beweist das Gerichtsurteil mit der Aktennummer: BV.2024.00062 vom 02.07.2025.
 
-Und allen zu zeigen 
+Und allen zu zeigen
 
 Ich will somit alle betroffenen Menschen ermutigen, sich zu wehren, aufzustehen gegen diese korrupten, egoistischen und narzisstischen Grosskonzerne, die sich über Menschen stellen, die sie als Nummern in ihren Akten betrachten.
 Diese Willkür und diese Kalkül muss einhalt geboten werden.
@@ -155,11 +157,12 @@ Zu behaupten, es wäre zu wenig Geld da - Nein - es sind nicht die Reichen, es s
 Die reichen unter uns, die eine Firma besitzen, mit vielen Angestellten, die verantwortlich sind, die sollen und dürfen auch millionen verdienen, die einen Mehrwert für die Gesellschaft bieten. Diese Leistungsträger, diese Reichen Mensche müssen belohnt werden. Die Betrüger, die Heuchler, die sich auf Kosten anderer bereichern, die müssen bestraft werden. Und zwar knallhart, lebenslang in das Gefängnis, oder ins Exil, ausgeschafft, raus aus der Schweiz.
 Solche mutwillig böse Menschen, die sich auf Kosten anderer bereichern, die müssen bestraft werden.
 
-Ich habe es alleine mithilfe der KI geschafft, gegen eine Pensionskasse zu gewinnen, die sich über Menschen stellt, die sie als Nummern in ihren Akten betrachten. 
+Ich habe es alleine mithilfe der KI geschafft, gegen eine Pensionskasse zu gewinnen, die sich über Menschen stellt, die sie als Nummern in ihren Akten betrachten.
 
 Meine Fehler, meine Erkenntnisse, meine Learnings, halte ich alle in meinem Buch fest, das ich gerade schreibe.
 Der Buchtitel wird lauten: "Mindset schlägt Grosskonzern".
 Ich habe vergessen zu erwähnen, dass die KI ChatGPT (OpenAI) und Google Gemini mir geholfen hat, die Anklageschrift zu schreiben, das Replik auf die Klageantwort zu formulieren und schreiben auf Basis der Beweisen und Informationen.
+
 
 
 Das war der Wendepunkt, der Moment, in dem ich beschloss, dass ich nicht
@@ -182,10 +185,10 @@ Hier präsentierst du das Ergebnis. Beschreibe den Moment, als du das Urteil gel
 
 Fasse die wichtigsten Lektionen für deine Leser zusammen. Gib ihnen konkrete Ratschläge und Ermutigung mit auf den Weg.
 
-- Die Macht der Dokumentation.
-- Die Wichtigkeit, nicht aufzugeben.
-- Wie man sich mental auf einen langen Kampf vorbereitet.
-- Dass Gerechtigkeit möglich ist, auch gegen übermächtige Gegner.
+* Die Macht der Dokumentation.
+* Die Wichtigkeit, nicht aufzugeben.
+* Wie man sich mental auf einen langen Kampf vorbereitet.
+* Dass Gerechtigkeit möglich ist, auch gegen übermächtige Gegner.
 
 ## Der Beweis: Fakten und Transparenz
 
@@ -193,7 +196,8 @@ Schliesse deine Geschichte mit einem klaren Bekenntnis zur Transparenz ab.
 
 "Diese Geschichte ist meine persönliche Erfahrung, aber sie basiert auf nachprüfbaren Fakten. Um vollständige Transparenz zu gewährleisten, stelle ich hier alle relevanten Dokumente in anonymisierter Form zur Verfügung:
 
-- [Link] -> Das Gerichtsurteil einfach und verständlich erklärt
-- [Link] -> Das vollständige, anonymisierte Gerichtsurteil zum Nachlesen (19 Seiten)"
+* \[Link] -> Das Gerichtsurteil einfach und verständlich erklärt
+* \[Link] -> Das vollständige, anonymisierte Gerichtsurteil zum Nachlesen (19 Seiten)"
 
 Dieser Ansatz macht deine Geschichte nicht nur inspirierend, sondern auch absolut glaubwürdig.
+

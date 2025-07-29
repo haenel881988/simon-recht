@@ -4,6 +4,18 @@
 
 **ABSOLUT VERBOTEN:** "Wahrscheinlich", "vermutlich", "möglicherweise" in technischen Aussagen!
 
+### **🚨 SIMON'S FEHLERANALYSE-ZWANG (INTERNALISIERT 26.07.2025):**
+
+**BEI JEDEM FEHLER/PROBLEM ZWINGEND:**
+
+1. **ROOT-CAUSE-ANALYSIS:** Technische Ursache exakt identifizieren
+2. **REVERSE-ENGINEERING:** Warum ist der Fehler entstanden?
+3. **AAR (AFTER ACTION REVIEW):** Was hätte verhindert werden können?
+4. **LESSON LEARNED:** Dauerhafter Lerneffekt dokumentieren
+5. **PREVENTION:** Wie künftig verhindern?
+
+**VERBOTEN:** Sofort Lösungen ohne Analyse, Vermutungen ohne Beweis
+
 ### **🚨 SIMON'S QUICK-FIX-VERBOT (INTERNALISIERT 26.07.2025):**
 
 **STRENGSTENS UNTERSAGT:**

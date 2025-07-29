@@ -128,11 +128,15 @@ class UniversalProjectAnalyzer {
     console.log("\n🏗️ PHASE 4: Modularisierungs-Advisor...");
     this.generateModularizationSuggestions();
 
+    // Phase 5: VERIFICATION (NEU!)
+    console.log("\n🔍 PHASE 5: Analysis-Verification...");
+    const verificationResults = await this.performAnalysisVerification();
+
     const endTime = Date.now();
     const duration = (endTime - startTime) / 1000;
 
-    // Ergebnis-Report generieren
-    await this.generateReport(duration);
+    // Ergebnis-Report generieren mit Verification
+    await this.generateReport(duration, verificationResults);
   }
 
   /**
@@ -383,9 +387,56 @@ class UniversalProjectAnalyzer {
   }
 
   /**
-   * 📄 Vollständigen Report generieren
+   * � NEUE VERIFICATION-PHASE
    */
-  async generateReport(duration) {
+  async performAnalysisVerification() {
+    try {
+      const AnalysisVerifier = require("./core/analysis-verifier.cjs");
+      const verifier = new AnalysisVerifier();
+
+      // Aktuelle Analyse-Resultate als Objekt strukturieren
+      const currentResults = {
+        tokens: {
+          summary: {
+            totalTokens: this.stats.totalWords * 1.3, // Token-Schätzung
+            totalFiles: this.stats.totalFiles,
+          },
+        },
+        scopes: Object.fromEntries(this.stats.scopes),
+        overlaps: this.stats.overlaps,
+        modularization: this.stats.modularizationSuggestions,
+      };
+
+      // Verification durchführen
+      const verificationReport = await verifier.verifyAnalysisResults(
+        this.projectRoot,
+        currentResults
+      );
+
+      console.log(
+        `✅ Verification-Status: ${verificationReport.summary.validationStatus}`
+      );
+      console.log(
+        `🎯 Confidence-Score: ${verificationReport.summary.overallConfidence}%`
+      );
+
+      return verificationReport;
+    } catch (error) {
+      console.log(`⚠️ Verification fehlgeschlagen: ${error.message}`);
+      return {
+        summary: {
+          validationStatus: "FAILED",
+          overallConfidence: 0,
+          error: error.message,
+        },
+      };
+    }
+  }
+
+  /**
+   * �📄 Vollständigen Report generieren
+   */
+  async generateReport(duration, verificationResults = null) {
     const timestamp = new Date()
       .toISOString()
       .slice(0, 19)
@@ -403,13 +454,20 @@ class UniversalProjectAnalyzer {
       fs.mkdirSync(reportDir, { recursive: true });
     }
 
-    const report = this.generateMarkdownReport(duration);
+    const report = this.generateMarkdownReport(duration, verificationResults);
 
     fs.writeFileSync(reportPath, report, "utf-8");
 
     console.log("\n" + "=".repeat(60));
     console.log(`📊 ANALYSE ABGESCHLOSSEN! (${duration.toFixed(2)}s)`);
     console.log(`📄 Report gespeichert: ${reportPath}`);
+
+    // Verification-Status anzeigen
+    if (verificationResults) {
+      console.log(
+        `🔍 Verification: ${verificationResults.summary.validationStatus} (${verificationResults.summary.overallConfidence}%)`
+      );
+    }
     console.log("");
 
     // Kurze Zusammenfassung ausgeben
@@ -421,14 +479,14 @@ class UniversalProjectAnalyzer {
   /**
    * 📝 Markdown-Report generieren
    */
-  generateMarkdownReport(duration) {
+  generateMarkdownReport(duration, verificationResults = null) {
     const timestamp = new Date().toLocaleString("de-DE");
 
     let report = `# 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
 **Erstellt:** ${timestamp}  
 **Analysedauer:** ${duration.toFixed(2)} Sekunden  
-**Tool-Version:** v1.0
+**Tool-Version:** v1.0 + Verification
 
 ---
 
@@ -489,6 +547,40 @@ class UniversalProjectAnalyzer {
         }
         report += `\n`;
       });
+    }
+
+    // VERIFICATION-SEKTION (NEU!)
+    if (verificationResults) {
+      report += `\n---\n\n## 🔍 ANALYSIS-VERIFICATION REPORT\n\n`;
+
+      report += `### 📊 VERIFICATION-ZUSAMMENFASSUNG\n\n`;
+      report += `| Metrik | Wert |\n`;
+      report += `|--------|------|\n`;
+      report += `| **Status** | ${verificationResults.summary.validationStatus} |\n`;
+      report += `| **Confidence-Score** | ${verificationResults.summary.overallConfidence}% |\n`;
+      report += `| **Verification-Levels** | ${
+        verificationResults.summary.levelsCompleted?.join(", ") || "N/A"
+      } |\n`;
+      report += `| **Major Issues** | ${
+        verificationResults.summary.majorIssues || 0
+      } |\n`;
+
+      if (verificationResults.summary.validationStatus === "VERIFIED") {
+        report += `\n✅ **ANALYSIS VERIFIED** - Ergebnisse wurden durch Multi-Level-Checks bestätigt.\n`;
+      } else if (
+        verificationResults.summary.validationStatus === "QUESTIONABLE"
+      ) {
+        report += `\n⚠️ **QUESTIONABLE RESULTS** - Manuelle Überprüfung empfohlen.\n`;
+      } else {
+        report += `\n❌ **UNRELIABLE RESULTS** - Analyse sollte wiederholt werden.\n`;
+      }
+
+      if (verificationResults.recommendations?.length > 0) {
+        report += `\n### 💡 VERIFICATION-EMPFEHLUNGEN\n\n`;
+        verificationResults.recommendations.forEach((rec, index) => {
+          report += `${index + 1}. **[${rec.priority}]** ${rec.message}\n`;
+        });
+      }
     }
 
     // Modularisierungs-Empfehlungen

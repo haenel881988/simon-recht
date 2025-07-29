@@ -43,7 +43,27 @@ Aufgrund dessen da die Token- bzw. Kontextlänge beschränkt ist, soll / darf di
 
 Dieser Abschnitt soll bestehen bleiben, damit ich, der User, Simon, meine Gedanken und Ideen festhalten kann.
 
+**Analyzing**
 Analyzer Übersichtsdatei z.B. unter: "docs\website_struktur\analyzing"
+
+**Strukturelles**
+
+Was hältst du davon, wenn wir uns mal um die typographie kümmern, also mal die modularisierung vom CSS? z.B.: das CSS in unterverzeichnisse und unterdateien aufsplitten, z.B.: Verzeichnis: sry\styles\elemente\button.css, header-und-navigation.css, etc?
+
+Was ich mich gerade an dieser stelle frage ist, wenn du webentwickler wärst, was würdest du mir für den Body empfehlen, den body auch aufsplitten in: Hero-Section, erster Abschnitt, zweiter, usw.
+Oder was denkst du?
+Auch ist die frage, wie mit den Blogs umgehen, gleiche typograpie verwenden?
+Obwohl die blogs ja keine Hero-Section im Sinne der Landingpage haben.
+Oder sollen wir nach AIDA / PAS gehen?
+A = Hero-Section --> Attention / Hölle Prinzip
+I = erster Abschnitt --> Interest / PAS
+D = zweiter Abschnitt --> Desire / Solution / PAS
+A = dritter Abschnitt --> Action / Kontaktformular
+
+FAQ's abschnitt nach Action / Kontaktformular
+
+Was hältst du davon, wenn jede seite nach diesem Prinzip gebaut wird?
+Willst du mal
 
 # 🚨 ANTI-PROKRASTINATIONS-ALARM (25.07.2025)
 
