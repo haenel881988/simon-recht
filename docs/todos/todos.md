@@ -36,7 +36,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 - [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
 - [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
-- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "KRITISCH" ersetzen
+- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "Top-Priorität" ersetzen
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
@@ -50,7 +50,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 - [ ] **Aufgabe:** "hoch"-Überfüllung in todos.md reduzieren
 - [ ] **Kontext:** 7x "hoch" in docs/todos/todos.md - zu viele wichtige Einträge verwirren Prioritäten
-- [ ] **Ressourcen:** TODO-Liste durchgehen, nur 3 echte "KRITISCH" behalten, Rest umklassifizieren
+- [ ] **Ressourcen:** TODO-Liste durchgehen, nur 3 echte Top-Priorität behalten, Rest umklassifizieren
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI

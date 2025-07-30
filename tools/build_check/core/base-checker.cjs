@@ -15,6 +15,40 @@ const fs = require("fs").promises;
 const path = require("path");
 
 class BaseChecker {
+  /**
+   * Logfile-Handling: Immer nur die letzten 8 Logdateien behalten, ältere löschen
+   */
+  async cleanupOldLogs(
+    logDir,
+    pattern = /^simon-build-checker-.*\.md$|^multi-scope-build-report-.*\.md$/i,
+    keep = 8
+  ) {
+    const fsPromises = require("fs").promises;
+    const path = require("path");
+    try {
+      const files = (await fsPromises.readdir(logDir)).filter((f) =>
+        pattern.test(f)
+      );
+      const stats = await Promise.all(
+        files.map(async (f) => ({
+          name: f,
+          time: (await fsPromises.stat(path.join(logDir, f))).mtime.getTime(),
+        }))
+      );
+      stats.sort((a, b) => b.time - a.time);
+      if (stats.length > keep) {
+        for (const f of stats.slice(keep)) {
+          try {
+            await fsPromises.unlink(path.join(logDir, f.name));
+          } catch (e) {
+            /* ignore */
+          }
+        }
+      }
+    } catch (e) {
+      /* ignore */
+    }
+  }
   constructor(projectRoot) {
     this.projectRoot = projectRoot;
     this.startTime = new Date();
@@ -35,6 +69,10 @@ class BaseChecker {
    * 🎯 SCOPE-REGISTRIERUNG & ORCHESTRIERUNG
    */
   async runScope(scopeName, scopeInstance) {
+    // Vor jedem Scope-Run: Logfiles bereinigen (nur die letzten 8 behalten)
+    if (this.logDir) {
+      await this.cleanupOldLogs(this.logDir);
+    }
     console.log(`🔍 Starte ${scopeName}-Scope...`);
     const scopeStartTime = new Date();
 

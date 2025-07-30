@@ -1,3 +1,24 @@
+// Logfile-Handling: Immer nur die letzten 8 Logdateien behalten, ältere löschen
+function cleanupOldLogs(logDir, pattern = /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, keep = 8) {
+  const fs = require('fs');
+  const path = require('path');
+  if (!fs.existsSync(logDir)) return;
+  const files = fs.readdirSync(logDir)
+    .filter(f => pattern.test(f))
+    .map(f => ({
+      name: f,
+      time: fs.statSync(path.join(logDir, f)).mtime.getTime()
+    }))
+    .sort((a, b) => b.time - a.time);
+  if (files.length > keep) {
+    files.slice(keep).forEach(f => {
+      try { fs.unlinkSync(path.join(logDir, f.name)); } catch (e) { /* ignore */ }
+    });
+  }
+}
+
+// Vor Analyse Logfiles bereinigen
+cleanupOldLogs(__dirname, /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, 8);
 #!/usr/bin/env node
 
 /**
@@ -721,12 +742,22 @@ class UniversalProjectAnalyzer {
       /^dist/,
       /^build/,
       /^\.cache/, // 🚨 CACHE-VERZEICHNISSE
+      /logfiles?/i, // Build-Checker-Logs
+      /widerspruchs-report-.*\.md$/i, // Analyzer-Reports
+      /projekt-analyse-.*\.md$/i, // Analyzer-Reports
+      /analyse-.*\.md$/i, // Analyzer-Reports
+      /output/i,
+      /archiv/i,
       /\.log$/,
       /\.tmp$/,
+      /\.bak$/,
+      /\.cache$/,
       /^\.DS_Store$/,
       /^Thumbs\.db$/,
       /package-lock\.json$/, // 🚨 LOCK-FILES
       /yarn\.lock$/,
+      // Exclude all non-source files in tools/analyzer except .js/.cjs/.json/.md (README)
+      /^tools\/analyzer\/((?!\.js$|\.cjs$|\.json$|README\.md$).)*$/i,
     ];
 
     return ignorePatterns.some((pattern) => pattern.test(name));

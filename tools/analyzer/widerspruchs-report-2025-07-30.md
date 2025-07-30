@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 30.7.2025, 16:17:56  
+**Generiert:** 30.7.2025, 16:53:28  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,32 +8,29 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 3 | HIGH |
+| 🚨 Instructions-Widersprüche | 2 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
 | 🔗 Ungültige Links | 11 | HIGH |
-| 📄 Leere Dateien | 27 | MEDIUM |
+| 📄 Leere Dateien | 28 | MEDIUM |
 | 📂 Pfad-Fehler | 74 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
-Löse 3 Instructions-Widersprüche vor KI-Arbeit
+Löse 2 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
 Repariere 11 ungültige Links für Navigation
 
 ### 💡 MEDIUM
-Bereinige 27 leere/redundante Dateien
+Bereinige 28 leere/redundante Dateien
 
 ## 🔍 DETAILIERTE ERGEBNISSE
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\copilot-instructions.md`
-  - Widerspruch 1: "KRITISCH"
-  - Widerspruch 2: "KRITISCH"
 - **Unterschiedliche Token-Limits definiert** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
-  - Widerspruch 1: "000 Tokens) ⚠️ NÄHERT SICH LIMIT"
-  - Widerspruch 2: "000 Tokens) ⚠️ NÄHERT SICH LIMIT"
+  - Widerspruch 1: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
+  - Widerspruch 2: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\todos.md`
   - Widerspruch 1: "kritisch"
   - Widerspruch 2: "kritisch"
@@ -59,6 +56,7 @@ Bereinige 27 leere/redundante Dateien
 - `C:\apps\website\simon-recht\.github\instructions\technical\token-system.md`: EMPTY (0 Bytes)
 - `C:\apps\website\simon-recht\.github\instructions\workflow\chat-prozess.md`: EMPTY (0 Bytes)
 - `C:\apps\website\simon-recht\.gitignore`: MINIMAL (14 Bytes)
+- `C:\apps\website\simon-recht\allfiles.txt`: EMPTY (0 Bytes)
 - `C:\apps\website\simon-recht\tools\analyzer\procrastination-detector.cjs`: EMPTY (0 Bytes)
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-50-333Z.md`: EMPTY (0 Bytes)
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-52-408Z.md`: EMPTY (0 Bytes)
