@@ -159,59 +159,6 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 
 **🚨 EXCEPTION-TRIGGER:** Bei combined_tokens > 35.000 → Exception werfen und Scope reduzieren.
 
-Dabei muss die KI die Tokenkette berücksichtigen und die exakte Tokens berechnen:
-Exakte Token-Formel: (Zeichen_Anzahl ÷ 4) + (Wörter_Anzahl × 0.75)
-
-Die Tokenkette umfasst:
-
-- Aufgabenstellung / Anweisung / Frage im Chat
-
-Dabei muss die KI zuerst eine Token-Berechnung für die gesamte Kette der Arbeit durchführen.
-
-Dabei unterscheiden wir zwischen 3 Kategorien: Lesen (Eingabe), denken/verständnis (Verarbeitung) und Ausgabe (Ausgabe).
-EVA Prinzip.
-
-_Vorarbeit:_
-
-Bei jedem neuen Chat: Analyse Took und build checker ausführen.
-
-_Lesen:_
-
-- Token-Berechnung
-- Chatverlauf selbst (Optional wenn nötig)
-- Kontextinformationen
-- Verzeichnisname (inkl. Instruction)
-- Dateiname (inkl. Instruction)
-- Dateiinhalt ((inkl. Instruction)
-
-_Denkvorgang und Verständnis:_
-
-- Interne denkkette aktivieren:
-- Analyse der Eingabe
-- Überprüfung und Verständnis der Eingabe
-- Verknüpfung mit Quelle der Wahrheit: ".github\copilot-instructions.md"
-- Analyse der Analyse- und build-checker Logdatei
-- Evaluierung von potenziellen Wiedersprüchen
-- Sind Wiedersprüche vorhanden? Lassen sich diese durch die Datei: ".github\copilot-instructions.md" auflösen?
-- Nein? Exception werfen, User Fragen, gemäss Vorgabe.
-- Ja? Angaben in dieser Datei: ".github\copilot-instructions.md" nach unten vererben
-- Tokenberechnung durchführen: Wenn Limit erreicht, dann Exception werfen. Sonst weiter arbeiten.
--
-
-_schreiben:_
-
-- Todo-Liste überprüfen auf die Frage: Ist die Todo-Liste (docs\todos\todos.md) aktuell? Nein? Dann aktualisieren. Erledigte Todos, löschen.
-- Ist die Todo-Liste aktuell? Ja? Dann weiterarbeiten.
-- Todo-Liste gemäss Logdateien (Analyse- und buildchecker) --> bestehende Todos nach den Prioritäten sortieren.
--
--
-- Anpassung der Datei oder bei User Rückfragen
--
-
-Verzeichnisname, Dateiname, Copilot-Instructions, Kontextinformationen, Inhalte der jeweiligen
-
-Doch Achtung, dies ist nur eine theoret
-
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS (MODULAR HUB)
 
 ❌ NIEMALS replace_string_in_file verwenden für Content
@@ -251,7 +198,7 @@ Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mi
 ### 🔧 **PROJECT-MANAGEMENT:**
 
 - **[🚨 Exception-System](instructions/project/exception-system.md)** - Fehlerbehandlung, Widerspruchs-Scanner
-- **[📁 Datei-Operationen](instructions/project/datei-operationen.md)** - Backup, Search-Regeln, Integrität
+- **[📁 Datei-Operationen](instructions/project/datei-operationen.md)** - Backup, Search-Regeln, Integrität, git add ., git commit, git push
 - **[🎯 Scope-System](instructions/project/scope-system.md)** - Bereichs-Definitionen
 
 ---
