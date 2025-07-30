@@ -41,23 +41,23 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 
-- [ ] **Aufgabe:** "KRITISCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
-- [ ] **Kontext:** 6x "KRITISCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
-- [ ] **Ressourcen:** Datei öffnen, alle "KRITISCH"-Instanzen prüfen, nur 3 wichtigste behalten, Rest auf "HOCH" ändern
+- [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
+- [ ] **Kontext:** 6x "HOCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
+- [ ] **Ressourcen:** Datei öffnen, alle "HOCH"-Instanzen prüfen, nur 3 wichtigste behalten, Rest auf "MITTEL" ändern
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 
-- [ ] **Aufgabe:** "kritisch"-Überfüllung in todos.md reduzieren
-- [ ] **Kontext:** 7x "kritisch" in docs/todos/todos.md - zu viele kritische Einträge verwirren Prioritäten
+- [ ] **Aufgabe:** "hoch"-Überfüllung in todos.md reduzieren
+- [ ] **Kontext:** 7x "hoch" in docs/todos/todos.md - zu viele wichtige Einträge verwirren Prioritäten
 - [ ] **Ressourcen:** TODO-Liste durchgehen, nur 3 echte "KRITISCH" behalten, Rest umklassifizieren
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 
-- [ ] **Aufgabe:** "kritisch"-Überfüllung in verhaltensprobleme.md reduzieren
-- [ ] **Kontext:** 4x "kritisch" in docs/todos/verhaltensprobleme.md gefunden
-- [ ] **Ressourcen:** Datei prüfen, kritische Einträge auf maximal 2 reduzieren, Rest auf "HOCH" setzen
+- [ ] **Aufgabe:** "hoch"-Überfüllung in verhaltensprobleme.md reduzieren
+- [ ] **Kontext:** 4x "hoch" in docs/todos/verhaltensprobleme.md gefunden
+- [ ] **Ressourcen:** Datei prüfen, wichtige Einträge auf maximal 2 reduzieren, Rest auf "MITTEL" setzen
 - [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
@@ -102,7 +102,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **[HEUTE]** Navigation optisch optimieren (Simon insistiert!)
 - [ ] **[HEUTE]** CSS-Abhängigkeiten prüfen und anpassen
 
-### **2. KRITISCHE ISSUES MIGRATION (AUS ISSUES.MD)**
+### **2. WICHTIGE ISSUES MIGRATION (AUS ISSUES.MD)**
 
 - [ ] **[HEUTE]** CSS-Architektur-Verletzungen beheben
   - [ ] Systematische Migration zu semantischen CSS-Klassen in vorhandenen Dateien
@@ -261,7 +261,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 ### **PROJECT STATUS:**
 
 - **Dateien:** 98 (von 193 → 51% Reduktion)
-- **Token:** 2.457.535 (Kritisch über Limit)
+- **Token:** 2.457.535 (Wichtig - über Limit)
 - **Deadline:** 48 Stunden bis Launch
 
 ---
@@ -280,7 +280,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 - [ ] Health Score ≥ 80/100
 - [ ] Build-Zeit < 3 Sekunden
-- [ ] Zero kritische Errors
+- [ ] Zero wichtige Errors
 - [ ] SEO-Meta-Tags vollständig
 
 ---
@@ -297,7 +297,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **KI-HALLUZINATIONS-PROBLEME (MIGRATION AUS VERHALTENSPROBLEME.MD):**
 
-#### **KRITISCHE KI-VERHALTENSMUSTER:**
+#### **WICHTIGE KI-VERHALTENSMUSTER:**
 
 - **Vorgetäuschte Tiefenanalysen:** KI behauptet vollständige Analyse ohne Durchführung
 - **Schein-Aktionen:** "Made changes" ohne tatsächliche Änderungen
