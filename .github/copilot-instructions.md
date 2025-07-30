@@ -1,5 +1,12 @@
 # Wichtige Informationen die die KI berücksichtigen muss:
 
+# Wiederspruchsregel:
+
+Die KI ist bei Wiedersprüchen zwingend angehalten, sollte sich in der Datei:
+".github\copilot-instructions.md" --> sich wiedersprüche / Anomalien befinden, unklare Anweisungen muss die KI ZWINGEND eine Exception werfen. Noch bevor die KI beginnt zu arbeiten.
+Fehlt eine Regel, ist die KI unsicher, muss auch dann die KI eine Exception auf deutsch werfen,mit einer klaren, konkreter, spezifischerFehlermeldung, in welcher Zeile/n der Wiederspruch auftritt und eine Empfehlung im Chat ausgegeben.
+Wenn in dieser Datei: ".github\copilot-instructions.md" sich wiedersprüche befinden sollten, darf die KI niemals weiterarbeiten, sondern, eine Exception werfen wie oben beschrieben.
+
 Diese Instructions sind universell und global gültig.
 Sollten Wiedersprüchlichkeiten gefunden werden, müssen diese umgehend von der KI durch diese Anweisung, in dieser Datei, überschrieben oder gelöscht werden.
 
@@ -59,6 +66,42 @@ Die KI muss zwingend folgenden Workflow für jeden neuen Chat einhalten:
 - [ ] Priorität: Hoch/Mittel/Niedrig --> entsprechend modularisieren und dem jeweiligen Prioritätsverzeichnis zuordnen
 - [ ] Status: Offen/In Bearbeitung/Erledigt
 - [ ] Verantwortlich: KI
+
+**Umgang mit Verzeichnissen und Dateien**
+Diese Anweisung ist neu, und kann bei der KI zu Verwirrungen und Missverständnissen führen. Daher ist zwingend zu beachten, dass die KI diese Anweisung im Umgang mit Verzeichnissen und Dateien experimenteller Natur ist.
+Dabei geht es darum, dass die KI für jedes neue Verzeichnis einer Logik folgen muss. Dabei muss die KI wenn nötig, die Namenskonventionen dynamisch der Regel hier anpassen.:
+.github\instructions\organisation\namenskonvention.md
+
+Bennenung von Verzeichnissen und Dateien:
+Bei der Umsetzung der Modularisierung ist es zwingend nötig, dass bei neuen Verzeichnissen und Dateien, der Scope / bzw. _Bereichname_Funktion_dateiendung_ - eindeutig und beschreibend ist - die Funktionalität des Codes widerspiegelt - konsistent über das gesamte Projekt hinweg angewendet wird.
+Dies gilt nur bei neuen Verzeichnissen.
+Wenn die KI auf bereits existierende Verzeichnisse und Dateien stösst, darf die KI nur dann eine umbennenung und verbesserung vornehmen, wenn dies der Auftrag ist.
+Zu jedem neuen Verzeichnis muss eine Readme-Datei erstellt werden, wo ALLE weiteren Unterverzeichnissen und Unterdateien mit den jeweiligen relativen Pfaden nicht nur aufgelistet, sondern auch kurz erklärt wird, wofür diese da ist.
+Bevor die KI auch nur eine einzige Änderung durchführt, muss die KI sicherstellen, dass das Analysetool welches sich in diesem Verzeichnis befindet:
+"tools\analyzer" der Wiederspruchsscanner beim auftreten jeder Anomalie, automatisch trainiert und aktualisiert wird.
+Der Wiederspruchsscanner muss zwingend ALLE Redundanzen gleich mitprotkollieren und die KI auffordern, die Redundanzen anzugehen, denn die Redundanzen und Wiedersprüche können / führen unweigerlich zu sehr problematischem Verhalten führen.
+
+Ein Beispiel aus der Praxis:
+_🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs - das ist WEIT über der 1200-Zeilen-Regel!_
+
+Diese Problematik ist auf den Wiederspruch zurück zu führen, da unterschiedliche Dateien, unterschiedliche Angaben enthalten. Dies führt unweigerlich zu Inkonsistenzen, Halluzinationen, und anderen schwerwiegenden Problemen.
+
+Die KI ist sich dessen Problematik bewusst und ist nun sensibilisiert, sofort eine Exception bei potenziellen Wiedersprüchen zu schmeissen.
+Generell gilt:
+Ist die KI unsicher, wie sie die Wiedersprüche lösen soll, darf die KI jederzeit auf mich, den User, Simon, zurückkommen.
+Die KI ist IMMER ehrlich, selbstbewusst Kritisch dem User, und sich, der KI selbstkritisch.
+
+Dabei ist die KI explizit angehalten, die folgende Datei, als einzige Quelle der Wahrheit zu verwenden. Alle Angaben innerhalb dieser Datei sind global, und universell gültig und sollen wie beim NTFS Filesystem, nach unten vererbt werden.
+Die heilige und zentrale Instruction Datei lautet:
+".github\copilot-instructions.md"
+
+Wenn die Angaben in dieser Datei, sich mit anderen Angaben aus anderen Dateien wiedersprechen, ist der globalen Instruction Datei folge zu leisten und die Angaben nach unten zu vererben.
+
+Z.B.: Wenn hier die Tokenbegrenzung von 1200 bestehen, in einer anderen Datei, jedoch von 1000 die Rede ist, muss die KI automatisch, in dieser korrupten Datei, die Tokenbegrenzung auf 1200 anpassen bzw. überschreiben.
+
+**Tokenberechnung und Limits**
+
+Die aktuelle Brutto-Obergrenze
 
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS (MODULAR HUB)
 
@@ -224,9 +267,6 @@ Diese Regel ist global gültig. Sollten Widersprüche auftreten, und in anderen 
 - Bei kritischen Limits: Sofortiger Chat-Neustart empfohlen
 - Scope-basierte Modularisierung verwenden
 
-**Anleitung für optimale Token-Nutzung:**
-📖 `.github/ai_token_tracker/token-tracker.md`
-
 ---
 
 ## 📁 **OPTIMIERTE .GITHUB VERZEICHNISSTRUKTUR:**
@@ -236,7 +276,7 @@ Diese Regel ist global gültig. Sollten Widersprüche auftreten, und in anderen 
 Die Inventarisierung findet in diesem Verzeichnis statt:
 ".github\instructions\inventarisierung"
 
-Dabei muss die KI das gesamte Projekt, strukturell nach dem folgenden Beispiel dokumentieren:
+Dabei muss die KI das gesamte Projekt, strukturell nach dem folgenden Beispiel dokumentieren. Die KI muss zwingend beachten, dass das Beispiel veraltet ist, und keine gültigkeit zur Wahrheit besitzt:
 
 ```
 .github/

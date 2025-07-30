@@ -1,12 +1,12 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 29.7.2025, 19:48:30
+**Generiert:** 29.7.2025, 20:40:55
 **Projekt:** simon-recht
-**Gesamt-Health-Score:** 67/100
+**Gesamt-Health-Score:** 70/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 6068ms
+- **Ausführungszeit:** 10029ms
 - **Scopes getestet:** 5
 - **Gesamt-Issues:** 11
 - **Kritische Issues:** 0
@@ -17,7 +17,7 @@
 
 **Health Score:** 90/100
 **Status:** success
-**Ausführungszeit:** 12ms
+**Ausführungszeit:** 11ms
 **Issues:** 6
 
 ### 📈 Metriken
@@ -70,7 +70,7 @@
 
 **Health Score:** 98/100
 **Status:** success
-**Ausführungszeit:** 5ms
+**Ausführungszeit:** 4ms
 **Issues:** 1
 
 ### 📈 Metriken
@@ -91,7 +91,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3266ms
+**Ausführungszeit:** 3046ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -117,17 +117,17 @@
 
 ## 🎯 INVENTORY-Scope
 
-**Health Score:** 55/100
+**Health Score:** 70/100
 **Status:** success
-**Ausführungszeit:** 26ms
+**Ausführungszeit:** 25ms
 **Issues:** 0
 
 ### 📈 Metriken
 
 - **inventoryScriptExists:** true
-- **inventoryAge:** 505
-- **inventoryOutdated:** true
-- **updateDuration:** 21
+- **inventoryAge:** 52
+- **inventoryOutdated:** false
+- **updateDuration:** 20
 - **inventoryUpdated:** true
 - **usedFallback:** true
 - **scanDataSaved:** true
@@ -140,7 +140,7 @@
 
 **Health Score:** 20/100
 **Status:** success
-**Ausführungszeit:** 201ms
+**Ausführungszeit:** 4388ms
 **Issues:** 0
 
 ---
