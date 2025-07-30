@@ -34,21 +34,63 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (HÖCHSTE PRIORITÄT)**
 
-- [ ] **[HEUTE]** 5 kritische Instructions-Widersprüche auflösen:
-  - [ ] "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
-  - [ ] "KRITISCH"-Überfüllung in allen Dateien reduzieren (max 3 pro Datei)
-  - [ ] Token-Regeln vereinheitlichen: 6000 statt 1200 durchgängig umsetzen
-  - [ ] Prioritäts-Hierarchie klar definieren: HÖCHSTE → KRITISCH → HOCH → MITTEL → NIEDRIG
-  - [ ] Multiple kritische Einträge auf sinnvolle Verteilung reduzieren
+- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
+- [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
+- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "KRITISCH" ersetzen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** "KRITISCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
+- [ ] **Kontext:** 6x "KRITISCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
+- [ ] **Ressourcen:** Datei öffnen, alle "KRITISCH"-Instanzen prüfen, nur 3 wichtigste behalten, Rest auf "HOCH" ändern
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** "kritisch"-Überfüllung in todos.md reduzieren
+- [ ] **Kontext:** 7x "kritisch" in docs/todos/todos.md - zu viele kritische Einträge verwirren Prioritäten
+- [ ] **Ressourcen:** TODO-Liste durchgehen, nur 3 echte "KRITISCH" behalten, Rest umklassifizieren
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** "kritisch"-Überfüllung in verhaltensprobleme.md reduzieren
+- [ ] **Kontext:** 4x "kritisch" in docs/todos/verhaltensprobleme.md gefunden
+- [ ] **Ressourcen:** Datei prüfen, kritische Einträge auf maximal 2 reduzieren, Rest auf "HOCH" setzen
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** Token-Regeln vereinheitlichen - 6000 statt 1200 durchgängig umsetzen
+- [ ] **Kontext:** Scanner fand unterschiedliche Token-Limits in verschiedenen Dateien - führt zu Verwirrung
+- [ ] **Ressourcen:** Grep-Search nach "1200.*Zeilen" und "Token.*Limit", alle auf 6000 Token vereinheitlichen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
 
 ### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
 
-- [ ] **[HEUTE]** 3 fehlende Instructions-Dateien erstellen:
-  - [ ] `instructions/core/anti-prokrastination.md`
-  - [ ] `instructions/project/exception-system.md`
-  - [ ] `instructions/project/datei-operationen.md`
-- [ ] **[HEUTE]** Blog-Links aktualisieren (6 fehlende Verweise)
-- [ ] **[HEUTE]** Website-Struktur Links prüfen und korrigieren
+- [ ] **Aufgabe:** Fehlende Datei instructions/project/exception-system.md erstellen
+- [ ] **Kontext:** Link-Fehler in .github/copilot-instructions.md - Datei existiert nicht
+- [ ] **Ressourcen:** Exception-Regeln aus copilot-instructions.md extrahieren, neue Datei erstellen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** Fehlende Datei instructions/project/datei-operationen.md erstellen
+- [ ] **Kontext:** Link-Fehler in .github/copilot-instructions.md - Datei existiert nicht
+- [ ] **Ressourcen:** Datei-Operations-Regeln aus copilot-instructions.md extrahieren, neue Datei erstellen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+
+- [ ] **Aufgabe:** 6 fehlende Blog-Links reparieren
+- [ ] **Kontext:** Links zu /blog/wenn-ehrlichkeit-bestraft-wird, /blog/der-wendepunkt-meine-story, /blog/drei-saeulen-methode-detail existieren nicht
+- [ ] **Ressourcen:** Blog-Artikel erstellen oder Links entfernen aus Website-Struktur-Dateien
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
 
 ### **3. CSS-MODULARISIERUNG (SIMON'S INSISTENZ)**
 

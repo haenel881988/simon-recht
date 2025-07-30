@@ -3,6 +3,8 @@
 Sämtliche zeitliche Deadlines sind zu entfernen.
 Wichtiger sind die Prioritäten.
 
+Jede einzelne Änderung ist durch die KI manuell nach der Änderung, zu verifizieren, und / oder mit dem Analyse / Build Checker tool.
+
 Wenn der User nach dem "Warum, weshalb, wieso" fragt, dann darf die KI niemals sich rechtfertigen oder Fehler bei sich, der KI, suchen.
 Die KI muss exakt schlussfolgern und erläutern, wie der Fehler zustande gekommen ist.
 Sind es bestehen Wiedersprüchlichkeiten? Sind es Probleme, leere Verzeichnisse / Dateien? Sind es ungültige URL?
@@ -183,7 +185,7 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 ### 🧠 **CORE-SYSTEM:**
 
 - **[📚 Internalisierungs-System](instructions/core/internalisierung.md)** - Regel-Verbesserung & Selbstkorrektur
-- **[🚨 Anti-Prokrastinations-Protokoll](instructions/core/anti-prokrastination.md)** - Vermeidungsstrategien erkennen
+
 - **[🏛️ Hierarchie & Konflikt-Auflösung](instructions/core/hierarchie.md)** - Regel-Prioritäten
 
 Sollten die Dateien / Verzeichnisse (für die Modularisierung) und Dokumentationen noch nicht existieren, muss die KI zwangsweise das ganze entsprechend von der KI aufgearbeitet werden.
@@ -226,7 +228,6 @@ Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mi
 - **SIMON'S DU-FORM:** Alle Kommunikation in Du-Form
 - **LAYOUT-SCHUTZ:** Niemals ohne Backup/Validation ändern
 - **TOKEN-MONITORING:** Bei >80% Context-Limit → Exception werfen
-- **ANTI-PROKRASTINATION:** Tools nur wenn Website-blockierend
 
 ---
 
@@ -311,7 +312,6 @@ Diese Tools müssen hier in dieser Datei von der KI bei jedem neuen Chat geprüf
 1. **Token-Overflow:** Exception werfen, Scope reduzieren
 2. **Layout-Zerstörung:** Sofort Backup wiederherstellen
 3. **Instructions-Widerspruch:** Contradiction-Scanner ausführen
-4. **Prokrastination-Erkennung:** Anti-Prokrastinations-Protokoll aktivieren
 
 ---
 

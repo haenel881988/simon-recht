@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 30.7.2025, 13:50:47  
+**Generiert:** 30.7.2025, 14:33:23  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -10,9 +10,9 @@
 |-----------|---------|-------------|
 | 🚨 Instructions-Widersprüche | 5 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
-| 🔗 Ungültige Links | 12 | HIGH |
+| 🔗 Ungültige Links | 11 | HIGH |
 | 📄 Leere Dateien | 27 | MEDIUM |
-| 📂 Pfad-Fehler | 73 | MEDIUM |
+| 📂 Pfad-Fehler | 74 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
@@ -20,7 +20,7 @@
 Löse 5 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
-Repariere 12 ungültige Links für Navigation
+Repariere 11 ungültige Links für Navigation
 
 ### 💡 MEDIUM
 Bereinige 27 leere/redundante Dateien
@@ -48,7 +48,6 @@ Bereinige 27 leere/redundante Dateien
 ✅ Alle Dateien im Token-Limit
 
 ### 🔗 UNGÜLTIGE LINKS
-- `C:\apps\website\simon-recht\.github\copilot-instructions.md`: Link zu `instructions/core/anti-prokrastination.md` nicht gefunden
 - `C:\apps\website\simon-recht\.github\copilot-instructions.md`: Link zu `instructions/project/exception-system.md` nicht gefunden
 - `C:\apps\website\simon-recht\.github\copilot-instructions.md`: Link zu `instructions/project/datei-operationen.md` nicht gefunden
 - `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md`: Link zu `../dsgvo-guide` nicht gefunden
@@ -124,6 +123,7 @@ Bereinige 27 leere/redundante Dateien
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `src/*`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `.github/copilot-instructions.md`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `tools/analyzer/*.cjs`` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `.github/copilot-instructions.md,` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/elemente/button.css`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/elemente/header-und-navigation.css`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/base/typography.css`` ungültig
