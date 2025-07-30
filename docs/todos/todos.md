@@ -45,9 +45,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 ### **2. KRITISCHE ISSUES MIGRATION (AUS ISSUES.MD)**
 
 - [ ] **[HEUTE]** CSS-Architektur-Verletzungen beheben
-  - [x] ~~304+ Tailwind Classes in beweise.astro migrieren~~ **OBSOLET - Datei existiert nicht mehr**
   - [ ] Systematische Migration zu semantischen CSS-Klassen in vorhandenen Dateien
-  - [ ] 60/30/10 Design-Prinzip wiederherstellen
+  - [ ] 60/30/10 Design-Prinzip wiederherstellen unter berücksichtigung dass die KI das Design-Prinzip prüfen soll, aus der Sicht eines Web- und UI/UX Designer.
 - [ ] **[HEUTE]** Instructions-Pfade korrigieren
   - [ ] docs/projekt/ Verweise entfernen (existiert nicht)
   - [ ] Leere docs/change_management/ Verzeichnisse bereinigen
