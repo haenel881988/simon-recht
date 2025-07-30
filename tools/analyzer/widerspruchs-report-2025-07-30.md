@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 30.7.2025, 16:14:43  
+**Generiert:** 30.7.2025, 16:17:56  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,7 +8,7 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 5 | HIGH |
+| 🚨 Instructions-Widersprüche | 3 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
 | 🔗 Ungültige Links | 11 | HIGH |
 | 📄 Leere Dateien | 27 | MEDIUM |
@@ -17,7 +17,7 @@
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
-Löse 5 Instructions-Widersprüche vor KI-Arbeit
+Löse 3 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
 Repariere 11 ungültige Links für Navigation
@@ -29,18 +29,12 @@ Bereinige 27 leere/redundante Dateien
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\copilot-instructions.md`
-  - Widerspruch 1: "höchste Priorität"
-  - Widerspruch 2: "höchste Priorität"
+  - Widerspruch 1: "KRITISCH"
+  - Widerspruch 2: "KRITISCH"
 - **Unterschiedliche Token-Limits definiert** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
   - Widerspruch 1: "000 Tokens) ⚠️ NÄHERT SICH LIMIT"
   - Widerspruch 2: "000 Tokens) ⚠️ NÄHERT SICH LIMIT"
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
-  - Widerspruch 1: "KRITISCH"
-  - Widerspruch 2: "KRITISCH"
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\todos.md`
-  - Widerspruch 1: "kritisch"
-  - Widerspruch 2: "kritisch"
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md`
   - Widerspruch 1: "kritisch"
   - Widerspruch 2: "kritisch"
 

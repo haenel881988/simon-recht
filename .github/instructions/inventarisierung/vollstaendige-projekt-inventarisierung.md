@@ -56,7 +56,7 @@ simon-recht/ (Root)
 
 ```
 docs/
-├── 📂 todos/ (TODO-Management) ⚠️ KRITISCH
+├── 📂 todos/ (TODO-Management) ⚠️ WICHTIG
 │   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ⚠️ NÄHERT SICH LIMIT
 │   ├── 📄 README.md (45 Zeilen, ~630 Tokens)
 │   └── 📂 instructions/ (Archivierte TODO-Workflows)
@@ -95,7 +95,7 @@ src/
 
 ```
 tools/
-├── 📂 analyzer/ ⚠️ KRITISCH ÜBERLADEN
+├── 📂 analyzer/ ⚠️ WICHTIG ÜBERLADEN
 │   ├── 📄 universal-project-analyzer.cjs (445 Zeilen, ~6.230 Tokens) 🚨 KRITISCH
 │   ├── 📄 contradiction-scanner.cjs (289 Zeilen, ~4.050 Tokens) 🚨 ÜBERSCHREITET LIMIT
 │   ├── 📄 master-analyzer.cjs (234 Zeilen, ~3.280 Tokens) 🚨 ÜBERSCHREITET LIMIT
@@ -106,7 +106,7 @@ tools/
 
 ---
 
-## 🚨 **KRITISCHE 1200-ZEILEN-ÜBERSCHREITUNGEN**
+## 🚨 **WICHTIGE 1200-ZEILEN-ÜBERSCHREITUNGEN**
 
 ### **SOFORT MODULARISIERUNG ERFORDERLICH:**
 
@@ -140,7 +140,7 @@ tools/
 
 ## 🎯 **MODULARISIERUNGS-ROADMAP**
 
-### **PHASE 1: KRITISCHE TOOLS (HEUTE)**
+### **PHASE 1: WICHTIGE TOOLS (HEUTE)**
 
 - `multi-scope-checker.cjs` → 5 Module splitten
 - `universal-project-analyzer.cjs` → Scope-basiert aufteilen

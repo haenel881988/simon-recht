@@ -44,7 +44,7 @@ tools\build_check\README.md
 Wichtig anzumerken ist, dass die Build-Performance / Zeit NICHT analysiert werden darf.
 Generell gilt, lieber eine längere und saubere Build-Qualität, statt eine generische Performance-Optimierung.
 Stösst die KI auf Wiedersprüchlichkeiten, innerhalb dem Projektes muss diese Wiedersprüchlichkeit gelöscht oder entsprechend dieser Anweisung korrigiert werden.
-Die Anweisung, hier in diesem Dokument hat die höchste Priorität und ist restriktiv von der KI einzuhalten. Alle anderen Anweisungen, die sich in anderen potenziellen Dateien befinden können, sind von der KI automatisch zu erkennen und die jeweiligen Einträge eigenständig zu löschen oder – wenn nötig – zu überschreiben.
+Die Anweisung, hier in diesem Dokument hat KRITISCHE Priorität und ist restriktiv von der KI einzuhalten. Alle anderen Anweisungen, die sich in anderen potenziellen Dateien befinden können, sind von der KI automatisch zu erkennen und die jeweiligen Einträge eigenständig zu löschen oder – wenn nötig – zu überschreiben.
 
 Wie genau der build-checker funktioniert, ist in diesem Verzeichnis dokumentiert: ".github\instructions\core\build_check"
 
@@ -216,7 +216,7 @@ Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mi
 
 ## 🎯 **AKTUELLER PROJEKT-FOKUS:**
 
-### **📋 HÖCHSTE PRIORITÄT (NICHT VERHANDELBAR):**
+### **📋 WICHTIGSTE PRIORITÄT (NICHT VERHANDELBAR):**
 
 1. **CSS-Modularisierung:** Tailwind → Semantische Klassen
 2. **Layout-Stabilität:** Keine Zerstörung durch Token-Overflow
