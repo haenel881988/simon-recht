@@ -66,6 +66,12 @@ Die Anwaltskanzlei hatte also kein Interesse daran, mich vor Gericht zu vertrete
 
 **C) Strategische Resilienz:** Rückschläge als Daten und Treibstoff für eine überlegene Strategie nutzen. Einschüchterungsversuche seitens beklagter Partei? Direkt als Treibstoff nutzen, und dies vor Gericht anzubringen.
 
+**D) Gesundheit:**
+An dieser Stelle möchte ich die gesundheitlichen Aspekte betonen, welche eine entscheidende Rolle in meinem Prozess gespielt haben. Die Auseinandersetzung mit meiner eigenen Gesundheit, das Erkennen von Stressfaktoren und die Implementierung von Selbstfürsorge-Massnahmen waren essenziell, um die nötige mentale Stärke zu entwickeln die der Druck und Stress durch eine Prozessierung, ganz alleine, nur mithilfe der KI, erforderten.
+In meinem Buch: Gicht und Muskeltraining gehe ich noch tiefer darauf ein, was es mit der Selbstwirksamkeit auf sich hat. Dabei ist Gicht nur ein Beispiel für alle Arten von gesundheitlichen Herausforderungen.
+Das Buch erhältst du kostenlos zum David gegen Goliath Protokoll.
+Oder separat für 18.80 CHF.
+
 **[→ Meine komplette Geschichte lesen](/blog/der-wendepunkt-meine-story)**
 
 **[→ 3-Säulen-Methode im Detail](/blog/drei-saeulen-methode-detail)**
@@ -78,15 +84,15 @@ Die Anwaltskanzlei hatte also kein Interesse daran, mich vor Gericht zu vertrete
 
 **Beta-Release: 15. September 2025**
 
-**Die ersten 15 Personen die sich anmelden erhalten:**
+**Die ersten 5 Personen die sich anmelden erhalten:**
 
-✅ kostenloser Zugang zum schriftlichen Onlinekurs - Wert: 999.- im Jahresabo.
+✅ kostenloser Zugang zum _David-gegen-Goliath-Protokoll_ - Wert: 999.- im Jahresabo.
 
 ✅ Analytische Überlegenheit: Die Fähigkeit, juristische Probleme wie ein Informatiker strukturiert und systematisch zu analysieren und systematisch anzugehen.
 
-✅ Radikale Selbstverantwortung: Du lernst, wie strukturierte Selbstreflexion Ordnung in dein Denken und deinem Desktop bringst.
+✅ Uneingeschränkte Selbstverantwortung: Du lernst, wie strukturierte Selbstreflexion Ordnung in dein Denken und deinem Desktop bringst. Deine Datei-Struktur ist sozusagen, das Abbild deines inneren und geistigen Zustands.
 
-✅ Strategische Resilienz: Du beginnst, Rückschläge als Chancen zu sehen. Wer nicht kämpft, hat schon verloren.
+✅ Strategische Resilienz: Du beginnst, Rückschläge als Chancen zu sehen. Wer nicht kämpft, hat schon verloren. Überwindung vom klein-kindlichen Ego ist unerlässlich! Nur wer sich neuem öffnet, kann auch neues lernen.
 
 ✅ Community und Austausch: Du kannst mit der Community und mit mir in den Austausch treten. Du hast immer Zugang zu den nötigen Materialien und Ressourcen. Sämtliche Fragen die andere User stellten, sind auch für dich sichtbar.
 

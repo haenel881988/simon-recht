@@ -1,12 +1,12 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 29.7.2025, 20:40:55
+**Generiert:** 30.7.2025, 09:12:07
 **Projekt:** simon-recht
-**Gesamt-Health-Score:** 70/100
+**Gesamt-Health-Score:** 67/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 10029ms
+- **Ausführungszeit:** 17294ms
 - **Scopes getestet:** 5
 - **Gesamt-Issues:** 11
 - **Kritische Issues:** 0
@@ -17,7 +17,7 @@
 
 **Health Score:** 90/100
 **Status:** success
-**Ausführungszeit:** 11ms
+**Ausführungszeit:** 12ms
 **Issues:** 6
 
 ### 📈 Metriken
@@ -91,7 +91,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3046ms
+**Ausführungszeit:** 3527ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -117,17 +117,17 @@
 
 ## 🎯 INVENTORY-Scope
 
-**Health Score:** 70/100
+**Health Score:** 55/100
 **Status:** success
-**Ausführungszeit:** 25ms
+**Ausführungszeit:** 26ms
 **Issues:** 0
 
 ### 📈 Metriken
 
 - **inventoryScriptExists:** true
-- **inventoryAge:** 52
-- **inventoryOutdated:** false
-- **updateDuration:** 20
+- **inventoryAge:** 751
+- **inventoryOutdated:** true
+- **updateDuration:** 21
 - **inventoryUpdated:** true
 - **usedFallback:** true
 - **scanDataSaved:** true
@@ -140,7 +140,7 @@
 
 **Health Score:** 20/100
 **Status:** success
-**Ausführungszeit:** 4388ms
+**Ausführungszeit:** 9677ms
 **Issues:** 0
 
 ---

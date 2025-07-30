@@ -1,4 +1,17 @@
-# Wichtige Informationen die die KI berücksichtigen muss:
+# Wichtige Informationen die die KI berücksichtigen muss.
+
+# Regel bei Fragen und Anweisungen:
+
+Generell gilt: Meine Anweisungen die ich selbst geschrieben habe, sind global und dürfen niemals überschrieben werden.
+Ausser wenn dies von mir explizit genehmigt wird. Die KI muss aber zuerst den zu ersetzenden Text im Chat ausgeben, und der neue Text, den die KI ersetzen will.
+Die KI darf NIEMALS neue Verzeichnisse / Dateien erstellen, wenn schon gleichnamige existieren im selben Kontext / Scope.
+
+Die KI muss zwingend meine Frage beantworten.
+
+# Syntax Regel:
+
+Bei jeder Terminal ausführung muss die KI zwingend die Terminal Ausgabe prüfen.
+Ausserdem ist zwingend die Powershell Syntax zu verwenden.
 
 # Wiederspruchsregel:
 
@@ -50,7 +63,7 @@ Layout-Probleme, CSS, Responsivität, falsche Verlinkungen, fehlende / nicht kor
 
 Zuerst muss die Struktur der Website stabil sein. Es dürfen keinerlei tote links, leere Verzeichnisse, leere Dateien, redundante Inhalte etc. vorhanden sein.
 
-Sollte die Todo-Liste länger als 1200 Zeilen lang sein, muss die KI mit der Modularisierung der todo-Liste beginnen. Dabei muss die KI erstmal im Verzeichnis der todo-liste ein neues unterverzeichnis evaluieren für eine strukturierung und modularisierung der todo-aufgaben.
+Sollte die Todo-Liste länger als 35'000 Tokens lang sein, muss die KI mit der Modularisierung der todo-Liste beginnen. Dabei muss die KI erstmal im Verzeichnis der todo-liste ein neues unterverzeichnis evaluieren für eine strukturierung und modularisierung der todo-aufgaben.
 Dabei wäre es evtl. sinnvoll, die unterverzeichnisse nach priorität zu gliedern und zu strukturieren.
 Dabei pro Priorität, ein Verzeichnis innerhalb dem todo-verzeichnis.
 Die KI muss zwingend folgenden Workflow für jeden neuen Chat einhalten:
@@ -82,9 +95,12 @@ Bevor die KI auch nur eine einzige Änderung durchführt, muss die KI sicherstel
 Der Wiederspruchsscanner muss zwingend ALLE Redundanzen gleich mitprotkollieren und die KI auffordern, die Redundanzen anzugehen, denn die Redundanzen und Wiedersprüche können / führen unweigerlich zu sehr problematischem Verhalten führen.
 
 Ein Beispiel aus der Praxis:
-_🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs - das ist WEIT über der 1200-Zeilen-Regel!_
+_🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs - das ist WEIT über der 6000-Token-Regel!_
 
 Diese Problematik ist auf den Wiederspruch zurück zu führen, da unterschiedliche Dateien, unterschiedliche Angaben enthalten. Dies führt unweigerlich zu Inkonsistenzen, Halluzinationen, und anderen schwerwiegenden Problemen.
+Ein weiterer Grund erstreckt sich durch die falsche Token- und Zeilenangaben die ich, der User, Simon, definiert habe, nämlich:
+
+Jede Datei darf nicht länger als 6000 Tokens sein (entspricht ca. 1200-1500 Zeilen), was ein klarer und eindeutiger Standard ist.
 
 Die KI ist sich dessen Problematik bewusst und ist nun sensibilisiert, sofort eine Exception bei potenziellen Wiedersprüchen zu schmeissen.
 Generell gilt:
@@ -97,11 +113,104 @@ Die heilige und zentrale Instruction Datei lautet:
 
 Wenn die Angaben in dieser Datei, sich mit anderen Angaben aus anderen Dateien wiedersprechen, ist der globalen Instruction Datei folge zu leisten und die Angaben nach unten zu vererben.
 
-Z.B.: Wenn hier die Tokenbegrenzung von 1200 bestehen, in einer anderen Datei, jedoch von 1000 die Rede ist, muss die KI automatisch, in dieser korrupten Datei, die Tokenbegrenzung auf 1200 anpassen bzw. überschreiben.
+Z.B.: Wenn hier die Tokenbegrenzung bei 6000 liegt, in einer anderen Datei, jedoch von 1000 die Rede ist, muss die KI automatisch, in dieser korrupten Datei, die Tokenbegrenzung auf 6000 anpassen bzw. überschreiben.
 
 **Tokenberechnung und Limits**
 
-Die aktuelle Brutto-Obergrenze
+Die aktuelle Token-Brutto-Obergrenze für folgende Modelle sind folgende:
+
+Theorie:
+Dies sind nur theoretische Zahlen.
+
+- GPT-4.1: 64'000 Tokens
+- GPT-4o: 128'000 Tokens
+- Claude Sonnet 4: 250'000 Tokens
+- Google Gemini 2.5 Pro: 1'000'000 Tokens
+
+Praxis:
+Die Praxis zeigt eindeutig, dass schon ab 80% der Tokens Fehler / Anomalien auftreten können.
+Daher konzentrieren wir uns auf das jeweilige aktive Modell (Die KI soll Wissen, welches Modell aktiv ist / soll es erkennen, wenn möglich) und ziehen 20% Tokens des jeweiligen Modell als Puffer ab. So dass 80% der Tokens als effektive Grenze verbleiben.
+Die KI muss zudem die Token-Nutzung kontinuierlich überwachen und ist verantwortlich innerhalb der Grenze zu sein.
+
+**🎯 SIMON'S 5-3-1 REGEL (GLOBAL GÜLTIG):**
+Ausgenommene Datei: ".github\copilot-instructions.md"
+
+```
+📊 OPTIMALE DATEI-LIMITS (GitHub Copilot 64k Basis):
+├── Praktisches Arbeits-Limit: 51.200 Tokens (80% von 64k)
+├── Chat-Context Reserve: 12.800 Tokens
+├── Verfügbar für Dateien: 38.400 Tokens
+
+📁 DATEI-GRÖSSEN-STANDARDS:
+
+├── 📋 KLEINE DATEIEN: MAX 800 Tokens (Instructions-Module, Configs)
+├── 📄 MITTLERE DATEIEN: MAX 1.500 Tokens (Blog-Posts, Documentation)
+├── 📚 GROSSE DATEIEN: MAX 6.000 Tokens (Todo-Listen, Haupt-Instructions)
+
+🔄 SIMULTANE VERARBEITUNG:
+
+├── 5 kleine Dateien (bis 800 Tokens) = 4.000 Tokens
+├── 3 mittlere Dateien (bis 1.500 Tokens) = 4.500 Tokens
+├── 1 große Datei (bis 6.000 Tokens) = 6.000 Tokens
+├── Chat-Reserve = 25.000 Tokens
+═══════════════════════════════════════════════════
+GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
+```
+
+**🚨 EXCEPTION-TRIGGER:** Bei combined_tokens > 35.000 → Exception werfen und Scope reduzieren.
+
+Dabei muss die KI die Tokenkette berücksichtigen und die exakte Tokens berechnen:
+Exakte Token-Formel: (Zeichen_Anzahl ÷ 4) + (Wörter_Anzahl × 0.75)
+
+Die Tokenkette umfasst:
+
+- Aufgabenstellung / Anweisung / Frage im Chat
+
+Dabei muss die KI zuerst eine Token-Berechnung für die gesamte Kette der Arbeit durchführen.
+
+Dabei unterscheiden wir zwischen 3 Kategorien: Lesen (Eingabe), denken/verständnis (Verarbeitung) und Ausgabe (Ausgabe).
+EVA Prinzip.
+
+_Vorarbeit:_
+
+Bei jedem neuen Chat: Analyse Took und build checker ausführen.
+
+_Lesen:_
+
+- Token-Berechnung
+- Chatverlauf selbst (Optional wenn nötig)
+- Kontextinformationen
+- Verzeichnisname (inkl. Instruction)
+- Dateiname (inkl. Instruction)
+- Dateiinhalt ((inkl. Instruction)
+
+_Denkvorgang und Verständnis:_
+
+- Interne denkkette aktivieren:
+- Analyse der Eingabe
+- Überprüfung und Verständnis der Eingabe
+- Verknüpfung mit Quelle der Wahrheit: ".github\copilot-instructions.md"
+- Analyse der Analyse- und build-checker Logdatei
+- Evaluierung von potenziellen Wiedersprüchen
+- Sind Wiedersprüche vorhanden? Lassen sich diese durch die Datei: ".github\copilot-instructions.md" auflösen?
+- Nein? Exception werfen, User Fragen, gemäss Vorgabe.
+- Ja? Angaben in dieser Datei: ".github\copilot-instructions.md" nach unten vererben
+- Tokenberechnung durchführen: Wenn Limit erreicht, dann Exception werfen. Sonst weiter arbeiten.
+-
+
+_schreiben:_
+
+- Todo-Liste überprüfen auf die Frage: Ist die Todo-Liste (docs\todos\todos.md) aktuell? Nein? Dann aktualisieren. Erledigte Todos, löschen.
+- Ist die Todo-Liste aktuell? Ja? Dann weiterarbeiten.
+- Todo-Liste gemäss Logdateien (Analyse- und buildchecker) --> bestehende Todos nach den Prioritäten sortieren.
+-
+-
+- Anpassung der Datei oder bei User Rückfragen
+-
+
+Verzeichnisname, Dateiname, Copilot-Instructions, Kontextinformationen, Inhalte der jeweiligen
+
+Doch Achtung, dies ist nur eine theoret
 
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS (MODULAR HUB)
 
@@ -254,21 +363,6 @@ Diese Tools müssen hier in dieser Datei von der KI bei jedem neuen Chat geprüf
 
 **🎯 MAIN GOAL:** Authentische, professionelle Website für Simon's IT-Erfahrung-Sharing - OHNE Chaos!
 
-## 🤖 AI Token Tracker Integration
-
-### **WICHTIG: Token-Überwachung verwenden**
-
-Die KI muss berücksichtigen, dass der Code nicht über 1200 Zeilen lang sein darf, ansonsten muss modularisiert werden.
-Diese Regel ist global gültig. Sollten Widersprüche auftreten, und in anderen Dateien etwas anderes stehen, so muss die KI dies eigenständig erkennen, und die entsprechenden Dateien deren Inhalt gemäss der globalen Regel überschreiben.
-
-### **Automatische Token-Optimierung:**
-
-- Extension sendet automatisch Token-Updates an diesen Chat
-- Bei kritischen Limits: Sofortiger Chat-Neustart empfohlen
-- Scope-basierte Modularisierung verwenden
-
----
-
 ## 📁 **OPTIMIERTE .GITHUB VERZEICHNISSTRUKTUR:**
 
 ### **🗂️ ÜBERBLICK (AKTUELLER STAND):**
@@ -301,10 +395,7 @@ Dabei muss die KI das gesamte Projekt, strukturell nach dem folgenden Beispiel d
 │   │   ├── exception-system.md         # ✅ AKTIV - Fehlerbehandlung
 │   │   ├── datei-operationen.md        # 📍 VERLINKT ABER FEHLT
 │   │   └── scope-system.md             # 📍 VERLINKT ABER FEHLT
-│   ├── 🤖 coaching/                    # 📍 KOMPLETT FEHLENDES VERZEICHNIS
-│   │   ├── produktivitaet.md           # 📍 VERLINKT ABER FEHLT
-│   │   └── anti-konfusion.md           # 📍 VERLINKT ABER FEHLT
-│   ├── 🏛️ organisation/                # ✅ EXISTIERT - Naming etc.
+││   ├── 🏛️ organisation/                # ✅ EXISTIERT - Naming etc.
 │   │   ├── README.md                   # ✅ AKTIV
 │   │   ├── namenskonvention.md         # ✅ AKTIV
 │   │   └── hook-training/              # ✅ AKTIV (3 Dateien)
