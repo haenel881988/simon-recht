@@ -650,14 +650,7 @@ ${
   async findAllFiles() {
     const files = [];
     await this.walkDirectory(this.projectRoot, async (filePath) => {
-      // Ignoriere node_modules, .git, etc.
-      if (
-        !filePath.includes("node_modules") &&
-        !filePath.includes(".git") &&
-        !filePath.includes("dist")
-      ) {
-        files.push(filePath);
-      }
+      files.push(filePath);
     });
     return files;
   }
@@ -669,14 +662,76 @@ ${
       for (const entry of entries) {
         const fullPath = path.join(dir, entry.name);
 
+        // 🚫 AUSSCHLUSS-PRÜFUNG DIREKT IM WALK-PROZESS
+        const excludePatterns = [
+          "node_modules", // NPM Dependencies (MAIN CULPRIT!)
+          ".astro", // Astro Build Cache
+          ".git", // Git Metadata
+          ".vscode", // VS Code Settings
+          ".vs", // Visual Studio
+          "dist", // Build Output
+          ".next", // Next.js Cache
+          ".nuxt", // Nuxt.js Cache
+          "build", // Alternative Build Dir
+          "coverage", // Test Coverage
+          ".nyc_output", // Code Coverage
+          "tmp", // Temporary Files
+          "temp", // Temporary Files
+          ".cache", // Cache Files
+          ".parcel-cache", // Parcel Cache
+          ".turbo", // Turbo Cache
+          ".vercel", // Vercel Cache
+          ".netlify", // Netlify Cache
+          "logs", // Log Directories
+        ];
+
+        // Versteckte Verzeichnisse ausschließen (außer .github)
+        const entryName = entry.name;
+        const isHiddenDir =
+          entryName.startsWith(".") &&
+          entryName !== ".github" &&
+          entryName !== ".gitignore";
+
+        // Prüfe Verzeichnis-Ausschlüsse
+        const shouldExcludeDir =
+          excludePatterns.includes(entryName) || isHiddenDir;
+
         if (entry.isDirectory()) {
-          await this.walkDirectory(fullPath, callback);
+          // 🚫 VERZEICHNIS KOMPLETT ÜBERSPRINGEN
+          if (!shouldExcludeDir) {
+            await this.walkDirectory(fullPath, callback);
+          }
+          // ELSE: Verzeichnis wird komplett ignoriert - KEINE Rekursion!
         } else {
-          await callback(fullPath);
+          // 🚫 DATEI-LEVEL AUSSCHLÜSSE
+          const excludeFilePatterns = [
+            "package-lock.json",
+            "yarn.lock",
+            "pnpm-lock.yaml",
+            "npm-debug.log",
+            "yarn-debug.log",
+            "yarn-error.log",
+          ];
+
+          const shouldExcludeFile =
+            excludeFilePatterns.includes(entryName) ||
+            entryName.endsWith(".log") ||
+            entryName === ".DS_Store" ||
+            entryName === "Thumbs.db" ||
+            entryName === "desktop.ini" ||
+            entryName.startsWith("projekt-analyse-") || // 🚫 ANALYZER OUTPUT (Simon's Request)
+            entryName.startsWith("widerspruchs-report-") || // 🚫 SCANNER OUTPUT
+            entryName.includes("-analysis-") || // 🚫 ANALYSIS FILES
+            entryName.includes("-report-"); // 🚫 REPORT FILES
+
+          if (!shouldExcludeFile) {
+            await callback(fullPath);
+          }
+          // ELSE: Datei wird ignoriert
         }
       }
     } catch (error) {
-      // Verzeichnis nicht zugänglich
+      // Verzeichnis nicht zugänglich - ignorieren
     }
   }
 

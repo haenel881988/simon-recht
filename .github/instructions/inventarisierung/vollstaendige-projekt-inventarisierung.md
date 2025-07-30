@@ -2,7 +2,7 @@
 
 **Erstellt:** 29.07.2025, 19:50 Uhr  
 **Zweck:** Struktureller Projektüberblick gemäß Instructions  
-**1200-Zeilen-Regel:** ✅ AKTIV überwacht
+**6000-Token-Regel:** ✅ AKTIV überwacht
 
 ---
 
@@ -164,7 +164,7 @@ tools/
 
 1. **[SOFORT]** Tool-Modularisierung beginnen
 2. **[HEUTE]** Content-Redundanzen eliminieren
-3. **[HEUTE]** 1200-Zeilen-Regel automatisch überwachen
+3. **[HEUTE]** 6000-Token-Regel automatisch überwachen
 4. **[MORGEN]** Token-Budget-System implementieren
 
 ---

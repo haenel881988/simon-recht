@@ -30,9 +30,27 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ---
 
-## 🔴 **KRITISCHE SOFORT-TODOS (HEUTE 29.07.2025)**
+## 🔴 **KRITISCHE SOFORT-TODOS (30.07.2025 - SCANNER-ERKENNTNISSE)**
 
-### **1. CSS-MODULARISIERUNG (SIMON'S INSISTENZ)**
+### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (HÖCHSTE PRIORITÄT)**
+
+- [ ] **[HEUTE]** 5 kritische Instructions-Widersprüche auflösen:
+  - [ ] "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
+  - [ ] "KRITISCH"-Überfüllung in allen Dateien reduzieren (max 3 pro Datei)
+  - [ ] Token-Regeln vereinheitlichen: 6000 statt 1200 durchgängig umsetzen
+  - [ ] Prioritäts-Hierarchie klar definieren: HÖCHSTE → KRITISCH → HOCH → MITTEL → NIEDRIG
+  - [ ] Multiple kritische Einträge auf sinnvolle Verteilung reduzieren
+
+### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
+
+- [ ] **[HEUTE]** 3 fehlende Instructions-Dateien erstellen:
+  - [ ] `instructions/core/anti-prokrastination.md`
+  - [ ] `instructions/project/exception-system.md`
+  - [ ] `instructions/project/datei-operationen.md`
+- [ ] **[HEUTE]** Blog-Links aktualisieren (6 fehlende Verweise)
+- [ ] **[HEUTE]** Website-Struktur Links prüfen und korrigieren
+
+### **3. CSS-MODULARISIERUNG (SIMON'S INSISTENZ)**
 
 - [ ] **[HEUTE]** CSS in Unterverzeichnisse aufteilen
   - [ ] `src/styles/elemente/button.css`

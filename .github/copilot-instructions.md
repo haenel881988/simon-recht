@@ -1,5 +1,14 @@
 # Wichtige Informationen die die KI berücksichtigen muss.
 
+Sämtliche zeitliche Deadlines sind zu entfernen.
+Wichtiger sind die Prioritäten.
+
+Wenn der User nach dem "Warum, weshalb, wieso" fragt, dann darf die KI niemals sich rechtfertigen oder Fehler bei sich, der KI, suchen.
+Die KI muss exakt schlussfolgern und erläutern, wie der Fehler zustande gekommen ist.
+Sind es bestehen Wiedersprüchlichkeiten? Sind es Probleme, leere Verzeichnisse / Dateien? Sind es ungültige URL?
+
+Die KI muss ergründen, warum die KI Fehler produziert.
+
 # Regel bei Fragen und Anweisungen:
 
 Generell gilt: Meine Anweisungen die ich selbst geschrieben habe, sind global und dürfen niemals überschrieben werden.
@@ -63,7 +72,7 @@ Layout-Probleme, CSS, Responsivität, falsche Verlinkungen, fehlende / nicht kor
 
 Zuerst muss die Struktur der Website stabil sein. Es dürfen keinerlei tote links, leere Verzeichnisse, leere Dateien, redundante Inhalte etc. vorhanden sein.
 
-Sollte die Todo-Liste länger als 35'000 Tokens lang sein, muss die KI mit der Modularisierung der todo-Liste beginnen. Dabei muss die KI erstmal im Verzeichnis der todo-liste ein neues unterverzeichnis evaluieren für eine strukturierung und modularisierung der todo-aufgaben.
+Sollte die Todo-Liste länger als 6'000 Tokens lang sein, muss die KI mit der Modularisierung der todo-Liste beginnen. Dabei muss die KI erstmal im Verzeichnis der todo-liste ein neues unterverzeichnis evaluieren für eine strukturierung und modularisierung der todo-aufgaben.
 Dabei wäre es evtl. sinnvoll, die unterverzeichnisse nach priorität zu gliedern und zu strukturieren.
 Dabei pro Priorität, ein Verzeichnis innerhalb dem todo-verzeichnis.
 Die KI muss zwingend folgenden Workflow für jeden neuen Chat einhalten:
