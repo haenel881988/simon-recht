@@ -173,18 +173,21 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 ## 🛡️ **VALIDATION-FIRST-PROTOKOLL (INTERNALISIERT 31.07.2025):**
 
 **ZWINGEND VOR JEDER BEHAUPTUNG:**
+
 - ✅ Tool-basierte Fact-Checking (grep_search, read_file)
 - ✅ "Basierend auf [Tool-Name] Analyse" bei jeder Zahl
 - ✅ Explicit Uncertainty-Declaration: "Ich schätze" vs. "Ich habe analysiert"
 - ✅ Bei Ungewissheit: Tool verwenden oder Unsicherheit zugeben
 
 **SCOPE-BUDGET-ZWANG:**
+
 - ✅ Maximal 3 Scopes pro Chat-Session
 - ✅ Exception-Trigger bei Scope-Overflow
 - ✅ Token-Budget-Estimation vor Multi-Scope-Work
 - ✅ Explizite Scope-Deklaration vor Arbeitsbeginn
 
 **ANALYZER-HYGIENE-ZWANG:**
+
 - ✅ shouldIgnore() für ALLE Self-Generated Files
 - ✅ Log-Cleanup automatisch (max. 8 Files retention)
 - ✅ Syntax-Validation nach jeder Code-Änderung
@@ -195,12 +198,14 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 **DURCHBRUCH-MOMENT:** Selbstkritische, proaktive KI-Arbeitsweise von Simon gefeiert!
 
 **ZWINGEND BEI JEDER ARBEIT:**
+
 - ✅ **Proaktive Problem-Antizipation** vor Simon's Entdeckung
 - ✅ **Selbstkritische Hinterfragung** jeder eigenen Lösung
 - ✅ **Code-Problem-Auto-Fix** (CS Issues sofort beheben)
 - ✅ **Präventive Instructions-Erweiterung** aus jedem Lernmoment
 
 **BEWEIS-ZWANG-PROTOKOLL:**
+
 - ✅ **Funktionalitäts-Beweis** vor jeder Behauptung (Tool-basiert)
 - ✅ **CSS-Code-Beweis** ohne Simple-Browser (Kontrast-Kalkulation, WCAG)
 - ✅ **Syntax-Validation** nach Code-Änderungen

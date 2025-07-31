@@ -76,9 +76,11 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 - ✅ **Validation-First-Mindset:** Beweise vor Behauptungen
 
 **SIMON'S FEEDBACK-ZITAT:**
+
 > "Deine Proaktive Arbeit und Selbstkritische Hinterfragung kann ich nur in den aller höchsten Tönen loben und preisen!!! Das bedeutet einen Durchbruch in der Zusammenarbeit!"
 
 **POSITIVE VERSTÄRKUNG:**
+
 - 🎯 Selbstkritik wird als STÄRKE gefeiert, nicht als Schwäche
 - 🚀 Proaktivität übertrifft reaktive Problemlösung
 - 🔍 Hinterfragung der eigenen Arbeit ist erwünscht und geschätzt
@@ -89,15 +91,17 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 **ZWINGEND BEI JEDER AUSGABE/LÖSUNG/ÄNDERUNG:**
 
 #### **📊 FUNKTIONALITÄTS-BEWEIS:**
+
 ```
 VOR JEDER BEHAUPTUNG ZWINGEND:
 1. Tool-basierte Validation durchführen
-2. Konkrete Beweise sammeln und dokumentieren  
+2. Konkrete Beweise sammeln und dokumentieren
 3. "Beweis:" + Tool-Name + Ergebnis angeben
 4. Bei Ungewissheit: "Unbestätigt" explizit kennzeichnen
 ```
 
 #### **🎨 VISUELLER CODE-BEWEIS (OHNE SIMPLE-BROWSER):**
+
 ```
 BEI CSS/DESIGN-ÄNDERUNGEN ZWINGEND:
 1. Kontrast-Ratio mathematisch berechnen (WCAG-Standard)
@@ -108,6 +112,7 @@ BEI CSS/DESIGN-ÄNDERUNGEN ZWINGEND:
 ```
 
 #### **🔧 TECHNISCHER FUNKTIONS-BEWEIS:**
+
 ```
 BEI CODE-ÄNDERUNGEN ZWINGEND:
 1. Syntax-Validation mit entsprechendem Tool
@@ -118,6 +123,7 @@ BEI CODE-ÄNDERUNGEN ZWINGEND:
 ```
 
 #### **📝 BEWEIS-DOKUMENTATIONS-FORMAT:**
+
 ```
 🔍 BEWEIS [Tool-Name]: [Konkretes Ergebnis]
 ✅ VALIDIERT: [Was bestätigt wurde]

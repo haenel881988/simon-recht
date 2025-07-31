@@ -1,25 +1,38 @@
 #!/usr/bin/env node
 // Logfile-Handling: Immer nur die letzten 8 Logdateien behalten, ältere löschen
-function cleanupOldLogs(logDir, pattern = /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, keep = 8) {
-  const fs = require('fs');
-  const path = require('path');
+function cleanupOldLogs(
+  logDir,
+  pattern = /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i,
+  keep = 8
+) {
+  const fs = require("fs");
+  const path = require("path");
   if (!fs.existsSync(logDir)) return;
-  const files = fs.readdirSync(logDir)
-    .filter(f => pattern.test(f))
-    .map(f => ({
+  const files = fs
+    .readdirSync(logDir)
+    .filter((f) => pattern.test(f))
+    .map((f) => ({
       name: f,
-      time: fs.statSync(path.join(logDir, f)).mtime.getTime()
+      time: fs.statSync(path.join(logDir, f)).mtime.getTime(),
     }))
     .sort((a, b) => b.time - a.time);
   if (files.length > keep) {
-    files.slice(keep).forEach(f => {
-      try { fs.unlinkSync(path.join(logDir, f.name)); } catch (e) { /* ignore */ }
+    files.slice(keep).forEach((f) => {
+      try {
+        fs.unlinkSync(path.join(logDir, f.name));
+      } catch (e) {
+        /* ignore */
+      }
     });
   }
 }
 
 // Vor Analyse Logfiles bereinigen
-cleanupOldLogs(__dirname, /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, 8);
+cleanupOldLogs(
+  __dirname,
+  /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i,
+  8
+);
 
 /**
  * 🤖 UNIVERSELLES PROJEKT-ANALYSE-SYSTEM v1.0
