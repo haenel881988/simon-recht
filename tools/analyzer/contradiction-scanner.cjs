@@ -165,7 +165,7 @@ class ContradictionScanner {
             // Finde Zeilennummer für den Link
             const lineNumber = this.findLineNumber(content, link);
             const lineContent = this.extractLineContent(content, lineNumber);
-            
+
             this.results.invalidLinks.push({
               file: filePath,
               link: link,
@@ -272,8 +272,12 @@ class ContradictionScanner {
 
           if (match1 && match2) {
             // KONTEXT-PRÜFUNG: Ist das ein Beispiel/Illustration?
-            const isExample = this.isExampleContext(content, match1[0], match2[0]);
-            
+            const isExample = this.isExampleContext(
+              content,
+              match1[0],
+              match2[0]
+            );
+
             if (!isExample) {
               // Custom Check falls definiert
               if (contradiction.customCheck) {
@@ -288,7 +292,7 @@ class ContradictionScanner {
                   const line2 = this.findLineNumber(content, match2[0]);
                   const lineContent1 = this.extractLineContent(content, line1);
                   const lineContent2 = this.extractLineContent(content, line2);
-                  
+
                   this.results.contradictions.push({
                     file: filePath,
                     description: contradiction.description,
@@ -309,7 +313,7 @@ class ContradictionScanner {
                 const line2 = this.findLineNumber(content, match2[0]);
                 const lineContent1 = this.extractLineContent(content, line1);
                 const lineContent2 = this.extractLineContent(content, line2);
-                
+
                 this.results.contradictions.push({
                   file: filePath,
                   description: contradiction.description,
@@ -360,7 +364,7 @@ class ContradictionScanner {
           if (!exists) {
             const lineNumber = this.findLineNumber(content, refPath);
             const lineContent = this.extractLineContent(content, lineNumber);
-            
+
             this.results.pathErrors.push({
               file: filePath,
               referencedPath: refPath,
@@ -564,32 +568,40 @@ class ContradictionScanner {
    */
   isExampleContext(content, evidence1, evidence2) {
     // Suche in einem 3-Zeilen-Radius um die Evidenz
-    const lines = content.split('\n');
-    
+    const lines = content.split("\n");
+
     // Finde Zeilen der Evidenzen
     const line1 = this.findLineNumber(content, evidence1);
     const line2 = this.findLineNumber(content, evidence2);
-    
+
     // Überprüfe 3 Zeilen vor und nach jedem Match
     const contextLines = [];
-    for (let i = Math.max(0, line1 - 3); i <= Math.min(lines.length - 1, line1 + 3); i++) {
+    for (
+      let i = Math.max(0, line1 - 3);
+      i <= Math.min(lines.length - 1, line1 + 3);
+      i++
+    ) {
       contextLines.push(lines[i]);
     }
-    for (let i = Math.max(0, line2 - 3); i <= Math.min(lines.length - 1, line2 + 3); i++) {
+    for (
+      let i = Math.max(0, line2 - 3);
+      i <= Math.min(lines.length - 1, line2 + 3);
+      i++
+    ) {
       contextLines.push(lines[i]);
     }
-    
-    const contextText = contextLines.join('\n');
-    
+
+    const contextText = contextLines.join("\n");
+
     // Prüfe auf Beispiel-Indikatoren
-    return this.contextExclusions.some(pattern => pattern.test(contextText));
+    return this.contextExclusions.some((pattern) => pattern.test(contextText));
   }
 
   /**
    * 📏 ZEILENNUMMER FINDEN
    */
   findLineNumber(content, searchText) {
-    const lines = content.split('\n');
+    const lines = content.split("\n");
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].includes(searchText)) {
         return i + 1; // 1-basierte Zeilennummer
@@ -602,7 +614,7 @@ class ContradictionScanner {
    * 📄 ZEILEN-INHALT EXTRAHIEREN
    */
   extractLineContent(content, lineNumber) {
-    const lines = content.split('\n');
+    const lines = content.split("\n");
     const index = lineNumber - 1; // Zu 0-basiert konvertieren
     if (index >= 0 && index < lines.length) {
       return lines[index].trim();
@@ -658,9 +670,9 @@ ${
         .map(
           (item) =>
             `- **${item.description}** in \`${item.file}\`
-  - 📍 Zeile ${item.line1 || 'N/A'}: "${item.evidence1}"
+  - 📍 Zeile ${item.line1 || "N/A"}: "${item.evidence1}"
     → \`${item.lineContent1 || item.evidence1}\`
-  - 📍 Zeile ${item.line2 || 'N/A'}: "${item.evidence2}"
+  - 📍 Zeile ${item.line2 || "N/A"}: "${item.evidence2}"
     → \`${item.lineContent2 || item.evidence2}\``
         )
         .join("\n")
@@ -689,7 +701,9 @@ ${
     : this.results.invalidLinks
         .map(
           (item) =>
-            `- \`${item.file}\` (Zeile ${item.lineNumber || 'N/A'}): Link zu \`${item.link}\` nicht gefunden
+            `- \`${item.file}\` (Zeile ${
+              item.lineNumber || "N/A"
+            }): Link zu \`${item.link}\` nicht gefunden
     → \`${item.lineContent || item.link}\``
         )
         .join("\n")
@@ -700,8 +714,10 @@ ${
   this.results.emptyFiles.length === 0
     ? "✅ Keine leeren Dateien"
     : this.results.emptyFiles
-        .map((item) => `- \`${item.file}\`: ${item.type} (${item.size} Bytes)
-    → \`${item.lineContent || '[DATEI LEER]'}\``)
+        .map(
+          (item) => `- \`${item.file}\`: ${item.type} (${item.size} Bytes)
+    → \`${item.lineContent || "[DATEI LEER]"}\``
+        )
         .join("\n")
 }
 
@@ -712,7 +728,9 @@ ${
     : this.results.pathErrors
         .map(
           (item) =>
-            `- \`${item.file}\` (Zeile ${item.lineNumber || 'N/A'}): Referenz zu \`${item.referencedPath}\` ungültig
+            `- \`${item.file}\` (Zeile ${
+              item.lineNumber || "N/A"
+            }): Referenz zu \`${item.referencedPath}\` ungültig
     → \`${item.lineContent || item.referencedPath}\``
         )
         .join("\n")

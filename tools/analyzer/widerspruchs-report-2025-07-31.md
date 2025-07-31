@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 15:39:02  
+**Generiert:** 31.7.2025, 15:40:46  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
