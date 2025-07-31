@@ -38,8 +38,10 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
 - [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "Top-Priorität" ersetzen
 - [ ] **Priorität:** Hoch
-- [ ] **Status:** Offen
+- [ ] **Status:** ✅ ERLEDIGT
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Widerspruchs-Scanner
+- [ ] **Prompt:** "Öffne .github/copilot-instructions.md und suche nach allen Instanzen von 'höchste Priorität', 'WICHTIGSTE PRIORITÄT' und ähnlichen Begriffen. Benenne eine der doppelten Instanzen in 'Top-Priorität' um, sodass keine Doppelung mehr existiert. Nutze replace_string_in_file Tool mit exaktem Kontext."
 
 - [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
 - [ ] **Kontext:** 6x "HOCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
@@ -47,6 +49,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Prioritäten-Bereiniger
+- [ ] **Prompt:** "Analysiere .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md mit grep_search nach 'HOCH'. Öffne die Datei und bewerte alle 6 Instanzen kritisch. Behalte nur die 3 wirklich wichtigsten als 'HOCH', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für jede Änderung mit exaktem Kontext."
 
 - [ ] **Aufgabe:** "hoch"-Überfüllung in todos.md reduzieren
 - [ ] **Kontext:** 7x "hoch" in docs/todos/todos.md - zu viele wichtige Einträge verwirren Prioritäten
@@ -54,6 +58,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Todo-Prioritäten-Optimizer
+- [ ] **Prompt:** "Führe grep_search nach 'hoch' in docs/todos/todos.md durch. Identifiziere alle 7 Instanzen und bewerte kritisch welche wirklich 'Hoch' bleiben sollen (maximal 3). Ändere den Rest auf 'Mittel' oder 'Niedrig'. Nutze replace_string_in_file für jede Anpassung."
 
 - [ ] **Aufgabe:** "hoch"-Überfüllung in verhaltensprobleme.md reduzieren
 - [ ] **Kontext:** 4x "hoch" in docs/todos/verhaltensprobleme.md gefunden
@@ -61,6 +67,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Prioritäten-Bereiniger
+- [ ] **Prompt:** "Analysiere docs/todos/verhaltensprobleme.md mit grep_search nach 'hoch'. Öffne die Datei und bewerte alle 4 Instanzen. Behalte maximal 2 als 'hoch', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für Änderungen."
 
 - [ ] **Aufgabe:** Token-Regeln vereinheitlichen - 6000 statt 1200 durchgängig umsetzen
 - [ ] **Kontext:** Scanner fand unterschiedliche Token-Limits in verschiedenen Dateien - führt zu Verwirrung
@@ -68,6 +76,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Token-Regel-Harmonisierer
+- [ ] **Prompt:** "Führe grep_search im gesamten Projekt nach '1200.*Zeilen', 'Token.*Limit', '1200.\*Token' durch. Identifiziere alle Dateien mit veralteten 1200-Limits. Ersetze systematisch alle durch '6000 Token' als globalen Standard. Nutze replace_string_in_file für jede Datei einzeln."
 
 ### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
 
@@ -77,6 +87,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Instruction-Architekt
+- [ ] **Prompt:** "Analysiere .github/copilot-instructions.md und extrahiere alle Exception-bezogenen Regeln (Widerspruchsregel, Exception-Handling, Fehlerbehandlung). Erstelle .github/instructions/project/exception-system.md mit strukturiertem Markdown. Verzeichnis vorher erstellen falls nötig. Nutze create_file tool."
 
 - [ ] **Aufgabe:** Fehlende Datei instructions/project/datei-operationen.md erstellen
 - [ ] **Kontext:** Link-Fehler in .github/copilot-instructions.md - Datei existiert nicht
@@ -84,6 +96,8 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Instruction-Architekt
+- [ ] **Prompt:** "Analysiere .github/copilot-instructions.md nach allen Datei-Operations-Regeln (Backup-Zwang, git add/commit/push, Search-Regeln, Integrität). Erstelle .github/instructions/project/datei-operationen.md mit strukturiertem Content. Nutze create_file tool."
 
 - [ ] **Aufgabe:** 6 fehlende Blog-Links reparieren
 - [ ] **Kontext:** Links zu /blog/wenn-ehrlichkeit-bestraft-wird, /blog/der-wendepunkt-meine-story, /blog/drei-saeulen-methode-detail existieren nicht
@@ -91,38 +105,145 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Content-Manager & Link-Reparateur
+- [ ] **Prompt:** "Führe grep_search nach den Blog-Links '/blog/wenn-ehrlichkeit-bestraft-wird', '/blog/der-wendepunkt-meine-story', '/blog/drei-saeulen-methode-detail' durch. Identifiziere alle Dateien mit diesen Links. Entscheide: Blog-Artikel erstellen oder Links entfernen. Dokumentiere Entscheidung und führe aus."
 
 ### **3. CSS-MODULARISIERUNG (SIMON'S INSISTENZ)**
 
-- [ ] **[HEUTE]** CSS in Unterverzeichnisse aufteilen
-  - [ ] `src/styles/elemente/button.css`
-  - [ ] `src/styles/elemente/header-und-navigation.css`
-  - [ ] `src/styles/base/typography.css`
-  - [ ] `src/styles/layout/responsive.css`
-- [ ] **[HEUTE]** Navigation optisch optimieren (Simon insistiert!)
-- [ ] **[HEUTE]** CSS-Abhängigkeiten prüfen und anpassen
+- [ ] **Aufgabe:** CSS in Unterverzeichnisse aufteilen
+- [ ] **Kontext:** Alle CSS-Dateien sind momentan in src/styles/ - Simon insistiert auf bessere Struktur
+- [ ] **Ressourcen:** Verzeichnisse src/styles/elemente/, src/styles/base/, src/styles/layout/ erstellen und CSS aufteilen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** CSS-Architekt
+- [ ] **Prompt:** "Analysiere src/styles/ Verzeichnis. Erstelle Unterverzeichnisse: elemente/, base/, layout/. Teile CSS-Dateien logisch auf: button.css → elemente/, typography.css → base/, responsive.css → layout/. Aktualisiere alle Imports in .astro Dateien entsprechend."
+
+  - [ ] **Sub-Aufgabe:** `src/styles/elemente/button.css` erstellen
+  - [ ] **Sub-Aufgabe:** `src/styles/elemente/header-und-navigation.css` erstellen
+  - [ ] **Sub-Aufgabe:** `src/styles/base/typography.css` erstellen
+  - [ ] **Sub-Aufgabe:** `src/styles/layout/responsive.css` erstellen
+
+- [ ] **Aufgabe:** Navigation optisch optimieren (Simon insistiert!)
+- [ ] **Kontext:** Simon ist mit der aktuellen Navigation nicht zufrieden - optische Verbesserung nötig
+- [ ] **Ressourcen:** CSS-Checker verwenden, Navigation-spezifische CSS überarbeiten
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** UI/UX-Designer
+- [ ] **Prompt:** "Analysiere aktuelle Navigation in Header-Komponente. Identifiziere optische Probleme. Verbessere: Kontrast, Spacing, Hover-Effekte, Mobile-Responsive-Verhalten. Nutze Build-Checker zur Validation. Dokumentiere Änderungen."
+
+- [ ] **Aufgabe:** CSS-Abhängigkeiten prüfen und anpassen
+- [ ] **Kontext:** Nach CSS-Modularisierung müssen alle Abhängigkeiten korrekt funktionieren
+- [ ] **Ressourcen:** Build-Checker verwenden, alle .astro Dateien auf CSS-Imports prüfen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Dependency-Manager
+- [ ] **Prompt:** "Nach CSS-Aufeilung: Scanne alle .astro Dateien nach CSS-Imports. Aktualisiere Pfade entsprechend neuer Struktur. Führe Build-Test durch. Behebe alle Import-Fehler. Nutze grep_search für systematische Analyse."
 
 ### **2. WICHTIGE ISSUES MIGRATION (AUS ISSUES.MD)**
 
-- [ ] **[HEUTE]** CSS-Architektur-Verletzungen beheben
-  - [ ] Systematische Migration zu semantischen CSS-Klassen in vorhandenen Dateien
-  - [ ] 60/30/10 Design-Prinzip wiederherstellen unter berücksichtigung dass die KI das Design-Prinzip prüfen soll, aus der Sicht eines Web- und UI/UX Designer.
-- [ ] **[HEUTE]** Instructions-Pfade korrigieren
-  - [ ] docs/projekt/ Verweise entfernen (existiert nicht)
-  - [ ] Leere docs/change_management/ Verzeichnisse bereinigen
-  - [ ] Systematische Instruction-Bereinigung durchführen
-- [ ] **[HEUTE]** Projekt-Inventar vollständig aktualisieren
-- [ ] **[HEUTE]** Scopes-Definition dokumentieren und anwenden
+- [ ] **Aufgabe:** CSS-Architektur-Verletzungen beheben - Tailwind zu semantischen Klassen
+- [ ] **Kontext:** 304+ Tailwind-Klassen gefunden - verstoßen gegen semantische CSS-Architektur
+- [ ] **Ressourcen:** Systematische Migration zu semantischen CSS-Klassen in allen .astro Dateien
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** CSS-Migrator & Semantic-Class-Architekt
+- [ ] **Prompt:** "Scanne alle .astro Dateien mit grep_search nach Tailwind-Klassen (bg-, text-, flex-, etc.). Erstelle semantische CSS-Klassen (.hero-section, .cta-button, etc.) und ersetze systematisch alle Tailwind-Instanzen. Nutze Build-Checker zur Validation."
+
+- [ ] **Aufgabe:** 60/30/10 Design-Prinzip wiederherstellen
+- [ ] **Kontext:** Design-System muss aus UI/UX-Designer-Sicht validiert und optimiert werden
+- [ ] **Ressourcen:** CSS-Farbschema prüfen und anpassen (asphaltschwarz 60%, stormy-blue 30%, accent 10%)
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** UI/UX-Designer
+- [ ] **Prompt:** "Analysiere aktuelles Farbschema in CSS-Dateien. Validiere 60/30/10-Regel: asphaltschwarz (60%), stormy-blue (30%), accent-colors (10%). Optimiere aus UI/UX-Designer-Sicht: Kontrast, Zugänglichkeit, visuelle Hierarchie. Dokumentiere Änderungen."
+
+- [ ] **Aufgabe:** Instructions-Pfade korrigieren
+- [ ] **Kontext:** Veraltete Pfade docs/projekt/ und leere docs/change_management/ bereinigen
+- [ ] **Ressourcen:** Grep-Search nach docs/projekt/, systematische Pfad-Korrektur
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Path-Cleaner & Instructions-Validator
+- [ ] **Prompt:** "Grep-Search nach 'docs/projekt/' in allen Dateien. Entferne oder korrigiere alle veralteten Verweise. Prüfe docs/change_management/ auf Leerstand und bereinige. Validiere alle Instruction-Pfade auf Existenz."
+
+- [ ] **Aufgabe:** Projekt-Inventar vollständig aktualisieren
+- [ ] **Kontext:** Aktuelles Inventar nach Bereinigungen und Änderungen synchronisieren
+- [ ] **Ressourcen:** Universal-Project-Analyzer ausführen, vollständige Neuevaluierung
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Project-Inventory-Manager
+- [ ] **Prompt:** "Führe node tools/analyzer/universal-project-analyzer.cjs aus. Analysiere alle Ergebnisse und aktualisiere .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md mit aktuellen Zahlen, Scopes und Strukturen."
+
+- [ ] **Aufgabe:** Scopes-Definition dokumentieren und anwenden
+- [ ] **Kontext:** Scope-System aus Analyzer in offizielle Dokumentation überführen
+- [ ] **Ressourcen:** Scope-Patterns aus universal-project-analyzer.cjs extrahieren
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Scope-Architekt
+- [ ] **Prompt:** "Extrahiere Scope-Definitionen aus universal-project-analyzer.cjs. Erstelle oder aktualisiere .github/instructions/project/scope-system.md mit allen Scope-Patterns, Overlap-Rules und Modularisierungs-Empfehlungen. Strukturiert und vollständig."
 
 ### **3. 1200-ZEILEN-REGEL IMPLEMENTATION**
 
-- [ ] **[HEUTE]** Alle Analyzer um Zeilen-Überwachung erweitern
-  - [ ] universal-project-analyzer.cjs → 1200-Zeilen-Check
-  - [ ] structure-optimizer-v2.cjs → Auto-Modularisierung
-  - [ ] contradiction-scanner.cjs → Zeilen-Limit-Überwachung
-  - [ ] master-analyzer.cjs → Token-Optimierung
-- [ ] **[HEUTE]** Tabu-Verzeichnisse-Erkennung automatisieren
-- [ ] **[HEUTE]** Wöchentliche Zeilen-Audits einrichten
+- [ ] **Aufgabe:** Universal-project-analyzer um 1200-Zeilen-Check erweitern
+- [ ] **Kontext:** Analyzer muss automatisch warnen wenn Dateien 1200+ Zeilen erreichen
+- [ ] **Ressourcen:** universal-project-analyzer.cjs modifizieren, Zeilen-Limit-Checks hinzufügen
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Analyzer-Entwickler
+- [ ] **Prompt:** "Öffne tools/analyzer/universal-project-analyzer.cjs. Füge Zeilen-Zählung pro Datei hinzu. Implementiere Warnung bei >1200 Zeilen. Schlage Auto-Modularisierung vor. Teste mit großen Dateien und validiere Ausgabe."
+
+- [ ] **Aufgabe:** Structure-optimizer um Auto-Modularisierung erweitern
+- [ ] **Kontext:** Tool soll automatisch Vorschläge für Datei-Aufteilung generieren
+- [ ] **Ressourcen:** Wenn structure-optimizer-v2.cjs existiert, erweitern
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Structure-Optimizer-Entwickler
+- [ ] **Prompt:** "Prüfe ob tools/analyzer/structure-optimizer-v2.cjs existiert. Falls ja: erweitere um Auto-Modularisierung bei >1200 Zeilen. Falls nein: erstelle Basis-Implementierung für Datei-Struktur-Optimierung."
+
+- [ ] **Aufgabe:** Contradiction-scanner um Zeilen-Limit-Überwachung erweitern
+- [ ] **Kontext:** Scanner soll auch überlange Dateien als Problem erkennen
+- [ ] **Ressourcen:** contradiction-scanner.cjs um Zeilen-Check erweitern
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Scanner-Entwickler
+- [ ] **Prompt:** "Öffne tools/analyzer/contradiction-scanner.cjs. Füge Funktion hinzu die alle Dateien auf >1200 Zeilen prüft. Warne bei Überschreitung. Integriere in bestehende Widerspruchs-Reports."
+
+- [ ] **Aufgabe:** Master-analyzer um Token-Optimierung erweitern
+- [ ] **Kontext:** Übergeordneter Analyzer für Token-Budget-Management
+- [ ] **Ressourcen:** Wenn master-analyzer.cjs existiert, um Token-Budget-Features erweitern
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Master-Analyzer-Entwickler
+- [ ] **Prompt:** "Prüfe ob tools/analyzer/master-analyzer.cjs existiert. Falls ja: erweitere um Token-Budget-Überwachung und Optimierungs-Vorschläge. Falls nein: erstelle Basis-Framework für übergeordnete Projekt-Analyse."
+
+- [ ] **Aufgabe:** Tabu-Verzeichnisse-Erkennung automatisieren
+- [ ] **Kontext:** Analyzer sollen automatisch node_modules, .git, etc. ignorieren
+- [ ] **Ressourcen:** shouldIgnore() Funktionen in allen Analyzern standardisieren
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Analyzer-Standardisierer
+- [ ] **Prompt:** "Analysiere shouldIgnore() Funktionen in allen Analyzer-Tools. Standardisiere Tabu-Verzeichnisse (node_modules, .git, .astro, .cache, logfiles, etc.). Sorge für einheitliche Exclusion-Logic überall."
+
+- [ ] **Aufgabe:** Wöchentliche Zeilen-Audits einrichten
+- [ ] **Kontext:** Regelmäßige automatische Überprüfung der 1200-Zeilen-Regel
+- [ ] **Ressourcen:** Skript für wöchentliche Analyzer-Läufe erstellen
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Automation-Engineer
+- [ ] **Prompt:** "Erstelle PowerShell-Skript für wöchentliche Zeilen-Audits. Führe Analyzer aus, prüfe auf >1200 Zeilen-Dateien, generiere Report. Dokumentiere Setup für regelmäßige Ausführung."
 
 ### **4. WORKFLOW-AUTOMATION SETUP**
 

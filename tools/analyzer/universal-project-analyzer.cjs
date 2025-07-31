@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Logfile-Handling: Immer nur die letzten 8 Logdateien behalten, ältere löschen
 function cleanupOldLogs(logDir, pattern = /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, keep = 8) {
   const fs = require('fs');
