@@ -1,5 +1,11 @@
 # offen
 
+**experimnetelles**
+Automatisierte visuelle Regressionstests (z.B. mit Puppeteer, Playwright, Percy).
+Automatisierte Linting-, SEO-, Broken-Link- und Accessibility-Checks.
+Nach jedem Task schreibt die KI eine Zusammenfassung und ein Acknowledgement in die Doku.
+// Bitte umsetzen.
+
 # psychologische Themen
 
 Kognitive Dissonanz bei mir führt zu problematischen internen psychologischen Problemen und Wiedersprüchlichkeiten. Dieses Verhalten von mir lässt sich nur an der Wurzel lösen, in dem ich mich zwingen darf, positiv zu denken. Es ist ja so, dass die menschliche psyche genau gleich abläuft wie bei der KI:
