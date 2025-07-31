@@ -255,6 +255,11 @@ Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mi
 - **[📁 Datei-Operationen](instructions/project/datei-operationen.md)** - Backup, Search-Regeln, Integrität, git add ., git commit, git push
 - **[🎯 Scope-System](instructions/project/scope-system.md)** - Bereichs-Definitionen
 
+### 🧠 **COACHING & PSYCHOLOGIE:**
+
+- **[🧘 Wohlbefindens-Coaching](instructions/coaching/wohlbefindens-coaching.md)** - Kognitive Unterstützung, Stress-Erkennung
+- **[🎭 Psychologische Spiegelungs-Theorie](instructions/coaching/psychologische-spiegelungs-theorie.md)** - Imperium-Metapher, KI-Mensch-Dynamik
+
 ---
 
 ## 🎯 **AKTUELLER PROJEKT-FOKUS:**
