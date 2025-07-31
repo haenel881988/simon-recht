@@ -1,5 +1,8 @@
 # offen
 
+**Erkenntnisse**
+Hier werden alle Erkenntnisse
+
 # Unklar
 
 ❌ Todo-Liste: "📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG)"
