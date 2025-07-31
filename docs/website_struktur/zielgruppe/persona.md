@@ -91,7 +91,7 @@
 
 - **Finanzdienstleister:** KI für Kundenberatung, Compliance, Vertragsprüfung
 - **Versicherungsexperten:** Administrative Automatisierung, Schadenbearbeitung
-- **IT-Professionals:** Rechtsfragen bei Projektverträgen, Lizenzierung
+- **Tech-affine Professionals:** Rechtsfragen bei digitalen Projekten, Lizenzierung
 - **Selbständige aller Branchen:** Behörden-Kämpfe, Steuerrecht, Vertragsgestaltung
 - **Angestellte in Großunternehmen:** Arbeitsrecht, interne Kommunikation
 - **Unternehmer & Geschäftsführer:** Compliance, strategische Rechtsfragen

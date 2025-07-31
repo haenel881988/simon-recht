@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 16:25:20  
+**Generiert:** 31.7.2025, 19:47:21  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -9,21 +9,24 @@
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
 | 🚨 Instructions-Widersprüche | 2 | HIGH |
-| 🔢 Token-Warnungen | 0 | CRITICAL |
+| 🔢 Token-Warnungen | 2 | CRITICAL |
 | 🔗 Ungültige Links | 9 | HIGH |
-| 📄 Leere Dateien | 28 | MEDIUM |
-| 📂 Pfad-Fehler | 21 | MEDIUM |
+| 📄 Leere Dateien | 27 | MEDIUM |
+| 📂 Pfad-Fehler | 22 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
 Löse 2 Instructions-Widersprüche vor KI-Arbeit
 
+### 🚨 CRITICAL
+2 Dateien überschreiten Token-Limits - Modularisierung erforderlich
+
 ### ⚠️ HIGH
 Repariere 9 ungültige Links für Navigation
 
 ### 💡 MEDIUM
-Bereinige 28 leere/redundante Dateien
+Bereinige 27 leere/redundante Dateien
 
 ## 🔍 DETAILIERTE ERGEBNISSE
 
@@ -40,7 +43,8 @@ Bereinige 28 leere/redundante Dateien
     → `- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen`
 
 ### 🔢 TOKEN-WARNUNGEN
-✅ Alle Dateien im Token-Limit
+- `C:\apps\website\simon-recht\docs\todos\todos.md`: 6’136 Tokens (Datei aufteilen - überschreitet 6k GLOBAL LIMIT)
+- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md`: 7’275 Tokens (Datei aufteilen - überschreitet 6k GLOBAL LIMIT)
 
 ### 🔗 UNGÜLTIGE LINKS
 - `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md` (Zeile 57): Link zu `../dsgvo-guide` nicht gefunden
@@ -71,8 +75,6 @@ Bereinige 28 leere/redundante Dateien
     → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\.gitignore`: MINIMAL (14 Bytes)
     → `node_modules`
-- `C:\apps\website\simon-recht\allfiles.txt`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\tools\analyzer\procrastination-detector.cjs`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-50-333Z.md`: EMPTY (0 Bytes)
@@ -121,6 +123,8 @@ Bereinige 28 leere/redundante Dateien
     → `[DATEI LEER]`
 
 ### 📂 PFAD-REFERENZ-FEHLER
+- `C:\apps\website\simon-recht\.github\instructions\organisation\inventar\projekt_inventar.md` (Zeile 20): Referenz zu `tools/inventory/auto-inventory.js` ungültig
+    → `**Vollständiges Update:** `node tools/inventory/auto-inventory.js``
 - `C:\apps\website\simon-recht\.github\instructions\project\datei-operationen.md` (Zeile 66): Referenz zu `tools/analyzer/widerspruchs-report-` ungültig
     → `Get-ChildItem tools/analyzer/widerspruchs-report-*.md | Sort-Object LastWriteTime -Descending | Select-Object -First 1`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 35): Referenz zu `docs/archive/auto-cleanup-2025-07-25` ungültig

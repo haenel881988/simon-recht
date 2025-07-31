@@ -255,12 +255,12 @@ class ContradictionScanner {
 
         // Token-Warnung für sehr große Instructions
         const estimatedTokens = Math.floor(content.length / 4);
-        if (estimatedTokens > 10000) {
+        if (estimatedTokens > 6000) {
           this.results.tokenWarnings.push({
             file: filePath,
             estimatedTokens: estimatedTokens,
             severity: "CRITICAL",
-            recommendation: "Datei aufteilen oder modularisieren",
+            recommendation: "Datei aufteilen - überschreitet 6k GLOBAL LIMIT",
           });
         }
 
