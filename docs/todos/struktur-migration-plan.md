@@ -44,11 +44,11 @@ Write-Host "Erstelle Archiv-Verzeichnis..." -ForegroundColor Cyan
 
 ### 📝 **Automatische Pfad-Updates (GEPLANT):**
 
-| **Alt-Pfad**                                     | **Neu-Pfad**                             | **Status** |
-| ------------------------------------------------ | ---------------------------------------- | ---------- |
-| [GEPLANT] altes_chaos_archiv                    | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
-| [GEPLANT] change_management/backups             | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
-| [GEPLANT] checker_entwicklung                   | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
+| **Alt-Pfad**                        | **Neu-Pfad**                       | **Status** |
+| ----------------------------------- | ---------------------------------- | ---------- |
+| [GEPLANT] altes_chaos_archiv        | [GEPLANT] auto-cleanup-Verzeichnis | FUTURE     |
+| [GEPLANT] change_management/backups | [GEPLANT] auto-cleanup-Verzeichnis | FUTURE     |
+| [GEPLANT] checker_entwicklung       | [GEPLANT] auto-cleanup-Verzeichnis | FUTURE     |
 
 ### 🔍 **Link-Validierung nach Migration:**
 

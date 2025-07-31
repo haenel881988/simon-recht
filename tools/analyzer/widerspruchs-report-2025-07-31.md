@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 16:03:12  
+**Generiert:** 31.7.2025, 16:25:20  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,7 +8,7 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 5 | HIGH |
+| 🚨 Instructions-Widersprüche | 2 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
 | 🔗 Ungültige Links | 9 | HIGH |
 | 📄 Leere Dateien | 28 | MEDIUM |
@@ -17,7 +17,7 @@
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
-Löse 5 Instructions-Widersprüche vor KI-Arbeit
+Löse 2 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
 Repariere 9 ungültige Links für Navigation
@@ -28,31 +28,16 @@ Bereinige 28 leere/redundante Dateien
 ## 🔍 DETAILIERTE ERGEBNISSE
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\core\internalisierung.md`
-  - 📍 Zeile 5: "KRITISCH"
-    → `## **KRITISCHE VARIABLE-DEFINITION:**`
-  - 📍 Zeile 5: "KRITISCH"
-    → `## **KRITISCHE VARIABLE-DEFINITION:**`
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\core\root-cause-analysis.md`
-  - 📍 Zeile 11: "HÖCHSTE PRIORITÄT"
-    → `### **1. VALIDATION-BYPASS-FEHLER (HÖCHSTE PRIORITÄT)**`
-  - 📍 Zeile 11: "HÖCHSTE PRIORITÄT"
-    → `### **1. VALIDATION-BYPASS-FEHLER (HÖCHSTE PRIORITÄT)**`
 - **Unterschiedliche Token-Limits definiert** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
-  - 📍 Zeile 60: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
-    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT`
-  - 📍 Zeile 60: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
-    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT`
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\project\exception-system.md`
-  - 📍 Zeile 8: "kritisch"
-    → `- **Multiple kritische Prioritäten** ohne Hierarchie`
-  - 📍 Zeile 8: "kritisch"
-    → `- **Multiple kritische Prioritäten** ohne Hierarchie`
+  - 📍 Zeile 60: "000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT"
+    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT`
+  - 📍 Zeile 60: "000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT"
+    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT`
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\todos.md`
-  - 📍 Zeile 5: "kritisch"
-    → `Dies ist um alles in der Welt zu verhindern und ist daher zwingend als höchste und kritischste Priorität zu betrachten und zu behandeln.`
-  - 📍 Zeile 5: "kritisch"
-    → `Dies ist um alles in der Welt zu verhindern und ist daher zwingend als höchste und kritischste Priorität zu betrachten und zu behandeln.`
+  - 📍 Zeile 37: "Höchste Priorität"
+    → `- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen`
+  - 📍 Zeile 37: "Höchste Priorität"
+    → `- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen`
 
 ### 🔢 TOKEN-WARNUNGEN
 ✅ Alle Dateien im Token-Limit

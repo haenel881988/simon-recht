@@ -5,7 +5,7 @@
 ### **🔍 SCANNER-TRIGGER:**
 
 - **Unterschiedliche Token-Limits** in verschiedenen Dateien
-- **Multiple kritische Prioritäten** ohne Hierarchie
+- **Multiple oberste Prioritäten** ohne Hierarchie
 - **Broken Links** zu nicht existierenden Dateien
 - **Leere/redundante Dateien** ohne Zweck
 

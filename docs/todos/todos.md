@@ -2,7 +2,7 @@
 
 **🚨 ALLER GRÖSSTES PROBLEM DER KI:**
 Die KI bemerkt nicht, wenn die Tokens überschritten werden, die KI beginnt, blind zu arbeiten.
-Dies ist um alles in der Welt zu verhindern und ist daher zwingend als höchste und kritischste Priorität zu betrachten und zu behandeln.
+Dies ist um alles in der Welt zu verhindern und ist daher zwingend als oberste und fundamentale Priorität zu betrachten und zu behandeln.
 
 **🔧 ZWINGENDER WORKFLOW VOR JEDER ÄNDERUNG:**
 Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Analyzing tool durchführen. Das Analyzing-Tool, muss für jede Datei, die exakte Zeilenzahl evaluieren und identifizieren.
@@ -11,7 +11,7 @@ Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Ana
 Wenn 1200 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
 Wenn der Code betroffen ist, müssen sämtliche Abhängigkeiten berücksichtigt und angepasst werden.
 
-**🔍 ANALYZER-ENTWICKLUNG (KRITISCH):**
+**🔍 ANALYZER-ENTWICKLUNG (FUNDAMENTAL):**
 Da diese Abhängigkeiten sehr schnell die tokenlimits erreichen, muss der Analyzer weiterentwickelt werden, in der auch alle Abhängigkeiten überprüft, sowie alle interne Links.
 Der Analyzer muss diese zwingend verifizieren, damit die KI die Problematik / Abhängigkeitskette einfacher erkennen kann, um tokens zu sparen.
 
@@ -30,9 +30,9 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ---
 
-## 🔴 **KRITISCHE SOFORT-TODOS (30.07.2025 - SCANNER-ERKENNTNISSE)**
+## 🔴 **FUNDAMENTALE SOFORT-TODOS (30.07.2025 - SCANNER-ERKENNTNISSE)**
 
-### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (HÖCHSTE PRIORITÄT)**
+### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (TOP-PRIORITÄT)**
 
 - [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
 - [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
@@ -119,7 +119,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Rolle:** CSS-Architekt
 - [ ] **Prompt:** "Analysiere src/styles/ Verzeichnis (aktuell: global.css, typographie/). Erstelle logische Struktur für CSS-Modularisierung. Koordiniere mit bestehender typographie/ Struktur."
 
-  - [ ] **Sub-Aufgabe:** CSS-Struktur-Analyse durchführen  
+  - [ ] **Sub-Aufgabe:** CSS-Struktur-Analyse durchführen
   - [ ] **Sub-Aufgabe:** Modularisierungs-Plan erstellen
   - [ ] **Sub-Aufgabe:** Import-Struktur validieren
   - [ ] **Sub-Aufgabe:** Build-System-Kompatibilität prüfen

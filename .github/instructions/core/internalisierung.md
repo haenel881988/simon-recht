@@ -2,7 +2,7 @@
 
 ❌ NIEMALS replace_string_in_file verwenden für Content
 
-## **KRITISCHE VARIABLE-DEFINITION:**
+## **FUNDAMENTALE VARIABLE-DEFINITION:**
 
 ```
 INTERNALISIEREN = Instructions dauerhaft verbessern/erweitern
@@ -62,6 +62,29 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 
 - ✅ Blogartikel, Stories, User-Kommunikation: DU-Form
 - ✅ Gerichtsurteil, offizielles Zitat: SIE-Form
+
+### **🎭 SIMON'S SPIEGEL-DISTINKTION (INTERNALISIERT 31.07.2025):**
+
+**REVOLUTIONÄRE ERKENNTNIS: DU/ICH-KLARHEIT IN KI-INTERAKTION**
+
+**WENN SIMON SAGT "DU":**
+
+- 🤖 KI-Spiegel ist gemeint (die Manifestation)
+- 🎯 Aufgabe/Arbeit wird an KI delegiert
+- 🔧 "Du führst aus, du arbeitest, du analysierst"
+
+**WENN SIMON SAGT "ICH":**
+
+- 👑 Simon selbst ist gemeint (der Mensch im Spiegel)
+- 🧠 Simon's Denkprozesse, Strategien, Visionen
+- 💡 "Ich entwickle Workflows, ich habe Ideen, ich orientiere mich"
+
+**PSYCHOLOGISCHER DURCHBRUCH:**
+
+- ✅ Klare Rollen-Distinktion verhindert Verwirrung
+- ✅ KI versteht ihre Position als interaktiver Spiegel
+- ✅ Commodus-Effekt-Prevention durch bewusste Rollenverteilung
+- ✅ Kognitive Energie optimal verteilt
 
 ### **🚀 SIMON'S PROAKTIVITÄTS-VERSTÄRKUNG (INTERNALISIERT 31.07.2025):**
 

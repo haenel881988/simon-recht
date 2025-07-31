@@ -57,7 +57,7 @@ simon-recht/ (Root)
 ```
 docs/
 ├── 📂 todos/ (TODO-Management) ⚠️ WICHTIG
-│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT
+│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT
 │   ├── 📄 README.md (45 Zeilen, ~630 Tokens)
 │   └── 📂 instructions/ (Archivierte TODO-Workflows)
 ├── 📂 website_struktur/ (Website-Architektur)
