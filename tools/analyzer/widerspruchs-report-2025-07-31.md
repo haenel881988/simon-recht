@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 15:30:59  
+**Generiert:** 31.7.2025, 15:39:02  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,7 +8,7 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 6 | HIGH |
+| 🚨 Instructions-Widersprüche | 5 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
 | 🔗 Ungültige Links | 9 | HIGH |
 | 📄 Leere Dateien | 28 | MEDIUM |
@@ -17,7 +17,7 @@
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
-Löse 6 Instructions-Widersprüche vor KI-Arbeit
+Löse 5 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
 Repariere 9 ungültige Links für Navigation
@@ -28,11 +28,6 @@ Bereinige 28 leere/redundante Dateien
 ## 🔍 DETAILIERTE ERGEBNISSE
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\copilot-instructions.md`
-  - 📍 Zeile 109: "KRITISCH"
-    → `_🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs - das ist WEIT über der 6000-Token-Regel!_`
-  - 📍 Zeile 109: "KRITISCH"
-    → `_🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs - das ist WEIT über der 6000-Token-Regel!_`
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\core\internalisierung.md`
   - 📍 Zeile 5: "KRITISCH"
     → `## **KRITISCHE VARIABLE-DEFINITION:**`

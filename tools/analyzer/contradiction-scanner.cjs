@@ -107,6 +107,20 @@ class ContradictionScanner {
         severity: "HIGH",
       },
     ];
+
+    // KONTEXT-AUSSCHLÜSSE für False-Positives
+    this.contextExclusions = [
+      /Ein Beispiel aus der Praxis:/i,
+      /Beispiel.*:/i,
+      /Z\.B\.:/i,
+      /Zum Beispiel:/i,
+      /Example:/i,
+      /BEISPIEL-KONFLIKTE:/i,
+      /\*\*Beispiel.*\*\*/i,
+      /<!-- Beispiel/i,
+      /Demo:/i,
+      /Illustration:/i,
+    ];
   }
 
   /**
@@ -257,15 +271,40 @@ class ContradictionScanner {
           const match2 = content.match(contradiction.pattern2);
 
           if (match1 && match2) {
-            // Custom Check falls definiert
-            if (contradiction.customCheck) {
-              const customResult = contradiction.customCheck(
-                content,
-                match1,
-                match2,
-                filePath
-              );
-              if (customResult) {
+            // KONTEXT-PRÜFUNG: Ist das ein Beispiel/Illustration?
+            const isExample = this.isExampleContext(content, match1[0], match2[0]);
+            
+            if (!isExample) {
+              // Custom Check falls definiert
+              if (contradiction.customCheck) {
+                const customResult = contradiction.customCheck(
+                  content,
+                  match1,
+                  match2,
+                  filePath
+                );
+                if (customResult) {
+                  const line1 = this.findLineNumber(content, match1[0]);
+                  const line2 = this.findLineNumber(content, match2[0]);
+                  const lineContent1 = this.extractLineContent(content, line1);
+                  const lineContent2 = this.extractLineContent(content, line2);
+                  
+                  this.results.contradictions.push({
+                    file: filePath,
+                    description: contradiction.description,
+                    evidence1: match1[0],
+                    evidence2: match2[0],
+                    severity: contradiction.severity || "HIGH",
+                    autoFix: contradiction.autoFix || null,
+                    customDetails: customResult,
+                    line1: line1,
+                    line2: line2,
+                    lineContent1: lineContent1,
+                    lineContent2: lineContent2,
+                  });
+                }
+              } else {
+                // Standard Widerspruch
                 const line1 = this.findLineNumber(content, match1[0]);
                 const line2 = this.findLineNumber(content, match2[0]);
                 const lineContent1 = this.extractLineContent(content, line1);
@@ -278,32 +317,12 @@ class ContradictionScanner {
                   evidence2: match2[0],
                   severity: contradiction.severity || "HIGH",
                   autoFix: contradiction.autoFix || null,
-                  customDetails: customResult,
                   line1: line1,
                   line2: line2,
                   lineContent1: lineContent1,
                   lineContent2: lineContent2,
                 });
               }
-            } else {
-              // Standard Widerspruch
-              const line1 = this.findLineNumber(content, match1[0]);
-              const line2 = this.findLineNumber(content, match2[0]);
-              const lineContent1 = this.extractLineContent(content, line1);
-              const lineContent2 = this.extractLineContent(content, line2);
-              
-              this.results.contradictions.push({
-                file: filePath,
-                description: contradiction.description,
-                evidence1: match1[0],
-                evidence2: match2[0],
-                severity: contradiction.severity || "HIGH",
-                autoFix: contradiction.autoFix || null,
-                line1: line1,
-                line2: line2,
-                lineContent1: lineContent1,
-                lineContent2: lineContent2,
-              });
             }
           }
         }
@@ -541,7 +560,33 @@ class ContradictionScanner {
   }
 
   /**
-   * � ZEILENNUMMER FINDEN
+   * 🧠 KONTEXT-PRÜFUNG: Ist das ein Beispiel/Illustration?
+   */
+  isExampleContext(content, evidence1, evidence2) {
+    // Suche in einem 3-Zeilen-Radius um die Evidenz
+    const lines = content.split('\n');
+    
+    // Finde Zeilen der Evidenzen
+    const line1 = this.findLineNumber(content, evidence1);
+    const line2 = this.findLineNumber(content, evidence2);
+    
+    // Überprüfe 3 Zeilen vor und nach jedem Match
+    const contextLines = [];
+    for (let i = Math.max(0, line1 - 3); i <= Math.min(lines.length - 1, line1 + 3); i++) {
+      contextLines.push(lines[i]);
+    }
+    for (let i = Math.max(0, line2 - 3); i <= Math.min(lines.length - 1, line2 + 3); i++) {
+      contextLines.push(lines[i]);
+    }
+    
+    const contextText = contextLines.join('\n');
+    
+    // Prüfe auf Beispiel-Indikatoren
+    return this.contextExclusions.some(pattern => pattern.test(contextText));
+  }
+
+  /**
+   * 📏 ZEILENNUMMER FINDEN
    */
   findLineNumber(content, searchText) {
     const lines = content.split('\n');
