@@ -61,8 +61,8 @@ PREVENTION:
 ### **TOOL-INTEGRATION:**
 
 - Bei Token-Limits: Analyse-Scripts verwenden
-- Dokumentation in: `docs/lessons_learned/YYYY-MM-DD_[fehler].md`
-- AAR-Reports in: `docs/change_management/aar/`
+- Dokumentation in: `docs/todos/` (zentrale Todo-Verwaltung)
+- AAR-Reports in: `docs/todos/` (After Action Reviews)
 
 ### **🤖 AUTONOMES ARBEITEN & FEHLERBEHANDLUNG:**
 
@@ -93,5 +93,5 @@ PREVENTION:
 
 **FAIL-SAFE DIRECTORIES:**
 
-- Lessons Learned: `docs/change_management/history/`
-- AAR Reports: `docs/change_management/aar/`
+- Lessons Learned: `docs/todos/` (zentrale Dokumentation)
+- AAR Reports: `docs/todos/` (After Action Reviews)

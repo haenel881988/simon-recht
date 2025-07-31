@@ -350,7 +350,8 @@ class ContradictionScanner {
     console.log("\n📂 Validiere Pfad-Referenzen...");
 
     const mdFiles = await this.findMarkdownFiles();
-    const pathPattern = /(?:docs\/|src\/|tools\/|\.github\/)[^\s\)]+/g;
+    const pathPattern =
+      /(?:docs\/|src\/|tools\/|\.github\/)[^\s\)\`\*\,\"\|]+/g;
 
     for (const filePath of mdFiles) {
       try {

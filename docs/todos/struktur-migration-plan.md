@@ -27,28 +27,28 @@ Remove-Item "docs\checker_entwicklung\entscheidungen_log.md" -Force
 
 ## 📦 **ARCHIV-VERSCHIEBUNGEN (RISIKO: LOW)**
 
-### 🏚️ **317 Archive-Kandidaten nach: `docs/archive/auto-cleanup-2025-07-25/`**
+### 🏚️ **317 Archive-Kandidaten nach: [GEPLANT] auto-cleanup-Verzeichnis**
 
 ```powershell
-# 📦 ARCHIV-VERSCHIEBUNGEN
+# 📦 ARCHIV-VERSCHIEBUNGEN (GEPLANT)
 Write-Host "Erstelle Archiv-Verzeichnis..." -ForegroundColor Cyan
-New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force
+# New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force
 
-# Beispiele (Top 10):
-Move-Item "docs\01_PLAYBOOK_CONTENT\_altes_chaos_archiv\*" "docs/archive/auto-cleanup-2025-07-25/"
-Move-Item "docs\change_management\backups\*backup*.md" "docs/archive/auto-cleanup-2025-07-25/"
+# Beispiele (Top 10): [ALLE GEPLANT - NICHT AUSFÜHREN]
+# Move-Item "docs\01_PLAYBOOK_CONTENT\_altes_chaos_archiv\*" "docs/archive/auto-cleanup-2025-07-25/"
+# Move-Item "docs\change_management\backups\*backup*.md" "docs/archive/auto-cleanup-2025-07-25/"
 # ... (weitere Verschiebungen im Migration-Script)
 ```
 
 ## 🔗 **LINK-MAPPINGS**
 
-### 📝 **Automatische Pfad-Updates:**
+### 📝 **Automatische Pfad-Updates (GEPLANT):**
 
 | **Alt-Pfad**                                     | **Neu-Pfad**                             | **Status** |
 | ------------------------------------------------ | ---------------------------------------- | ---------- |
-| `docs/01_PLAYBOOK_CONTENT/_altes_chaos_archiv/*` | `docs/archive/auto-cleanup-2025-07-25/*` | AUTO       |
-| `docs/change_management/backups/*backup*`        | `docs/archive/auto-cleanup-2025-07-25/*` | AUTO       |
-| `docs/checker_entwicklung/*`                     | `docs/archive/auto-cleanup-2025-07-25/*` | MANUAL     |
+| [GEPLANT] altes_chaos_archiv                    | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
+| [GEPLANT] change_management/backups             | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
+| [GEPLANT] checker_entwicklung                   | [GEPLANT] auto-cleanup-Verzeichnis      | FUTURE     |
 
 ### 🔍 **Link-Validierung nach Migration:**
 

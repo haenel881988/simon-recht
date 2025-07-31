@@ -62,8 +62,8 @@ git push
 ```powershell
 # Broken Links checken
 node tools/analyzer/universal-project-analyzer.cjs
-# Widerspruchs-Report prüfen
-grep "ungültige Links" tools/analyzer/widerspruchs-report-*.md
+# Widerspruchs-Report prüfen (aktuellsten Report verwenden)
+Get-ChildItem tools/analyzer/widerspruchs-report-*.md | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 ```
 
 #### **🏗️ BUILD-VALIDATION:**

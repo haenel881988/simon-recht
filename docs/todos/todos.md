@@ -112,17 +112,17 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 - [ ] **Aufgabe:** CSS in Unterverzeichnisse aufteilen
 - [ ] **Kontext:** Alle CSS-Dateien sind momentan in src/styles/ - Simon insistiert auf bessere Struktur
-- [ ] **Ressourcen:** Verzeichnisse src/styles/elemente/, src/styles/base/, src/styles/layout/ erstellen und CSS aufteilen
+- [ ] **Ressourcen:** Verzeichnisse src/styles/ erweitern (aktuell: global.css, typographie/)
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** CSS-Architekt
-- [ ] **Prompt:** "Analysiere src/styles/ Verzeichnis. Erstelle Unterverzeichnisse: elemente/, base/, layout/. Teile CSS-Dateien logisch auf: button.css → elemente/, typography.css → base/, responsive.css → layout/. Aktualisiere alle Imports in .astro Dateien entsprechend."
+- [ ] **Prompt:** "Analysiere src/styles/ Verzeichnis (aktuell: global.css, typographie/). Erstelle logische Struktur für CSS-Modularisierung. Koordiniere mit bestehender typographie/ Struktur."
 
-  - [ ] **Sub-Aufgabe:** `src/styles/elemente/button.css` erstellen
-  - [ ] **Sub-Aufgabe:** `src/styles/elemente/header-und-navigation.css` erstellen
-  - [ ] **Sub-Aufgabe:** `src/styles/base/typography.css` erstellen
-  - [ ] **Sub-Aufgabe:** `src/styles/layout/responsive.css` erstellen
+  - [ ] **Sub-Aufgabe:** CSS-Struktur-Analyse durchführen  
+  - [ ] **Sub-Aufgabe:** Modularisierungs-Plan erstellen
+  - [ ] **Sub-Aufgabe:** Import-Struktur validieren
+  - [ ] **Sub-Aufgabe:** Build-System-Kompatibilität prüfen
 
 - [ ] **Aufgabe:** Navigation optisch optimieren (Simon insistiert!)
 - [ ] **Kontext:** Simon ist mit der aktuellen Navigation nicht zufrieden - optische Verbesserung nötig
@@ -163,13 +163,13 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Prompt:** "Analysiere aktuelles Farbschema in CSS-Dateien. Validiere 60/30/10-Regel: asphaltschwarz (60%), stormy-blue (30%), accent-colors (10%). Optimiere aus UI/UX-Designer-Sicht: Kontrast, Zugänglichkeit, visuelle Hierarchie. Dokumentiere Änderungen."
 
 - [ ] **Aufgabe:** Instructions-Pfade korrigieren
-- [ ] **Kontext:** Veraltete Pfade docs/projekt/ und leere docs/change_management/ bereinigen
-- [ ] **Ressourcen:** Grep-Search nach docs/projekt/, systematische Pfad-Korrektur
+- [ ] **Kontext:** Veraltete Pfade bereinigen und mit aktueller Struktur harmonisieren
+- [ ] **Ressourcen:** Contradiction-Scanner Reports, aktuelle Pfad-Struktur validieren
 - [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Path-Cleaner & Instructions-Validator
-- [ ] **Prompt:** "Grep-Search nach 'docs/projekt/' in allen Dateien. Entferne oder korrigiere alle veralteten Verweise. Prüfe docs/change_management/ auf Leerstand und bereinige. Validiere alle Instruction-Pfade auf Existenz."
+- [ ] **Prompt:** "Verwende Contradiction-Scanner für Pfad-Validierung. Harmonisiere Instructions-Pfade mit aktueller Projekt-Struktur. Fokus: docs/, src/, tools/ Verzeichnisse."
 
 - [ ] **Aufgabe:** Projekt-Inventar vollständig aktualisieren
 - [ ] **Kontext:** Aktuelles Inventar nach Bereinigungen und Änderungen synchronisieren

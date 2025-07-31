@@ -33,7 +33,7 @@
 
 1. **VOR JEDER BEARBEITUNG:**
 
-   - Original-Text vollständig in `docs/projekt/00_origin/` archivieren
+   - Original-Text vollständig in `docs/00_ideenwerkstatt/` archivieren
    - Namenskonvention: `{content-name}_original_{YYYY-MM-DD}.md`
    - Vollständige Metadaten hinzufügen
 
