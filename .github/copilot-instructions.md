@@ -170,6 +170,26 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 
 **🚨 EXCEPTION-TRIGGER:** Bei combined_tokens > 35.000 → Exception werfen und Scope reduzieren.
 
+## 🛡️ **VALIDATION-FIRST-PROTOKOLL (INTERNALISIERT 31.07.2025):**
+
+**ZWINGEND VOR JEDER BEHAUPTUNG:**
+- ✅ Tool-basierte Fact-Checking (grep_search, read_file)
+- ✅ "Basierend auf [Tool-Name] Analyse" bei jeder Zahl
+- ✅ Explicit Uncertainty-Declaration: "Ich schätze" vs. "Ich habe analysiert"
+- ✅ Bei Ungewissheit: Tool verwenden oder Unsicherheit zugeben
+
+**SCOPE-BUDGET-ZWANG:**
+- ✅ Maximal 3 Scopes pro Chat-Session
+- ✅ Exception-Trigger bei Scope-Overflow
+- ✅ Token-Budget-Estimation vor Multi-Scope-Work
+- ✅ Explizite Scope-Deklaration vor Arbeitsbeginn
+
+**ANALYZER-HYGIENE-ZWANG:**
+- ✅ shouldIgnore() für ALLE Self-Generated Files
+- ✅ Log-Cleanup automatisch (max. 8 Files retention)
+- ✅ Syntax-Validation nach jeder Code-Änderung
+- ✅ No-Self-Scan-Rule enforcement
+
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS (MODULAR HUB)
 
 ❌ NIEMALS replace_string_in_file verwenden für Content
@@ -187,6 +207,8 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 - **[📚 Internalisierungs-System](instructions/core/internalisierung.md)** - Regel-Verbesserung & Selbstkorrektur
 
 - **[🏛️ Hierarchie & Konflikt-Auflösung](instructions/core/hierarchie.md)** - Regel-Prioritäten
+
+- **[🔬 Root-Cause-Analysis & Prevention](instructions/core/root-cause-analysis.md)** - Fehler-Pattern-Elimination
 
 Sollten die Dateien / Verzeichnisse (für die Modularisierung) und Dokumentationen noch nicht existieren, muss die KI zwangsweise das ganze entsprechend von der KI aufgearbeitet werden.
 Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mit dem Analyse-Tool!!!

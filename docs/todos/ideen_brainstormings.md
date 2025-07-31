@@ -1,3 +1,7 @@
+# offen
+
+# Unklar
+
 ❌ Todo-Liste: "📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG)"
 ❌ Deine Entscheidung: "6000-Token-Regel ist ausschlaggebend"
 // Ganz genau, ich habe die Datei ".github\copilot-instructions.md" entsprechend angepasst. Siehst du das auch so? oder habe ich was vergessen?
@@ -41,3 +45,5 @@ Docs\todos
 **mittlere Prioritäten**
 
 **niedrige Prioritäten**
+
+# Umgesetzt

@@ -20,7 +20,6 @@ function cleanupOldLogs(logDir, pattern = /^projekt-analyse-.*\.md$|^widerspruch
 
 // Vor Analyse Logfiles bereinigen
 cleanupOldLogs(__dirname, /^projekt-analyse-.*\.md$|^widerspruchs-report-.*\.md$/i, 8);
-#!/usr/bin/env node
 
 /**
  * 🤖 UNIVERSELLES PROJEKT-ANALYSE-SYSTEM v1.0
