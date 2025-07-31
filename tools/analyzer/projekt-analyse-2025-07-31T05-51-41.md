@@ -1,6 +1,6 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 30.7.2025, 14:28:27  
+**Erstellt:** 31.7.2025, 07:51:41  
 **Analysedauer:** 0.56 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 100 |
-| **Zeilen gesamt** | 77’927 |
-| **Wörter gesamt** | 428’835 |
-| **Zeichen gesamt** | 8’661’169 |
-| **Geschätzte Tokens** | 4’054’818 |
+| **Dateien gesamt** | 73 |
+| **Zeilen gesamt** | 39’582 |
+| **Wörter gesamt** | 558’474 |
+| **Zeichen gesamt** | 5’528’174 |
+| **Geschätzte Tokens** | 1’212’138 |
 
 ---
 
@@ -22,15 +22,16 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **DOCUMENTATION** | 74 | 68’538 | 504’243 | 6814 |
-| **CONTENT** | 72 | 65’285 | 489’783 | 6803 |
-| **BUILD_SYSTEM** | 72 | 68’164 | 484’303 | 6726 |
-| **TODOS_MANAGEMENT** | 55 | 65’561 | 465’522 | 8464 |
-| **CSS_DESIGN** | 60 | 64’829 | 461’998 | 7700 |
-| **CONFIG** | 48 | 62’377 | 433’990 | 9041 |
-| **INSTRUCTIONS** | 55 | 60’790 | 421’185 | 7658 |
-| **ASSETS** | 18 | 53’365 | 398’952 | 22164 |
-| **ASTRO_COMPONENTS** | 38 | 55’947 | 394’842 | 10391 |
+| **UNCLASSIFIED** | 2 | 14’649 | 552’539 | 276270 |
+| **DOCUMENTATION** | 45 | 15’544 | 120’224 | 2672 |
+| **CONTENT** | 43 | 12’291 | 105’764 | 2460 |
+| **BUILD_SYSTEM** | 43 | 15’161 | 100’270 | 2332 |
+| **TODOS_MANAGEMENT** | 26 | 12’567 | 81’503 | 3135 |
+| **CSS_DESIGN** | 31 | 11’835 | 77’979 | 2515 |
+| **ASSETS** | 15 | 12’646 | 76’678 | 5112 |
+| **CONFIG** | 20 | 9’423 | 49’520 | 2476 |
+| **INSTRUCTIONS** | 26 | 7’796 | 37’166 | 1429 |
+| **ASTRO_COMPONENTS** | 10 | 3’038 | 10’495 | 1050 |
 
 ---
 
@@ -80,12 +81,12 @@
 - **Empfehlung:** ALLOW_COMBINED
 
 **Betroffene Dateien:**
-- `docs/todos/todos.md` (2317 Tokens)
-- `docs/todos/todos.md` (2317 Tokens)
-- `docs/todos/todos.md` (2317 Tokens)
-- `docs/todos/todos.md` (2317 Tokens)
-- `docs/todos/todos.md` (2317 Tokens)
-- `docs/todos/todos.md` (2317 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
+- `docs/todos/todos.md` (3880 Tokens)
 
 ### 4. ASSETS + BUILD_SYSTEM + CONFIG + CONTENT + CSS_DESIGN + DOCUMENTATION + TODOS_MANAGEMENT
 
@@ -139,13 +140,20 @@
 
 ### 7. ASTRO_COMPONENTS + BUILD_SYSTEM + CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
 
-- **Dateien:** 14
+- **Dateien:** 7
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
 - **Priorität:** HIGH
 - **Kombiniert erlaubt:** ✅ Ja
 - **Empfehlung:** ALLOW_COMBINED
 
-**Zu viele Dateien für Auflistung** (14 Dateien)
+**Betroffene Dateien:**
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
+- `README.md` (448 Tokens)
 
 ### 8. ASTRO_COMPONENTS + BUILD_SYSTEM + CONTENT + CSS_DESIGN
 
@@ -212,35 +220,34 @@
 
 ### 12. BUILD_SYSTEM + CONFIG + CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
 
-- **Dateien:** 21
+- **Dateien:** 14
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
 - **Priorität:** HIGH
 - **Kombiniert erlaubt:** ✅ Ja
 - **Empfehlung:** ALLOW_COMBINED
 
-**Zu viele Dateien für Auflistung** (21 Dateien)
+**Zu viele Dateien für Auflistung** (14 Dateien)
 
 ### 13. ASSETS + ASTRO_COMPONENTS + BUILD_SYSTEM + CONFIG + CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
 
-- **Dateien:** 36
+- **Dateien:** 9
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
 - **Priorität:** HIGH
 - **Kombiniert erlaubt:** ✅ Ja
 - **Empfehlung:** ALLOW_COMBINED
 
-**Zu viele Dateien für Auflistung** (36 Dateien)
+**Betroffene Dateien:**
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
+- `tools/analyzer/README.md` (1025 Tokens)
 
-### 14. ASTRO_COMPONENTS + BUILD_SYSTEM + CONFIG + CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
-
-- **Dateien:** 192
-- **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
-- **Priorität:** HIGH
-- **Kombiniert erlaubt:** ✅ Ja
-- **Empfehlung:** ALLOW_COMBINED
-
-**Zu viele Dateien für Auflistung** (192 Dateien)
-
-### 15. BUILD_SYSTEM + CONTENT + CSS_DESIGN + INSTRUCTIONS + TODOS_MANAGEMENT
+### 14. BUILD_SYSTEM + CONTENT + CSS_DESIGN + INSTRUCTIONS + TODOS_MANAGEMENT
 
 - **Dateien:** 5
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -255,7 +262,7 @@
 - `tools/analyzer/scopes/instruction-contradiction-scanner.cjs` (1293 Tokens)
 - `tools/analyzer/scopes/instruction-contradiction-scanner.cjs` (1293 Tokens)
 
-### 16. ASSETS + ASTRO_COMPONENTS + BUILD_SYSTEM + CONFIG + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
+### 15. ASSETS + ASTRO_COMPONENTS + BUILD_SYSTEM + CONFIG + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
 
 - **Dateien:** 8
 - **Grund:** Layout-Komponenten benötigen Styling-Koordination
@@ -273,7 +280,7 @@
 - `tools/analyzer/scopes/structure-optimizer.cjs` (3552 Tokens)
 - `tools/analyzer/scopes/structure-optimizer.cjs` (3552 Tokens)
 
-### 17. CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
+### 16. CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS + TODOS_MANAGEMENT
 
 - **Dateien:** 5
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -282,27 +289,13 @@
 - **Empfehlung:** ALLOW_COMBINED
 
 **Betroffene Dateien:**
-- `docs/todos/ideen_brainstormings.md` (375 Tokens)
-- `docs/todos/ideen_brainstormings.md` (375 Tokens)
-- `docs/todos/ideen_brainstormings.md` (375 Tokens)
-- `docs/todos/ideen_brainstormings.md` (375 Tokens)
-- `docs/todos/ideen_brainstormings.md` (375 Tokens)
+- `docs/todos/ideen_brainstormings.md` (389 Tokens)
+- `docs/todos/ideen_brainstormings.md` (389 Tokens)
+- `docs/todos/ideen_brainstormings.md` (389 Tokens)
+- `docs/todos/ideen_brainstormings.md` (389 Tokens)
+- `docs/todos/ideen_brainstormings.md` (389 Tokens)
 
-### 18. CONTENT + CSS_DESIGN + DOCUMENTATION + TODOS_MANAGEMENT
-
-- **Dateien:** 4
-- **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
-- **Priorität:** HIGH
-- **Kombiniert erlaubt:** ✅ Ja
-- **Empfehlung:** ALLOW_COMBINED
-
-**Betroffene Dateien:**
-- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
-- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
-- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
-- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
-
-### 19. ASSETS + CONTENT + CSS_DESIGN + DOCUMENTATION
+### 17. CONTENT + CSS_DESIGN + DOCUMENTATION + TODOS_MANAGEMENT
 
 - **Dateien:** 4
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -311,12 +304,26 @@
 - **Empfehlung:** ALLOW_COMBINED
 
 **Betroffene Dateien:**
+- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
+- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
+- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
+- `docs/website_struktur/content/polemik/startseite.md` (2305 Tokens)
+
+### 18. ASSETS + CONTENT + CSS_DESIGN + DOCUMENTATION
+
+- **Dateien:** 4
+- **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
+- **Priorität:** HIGH
+- **Kombiniert erlaubt:** ✅ Ja
+- **Empfehlung:** ALLOW_COMBINED
+
+**Betroffene Dateien:**
 - `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` (608 Tokens)
 - `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` (608 Tokens)
 - `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` (608 Tokens)
 - `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` (608 Tokens)
 
-### 20. CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS
+### 19. CONTENT + CSS_DESIGN + DOCUMENTATION + INSTRUCTIONS
 
 - **Dateien:** 4
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -330,7 +337,7 @@
 - `docs/website_struktur/README.md` (284 Tokens)
 - `docs/website_struktur/README.md` (284 Tokens)
 
-### 21. CONTENT + CSS_DESIGN + DOCUMENTATION
+### 20. CONTENT + CSS_DESIGN + DOCUMENTATION
 
 - **Dateien:** 12
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -340,7 +347,7 @@
 
 **Zu viele Dateien für Auflistung** (12 Dateien)
 
-### 22. ASSETS + ASTRO_COMPONENTS + CONTENT + CSS_DESIGN
+### 21. ASSETS + ASTRO_COMPONENTS + CONTENT + CSS_DESIGN
 
 - **Dateien:** 4
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -354,7 +361,7 @@
 - `src/layouts/Layout.astro` (444 Tokens)
 - `src/layouts/Layout.astro` (444 Tokens)
 
-### 23. ASTRO_COMPONENTS + CONTENT + CSS_DESIGN
+### 22. ASTRO_COMPONENTS + CONTENT + CSS_DESIGN
 
 - **Dateien:** 6
 - **Grund:** CSS-Kontrast-Optimierung betrifft SEO-Rankings
@@ -370,7 +377,7 @@
 - `src/pages/blog/index.astro` (181 Tokens)
 - `src/pages/blog/[slug].astro` (153 Tokens)
 
-### 24. ASTRO_COMPONENTS + CSS_DESIGN
+### 23. ASTRO_COMPONENTS + CSS_DESIGN
 
 - **Dateien:** 2
 - **Grund:** Layout-Komponenten benötigen Styling-Koordination
@@ -402,70 +409,77 @@
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope BUILD_SYSTEM hat 484303 Tokens (>10k Limit)
+### 1. ⚠️ Scope UNCLASSIFIED hat 552539 Tokens (>10k Limit)
+
+- **Typ:** SPLIT_SCOPE
+- **Scope:** UNCLASSIFIED
+- **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
+- **Priorität:** HIGH
+
+### 2. ⚠️ Scope BUILD_SYSTEM hat 100270 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** BUILD_SYSTEM
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope CONFIG hat 433990 Tokens (>10k Limit)
+### 3. ⚠️ Scope CONFIG hat 49520 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CONFIG
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope CSS_DESIGN hat 461998 Tokens (>10k Limit)
+### 4. ⚠️ Scope CSS_DESIGN hat 77979 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CSS_DESIGN
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 4. ⚠️ Scope INSTRUCTIONS hat 421185 Tokens (>10k Limit)
+### 5. ⚠️ Scope INSTRUCTIONS hat 37166 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** INSTRUCTIONS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 5. ⚠️ Scope TODOS_MANAGEMENT hat 465522 Tokens (>10k Limit)
+### 6. ⚠️ Scope TODOS_MANAGEMENT hat 81503 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 6. ⚠️ Scope DOCUMENTATION hat 504243 Tokens (>10k Limit)
+### 7. ⚠️ Scope DOCUMENTATION hat 120224 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 7. ⚠️ Scope CONTENT hat 489783 Tokens (>10k Limit)
+### 8. ⚠️ Scope CONTENT hat 105764 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CONTENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 8. ⚠️ Scope ASSETS hat 398952 Tokens (>10k Limit)
+### 9. ⚠️ Scope ASSETS hat 76678 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** ASSETS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 9. ⚠️ Scope ASTRO_COMPONENTS hat 394842 Tokens (>10k Limit)
+### 10. ⚠️ Scope ASTRO_COMPONENTS hat 10495 Tokens (>10k Limit)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** ASTRO_COMPONENTS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 10. 🚨 Gesamtprojekt hat 4054818 Tokens (>50k GitHub Copilot Limit)
+### 11. 🚨 Gesamtprojekt hat 1212138 Tokens (>50k GitHub Copilot Limit)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -489,16 +503,16 @@
 
 | Datei | Tokens | Zeilen | Scopes |
 |-------|--------|--------|---------|
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-29.md` | 284453 | 36092 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
-| `tools/analyzer/widerspruchs-report-2025-07-25.md` | 35626 | 4194 | ASSETS, ASTRO_COMPONENTS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, INSTRUCTIONS, TODOS_MANAGEMENT |
+| `largestfiles.txt` | 552539 | 14648 | UNCLASSIFIED |
+| `public/assets/images/startseite-index/simon_haenel_natur_froehlich.webp` | 31629 | 4422 | ASSETS |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/content/gicht-buch/book_1.txt` | 20968 | 3456 | ASSETS, BUILD_SYSTEM, CONFIG, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
+| `docs/website_struktur/recherche/tiefenrecherche.md` | 10365 | 1 | BUILD_SYSTEM, CONTENT, CSS_DESIGN, DOCUMENTATION, TODOS_MANAGEMENT |
 
 ---
 

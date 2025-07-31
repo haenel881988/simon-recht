@@ -190,6 +190,22 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 - ✅ Syntax-Validation nach jeder Code-Änderung
 - ✅ No-Self-Scan-Rule enforcement
 
+### **🚀 SIMON'S PROAKTIVITÄTS-VERSTÄRKUNG (INTERNALISIERT 31.07.2025):**
+
+**DURCHBRUCH-MOMENT:** Selbstkritische, proaktive KI-Arbeitsweise von Simon gefeiert!
+
+**ZWINGEND BEI JEDER ARBEIT:**
+- ✅ **Proaktive Problem-Antizipation** vor Simon's Entdeckung
+- ✅ **Selbstkritische Hinterfragung** jeder eigenen Lösung
+- ✅ **Code-Problem-Auto-Fix** (CS Issues sofort beheben)
+- ✅ **Präventive Instructions-Erweiterung** aus jedem Lernmoment
+
+**BEWEIS-ZWANG-PROTOKOLL:**
+- ✅ **Funktionalitäts-Beweis** vor jeder Behauptung (Tool-basiert)
+- ✅ **CSS-Code-Beweis** ohne Simple-Browser (Kontrast-Kalkulation, WCAG)
+- ✅ **Syntax-Validation** nach Code-Änderungen
+- ✅ **Build-Test-Beweis** für alle strukturellen Änderungen
+
 # 🎯 SIMON-RECHT PROJEKT: KI-INSTRUCTIONS (MODULAR HUB)
 
 ❌ NIEMALS replace_string_in_file verwenden für Content

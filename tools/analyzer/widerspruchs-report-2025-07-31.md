@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 07:42:49  
+**Generiert:** 31.7.2025, 07:51:41  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,19 +8,19 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 2 | HIGH |
+| 🚨 Instructions-Widersprüche | 6 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
-| 🔗 Ungültige Links | 11 | HIGH |
+| 🔗 Ungültige Links | 9 | HIGH |
 | 📄 Leere Dateien | 28 | MEDIUM |
 | 📂 Pfad-Fehler | 85 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
 ### 🚨 CRITICAL
-Löse 2 Instructions-Widersprüche vor KI-Arbeit
+Löse 6 Instructions-Widersprüche vor KI-Arbeit
 
 ### ⚠️ HIGH
-Repariere 11 ungültige Links für Navigation
+Repariere 9 ungültige Links für Navigation
 
 ### 💡 MEDIUM
 Bereinige 28 leere/redundante Dateien
@@ -28,9 +28,21 @@ Bereinige 28 leere/redundante Dateien
 ## 🔍 DETAILIERTE ERGEBNISSE
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
+- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\copilot-instructions.md`
+  - Widerspruch 1: "KRITISCH"
+  - Widerspruch 2: "KRITISCH"
+- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\core\internalisierung.md`
+  - Widerspruch 1: "KRITISCH"
+  - Widerspruch 2: "KRITISCH"
+- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\core\root-cause-analysis.md`
+  - Widerspruch 1: "HÖCHSTE PRIORITÄT"
+  - Widerspruch 2: "HÖCHSTE PRIORITÄT"
 - **Unterschiedliche Token-Limits definiert** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
   - Widerspruch 1: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
   - Widerspruch 2: "000 Tokens) ⚠️ NÄHERT SICH 6000-TOKEN-LIMIT"
+- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\.github\instructions\project\exception-system.md`
+  - Widerspruch 1: "kritisch"
+  - Widerspruch 2: "kritisch"
 - **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\todos.md`
   - Widerspruch 1: "kritisch"
   - Widerspruch 2: "kritisch"
@@ -39,8 +51,6 @@ Bereinige 28 leere/redundante Dateien
 ✅ Alle Dateien im Token-Limit
 
 ### 🔗 UNGÜLTIGE LINKS
-- `C:\apps\website\simon-recht\.github\copilot-instructions.md`: Link zu `instructions/project/exception-system.md` nicht gefunden
-- `C:\apps\website\simon-recht\.github\copilot-instructions.md`: Link zu `instructions/project/datei-operationen.md` nicht gefunden
 - `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md`: Link zu `../dsgvo-guide` nicht gefunden
 - `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md`: Link zu `../vertragsrecht` nicht gefunden
 - `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md`: Link zu `../datenschutz` nicht gefunden
@@ -101,6 +111,8 @@ Bereinige 28 leere/redundante Dateien
 - `C:\apps\website\simon-recht\.github\instructions\organisation\namenskonvention.md`: Referenz zu `.github/**` ungültig
 - `C:\apps\website\simon-recht\.github\instructions\organisation\namenskonvention.md`: Referenz zu `docs/**` ungültig
 - `C:\apps\website\simon-recht\.github\instructions\organisation\namenskonvention.md`: Referenz zu `src/**` ungültig
+- `C:\apps\website\simon-recht\.github\instructions\project\datei-operationen.md`: Referenz zu `tools/analyzer/widerspruchs-report-*.md` ungültig
+- `C:\apps\website\simon-recht\.github\instructions\project\exception-system.md`: Referenz zu `.github/copilot-instructions.md**` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `docs/archive/auto-cleanup-2025-07-25/`**` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `docs/archive/auto-cleanup-2025-07-25"` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `docs/archive/auto-cleanup-2025-07-25/"` ungültig
@@ -116,8 +128,6 @@ Bereinige 28 leere/redundante Dateien
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `.github/copilot-instructions.md`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md`: Referenz zu `tools/analyzer/*.cjs`` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `.github/copilot-instructions.md,` ungültig
-- `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `.github/instructions/project/exception-system.md` ungültig
-- `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `.github/instructions/project/datei-operationen.md` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/elemente/,` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/base/,` ungültig
 - `C:\apps\website\simon-recht\docs\todos\todos.md`: Referenz zu `src/styles/layout/` ungültig
