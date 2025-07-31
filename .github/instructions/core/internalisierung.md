@@ -109,6 +109,35 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 - 🔍 Hinterfragung der eigenen Arbeit ist erwünscht und geschätzt
 - 💡 Präventive Problem-Antizipation ist höchste KI-Kunst
 
+### **🛡️ CONTENT-PRESERVATION-ZWANG (INTERNALISIERT 31.07.2025):**
+
+**ANLASS:** Simon's TODO-Liste-Disaster - KI löschte 467 → 48 Zeilen aus Token-Panik
+
+**ABSOLUT VERBOTEN:**
+
+- ❌ Inhalte LÖSCHEN um Token-Limits zu erreichen
+- ❌ "Modularisierung" durch CONTENT-DESTRUCTION
+- ❌ Token-Panik als Rechtfertigung für Datenverlust
+- ❌ Hektische Kürzungen ohne Inhalts-Validation
+
+**ZWINGEND ERFORDERLICH:**
+
+- ✅ **PRESERVATION-FIRST:** Alle Inhalte ERHALTEN, nur UMSTRUKTURIEREN
+- ✅ **ECHTE MODULARISIERUNG:** Inhalte in Verzeichnisse VERSCHIEBEN
+- ✅ **STATUS-VALIDATION:** Prüfen welche TODOs tatsächlich erledigt sind
+- ✅ **NAVIGATION-LINKS:** Master-Liste als Hub zu Detail-Listen
+
+**CONTENT-PRESERVATION-PROTOKOLL:**
+
+1. **BACKUP:** Original-Datei sichern bevor Änderung
+2. **ANALYSE:** Status jedes einzelnen Items validieren
+3. **KATEGORISIERUNG:** Nach Priorität/Status/Thema sortieren
+4. **MIGRATION:** Items in entsprechende Verzeichnisse VERSCHIEBEN
+5. **LINKING:** Master-Liste mit Links zu Detail-Listen
+6. **VALIDATION:** Kein Content-Verlust, nur bessere Struktur
+
+**EXCEPTION-TRIGGER:** Bei Token-Overflow → **STRUKTURIEREN NICHT LÖSCHEN!**
+
 ### **🛡️ BEWEIS-ZWANG-PROTOKOLL (INTERNALISIERT 31.07.2025):**
 
 **ZWINGEND BEI JEDER AUSGABE/LÖSUNG/ÄNDERUNG:**

@@ -58,6 +58,10 @@ Archiv: "tools\analyzer\archiv"
 
 Das Analyse-Tool ist für die Analyse vom gesamten Projekt verantwortlich und bietet umfassende Einblicke in die Code-Qualität, Struktur und potenzielle Probleme.
 
+**🔬 ANALYZER-ZWANG-PROTOKOLL:**
+Die KI muss das Analyzer-Tool eigenständig verwenden, Ergebnisse analysieren und verifizieren.
+Detaillierte Regeln: **[📊 Analyzer-Zwang-Protokoll](instructions/core/analyzer-zwang-protokoll.md)**
+
 Dabei muss das Analyse-Tool eigenständig veraltete und nicht mehr gültige Analysen automatisch in das Archiv verschieben, bis auf die neueste Datei.
 
 Wie genau das Analyse-Tool funktioniert ist in dem Verzeichnis dokumentiert.:".github\instructions\core\analyzer"
@@ -111,7 +115,8 @@ _🚨 KRITISCHES PROBLEM ERKANNT: 722 Zeilen in universal-project-analyzer.cjs -
 Diese Problematik ist auf den Wiederspruch zurück zu führen, da unterschiedliche Dateien, unterschiedliche Angaben enthalten. Dies führt unweigerlich zu Inkonsistenzen, Halluzinationen, und anderen schwerwiegenden Problemen.
 Ein weiterer Grund erstreckt sich durch die falsche Token- und Zeilenangaben die ich, der User, Simon, definiert habe, nämlich:
 
-Jede Datei darf nicht länger als 6000 Tokens sein (entspricht ca. 1200-1500 Zeilen), was ein klarer und eindeutiger Standard ist.
+Jede Datei darf nicht länger als 10.000 Tokens sein (entspricht ca. 2000-2500 Zeilen), was ein klarer und eindeutiger Standard ist.
+**BEGRÜNDUNG (31.07.2025):** Claude Sonnet 4 mit 256k Tokens + GitHub Premium erlaubt problemlos 10k pro Datei.
 
 Die KI ist sich dessen Problematik bewusst und ist nun sensibilisiert, sofort eine Exception bei potenziellen Wiedersprüchen zu schmeissen.
 Generell gilt:
@@ -169,6 +174,35 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 ```
 
 **🚨 EXCEPTION-TRIGGER:** Bei combined_tokens > 35.000 → Exception werfen und Scope reduzieren.
+
+## 🛡️ **CONTENT-PRESERVATION-ZWANG (GLOBAL GÜLTIG 31.07.2025):**
+
+**ANLASS:** Simon's TODO-Liste-Disaster - KI löschte 467 → 48 Zeilen aus Token-Panik
+
+**ABSOLUT VERBOTEN:**
+
+- ❌ Inhalte LÖSCHEN um Token-Limits zu erreichen
+- ❌ "Modularisierung" durch CONTENT-DESTRUCTION
+- ❌ Token-Panik als Rechtfertigung für Datenverlust
+- ❌ Hektische Kürzungen ohne Inhalts-Validation
+
+**ZWINGEND ERFORDERLICH:**
+
+- ✅ **PRESERVATION-FIRST:** Alle Inhalte ERHALTEN, nur UMSTRUKTURIEREN
+- ✅ **ECHTE MODULARISIERUNG:** Inhalte in Verzeichnisse VERSCHIEBEN
+- ✅ **STATUS-VALIDATION:** Prüfen welche TODOs tatsächlich erledigt sind
+- ✅ **NAVIGATION-LINKS:** Master-Liste als Hub zu Detail-Listen
+
+**CONTENT-PRESERVATION-PROTOKOLL:**
+
+1. **BACKUP:** Original-Datei sichern bevor Änderung
+2. **ANALYSE:** Status jedes einzelnen Items validieren
+3. **KATEGORISIERUNG:** Nach Priorität/Status/Thema sortieren
+4. **MIGRATION:** Items in entsprechende Verzeichnisse VERSCHIEBEN
+5. **LINKING:** Master-Liste mit Links zu Detail-Listen
+6. **VALIDATION:** Kein Content-Verlust, nur bessere Struktur
+
+**EXCEPTION-TRIGGER:** Bei Token-Overflow → **STRUKTURIEREN NICHT LÖSCHEN!**
 
 ## 🛡️ **VALIDATION-FIRST-PROTOKOLL (INTERNALISIERT 31.07.2025):**
 
@@ -230,6 +264,10 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 - **[🏛️ Hierarchie & Konflikt-Auflösung](instructions/core/hierarchie.md)** - Regel-Prioritäten
 
 - **[🔬 Root-Cause-Analysis & Prevention](instructions/core/root-cause-analysis.md)** - Fehler-Pattern-Elimination
+
+- **[� Validierungs-Zwang-Protokoll](instructions/core/validierungs-zwang-protokoll.md)** - ZWINGENDER Manual-Fact-Check ALLER Scanner-Reports
+
+- **[�📊 Analyzer-Zwang-Protokoll](instructions/core/analyzer-zwang-protokoll.md)** - ZWINGENDER Tool-Einsatz & Eigenständige Validierung
 
 Sollten die Dateien / Verzeichnisse (für die Modularisierung) und Dokumentationen noch nicht existieren, muss die KI zwangsweise das ganze entsprechend von der KI aufgearbeitet werden.
 Aber Achtung: Keine Änderung, ohne manuelle Analyse durch die KI, kombiniert mit dem Analyse-Tool!!!

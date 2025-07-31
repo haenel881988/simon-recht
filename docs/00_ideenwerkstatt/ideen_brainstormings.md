@@ -1,6 +1,16 @@
 # offen
 
-**experimnetelles**
+**Workflows**
+
+**_Erstellen neuer Dateien_**
+
+Die KI muss als aller erstes zuerst mal ein vollständiger scan mit dem analyse-tool und dem wiederspruchsscanner durchführen.
+Anschliessend muss die KI eine vollständige inventarisierung durchführen, mit dem Tool
+
+Bevor überhaupt eine neue Datei erstellt werden muss, muss die KI zuerst mal prüfen, ob bereits eine neue datei vorhanden ist im Projekt und den darunterliegenden verzeichnis, inkl. dem instruction verzeichnis: ".github"
+
+# experimnetelles
+
 Automatisierte visuelle Regressionstests (z.B. mit Puppeteer, Playwright, Percy).
 Automatisierte Linting-, SEO-, Broken-Link- und Accessibility-Checks.
 Nach jedem Task schreibt die KI eine Zusammenfassung und ein Acknowledgement in die Doku.

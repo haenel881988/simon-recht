@@ -17,6 +17,26 @@ git push
 - Instructions-Updates mit Rule-Changes
 - Analyzer-Code-Modifications
 - Content-Migrations zwischen Scopes
+- **TOKEN-OVERFLOW-MODULARISIERUNG (CONTENT-PRESERVATION-ZWANG)**
+
+## **🛡️ CONTENT-PRESERVATION-PROTOKOLL:**
+
+### **🚨 BEI TOKEN-OVERFLOW ZWINGEND:**
+
+1. **NIEMALS INHALTE LÖSCHEN** um Token-Limits zu erreichen
+2. **BACKUP ERSTELLEN:** Original-Datei sichern
+3. **STATUS VALIDIEREN:** Welche Items sind tatsächlich erledigt?
+4. **KATEGORISIEREN:** Nach Priorität/Status/Thema sortieren
+5. **MIGRIEREN:** Items in Verzeichnisse VERSCHIEBEN (nicht löschen)
+6. **VERLINKEN:** Master-Liste als Navigation zu Detail-Listen
+7. **VALIDIEREN:** Kein Content-Verlust, nur bessere Struktur
+
+### **❌ TOKEN-PANIK-VERHALTEN (VERBOTEN):**
+
+- Hektische Kürzungen ohne Validation
+- "Modularisierung" durch Content-Destruction
+- Behaupten "modularisiert" wenn nur "gelöscht"
+- Token-Druck als Rechtfertigung für Datenverlust
 
 ## **SEARCH-REGELN:**
 

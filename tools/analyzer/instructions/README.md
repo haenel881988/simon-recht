@@ -1,7 +1,3 @@
-# INSTRUCTIONS
-
-Betreffendes Verzeichnis.: ".github"
-
 **Ziel und Zweck**
 
 Die Zielsetzung dieses Verzeichnisses ist die systematische Analyse und Verbesserung von Fehlern und Problemen innerhalb des Verzeichnisses: ".github".

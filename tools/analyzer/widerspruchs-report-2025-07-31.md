@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 19:47:21  
+**Generiert:** 31.7.2025, 20:39:47  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -8,51 +8,29 @@
 
 | Kategorie | Anzahl | Schweregrad |
 |-----------|---------|-------------|
-| 🚨 Instructions-Widersprüche | 2 | HIGH |
-| 🔢 Token-Warnungen | 2 | CRITICAL |
-| 🔗 Ungültige Links | 9 | HIGH |
-| 📄 Leere Dateien | 27 | MEDIUM |
+| 🚨 Instructions-Widersprüche | 0 | HIGH |
+| 🔢 Token-Warnungen | 0 | CRITICAL |
+| 🔗 Ungültige Links | 6 | HIGH |
+| 📄 Leere Dateien | 26 | MEDIUM |
 | 📂 Pfad-Fehler | 22 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
-### 🚨 CRITICAL
-Löse 2 Instructions-Widersprüche vor KI-Arbeit
-
-### 🚨 CRITICAL
-2 Dateien überschreiten Token-Limits - Modularisierung erforderlich
-
 ### ⚠️ HIGH
-Repariere 9 ungültige Links für Navigation
+Repariere 6 ungültige Links für Navigation
 
 ### 💡 MEDIUM
-Bereinige 27 leere/redundante Dateien
+Bereinige 26 leere/redundante Dateien
 
 ## 🔍 DETAILIERTE ERGEBNISSE
 
 ### ⚔️ INSTRUCTIONS-WIDERSPRÜCHE
-- **Unterschiedliche Token-Limits definiert** in `C:\apps\website\simon-recht\.github\instructions\inventarisierung\vollstaendige-projekt-inventarisierung.md`
-  - 📍 Zeile 60: "000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT"
-    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT`
-  - 📍 Zeile 60: "000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT"
-    → `│   ├── 📄 todos.md (286 Zeilen, ~4.000 Tokens) ✅ INNERHALB 6000-TOKEN-LIMIT`
-- **Multiple kritische Prioritäten** in `C:\apps\website\simon-recht\docs\todos\todos.md`
-  - 📍 Zeile 37: "Höchste Priorität"
-    → `- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen`
-  - 📍 Zeile 37: "Höchste Priorität"
-    → `- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen`
+✅ Keine Widersprüche gefunden
 
 ### 🔢 TOKEN-WARNUNGEN
-- `C:\apps\website\simon-recht\docs\todos\todos.md`: 6’136 Tokens (Datei aufteilen - überschreitet 6k GLOBAL LIMIT)
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md`: 7’275 Tokens (Datei aufteilen - überschreitet 6k GLOBAL LIMIT)
+✅ Alle Dateien im Token-Limit
 
 ### 🔗 UNGÜLTIGE LINKS
-- `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md` (Zeile 57): Link zu `../dsgvo-guide` nicht gefunden
-    → `[DSGVO-Compliance](../dsgvo-guide)`
-- `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md` (Zeile 58): Link zu `../vertragsrecht` nicht gefunden
-    → `[IT-Verträge](../vertragsrecht)`
-- `C:\apps\website\simon-recht\.github\instructions\content\blog-workflow.md` (Zeile 59): Link zu `../datenschutz` nicht gefunden
-    → `[Datenschutz-Audit](../datenschutz)`
 - `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/wenn-ehrlichkeit-bestraft-wird` nicht gefunden
     → `**[→ Warum das System gegen dich arbeitet - vollständige Analyse](/blog/wenn-ehrlichkeit-bestraft-wird)**`
 - `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 75): Link zu `/blog/der-wendepunkt-meine-story` nicht gefunden
@@ -67,14 +45,12 @@ Bereinige 27 leere/redundante Dateien
     → `### **[Blog 3: "3-Säulen-Methode im Detail"](/blog/drei-saeulen-methode-detail)**`
 
 ### 📄 LEERE/REDUNDANTE DATEIEN
-- `C:\apps\website\simon-recht\.github\instructions\business\simon-spezifika.md`: EMPTY (0 Bytes)
+- `C:\apps\website\simon-recht\docs\todos\prioritaeten\hoch\kritische-fixes.md`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\.github\instructions\technical\token-system.md`: EMPTY (0 Bytes)
+- `C:\apps\website\simon-recht\docs\todos\prioritaeten\README.md`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\.github\instructions\workflow\chat-prozess.md`: EMPTY (0 Bytes)
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\README.md`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\.gitignore`: MINIMAL (14 Bytes)
-    → `node_modules`
 - `C:\apps\website\simon-recht\tools\analyzer\procrastination-detector.cjs`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-50-333Z.md`: EMPTY (0 Bytes)
@@ -123,10 +99,6 @@ Bereinige 27 leere/redundante Dateien
     → `[DATEI LEER]`
 
 ### 📂 PFAD-REFERENZ-FEHLER
-- `C:\apps\website\simon-recht\.github\instructions\organisation\inventar\projekt_inventar.md` (Zeile 20): Referenz zu `tools/inventory/auto-inventory.js` ungültig
-    → `**Vollständiges Update:** `node tools/inventory/auto-inventory.js``
-- `C:\apps\website\simon-recht\.github\instructions\project\datei-operationen.md` (Zeile 66): Referenz zu `tools/analyzer/widerspruchs-report-` ungültig
-    → `Get-ChildItem tools/analyzer/widerspruchs-report-*.md | Sort-Object LastWriteTime -Descending | Select-Object -First 1`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 35): Referenz zu `docs/archive/auto-cleanup-2025-07-25` ungültig
     → `# New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 38): Referenz zu `docs/archive/auto-cleanup-2025-07-25/` ungültig
@@ -135,6 +107,10 @@ Bereinige 27 leere/redundante Dateien
     → `# Move-Item "docs\01_PLAYBOOK_CONTENT\_altes_chaos_archiv\*" "docs/archive/auto-cleanup-2025-07-25/"`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 35): Referenz zu `docs/archive/` ungültig
     → `# New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force`
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 65): Referenz zu `docs/todos/verhaltensprobleme.md` ungültig
+    → `- [ ] **Kontext:** 4x "hoch" in docs/todos/verhaltensprobleme.md gefunden`
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 65): Referenz zu `docs/todos/verhaltensprobleme.md` ungültig
+    → `- [ ] **Kontext:** 4x "hoch" in docs/todos/verhaltensprobleme.md gefunden`
 - `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 201): Referenz zu `tools/analyzer/universal-project-analyzer.cjs.` ungültig
     → `- [ ] **Prompt:** "Öffne tools/analyzer/universal-project-analyzer.cjs. Füge Zeilen-Zählung pro Datei hinzu. Implementiere Warnung bei >1200 Zeilen. Schlage Auto-Modularisierung vor. Teste mit großen Dateien und validiere Ausgabe."`
 - `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 210): Referenz zu `tools/analyzer/structure-optimizer-v2.cjs` ungültig
@@ -147,17 +123,17 @@ Bereinige 27 leere/redundante Dateien
     → `- **Veraltete Instructions:** Falsche Pfadangaben (docs/ideen/ existiert nicht)`
 - `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 456): Referenz zu `docs/projekt/` ungültig
     → `- [ ] **[HEUTE]** Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 19): Referenz zu `docs/fails_learnings/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/fails_learnings/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 19): Referenz zu `docs/authentizitaet/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/authentizitaet/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 23): Referenz zu `.github/instructions/agent.md` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 23): Referenz zu `.github/instructions/agent.md` ungültig
     → `- **Unvollständige Kontext-Injektion durch VS Code-Einstellungen:** In der `.vscode/settings.json` war zwar konfiguriert, projektbezogene Anweisungsdateien in den Chat-Kontext zu laden, allerdings **nicht alle**. Laut Einstellung wurden z.B. `.github/instructions/agent.md`, `anrede.md`, `settings.md` und `original_content_management.md` vorab eingebunden. Wichtige Dateien wie `namenskonvention.md` oder die allgemeinen Verhaltensregeln (`generelles.md` bzw. das Hook-Training README) fehlten jedoch in dieser Liste. Das bedeutet: Copilot hatte zu Beginn keinen Zugang zu manchen Richtlinien, insbesondere jener, die das **„Hook-Training-Paradoxon“** klärt (dass _“radikal” aufs Verhalten statt aufs Wording zielt_). Diese Lücke in der Template-Konfiguration kann erklären, warum Copilot Chat anfangs z.B. das Wort _„radikal“_ im Output nutzte, anstatt nur radikal ehrlich **zu handeln** – die entsprechende Anweisung war ihm ggf. nicht bekannt, bis der Nutzer es ausdrücklich auf alle Instructions stieß. Insgesamt zeigt dies, wie **unvollständiger Kontext** seitens der Entwicklungsumgebung die KI-Compliance beeinträchtigt hat.`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensprobleme.md` (Zeile 51): Referenz zu `docs/…` ungültig
+- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 51): Referenz zu `docs/…` ungültig
     → `**1. Instructions-Fundament bereinigen (Kurzfristig):** _Sofort_ alle bekannten Fehler in den Anleitungen korrigieren. Dazu gehört: falsche Pfade updaten (z.B. Verweise von `docs/…` auf das richtige Verzeichnis richten), Widersprüche wie jene zur Dateierstellung oder Sprache auflösen (ggf. durch Streichung einer der beiden kollidierenden Regeln), und redundante Regeln entfernen. Anschließend die überarbeitete `.github/copilot-instructions.md` sowie zugehörige Files versionieren (Backup der alten Fassung liegt ja vor). Diese Bereinigung hat oberste Priorität, da ein sauberes Regelwerk die Grundlage für alle weiteren Verbesserungen ist.`
 - `C:\apps\website\simon-recht\docs\website_struktur\recherche\tiefen_recherche\ph02_SEO- und Content-Strategie DACH_.md` (Zeile 369): Referenz zu `tools/keyword-research/` ungültig
     → `15. 11 beste Keyword-Recherche-Tools für SEO im Jahr 2025, Zugriff am Juli 12, 2025, https://www.seo.com/de/tools/keyword-research/`

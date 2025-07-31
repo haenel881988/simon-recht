@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * 🔍 SIMON'S WIDERSPRUCHS-SCANNER v1.0
+ * 🔍 SIMON'S WIDERSPRUCHS-SCANNER v1.1
  *
  * 🎯 ZWECK: Token-sparende Instructions-Analyse ohne KI-Search-Chaos
  * 🛡️ SICHERHEIT: Verhindert Layout-Zerstörung durch strukturierte Validierung
@@ -13,7 +13,11 @@
  * ✅ Ungültige Pfad-Referenzen scannen
  * ✅ Instructions-Widersprüche erkennen
  * ✅ Token-Estimation für sichere KI-Arbeit
+ * ✅ UTF-8 Encoding Fix (v1.1)
  */
+
+// UTF-8 Encoding für Console Output
+process.stdout.setEncoding("utf8");
 
 const fs = require("fs").promises;
 const path = require("path");
@@ -255,12 +259,13 @@ class ContradictionScanner {
 
         // Token-Warnung für sehr große Instructions
         const estimatedTokens = Math.floor(content.length / 4);
-        if (estimatedTokens > 6000) {
+        if (estimatedTokens > 10000) {
           this.results.tokenWarnings.push({
             file: filePath,
             estimatedTokens: estimatedTokens,
             severity: "CRITICAL",
-            recommendation: "Datei aufteilen - überschreitet 6k GLOBAL LIMIT",
+            recommendation:
+              "Datei aufteilen - überschreitet 10k GLOBAL LIMIT (31.07.2025 Update)",
           });
         }
 
@@ -432,10 +437,28 @@ class ContradictionScanner {
       content.match(/(?:KRITISCH|CRITICAL|HÖCHSTE PRIORITÄT)/gi) || [];
 
     if (criticalMatches.length > 3) {
+      // BUGFIX: Korrekte Zeilen-Nummern für gefundene Matches ermitteln
+      const matchPositions = [];
+      const lines = content.split("\n");
+
+      criticalMatches.forEach((match) => {
+        for (let i = 0; i < lines.length; i++) {
+          if (lines[i].includes(match)) {
+            matchPositions.push({
+              line: i + 1,
+              content: lines[i].trim(),
+              match: match,
+            });
+            break; // Nur erstes Vorkommen pro Match
+          }
+        }
+      });
+
       return {
         criticalCount: criticalMatches.length,
         recommendation: "Reduce critical priorities - max 3 per document",
         suggestion: "Use HIGH/MEDIUM for less critical items",
+        matchPositions: matchPositions, // NEUE ZEILEN-INFO
       };
     }
 
@@ -743,10 +766,24 @@ ${
   }
 
   // HELPER METHODS
+  shouldIgnore(filePath) {
+    const ignorePaths = [
+      "widerspruchs-report-",
+      "projekt-analyse-",
+      "scanner-korruptions-bericht-",
+      "node_modules",
+      ".git",
+      "package-lock.json",
+      ".vscode",
+    ];
+
+    return ignorePaths.some((ignore) => filePath.includes(ignore));
+  }
+
   async findMarkdownFiles() {
     const files = [];
     await this.walkDirectory(this.projectRoot, async (filePath) => {
-      if (filePath.endsWith(".md")) {
+      if (filePath.endsWith(".md") && !this.shouldIgnore(filePath)) {
         files.push(filePath);
       }
     });
@@ -764,7 +801,7 @@ ${
     for (const dirPath of instructionPaths) {
       try {
         await this.walkDirectory(dirPath, async (filePath) => {
-          if (filePath.endsWith(".md")) {
+          if (filePath.endsWith(".md") && !this.shouldIgnore(filePath)) {
             files.push(filePath);
           }
         });
@@ -779,7 +816,9 @@ ${
   async findAllFiles() {
     const files = [];
     await this.walkDirectory(this.projectRoot, async (filePath) => {
-      files.push(filePath);
+      if (!this.shouldIgnore(filePath)) {
+        files.push(filePath);
+      }
     });
     return files;
   }

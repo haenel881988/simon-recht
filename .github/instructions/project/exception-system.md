@@ -17,6 +17,7 @@
 - Token-Limit-Überschreitung droht
 - Datenverlust-Risiko bei Operation
 - Build-Failure nach Änderung
+- **TOKEN-PANIK-VERHALTEN erkannt (CONTENT-LÖSCHUNG statt MODULARISIERUNG)**
 
 #### **⚠️ LEVEL 2 - HIGH (RÜCKFRAGE REQUIRED):**
 
@@ -24,6 +25,7 @@
 - Priority-Inflation (>3 "Hoch")
 - Dependency-Chain unvollständig
 - Validation-Bypass erkannt
+- **MODULARISIERUNG ohne Inhalts-Validation geplant**
 
 #### **💡 LEVEL 3 - MEDIUM (WARNING + PROCEED):**
 
@@ -41,6 +43,7 @@
 ✅ Syntax-Error-Correction nach Code-Änderung
 ✅ Priority-Rebalancing bei Inflation
 ✅ Dependency-Resolution bei Creation
+✅ CONTENT-PRESERVATION-CHECK vor Modularisierung
 ```
 
 ### **🤔 MANUAL FIXES (SIMON-DECISION):**
@@ -50,6 +53,12 @@
 ❓ Scope-Definition-Overlaps
 ❓ Content-Authenticity-Questions
 ❓ Architecture-Decision-Impacts
+❓ MODULARISIERUNG vs. ARCHIVIERUNG Entscheidungen
+```
+
+❓ Content-Authenticity-Questions
+❓ Architecture-Decision-Impacts
+
 ```
 
 ## **PREVENTION-PROTOKOLL:**
@@ -100,3 +109,4 @@
 - Restore from automatic backup
 - Re-run analyzer to validate state
 - Document what went wrong + prevention
+```

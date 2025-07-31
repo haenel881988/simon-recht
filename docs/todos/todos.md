@@ -7,8 +7,8 @@ Dies ist um alles in der Welt zu verhindern und ist daher zwingend als oberste u
 **🔧 ZWINGENDER WORKFLOW VOR JEDER ÄNDERUNG:**
 Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Analyzing tool durchführen. Das Analyzing-Tool, muss für jede Datei, die exakte Zeilenzahl evaluieren und identifizieren.
 
-**📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG):**
-Wenn 1200 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
+**📏 6000-TOKEN-REGEL (GLOBAL GÜLTIG):**
+Wenn 6000 Tokens überschritten werden, muss die KI zwingend beginnen, die überlaufenden Tokens in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
 Wenn der Code betroffen ist, müssen sämtliche Abhängigkeiten berücksichtigt und angepasst werden.
 
 **🔍 ANALYZER-ENTWICKLUNG (FUNDAMENTAL):**
@@ -34,14 +34,14 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (TOP-PRIORITÄT)**
 
-- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
-- [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
-- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "Top-Priorität" ersetzen
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Widerspruchs-Scanner
-- [ ] **Prompt:** "Öffne .github/copilot-instructions.md und suche nach allen Instanzen von 'höchste Priorität', 'WICHTIGSTE PRIORITÄT' und ähnlichen Begriffen. Benenne eine der doppelten Instanzen in 'Top-Priorität' um, sodass keine Doppelung mehr existiert. Nutze replace_string_in_file Tool mit exaktem Kontext."
+- [x] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
+- [x] **Kontext:** Scanner-Alarm war Fehlalarm - nur 1 Instanz "WICHTIGSTE PRIORITÄT" existiert
+- [x] **Ressourcen:** Grep-Search bestätigt - keine Doppelungen vorhanden
+- [x] **Priorität:** Hoch
+- [x] **Status:** ✅ ERLEDIGT (Fehlalarm korrigiert)
+- [x] **Verantwortlich:** KI
+- [x] **Rolle:** Widerspruchs-Scanner
+- [x] **Ergebnis:** Widerspruch existierte nicht - TODO-Liste war veraltet
 
 - [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
 - [ ] **Kontext:** 6x "HOCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
