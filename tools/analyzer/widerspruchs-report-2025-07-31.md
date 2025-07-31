@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 31.7.2025, 20:39:47  
+**Generiert:** 31.7.2025, 20:50:01  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -10,14 +10,14 @@
 |-----------|---------|-------------|
 | 🚨 Instructions-Widersprüche | 0 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
-| 🔗 Ungültige Links | 6 | HIGH |
+| 🔗 Ungültige Links | 3 | HIGH |
 | 📄 Leere Dateien | 26 | MEDIUM |
 | 📂 Pfad-Fehler | 22 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
 ### ⚠️ HIGH
-Repariere 6 ungültige Links für Navigation
+Repariere 3 ungültige Links für Navigation
 
 ### 💡 MEDIUM
 Bereinige 26 leere/redundante Dateien
@@ -31,18 +31,12 @@ Bereinige 26 leere/redundante Dateien
 ✅ Alle Dateien im Token-Limit
 
 ### 🔗 UNGÜLTIGE LINKS
-- `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/wenn-ehrlichkeit-bestraft-wird` nicht gefunden
-    → `**[→ Warum das System gegen dich arbeitet - vollständige Analyse](/blog/wenn-ehrlichkeit-bestraft-wird)**`
-- `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 75): Link zu `/blog/der-wendepunkt-meine-story` nicht gefunden
-    → `**[→ Meine komplette Geschichte lesen](/blog/der-wendepunkt-meine-story)**`
-- `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 77): Link zu `/blog/drei-saeulen-methode-detail` nicht gefunden
-    → `**[→ 3-Säulen-Methode im Detail](/blog/drei-saeulen-methode-detail)**`
-- `C:\apps\website\simon-recht\src\content\pages\index.md` (Zeile 399): Link zu `/blog/wenn-ehrlichkeit-bestraft-wird` nicht gefunden
-    → `### **[Blog 1: "Wenn Ehrlichkeit bestraft wird"](/blog/wenn-ehrlichkeit-bestraft-wird)**`
-- `C:\apps\website\simon-recht\src\content\pages\index.md` (Zeile 405): Link zu `/blog/der-wendepunkt-meine-story` nicht gefunden
-    → `### **[Blog 2: "Der Wendepunkt - Meine komplette Story"](/blog/der-wendepunkt-meine-story)**`
-- `C:\apps\website\simon-recht\src\content\pages\index.md` (Zeile 411): Link zu `/blog/drei-saeulen-methode-detail` nicht gefunden
-    → `### **[Blog 3: "3-Säulen-Methode im Detail"](/blog/drei-saeulen-methode-detail)**`
+- `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/mindset-gegen-grosskonzern` nicht gefunden
+    → `**[→ Wie Mindset Großkonzerne schlägt - Meine komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
+- `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/mindset-gegen-grosskonzern` nicht gefunden
+    → `**[→ Wie Mindset Großkonzerne schlägt - Meine komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
+- `C:\apps\website\simon-recht\src\content\pages\index.md` (Zeile 399): Link zu `/blog/mindset-gegen-grosskonzern` nicht gefunden
+    → `### **[Mindset schlägt Großkonzern - Die komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
 
 ### 📄 LEERE/REDUNDANTE DATEIEN
 - `C:\apps\website\simon-recht\docs\todos\prioritaeten\hoch\kritische-fixes.md`: EMPTY (0 Bytes)

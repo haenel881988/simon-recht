@@ -392,27 +392,17 @@ Lass mich ehrlich sein: **Es ist hart, anstrengend und emotional belastend.**
 
 ---
 
-## **AUSGELAGERTE INHALTE → NEUE DETAILBLOGS:**
+## **VERTIEFENDE INFORMATIONEN:**
 
-_Für vertiefende Informationen siehe:_
+_Für die komplette Geschichte und Methodik siehe:_
 
-### **[Blog 1: "Wenn Ehrlichkeit bestraft wird"](/blog/wenn-ehrlichkeit-bestraft-wird)**
+### **[Mindset schlägt Großkonzern - Die komplette Geschichte](/blog/mindset-gegen-grosskonzern)**
 
-- Komplette System-Analyse und CSS 240 Mia. vs. AHV-Problem
-- Kognitive Dissonanz in der Gesellschaft
-- Strukturelle Diskriminierung und Manipulation
-
-### **[Blog 2: "Der Wendepunkt - Meine komplette Story"](/blog/der-wendepunkt-meine-story)**
-
+- Komplette System-Analyse: Wie ich gegen CSS 240 Mio. gewann
+- Kognitive Strategien und mentale Überlegenheit
+- 3-Säulen-Methode in der Praxis
 - 02.07.2025 Gerichtsurteil-Moment im Detail
-- Komplette emotionale Journey: Zitternde Hände, Rüstmesser, Bürostuhl
-- Hinter den Kulissen der 8-monatigen Schlacht
-
-### **[Blog 3: "3-Säulen-Methode im Detail"](/blog/drei-saeulen-methode-detail)**
-
-- Analytische Überlegenheit: Konkrete Tools und Workflows
-- Radikale Selbstverantwortung: Deep Dive in die Psychologie
-- Strategische Resilienz: Praxis-Beispiele und Anwendung
+- Konkrete Tools, Workflows und Anwendung
 
 ---
 

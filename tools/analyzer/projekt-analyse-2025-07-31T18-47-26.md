@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 31.7.2025, 19:41:32  
-**Analysedauer:** 0.62 Sekunden  
+**Erstellt:** 31.7.2025, 20:47:26  
+**Analysedauer:** 0.50 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 68 |
-| **Zeilen gesamt** | 24’876 |
-| **Wörter gesamt** | 133’782 |
-| **Zeichen gesamt** | 2’481’460 |
-| **Geschätzte Tokens** | 666’839 |
+| **Dateien gesamt** | 74 |
+| **Zeilen gesamt** | 25’165 |
+| **Wörter gesamt** | 134’529 |
+| **Zeichen gesamt** | 2’488’538 |
+| **Geschätzte Tokens** | 671’736 |
 
 ---
 
@@ -22,14 +22,14 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **DOCUMENTATION** | 47 | 15’903 | 122’156 | 2599 |
-| **CONTENT** | 47 | 12’621 | 107’630 | 2290 |
-| **BUILD_SYSTEM** | 41 | 15’181 | 101’268 | 2470 |
-| **TODOS_MANAGEMENT** | 27 | 12’825 | 83’041 | 3076 |
-| **CSS_DESIGN** | 30 | 11’935 | 78’943 | 2631 |
-| **ASSETS** | 15 | 12’646 | 76’700 | 5113 |
-| **CONFIG** | 17 | 9’273 | 49’065 | 2886 |
-| **INSTRUCTIONS** | 26 | 7’681 | 37’541 | 1444 |
+| **DOCUMENTATION** | 53 | 16’192 | 123’128 | 2323 |
+| **CONTENT** | 53 | 12’871 | 108’469 | 2047 |
+| **BUILD_SYSTEM** | 44 | 15’467 | 102’240 | 2324 |
+| **TODOS_MANAGEMENT** | 31 | 13’028 | 83’725 | 2701 |
+| **CSS_DESIGN** | 30 | 11’984 | 79’108 | 2637 |
+| **ASSETS** | 16 | 12’692 | 76’860 | 4804 |
+| **CONFIG** | 18 | 9’463 | 49’717 | 2762 |
+| **INSTRUCTIONS** | 30 | 7’818 | 37’994 | 1266 |
 | **ASTRO_COMPONENTS** | 10 | 3’038 | 10’495 | 1050 |
 
 ---
@@ -175,12 +175,12 @@
 - **Empfehlung:** SEPARATE_ANALYSIS
 
 **Betroffene Dateien:**
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
-- `tools/analyzer/contradiction-scanner.cjs` (3041 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
+- `tools/analyzer/contradiction-scanner.cjs` (3174 Tokens)
 
 ### 10. BUILD_SYSTEM + CONFIG + CSS_DESIGN + TODOS_MANAGEMENT
 
@@ -361,81 +361,81 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Status** | CONFLICT_DETECTED |
-| **Confidence-Score** | 0% |
-| **Verification-Levels** | N/A |
+| **Status** | VERIFIED |
+| **Confidence-Score** | 100% |
+| **Verification-Levels** | basic, crossReference, logic, consensus |
 | **Major Issues** | 0 |
 
-❌ **UNRELIABLE RESULTS** - Analyse sollte wiederholt werden.
+✅ **ANALYSIS VERIFIED** - Ergebnisse wurden durch Multi-Level-Checks bestätigt.
 
 ---
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope BUILD_SYSTEM hat 101268 Tokens (>10k Limit)
+### 1. ⚠️ Scope BUILD_SYSTEM hat 102240 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** BUILD_SYSTEM
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope CONFIG hat 49065 Tokens (>10k Limit)
+### 2. ⚠️ Scope CONFIG hat 49717 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CONFIG
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope CONTENT hat 107630 Tokens (>10k Limit)
+### 3. ⚠️ Scope CONTENT hat 108469 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CONTENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 4. ⚠️ Scope CSS_DESIGN hat 78943 Tokens (>10k Limit)
+### 4. ⚠️ Scope CSS_DESIGN hat 79108 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CSS_DESIGN
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 5. ⚠️ Scope INSTRUCTIONS hat 37541 Tokens (>10k Limit)
+### 5. ⚠️ Scope INSTRUCTIONS hat 37994 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** INSTRUCTIONS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 6. ⚠️ Scope TODOS_MANAGEMENT hat 83041 Tokens (>10k Limit)
+### 6. ⚠️ Scope TODOS_MANAGEMENT hat 83725 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 7. ⚠️ Scope DOCUMENTATION hat 122156 Tokens (>10k Limit)
+### 7. ⚠️ Scope DOCUMENTATION hat 123128 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 8. ⚠️ Scope ASSETS hat 76700 Tokens (>10k Limit)
+### 8. ⚠️ Scope ASSETS hat 76860 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** ASSETS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 9. ⚠️ Scope ASTRO_COMPONENTS hat 10495 Tokens (>10k Limit)
+### 9. ⚠️ Scope ASTRO_COMPONENTS hat 10495 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** ASTRO_COMPONENTS
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 10. 🚨 Gesamtprojekt hat 666839 Tokens (>50k GitHub Copilot Limit)
+### 10. 🚨 Gesamtprojekt hat 671736 Tokens (>50k GitHub Copilot Limit)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE

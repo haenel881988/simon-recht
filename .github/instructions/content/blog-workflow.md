@@ -54,9 +54,9 @@ tags: ["IT-Recht", "DSGVO", "Tech-Legal"]
 ### **🔗 INTERNE VERLINKUNG:**
 
 ```markdown
-[DSGVO-Compliance](../dsgvo-guide)
-[IT-Verträge](../vertragsrecht)
-[Datenschutz-Audit](../datenschutz)
+[Mindset-Strategien](../mindset-gegen-grosskonzern)
+[IT-Rechtspraxis](../it-recht-praxis)  
+[Selbstvertretung-Guide](../selbstvertretung)
 ```
 
 ## **🔄 PUBLIKATIONS-WORKFLOW:**

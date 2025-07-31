@@ -52,7 +52,7 @@ Den erst beim Gerichtsurteil kam heraus, dass keinerlei Gerichtskosten anfallen 
 Auch würden keinerlei Anwaltskosten übernommen werden.
 Die Anwaltskanzlei hatte also kein Interesse daran, mich vor Gericht zu vertreten und suggerierte mir auch noch, dass ich keine Chance hätte.
 
-**[→ Warum das System gegen dich arbeitet - vollständige Analyse](/blog/wenn-ehrlichkeit-bestraft-wird)**
+**[→ Wie Mindset Großkonzerne schlägt - Meine komplette Geschichte](/blog/mindset-gegen-grosskonzern)**
 
 ---
 
@@ -72,9 +72,7 @@ In meinem Buch: Gicht und Muskeltraining gehe ich noch tiefer darauf ein, was es
 Das Buch erhältst du kostenlos zum David gegen Goliath Protokoll.
 Oder separat für 18.80 CHF.
 
-**[→ Meine komplette Geschichte lesen](/blog/der-wendepunkt-meine-story)**
-
-**[→ 3-Säulen-Methode im Detail](/blog/drei-saeulen-methode-detail)**
+**[→ Komplettes Mindset-System verstehen](/blog/mindset-gegen-grosskonzern)**
 
 ---
 
