@@ -148,11 +148,17 @@ class ContradictionScanner {
           const exists = await this.fileExists(targetPath);
 
           if (!exists) {
+            // Finde Zeilennummer für den Link
+            const lineNumber = this.findLineNumber(content, link);
+            const lineContent = this.extractLineContent(content, lineNumber);
+            
             this.results.invalidLinks.push({
               file: filePath,
               link: link,
               targetPath: targetPath,
               severity: "HIGH",
+              lineNumber: lineNumber,
+              lineContent: lineContent,
             });
           }
         }
@@ -186,6 +192,8 @@ class ContradictionScanner {
             size: stats.size,
             type: "EMPTY",
             severity: "MEDIUM",
+            lineNumber: 1,
+            lineContent: "[DATEI LEER]",
           });
         }
 
@@ -197,6 +205,8 @@ class ContradictionScanner {
             content: content.trim(),
             type: "MINIMAL",
             severity: "LOW",
+            lineNumber: 1,
+            lineContent: content.trim(),
           });
         }
       } catch (error) {
@@ -206,6 +216,8 @@ class ContradictionScanner {
           error: error.message,
           type: "UNREADABLE",
           severity: "HIGH",
+          lineNumber: 1,
+          lineContent: `[FEHLER: ${error.message}]`,
         });
       }
     }
@@ -254,6 +266,11 @@ class ContradictionScanner {
                 filePath
               );
               if (customResult) {
+                const line1 = this.findLineNumber(content, match1[0]);
+                const line2 = this.findLineNumber(content, match2[0]);
+                const lineContent1 = this.extractLineContent(content, line1);
+                const lineContent2 = this.extractLineContent(content, line2);
+                
                 this.results.contradictions.push({
                   file: filePath,
                   description: contradiction.description,
@@ -262,10 +279,19 @@ class ContradictionScanner {
                   severity: contradiction.severity || "HIGH",
                   autoFix: contradiction.autoFix || null,
                   customDetails: customResult,
+                  line1: line1,
+                  line2: line2,
+                  lineContent1: lineContent1,
+                  lineContent2: lineContent2,
                 });
               }
             } else {
               // Standard Widerspruch
+              const line1 = this.findLineNumber(content, match1[0]);
+              const line2 = this.findLineNumber(content, match2[0]);
+              const lineContent1 = this.extractLineContent(content, line1);
+              const lineContent2 = this.extractLineContent(content, line2);
+              
               this.results.contradictions.push({
                 file: filePath,
                 description: contradiction.description,
@@ -273,6 +299,10 @@ class ContradictionScanner {
                 evidence2: match2[0],
                 severity: contradiction.severity || "HIGH",
                 autoFix: contradiction.autoFix || null,
+                line1: line1,
+                line2: line2,
+                lineContent1: lineContent1,
+                lineContent2: lineContent2,
               });
             }
           }
@@ -309,11 +339,16 @@ class ContradictionScanner {
           const exists = await this.fileExists(fullPath);
 
           if (!exists) {
+            const lineNumber = this.findLineNumber(content, refPath);
+            const lineContent = this.extractLineContent(content, lineNumber);
+            
             this.results.pathErrors.push({
               file: filePath,
               referencedPath: refPath,
               fullPath: fullPath,
               severity: "MEDIUM",
+              lineNumber: lineNumber,
+              lineContent: lineContent,
             });
           }
         }
@@ -506,7 +541,32 @@ class ContradictionScanner {
   }
 
   /**
-   * 📝 REPORT FORMATIEREN
+   * � ZEILENNUMMER FINDEN
+   */
+  findLineNumber(content, searchText) {
+    const lines = content.split('\n');
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].includes(searchText)) {
+        return i + 1; // 1-basierte Zeilennummer
+      }
+    }
+    return 1; // Fallback
+  }
+
+  /**
+   * 📄 ZEILEN-INHALT EXTRAHIEREN
+   */
+  extractLineContent(content, lineNumber) {
+    const lines = content.split('\n');
+    const index = lineNumber - 1; // Zu 0-basiert konvertieren
+    if (index >= 0 && index < lines.length) {
+      return lines[index].trim();
+    }
+    return "[ZEILE NICHT GEFUNDEN]";
+  }
+
+  /**
+   * �📝 REPORT FORMATIEREN
    */
   formatReport() {
     const timestamp = new Date().toLocaleString("de-DE");
@@ -553,8 +613,10 @@ ${
         .map(
           (item) =>
             `- **${item.description}** in \`${item.file}\`
-  - Widerspruch 1: "${item.evidence1}"
-  - Widerspruch 2: "${item.evidence2}"`
+  - 📍 Zeile ${item.line1 || 'N/A'}: "${item.evidence1}"
+    → \`${item.lineContent1 || item.evidence1}\`
+  - 📍 Zeile ${item.line2 || 'N/A'}: "${item.evidence2}"
+    → \`${item.lineContent2 || item.evidence2}\``
         )
         .join("\n")
 }
@@ -582,7 +644,8 @@ ${
     : this.results.invalidLinks
         .map(
           (item) =>
-            `- \`${item.file}\`: Link zu \`${item.link}\` nicht gefunden`
+            `- \`${item.file}\` (Zeile ${item.lineNumber || 'N/A'}): Link zu \`${item.link}\` nicht gefunden
+    → \`${item.lineContent || item.link}\``
         )
         .join("\n")
 }
@@ -592,7 +655,8 @@ ${
   this.results.emptyFiles.length === 0
     ? "✅ Keine leeren Dateien"
     : this.results.emptyFiles
-        .map((item) => `- \`${item.file}\`: ${item.type} (${item.size} Bytes)`)
+        .map((item) => `- \`${item.file}\`: ${item.type} (${item.size} Bytes)
+    → \`${item.lineContent || '[DATEI LEER]'}\``)
         .join("\n")
 }
 
@@ -603,7 +667,8 @@ ${
     : this.results.pathErrors
         .map(
           (item) =>
-            `- \`${item.file}\`: Referenz zu \`${item.referencedPath}\` ungültig`
+            `- \`${item.file}\` (Zeile ${item.lineNumber || 'N/A'}): Referenz zu \`${item.referencedPath}\` ungültig
+    → \`${item.lineContent || item.referencedPath}\``
         )
         .join("\n")
 }
