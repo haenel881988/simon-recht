@@ -683,6 +683,7 @@ ${
           ".vercel", // Vercel Cache
           ".netlify", // Netlify Cache
           "logs", // Log Directories
+          "00_ideenwerkstatt", // Simon's Brainstorming-Bereich (AUSGESCHLOSSEN)
         ];
 
         // Versteckte Verzeichnisse ausschließen (außer .github)
