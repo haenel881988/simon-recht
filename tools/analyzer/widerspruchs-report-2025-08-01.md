@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 1.8.2025, 16:50:34  
+**Generiert:** 1.8.2025, 17:05:34  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -93,17 +93,17 @@ Bereinige 22 leere/redundante Dateien
     → `# Move-Item "docs\01_PLAYBOOK_CONTENT\_altes_chaos_archiv\*" "docs/archive/auto-cleanup-2025-07-25/"`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 35): Referenz zu `docs/archive/` ungültig
     → `# New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 199): Referenz zu `tools/analyzer/universal-project-analyzer.cjs.` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 224): Referenz zu `tools/analyzer/universal-project-analyzer.cjs.` ungültig
     → `- [ ] **Prompt:** "Öffne tools/analyzer/universal-project-analyzer.cjs. Füge Zeilen-Zählung pro Datei hinzu. Implementiere Warnung bei >1200 Zeilen. Schlage Auto-Modularisierung vor. Teste mit großen Dateien und validiere Ausgabe."`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 208): Referenz zu `tools/analyzer/structure-optimizer-v2.cjs` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 233): Referenz zu `tools/analyzer/structure-optimizer-v2.cjs` ungültig
     → `- [ ] **Prompt:** "Prüfe ob tools/analyzer/structure-optimizer-v2.cjs existiert. Falls ja: erweitere um Auto-Modularisierung bei >1200 Zeilen. Falls nein: erstelle Basis-Implementierung für Datei-Struktur-Optimierung."`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 217): Referenz zu `tools/analyzer/contradiction-scanner.cjs.` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 242): Referenz zu `tools/analyzer/contradiction-scanner.cjs.` ungültig
     → `- [ ] **Prompt:** "Öffne tools/analyzer/contradiction-scanner.cjs. Füge Funktion hinzu die alle Dateien auf >1200 Zeilen prüft. Warne bei Überschreitung. Integriere in bestehende Widerspruchs-Reports."`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 368): Referenz zu `docs/lessons-learned/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 393): Referenz zu `docs/lessons-learned/` ungültig
     → `4. **Lesson Learned:** Dokumentation in docs/lessons-learned/`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 382): Referenz zu `docs/ideen/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 407): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete Instructions:** Falsche Pfadangaben (docs/ideen/ existiert nicht)`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 408): Referenz zu `docs/projekt/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 433): Referenz zu `docs/projekt/` ungültig
     → `- [ ] Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)`
 - `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`

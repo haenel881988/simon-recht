@@ -152,82 +152,6 @@ p {
   text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
 }
 
-.navbar-brand:hover {
-  color: var(--glut-orange);
-}
-
-.navbar-nav {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  align-items: center;
-}
-
-.navbar-link {
-  color: var(
-    --glut-orange
-  ); /* ✅ NAVIGATION IN GLUT-ORANGE: 9.8:1 Kontrast - mutig und professionell */
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
-}
-
-.navbar-link:hover {
-  color: #ff6a33; /* ✅ AUFGEHELLTES ORANGE beim Hover */
-  background-color: var(
-    --analyse-blau
-  ); /* ✅ Hover-Hintergrund in Analyse-Blau */
-}
-
-.navbar-link.active {
-  color: var(--glut-orange);
-  background-color: var(
-    --analyse-blau
-  ); /* ✅ Aktiver Hintergrund in Analyse-Blau */
-}
-
-/* Mobile Navigation */
-.navbar-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text-weiss);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
-
-  .navbar-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--asphaltschwarz);
-    border-top: 1px solid var(--analyse-blau);
-    flex-direction: column;
-    gap: 0;
-    display: none;
-  }
-
-  .navbar-nav.active {
-    display: flex;
-  }
-
-  .navbar-link {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    border-bottom: 1px solid var(--analyse-blau); /* ✅ FIX: Definierte Variable */
-  }
-}
-
 /* 🎯 LINKS & INTERAKTIONEN */
 a {
   color: var(--analyse-blau-hell); /* ✅ Links in aufgehelltem Analyse-Blau */
@@ -460,20 +384,6 @@ pre code {
     grid-template-columns: 1fr;
     gap: 2rem; /* Mobile: Kompakte Abstände */
   }
-
-  /* Hero-spezifische Mobile-Optimierung */
-  .hero {
-    padding: 2rem 0; /* Weniger Padding auf Mobile */
-    text-align: center; /* Zentriert auf Mobile */
-  }
-
-  .hero-title {
-    font-size: 2.5rem; /* Kleinere Schrift auf Mobile */
-  }
-
-  .hero-image {
-    order: -1; /* Bild vor Text auf Mobile */
-  }
 }
 
 /* 📱 RESPONSIVE UTILITIES */
@@ -614,7 +524,7 @@ pre code {
 }
 
 @media (max-width: 480px) {
-  .hero-title {
+  h1 {
     font-size: 2rem;
   }
 

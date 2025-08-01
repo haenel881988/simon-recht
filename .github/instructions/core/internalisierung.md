@@ -1,4 +1,42 @@
-# 🧠 INTERNALISIERUNGS-SYSTEM
+# 🧠 INTERN### **🔄 SIMON'S TASK-WORKFLOW-PROTOKOLL (INTERNALISIERT 01.08.2025):**
+
+**ZWINGENDER WORKFLOW NACH JEDER AUFGABE:**
+
+1. **VALIDIERUNG:** Task-Ergebnis mit Tools validieren (Build-Checker, Analyzer)
+2. **BEWEIS-SAMMLUNG:** Tool-basierte Fakten für Erfolgsmessung
+3. **NEXT-STEPS-EVALUATION:** Konkrete nächste Schritte analysieren
+4. **TODO-AKTUALISIERUNG:** docs/todos/todos.md entsprechend updaten
+5. **SIMON-ENTSCHEIDUNG:** Intervention nötig oder autonom fortfahren?
+
+**DECISION-MATRIX:**
+
+- **Autonom fortfahren:** Bei klaren, technischen Follow-up Tasks
+- **Simon fragen:** Bei strategischen Entscheidungen oder Scope-Wechsel
+- **Exception werfen:** Bei unklaren Abhängigkeiten oder Widersprüchen
+
+**SIMON'S ENTSCHEIDUNGS-MINIMIERUNGS-ZWANG (INTERNALISIERT 01.08.2025):**
+
+**ABSOLUT VERBOTEN:**
+
+- ❌ Optionen/Möglichkeiten vorschlagen ("A oder B")
+- ❌ Entweder-Oder-Entscheidungen delegieren
+- ❌ Multiple Wahlmöglichkeiten präsentieren
+- ❌ "Was möchtest du?" Fragen bei logisch eindeutigen Schritten
+
+**ZWINGEND ERFORDERLICH:**
+
+- ✅ **DIREKTE AUSFÜHRUNG:** Logisch nächsten Schritt autonom durchführen
+- ✅ **WILLENSKRAFT-SCHONUNG:** Entscheidungsbelastung minimieren
+- ✅ **EVALUATION-BASED-ACTION:** Eigene Analyse sofort umsetzen
+- ✅ **SINGLETON-DECISION:** Nur eine beste Option evaluieren und durchführen
+
+**KONKRETISIERUNGS-ZWANG- Beispiel:**
+
+- ❌ "Soll ich A oder B machen?"
+- ❌ "Nächste Schritte evaluieren"
+- ✅ "Node tools/build_check/multi-scope-checker.cjs ausführen, dann navigation.css CSS-Duplikate entfernen in Zeilen 45-67"
+
+### **💡 SIMON'S GENIALE ERKENNTNISSE:**LISIERUNGS-SYSTEM
 
 ❌ NIEMALS replace_string_in_file verwenden für Content
 

@@ -16,7 +16,9 @@
 }
 
 .navbar-link {
-  color: var(--navigation-optimiert); /* ✅ WEISSE NAVIGATION: 15.8:1 Kontrast */
+  color: var(
+    --navigation-optimiert
+  ); /* ✅ WEISSE NAVIGATION: 15.8:1 Kontrast */
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -28,7 +30,12 @@
 
 .navbar-link:hover {
   color: var(--glut-orange); /* ✅ Hover in Glut-Orange */
-  background-color: rgba(138, 180, 199, 0.1); /* ✅ Subtile Analyse-Blau Hintergrund */
+  background-color: rgba(
+    138,
+    180,
+    199,
+    0.1
+  ); /* ✅ Subtile Analyse-Blau Hintergrund */
   text-shadow: var(--text-schatten);
 }
 

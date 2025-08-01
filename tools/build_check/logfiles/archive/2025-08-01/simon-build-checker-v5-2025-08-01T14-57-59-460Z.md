@@ -1,12 +1,12 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 1.8.2025, 17:05:34
+**Generiert:** 1.8.2025, 16:57:59
 **Projekt:** simon-recht
 **Gesamt-Health-Score:** 69/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 6192ms
+- **Ausführungszeit:** 6496ms
 - **Scopes getestet:** 5
 - **Gesamt-Issues:** 15
 - **Kritische Issues:** 0
@@ -17,7 +17,7 @@
 
 **Health Score:** 90/100
 **Status:** success
-**Ausführungszeit:** 11ms
+**Ausführungszeit:** 13ms
 **Issues:** 10
 
 ### 📈 Metriken
@@ -28,24 +28,24 @@
 - **failedTests:** 2
 - **averageContrast:** 5.18
 - **cssFilesAnalyzed:** 1
-- **cssRulesCount:** 82
+- **cssRulesCount:** 66
 - **duplicateRules:** 5
 
 ### 🚨 Issues
 
-1. 💡 **WARNING:** CSS-Duplikat: "li"
+1. 💡 **WARNING:** CSS-Duplikat: ".navbar-nav"
    - **Datei:** src/styles/global.css
    - **Position:** Globaler Scope
 
-2. 💡 **WARNING:** CSS-Duplikat: ".hero-title"
+2. 💡 **WARNING:** CSS-Duplikat: ".navbar-link"
    - **Datei:** src/styles/global.css
    - **Position:** Globaler Scope
 
-3. 💡 **WARNING:** CSS-Duplikat: ".hero-subtitle"
+3. 💡 **WARNING:** CSS-Duplikat: "li"
    - **Datei:** src/styles/global.css
    - **Position:** Globaler Scope
 
-4. 💡 **WARNING:** Viele CSS-Variablen gefunden: 97
+4. 💡 **WARNING:** Viele CSS-Variablen gefunden: 107
    - **Datei:** src/styles/global.css
 
 5. 💡 **WARNING:** CSS-Import gefunden: base/variables.css
@@ -88,7 +88,7 @@
 
 **Health Score:** 98/100
 **Status:** success
-**Ausführungszeit:** 5ms
+**Ausführungszeit:** 19ms
 **Issues:** 1
 
 ### 📈 Metriken
@@ -109,7 +109,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3164ms
+**Ausführungszeit:** 3389ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -146,7 +146,7 @@
 
 **Health Score:** 85/100
 **Status:** success
-**Ausführungszeit:** 449ms
+**Ausführungszeit:** 496ms
 **Issues:** 0
 
 ---

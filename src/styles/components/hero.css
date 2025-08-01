@@ -6,7 +6,9 @@
 
 /* 🦸 HERO CORE SYSTEM */
 .hero-title {
-  color: var(--analyse-blau-ueberschrift); /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
+  color: var(
+    --analyse-blau-ueberschrift
+  ); /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.1;
@@ -51,7 +53,11 @@
 .hero-section {
   padding: 4rem 2rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--asphaltschwarz), rgba(74, 109, 124, 0.1));
+  background: linear-gradient(
+    135deg,
+    var(--asphaltschwarz),
+    rgba(74, 109, 124, 0.1)
+  );
 }
 
 .hero-subtitle {
