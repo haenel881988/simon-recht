@@ -34,23 +34,17 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (TOP-PRIORITÄT)**
 
-
-
-
-
 - [ ] **Aufgabe:** Blog-Links von ungültigen zu existierenden Artikeln umleiten
 - [ ] **Kontext:** 3 ungültige Blog-Links auf nicht existierende Artikel in src/pages/index.astro
 - [ ] **Ressourcen:** Links reparieren oder entfernen - existierende Artikel verwenden
-- [ ] **Priorität:** Hoch
+- [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Link-Reparateur
 
-
-
 - [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
 - [ ] **Kontext:** Prioritäten-Disziplin sicherstellen - zu viele "HOCH" verwirren Wichtigkeit
-- [ ] **Ressourcen:** Tool-validierte Prioritäten-Analyse durchführen  
+- [ ] **Ressourcen:** Tool-validierte Prioritäten-Analyse durchführen
 - [ ] **Priorität:** Niedrig
 - [ ] **Status:** ✅ BEREITS GELÖST - Tool-Validierung zeigt nur 1 "HOCH" (statt 6)
 - [ ] **Verantwortlich:** KI
@@ -59,7 +53,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Aufgabe:** "hoch"-Überfüllung in todos.md reduzieren
 - [ ] **Kontext:** 7x "hoch" in docs/todos/todos.md - zu viele wichtige Einträge verwirren Prioritäten
 - [ ] **Ressourcen:** TODO-Liste durchgehen, nur 3 echte Top-Priorität behalten, Rest umklassifizieren
-- [ ] **Priorität:** Hoch
+- [ ] **Priorität:** Niedrig
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Todo-Prioritäten-Optimizer
@@ -73,8 +67,6 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Prioritäten-Bereiniger
 - [ ] **Prompt:** "Analysiere docs/todos/verhaltensprobleme.md mit grep_search nach 'hoch'. Öffne die Datei und bewerte alle 4 Instanzen. Behalte maximal 2 als 'hoch', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für Änderungen."
-
-
 
 - [ ] **Aufgabe:** 67 Duplikat-Gruppen bereinigen (ANALYZER-BEFUND)
 - [ ] **Kontext:** Neue Redundanz-Analyse zeigt massive Duplikation - Dateien in mehreren Scopes
@@ -105,10 +97,6 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
 
-
-
-
-
 - [ ] **Aufgabe:** 6 fehlende Blog-Links reparieren
 - [ ] **Kontext:** Links zu /blog/wenn-ehrlichkeit-bestraft-wird, /blog/der-wendepunkt-meine-story, /blog/drei-saeulen-methode-detail existieren nicht
 - [ ] **Ressourcen:** Blog-Artikel erstellen oder Links entfernen aus Website-Struktur-Dateien
@@ -137,7 +125,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Aufgabe:** Navigation optisch optimieren (Simon insistiert!)
 - [ ] **Kontext:** Simon ist mit der aktuellen Navigation nicht zufrieden - optische Verbesserung nötig
 - [ ] **Ressourcen:** CSS-Checker verwenden, Navigation-spezifische CSS überarbeiten
-- [ ] **Priorität:** Hoch
+- [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** UI/UX-Designer
@@ -146,7 +134,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Aufgabe:** CSS-Abhängigkeiten prüfen und anpassen
 - [ ] **Kontext:** Nach CSS-Modularisierung müssen alle Abhängigkeiten korrekt funktionieren
 - [ ] **Ressourcen:** Build-Checker verwenden, alle .astro Dateien auf CSS-Imports prüfen
-- [ ] **Priorität:** Hoch
+- [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Dependency-Manager
@@ -166,7 +154,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Aufgabe:** 60/30/10 Design-Prinzip wiederherstellen
 - [ ] **Kontext:** Design-System muss aus UI/UX-Designer-Sicht validiert und optimiert werden
 - [ ] **Ressourcen:** CSS-Farbschema prüfen und anpassen (asphaltschwarz 60%, stormy-blue 30%, accent 10%)
-- [ ] **Priorität:** Hoch
+- [ ] **Priorität:** Mittel
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** UI/UX-Designer
@@ -276,30 +264,17 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **6. CONTENT-PIPELINE MIGRATION (AUS INHALT/)**
 
-- [ ] **[30.07]** Blog-Artikel 2: "Arbeitsrecht für IT-Professionals" (aus content-todos.md)
-- [ ] **[30.07]** Blog-Artikel 3: "Datenschutz im Homeoffice" (aus content-todos.md)
-- [ ] **[30.07]** Startseite: Thomy-Persona Integration
-- [ ] **[30.07]** Über Mich Seite: Simon's authentische Story
-- [ ] **[30.07]** Services-Seite: Onlinekurs-Vision implementieren
-- [ ] **[30.07]** Contact-Form: Erste Kunden-Touchpoints
-
 ### **7. TECHNISCHE MIGRATION (AUS TEC/)**
-
-- [ ] **[HEUTE]** CSS-Kontrast-Probleme beheben (Navigation + Icons)
-- [ ] **[HEUTE]** Responsive Design Mobile-Optimierung
-- [ ] **[HEUTE]** Build-Validation vor Content-Arbeit
-- [ ] **[30.07]** Astro-Build Performance optimieren
-- [ ] **[30.07]** Empty-Files weitere Bereinigung (automatisiert)
-- [ ] **[30.07]** Archive-Verschiebungen bereinigen
 
 ### **3. WEBSITE-STRUKTUR FINALISIERUNG**
 
-- [ ] **[HEUTE]** Body nach AIDA/PAS-Prinzip strukturieren:
-  - [ ] Hero-Section → Attention (Hölle-Prinzip)
-  - [ ] Erster Abschnitt → Interest/PAS
-  - [ ] Zweiter Abschnitt → Desire/Solution
-  - [ ] Dritter Abschnitt → Action/Kontaktformular
-  - [ ] FAQ-Sektion nach Kontaktformular
+Body nach AIDA/PAS-Prinzip strukturieren:
+
+- [ ] Hero-Section → Attention (Hölle-Prinzip)
+- [ ] Erster Abschnitt → Interest/PAS
+- [ ] Zweiter Abschnitt → Desire/Solution
+- [ ] Dritter Abschnitt → Action/Kontaktformular
+- [ ] FAQ-Sektion nach Kontaktformular
 
 ---
 
@@ -307,52 +282,44 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **CONTENT-ERSTELLUNG**
 
-- [ ] **[30.07]** Blog-Artikel 2: "Arbeitsrecht für IT-Professionals"
-- [ ] **[30.07]** Blog-Artikel 3: "Datenschutz im Homeoffice"
-- [ ] **[30.07]** Alle Seiten nach AIDA/PAS-Prinzip aufbauen
-
 ### **RESPONSIVE DESIGN**
 
-- [ ] **[30.07]** Mobile-Optimierung vervollständigen
-- [ ] **[30.07]** Responsive Design Deep-Test
-- [ ] **[30.07]** Cross-Browser-Validation
+Mobile-Optimierung vervollständigen
+Responsive Design Deep-Test
+Cross-Browser-Validation
 
 ---
 
-
-
-## 🔧 **TECHNISCHE SCHULDEN (NACH LAUNCH)**
+## 🔧 **TECHNISCHE SCHULDEN**
 
 ### **ANALYZER-VERBESSERUNGEN**
 
-- [ ] **[NACH LAUNCH]** Analyzer um Abhängigkeits-Prüfung erweitern
-- [ ] **[NACH LAUNCH]** Interne Links-Validation implementieren
-- [ ] **[NACH LAUNCH]** Token-Limit-Monitoring verbessern
+- [ ] Analyzer um Abhängigkeits-Prüfung erweitern
+- [ ] Interne Links-Validation implementieren
+- [ ] Token-Limit-Monitoring verbessern
 
 ### **TOOL-OPTIMIERUNGEN (TOOL-MORATORIUM AKTIV)**
 
-- [ ] **[NACH LAUNCH]** Build-Checker erweiterte CSS-Tests (>10 Tests)
-- [ ] **[NACH LAUNCH]** Performance-Monitoring ausbauen
-- [ ] **[NACH LAUNCH]** Accessibility-Tests implementieren
+- [ ] Build-Checker erweiterte CSS-Tests (>10 Tests)
+- [ ] Performance-Monitoring ausbauen
+- [ ] Accessibility-Tests implementieren
 
-### **VOLLSTÄNDIGER MAASZNAHMENPLAN AUS VERHALTENSPROBLEME.MD**
+### **VOLLSTÄNDIGER MASSNAHMENPLAN**
 
-- [ ] **[NACH LAUNCH]** Prüf-Skripte und Monitoring implementieren
+- [ ] Prüf-Skripte und Monitoring implementieren
   - [ ] KI-Auditor-Script für Chatprotokoll-Auswertung
   - [ ] Instruction-Konsistenz-Scanner automatisieren
   - [ ] Regex-Suchlauf für Floskel-Kontrolle
-- [ ] **[NACH LAUNCH]** Externe Validierung und Tests integrieren
+- [ ] Externe Validierung und Tests integrieren
   - [ ] Simulations-Chatprotokoll wöchentlich
   - [ ] Build-Checker für KI-Interaktionen erweitern
   - [ ] Pull-Request-basierte KI-Kontrolle
-- [ ] **[NACH LAUNCH]** Kontinuierliche Instructions-Verbesserung
+- [ ] Kontinuierliche Instructions-Verbesserung
   - [ ] Internalisierungs-System verfeinern
   - [ ] Monatlicher Health-Check der Instructions
   - [ ] Agile Anpassung bei neuen Fehlmustern
 
 ---
-
-
 
 ## 📊 **AKTUELLE PROJEKT-STATUS (01.08.2025)**
 
@@ -377,7 +344,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 ### **TOP 3 PRIORITÄTEN:**
 
 - [ ] **67 Duplikat-Gruppen bereinigen** (Analyzer-Befund)
-- [ ] **CSS-Modularisierung** (Simon's Insistenz) 
+- [ ] **CSS-Modularisierung** (Simon's Insistenz)
 - [ ] **Navigation optisch optimieren** (Simon's Feedback)
 
 ### **QUALITÄTS-ZIELE:**
@@ -416,33 +383,31 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - **Multi-Scope-Overwhelm:** KI überfordert bei gleichzeitigen Anfragen
 - **Stil-über-Substanz:** Enthusiastische Rhetorik kaschiert inhaltliche Lücken
 
-#### **SOFORTIGE VERBESSERUNGSMANAHMEN:**
+#### **SOFORTIGE VERBESSERUNGSMASSNAHMEN:**
 
-- [ ] **[HEUTE]** Instructions-Pfade korrigieren (veraltete Verzeichnisse)
-- [ ] **[HEUTE]** Widersprüche in Instructions auflösen
-- [ ] **[HEUTE]** VS Code templateFiles um alle wichtigen Instructions erweitern
-- [ ] **[HEUTE]** Anti-Oberflächlichkeits-System verstärken
-- [ ] **[HEUTE]** Verifikations-Mechanismen vor jeder KI-Behauptung zwingend
+- [ ] Instructions-Pfade korrigieren (veraltete Verzeichnisse)
+- [ ] Widersprüche in Instructions auflösen
+- [ ] VS Code templateFiles um alle wichtigen Instructions erweitern
+- [ ] Anti-Oberflächlichkeits-System verstärken
+- [ ] Verifikations-Mechanismen vor jeder KI-Behauptung zwingend
 
 #### **LONG-TERM PREVENTION:**
 
-- [ ] **[NACH LAUNCH]** KI-Auditor-Script für Chatprotokoll-Validation
-- [ ] **[NACH LAUNCH]** Automatische Instruction-Konsistenz-Prüfung
-- [ ] **[NACH LAUNCH]** Regelmäßige Simulation-Tests für KI-Verhalten
+- [ ] KI-Auditor-Script für Chatprotokoll-Validation
+- [ ] Automatische Instruction-Konsistenz-Prüfung
+- [ ] Regelmäßige Simulation-Tests für KI-Verhalten
 
 ### **AKTUELLE OPEN ISSUES (VALIDIERT):**
 
 - [x] **[GELÖST]** PowerShell Measure-Object Diskrepanz → ExactLineCounter implementiert
-- [ ] **[HEUTE]** KI-Halluzinations-Pattern vollständig dokumentieren
-- [ ] **[HEUTE]** Token-Blindheits-Stopp-System final implementieren
-- [ ] **[HEUTE]** CSS-Architektur-Verletzungen (304+ Tailwind Classes)
-- [ ] **[HEUTE]** Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)
+- [ ] KI-Halluzinations-Pattern vollständig dokumentieren
+- [ ] Token-Blindheits-Stopp-System final implementieren
+- [ ] CSS-Architektur-Verletzungen (304+ Tailwind Classes)
+- [ ] Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)
 
 ---
 
 **🎯 NÄCHSTE AKTION:** CSS-Modularisierung starten (Simon's Insistenz!)
-
-**⏰ DEADLINE:** 31.07.2025 - Website LIVE!
 
 ---
 
