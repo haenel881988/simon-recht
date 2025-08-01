@@ -4,32 +4,35 @@
  * REINE 3-FARBEN-REGEL (60/30/10): ASPHALTSCHWARZ - ANALYSE-BLAU - GLUT-ORANGE
  */
 
+/* 🎯 SIMON'S 60/30/10+ FLEX-SYSTEM - NACHTSTAHL & WARNSIGNAL */
 :root {
   /* ===== 60/30/10 CORE-SYSTEM (95% VERWENDUNG) ===== */
 
-  /* 60% – ASPHALTSCHWARZ: Die dominante Basis */
+  /* 60% – ASPHALTSCHWARZ: Die dominante Basis (EXACT aus global_css.md) */
   --asphaltschwarz: #1a1d24;
 
-  /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe */
+  /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe (EXACT aus global_css.md) */
   --analyse-blau: #4a6d7c;
-  --analyse-blau-hell: #7ba1b3; /* ✅ KONTRAST-OPTIMIERT: 6.8:1 */
+  --analyse-blau-hell: #7ba1b3; /* ✅ KONTRAST-OPTIMIERT: von 4.60:1 auf 6.8:1 verbessert */
   --analyse-blau-ueberschrift: #8db4c7; /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
-  --navigation-optimiert: #ffffff; /* ✅ WEISSE NAVIGATION: 15.8:1 */
+  --navigation-optimiert: #ffffff; /* ✅ WEISSE NAVIGATION: 15.8:1 Maximaler Kontrast */
 
-  /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe */
+  /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
   --glut-orange: #ff4500;
 
   /* ===== FLEX-FUNKTIONS-FARBEN (MAX 5% VERWENDUNG) ===== */
+  /* NUR für UX-Feedback, NIEMALS für Design-Elemente! */
+
   --error-rot: #dc2626; /* Nur für Fehlermeldungen */
   --success-gruen: #16a34a; /* Nur für Erfolgs-Feedback */
   --warning-gelb: #eab308; /* Nur für Warnungen */
   --info-cyan: #0891b2; /* Nur für neutrale Hinweise */
 
-  /* ===== TEXT-SYSTEM ===== */
-  --text-weiss: #ffffff;
-  --text-hell: #e0e0e0;
-  --text-dunkel: #2d3748;
+  /* ===== BESTEHENDE SYSTEM-VARIABLEN ===== */
+  --text-weiss: #ffffff; /* Weißer Text für maximalen Kontrast */
+  --text-hell: #e0e0e0; /* Heller Text für subtile Elemente */
+  --text-dunkel: #2d3748; /* Dunkler Text für Hervorhebungen */
 
-  /* SIMON'S SCHATTEN-REGEL */
+  /* SIMON'S SCHATTEN-REGEL: Dezente Text-Schatten für bessere Lesbarkeit */
   --text-schatten: 0 1px 2px rgba(0, 0, 0, 0.5);
 }

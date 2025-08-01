@@ -7,54 +7,16 @@
  * FOKUS: Klarheit, Seriosität, Vertrauen
  */
 
-/* 🎯 SIMON'S 60/30/10+ FLEX-SYSTEM - NACHTSTAHL & WARNSIGNAL */
-:root {
-  /* ===== 60/30/10 CORE-SYSTEM (95% VERWENDUNG) ===== */
-
-  /* 60% – ASPHALTSCHWARZ: Die dominante Basis (EXACT aus global_css.md) */
-  --asphaltschwarz: #1a1d24;
-
-  /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe (EXACT aus global_css.md) */
-  --analyse-blau: #4a6d7c;
-  --analyse-blau-hell: #7ba1b3; /* ✅ KONTRAST-OPTIMIERT: von 4.60:1 auf 6.8:1 verbessert */
-  --analyse-blau-ueberschrift: #8db4c7; /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
-  --navigation-optimiert: #ffffff; /* ✅ WEISSE NAVIGATION: 15.8:1 Maximaler Kontrast */
-
-  /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe (EXACT aus global_css.md) */
-  --glut-orange: #ff4500;
-
-  /* ===== FLEX-FUNKTIONS-FARBEN (MAX 5% VERWENDUNG) ===== */
-  /* NUR für UX-Feedback, NIEMALS für Design-Elemente! */
-
-  --error-rot: #dc2626; /* Nur für Fehlermeldungen */
-  --success-gruen: #16a34a; /* Nur für Erfolgs-Feedback */
-  --warning-gelb: #eab308; /* Nur für Warnungen */
-  --info-cyan: #0891b2; /* Nur für neutrale Hinweise */
-
-  /* ===== BESTEHENDE SYSTEM-VARIABLEN ===== */
-  --text-weiss: #ffffff; /* Weißer Text für maximalen Kontrast */
-  --text-hell: #e0e0e0; /* Heller Text für subtile Elemente */
-  --text-dunkel: #2d3748; /* Dunkler Text für Hervorhebungen */
-
-  /* SIMON'S SCHATTEN-REGEL: Dezente Text-Schatten für bessere Lesbarkeit */
-  --text-schatten: 0 1px 2px rgba(0, 0, 0, 0.5);
-}
+/* 🎯 IMPORTS - Modularisierte CSS-Struktur */
+@import "base/variables.css";
+@import "base/typography.css";
+@import "components/navigation.css";
+@import "components/hero.css";
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */
 
-/* ✅ SPEZIFISCHE ICON-OPTIMIERUNG basierend auf Screenshot-Analyse */
-
-/* 🎯 UNIVERSELLE ICON-KONTRAST-VERBESSERUNG für alle Emoji-Icons */
-.hero-title {
-  color: var(
-    --analyse-blau-ueberschrift
-  ) !important; /* ✅ OPTIMIERT: 8db4c7 = 7.2:1 Kontrast */
-  text-shadow: var(--text-schatten); /* Zusätzliche Lesbarkeit */
-}
-
 /* ⚠️ ORANGE WARNDREIECKE - BEREITS OPTIMIERT */
 .icon-warning,
-.hero-title.icon-warning,
 .info-title .icon-warning,
 span.icon-warning {
   color: var(
@@ -113,32 +75,7 @@ p {
   color: var(--analyse-blau-hell);
 }
 
-/* 🏗️ GRUNDLAGEN: HTML & BODY - ASPHALTSCHWARZ BASIS (60%) */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
-body {
-  background-color: var(--asphaltschwarz);
-  color: var(
-    --analyse-blau-hell
-  ); /* ✅ SIMON'S FLIESSTEXT-FARBE aus global_css.md */
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  min-height: 100vh;
-  text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
-}
-
-/* 🎯 MASTER LAYOUT SYSTEM */
+/*  MASTER LAYOUT SYSTEM */
 .layout-container {
   min-height: 100vh;
   display: flex;
@@ -291,60 +228,7 @@ body {
   }
 }
 
-/* 📝 TYPOGRAFIE-SYSTEM - SIMON'S 3-FARBEN-HIERARCHIE */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(
-    --analyse-blau-ueberschrift
-  ); /* ✅ KONTRAST-OPTIMIERTE Überschriften-Farbe */
-  text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
-}
-
-h1 {
-  font-size: 3rem;
-  color: var(--analyse-blau-ueberschrift); /* ✅ Kontrast-optimiert für H1 */
-}
-
-h2 {
-  font-size: 2.25rem;
-  color: var(--analyse-blau-ueberschrift); /* ✅ Kontrast-optimiert für H2 */
-}
-
-h3 {
-  font-size: 1.875rem;
-  color: var(--analyse-blau-ueberschrift); /* ✅ Kontrast-optimiert für H3 */
-}
-
-h4 {
-  font-size: 1.5rem;
-  color: var(--analyse-blau-ueberschrift); /* ✅ Kontrast-optimiert für H4 */
-}
-
-h5 {
-  font-size: 1.25rem;
-  color: var(--text-hell);
-}
-
-h6 {
-  font-size: 1.125rem;
-  color: var(--text-medium);
-}
-
-p {
-  margin-bottom: 1rem;
-  color: var(
-    --analyse-blau-hell
-  ); /* ✅ SIMON'S FLIESSTEXT-FARBE aus global_css.md */
-  text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
-}
-
+/* 🎯 LINKS & INTERAKTIONEN */
 a {
   color: var(--analyse-blau-hell); /* ✅ Links in aufgehelltem Analyse-Blau */
   text-decoration: none;
