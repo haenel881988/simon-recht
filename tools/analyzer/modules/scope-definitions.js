@@ -26,12 +26,14 @@ const SCOPE_DEFINITIONS = {
   INSTRUCTIONS: [
     /^\.github\/instructions\//, // Nur .github/instructions/
     /^\.github\/copilot-instructions\.md$/, // Haupt-Instructions
+    /copilot-instructions\.md$/, // Alle copilot-instructions Dateien
+    /instructions.*\.md$/, // Instructions-Dateien
   ],
   TODOS_MANAGEMENT: [
     /^docs\/todos\//, // Nur docs/todos/ Verzeichnis
   ],
   BUILD_SYSTEM: [
-    /^tools\/build_check\//, // Build-Tools
+    /^tools\/build_check\/(?!logfiles\/archive)/, // Build-Tools aber NICHT alte Logfiles
     /^package\.json$/, // Package-Config
     /^astro\.config\.mjs$/, // Astro-Config
     /^tailwind\.config\.mjs$/, // Tailwind-Config
@@ -50,6 +52,11 @@ const SCOPE_DEFINITIONS = {
     /^\.json$/, // Nur Root-JSON-Dateien
     /^tools\/.*\.js$/, // Tool-Konfigurationen
     /^tools\/.*\.mjs$/, // Tool-Module
+  ],
+  LOGS_ARCHIVE: [
+    /^tools\/build_check\/logfiles\/archive\//, // Archivierte Logfiles
+    /^tools\/analyzer\/projekt-analyse-.*\.md$/, // Alte Analysen
+    /^tools\/analyzer\/widerspruchs-report-.*\.md$/, // Alte Reports
   ],
 };
 
