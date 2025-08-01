@@ -372,20 +372,28 @@ class UniversalProjectAnalyzer {
       }
     }
 
-    // 3. Token-optimierte Verzeichnis-Struktur
+    // 3. TOKEN-KRITISCHE ANALYSE MIT KI-WORK-CONTEXT-FILTER
     const totalTokens = Array.from(this.stats.scopes.values()).reduce(
       (sum, data) => sum + data.totalTokens,
       0
     );
 
+    // SIMON'S KI-WORK-CONTEXT-BERECHNUNG
+    const kiRelevantScopes = ['ASTRO_COMPONENTS', 'CSS_DESIGN', 'INSTRUCTIONS', 'TODOS_MANAGEMENT', 'CONFIG', 'BUILD_SYSTEM'];
+    const kiWorkTokens = Array.from(this.stats.scopes.entries())
+      .filter(([scope]) => kiRelevantScopes.includes(scope))
+      .reduce((sum, [, data]) => sum + data.totalTokens, 0);
+
     if (totalTokens > 50000) {
-      // >50k = Projekt zu groß für normale KI-Analyse
+      // KI-WORK-CONTEXT vs. PROJEKT-TOTAL
+      const kiPercentage = Math.round((kiWorkTokens / totalTokens) * 100);
+      
       suggestions.push({
         type: "IMPLEMENT_CHUNKING",
         scope: "PROJECT_WIDE",
-        reason: `Gesamtprojekt hat ${totalTokens} Tokens (>50k GitHub Copilot Limit)`,
-        action: `Zwingend Scope-basierte Analyse implementieren`,
-        priority: "CRITICAL",
+        reason: `Projekt-Total: ${totalTokens} Tokens (KI-Work-Context: ${kiWorkTokens} = ${kiPercentage}%)`,
+        action: `HINWEIS: KI arbeitet nur mit relevanten Scopes, nicht Vollprojekt. Bei Token-Warnings: Scope-fokussierte Arbeit nutzen.`,
+        priority: kiWorkTokens > 30000 ? "HIGH" : "MEDIUM",
       });
     }
 
@@ -1144,30 +1152,42 @@ class UniversalProjectAnalyzer {
       });
     }
 
-    // KI-Arbeitsempfehlungen
-    report += `\n---\n\n## 🤖 KI-ARBEITSEMPFEHLUNGEN\n\n`;
+    // KI-Arbeitsempfehlungen mit SIMON'S KI-WORK-CONTEXT-LOGIK
+    report += `\n---\n\n## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)\n\n`;
 
     const totalTokens = Array.from(this.stats.scopes.values()).reduce(
       (sum, data) => sum + data.totalTokens,
       0
     );
 
-    if (totalTokens > 128000) {
-      report += `⚠️ **KRITISCH:** Projekt überschreitet VS Code Insiders Limit (128k Tokens)\n\n`;
+    // SIMON'S KI-WORK-CONTEXT-BERECHNUNG
+    const kiRelevantScopes = ['ASTRO_COMPONENTS', 'CSS_DESIGN', 'INSTRUCTIONS', 'TODOS_MANAGEMENT', 'CONFIG', 'BUILD_SYSTEM'];
+    const kiWorkTokens = Array.from(this.stats.scopes.entries())
+      .filter(([scope]) => kiRelevantScopes.includes(scope))
+      .reduce((sum, [, data]) => sum + data.totalTokens, 0);
+
+    const kiPercentage = Math.round((kiWorkTokens / totalTokens) * 100);
+
+    report += `🎯 **KI-WORK-CONTEXT-ANALYSE:**\n`;
+    report += `- **Projekt-Total:** ${totalTokens.toLocaleString()} Tokens (inkl. irrelevante Bilder/Research)\n`;
+    report += `- **KI-Work-Relevant:** ${kiWorkTokens.toLocaleString()} Tokens (${kiPercentage}% des Projekts)\n`;
+    report += `- **Filtered Out:** Bilder, Research-Docs, Archive (${(totalTokens - kiWorkTokens).toLocaleString()} Tokens)\n\n`;
+
+    if (kiWorkTokens > 64000) {
+      report += `⚠️ **WORK-CONTEXT KRITISCH:** KI-relevante Bereiche überschreiten 64k Limit\n\n`;
       report += `**Empfohlene Arbeitsweise:**\n`;
-      report += `1. **Zwingend Scope-basierte Analyse** - Niemals Vollprojekt laden\n`;
-      report += `2. **Token-Budget pro Chat:** Max. 20k Tokens für sichere Arbeit\n`;
-      report += `3. **Neue Chat-Sessions** für jeden Scope\n`;
-      report += `4. **Kritische Überlappungen** (CSS+SEO) nur bei Bedarf kombinieren\n\n`;
-    } else if (totalTokens > 64000) {
-      report += `⚠️ **WARNUNG:** Projekt überschreitet Standard VS Code Limit (64k Tokens)\n\n`;
+      report += `1. **Zwingend Scope-basierte Arbeit** - Einzelne Scopes fokussieren\n`;
+      report += `2. **Token-Budget pro Chat:** Max. 15k Tokens aus relevanten Scopes\n`;
+      report += `3. **Separate Chat-Sessions** für CSS, Content, Instructions\n\n`;
+    } else if (kiWorkTokens > 30000) {
+      report += `⚠️ **WORK-CONTEXT WARNUNG:** KI-relevante Bereiche werden groß\n\n`;
       report += `**Empfohlene Arbeitsweise:**\n`;
-      report += `1. **VS Code Insiders verwenden** für 128k Token-Vorteil\n`;
-      report += `2. **Scope-fokussierte Arbeit** bevorzugen\n`;
-      report += `3. **Chat-Session-Hygiene** beachten\n\n`;
+      report += `1. **Scope-fokussierte Arbeit** bevorzugen für Effizienz\n`;
+      report += `2. **Multi-Scope nur bei Abhängigkeiten** (CSS+Astro Components)\n`;
+      report += `3. **Token-Monitoring** bei komplexen Operationen\n\n`;
     } else {
-      report += `✅ **OK:** Projekt passt in Standard-Kontextfenster\n\n`;
-      report += `**Arbeitsweise:** Normaler Modus möglich, Scope-Trennung trotzdem empfohlen\n\n`;
+      report += `✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten\n\n`;
+      report += `**Arbeitsweise:** Multi-Scope-Operationen möglich, Scope-Trennung trotzdem sinnvoll\n\n`;
     }
 
     // Top Token-intensive Dateien
@@ -1239,6 +1259,7 @@ class UniversalProjectAnalyzer {
   /**
    * 🚫 Dateien/Verzeichnisse ignorieren
    * ERWEITERTE TABU-LISTE für simon-recht Projekt
+   * 🎯 KI-WORK-CONTEXT-FOKUS: Nur relevante Arbeits-Dateien zählen
    */
   shouldIgnore(name) {
     const ignorePatterns = [
@@ -1254,6 +1275,7 @@ class UniversalProjectAnalyzer {
       /widerspruchs-report-.*\.md$/i, // Analyzer-Reports
       /projekt-analyse-.*\.md$/i, // Analyzer-Reports
       /analyse-.*\.md$/i, // Analyzer-Reports
+      /struktur-tiefenanalyse-.*\.md$/i, // Struktur-Reports
       /output/i,
       /archiv/i,
       /\.log$/,
@@ -1264,6 +1286,26 @@ class UniversalProjectAnalyzer {
       /^Thumbs\.db$/,
       /package-lock\.json$/, // 🚨 LOCK-FILES
       /yarn\.lock$/,
+      
+      // 🎯 KI-IRRELEVANTE DATEIEN (SIMON'S FALSE-POSITIVE-STOPP)
+      /\.webp$/i, // Bilder verzerren Token-Counts
+      /\.jpg$/i,
+      /\.jpeg$/i, 
+      /\.png$/i,
+      /\.gif$/i,
+      /\.svg$/i,
+      /\.ico$/i,
+      /\.pdf$/i,
+      /\.mp4$/i,
+      /\.mov$/i,
+      /\.avi$/i,
+      /\.txt$/i, // Research-TXT-Files (book_1.txt etc.)
+      
+      // FORSCHUNGS-/RESEARCH-VERZEICHNISSE (KI arbeitet selten damit)
+      /recherche.*tiefen_recherche/i,
+      /grundrecherche/i,
+      /tiefenrecherche/i,
+      
       // Exclude all non-source files in tools/analyzer except .js/.cjs/.json/.md (README)
       /^tools\/analyzer\/((?!\.js$|\.cjs$|\.json$|README\.md$).)*$/i,
     ];
