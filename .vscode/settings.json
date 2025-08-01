@@ -73,5 +73,15 @@
     "npm run build": true
   },
   "github.copilot.chat.virtualTools.enabled": true,
-  "github.copilot.chat.customInstructionsInSystemMessage": true
+  "github.copilot.chat.customInstructionsInSystemMessage": true,
+
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell 7": {
+      "path": "C:\\Users\\User01\\AppData\\Local\\Microsoft\\powershell\\pwsh.exe",
+      "args": []
+    }
+  },
+  "terminal.integrated.defaultProfile.windows": "PowerShell 7"
 }
