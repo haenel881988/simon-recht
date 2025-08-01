@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 1.8.2025, 14:56:05  
+**Generiert:** 1.8.2025, 15:10:57  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -11,7 +11,7 @@
 | 🚨 Instructions-Widersprüche | 0 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
 | 🔗 Ungültige Links | 3 | HIGH |
-| 📄 Leere Dateien | 26 | MEDIUM |
+| 📄 Leere Dateien | 22 | MEDIUM |
 | 📂 Pfad-Fehler | 22 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
@@ -20,7 +20,7 @@
 Repariere 3 ungültige Links für Navigation
 
 ### 💡 MEDIUM
-Bereinige 26 leere/redundante Dateien
+Bereinige 22 leere/redundante Dateien
 
 ## 🔍 DETAILIERTE ERGEBNISSE
 
@@ -39,14 +39,6 @@ Bereinige 26 leere/redundante Dateien
     → `### **[Mindset schlägt Großkonzern - Die komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
 
 ### 📄 LEERE/REDUNDANTE DATEIEN
-- `C:\apps\website\simon-recht\docs\todos\prioritaeten\hoch\kritische-fixes.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\docs\todos\prioritaeten\README.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\README.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\analyzer\procrastination-detector.cjs`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-50-333Z.md`: EMPTY (0 Bytes)
     → `[DATEI LEER]`
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-52-408Z.md`: EMPTY (0 Bytes)
