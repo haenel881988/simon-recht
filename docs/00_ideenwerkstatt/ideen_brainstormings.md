@@ -1,5 +1,66 @@
 # offen
 
+**unsortiertes**
+Was meinst du mit scope pattern? keine fremdwörter verwenden.
+Bitte phase 1 klar, einfach und deutlich formulieren. Was ist das Problem? --> Problembeschreibung --> Wie sieht die Lösung aus? Keine Fremdwörter verwenden, die KI muss beachten, dass der User, Simon, ein Laie ist.
+
+Idee: Damit es niemals verwechslungen gibt, zwischen der KI und mir, ist es erforderlich, dass wir - also die KI, und Simon - von uns in der dritten Person sprechen. Dies nimmt zudem die emotionale nähe mit und bringt eine sachliche und nötige Distanz zum Projekt.
+Dabei bittet Simon, die KI - Simon mitzuteilen, was die KI zu diesem Projektmodul denkt, im Umgang mit der KI.
+Dies reduziert zudem auch die wahrscheinlichkeit vor weiteren Fehlern / Issues / mistakes, die sich in Form von Prompts und fehler im Code oder Umsetzung durch die KI manifestieren, da die KI oft verwirrt ist übers Simon kognitiver Dissonanz.
+Dass die kognitive Dissonanz offenbar viel grösser ist, hatte Simon niemals gedacht, dass diese Auswirkungen so gross sein können.
+
+Wie auch immer, könnte dies ein Durchbruch im Workflow und dem Softwareengeneering durch KI-Prompting sein, wenn Entwickler sensibilisiert werden, immer aus der dritten Person zu sprechen.
+Simon vermutet, dass dadurch eine enorm hohe Frustration mit der Zusammenarbeit mit KI und Mensch einhergeht.
+Vielleicht könnte dies ebenfalls im dggp eine Rolle spielen, weil insbesondere bei juristischen themen, fragen, fällen, ist objektivität, sachlichkeit, der dreh und angelpunkt. Insbesondere weil juristische Fälle und Probleme ein fast extremes mass an gefühlen und emotionen einhergehen. Insbesondere da es hauptsächlich um Geld geht, Geld als manifestierte Lebensenergie und Zeit assoziiert wird, sind unhaltbare Kündigungen von reglementarischen Renten auf die minimale Rentenleistung oft... IMMER frustrierend für die betroffenen Personen.
+Und das ist ja nur ein Beispiel für juristische Frustration.
+Nicht umsonst gibt es Rechtsschutzversicherungen (RSV). Jedoch haben eigentlich alle (RSV) div. Klausel, z.B.: das sozialrechtliche Aspekte im Portfolio bereits ausgenommen sind.
+
+Hier hatte die KI für Simon wie eine Art Katalysator für die Frustration gedient. Jedoch musste Simon die KI entsprechend anweisen, Simon entsprechend zu erziehen, auch wenn Simon wütend ist, Simon IMMER sachlich und juristisch korrekt sein muss.
+Dies ist eine zwingende Eigenschaft, die Simon aufbringen musste um einen Gerichtsprozess nicht nur anzustossen, sondern auch zu seinen Gunsten zu gewinnen.
+
+Im nachhinein, ist Simon froh über all die Fehler die er gemacht hat.
+
+Simon hatte nämlich div. Forderungen wie wiedergutmachungen, Genugtuungen etc. gefordert, die allesamt abgewiesen wurden, weil das Sozialversicherungsgericht des kt. Zürichs, weder für eine potenzielle Strafverfolgung verantwortlich ist. Zudem arbeitet das Gericht völlig kostenlos, keine Kosten sind entstanden, somit war Simons Antrag auf unentgeltliche Rechtspflege, hinfällig.
+
+Jedoch möchte Simon betonen, dass die KI (noch) kein Allerweltmittel ist, sondern die KI nur so gut ist, wie die Qualität der Frage, der Anweisung, oder im Fachjargon von: "Prompts" die Rede ist.
+
+Prompts sind Anweisungen an die KI. Je genauer der Prompt ist, desto besser die Ausgabe.
+
+Dabei versteht Simons bedenken der Menschen, da viele Menschen sich fragen, wie ich mit der KI beginne.
+Hierbei hat auch Simon eine Lösung parat, nämlich die der schriftlichkeit.
+Ganz genau, schriftlichkeit zwingt zur Sachlichkeit.
+Doch bevor wir mit der KI loslegen, müssen wir uns erstmal klar machen, was wollen wir den die KI Fragen?
+Nur einfach zu fragen, oder einfach mal der KI zu sagen: Hey, ich fühle mich ungerecht behandelt von der Pensionskasse, aber die Person nicht mal weiss, was eine reglementarische Rente ist, so empfiehlt Simon als erstes mal, sich über seine Rechte zu informieren.
+
+Aus diesem Grund empfiehlt Simon, erstmal eine digitale Struktur zu bauen für ein konkretes Thema / Fall.
+Simon erklärt dies auf der Windows 11 Plattform:
+Am besten legst du im Windows Explorer unter Dokumente ein neues Verzeichnis (Ordner) an und bennenst in z.B.: pensionskasse_juristisches_vorgehen
+
+Eine solche Struktur erlaubt dir sofort, das finden der nötigen Unterlagen, die du zur Beweisführung benötigst. Stell es dir so vor, wie ein Ordner mit entsprechenden Register.
+
+Z.B.:
+In diesem Ordner legst du weitere Unterordner an, z.B.:
+00_vertraege\versicherungen\unterlagen_arbeitsvertrag
+00_vertraege\versicherungen\unterlagen_iv-dokumente
+00_vertraege\versicherungen\unterlagen_pensionskasse
+00_vertraege\versicherungen\weitere_versicherungen
+
+01_korrespondenz\pensionskasse
+01_korrespondenz\arbeitgeber
+
+uf dem Desktop oder unter "Dokumente" ein neuer Ordner anzulegen, z.B.:
+
+An dieser Stelle möchte Simon den User animieren, einfach mal Microsoft Word oder Google docs zu öffnen und die Datei erstmal abzuspeichern als eine Art Q&A an die KI.
+Dabei geht es einfach mal darum, den Gedanken freien lauf zu lassen. Was beschäftigt dich, welche Probleme hast du?
+Am besten sei SMART:
+S = Spezifisch
+M = Messbar
+A = // --> an dieser Stelle bittet Simon die KI, SMART auszuformulieren
+R = // --> an dieser Stelle bittet Simon die KI, SMART auszuformulieren
+T = Terminierbar
+
+Ausserdem empfiehlst Simon, im Zuge dessen, auf dem Desktop oder unter "Dokumente" ein neuer Ordner anzulegen, z.B.:
+
 **Workflows**
 
 **_Erstellen neuer Dateien_**
@@ -8,6 +69,10 @@ Die KI muss als aller erstes zuerst mal ein vollständiger scan mit dem analyse-
 Anschliessend muss die KI eine vollständige inventarisierung durchführen, mit dem Tool
 
 Bevor überhaupt eine neue Datei erstellt werden muss, muss die KI zuerst mal prüfen, ob bereits eine neue datei vorhanden ist im Projekt und den darunterliegenden verzeichnis, inkl. dem instruction verzeichnis: ".github"
+Eine validierung auf redundanz muss durchgeführt werden.
+
+1. Prompt / Anweisung vom User, Simon, lesen UND verstehen.
+2. Habe ich(die KI), den Prompt verstanden?
 
 # experimnetelles
 

@@ -7,57 +7,50 @@
 
 const SCOPE_DEFINITIONS = {
   CSS_DESIGN: [
-    /styles?\//,
-    /css/i,
-    /scss/i,
-    /design/i,
-    /theme/i,
-    /\.css$/,
-    /60-30-10/i,
-    /global_css/i,
+    /^src\/styles\//, // Nur src/styles/ Verzeichnis
+    /^docs\/website_struktur\/website_design\//, // Design-Dokumentation
+    /\.css$/, // CSS-Dateien
+    /global_css\.md$/, // Spezifische CSS-Dokumente
+    /60-30-10.*\.md$/, // Design-System-Dokumente
   ],
   CONTENT: [
-    /content/i,
-    /blog/i,
-    /pages\//,
-    /startseite/i,
-    /landingpage/i,
-    /seo/i,
-    /marketing/i,
+    /^src\/content\//, // Nur src/content/ Verzeichnis
+    /^src\/pages\/.*\.astro$/, // Astro Seiten-Dateien
+    /^docs\/website_struktur\/content\//, // Content-Dokumentation
   ],
   ASTRO_COMPONENTS: [
-    /\.astro$/,
-    /components\//,
-    /layouts?\//,
-    /src\/pages\//,
-    /src\/components\//,
+    /^src\/layouts\/.*\.astro$/, // Layout-Komponenten
+    /^src\/components\/.*\.astro$/, // Andere Komponenten
+    /^src\/pages\/.*\.astro$/, // Seiten-Komponenten
   ],
   INSTRUCTIONS: [
-    /instructions/i,
-    /copilot/i,
-    /\.github\//,
-    /README/i,
-    /anrede/i,
-    /agent\.md/,
+    /^\.github\/instructions\//, // Nur .github/instructions/
+    /^\.github\/copilot-instructions\.md$/, // Haupt-Instructions
   ],
-  TODOS_MANAGEMENT: [/todos?\//, /todo/i, /issues?/i, /verhalten/i],
+  TODOS_MANAGEMENT: [
+    /^docs\/todos\//, // Nur docs/todos/ Verzeichnis
+  ],
   BUILD_SYSTEM: [
-    /tools?\//,
-    /build/i,
-    /check/i,
-    /package\.json/,
-    /astro\.config/,
-    /tailwind\.config/,
+    /^tools\/build_check\//, // Build-Tools
+    /^package\.json$/, // Package-Config
+    /^astro\.config\.mjs$/, // Astro-Config
+    /^tailwind\.config\.mjs$/, // Tailwind-Config
   ],
-  DOCUMENTATION: [/docs?\//, /README/i, /\.md$/, /documentation/i],
+  DOCUMENTATION: [
+    /^docs\/website_struktur\/recherche\//, // Recherche-Dokumentation
+    /^docs\/marketing\//, // Marketing-Dokumentation
+    /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt
+    /^README\.md$/, // Nur Haupt-README
+  ],
   ASSETS: [
-    /public\//,
-    /assets?\//,
-    /images?\//,
-    /videos?\//,
-    /\.(jpg|jpeg|png|gif|svg|mp4|webm)$/i,
+    /^public\//, // Nur public/ Verzeichnis
+    /^src\/content\/.*\.(jpg|jpeg|png|gif|svg|mp4|webm)$/i, // Asset-Dateien
   ],
-  CONFIG: [/\.json$/, /\.js$/, /\.mjs$/, /\.ts$/, /config/i, /settings?/i],
+  CONFIG: [
+    /^\.json$/, // Nur Root-JSON-Dateien
+    /^tools\/.*\.js$/, // Tool-Konfigurationen
+    /^tools\/.*\.mjs$/, // Tool-Module
+  ],
 };
 
 const OVERLAP_RULES = [

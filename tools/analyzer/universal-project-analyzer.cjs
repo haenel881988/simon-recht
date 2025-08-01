@@ -53,6 +53,13 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
+// SCOPE-DEFINITIONS aus separatem Modul laden
+const {
+  SCOPE_DEFINITIONS,
+  OVERLAP_RULES,
+  TOKEN_LIMITS,
+} = require("./modules/scope-definitions.js");
+
 class UniversalProjectAnalyzer {
   constructor(projectRoot = process.cwd()) {
     this.projectRoot = projectRoot;
@@ -66,50 +73,8 @@ class UniversalProjectAnalyzer {
       modularizationSuggestions: [],
     };
 
-    // SCOPE-DEFINITION basierend auf simon-recht Projekt
-    this.scopePatterns = {
-      CONTENT: [/src\/content\//, /\.md$/, /blog/i, /rechtliche/i, /beratung/i],
-      CSS_DESIGN: [
-        /\.css$/,
-        /\.scss$/,
-        /styles?\//,
-        /design/i,
-        /layout/i,
-        /global\.css/,
-      ],
-      ASTRO_COMPONENTS: [
-        /\.astro$/,
-        /src\/layouts\//,
-        /src\/pages\//,
-        /src\/components\//,
-      ],
-      INSTRUCTIONS: [
-        /instructions/i,
-        /copilot/i,
-        /\.github\//,
-        /README/i,
-        /anrede/i,
-        /agent\.md/,
-      ],
-      TODOS_MANAGEMENT: [/todos?\//, /todo/i, /issues?/i, /verhalten/i],
-      BUILD_SYSTEM: [
-        /tools?\//,
-        /build/i,
-        /check/i,
-        /package\.json/,
-        /astro\.config/,
-        /tailwind\.config/,
-      ],
-      DOCUMENTATION: [/docs?\//, /README/i, /\.md$/, /documentation/i],
-      ASSETS: [
-        /public\//,
-        /assets?\//,
-        /images?\//,
-        /videos?\//,
-        /\.(jpg|jpeg|png|gif|svg|mp4|webm)$/i,
-      ],
-      CONFIG: [/\.json$/, /\.js$/, /\.mjs$/, /\.ts$/, /config/i, /settings?/i],
-    };
+    // SCOPE-PATTERN aus modularer Definition laden
+    this.scopePatterns = SCOPE_DEFINITIONS;
 
     // 🚨 SIMON'S NEUE SCOPES (01.08.2025)
     this.redundancyDetection = {
@@ -126,27 +91,8 @@ class UniversalProjectAnalyzer {
       namingInconsistencies: [],
     };
 
-    // ÜBERLAPPUNGS-REGELN (CSS-Kontrast + SEO etc.)
-    this.overlapRules = [
-      {
-        scopes: ["CSS_DESIGN", "CONTENT"],
-        reason: "CSS-Kontrast-Optimierung betrifft SEO-Rankings",
-        priority: "HIGH",
-        allowCombined: true,
-      },
-      {
-        scopes: ["ASTRO_COMPONENTS", "CSS_DESIGN"],
-        reason: "Layout-Komponenten benötigen Styling-Koordination",
-        priority: "MEDIUM",
-        allowCombined: true,
-      },
-      {
-        scopes: ["BUILD_SYSTEM", "CSS_DESIGN"],
-        reason: "Build-Checker validiert CSS-Architektur",
-        priority: "MEDIUM",
-        allowCombined: false,
-      },
-    ];
+    // ÜBERLAPPUNGS-REGELN aus modularer Definition laden
+    this.overlapRules = OVERLAP_RULES;
   }
 
   /**
@@ -281,26 +227,35 @@ class UniversalProjectAnalyzer {
   }
 
   /**
-   * 🏷️ Scope-Identifikation für Datei
+   * 🏷️ Scope-Identifikation für Datei (SIMON'S EINZEL-ZUORDNUNG)
    */
   identifyFileScopes(filePath, content) {
-    const scopes = [];
+    // PRIORITÄTS-REIHENFOLGE: Spezifischste Bereiche zuerst prüfen
+    const scopePriority = [
+      "INSTRUCTIONS", // Höchste Priorität: .github/instructions/
+      "TODOS_MANAGEMENT", // Dann: docs/todos/
+      "CSS_DESIGN", // Dann: src/styles/
+      "ASTRO_COMPONENTS", // Dann: .astro Dateien
+      "ASSETS", // Dann: public/
+      "BUILD_SYSTEM", // Dann: Build-Tools
+      "CONFIG", // Dann: Konfigurationen
+      "CONTENT", // Dann: Content
+      "DOCUMENTATION", // Niedrigste Priorität: Dokumentation
+    ];
 
-    for (const [scopeName, patterns] of Object.entries(this.scopePatterns)) {
-      for (const pattern of patterns) {
-        if (pattern.test(filePath) || pattern.test(content)) {
-          scopes.push(scopeName);
-          break; // Ein Match pro Scope reicht
+    // Suche ersten passenden Scope (Einzel-Zuordnung)
+    for (const scopeName of scopePriority) {
+      if (this.scopePatterns[scopeName]) {
+        for (const pattern of this.scopePatterns[scopeName]) {
+          if (pattern.test(filePath) || pattern.test(content)) {
+            return [scopeName]; // NUR EINEN Scope zurückgeben!
+          }
         }
       }
     }
 
     // Falls keine Scope-Zuordnung → UNCLASSIFIED
-    if (scopes.length === 0) {
-      scopes.push("UNCLASSIFIED");
-    }
-
-    return scopes;
+    return ["UNCLASSIFIED"];
   }
 
   /**
@@ -327,13 +282,15 @@ class UniversalProjectAnalyzer {
    * 🔗 Überlappungs-Analyse
    */
   analyzeOverlaps() {
-    // Multi-Scope-Dateien finden
+    // Multi-Scope-Dateien finden (BUG-FIX: Set verwenden für Eindeutigkeit)
     const multiScopeFiles = [];
+    const seenFiles = new Set();
 
     for (const [scope, data] of this.stats.scopes.entries()) {
       data.files.forEach((file) => {
-        if (file.scopes.length > 1) {
+        if (file.scopes.length > 1 && !seenFiles.has(file.path)) {
           multiScopeFiles.push(file);
+          seenFiles.add(file.path);
         }
       });
     }

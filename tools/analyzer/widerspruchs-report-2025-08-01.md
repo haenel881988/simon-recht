@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 1.8.2025, 13:45:46  
+**Generiert:** 1.8.2025, 14:56:05  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -111,12 +111,12 @@ Bereinige 26 leere/redundante Dateien
     → `- [ ] **Prompt:** "Prüfe ob tools/analyzer/structure-optimizer-v2.cjs existiert. Falls ja: erweitere um Auto-Modularisierung bei >1200 Zeilen. Falls nein: erstelle Basis-Implementierung für Datei-Struktur-Optimierung."`
 - `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 217): Referenz zu `tools/analyzer/contradiction-scanner.cjs.` ungültig
     → `- [ ] **Prompt:** "Öffne tools/analyzer/contradiction-scanner.cjs. Füge Funktion hinzu die alle Dateien auf >1200 Zeilen prüft. Warne bei Überschreitung. Integriere in bestehende Widerspruchs-Reports."`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 383): Referenz zu `docs/lessons-learned/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 366): Referenz zu `docs/lessons-learned/` ungültig
     → `4. **Lesson Learned:** Dokumentation in docs/lessons-learned/`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 397): Referenz zu `docs/ideen/` ungültig
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 380): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete Instructions:** Falsche Pfadangaben (docs/ideen/ existiert nicht)`
-- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 423): Referenz zu `docs/projekt/` ungültig
-    → `- [ ] **[HEUTE]** Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)`
+- `C:\apps\website\simon-recht\docs\todos\todos.md` (Zeile 406): Referenz zu `docs/projekt/` ungültig
+    → `- [ ] Instructions-Pfade-Konflikte (docs/projekt/ existiert nicht)`
 - `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/ideen/` ungültig
     → `- **Veraltete und widersprüchliche Instruction-Dateien:** Die bestehenden KI-Anweisungen im Projekt waren zum Teil **nicht mehr aktuell** und enthielten **Konflikte**. So verwiesen die Instructions auf Verzeichnisse wie `docs/ideen/`, `docs/fails_learnings/` oder `docs/authentizitaet/`, **die im Projekt längst nicht mehr existieren**. Gleichzeitig lagen die entsprechenden Inhalte in einem Archivpfad (`01_PLAYBOOK_CONTENT/_altes_chaos_archiv/...`), was zu extremer **Pfad-Verwirrung** führte. Darüber hinaus gab es **regelrechte Widersprüche** innerhalb der Anleitungstexte – z.B. bzgl. Dateioperationen (_„nie neue Datei erstellen“_ vs. _„Neue Dateien für neue Funktionen erlaubt“_) oder der Sprachrichtlinie (teils englische Begriffe trotz Vorgabe _„alle Instructions auf Deutsch“_). Solche inkonsistenten Vorgaben konnten von Copilot Chat nicht einheitlich befolgt werden. Im besten Fall ignorierte das Modell manche widersprüchlichen Teile; im schlimmsten Fall folgte es den falschen (veralteten) Anweisungen. Copilot selbst erkannte später kritisch, dass die **Instructions “total veraltet und widersprüchlich”** waren – ein Hauptgrund, warum es zunächst falsche Annahmen traf.`
 - `C:\apps\website\simon-recht\docs\todos\verhaltensmuster\vollstaendige_analyse_backup.md` (Zeile 19): Referenz zu `docs/fails_learnings/` ungültig
