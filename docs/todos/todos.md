@@ -22,63 +22,39 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ---
 
-# 🚨 **TODO-LISTE: SIMON-RECHT PROJECT (BEREINIGT)**
+# 🚨 **TODO-LISTE: SIMON-RECHT PROJECT (AKTUALISIERT)**
 
-**Letzte Bereinigung:** 29.07.2025 - Erledigte Items entfernt  
+**Letzte Bereinigung:** 01.08.2025 - Erledigte Items entfernt & Prioritäten korrigiert  
 **Status:** Einzige Quelle der TODO-Wahrheit  
-**Ziel:** Website-Launch bis 31.07.2025
+**Ziel:** Website-Optimierung & Strukturbereinigung (August 2025)
 
 ---
 
-## 🔴 **FUNDAMENTALE SOFORT-TODOS (30.07.2025 - SCANNER-ERKENNTNISSE)**
+## 🔴 **AKTUELLE TOP-PRIORITÄTEN (01.08.2025 - ANALYZER-ERKENNTNISSE)**
 
 ### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (TOP-PRIORITÄT)**
 
-- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
-- [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
-- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "Top-Priorität" ersetzen
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT (31.07.2025)
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Widerspruchs-Scanner
-- [ ] **Beweis:** Scanner-Report zeigt 0 Instructions-Widersprüche - vollständig gelöst
 
-- [ ] **Aufgabe:** Token-Limit 6000→10000 in Analyzer korrigieren
-- [ ] **Kontext:** Universal-project-analyzer.cjs hatte veraltetes 6k Token-Limit statt aktuellem 10k Standard
-- [ ] **Ressourcen:** replace_string_in_file in Zeile 369 von universal-project-analyzer.cjs
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Analyzer-Fixer
-- [ ] **Beweis:** Grep-Search bestätigt - 0 Matches für "6000", 2 Matches für "10000" in korrekter Zeile
+
+
 
 - [ ] **Aufgabe:** Blog-Links von ungültigen zu existierenden Artikeln umleiten
-- [ ] **Kontext:** 6 ungültige Blog-Links auf nicht existierende Artikel gefunden
-- [ ] **Ressourcen:** Links auf mindset-gegen-grosskonzern.md (existierend) umleiten
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ TEILWEISE ERLEDIGT (01.08.2025) - 3 von 6 Links repariert
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Link-Reparateur
-- [ ] **Beweis:** Scanner zeigt Verbesserung: 6→3 ungültige Links (50% Reduktion)
-- [ ] **Verbleibend:** 3 ungültige Links noch zu identifizieren und reparieren
-
-- [ ] **Aufgabe:** Konkretisierungs-Zwang und TODO-Aktualisierungs-Zwang internalisieren
-- [ ] **Kontext:** KI muss zwingend spezifische nächste Schritte und TODO-Updates liefern
-- [ ] **Ressourcen:** Internalisierung.md erweitern mit Konkretisierungs-Zwang-Protokoll
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Selbst-Verbesserung
-- [ ] **Beweis:** Neue Regeln in .github/instructions/core/internalisierung.md implementiert
-
-- [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
-- [ ] **Kontext:** 6x "HOCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md
-- [ ] **Ressourcen:** Datei öffnen, alle "HOCH"-Instanzen prüfen, nur 3 wichtigste behalten, Rest auf "MITTEL" ändern
+- [ ] **Kontext:** 3 ungültige Blog-Links auf nicht existierende Artikel in src/pages/index.astro
+- [ ] **Ressourcen:** Links reparieren oder entfernen - existierende Artikel verwenden
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** Offen
 - [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Link-Reparateur
+
+
+
+- [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
+- [ ] **Kontext:** Prioritäten-Disziplin sicherstellen - zu viele "HOCH" verwirren Wichtigkeit
+- [ ] **Ressourcen:** Tool-validierte Prioritäten-Analyse durchführen  
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** ✅ BEREITS GELÖST - Tool-Validierung zeigt nur 1 "HOCH" (statt 6)
+- [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Prioritäten-Bereiniger
-- [ ] **Prompt:** "Analysiere .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md mit grep_search nach 'HOCH'. Öffne die Datei und bewerte alle 6 Instanzen kritisch. Behalte nur die 3 wirklich wichtigsten als 'HOCH', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für jede Änderung mit exaktem Kontext."
 
 - [ ] **Aufgabe:** "hoch"-Überfüllung in todos.md reduzieren
 - [ ] **Kontext:** 7x "hoch" in docs/todos/todos.md - zu viele wichtige Einträge verwirren Prioritäten
@@ -98,14 +74,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Rolle:** Prioritäten-Bereiniger
 - [ ] **Prompt:** "Analysiere docs/todos/verhaltensprobleme.md mit grep_search nach 'hoch'. Öffne die Datei und bewerte alle 4 Instanzen. Behalte maximal 2 als 'hoch', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für Änderungen."
 
-- [ ] **Aufgabe:** Analyzer um Redundanz- und Struktur-Analyse erweitern
-- [ ] **Kontext:** Simon wünscht Erkennung von doppelten Dateien und unlogischen Strukturen
-- [ ] **Ressourcen:** Universal-project-analyzer.cjs um neue Phasen 4+5 erweitern
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Analyzer-Entwickler
-- [ ] **Beweis:** Analyzer findet 67 Duplikat-Gruppen, 222 falsch platzierte Dateien, 95 Naming-Probleme
+
 
 - [ ] **Aufgabe:** 67 Duplikat-Gruppen bereinigen (ANALYZER-BEFUND)
 - [ ] **Kontext:** Neue Redundanz-Analyse zeigt massive Duplikation - Dateien in mehreren Scopes
@@ -136,23 +105,9 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
 
-- [ ] **Aufgabe:** Fehlende Datei instructions/project/exception-system.md erstellen
-- [ ] **Kontext:** Link-Fehler in .github/copilot-instructions.md - Datei existiert nicht
-- [ ] **Ressourcen:** Exception-Regeln aus copilot-instructions.md extrahieren, neue Datei erstellen
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** Offen
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Instruction-Architekt
-- [ ] **Prompt:** "Analysiere .github/copilot-instructions.md und extrahiere alle Exception-bezogenen Regeln (Widerspruchsregel, Exception-Handling, Fehlerbehandlung). Erstelle .github/instructions/project/exception-system.md mit strukturiertem Markdown. Verzeichnis vorher erstellen falls nötig. Nutze create_file tool."
 
-- [ ] **Aufgabe:** Fehlende Datei instructions/project/datei-operationen.md erstellen
-- [ ] **Kontext:** Link-Fehler in .github/copilot-instructions.md - Datei existiert nicht
-- [ ] **Ressourcen:** Datei-Operations-Regeln aus copilot-instructions.md extrahieren, neue Datei erstellen
-- [ ] **Priorität:** Hoch
-- [ ] **Status:** Offen
-- [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Instruction-Architekt
-- [ ] **Prompt:** "Analysiere .github/copilot-instructions.md nach allen Datei-Operations-Regeln (Backup-Zwang, git add/commit/push, Search-Regeln, Integrität). Erstelle .github/instructions/project/datei-operationen.md mit strukturiertem Content. Nutze create_file tool."
+
+
 
 - [ ] **Aufgabe:** 6 fehlende Blog-Links reparieren
 - [ ] **Kontext:** Links zu /blog/wenn-ehrlichkeit-bestraft-wird, /blog/der-wendepunkt-meine-story, /blog/drei-saeulen-methode-detail existieren nicht
@@ -302,12 +257,12 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **4. WORKFLOW-AUTOMATION SETUP**
 
-- [ ] **[HEUTE]** Chat-Scope-Separation implementieren
+- [ ] **Aufgabe:** Chat-Scope-Separation implementieren
   - [ ] Technical Chat: CSS, Astro, Build, Performance
   - [ ] Content Chat: Blog, SEO, Texte, User Experience
   - [ ] Strategy Chat: Vision, Roadmap, Business Logic
-- [ ] **[HEUTE]** Auto-Kategorisierung von TODOs aktivieren
-- [ ] **[HEUTE]** Context-Handoff-System etablieren
+- [ ] **Aufgabe:** Auto-Kategorisierung von TODOs aktivieren
+- [ ] **Aufgabe:** Context-Handoff-System etablieren
 
 ### **5. SEPARATE TODO-DATEIEN BEREINIGUNG ✅ ABGESCHLOSSEN**
 
@@ -364,16 +319,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ---
 
-## 🟢 **FINALE TODOS (31.07.2025)**
 
-### **WEBSITE-LAUNCH VORBEREITUNG**
-
-- [ ] **[31.07 VORMITTAG]** SEO-Meta-Tags vollständig implementieren
-- [ ] **[31.07 VORMITTAG]** Kontaktformular funktional testen
-- [ ] **[31.07 VORMITTAG]** Rechtliche Seiten aktualisieren
-- [ ] **[31.07 ABEND]** Website LIVE schalten
-
----
 
 ## 🔧 **TECHNISCHE SCHULDEN (NACH LAUNCH)**
 
@@ -406,58 +352,40 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ---
 
-## 🚨 **ANTI-PROKRASTINATIONS-PROTOKOLL (AKTIV)**
 
-### **❌ VERBOTEN BIS 31.07.2025:**
 
-- Neue Dashboard-Entwicklung
-- Database-Integration
-- HTML-Visualisierung
-- Zusätzliche Analyse-Features
-- Tool-Perfektionismus
+## 📊 **AKTUELLE PROJEKT-STATUS (01.08.2025)**
 
-### **✅ NUR ERLAUBT:**
+### **ANALYZER-ERKENNTNISSE:**
 
-- CSS-Modularisierung (Simon's Insistenz)
-- Blog-Content-Erstellung
-- Website-Optimierung
-- Mobile-Responsive-Fixes
+- **Duplikat-Gruppen:** 67 identifiziert (Top-Priorität)
+- **Falsch platzierte Dateien:** 222 gefunden
+- **Leere Verzeichnisse:** 8 zu löschen
+- **Priority-Inflation:** 20+ "Hoch" → Reduzierung auf 3
 
----
+### **WEBSITE-STATUS:**
 
-## 📊 **AKTUELLE METRIKEN (29.07.2025)**
-
-### **BUILD-CHECKER STATUS:**
-
-- **Gesamt Health Score:** 67/100
-- **CSS-Score:** 90/100 (Navigation trotzdem nicht optimal - Simon's Feedback)
-- **SEO-Score:** 98/100 (nur 1 Blog-Artikel)
-- **Build-Zeit:** < 3 Sekunden
-
-### **PROJECT STATUS:**
-
-- **Dateien:** 98 (von 193 → 51% Reduktion)
-- **Token:** 2.457.535 (Wichtig - über Limit)
-- **Deadline:** 48 Stunden bis Launch
+- **Domain:** simon-haenel.com (Status zu prüfen)
+- **Build-System:** Funktional
+- **CSS-Architektur:** Tailwind → Semantic Migration erforderlich
+- **Navigation:** Optische Verbesserung nötig (Simon's Insistenz)
 
 ---
 
-## 🎯 **SUCCESS-KRITERIEN (31.07.2025)**
+## 🎯 **AKTUELLE FOKUS-BEREICHE (AUGUST 2025)**
 
-### **MINIMUM VIABLE PRODUCT:**
+### **TOP 3 PRIORITÄTEN:**
 
-- [ ] simon-haenel.com erreichbar
-- [ ] 3+ Blog-Artikel online
-- [ ] Mobile-responsive Design
-- [ ] Navigation optisch optimiert (Simon's Standard)
-- [ ] AIDA/PAS-Struktur implementiert
+- [ ] **67 Duplikat-Gruppen bereinigen** (Analyzer-Befund)
+- [ ] **CSS-Modularisierung** (Simon's Insistenz) 
+- [ ] **Navigation optisch optimieren** (Simon's Feedback)
 
-### **QUALITÄTS-STANDARDS:**
+### **QUALITÄTS-ZIELE:**
 
-- [ ] Health Score ≥ 80/100
-- [ ] Build-Zeit < 3 Sekunden
-- [ ] Zero wichtige Errors
-- [ ] SEO-Meta-Tags vollständig
+- [ ] Projektstruktur aufräumen (222 falsch platzierte Dateien)
+- [ ] Priority-Inflation stoppen (20+ → 3 "Hoch")
+- [ ] Tailwind → Semantic CSS Migration
+- [ ] Build-Checker Integration
 
 ---
 
