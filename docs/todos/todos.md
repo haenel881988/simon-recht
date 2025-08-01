@@ -7,8 +7,8 @@ Dies ist um alles in der Welt zu verhindern und ist daher zwingend als oberste u
 **🔧 ZWINGENDER WORKFLOW VOR JEDER ÄNDERUNG:**
 Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Analyzing tool durchführen. Das Analyzing-Tool, muss für jede Datei, die exakte Zeilenzahl evaluieren und identifizieren.
 
-**📏 6000-TOKEN-REGEL (GLOBAL GÜLTIG):**
-Wenn 6000 Tokens überschritten werden, muss die KI zwingend beginnen, die überlaufenden Tokens in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
+**📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG):**
+Wenn 1200 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
 Wenn der Code betroffen ist, müssen sämtliche Abhängigkeiten berücksichtigt und angepasst werden.
 
 **🔍 ANALYZER-ENTWICKLUNG (FUNDAMENTAL):**
@@ -34,14 +34,42 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 ### **1. WIDERSPRÜCHE IN INSTRUCTIONS LÖSEN (TOP-PRIORITÄT)**
 
-- [x] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
-- [x] **Kontext:** Scanner-Alarm war Fehlalarm - nur 1 Instanz "WICHTIGSTE PRIORITÄT" existiert
-- [x] **Ressourcen:** Grep-Search bestätigt - keine Doppelungen vorhanden
-- [x] **Priorität:** Hoch
-- [x] **Status:** ✅ ERLEDIGT (Fehlalarm korrigiert)
-- [x] **Verantwortlich:** KI
-- [x] **Rolle:** Widerspruchs-Scanner
-- [x] **Ergebnis:** Widerspruch existierte nicht - TODO-Liste war veraltet
+- [ ] **Aufgabe:** "Höchste Priorität"-Doppelungen in copilot-instructions.md beseitigen
+- [ ] **Kontext:** Scanner fand 2x "höchste Priorität" in .github/copilot-instructions.md - Zeile 36 und Zeile 208
+- [ ] **Ressourcen:** Grep-Search nach "höchste Priorität" in .github/copilot-instructions.md, eine Instanz durch "Top-Priorität" ersetzen
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** ✅ ERLEDIGT (31.07.2025)
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Widerspruchs-Scanner
+- [ ] **Beweis:** Scanner-Report zeigt 0 Instructions-Widersprüche - vollständig gelöst
+
+- [ ] **Aufgabe:** Token-Limit 6000→10000 in Analyzer korrigieren
+- [ ] **Kontext:** Universal-project-analyzer.cjs hatte veraltetes 6k Token-Limit statt aktuellem 10k Standard
+- [ ] **Ressourcen:** replace_string_in_file in Zeile 369 von universal-project-analyzer.cjs
+- [ ] **Priorität:** Hoch  
+- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Analyzer-Fixer
+- [ ] **Beweis:** Grep-Search bestätigt - 0 Matches für "6000", 2 Matches für "10000" in korrekter Zeile
+
+- [ ] **Aufgabe:** Blog-Links von ungültigen zu existierenden Artikeln umleiten
+- [ ] **Kontext:** 6 ungültige Blog-Links auf nicht existierende Artikel gefunden
+- [ ] **Ressourcen:** Links auf mindset-gegen-grosskonzern.md (existierend) umleiten
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** ✅ TEILWEISE ERLEDIGT (01.08.2025) - 3 von 6 Links repariert
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Link-Reparateur  
+- [ ] **Beweis:** Scanner zeigt Verbesserung: 6→3 ungültige Links (50% Reduktion)
+- [ ] **Verbleibend:** 3 ungültige Links noch zu identifizieren und reparieren
+
+- [ ] **Aufgabe:** Konkretisierungs-Zwang und TODO-Aktualisierungs-Zwang internalisieren
+- [ ] **Kontext:** KI muss zwingend spezifische nächste Schritte und TODO-Updates liefern
+- [ ] **Ressourcen:** Internalisierung.md erweitern mit Konkretisierungs-Zwang-Protokoll
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)  
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Selbst-Verbesserung
+- [ ] **Beweis:** Neue Regeln in .github/instructions/core/internalisierung.md implementiert
 
 - [ ] **Aufgabe:** "HOCH"-Überfüllung in vollstaendige-projekt-inventarisierung.md reduzieren
 - [ ] **Kontext:** 6x "HOCH" gefunden in .github/instructions/inventarisierung/vollstaendige-projekt-inventarisierung.md

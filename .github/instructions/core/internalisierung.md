@@ -152,6 +152,32 @@ VOR JEDER BEHAUPTUNG ZWINGEND:
 4. Bei Ungewissheit: "Unbestätigt" explizit kennzeichnen
 ```
 
+### **🎯 KONKRETISIERUNGS-ZWANG-PROTOKOLL (INTERNALISIERT 01.08.2025):**
+
+**ZWINGEND BEI JEDER ANTWORT:**
+
+#### **📋 NÄCHSTE-SCHRITTE-KLARHEIT:**
+
+```
+NIEMALS NUR "Nächste Schritte" NENNEN:
+1. KONKRETE TOOL-BEFEHLE: Exakte Commands mit Parametern
+2. SPEZIFISCHE DATEIPFADE: Vollständige Pfade, keine Platzhalter
+3. ERWARTETE ERGEBNISSE: Was genau passieren wird
+4. VALIDIERUNGS-METHODE: Wie Erfolg gemessen wird
+5. ABHÄNGIGKEITEN: Was vorher erfüllt sein muss
+```
+
+#### **📝 TODO-AKTUALISIERUNGS-ZWANG:**
+
+```
+NACH JEDER ARBEIT ZWINGEND:
+1. docs/todos/todos.md LESEN und analysieren
+2. Erledigte Items als [✅] markieren mit Beweis
+3. Neue erkannte Items hinzufügen mit SMART-Framework
+4. Prioritäten basierend auf aktueller Arbeit anpassen
+5. Status-Update mit konkreten Fortschritts-Metriken
+```
+
 #### **🎨 VISUELLER CODE-BEWEIS (OHNE SIMPLE-BROWSER):**
 
 ```
