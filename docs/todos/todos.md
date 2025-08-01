@@ -46,7 +46,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Aufgabe:** Token-Limit 6000→10000 in Analyzer korrigieren
 - [ ] **Kontext:** Universal-project-analyzer.cjs hatte veraltetes 6k Token-Limit statt aktuellem 10k Standard
 - [ ] **Ressourcen:** replace_string_in_file in Zeile 369 von universal-project-analyzer.cjs
-- [ ] **Priorität:** Hoch  
+- [ ] **Priorität:** Hoch
 - [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Analyzer-Fixer
@@ -58,7 +58,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Priorität:** Hoch
 - [ ] **Status:** ✅ TEILWEISE ERLEDIGT (01.08.2025) - 3 von 6 Links repariert
 - [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Link-Reparateur  
+- [ ] **Rolle:** Link-Reparateur
 - [ ] **Beweis:** Scanner zeigt Verbesserung: 6→3 ungültige Links (50% Reduktion)
 - [ ] **Verbleibend:** 3 ungültige Links noch zu identifizieren und reparieren
 
@@ -66,7 +66,7 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Kontext:** KI muss zwingend spezifische nächste Schritte und TODO-Updates liefern
 - [ ] **Ressourcen:** Internalisierung.md erweitern mit Konkretisierungs-Zwang-Protokoll
 - [ ] **Priorität:** Hoch
-- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)  
+- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
 - [ ] **Verantwortlich:** KI
 - [ ] **Rolle:** Selbst-Verbesserung
 - [ ] **Beweis:** Neue Regeln in .github/instructions/core/internalisierung.md implementiert
@@ -98,14 +98,41 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 - [ ] **Rolle:** Prioritäten-Bereiniger
 - [ ] **Prompt:** "Analysiere docs/todos/verhaltensprobleme.md mit grep_search nach 'hoch'. Öffne die Datei und bewerte alle 4 Instanzen. Behalte maximal 2 als 'hoch', ändere den Rest auf 'MITTEL'. Nutze replace_string_in_file für Änderungen."
 
-- [ ] **Aufgabe:** Token-Regeln vereinheitlichen - 6000 statt 1200 durchgängig umsetzen
-- [ ] **Kontext:** Scanner fand unterschiedliche Token-Limits in verschiedenen Dateien - führt zu Verwirrung
-- [ ] **Ressourcen:** Grep-Search nach "1200.*Zeilen" und "Token.*Limit", alle auf 6000 Token vereinheitlichen
+- [ ] **Aufgabe:** Analyzer um Redundanz- und Struktur-Analyse erweitern
+- [ ] **Kontext:** Simon wünscht Erkennung von doppelten Dateien und unlogischen Strukturen
+- [ ] **Ressourcen:** Universal-project-analyzer.cjs um neue Phasen 4+5 erweitern
 - [ ] **Priorität:** Hoch
-- [ ] **Status:** Offen
+- [ ] **Status:** ✅ ERLEDIGT (01.08.2025)
 - [ ] **Verantwortlich:** KI
-- [ ] **Rolle:** Token-Regel-Harmonisierer
-- [ ] **Prompt:** "Führe grep_search im gesamten Projekt nach '1200.*Zeilen', 'Token.*Limit', '1200.\*Token' durch. Identifiziere alle Dateien mit veralteten 1200-Limits. Ersetze systematisch alle durch '6000 Token' als globalen Standard. Nutze replace_string_in_file für jede Datei einzeln."
+- [ ] **Rolle:** Analyzer-Entwickler
+- [ ] **Beweis:** Analyzer findet 67 Duplikat-Gruppen, 222 falsch platzierte Dateien, 95 Naming-Probleme
+
+- [ ] **Aufgabe:** 67 Duplikat-Gruppen bereinigen (ANALYZER-BEFUND)
+- [ ] **Kontext:** Neue Redundanz-Analyse zeigt massive Duplikation - Dateien in mehreren Scopes
+- [ ] **Ressourcen:** Analyzer-Report projekt-analyse-2025-08-01T07-20-12.md für Details
+- [ ] **Priorität:** Hoch
+- [ ] **Status:** Offen - NEU ERKANNT
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Redundanz-Cleaner
+- [ ] **Konkreter Befehl:** `read_file auf projekt-analyse-2025-08-01T07-20-12.md → Top 10 Duplikate identifizieren → Systematisch bereinigen`
+
+- [ ] **Aufgabe:** 222 falsch platzierte Dateien korrigieren (ANALYZER-BEFUND)
+- [ ] **Kontext:** Struktur-Validierung zeigt massive Scope-Zuordnungsfehler
+- [ ] **Ressourcen:** Analyzer-Report für falsch platzierte Dateien-Liste
+- [ ] **Priorität:** Mittel
+- [ ] **Status:** Offen - NEU ERKANNT
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Struktur-Optimizer
+- [ ] **Konkreter Befehl:** `Analyzer-Report → Prioritäts-Matrix → Systematische Datei-Verschiebung`
+
+- [ ] **Aufgabe:** 8 leere Verzeichnisse löschen (ANALYZER-BEFUND)
+- [ ] **Kontext:** Redundanz-Analyse fand komplett leere Verzeichnisse
+- [ ] **Ressourcen:** Git-sichere Löschung mit Backup
+- [ ] **Priorität:** Niedrig
+- [ ] **Status:** Offen - NEU ERKANNT
+- [ ] **Verantwortlich:** KI
+- [ ] **Rolle:** Directory-Cleaner
+- [ ] **Konkreter Befehl:** `git add . → git commit → Leere Verzeichnisse mit rmdir löschen`
 
 ### **2. BROKEN LINKS REPARIEREN (12 STÜCK)**
 
