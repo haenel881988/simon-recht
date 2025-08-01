@@ -1,5 +1,7 @@
 # Übersicht
 
+Bevor überhaupt irgendetwas
+
 **Variabeln**
 
 dggp / DgGP = David gegen Goliath Protokoll

@@ -454,14 +454,17 @@ class UniversalProjectAnalyzer {
     const allFiles = [];
 
     for (const [scope, data] of this.stats.scopes.entries()) {
-      allFiles.push(...data.files.map(f => ({ ...f, scope })));
+      allFiles.push(...data.files.map((f) => ({ ...f, scope })));
     }
 
     for (const file of allFiles) {
       try {
-        const content = fs.readFileSync(path.join(this.projectRoot, file.path), "utf-8");
-        const hash = crypto.createHash('md5').update(content).digest('hex');
-        
+        const content = fs.readFileSync(
+          path.join(this.projectRoot, file.path),
+          "utf-8"
+        );
+        const hash = crypto.createHash("md5").update(content).digest("hex");
+
         if (!fileHashes.has(hash)) {
           fileHashes.set(hash, []);
         }
@@ -476,8 +479,10 @@ class UniversalProjectAnalyzer {
     for (const [hash, files] of fileHashes.entries()) {
       if (files.length > 1) {
         this.redundancyDetection.duplicateFiles.set(hash, files);
-        console.log(`  🔄 DUPLIKAT gefunden: ${files.length} identische Dateien`);
-        files.forEach(f => console.log(`     - ${f.path} (${f.scope})`));
+        console.log(
+          `  🔄 DUPLIKAT gefunden: ${files.length} identische Dateien`
+        );
+        files.forEach((f) => console.log(`     - ${f.path} (${f.scope})`));
       }
     }
 
@@ -488,9 +493,15 @@ class UniversalProjectAnalyzer {
     this.findRedundantDirectories();
 
     console.log(`\n🔄 REDUNDANZ-ZUSAMMENFASSUNG:`);
-    console.log(`   📁 ${this.redundancyDetection.duplicateFiles.size} Duplikat-Gruppen`);
-    console.log(`   📂 ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse`);
-    console.log(`   🔄 ${this.redundancyDetection.redundantDirectories.length} redundante Verzeichnisse`);
+    console.log(
+      `   📁 ${this.redundancyDetection.duplicateFiles.size} Duplikat-Gruppen`
+    );
+    console.log(
+      `   📂 ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse`
+    );
+    console.log(
+      `   🔄 ${this.redundancyDetection.redundantDirectories.length} redundante Verzeichnisse`
+    );
   }
 
   /**
@@ -513,9 +524,15 @@ class UniversalProjectAnalyzer {
     this.validateDirectoryLogic();
 
     console.log(`\n🏗️ STRUKTUR-ZUSAMMENFASSUNG:`);
-    console.log(`   📄 ${this.structureValidation.misplacedFiles.length} falsch platzierte Dateien`);
-    console.log(`   🏷️ ${this.structureValidation.namingInconsistencies.length} Naming-Probleme`);
-    console.log(`   📁 ${this.structureValidation.structureViolations.length} Struktur-Verletzungen`);
+    console.log(
+      `   📄 ${this.structureValidation.misplacedFiles.length} falsch platzierte Dateien`
+    );
+    console.log(
+      `   🏷️ ${this.structureValidation.namingInconsistencies.length} Naming-Probleme`
+    );
+    console.log(
+      `   📁 ${this.structureValidation.structureViolations.length} Struktur-Verletzungen`
+    );
   }
 
   /**
@@ -528,12 +545,14 @@ class UniversalProjectAnalyzer {
 
       for (const item of items) {
         const fullPath = path.join(dirPath, item);
-        const relativeItemPath = path.join(relativePath, item).replace(/\\/g, "/");
+        const relativeItemPath = path
+          .join(relativePath, item)
+          .replace(/\\/g, "/");
 
         if (this.shouldIgnore(item)) continue;
 
         const stats = fs.statSync(fullPath);
-        
+
         if (stats.isDirectory()) {
           await this.findEmptyDirectories(fullPath, relativeItemPath);
         } else {
@@ -555,7 +574,7 @@ class UniversalProjectAnalyzer {
    */
   findRedundantDirectories() {
     const directories = new Set();
-    
+
     // Alle Verzeichnis-Pfade sammeln
     for (const [scope, data] of this.stats.scopes.entries()) {
       for (const file of data.files) {
@@ -567,19 +586,19 @@ class UniversalProjectAnalyzer {
     }
 
     const dirArray = Array.from(directories);
-    
+
     // Ähnliche Verzeichnisse finden
     for (let i = 0; i < dirArray.length; i++) {
       for (let j = i + 1; j < dirArray.length; j++) {
         const dir1 = dirArray[i];
         const dir2 = dirArray[j];
-        
+
         // Ähnlichkeits-Check
         if (this.areSimilarDirectories(dir1, dir2)) {
           this.redundancyDetection.redundantDirectories.push({
             dir1,
             dir2,
-            reason: "Ähnliche Namen oder Zwecke"
+            reason: "Ähnliche Namen oder Zwecke",
           });
         }
       }
@@ -591,13 +610,13 @@ class UniversalProjectAnalyzer {
    */
   validateFilePlacement(file, assignedScope) {
     const idealScope = this.getIdealScopeForFile(file);
-    
+
     if (idealScope !== assignedScope) {
       this.structureValidation.misplacedFiles.push({
         file: file.path,
         currentScope: assignedScope,
         idealScope,
-        reason: `Datei gehört besser zu ${idealScope}`
+        reason: `Datei gehört besser zu ${idealScope}`,
       });
     }
 
@@ -610,38 +629,38 @@ class UniversalProjectAnalyzer {
    */
   getIdealScopeForFile(file) {
     const filePath = file.path.toLowerCase();
-    
+
     // CSS-Dateien gehören zu CSS_DESIGN
-    if (filePath.includes('.css') || filePath.includes('styles')) {
-      return 'CSS_DESIGN';
+    if (filePath.includes(".css") || filePath.includes("styles")) {
+      return "CSS_DESIGN";
     }
-    
+
     // Astro-Komponenten
-    if (filePath.includes('.astro')) {
-      return 'ASTRO_COMPONENTS';
+    if (filePath.includes(".astro")) {
+      return "ASTRO_COMPONENTS";
     }
-    
+
     // Documentation
-    if (filePath.includes('readme') || filePath.includes('docs/')) {
-      return 'DOCUMENTATION';
+    if (filePath.includes("readme") || filePath.includes("docs/")) {
+      return "DOCUMENTATION";
     }
-    
+
     // Instructions
-    if (filePath.includes('instructions') || filePath.includes('.github/')) {
-      return 'INSTRUCTIONS';
+    if (filePath.includes("instructions") || filePath.includes(".github/")) {
+      return "INSTRUCTIONS";
     }
-    
+
     // Build/Tools
-    if (filePath.includes('tools/') || filePath.includes('build')) {
-      return 'BUILD_SYSTEM';
+    if (filePath.includes("tools/") || filePath.includes("build")) {
+      return "BUILD_SYSTEM";
     }
-    
+
     // Content
-    if (filePath.includes('content/') || filePath.includes('blog/')) {
-      return 'CONTENT';
+    if (filePath.includes("content/") || filePath.includes("blog/")) {
+      return "CONTENT";
     }
-    
-    return 'UNCLASSIFIED';
+
+    return "UNCLASSIFIED";
   }
 
   /**
@@ -649,38 +668,41 @@ class UniversalProjectAnalyzer {
    */
   validateSpecificRules(file) {
     const filePath = file.path;
-    
+
     // Regel 1: CSS-Dateien sollten in src/styles/ sein
-    if (filePath.endsWith('.css') && !filePath.includes('src/styles/')) {
+    if (filePath.endsWith(".css") && !filePath.includes("src/styles/")) {
       this.structureValidation.structureViolations.push({
         file: filePath,
         rule: "CSS-LOCATION",
         expected: "src/styles/",
         actual: path.dirname(filePath),
-        severity: "MEDIUM"
+        severity: "MEDIUM",
       });
     }
-    
+
     // Regel 2: Astro-Komponenten in src/
-    if (filePath.endsWith('.astro') && !filePath.startsWith('src/')) {
+    if (filePath.endsWith(".astro") && !filePath.startsWith("src/")) {
       this.structureValidation.structureViolations.push({
         file: filePath,
         rule: "ASTRO-LOCATION",
         expected: "src/",
         actual: path.dirname(filePath),
-        severity: "HIGH"
+        severity: "HIGH",
       });
     }
-    
+
     // Regel 3: README-Dateien an Verzeichnis-Root
-    if (filePath.toLowerCase().includes('readme') && 
-        path.basename(path.dirname(filePath)) !== path.dirname(path.dirname(filePath))) {
+    if (
+      filePath.toLowerCase().includes("readme") &&
+      path.basename(path.dirname(filePath)) !==
+        path.dirname(path.dirname(filePath))
+    ) {
       this.structureValidation.structureViolations.push({
         file: filePath,
         rule: "README-PLACEMENT",
         expected: "Verzeichnis-Root",
         actual: "Unterverzeichnis",
-        severity: "LOW"
+        severity: "LOW",
       });
     }
   }
@@ -690,30 +712,30 @@ class UniversalProjectAnalyzer {
    */
   validateNamingConsistency() {
     const namingPatterns = new Map();
-    
+
     for (const [scope, data] of this.stats.scopes.entries()) {
       for (const file of data.files) {
         const fileName = path.basename(file.path);
         const fileExt = path.extname(fileName);
         const baseName = path.basename(fileName, fileExt);
-        
+
         // Naming-Pattern analysieren
-        if (baseName.includes('-') && baseName.includes('_')) {
+        if (baseName.includes("-") && baseName.includes("_")) {
           this.structureValidation.namingInconsistencies.push({
             file: file.path,
             issue: "MIXED_SEPARATORS",
             suggestion: "Verwende einheitlich - oder _",
-            severity: "LOW"
+            severity: "LOW",
           });
         }
-        
+
         // CamelCase in Dateinamen (sollte kebab-case sein)
-        if (/[A-Z]/.test(baseName) && fileExt === '.md') {
+        if (/[A-Z]/.test(baseName) && fileExt === ".md") {
           this.structureValidation.namingInconsistencies.push({
             file: file.path,
             issue: "CAMELCASE_IN_MARKDOWN",
             suggestion: "kebab-case für Markdown-Dateien",
-            severity: "LOW"
+            severity: "LOW",
           });
         }
       }
@@ -727,15 +749,15 @@ class UniversalProjectAnalyzer {
     // Logik für maximale Verzeichnis-Tiefe
     for (const [scope, data] of this.stats.scopes.entries()) {
       for (const file of data.files) {
-        const depth = file.path.split('/').length - 1;
-        
+        const depth = file.path.split("/").length - 1;
+
         if (depth > 5) {
           this.structureValidation.structureViolations.push({
             file: file.path,
             rule: "MAX_DEPTH",
             expected: "≤ 5 Ebenen",
             actual: `${depth} Ebenen`,
-            severity: "MEDIUM"
+            severity: "MEDIUM",
           });
         }
       }
@@ -749,31 +771,31 @@ class UniversalProjectAnalyzer {
     // Einfache Ähnlichkeits-Heuristik
     const name1 = path.basename(dir1).toLowerCase();
     const name2 = path.basename(dir2).toLowerCase();
-    
+
     // Exakte Duplikate
     if (name1 === name2) return true;
-    
+
     // Ähnliche Namen (Levenshtein-Distance < 3)
     if (this.levenshteinDistance(name1, name2) < 3 && name1.length > 3) {
       return true;
     }
-    
+
     // Synonyme
     const synonyms = [
-      ['docs', 'documentation', 'doc'],
-      ['img', 'images', 'pictures', 'pics'],
-      ['js', 'javascript', 'scripts'],
-      ['css', 'styles', 'stylesheets'],
-      ['tmp', 'temp', 'temporary'],
-      ['archive', 'archiv', 'old', 'backup']
+      ["docs", "documentation", "doc"],
+      ["img", "images", "pictures", "pics"],
+      ["js", "javascript", "scripts"],
+      ["css", "styles", "stylesheets"],
+      ["tmp", "temp", "temporary"],
+      ["archive", "archiv", "old", "backup"],
     ];
-    
+
     for (const group of synonyms) {
       if (group.includes(name1) && group.includes(name2)) {
         return true;
       }
     }
-    
+
     return false;
   }
 
@@ -782,15 +804,15 @@ class UniversalProjectAnalyzer {
    */
   levenshteinDistance(str1, str2) {
     const matrix = [];
-    
+
     for (let i = 0; i <= str2.length; i++) {
       matrix[i] = [i];
     }
-    
+
     for (let j = 0; j <= str1.length; j++) {
       matrix[0][j] = j;
     }
-    
+
     for (let i = 1; i <= str2.length; i++) {
       for (let j = 1; j <= str1.length; j++) {
         if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
@@ -804,7 +826,7 @@ class UniversalProjectAnalyzer {
         }
       }
     }
-    
+
     return matrix[str2.length][str1.length];
   }
 
@@ -998,22 +1020,28 @@ class UniversalProjectAnalyzer {
     }
 
     // 🚨 SIMON'S NEUE REDUNDANZ-ANALYSE SEKTION
-    if (this.redundancyDetection.duplicateFiles.size > 0 || 
-        this.redundancyDetection.emptyDirectories.length > 0 ||
-        this.redundancyDetection.redundantDirectories.length > 0) {
-      
+    if (
+      this.redundancyDetection.duplicateFiles.size > 0 ||
+      this.redundancyDetection.emptyDirectories.length > 0 ||
+      this.redundancyDetection.redundantDirectories.length > 0
+    ) {
       report += `\n---\n\n## 🔄 REDUNDANZ-ANALYSE (NEU!)\n\n`;
 
       // Doppelte Dateien
       if (this.redundancyDetection.duplicateFiles.size > 0) {
         report += `### 📄 DOPPELTE DATEIEN\n\n`;
         let duplicateIndex = 1;
-        for (const [hash, files] of this.redundancyDetection.duplicateFiles.entries()) {
+        for (const [
+          hash,
+          files,
+        ] of this.redundancyDetection.duplicateFiles.entries()) {
           report += `#### ${duplicateIndex}. Duplikat-Gruppe (${files.length} Dateien)\n\n`;
-          files.forEach(file => {
+          files.forEach((file) => {
             report += `- \`${file.path}\` (${file.scope}, ${file.tokenEstimate} Tokens)\n`;
           });
-          report += `\n**🎯 EMPFEHLUNG:** Behalte 1 Datei, lösche ${files.length - 1} Duplikate\n\n`;
+          report += `\n**🎯 EMPFEHLUNG:** Behalte 1 Datei, lösche ${
+            files.length - 1
+          } Duplikate\n\n`;
           duplicateIndex++;
         }
       }
@@ -1021,7 +1049,7 @@ class UniversalProjectAnalyzer {
       // Leere Verzeichnisse
       if (this.redundancyDetection.emptyDirectories.length > 0) {
         report += `### 📂 LEERE VERZEICHNISSE\n\n`;
-        this.redundancyDetection.emptyDirectories.forEach(dir => {
+        this.redundancyDetection.emptyDirectories.forEach((dir) => {
           report += `- \`${dir}/\`\n`;
         });
         report += `\n**🎯 EMPFEHLUNG:** ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse löschen\n\n`;
@@ -1030,19 +1058,24 @@ class UniversalProjectAnalyzer {
       // Redundante Verzeichnisse
       if (this.redundancyDetection.redundantDirectories.length > 0) {
         report += `### 🔄 REDUNDANTE VERZEICHNISSE\n\n`;
-        this.redundancyDetection.redundantDirectories.forEach((redundancy, index) => {
-          report += `#### ${index + 1}. \`${redundancy.dir1}\` ↔ \`${redundancy.dir2}\`\n\n`;
-          report += `- **Grund:** ${redundancy.reason}\n`;
-          report += `- **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen\n\n`;
-        });
+        this.redundancyDetection.redundantDirectories.forEach(
+          (redundancy, index) => {
+            report += `#### ${index + 1}. \`${redundancy.dir1}\` ↔ \`${
+              redundancy.dir2
+            }\`\n\n`;
+            report += `- **Grund:** ${redundancy.reason}\n`;
+            report += `- **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen\n\n`;
+          }
+        );
       }
     }
 
     // 🚨 SIMON'S NEUE STRUKTUR-VALIDIERUNG SEKTION
-    if (this.structureValidation.misplacedFiles.length > 0 ||
-        this.structureValidation.structureViolations.length > 0 ||
-        this.structureValidation.namingInconsistencies.length > 0) {
-      
+    if (
+      this.structureValidation.misplacedFiles.length > 0 ||
+      this.structureValidation.structureViolations.length > 0 ||
+      this.structureValidation.namingInconsistencies.length > 0
+    ) {
       report += `\n---\n\n## 🏗️ STRUKTUR-VALIDIERUNG (NEU!)\n\n`;
 
       // Falsch platzierte Dateien
@@ -1050,7 +1083,7 @@ class UniversalProjectAnalyzer {
         report += `### 📄 FALSCH PLATZIERTE DATEIEN\n\n`;
         report += `| Datei | Aktuell | Ideal | Begründung |\n`;
         report += `|-------|---------|-------|------------|\n`;
-        this.structureValidation.misplacedFiles.forEach(misplaced => {
+        this.structureValidation.misplacedFiles.forEach((misplaced) => {
           report += `| \`${misplaced.file}\` | ${misplaced.currentScope} | ${misplaced.idealScope} | ${misplaced.reason} |\n`;
         });
         report += `\n`;
@@ -1060,7 +1093,7 @@ class UniversalProjectAnalyzer {
       if (this.structureValidation.structureViolations.length > 0) {
         report += `### ⚠️ STRUKTUR-VERLETZUNGEN\n\n`;
         const violationsByRule = new Map();
-        this.structureValidation.structureViolations.forEach(violation => {
+        this.structureValidation.structureViolations.forEach((violation) => {
           if (!violationsByRule.has(violation.rule)) {
             violationsByRule.set(violation.rule, []);
           }
@@ -1069,7 +1102,7 @@ class UniversalProjectAnalyzer {
 
         for (const [rule, violations] of violationsByRule.entries()) {
           report += `#### ${rule} (${violations.length} Verletzungen)\n\n`;
-          violations.forEach(v => {
+          violations.forEach((v) => {
             report += `- **[\`${v.severity}\`]** \`${v.file}\`\n`;
             report += `  - Erwartet: ${v.expected}\n`;
             report += `  - Aktuell: ${v.actual}\n`;
@@ -1082,7 +1115,7 @@ class UniversalProjectAnalyzer {
       if (this.structureValidation.namingInconsistencies.length > 0) {
         report += `### 🏷️ NAMING-INKONSISTENZEN\n\n`;
         const namingByIssue = new Map();
-        this.structureValidation.namingInconsistencies.forEach(naming => {
+        this.structureValidation.namingInconsistencies.forEach((naming) => {
           if (!namingByIssue.has(naming.issue)) {
             namingByIssue.set(naming.issue, []);
           }
@@ -1091,7 +1124,7 @@ class UniversalProjectAnalyzer {
 
         for (const [issue, namings] of namingByIssue.entries()) {
           report += `#### ${issue} (${namings.length} Dateien)\n\n`;
-          namings.forEach(n => {
+          namings.forEach((n) => {
             report += `- **[\`${n.severity}\`]** \`${n.file}\`\n`;
             report += `  - **Empfehlung:** ${n.suggestion}\n`;
           });
@@ -1224,10 +1257,18 @@ class UniversalProjectAnalyzer {
     );
 
     // 🚨 SIMON'S NEUE METRIKEN
-    console.log(`   🔄 ${this.redundancyDetection.duplicateFiles.size} Duplikat-Gruppen`);
-    console.log(`   📂 ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse`);
-    console.log(`   📄 ${this.structureValidation.misplacedFiles.length} falsch platzierte Dateien`);
-    console.log(`   🏷️ ${this.structureValidation.namingInconsistencies.length} Naming-Probleme`);
+    console.log(
+      `   🔄 ${this.redundancyDetection.duplicateFiles.size} Duplikat-Gruppen`
+    );
+    console.log(
+      `   📂 ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse`
+    );
+    console.log(
+      `   📄 ${this.structureValidation.misplacedFiles.length} falsch platzierte Dateien`
+    );
+    console.log(
+      `   🏷️ ${this.structureValidation.namingInconsistencies.length} Naming-Probleme`
+    );
 
     if (totalTokens > 128000) {
       console.log("   🚨 KRITISCH: VS Code Insiders Limit überschritten!");
