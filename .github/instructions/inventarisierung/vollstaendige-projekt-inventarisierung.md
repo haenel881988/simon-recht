@@ -13,7 +13,7 @@ simon-recht/ (Root)
 ├── 📄 astro.config.mjs (23 Zeilen, ~320 Tokens)
 ├── 📄 package.json (35 Zeilen, ~520 Tokens)
 ├── 📄 README.md (89 Zeilen, ~1.240 Tokens)
-├── 📄 tailwind.config.mjs (15 Zeilen, ~210 Tokens)
+├── 📄 astro.config.mjs (15 Zeilen, ~210 Tokens) - ✅ TAILWIND ENTFERNT
 ├── 📂 .github/ (Instructions & Workflows)
 ├── 📂 docs/ (Dokumentation & Content)
 ├── 📂 src/ (Astro Source Code)
@@ -29,7 +29,7 @@ simon-recht/ (Root)
 
 ```
 .github/
-├── 📄 copilot-instructions.md (327 Zeilen, ~4.500 Tokens) ⚠️ GRENZWERTIG
+├── 📄 copilot-instructions.md (327 Zeilen, ~4.500 Tokens)     - ✅ Tailwind KOMPLETT entfernt (npm + Config)
 ├── 📄 pull_request_template.md (25 Zeilen, ~350 Tokens)
 ├── 📂 instructions/ (Modularisierte Instructions)
 │   ├── 📂 core/ (3 Dateien, ~180 Zeilen)

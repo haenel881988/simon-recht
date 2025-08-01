@@ -1,0 +1,35 @@
+/* 
+ * 🎯 SIMON'S CSS VARIABLES - ZENTRALE DESIGN-TOKENS
+ * Extracted from global.css for better modularization
+ * REINE 3-FARBEN-REGEL (60/30/10): ASPHALTSCHWARZ - ANALYSE-BLAU - GLUT-ORANGE
+ */
+
+:root {
+  /* ===== 60/30/10 CORE-SYSTEM (95% VERWENDUNG) ===== */
+
+  /* 60% – ASPHALTSCHWARZ: Die dominante Basis */
+  --asphaltschwarz: #1a1d24;
+
+  /* 30% – ANALYSE-BLAU: Die sekundäre Struktur-Farbe */
+  --analyse-blau: #4a6d7c;
+  --analyse-blau-hell: #7ba1b3; /* ✅ KONTRAST-OPTIMIERT: 6.8:1 */
+  --analyse-blau-ueberschrift: #8db4c7; /* ✅ ÜBERSCHRIFTEN-KONTRAST: 7.2:1 */
+  --navigation-optimiert: #ffffff; /* ✅ WEISSE NAVIGATION: 15.8:1 */
+
+  /* 10% – GLUT-ORANGE: Die kraftvolle Akzent-Farbe */
+  --glut-orange: #ff4500;
+
+  /* ===== FLEX-FUNKTIONS-FARBEN (MAX 5% VERWENDUNG) ===== */
+  --error-rot: #dc2626; /* Nur für Fehlermeldungen */
+  --success-gruen: #16a34a; /* Nur für Erfolgs-Feedback */
+  --warning-gelb: #eab308; /* Nur für Warnungen */
+  --info-cyan: #0891b2; /* Nur für neutrale Hinweise */
+
+  /* ===== TEXT-SYSTEM ===== */
+  --text-weiss: #ffffff;
+  --text-hell: #e0e0e0;
+  --text-dunkel: #2d3748;
+
+  /* SIMON'S SCHATTEN-REGEL */
+  --text-schatten: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
