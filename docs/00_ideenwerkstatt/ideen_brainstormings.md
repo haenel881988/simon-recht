@@ -48,8 +48,6 @@ In diesem Ordner legst du weitere Unterordner an, z.B.:
 01_korrespondenz\pensionskasse
 01_korrespondenz\arbeitgeber
 
-uf dem Desktop oder unter "Dokumente" ein neuer Ordner anzulegen, z.B.:
-
 An dieser Stelle möchte Simon den User animieren, einfach mal Microsoft Word oder Google docs zu öffnen und die Datei erstmal abzuspeichern als eine Art Q&A an die KI.
 Dabei geht es einfach mal darum, den Gedanken freien lauf zu lassen. Was beschäftigt dich, welche Probleme hast du?
 Am besten sei SMART:
