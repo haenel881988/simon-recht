@@ -687,8 +687,12 @@ class UniversalProjectAnalyzer {
       return "ASTRO_COMPONENTS";
     }
 
-    // Documentation
-    if (filePath.includes("readme") || filePath.includes("docs/")) {
+    // Documentation - erweiterte Pattern-Erkennung
+    if (filePath.toLowerCase().includes("readme") || 
+        filePath.includes("docs/") ||
+        filePath.includes("docs\\") ||
+        filePath.includes("/documentation/") ||
+        filePath.includes("\\documentation\\")) {
       return "DOCUMENTATION";
     }
 

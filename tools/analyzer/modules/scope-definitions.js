@@ -39,10 +39,12 @@ const SCOPE_DEFINITIONS = {
     /^tailwind\.config\.mjs$/, // Tailwind-Config
   ],
   DOCUMENTATION: [
+    /^docs\/documentation\//, // Neue modularisierte Dokumentation (Priorität!)
     /^docs\/website_struktur\/recherche\//, // Recherche-Dokumentation
     /^docs\/marketing\//, // Marketing-Dokumentation
     /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt
     /^README\.md$/, // Nur Haupt-README
+    /readme\.md$/i, // README-Dateien in Verzeichnissen
   ],
   ASSETS: [
     /^public\//, // Nur public/ Verzeichnis

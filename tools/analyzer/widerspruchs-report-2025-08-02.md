@@ -1,6 +1,6 @@
 # 🔍 WIDERSPRUCHS-SCANNER REPORT
 
-**Generiert:** 2.8.2025, 10:58:40  
+**Generiert:** 2.8.2025, 12:17:20  
 **Scanner-Version:** v1.0  
 **Projekt:** simon-recht
 
@@ -10,17 +10,14 @@
 |-----------|---------|-------------|
 | 🚨 Instructions-Widersprüche | 0 | HIGH |
 | 🔢 Token-Warnungen | 0 | CRITICAL |
-| 🔗 Ungültige Links | 3 | HIGH |
-| 📄 Leere Dateien | 22 | MEDIUM |
+| 🔗 Ungültige Links | 4 | HIGH |
+| 📄 Leere Dateien | 0 | MEDIUM |
 | 📂 Pfad-Fehler | 20 | MEDIUM |
 
 ## 🎯 EMPFEHLUNGEN
 
 ### ⚠️ HIGH
-Repariere 3 ungültige Links für Navigation
-
-### 💡 MEDIUM
-Bereinige 22 leere/redundante Dateien
+Repariere 4 ungültige Links für Navigation
 
 ## 🔍 DETAILIERTE ERGEBNISSE
 
@@ -31,6 +28,8 @@ Bereinige 22 leere/redundante Dateien
 ✅ Alle Dateien im Token-Limit
 
 ### 🔗 UNGÜLTIGE LINKS
+- `C:\apps\website\simon-recht\docs\documentation\technical\styles-system.md` (Zeile 180): Link zu `glossar.md` nicht gefunden
+    → `**Alle englischen/technischen Begriffe sind detailliert erklärt in:** → **[📖 glossar.md](glossar.md)**`
 - `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/mindset-gegen-grosskonzern` nicht gefunden
     → `**[→ Wie Mindset Großkonzerne schlägt - Meine komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
 - `C:\apps\website\simon-recht\docs\website_struktur\statische-seiten\static\index.md` (Zeile 55): Link zu `/blog/mindset-gegen-grosskonzern` nicht gefunden
@@ -39,52 +38,11 @@ Bereinige 22 leere/redundante Dateien
     → `### **[Mindset schlägt Großkonzern - Die komplette Geschichte](/blog/mindset-gegen-grosskonzern)**`
 
 ### 📄 LEERE/REDUNDANTE DATEIEN
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-50-333Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-52-408Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-10-55-909Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-06-933Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-09-561Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-12-032Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-13-795Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-15-603Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-16-733Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-18-511Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-20-657Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-22-896Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-25-288Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-27-285Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-29-514Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-31-936Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-34-431Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-36-812Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-39-133Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\logfiles\archive\2025-07-24\simon-build-checker-v5-2025-07-24T07-11-42-385Z.md`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\scripte\build-checker-simple.cjs`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
-- `C:\apps\website\simon-recht\tools\build_check\scripte\css-checker.cjs`: EMPTY (0 Bytes)
-    → `[DATEI LEER]`
+✅ Keine leeren Dateien
 
 ### 📂 PFAD-REFERENZ-FEHLER
+- `C:\apps\website\simon-recht\docs\documentation\technical\analyzer-tools.md` (Zeile 186): Referenz zu `tools/analyzer/projekt-analyse-YYYY-MM-DD-HH-MM-SS.md` ungültig
+    → `tools/analyzer/projekt-analyse-YYYY-MM-DD-HH-MM-SS.md`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 35): Referenz zu `docs/archive/auto-cleanup-2025-07-25` ungültig
     → `# New-Item -ItemType Directory -Path "docs/archive/auto-cleanup-2025-07-25" -Force`
 - `C:\apps\website\simon-recht\docs\todos\struktur-migration-plan.md` (Zeile 38): Referenz zu `docs/archive/auto-cleanup-2025-07-25/` ungültig
@@ -119,8 +77,6 @@ Bereinige 22 leere/redundante Dateien
     → `**1. Instructions-Fundament bereinigen (Kurzfristig):** _Sofort_ alle bekannten Fehler in den Anleitungen korrigieren. Dazu gehört: falsche Pfade updaten (z.B. Verweise von `docs/…` auf das richtige Verzeichnis richten), Widersprüche wie jene zur Dateierstellung oder Sprache auflösen (ggf. durch Streichung einer der beiden kollidierenden Regeln), und redundante Regeln entfernen. Anschließend die überarbeitete `.github/copilot-instructions.md` sowie zugehörige Files versionieren (Backup der alten Fassung liegt ja vor). Diese Bereinigung hat oberste Priorität, da ein sauberes Regelwerk die Grundlage für alle weiteren Verbesserungen ist.`
 - `C:\apps\website\simon-recht\docs\website_struktur\recherche\tiefen_recherche\ph02_SEO- und Content-Strategie DACH_.md` (Zeile 369): Referenz zu `tools/keyword-research/` ungültig
     → `15. 11 beste Keyword-Recherche-Tools für SEO im Jahr 2025, Zugriff am Juli 12, 2025, https://www.seo.com/de/tools/keyword-research/`
-- `C:\apps\website\simon-recht\tools\analyzer\README.md` (Zeile 186): Referenz zu `tools/analyzer/projekt-analyse-YYYY-MM-DD-HH-MM-SS.md` ungültig
-    → `tools/analyzer/projekt-analyse-YYYY-MM-DD-HH-MM-SS.md`
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\build-checker-2025-07-21T11-11-45-682Z.md` (Zeile 12591): Referenz zu `docs/00_core_aktiv/aenderungsprotokoll.md` ungültig
     → `4. **AAR DOKUMENTATION:** Alle Änderungen in `docs/00_core_aktiv/aenderungsprotokoll.md``
 - `C:\apps\website\simon-recht\tools\build_check\logfiles\build-checker-2025-07-21T11-11-45-682Z.md` (Zeile 12719): Referenz zu `docs/015_build_logs/seo_messungs_dateien/KEYWORD-EXPANSION-VORSCHLAEGE.md` ungültig
