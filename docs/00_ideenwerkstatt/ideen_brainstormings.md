@@ -33,10 +33,17 @@ Offtopic / Feedhub für freemember:
 KI gestützte Beratung --> Affiliate Produkte von Amazon
 Sinnvolle und seriöse Werbung
 
+// Vielleicht an dieser stelle ist zu erwähnen, dass die KI ein Marktpotenzial von rund 2Mia. CHF evaluiert hat.
+Wäre es daher klüger sich ausschliesslich auf juristische themen zu fokussieren?
+Was empfiehlt die KI dazu?
+
 Dabei unterscheiden wir zwischen:
 Dem digitalen schriftlichen Onlinekurs der modularisiert permanent aktuell gehalten wird, damit die Menschen sich nicht erst durch X, div. KI Meldungen etc. blättern müssen, sondern imm gezielt, auch diese Funktionen vorstellt und verwendet, die produktiv genutzt werden können.
 
-Ich stelle mi
+Ich stelle mir vor, dass der onlinekurs eine gestaffelte preispolitik besitzt.
+Die ersten 5 User kostenlos --> Manuelle Verifizierung durch Simon, damit sie sich committen für ein testimonial, Feedback-review.
+Die nächsten 20 User erhalten 50% Rabatt. Statt 99.- monatlich, nur 44.90 oder bei einem jahresabschluss, 2 monate gratis dazu, also 14 Monate.
+Langfristiges commitement wird belohnt, kurzfristiges "bestaft".
 
 **weitere Ideen - unsortiert**
 

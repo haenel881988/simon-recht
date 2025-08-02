@@ -235,7 +235,7 @@ class UniversalProjectAnalyzer {
     const scopePriority = [
       "DOCUMENTATION_CORE", // Neue Sub-Scopes zuerst!
       "DOCUMENTATION_TECHNICAL",
-      "DOCUMENTATION_WEBSITE", 
+      "DOCUMENTATION_WEBSITE",
       "DOCUMENTATION_HUB",
       "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
       "INSTRUCTIONS", // Höchste Priorität: .github/instructions/
