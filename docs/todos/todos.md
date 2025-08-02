@@ -17,15 +17,18 @@
 ## � **TODO-SCOPE-NAVIGATION:**
 
 ### 🔴 **[HOCH-PRIORITÄT (3/3 AKTIV)](prioritaeten/hoch/)**
+
 - **[🚨 Aktuelle Krisen](prioritaeten/hoch/aktuelle-krisen.md)** - SOFORT bearbeiten
 - **Status:** Redundanz-Crisis + Token-Overflow + CSS-Feinschliff
 - **Regel:** Nicht mehr als 3 gleichzeitig!
 
-### � **[MITTEL-PRIORITÄT](prioritaeten/mittel/)**  
+### � **[MITTEL-PRIORITÄT](prioritaeten/mittel/)**
+
 - **[🔧 Technische Verbesserungen](prioritaeten/mittel/technische-verbesserungen.md)** - Qualität verbessern
 - **Token-Budget:** ~5k-8k pro Bereich (Manageable)
 
 ### 🟢 **[NIEDRIG-PRIORITÄT](prioritaeten/niedrig/)**
+
 - **[🎨 Optimierungen](prioritaeten/niedrig/optimierungen.md)** - Future-Features
 - **Timing:** Nur bei freier Kapazität
 
@@ -34,7 +37,7 @@
 ## ✅ **HEUTE ERFOLGREICH ABGESCHLOSSEN:**
 
 - ✅ **Scope-Modularisierung implementiert** (Token: 15.944 → ~3k pro Scope)
-- ✅ **Zero-Redundancy-System enhanced** (Analyzer erkennt Filename-Redundanzen)  
+- ✅ **Zero-Redundancy-System enhanced** (Analyzer erkennt Filename-Redundanzen)
 - ✅ **CSS-Modularisierung zu 90% abgeschlossen** (Health Score: 90/100)
 - ✅ **Instructions-Redundanzen eliminiert** (Cross-File-Duplikate bereinigt)
 
@@ -43,10 +46,11 @@
 ## 📊 **AKTUELLER PROJEKT-STATUS:**
 
 **🔍 BEWEIS [Analyzer-Scan 02.08.2025]:**
-- **📁 Files:** 77 analysiert  
+
+- **📁 Files:** 77 analysiert
 - **🔢 Tokens:** 103.621 geschätzt
 - **🏷️ Filename-Redundanzen:** 1 erkannt (KRITISCH)
-- **📂 Leere Verzeichnisse:** 11 
+- **📂 Leere Verzeichnisse:** 11
 - **📄 Falsch platzierte Dateien:** 44
 
 ---
@@ -54,7 +58,7 @@
 ## 🎯 **NÄCHSTE SOFORT-AKTION:**
 
 1. **REDUNDANZ-CRISIS lösen** → global_old.css permanent eliminieren
-2. **CSS-Feinschliff abschließen** → 95+/100 Health Score erreichen  
+2. **CSS-Feinschliff abschließen** → 95+/100 Health Score erreichen
 3. **Navigation optimieren** → Simon's UI-Insistenz erfüllen
 
 ---

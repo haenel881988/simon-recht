@@ -9,16 +9,19 @@
 ## 📁 **VERZEICHNISSTRUKTUR:**
 
 ### **🔴 [prioritaeten/hoch/](hoch/)**
+
 - **Zweck:** Kritische, sofort zu bearbeitende TODOs
 - **Limit:** Maximal 3 TODOs gleichzeitig
 - **Kriterien:** Blockiert Website-Launch oder zerstört System
 
 ### **🟡 [prioritaeten/mittel/](mittel/)**
-- **Zweck:** Wichtige TODOs mit mittelfristigem Impact  
+
+- **Zweck:** Wichtige TODOs mit mittelfristigem Impact
 - **Limit:** Unbegrenzt, aber strukturiert
 - **Kriterien:** Verbessert Qualität, nicht kritisch
 
 ### **🟢 [prioritaeten/niedrig/](niedrig/)**
+
 - **Zweck:** Nice-to-have Optimierungen
 - **Limit:** Unbegrenzt, nur bei freier Kapazität
 - **Kriterien:** Feinschliff, Future-Features
@@ -27,7 +30,7 @@
 
 ## 🔄 **WORKFLOW:**
 
-1. **ALLE NEUEN TODOs:** Automatische Prioritäts-Kategorisierung  
+1. **ALLE NEUEN TODOs:** Automatische Prioritäts-Kategorisierung
 2. **MIGRATION:** Bestehende TODOs aus todos.md in Scopes verschieben
 3. **MASTER-LIST:** todos.md wird Navigation-Hub zu Detail-Listen
 

@@ -18,7 +18,7 @@
 
 ### **2. ANALYZER TODOS_MANAGEMENT TOKEN-OVERFLOW**
 
-- **🔸 Aufgabe:** todos.md Scope-Modularisierung JETZT durchführen  
+- **🔸 Aufgabe:** todos.md Scope-Modularisierung JETZT durchführen
 - **🔸 Kontext:** 15.944 Tokens >10k GLOBAL LIMIT - blockiert KI-Arbeit
 - **🔸 Ressourcen:** Migration in prioritaeten/ Unterverzeichnisse
 - **🔸 Status:** **IN BEARBEITUNG** - Struktur erstellt, Migration läuft
@@ -27,7 +27,7 @@
 ### **3. CSS-MODULARISIERUNG ABSCHLUSS**
 
 - **🔸 Aufgabe:** Letzte 3 CSS-Duplikate entfernen für 95+/100 Health Score
-- **🔸 Kontext:** Build-Checker zeigt noch Redundanzen - blockiert CSS-Qualität  
+- **🔸 Kontext:** Build-Checker zeigt noch Redundanzen - blockiert CSS-Qualität
 - **🔸 Ressourcen:** grep_search + replace_string_in_file für finale Bereinigung
 - **🔸 Status:** **BEREIT** - Tools verfügbar, System stabil
 - **🔸 Verantwortlich:** KI (nach Redundanz-Crisis)
