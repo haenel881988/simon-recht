@@ -103,7 +103,7 @@ const SCOPE_DEFINITIONS = {
   ],
   TODOS_CORE: [
     /^docs\/todos\/README\.md$/, // TODO Navigation-Hub
-    /^docs\/todos\/todos\.md$/, // Haupt-TODO-Liste  
+    /^docs\/todos\/todos\.md$/, // Haupt-TODO-Liste
   ],
   TODOS_PRIORITAETEN: [
     /^docs\/todos\/prioritaeten\//, // Prioritäts-Kategorien

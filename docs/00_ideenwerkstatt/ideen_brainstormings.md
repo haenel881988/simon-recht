@@ -36,6 +36,7 @@ Sinnvolle und seriöse Werbung
 // Vielleicht an dieser stelle ist zu erwähnen, dass die KI ein Marktpotenzial von rund 2Mia. CHF evaluiert hat.
 Wäre es daher klüger sich ausschliesslich auf juristische themen zu fokussieren?
 Was empfiehlt die KI dazu?
+Ausserdem fragt Simon die KI, wie es sich mit Menschen verhält, die keine Rechtsschutzversicherung haben. Dann wäre ja das abo teuerer für die Menschen, wäre daher es nicht sinnvoller, ein dggp PDF für einmalig 299.-?
 
 Dabei unterscheiden wir zwischen:
 Dem digitalen schriftlichen Onlinekurs der modularisiert permanent aktuell gehalten wird, damit die Menschen sich nicht erst durch X, div. KI Meldungen etc. blättern müssen, sondern imm gezielt, auch diese Funktionen vorstellt und verwendet, die produktiv genutzt werden können.

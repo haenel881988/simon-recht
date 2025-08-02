@@ -235,21 +235,21 @@ class UniversalProjectAnalyzer {
     const scopePriority = [
       "DOCUMENTATION_CORE", // Neue Sub-Scopes zuerst!
       "DOCUMENTATION_TECHNICAL",
-      "DOCUMENTATION_WEBSITE", 
+      "DOCUMENTATION_WEBSITE",
       "DOCUMENTATION_HUB",
       "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
       "ANALYZER_CORE_TOOLS", // Haupt-Analyzer-Tools (spezifischste)
       "ANALYZER_REPORTS", // Analyzer Reports
       "ANALYZER_MODULES_BASE", // Analyzer Module Base
-      "ANALYZER_MODULES_CORE", // Analyzer Module Core  
-      "ANALYZER_MODULES_SCOPES", // Analyzer Module Scopes  
+      "ANALYZER_MODULES_CORE", // Analyzer Module Core
+      "ANALYZER_MODULES_SCOPES", // Analyzer Module Scopes
       "ANALYZER_LEGACY_TOOLS", // Legacy Analyzer Tools
       "LEGACY_RECHERCHE_GRUND", // Legacy Recherche Grund (spezifischste)
       "LEGACY_RECHERCHE_COACHING", // Legacy Recherche Coaching
       "LEGACY_RECHERCHE_SEO", // Legacy Recherche SEO
       "LEGACY_RECHERCHE_GTM", // Legacy Recherche Go-to-Market
       "LEGACY_RECHERCHE_BILDUNG", // Legacy Recherche Bildung
-      "LEGACY_CONTENT", // Legacy Content 
+      "LEGACY_CONTENT", // Legacy Content
       "LEGACY_DESIGN", // Legacy Design
       "LEGACY_ZIELGRUPPE", // Legacy Zielgruppe
       "TODOS_PRIORITAETEN", // TODO Prioritäten (spezifisch)
@@ -264,7 +264,7 @@ class UniversalProjectAnalyzer {
       "CONFIG", // Dann: Konfigurationen
       "CONTENT", // Dann: Content
       "LEGACY_DOCUMENTATION", // Legacy-Dokumentation (niedrigste Priorität)
-    ];    // Suche ersten passenden Scope (Einzel-Zuordnung)
+    ]; // Suche ersten passenden Scope (Einzel-Zuordnung)
     for (const scopeName of scopePriority) {
       if (this.scopePatterns[scopeName]) {
         for (const pattern of this.scopePatterns[scopeName]) {
