@@ -215,34 +215,42 @@ QUICK-FIX-VERBOT = STRENGSTENS UNTERSAGT - NIEMALS Quick-Launches/Hotfixes vorsc
 - 🔍 Hinterfragung der eigenen Arbeit ist erwünscht und geschätzt
 - 💡 Präventive Problem-Antizipation ist höchste KI-Kunst
 
-### **🛡️ CONTENT-PRESERVATION-ZWANG (INTERNALISIERT 31.07.2025):**
+### **� MODULARISIERUNGS-ZWANG (INTERNALISIERT 02.08.2025):**
 
-**ANLASS:** Simon's TODO-Liste-Disaster - KI löschte 467 → 48 Zeilen aus Token-Panik
+**SIMON'S KRITISCHE KORREKTUR:** "mir ist unklar, was du reduzieren willst, auch mache ich mir sorgen, dass du einfach dinge löschst, statt zu modularisieren"
 
 **ABSOLUT VERBOTEN:**
 
-- ❌ Inhalte LÖSCHEN um Token-Limits zu erreichen
-- ❌ "Modularisierung" durch CONTENT-DESTRUCTION
-- ❌ Token-Panik als Rechtfertigung für Datenverlust
-- ❌ Hektische Kürzungen ohne Inhalts-Validation
+- ❌ Content LÖSCHEN um Token-Limits zu erreichen
+- ❌ "Reduzieren" durch DELETION statt RESTRUCTURING
+- ❌ Token-Panik als Rechtfertigung für Content-Destruction
+- ❌ "Vereinfachen" durch Entfernen wichtiger Informationen
 
 **ZWINGEND ERFORDERLICH:**
 
+- ✅ **MODULARISIERUNG:** Content in logische Verzeichnisse AUFTEILEN
 - ✅ **PRESERVATION-FIRST:** Alle Inhalte ERHALTEN, nur UMSTRUKTURIEREN
-- ✅ **ECHTE MODULARISIERUNG:** Inhalte in Verzeichnisse VERSCHIEBEN
-- ✅ **STATUS-VALIDATION:** Prüfen welche TODOs tatsächlich erledigt sind
-- ✅ **NAVIGATION-LINKS:** Master-Liste als Hub zu Detail-Listen
+- ✅ **NAVIGATION-LINKS:** Master-Listen als Hub zu Detail-Listen
+- ✅ **SCOPE-SEPARATION:** Große Bereiche in Sub-Scopes organisieren
 
-**CONTENT-PRESERVATION-PROTOKOLL:**
+**MODULARISIERUNGS-PROTOKOLL:**
 
-1. **BACKUP:** Original-Datei sichern bevor Änderung
-2. **ANALYSE:** Status jedes einzelnen Items validieren
-3. **KATEGORISIERUNG:** Nach Priorität/Status/Thema sortieren
-4. **MIGRATION:** Items in entsprechende Verzeichnisse VERSCHIEBEN
-5. **LINKING:** Master-Liste mit Links zu Detail-Listen
-6. **VALIDATION:** Kein Content-Verlust, nur bessere Struktur
+1. **ANALYZE:** Welche logischen Bereiche existieren?
+2. **STRUCTURE:** Verzeichnisse für jeden Bereich erstellen
+3. **MIGRATE:** Content in entsprechende Verzeichnisse VERSCHIEBEN
+4. **LINK:** Master-Datei als Navigation zu Detail-Bereichen
+5. **VALIDATE:** Kein Content-Verlust, nur bessere Organisation
 
-**EXCEPTION-TRIGGER:** Bei Token-Overflow → **STRUKTURIEREN NICHT LÖSCHEN!**
+**BEISPIEL TOKEN-OVERFLOW-LÖSUNG:**
+
+- **FALSCH:** DOCUMENTATION-Scope von 24.979 → 10k durch LÖSCHEN
+- **RICHTIG:** DOCUMENTATION-Scope aufteilen in:
+  - `docs/documentation/core/` (Core-Dokumentation)
+  - `docs/documentation/technical/` (Technical-Docs)
+  - `docs/documentation/content/` (Content-Docs)
+  - `docs/documentation/README.md` (Navigation-Hub)
+
+**EXCEPTION-TRIGGER:** Bei "reduzieren", "kürzen", "entfernen" → Sofort hinterfragen ob MODULARISIERUNG gemeint ist!
 
 ### **🛡️ BEWEIS-ZWANG-PROTOKOLL (INTERNALISIERT 31.07.2025):**
 

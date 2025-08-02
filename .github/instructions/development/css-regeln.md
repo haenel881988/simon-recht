@@ -7,11 +7,12 @@
 **NEUE REGEL:** Englische Terminologie bevorzugen für bessere KI-Kommunikation!
 
 - ✅ **Foundation, Components, Utilities** = Standard verwenden
-- ✅ **Responsive, Layout, CTA** = International üblich  
+- ✅ **Responsive, Layout, CTA** = International üblich
 - ✅ **Semantic Classes, BEM-Methodology** = Best Practices
 - ✅ **Build-System, Performance** = Industrie-Standard
 
 **UNTERSTÜTZUNG FÜR SIMON:**
+
 - 📖 **Alle Fremdwörter erklärt:** → `src/styles/glossar.md`
 - 🎯 **Lernziel:** Englisch-Skills für bessere KI-Kooperation
 - 🚀 **Vorteil:** Internationale Standards = Zukunftssicherheit

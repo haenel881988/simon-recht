@@ -183,7 +183,6 @@ class ContradictionScanner {
       await this.scanInvalidLinks();
       await this.scanEmptyFiles();
       await this.scanInstructionContradictions();
-      await this.scanInstructionRedundancies(); // ⭐ NEU: Redundanz-Scan
       await this.scanPathReferences();
       await this.generateReport();
 

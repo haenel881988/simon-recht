@@ -180,7 +180,7 @@ src/styles/
 **Alle englischen/technischen Begriffe sind detailliert erklärt in:** → **[📖 glossar.md](glossar.md)**
 
 - **Foundation** = Grundlagen-CSS
-- **Components** = Wiederverwendbare Bausteine  
+- **Components** = Wiederverwendbare Bausteine
 - **Utilities** = Helper-CSS-Klassen
 - **Responsive** = Bildschirm-Anpassung
 - **Layout** = Struktureller Aufbau
@@ -197,7 +197,7 @@ src/styles/
 ├── global.css                      # Master Import Hub
 ├── foundation/                     # Static Base System
 │   ├── variables.css              # Color System, Fonts, Breakpoints
-│   ├── reset.css                  # CSS Reset/Normalize  
+│   ├── reset.css                  # CSS Reset/Normalize
 │   └── typography.css             # Font System (global)
 └── components/                    # Reusable Components
     ├── hero-aufmerksamkeit.css    # Marketing: ATTENTION

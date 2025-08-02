@@ -9,6 +9,7 @@
 ## 🎯 **CSS-ARCHITEKTUR BEGRIFFE:**
 
 ### **🏗️ FOUNDATION = GRUNDLAGEN:**
+
 ```
 ENGLISCH: Foundation
 DEUTSCH: Grundlagen, Basis, Fundament
@@ -17,13 +18,14 @@ BEISPIEL: "Foundation contains variables, typography, and reset"
 
 SIMON'S KONTEXT:
 - Foundation/variables.css = Farb-System definieren
-- Foundation/typography.css = Schrift-System festlegen  
+- Foundation/typography.css = Schrift-System festlegen
 - Foundation/reset.css = Browser-Unterschiede eliminieren
 
 WHY ENGLISH: Internationale Standard-Terminologie, alle Tutorials verwenden "Foundation"
 ```
 
 ### **🎯 COMPONENTS = KOMPONENTEN/BAUSTEINE:**
+
 ```
 ENGLISCH: Components
 DEUTSCH: Komponenten, Bausteine, Teile
@@ -39,6 +41,7 @@ WHY ENGLISH: React, Vue, Angular alle nutzen "Components" - Universal-Begriff
 ```
 
 ### **🔧 UTILITIES = HILFS-WERKZEUGE:**
+
 ```
 ENGLISCH: Utilities
 DEUTSCH: Hilfsmittel, Werkzeuge, Utilities
@@ -54,6 +57,7 @@ WHY ENGLISH: Tailwind CSS, Bootstrap - alle nennen es "Utilities"
 ```
 
 ### **📱 RESPONSIVE = BILDSCHIRM-ANPASSUNG:**
+
 ```
 ENGLISCH: Responsive (Design)
 DEUTSCH: Anpassungsfähig, reaktionsfähig
@@ -69,6 +73,7 @@ WHY ENGLISH: Ethan Marcotte prägte den Begriff 2010 - Weltweiter Standard
 ```
 
 ### **🎨 LAYOUT = AUFBAU/ANORDNUNG:**
+
 ```
 ENGLISCH: Layout
 DEUTSCH: Aufbau, Anordnung, Layout
@@ -84,6 +89,7 @@ WHY ENGLISH: CSS-Eigenschaften heißen "display: grid", "layout" ist CSS-Begriff
 ```
 
 ### **📋 FEEDBACK = RÜCKMELDUNG:**
+
 ```
 ENGLISCH: Feedback
 DEUTSCH: Rückmeldung, Feedback
@@ -103,6 +109,7 @@ WHY ENGLISH: UX/UI Design-Standard, internationale Business-Sprache
 ## 🚀 **MARKETING & BUSINESS BEGRIFFE:**
 
 ### **🎯 CALL-TO-ACTION (CTA):**
+
 ```
 ENGLISCH: Call-to-Action (CTA)
 DEUTSCH: Handlungsaufforderung
@@ -118,6 +125,7 @@ WHY ENGLISH: Marketing-Standard weltweit, alle Analytics-Tools nutzen "CTA"
 ```
 
 ### **🎭 USER JOURNEY:**
+
 ```
 ENGLISCH: User Journey
 DEUTSCH: Benutzer-Reise, Kunde-Weg
@@ -133,6 +141,7 @@ WHY ENGLISH: Digital Marketing Standard, Google Analytics verwendet diese Begrif
 ```
 
 ### **📊 CONVERSION:**
+
 ```
 ENGLISCH: Conversion
 DEUTSCH: Umwandlung, Konversion
@@ -152,6 +161,7 @@ WHY ENGLISH: E-Commerce und Marketing-Standard, alle Tools sind englisch
 ## 🛠️ **TECHNISCHE ENTWICKLUNGS-BEGRIFFE:**
 
 ### **📦 BUILD PROCESS:**
+
 ```
 ENGLISCH: Build Process
 DEUTSCH: Erstellungs-Prozess, Build-Prozess
@@ -167,6 +177,7 @@ WHY ENGLISH: Alle Build-Tools (Webpack, Vite, etc.) sind englisch
 ```
 
 ### **⚡ PERFORMANCE:**
+
 ```
 ENGLISCH: Performance
 DEUTSCH: Leistung, Performance
@@ -182,6 +193,7 @@ WHY ENGLISH: Web Vitals, Lighthouse, alle Performance-Tools sind englisch
 ```
 
 ### **🔍 DEBUGGING:**
+
 ```
 ENGLISCH: Debugging
 DEUTSCH: Fehlersuche, Debugging
@@ -212,7 +224,7 @@ WHY ENGLISH: Alle Entwickler-Tools und IDEs sind englisch
 
 ```
 ✅ Englische Begriffe lernen = Direkte Kommunikation mit KI
-✅ Status Quo Terminologie = Weniger Missverständnisse  
+✅ Status Quo Terminologie = Weniger Missverständnisse
 ✅ Internationale Standards = Zukunftssicher
 ✅ Original-Dokumentation verstehen = Schneller lernen
 ✅ Community-Zugang = Bessere Problemlösung
@@ -226,7 +238,7 @@ WHY ENGLISH: Alle Entwickler-Tools und IDEs sind englisch
 
 ```
 "Hilfsmittel CSS" → "Utilities CSS" ✅
-"Baustein Navigation" → "Navigation Component" ✅  
+"Baustein Navigation" → "Navigation Component" ✅
 "Grundlagen Farben" → "Foundation Variables" ✅
 "Aufbau Layout" → "Layout System" ✅
 "Rückmeldung Formular" → "Feedback Form" ✅
