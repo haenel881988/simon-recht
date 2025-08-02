@@ -4,9 +4,44 @@
 
 **_Idee interaktiver schriftlicher Onlinekurs_**
 
-Bevor wir loslegen möchte Simon mit der KI
+Bevor wir loslegen möchte Simon mit der KI brainstormen welche art der contentvermittlung klüger ist.
+Ist es ein interaktiver schriflticher Onlinekurs auf der Website? Der Hintergrund ist, da sich fast wöchentlich neue KI Funktionen seitens Hersteller publiziert werden, sowie die balidge Erwartung im August / September von GPT 5.0 muss / möchte ich gewährleisten, dass ich nicht permanent neue PDFs und Anleitungen erstellen muss, sondern dass der schriftliche Onlinekurs, in spezifische Modulen unterteilt ist.
 
-Was meinst du mit scope pattern? keine fremdwörter verwenden.
+Dabei können Menschen einzelne Module überspringen, z.B.: wenn die Menschen bereits einen Computer / Laptop besitzen und aktuell damit arbeiten.
+Auch gibt es Menschen die evtl. ein veraltetes Laptop haben, kein laptop, technische Beratung brauchen. Für selbstständige Menschen wie Thomy als Immobilienschäter oder eine Bäckerei haben meistens bereits eine einsatzbereite IT Infrastruktur.
+Arbeitnehmer für private Zwecke eher weniger. Dazu würde ich nicht nur eine Beratung, sondern klare Empfehlungen abliefern. Dabei würde ich auch gleichzeitig Produkte Empfehlen über Amazon Affiliate. --> eine idee, evtl. dieses Modul als eine Blogserie starten, also das erste Modul, als MVP definieren.
+
+Dabei statt den Onlinekurs als PDF anzubieten, direkt in einem Mitgliederbereich publizieren, wo sich menschen mit google registrieren / einloggen können. Dabei ist Simon sich unsicher, wie die Daten der Menschen gespeichert werden. Direkt auf dem vercel-hosting?
+Oder welche Lösungen gäbe es?
+Ausserdem wünscht sich Simon, ein Abomodell, wo Simon immer neuer Content veröffentlichen kann, also sämtliche aktuelle news aus der tech- und ki welt und direkt mit in den Kurs aufnimmt, und immer anhand praktischen Beispielen aufzeigt, wie man damit:
+
+Thematischer kurs:
+Sich juristisch verteidigen kann nur mithilfe der KI
+Wahnsinnig viel Geld sparen kann durch das vermeiden teuerer Anwälte
+Mindset themen
+
+MVP - Blog:
+KI gestützte technische Beratung statt teure MSPs / Abo- Mietmodelle
+Affiliate-Produkte / Werbung
+
+Offtopic / Feedhub für premiummember
+Geld verdienen kann, Geld sparen kann
+Wie man dadurch Steuern sparen kann
+Wie man mit KI Zeit sparen kann etc.
+
+Offtopic / Feedhub für freemember:
+KI gestützte Beratung --> Affiliate Produkte von Amazon
+Sinnvolle und seriöse Werbung
+
+Dabei unterscheiden wir zwischen:
+Dem digitalen schriftlichen Onlinekurs der modularisiert permanent aktuell gehalten wird, damit die Menschen sich nicht erst durch X, div. KI Meldungen etc. blättern müssen, sondern imm gezielt, auch diese Funktionen vorstellt und verwendet, die produktiv genutzt werden können.
+
+Und auch dynamischen inhalten, die z.B.: Offtopic sind.
+
+**weitere Ideen - unsortiert**
+
+Was meinst du mit scope pattern? Bitte entsprechend im glossar aufnehmen. Vielleicht das Glossar im CSS Scope, ins docs-verzeichnis verschieben und als eigenständiges scope-glossar unterteilen und modularisieren?
+Vielleicht aus dem Glossar ein Minicoaching für Simon bereitstellen? Wenn nötig, bei komplizierteren Dingen,
 Bitte phase 1 klar, einfach und deutlich formulieren. Was ist das Problem? --> Problembeschreibung --> Wie sieht die Lösung aus? Keine Fremdwörter verwenden, die KI muss beachten, dass der User, Simon, ein Laie ist.
 
 Idee: Damit es niemals verwechslungen gibt, zwischen der KI und mir, ist es erforderlich, dass wir - also die KI, und Simon - von uns in der dritten Person sprechen. Dies nimmt zudem die emotionale nähe mit und bringt eine sachliche und nötige Distanz zum Projekt.
