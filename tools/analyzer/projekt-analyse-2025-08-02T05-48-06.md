@@ -1,6 +1,6 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 1.8.2025, 16:37:01  
+**Erstellt:** 2.8.2025, 07:48:06  
 **Analysedauer:** 0.52 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 67 |
-| **Zeilen gesamt** | 17’339 |
-| **Wörter gesamt** | 78’004 |
-| **Zeichen gesamt** | 763’776 |
-| **Geschätzte Tokens** | 101’434 |
+| **Dateien gesamt** | 69 |
+| **Zeilen gesamt** | 17’335 |
+| **Wörter gesamt** | 78’075 |
+| **Zeichen gesamt** | 764’153 |
+| **Geschätzte Tokens** | 101’526 |
 
 ---
 
@@ -24,14 +24,14 @@
 |-------|---------|--------|--------|-----------|
 | **UNCLASSIFIED** | 24 | 9’069 | 32’157 | 1340 |
 | **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
-| **TODOS_MANAGEMENT** | 5 | 1’243 | 15’624 | 3125 |
+| **TODOS_MANAGEMENT** | 5 | 1’275 | 15’889 | 3178 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 5 | 1’523 | 5’819 | 1164 |
+| **CSS_DESIGN** | 8 | 1’505 | 5’688 | 711 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
 | **INSTRUCTIONS** | 1 | 24 | 318 | 318 |
-| **BUILD_SYSTEM** | 3 | 68 | 177 | 59 |
+| **BUILD_SYSTEM** | 2 | 50 | 135 | 68 |
 
 ---
 
@@ -89,7 +89,6 @@
 |-------|---------|-------|------------|
 | `astro.config.mjs` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
 | `package.json` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
-| `tailwind.config.mjs` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
 | `docs/css-deep-analysis-roadmap.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
@@ -256,7 +255,7 @@
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15624 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15889 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
@@ -277,7 +276,7 @@
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 101434 Tokens (KI-Work-Context: 28860 = 28%)
+### 6. 🔔 Projekt-Total: 101526 Tokens (KI-Work-Context: 28952 = 29%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -290,8 +289,8 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 101’434 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 28’860 Tokens (28% des Projekts)
+- **Projekt-Total:** 101’526 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 28’952 Tokens (29% des Projekts)
 - **Filtered Out:** Bilder, Research-Docs, Archive (72’574 Tokens)
 
 ✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
@@ -310,8 +309,8 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
 | `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3648 | 449 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
-| `tools/analyzer/scopes/structure-optimizer.cjs` | 3552 | 1208 | UNCLASSIFIED |
 
 ---
 

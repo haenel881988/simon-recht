@@ -1,14 +1,14 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 2.8.2025, 07:57:15
+**Generiert:** 2.8.2025, 07:30:11
 **Projekt:** simon-recht
 **Gesamt-Health-Score:** 69/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 6060ms
+- **Ausführungszeit:** 6844ms
 - **Scopes getestet:** 5
-- **Gesamt-Issues:** 16
+- **Gesamt-Issues:** 15
 - **Kritische Issues:** 0
 - **Wichtige Issues:** 1
 - **Optimierungen:** 0
@@ -17,8 +17,8 @@
 
 **Health Score:** 90/100
 **Status:** success
-**Ausführungszeit:** 9ms
-**Issues:** 11
+**Ausführungszeit:** 10ms
+**Issues:** 10
 
 ### 📈 Metriken
 
@@ -28,7 +28,7 @@
 - **failedTests:** 2
 - **averageContrast:** 5.18
 - **cssFilesAnalyzed:** 1
-- **cssRulesCount:** 72
+- **cssRulesCount:** 80
 - **duplicateRules:** 5
 
 ### 🚨 Issues
@@ -45,7 +45,7 @@
    - **Datei:** src/styles/global.css
    - **Position:** Globaler Scope
 
-4. 💡 **WARNING:** Viele CSS-Variablen gefunden: 83
+4. 💡 **WARNING:** Viele CSS-Variablen gefunden: 95
    - **Datei:** src/styles/global.css
 
 5. 💡 **WARNING:** CSS-Import gefunden: base/variables.css
@@ -64,15 +64,11 @@
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-9. 💡 **WARNING:** CSS-Import gefunden: components/buttons.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-10. 💡 **WARNING:** ÃœbermÃ¤ÃŸige !important-Nutzung: 11 Vorkommen
+9. 💡 **WARNING:** ÃœbermÃ¤ÃŸige !important-Nutzung: 11 Vorkommen
    - **Datei:** src/styles/global.css
    - **Position:** Multiple Stellen
 
-11. 💡 **WARNING:** WCAG-Kontrast-VerstoÃŸ: 2 von 10 Tests fehlgeschlagen
+10. 💡 **WARNING:** WCAG-Kontrast-VerstoÃŸ: 2 von 10 Tests fehlgeschlagen
    - **Datei:** src/styles/global.css
    - **Position:** Button Hover States
 
@@ -82,7 +78,7 @@
 
 2. ðŸŽ¨ CSS-CSS-ARCHITECTURE-OPTIMIERUNG: Behebe 2 Issues in Kategorie css-architecture fÃ¼r forensische CSS-Perfektion
 
-3. ðŸŽ¨ CSS-CSS-IMPORTS-OPTIMIERUNG: Behebe 5 Issues in Kategorie css-imports fÃ¼r forensische CSS-Perfektion
+3. ðŸŽ¨ CSS-CSS-IMPORTS-OPTIMIERUNG: Behebe 4 Issues in Kategorie css-imports fÃ¼r forensische CSS-Perfektion
 
 4. ðŸŽ¨ CSS-CONTRAST-ACCESSIBILITY-OPTIMIERUNG: Behebe 1 Issues in Kategorie contrast-accessibility fÃ¼r forensische CSS-Perfektion
 
@@ -113,7 +109,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3158ms
+**Ausführungszeit:** 3822ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -141,16 +137,16 @@
 
 **Health Score:** 0/100
 **Status:** success
-**Ausführungszeit:** 0ms
+**Ausführungszeit:** 1ms
 **Issues:** 0
 
 ---
 
 ## 🎯 ANALYZER-Scope
 
-**Health Score:** 84/100
+**Health Score:** 85/100
 **Status:** success
-**Ausführungszeit:** 316ms
+**Ausführungszeit:** 445ms
 **Issues:** 0
 
 ---

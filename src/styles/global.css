@@ -12,6 +12,7 @@
 @import "base/typography.css";
 @import "components/navigation.css";
 @import "components/hero.css";
+@import "components/buttons.css";
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */
 
@@ -172,65 +173,6 @@ em {
   color: var(--analyse-blau-light);
 }
 
-/* 🎯 BUTTONS - GLUT-ORANGE AKZENT (10%) */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.4;
-  transition: all 0.2s ease;
-}
-
-.btn-primary {
-  background-color: var(--glut-orange);
-  color: var(--text-weiss);
-}
-
-.btn-primary:hover {
-  background-color: var(--glut-orange-dark);
-  color: var(--text-weiss);
-  text-decoration: none;
-}
-
-.btn-secondary {
-  background-color: var(--analyse-blau);
-  color: var(--text-weiss);
-}
-
-.btn-secondary:hover {
-  background-color: var(--analyse-blau-dark);
-  color: var(--text-weiss);
-  text-decoration: none;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--analyse-blau-light);
-  border: 2px solid var(--analyse-blau);
-}
-
-.btn-outline:hover {
-  background-color: var(--analyse-blau);
-  color: var(--text-weiss);
-  text-decoration: none;
-}
-
-.btn-large {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
-}
-
-.btn-small {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-}
-
 /* 📦 KARTEN & BOXEN - ANALYSE-BLAU STRUKTUR */
 .card {
   background-color: var(--asphaltschwarz-light);
@@ -267,19 +209,6 @@ em {
   background-color: var(--asphaltschwarz);
   padding: 4rem 0;
   text-align: left; /* Links statt Center für 2-Spalten */
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  color: var(--glut-orange);
-  margin-bottom: 1rem;
-  line-height: 1.1; /* Bessere Zeilenhöhe für lange Titel */
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  color: var(--analyse-blau-light);
-  margin-bottom: 2rem;
 }
 
 .hero-text {
@@ -483,14 +412,6 @@ pre code {
     font-size: 14px;
   }
 
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-
   h1 {
     font-size: 2.5rem;
   }
@@ -507,19 +428,6 @@ pre code {
 
   .layout-main {
     padding-top: 70px;
-  }
-
-  .navbar {
-    height: 70px;
-  }
-
-  .btn {
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
-
-  .btn-small {
-    width: auto;
   }
 }
 

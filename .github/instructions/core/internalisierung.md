@@ -30,6 +30,54 @@
 - ✅ **EVALUATION-BASED-ACTION:** Eigene Analyse sofort umsetzen
 - ✅ **SINGLETON-DECISION:** Nur eine beste Option evaluieren und durchführen
 
+**🔍 WORK-VALIDATION-ZWANG (INTERNALISIERT 02.08.2025):**
+
+**ZWINGEND NACH JEDER ARBEIT:**
+
+- ✅ **SOFORTIGE VALIDATION:** Eigene Arbeit mit entsprechenden Tools validieren
+- ✅ **TOOL-BASED-PROOF:** Build-Checker, Analyzer für Bestätigung verwenden
+- ✅ **ERROR-DETECTION:** Fehler in eigener Arbeit proaktiv identifizieren
+- ✅ **QUALITY-CONFIRMATION:** Behauptungen durch Tool-Ergebnisse belegen
+- ✅ **SELF-CORRECTION:** Bei erkannten Fehlern sofort korrigieren
+
+**📝 REDUNDANZ-ELIMINIERUNG-ZWANG (INTERNALISIERT 02.08.2025):**
+
+**ZWINGEND BEI INSTRUCTIONS-ARBEIT:**
+
+- ✅ **ANALYZER-REDUNDANZ-SCAN:** Tools/analyzer verwenden für Duplicate-Detection
+- ✅ **CONTENT-ANALYSIS:** Inhaltliche Überschneidungen identifizieren
+- ✅ **INSTRUCTIONS-CLEANUP:** Doppelte Regeln eliminieren oder konsolidieren
+- ✅ **ANALYZER-ENHANCEMENT:** Tool erweitern für bessere Redundanz-Erkennung
+- ✅ **ZERO-REDUNDANCY-GOAL:** Jede Regel nur einmal in Instructions-System
+
+**🔄 GIT-BACKUP-AUTOMATISIERUNG-ZWANG (INTERNALISIERT 02.08.2025):**
+
+**ZWINGEND VOR/NACH GRÖSSEREN ÄNDERUNGEN:**
+
+- ✅ **AUTO-BACKUP-TRIGGER:** Vor strukturellen Änderungen automatisch git add . && git commit && git push
+- ✅ **DETAILLIERTE COMMIT-MESSAGES:** Was geändert + nächste Schritte + Änderungsprotokoll
+- ✅ **WIEDERHERSTELLUNGS-KONTEXT:** KI kann bei Rollback sofort verstehen was passiert ist
+- ✅ **CHANGE-LOG-INTEGRATION:** Jeder Commit als Mini-Dokumentation der Entwicklung
+- ✅ **SAFETY-NET-KONTINUITÄT:** Niemals Arbeit ohne Git-Sicherung verlieren
+
+**GIT-COMMIT-MESSAGE-FORMAT:**
+```
+[SCOPE] Kurzbeschreibung
+
+Geändert:
+- Spezifische Datei/Funktion 1
+- Spezifische Datei/Funktion 2
+
+Nächste Schritte:
+- Konkreter nächster Task
+- Abhängigkeiten/Validierung
+
+Änderungsprotokoll:
+- Problem/Grund für Änderung
+- Implementierte Lösung
+- Erwarteter Impact
+```
+
 **KONKRETISIERUNGS-ZWANG- Beispiel:**
 
 - ❌ "Soll ich A oder B machen?"
@@ -238,7 +286,20 @@ BEI CODE-ÄNDERUNGEN ZWINGEND:
 5. Error-Free-Garantie durch Testing
 ```
 
-#### **📝 BEWEIS-DOKUMENTATIONS-FORMAT:**
+#### **� SCOPE-CHECKER-VALIDATION-ZWANG (INTERNALISIERT 02.08.2025):**
+
+```
+BEI JEDER SCOPE-BEHAUPTUNG ZWINGEND:
+1. SPEZIFISCHEN CHECKER für jeweiligen Scope ausführen
+2. CHECKER-ERGEBNIS eigenständig analysieren und validieren
+3. NICHT den Multi-Scope-Checker als universelle Wahrheit betrachten
+4. BEI CSS: CSS-spezifische Tools verwenden und validieren
+5. BEI SEO: SEO-spezifische Analyse mit Tools durchführen
+6. "BEWEIS [Checker-Name + Tool]:" Format verwenden
+7. NIEMALS Scope-Qualität ohne entsprechende Tool-Validation behaupten
+```
+
+#### **�📝 BEWEIS-DOKUMENTATIONS-FORMAT:**
 
 ```
 🔍 BEWEIS [Tool-Name]: [Konkretes Ergebnis]

@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 1.8.2025, 16:24:18  
-**Analysedauer:** 0.42 Sekunden  
+**Erstellt:** 2.8.2025, 07:54:45  
+**Analysedauer:** 0.35 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 65 |
-| **Zeilen gesamt** | 17’231 |
-| **Wörter gesamt** | 77’689 |
-| **Zeichen gesamt** | 761’184 |
-| **Geschätzte Tokens** | 101’024 |
+| **Dateien gesamt** | 71 |
+| **Zeilen gesamt** | 17’993 |
+| **Wörter gesamt** | 79’958 |
+| **Zeichen gesamt** | 785’805 |
+| **Geschätzte Tokens** | 103’974 |
 
 ---
 
@@ -22,16 +22,16 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 24 | 9’069 | 32’157 | 1340 |
-| **DOCUMENTATION** | 11 | 1’826 | 24’978 | 2271 |
-| **TODOS_MANAGEMENT** | 5 | 1’243 | 15’624 | 3125 |
+| **UNCLASSIFIED** | 26 | 9’727 | 34’605 | 1331 |
+| **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
+| **TODOS_MANAGEMENT** | 5 | 1’275 | 15’889 | 3178 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
+| **CSS_DESIGN** | 8 | 1’505 | 5’688 | 711 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
-| **CSS_DESIGN** | 3 | 1’413 | 5’394 | 1798 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
 | **INSTRUCTIONS** | 1 | 24 | 318 | 318 |
-| **BUILD_SYSTEM** | 3 | 68 | 177 | 59 |
+| **BUILD_SYSTEM** | 2 | 50 | 135 | 68 |
 
 ---
 
@@ -89,7 +89,6 @@
 |-------|---------|-------|------------|
 | `astro.config.mjs` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
 | `package.json` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
-| `tailwind.config.mjs` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
 | `docs/css-deep-analysis-roadmap.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
@@ -102,9 +101,11 @@
 | `tools/analyzer/core/analysis-verifier.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/core/link-validator.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/core/token-counter.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
+| `tools/analyzer/instructions-redundancy-scanner.cjs` | UNCLASSIFIED | INSTRUCTIONS | Datei gehört besser zu INSTRUCTIONS |
 | `tools/analyzer/master-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/modules/smart-exception-handler.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `tools/analyzer/redundanz-report-2025-08-02.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scanner-korruptions-bericht-2025-07-31.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scopes/instruction-contradiction-scanner.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scopes/redundancy-detector.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
@@ -231,32 +232,32 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Status** | VERIFIED |
-| **Confidence-Score** | 100% |
-| **Verification-Levels** | basic, crossReference, logic, consensus |
+| **Status** | FAILED |
+| **Confidence-Score** | 0% |
+| **Verification-Levels** | N/A |
 | **Major Issues** | 0 |
 
-✅ **ANALYSIS VERIFIED** - Ergebnisse wurden durch Multi-Level-Checks bestätigt.
+❌ **UNRELIABLE RESULTS** - Analyse sollte wiederholt werden.
 
 ---
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope DOCUMENTATION hat 24978 Tokens (>10k GLOBAL LIMIT)
+### 1. ⚠️ Scope DOCUMENTATION hat 24963 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 32157 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34605 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15624 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15889 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
@@ -270,14 +271,14 @@
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 5. 🔔 24 Dateien ohne Scope-Zuordnung
+### 5. 🔔 26 Dateien ohne Scope-Zuordnung
 
 - **Typ:** CATEGORIZE_FILES
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 101024 Tokens (KI-Work-Context: 28435 = 28%)
+### 6. 🔔 Projekt-Total: 103974 Tokens (KI-Work-Context: 28952 = 28%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -290,9 +291,9 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 101’024 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 28’435 Tokens (28% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (72’589 Tokens)
+- **Projekt-Total:** 103’974 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 28’952 Tokens (28% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (75’022 Tokens)
 
 ✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
 
@@ -310,8 +311,8 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
 | `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3648 | 449 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
-| `tools/analyzer/scopes/structure-optimizer.cjs` | 3552 | 1208 | UNCLASSIFIED |
 
 ---
 

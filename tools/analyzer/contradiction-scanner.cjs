@@ -29,6 +29,7 @@ class ContradictionScanner {
       invalidLinks: [],
       emptyFiles: [],
       contradictions: [],
+      redundancies: [], // ⭐ NEU: Redundanz-Tracker
       pathErrors: [],
       tokenWarnings: [],
       recommendations: [],
@@ -125,6 +126,50 @@ class ContradictionScanner {
       /Demo:/i,
       /Illustration:/i,
     ];
+
+    // ⭐ REDUNDANZ-PATTERN FÜR INHALTLICHE DUPLIKATE
+    this.redundancyPatterns = [
+      {
+        key: "validation_workflow",
+        patterns: [
+          /ZWINGEND.*NACH.*ARBEIT.*validieren/i,
+          /Tool.*validieren.*Arbeit/i,
+          /Build.*Checker.*validieren/i,
+          /Ergebnis.*mit.*Tools.*validieren/i,
+        ],
+        description: "Work-Validation Duplikate",
+      },
+      {
+        key: "decision_minimization",
+        patterns: [
+          /Entscheidungs.*minimierung/i,
+          /Willenskraft.*schon/i,
+          /Option.*vorschlagen.*verboten/i,
+          /A.*oder.*B.*verboten/i,
+        ],
+        description: "Decision-Minimization Duplikate",
+      },
+      {
+        key: "scope_validation",
+        patterns: [
+          /Scope.*Checker.*verwenden/i,
+          /spezifisch.*Checker.*für.*Scope/i,
+          /CSS.*Checker.*SEO.*Checker/i,
+          /Tool.*basiert.*validation/i,
+        ],
+        description: "Scope-Validation Duplikate",
+      },
+      {
+        key: "content_preservation",
+        patterns: [
+          /Content.*Preservation/i,
+          /Inhalte.*ERHALTEN.*UMSTRUKTURIEREN/i,
+          /Token.*Panik.*Datenverlust/i,
+          /Modularisierung.*ohne.*löschen/i,
+        ],
+        description: "Content-Preservation Duplikate",
+      },
+    ];
   }
 
   /**
@@ -138,6 +183,7 @@ class ContradictionScanner {
       await this.scanInvalidLinks();
       await this.scanEmptyFiles();
       await this.scanInstructionContradictions();
+      await this.scanInstructionRedundancies(); // ⭐ NEU: Redundanz-Scan
       await this.scanPathReferences();
       await this.generateReport();
 

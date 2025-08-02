@@ -24,9 +24,17 @@ Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls be
 
 # 🚨 **TODO-LISTE: SIMON-RECHT PROJECT (AKTUALISIERT)**
 
-**Letzte Bereinigung:** 01.08.2025 - Erledigte Items entfernt & Prioritäten korrigiert  
+**Letzte Bereinigung:** 02.08.2025 - Instructions-Redundanzen eliminiert  
 **Status:** Einzige Quelle der TODO-Wahrheit  
 **Ziel:** Website-Optimierung & Strukturbereinigung (August 2025)
+
+## ✅ **ERLEDIGTE AUFGABEN (HEUTE):**
+
+- ✅ **Instructions-Redundanz-Scanner erstellt** (`tools/analyzer/instructions-redundancy-scanner.cjs`)
+- ✅ **Cross-File-Redundanzen eliminiert** (13→6 Duplikate entfernt aus copilot-instructions.md)
+- ✅ **Pattern-Redundanzen identifiziert** (6 verbleibende in internalisierung.md/todos.md)
+- ✅ **Build-System stabil** (npm run build erfolgreich nach Bereinigung)
+- ✅ **Work-Validation-Zwang protokolliert** (Multi-Scope Build Checker: 69/100 Health)
 
 ---
 
