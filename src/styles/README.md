@@ -178,6 +178,7 @@ src/styles/
 ## 📚 **DEUTSCHES CSS-GLOSSAR (FREMDWORT-ERKLÄRER):**
 
 ### **🏗️ FOUNDATION = GRUNDLAGEN:**
+
 ```
 🔍 WAS IST DAS?
 Foundation = Grundlagen-CSS, das NIEMALS verändert wird
@@ -193,6 +194,7 @@ Einmal definiert → überall verwendet → nie wieder ändern müssen
 ```
 
 ### **🎯 COMPONENTS = BAUSTEINE:**
+
 ```
 🔍 WAS IST DAS?
 Components = Wiederverwendbare CSS-Bausteine
@@ -200,7 +202,7 @@ Components = Wiederverwendbare CSS-Bausteine
 
 📁 VERZEICHNIS: components/
 ├── hero-aufmerksamkeit.css = Erste Sektion der Website
-├── inhalte-interesse.css = Content-Bereiche 
+├── inhalte-interesse.css = Content-Bereiche
 ├── nutzen-verlangen.css = Vorteile + Testimonials
 ├── handlung-ausloeser.css = Call-to-Action Buttons
 ├── navigation.css = Menü + Links
@@ -215,6 +217,7 @@ Jeder Baustein = Eine Datei → Leicht zu finden → Leicht zu ändern
 ```
 
 ### **🔧 UTILITIES = HILFS-WERKZEUGE:**
+
 ```
 🔍 WAS IST DAS?
 Utilities = Kleine Hilfs-Tools für spezielle Fälle
@@ -231,6 +234,7 @@ Seltene Spezialfälle → Muss nicht neu erfinden → Copy-Paste fertig
 ```
 
 ### **📱 RESPONSIVE = BILDSCHIRM-ANPASSUNG:**
+
 ```
 🔍 WAS IST DAS?
 Responsive = Website passt sich Bildschirmgröße an
@@ -238,7 +242,7 @@ Responsive = Website passt sich Bildschirmgröße an
 
 📁 VERZEICHNIS: responsive/
 ├── mobile.css = Smartphone-Optimierung
-├── tablet.css = Tablet-Optimierung  
+├── tablet.css = Tablet-Optimierung
 └── desktop.css = Computer-Optimierung
 
 💡 SIMON'S NUTZEN:
@@ -252,9 +256,10 @@ Website sieht auf JEDEM Gerät perfekt aus → Mehr Besucher → Mehr Kunden
 ### **🎯 MARKETING-DATEIEN (AIDA-System):**
 
 #### **🚨 hero-aufmerksamkeit.css:**
+
 ```
 ZWECK: Erste 3 Sekunden entscheiden über Webseitenbesuch
-INHALT: 
+INHALT:
 - Große Überschrift mit Simon's Namen
 - Orange Hervorhebungen für wichtige Begriffe
 - Hintergrund-Verlauf für visuellen Impact
@@ -270,6 +275,7 @@ SIMON'S NUTZEN: Besucher sofort beeindrucken
 ```
 
 #### **🧠 inhalte-interesse.css:**
+
 ```
 ZWECK: Interesse an Simon's Expertise wecken
 INHALT:
@@ -288,6 +294,7 @@ SIMON'S NUTZEN: Besucher lesen gerne weiter
 ```
 
 #### **💖 nutzen-verlangen.css:**
+
 ```
 ZWECK: Verlangen nach Simon's Hilfe erzeugen
 INHALT:
@@ -306,6 +313,7 @@ SIMON'S NUTZEN: Besucher wollen Simon's Service
 ```
 
 #### **🚀 handlung-ausloeser.css:**
+
 ```
 ZWECK: Konkrete Handlung auslösen (Kontakt/Buchung)
 INHALT:
@@ -326,6 +334,7 @@ SIMON'S NUTZEN: Besucher werden zu Kunden
 ### **🔧 TECHNISCHE DATEIEN:**
 
 #### **🧭 navigation.css:**
+
 ```
 ZWECK: Website-Navigation (Menü, Links)
 INHALT: Header-Navigation, Footer-Links, Mobile-Menü
@@ -333,6 +342,7 @@ SIMON'S NUTZEN: Besucher finden sich zurecht
 ```
 
 #### **🔘 buttons.css:**
+
 ```
 ZWECK: Alle Button-Arten (außer Haupt-CTA)
 INHALT: Sekundäre Buttons, Link-Buttons, Icon-Buttons
@@ -340,6 +350,7 @@ SIMON'S NUTZEN: Einheitliches Button-Design
 ```
 
 #### **📦 cards.css:**
+
 ```
 ZWECK: Info-Kästen und Container
 INHALT: Blog-Cards, Service-Kästen, Info-Container
@@ -347,6 +358,7 @@ SIMON'S NUTZEN: Strukturierte Information-Darstellung
 ```
 
 #### **🏗️ layout.css:**
+
 ```
 ZWECK: Grundstruktur der Website
 INHALT: Header, Main, Footer, Grid-Systeme
@@ -354,6 +366,7 @@ SIMON'S NUTZEN: Website-Struktur steht fest
 ```
 
 #### **📋 feedback.css:**
+
 ```
 ZWECK: Formulare und Benutzer-Rückmeldungen
 INHALT: Kontakt-Formulare, Erfolgs-Meldungen, Error-States
@@ -421,7 +434,7 @@ Das **deutsche Glossar** macht die Fremdwörter verständlich, aber **komplett d
 ### **📊 STRUKTUR-STATISTIK:**
 
 ```
-🔍 BEWEIS [Analyzer]: 
+🔍 BEWEIS [Analyzer]:
 ├── 10 CSS-Dateien in components/ (optimal)
 ├── 3 CSS-Dateien in foundation/ (perfekt)
 ├── 0 Redundanzen (Zero-Redundancy-Zwang erfüllt)
