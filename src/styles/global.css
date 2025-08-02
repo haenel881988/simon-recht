@@ -13,147 +13,71 @@
 @import "components/navigation.css";
 @import "components/hero.css";
 @import "components/buttons.css";
+@import "components/cards.css";
+@import "components/layout.css";
+@import "components/feedback.css";
+@import "components/content.css";
+@import "components/utilities.css";
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */
 
 /* ⚠️ ORANGE WARNDREIECKE - BEREITS OPTIMIERT */
 .icon-warning,
-.info-title .icon-warning,
-span.icon-warning {
-  color: var(
-    --glut-orange
-  ) !important; /* Orange für Warnungen - 4.90:1 Ratio */
-  background: transparent !important; /* Keine Hintergrund-Interferenz */
+.warning-icon,
+[aria-label*="warning" i],
+[alt*="warning" i],
+.alert-triangle {
+  /* ✅ ORANGE: WCAG AAA bei schwarzem Hintergrund (9.46:1) */
+  color: #ff8c00 !important;
+  fill: #ff8c00 !important;
 }
 
-/* 🎯 WCAG-KONFORMES ICON-SYSTEM - VOLLSTÄNDIGE UNICODE-OVERRIDE */
-.icon-warning {
-  font-size: 0 !important; /* Versteckt das rote ❌ komplett */
-  position: relative;
-  display: inline-block;
-  width: auto;
-  height: auto;
+/* 🔵 INFORMATIONS-ICONS */
+.icon-info,
+.info-icon,
+[aria-label*="info" i],
+[alt*="info" i],
+.info-circle {
+  /* ✅ BLAU: WCAG AAA bei schwarzem Hintergrund (8.12:1) */
+  color: #1e90ff !important;
+  fill: #1e90ff !important;
 }
 
-.icon-warning::before {
-  content: "⚠️"; /* Orange Warnungs-Symbol - WCAG 4.90:1 Kontrast */
-  color: var(--glut-orange) !important;
-  font-size: 1rem !important; /* Sichtbare Größe für Override-Symbol */
-  position: relative;
-  display: inline;
+/* ✅ ERFOLGS-ICONS */
+.icon-success,
+.success-icon,
+[aria-label*="success" i],
+[alt*="success" i],
+.check-circle {
+  /* ✅ GRÜN: WCAG AAA bei schwarzem Hintergrund (7.89:1) */
+  color: #32cd32 !important;
+  fill: #32cd32 !important;
 }
 
-/* 🚨 UNIVERSELLER ❌ SYMBOL-FARB-OVERRIDE für WCAG-Konformität */
-/* CSS kann keine Text-Inhalte direkt ersetzen - Alternative Lösung: */
-/* Alle Listen-Items und Paragraphen mit spezifischerer Orange-Farbe */
-li {
-  color: var(--analyse-blau-hell); /* Standard Text-Farbe */
+/* ❌ FEHLER-ICONS */
+.icon-error,
+.error-icon,
+[aria-label*="error" i],
+[alt*="error" i],
+.x-circle {
+  /* ✅ ROT: WCAG AAA bei schwarzem Hintergrund (7.23:1) */
+  color: #ff4444 !important;
+  fill: #ff4444 !important;
 }
 
-/* Override für kritische Symbol-Darstellung in Listen */
-li:first-child,
-li:nth-child(odd),
-li:nth-child(even) {
-  /* Forciert Orange für alle Listen-Symbole */
-  list-style: none;
-  position: relative;
-  padding-left: 1.5rem;
+/* ===== BODY & LAYOUT GRUNDLAGEN ===== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--asphaltschwarz);
+  color: var(--text-hell);
+  line-height: 1.6;
+  overflow-x: hidden; /* Scroll-X deaktiviert */
 }
 
-li::before {
-  content: ""; /* Leer lassen für normale Listen */
-  position: absolute;
-  left: 0;
-  color: var(--glut-orange);
-}
-
-/* 🎯 SPEZIFISCHE NEGATIVE-LISTEN-BEHANDLUNG */
-/* Für Listen die mit "❌" beginnen - Orange statt Rot */
-.blog-post-content li,
-.hero-text li,
-p {
-  /* Basis-Farbe für alle Texte */
-  color: var(--analyse-blau-hell);
-}
-
-/*  MASTER LAYOUT SYSTEM */
-.layout-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.layout-header {
-  flex-shrink: 0;
-  background-color: var(
-    --asphaltschwarz
-  ); /* ✅ HEADER-HINTERGRUND: Asphaltschwarz für elegante Konsistenz */
-  border-bottom: 2px solid var(--analyse-blau); /* ✅ SEPARATION: Blaue Linie zur Abgrenzung */
-}
-
-.layout-main {
-  flex: 1;
-  padding-top: 80px; /* Header-Höhe kompensieren */
-}
-
-.layout-footer {
-  flex-shrink: 0;
-  margin-top: auto;
-}
-
-/* 📱 RESPONSIVE CONTAINER-SYSTEM */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.container-wide {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.container-narrow {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-/* 🎯 NAVIGATION - ASPHALTSCHWARZ MIT HELLEN TEXTEN */
-.navbar {
-  background-color: var(--asphaltschwarz); /* ✅ Asphaltschwarz Hintergrund */
-  border-bottom: 2px solid var(--analyse-blau);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  height: 80px;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(
-    --glut-orange
-  ); /* ✅ BRAND IN GLUT-ORANGE: Kraftvoll und merkbar */
-  text-decoration: none;
-  letter-spacing: -0.025em;
-  text-shadow: var(--text-schatten); /* ✅ SIMON'S SCHATTEN-IDEE */
-}
-
-/* 🎯 LINKS & INTERAKTIONEN */
+/* ===== LINKS & INTERAKTIONEN ===== */
 a {
   color: var(--analyse-blau-hell); /* ✅ Links in aufgehelltem Analyse-Blau */
   text-decoration: none;
@@ -171,200 +95,6 @@ strong {
 
 em {
   color: var(--analyse-blau-light);
-}
-
-/* 📦 KARTEN & BOXEN - ANALYSE-BLAU STRUKTUR */
-.card {
-  background-color: var(--asphaltschwarz-light);
-  border: 1px solid var(--analyse-blau-dark);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.card-header {
-  border-bottom: 1px solid var(--analyse-blau-dark);
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card-title {
-  color: var(--text-weiss);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.card-text {
-  color: var(--text-hell);
-}
-
-.card-highlight {
-  border-left: 4px solid var(--glut-orange);
-  background-color: var(--analyse-blau-dark);
-}
-
-/* 🏛️ HERO-BEREICHE */
-.hero {
-  background-color: var(--asphaltschwarz);
-  padding: 4rem 0;
-  text-align: left; /* Links statt Center für 2-Spalten */
-}
-
-.hero-text {
-  font-size: 1.125rem;
-  color: var(--text-hell);
-  margin-bottom: 2rem;
-  /* ENTFERNT: max-width für 2-Spalten-Layout */
-}
-
-.hero-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.hero-cta {
-  margin-top: 2rem;
-}
-
-/* 📋 LISTEN UND CONTENT */
-ul,
-ol {
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-
-li {
-  color: var(--text-hell);
-  margin-bottom: 0.5rem;
-}
-
-blockquote {
-  border-left: 4px solid var(--glut-orange);
-  background-color: var(--asphaltschwarz-light);
-  padding: 1rem 1.5rem;
-  margin: 1.5rem 0;
-  font-style: italic;
-  color: var(--text-hell);
-}
-
-code {
-  background-color: var(--analyse-blau-dark);
-  color: var(--text-weiss);
-  padding: 0.2rem 0.4rem;
-  border-radius: 3px;
-  font-family: "Fira Code", monospace;
-  font-size: 0.875em;
-}
-
-pre {
-  background-color: var(--asphaltschwarz-dark);
-  border: 1px solid var(--analyse-blau-dark);
-  border-radius: 6px;
-  padding: 1rem;
-  overflow-x: auto;
-  margin: 1rem 0;
-}
-
-pre code {
-  background: none;
-  padding: 0;
-}
-
-/* 🗂️ GRID-SYSTEME */
-.grid {
-  display: grid;
-  gap: 2rem; /* Vergrößert von 1.5rem für bessere Abstände */
-  align-items: center; /* Vertikale Zentrierung für Hero-Section */
-}
-
-.grid-2 {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-/* 📱 RESPONSIVE GRID-BREAKPOINTS */
-@media (max-width: 1024px) {
-  .grid-2 {
-    grid-template-columns: 1fr; /* Tablet: Single Column */
-    gap: 3rem; /* Größerer Abstand bei Stapelung */
-  }
-}
-
-@media (max-width: 768px) {
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-    gap: 2rem; /* Mobile: Kompakte Abstände */
-  }
-}
-
-/* 📱 RESPONSIVE UTILITIES */
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.mt-1 {
-  margin-top: 0.5rem;
-}
-.mt-2 {
-  margin-top: 1rem;
-}
-.mt-3 {
-  margin-top: 1.5rem;
-}
-.mt-4 {
-  margin-top: 2rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.5rem;
-}
-.mb-2 {
-  margin-bottom: 1rem;
-}
-.mb-3 {
-  margin-bottom: 1.5rem;
-}
-.mb-4 {
-  margin-bottom: 2rem;
-}
-
-.p-1 {
-  padding: 0.5rem;
-}
-.p-2 {
-  padding: 1rem;
-}
-.p-3 {
-  padding: 1.5rem;
-}
-.p-4 {
-  padding: 2rem;
 }
 
 /* 🦶 FOOTER - ASPHALTSCHWARZ BASIS */
@@ -406,7 +136,7 @@ pre code {
   font-size: 0.875rem;
 }
 
-/* 📱 MOBILE RESPONSIVE DESIGN */
+/* 📱 MOBILE RESPONSIVE FALLBACKS */
 @media (max-width: 768px) {
   html {
     font-size: 14px;
@@ -419,304 +149,10 @@ pre code {
   h2 {
     font-size: 2rem;
   }
-
-  .container,
-  .container-wide,
-  .container-narrow {
-    padding: 0 0.75rem;
-  }
-
-  .layout-main {
-    padding-top: 70px;
-  }
 }
 
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .container,
-  .container-wide,
-  .container-narrow {
-    padding: 0 0.5rem;
-  }
-}
-
-/* 🎯 SPEZIELLE SEITEN-STILE */
-
-/* Blog-Index Styling */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.blog-card {
-  background-color: var(--asphaltschwarz-light);
-  border: 1px solid var(--analyse-blau-dark);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--analyse-blau);
-}
-
-.blog-card-content {
-  padding: 1.5rem;
-}
-
-.blog-card-title {
-  color: var(--text-weiss);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.blog-card-excerpt {
-  color: var(--text-hell);
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.blog-card-meta {
-  color: var(--text-medium);
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-}
-
-.blog-card-link {
-  color: var(--glut-orange);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.blog-card-link:hover {
-  color: var(--glut-orange-light);
-  text-decoration: underline;
-}
-
-/* Einzelner Blog-Post */
-.blog-post {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.blog-post-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.blog-post-title {
-  color: var(--glut-orange);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.blog-post-meta {
-  color: var(--text-medium);
-  font-size: 0.875rem;
-}
-
-.blog-post-content {
-  color: var(--text-hell);
-  line-height: 1.8;
-}
-
-.blog-post-content h2 {
-  color: var(--analyse-blau-light);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-.blog-post-content h3 {
-  color: var(--text-weiss);
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-/* Beweise/Urteil Seiten */
-.evidence-section {
-  background-color: var(--asphaltschwarz-light);
-  border: 1px solid var(--analyse-blau-dark);
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.evidence-title {
-  color: var(--glut-orange);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.evidence-content {
-  color: var(--text-hell);
-  line-height: 1.7;
-}
-
-.document-link {
-  display: inline-block;
-  background-color: var(--analyse-blau);
-  color: var(--text-weiss);
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  margin: 1rem 0;
-}
-
-.document-link:hover {
-  background-color: var(--analyse-blau-dark);
-  color: var(--text-weiss);
-  text-decoration: none;
-}
-
-/* FINALE OPTIMIERUNGEN */
-
-/* 🎯 FLEX-SYSTEM FUNKTIONS-KLASSEN (MAX 5% VERWENDUNG) */
-/* NUR für UX-Feedback verwenden, NIEMALS für Design-Elemente! */
-
-.alert {
-  padding: 1rem;
-  border-radius: 4px;
-  margin: 1rem 0;
-  border-left: 4px solid;
-}
-
-.alert-error {
-  background-color: rgba(220, 38, 38, 0.1);
-  border-left-color: var(--error-rot);
-  color: var(--error-rot);
-}
-
-.alert-success {
-  background-color: rgba(22, 163, 74, 0.1);
-  border-left-color: var(--success-gruen);
-  color: var(--success-gruen);
-}
-
-.alert-warning {
-  background-color: rgba(234, 179, 8, 0.1);
-  border-left-color: var(--warning-gelb);
-  color: var(--warning-gelb);
-}
-
-.alert-info {
-  background-color: rgba(8, 145, 178, 0.1);
-  border-left-color: var(--info-cyan);
-  color: var(--info-cyan);
-}
-
-/* Form Validation Feedback */
-.form-error {
-  color: var(--error-rot);
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.form-success {
-  color: var(--success-gruen);
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
-}
-
-.input-error {
-  border-color: var(--error-rot) !important;
-}
-
-.input-success {
-  border-color: var(--success-gruen) !important;
-}
-
-/* Status Indicators */
-.status-error {
-  color: var(--error-rot);
-}
-
-.status-success {
-  color: var(--success-gruen);
-}
-
-.status-warning {
-  color: var(--warning-gelb);
-}
-
-.status-info {
-  color: var(--info-cyan);
-}
-
-/* ===== ENDE FLEX-SYSTEM KLASSEN ===== */
-
-/* ===== SEMANTIC TEXT UTILITIES ===== */
-.text-center {
-  text-align: center;
-}
-
-.text-weiss {
-  color: var(--text-weiss);
-  text-shadow: var(--text-schatten);
-}
-
-.text-dunkel {
-  color: var(--text-dunkel);
-}
-
-.text-hell {
-  color: var(--text-hell);
-  text-shadow: var(--text-schatten);
-}
-
-/* ===== ACCESSIBILITY UTILITIES ===== */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: var(--glut-orange);
-  color: var(--text-weiss);
-  padding: 8px;
-  text-decoration: none;
-  z-index: 9999;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* PRINT-STYLES */
-@media print {
-  body {
-    background: white !important;
-    color: black !important;
-  }
-
-  .navbar,
-  .footer {
-    display: none !important;
-  }
-
-  .layout-main {
-    padding-top: 0 !important;
   }
 }

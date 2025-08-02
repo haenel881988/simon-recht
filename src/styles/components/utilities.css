@@ -1,0 +1,68 @@
+/* ♿ ACCESSIBILITY & UTILITIES */
+
+/* Accessibility Helpers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--glut-orange);
+  color: var(--text-weiss);
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Semantic Text Utilities */
+.text-weiss {
+  color: var(--text-weiss);
+  text-shadow: var(--text-schatten);
+}
+
+.text-dunkel {
+  color: var(--text-dunkel);
+}
+
+.text-hell {
+  color: var(--text-hell);
+  text-shadow: var(--text-schatten);
+}
+
+/* PRINT-STYLES */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .navbar,
+  .footer {
+    display: none !important;
+  }
+
+  .layout-main {
+    padding-top: 0 !important;
+  }
+}
+
+/* Mobile Responsive Fallbacks */
+@media (max-width: 768px) {
+  .layout-main {
+    padding-top: 70px;
+  }
+}

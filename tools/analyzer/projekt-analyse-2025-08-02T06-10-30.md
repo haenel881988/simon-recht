@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 1.8.2025, 16:57:58  
-**Analysedauer:** 0.47 Sekunden  
+**Erstellt:** 2.8.2025, 08:10:30  
+**Analysedauer:** 0.31 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 68 |
-| **Zeilen gesamt** | 17’410 |
-| **Wörter gesamt** | 78’094 |
-| **Zeichen gesamt** | 764’600 |
-| **Geschätzte Tokens** | 101’550 |
+| **Dateien gesamt** | 71 |
+| **Zeilen gesamt** | 17’939 |
+| **Wörter gesamt** | 79’658 |
+| **Zeichen gesamt** | 783’237 |
+| **Geschätzte Tokens** | 103’584 |
 
 ---
 
@@ -22,11 +22,11 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 24 | 9’069 | 32’157 | 1340 |
+| **UNCLASSIFIED** | 26 | 9’665 | 34’160 | 1314 |
 | **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
-| **TODOS_MANAGEMENT** | 5 | 1’243 | 15’624 | 3125 |
+| **TODOS_MANAGEMENT** | 5 | 1’283 | 15’944 | 3189 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 7 | 1’612 | 5’977 | 854 |
+| **CSS_DESIGN** | 8 | 1’505 | 5’688 | 711 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
@@ -101,9 +101,11 @@
 | `tools/analyzer/core/analysis-verifier.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/core/link-validator.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/core/token-counter.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
+| `tools/analyzer/instructions-redundancy-scanner.cjs` | UNCLASSIFIED | INSTRUCTIONS | Datei gehört besser zu INSTRUCTIONS |
 | `tools/analyzer/master-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/modules/smart-exception-handler.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `tools/analyzer/redundanz-report-2025-08-02.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scanner-korruptions-bericht-2025-07-31.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scopes/instruction-contradiction-scanner.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scopes/redundancy-detector.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
@@ -230,12 +232,12 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Status** | VERIFIED |
-| **Confidence-Score** | 100% |
-| **Verification-Levels** | basic, crossReference, logic, consensus |
+| **Status** | FAILED |
+| **Confidence-Score** | 0% |
+| **Verification-Levels** | N/A |
 | **Major Issues** | 0 |
 
-✅ **ANALYSIS VERIFIED** - Ergebnisse wurden durch Multi-Level-Checks bestätigt.
+❌ **UNRELIABLE RESULTS** - Analyse sollte wiederholt werden.
 
 ---
 
@@ -248,14 +250,14 @@
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 32157 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34160 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15624 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15944 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
@@ -269,14 +271,14 @@
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 5. 🔔 24 Dateien ohne Scope-Zuordnung
+### 5. 🔔 26 Dateien ohne Scope-Zuordnung
 
 - **Typ:** CATEGORIZE_FILES
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 101550 Tokens (KI-Work-Context: 28976 = 29%)
+### 6. 🔔 Projekt-Total: 103584 Tokens (KI-Work-Context: 29007 = 28%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -289,9 +291,9 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 101’550 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 28’976 Tokens (29% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (72’574 Tokens)
+- **Projekt-Total:** 103’584 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 29’007 Tokens (28% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (74’577 Tokens)
 
 ✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
 
@@ -309,8 +311,8 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
 | `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3703 | 457 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
-| `tools/analyzer/scopes/structure-optimizer.cjs` | 3552 | 1208 | UNCLASSIFIED |
 
 ---
 

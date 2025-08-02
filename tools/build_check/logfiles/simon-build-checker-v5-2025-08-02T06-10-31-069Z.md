@@ -1,24 +1,24 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 2.8.2025, 08:15:17
+**Generiert:** 2.8.2025, 08:10:31
 **Projekt:** simon-recht
-**Gesamt-Health-Score:** 71/100
+**Gesamt-Health-Score:** 69/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 5960ms
+- **Ausführungszeit:** 6121ms
 - **Scopes getestet:** 5
-- **Gesamt-Issues:** 17
+- **Gesamt-Issues:** 16
 - **Kritische Issues:** 0
 - **Wichtige Issues:** 1
 - **Optimierungen:** 0
 
 ## 🎯 CSS-Scope
 
-**Health Score:** 100/100
+**Health Score:** 90/100
 **Status:** success
 **Ausführungszeit:** 9ms
-**Issues:** 12
+**Issues:** 11
 
 ### 📈 Metriken
 
@@ -28,66 +28,63 @@
 - **failedTests:** 2
 - **averageContrast:** 5.18
 - **cssFilesAnalyzed:** 1
-- **cssRulesCount:** 19
-- **duplicateRules:** 0
+- **cssRulesCount:** 72
+- **duplicateRules:** 5
 
 ### 🚨 Issues
 
-1. 💡 **WARNING:** CSS-Import gefunden: base/variables.css
+1. 💡 **WARNING:** CSS-Duplikat: "li"
+   - **Datei:** src/styles/global.css
+   - **Position:** Globaler Scope
+
+2. 💡 **WARNING:** CSS-Duplikat: ".container-narrow"
+   - **Datei:** src/styles/global.css
+   - **Position:** Globaler Scope
+
+3. 💡 **WARNING:** CSS-Duplikat: ".layout-main"
+   - **Datei:** src/styles/global.css
+   - **Position:** Globaler Scope
+
+4. 💡 **WARNING:** Viele CSS-Variablen gefunden: 83
+   - **Datei:** src/styles/global.css
+
+5. 💡 **WARNING:** CSS-Import gefunden: base/variables.css
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-2. 💡 **WARNING:** CSS-Import gefunden: base/typography.css
+6. 💡 **WARNING:** CSS-Import gefunden: base/typography.css
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-3. 💡 **WARNING:** CSS-Import gefunden: components/navigation.css
+7. 💡 **WARNING:** CSS-Import gefunden: components/navigation.css
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-4. 💡 **WARNING:** CSS-Import gefunden: components/hero.css
+8. 💡 **WARNING:** CSS-Import gefunden: components/hero.css
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-5. 💡 **WARNING:** CSS-Import gefunden: components/buttons.css
+9. 💡 **WARNING:** CSS-Import gefunden: components/buttons.css
    - **Datei:** src/styles/global.css
    - **Position:** CSS-Import-Statement
 
-6. 💡 **WARNING:** CSS-Import gefunden: components/cards.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-7. 💡 **WARNING:** CSS-Import gefunden: components/layout.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-8. 💡 **WARNING:** CSS-Import gefunden: components/feedback.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-9. 💡 **WARNING:** CSS-Import gefunden: components/content.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-10. 💡 **WARNING:** CSS-Import gefunden: components/utilities.css
-   - **Datei:** src/styles/global.css
-   - **Position:** CSS-Import-Statement
-
-11. 💡 **WARNING:** ÃœbermÃ¤ÃŸige !important-Nutzung: 8 Vorkommen
+10. 💡 **WARNING:** ÃœbermÃ¤ÃŸige !important-Nutzung: 11 Vorkommen
    - **Datei:** src/styles/global.css
    - **Position:** Multiple Stellen
 
-12. 💡 **WARNING:** WCAG-Kontrast-VerstoÃŸ: 2 von 10 Tests fehlgeschlagen
+11. 💡 **WARNING:** WCAG-Kontrast-VerstoÃŸ: 2 von 10 Tests fehlgeschlagen
    - **Datei:** src/styles/global.css
    - **Position:** Button Hover States
 
 ### 🤖 KI-Optimierungs-Prompts
 
-1. ðŸŽ¨ CSS-CSS-IMPORTS-OPTIMIERUNG: Behebe 10 Issues in Kategorie css-imports fÃ¼r forensische CSS-Perfektion
+1. ðŸŽ¨ CSS-CSS-DUPLICATES-OPTIMIERUNG: Behebe 3 Issues in Kategorie css-duplicates fÃ¼r forensische CSS-Perfektion
 
-2. ðŸŽ¨ CSS-CSS-ARCHITECTURE-OPTIMIERUNG: Behebe 1 Issues in Kategorie css-architecture fÃ¼r forensische CSS-Perfektion
+2. ðŸŽ¨ CSS-CSS-ARCHITECTURE-OPTIMIERUNG: Behebe 2 Issues in Kategorie css-architecture fÃ¼r forensische CSS-Perfektion
 
-3. ðŸŽ¨ CSS-CONTRAST-ACCESSIBILITY-OPTIMIERUNG: Behebe 1 Issues in Kategorie contrast-accessibility fÃ¼r forensische CSS-Perfektion
+3. ðŸŽ¨ CSS-CSS-IMPORTS-OPTIMIERUNG: Behebe 5 Issues in Kategorie css-imports fÃ¼r forensische CSS-Perfektion
+
+4. ðŸŽ¨ CSS-CONTRAST-ACCESSIBILITY-OPTIMIERUNG: Behebe 1 Issues in Kategorie contrast-accessibility fÃ¼r forensische CSS-Perfektion
 
 ---
 
@@ -95,7 +92,7 @@
 
 **Health Score:** 98/100
 **Status:** success
-**Ausführungszeit:** 5ms
+**Ausführungszeit:** 6ms
 **Issues:** 1
 
 ### 📈 Metriken
@@ -116,7 +113,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3056ms
+**Ausführungszeit:** 3215ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -153,7 +150,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 319ms
+**Ausführungszeit:** 334ms
 **Issues:** 0
 
 ---

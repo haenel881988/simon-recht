@@ -1,0 +1,71 @@
+/* 🎯 FEEDBACK & ALERT SYSTEM */
+
+/* Alert-System für UX-Feedback */
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border-left: 4px solid;
+}
+
+.alert-error {
+  background-color: rgba(220, 38, 38, 0.1);
+  border-left-color: var(--error-rot);
+  color: var(--error-rot);
+}
+
+.alert-success {
+  background-color: rgba(22, 163, 74, 0.1);
+  border-left-color: var(--success-gruen);
+  color: var(--success-gruen);
+}
+
+.alert-warning {
+  background-color: rgba(234, 179, 8, 0.1);
+  border-left-color: var(--warning-gelb);
+  color: var(--warning-gelb);
+}
+
+.alert-info {
+  background-color: rgba(8, 145, 178, 0.1);
+  border-left-color: var(--info-cyan);
+  color: var(--info-cyan);
+}
+
+/* Form Validation Feedback */
+.form-error {
+  color: var(--error-rot);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.form-success {
+  color: var(--success-gruen);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.input-error {
+  border-color: var(--error-rot) !important;
+}
+
+.input-success {
+  border-color: var(--success-gruen) !important;
+}
+
+/* Status Indicators */
+.status-error {
+  color: var(--error-rot);
+}
+
+.status-success {
+  color: var(--success-gruen);
+}
+
+.status-warning {
+  color: var(--warning-gelb);
+}
+
+.status-info {
+  color: var(--info-cyan);
+}

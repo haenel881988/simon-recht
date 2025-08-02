@@ -1,0 +1,107 @@
+/* 📦 KARTEN-KOMPONENTEN - ANALYSE-BLAU STRUKTUR */
+
+/* Basis Card-System */
+.card {
+  background-color: var(--asphaltschwarz-light);
+  border: 1px solid var(--analyse-blau-dark);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  border-bottom: 1px solid var(--analyse-blau-dark);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  color: var(--text-weiss);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card-text {
+  color: var(--text-hell);
+}
+
+.card-highlight {
+  border-left: 4px solid var(--glut-orange);
+  background-color: var(--analyse-blau-dark);
+}
+
+/* Blog-spezifische Cards */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.blog-card {
+  background-color: var(--asphaltschwarz-light);
+  border: 1px solid var(--analyse-blau-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--analyse-blau);
+}
+
+.blog-card-content {
+  padding: 1.5rem;
+}
+
+.blog-card-title {
+  color: var(--text-weiss);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.blog-card-excerpt {
+  color: var(--text-hell);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.blog-card-meta {
+  color: var(--text-medium);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.blog-card-link {
+  color: var(--glut-orange);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.blog-card-link:hover {
+  color: var(--glut-orange-light);
+  text-decoration: underline;
+}
+
+/* Evidence/Beweis Cards */
+.evidence-section {
+  background-color: var(--asphaltschwarz-light);
+  border: 1px solid var(--analyse-blau-dark);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.evidence-title {
+  color: var(--glut-orange);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.evidence-content {
+  color: var(--text-hell);
+  line-height: 1.7;
+}
