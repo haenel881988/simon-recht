@@ -57,16 +57,19 @@ src/styles/
 ### **✅ FÜR SIMON'S PROJEKT PERFEKT:**
 
 1. **MODULAR DEVELOPMENT:**
+
    - Jeder Scope isoliert entwickelbar
    - Keine ungewollten CSS-Überschreibungen
    - Klare Verantwortlichkeiten
 
 2. **SKALIERBARKEIT:**
+
    - Neue Scopes einfach hinzufügbar
    - Alte Scopes ohne Risiko änderbar
    - Scope-spezifische Optimierungen
 
 3. **PERFORMANCE:**
+
    - Nur benötigte Scopes laden
    - Scope-spezifisches Code-Splitting
    - Kleinere CSS-Bundles
@@ -79,18 +82,20 @@ src/styles/
 ### **🔧 TECHNISCHE UMSETZUNG:**
 
 #### **CSS-IMPORT-STRATEGIE:**
+
 ```css
 /* global.css - Scope-Controller */
-@import './foundation/variables.css';
-@import './foundation/reset.css';
-@import './foundation/typography.css';
+@import "./foundation/variables.css";
+@import "./foundation/reset.css";
+@import "./foundation/typography.css";
 
-@import './components/buttons.css';
-@import './components/navigation.css';
+@import "./components/buttons.css";
+@import "./components/navigation.css";
 /* ... weitere Komponenten nach Bedarf */
 ```
 
 #### **ASTRO-INTEGRATION:**
+
 ```astro
 ---
 // Layout.astro - Scope-basiertes Laden
@@ -108,22 +113,32 @@ import '../styles/components/navigation.css';
 ### **📋 NAMING-CONVENTIONS:**
 
 1. **SCOPE-PREFIXES:**
+
    ```css
    /* foundation/ - Keine Prefixes (global) */
-   :root { --color-primary: #000; }
-   
+   :root {
+     --color-primary: #000;
+   }
+
    /* components/ - Component-Prefixes */
-   .btn-primary { }
-   .nav-main { }
-   .card-default { }
-   
+   .btn-primary {
+   }
+   .nav-main {
+   }
+   .card-default {
+   }
+
    /* layouts/ - Layout-Prefixes */
-   .layout-header { }
-   .layout-grid { }
-   
+   .layout-header {
+   }
+   .layout-grid {
+   }
+
    /* pages/ - Page-Prefixes */
-   .page-home-hero { }
-   .page-blog-list { }
+   .page-home-hero {
+   }
+   .page-blog-list {
+   }
    ```
 
 2. **SCOPE-BOUNDARIES:**
@@ -137,13 +152,13 @@ import '../styles/components/navigation.css';
 ```css
 /* ❌ SCHLECHT - Cross-Scope-Abhängigkeiten */
 /* components/buttons.css */
-.btn { 
+.btn {
   margin: var(--page-home-spacing); /* Page-Variable in Component! */
 }
 
 /* ✅ GUT - Scope-isolierte Definitionen */
 /* components/buttons.css */
-.btn { 
+.btn {
   margin: var(--btn-margin, 1rem); /* Component-eigene Variable */
 }
 ```
@@ -153,12 +168,15 @@ import '../styles/components/navigation.css';
 ## 🚀 **IMPLEMENTIERUNGS-EMPFEHLUNG:**
 
 ### **PHASE 1 - AKTUELLE STRUKTUR BEIBEHALTEN:**
+
 ✅ **Simon's CSS-Struktur ist bereits optimal!**
+
 - `foundation/` = BASIS-SCOPE ✅
-- `components/` = KOMPONENTEN-SCOPE ✅  
+- `components/` = KOMPONENTEN-SCOPE ✅
 - Klare Trennung bereits vorhanden ✅
 
 ### **PHASE 2 - BEI BEDARF ERWEITERN:**
+
 ```
 🔄 NUR BEI WACHSTUM:
 ├── layouts/ hinzufügen (für komplexe Layouts)
@@ -167,6 +185,7 @@ import '../styles/components/navigation.css';
 ```
 
 ### **PHASE 3 - ADVANCED SCOPING:**
+
 ```
 🚀 FÜR ENTERPRISE-LEVEL:
 ├── responsive/ (Mobile-First-Optimierung)
@@ -179,11 +198,13 @@ import '../styles/components/navigation.css';
 ## 📊 **SCOPE-METRIKEN:**
 
 ### **AKTUELLER ZUSTAND:**
+
 - **CSS_DESIGN Scope:** 5.035 Tokens (16 Dateien)
 - **Durchschnitt:** 315 Tokens pro Datei ✅ **OPTIMAL!**
 - **Struktur:** Bereits scope-basiert organisiert ✅
 
 ### **EMPFEHLUNG:**
+
 **Simon's CSS-Architektur ist bereits PERFEKT scope-organisiert!**
 
 **Keine Änderungen nötig - nur bei spezifischem Bedarf erweitern.**
