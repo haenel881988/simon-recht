@@ -36,7 +36,7 @@ Sinnvolle und seriöse Werbung
 Dabei unterscheiden wir zwischen:
 Dem digitalen schriftlichen Onlinekurs der modularisiert permanent aktuell gehalten wird, damit die Menschen sich nicht erst durch X, div. KI Meldungen etc. blättern müssen, sondern imm gezielt, auch diese Funktionen vorstellt und verwendet, die produktiv genutzt werden können.
 
-Und auch dynamischen inhalten, die z.B.: Offtopic sind.
+Ich stelle mi
 
 **weitere Ideen - unsortiert**
 

@@ -6,6 +6,23 @@
  */
 
 const SCOPE_DEFINITIONS = {
+  // 🚨 SPEZIFISCHE PATTERNS ZUERST (wichtig für korrekte Zuordnung!)
+  DOCUMENTATION_CORE: [
+    /^docs\/documentation\/core\//, // Kern-Dokumentation (Authentizität, Analyzer-Instructions)
+  ],
+  DOCUMENTATION_TECHNICAL: [
+    /^docs\/documentation\/technical\//, // Technical-Docs (Build, CSS, Tools)
+  ],
+  DOCUMENTATION_WEBSITE: [
+    /^docs\/documentation\/website\//, // Website-Content (Marketing, Struktur)
+  ],
+  DOCUMENTATION_HUB: [
+    /^docs\/documentation\/README\.md$/, // Navigation-Hub (nicht modularisieren!)
+  ],
+  IDEENWERKSTATT: [
+    /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt als separater Scope (NICHT anfassen!)
+  ],
+  // 🎯 ALLGEMEINE PATTERNS DANACH
   CSS_DESIGN: [
     /^src\/styles\//, // Nur src/styles/ Verzeichnis
     /^docs\/website_struktur\/website_design\//, // Design-Dokumentation
@@ -38,11 +55,9 @@ const SCOPE_DEFINITIONS = {
     /^astro\.config\.mjs$/, // Astro-Config
     /^tailwind\.config\.mjs$/, // Tailwind-Config
   ],
-  DOCUMENTATION: [
-    /^docs\/documentation\//, // Neue modularisierte Dokumentation (Priorität!)
-    /^docs\/website_struktur\/recherche\//, // Recherche-Dokumentation
-    /^docs\/marketing\//, // Marketing-Dokumentation
-    /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt
+  LEGACY_DOCUMENTATION: [
+    /^docs\/website_struktur\/recherche\//, // Recherche-Dokumentation (Legacy)
+    /^docs\/marketing\//, // Marketing-Dokumentation (Legacy)
     /^README\.md$/, // Nur Haupt-README
     /readme\.md$/i, // README-Dateien in Verzeichnissen
   ],

@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 2.8.2025, 10:30:57  
-**Analysedauer:** 0.32 Sekunden  
+**Erstellt:** 2.8.2025, 13:30:47  
+**Analysedauer:** 0.49 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 93 |
-| **Zeilen gesamt** | 21’117 |
-| **Wörter gesamt** | 86’417 |
-| **Zeichen gesamt** | 848’855 |
-| **Geschätzte Tokens** | 112’381 |
+| **Dateien gesamt** | 87 |
+| **Zeilen gesamt** | 19’429 |
+| **Wörter gesamt** | 84’011 |
+| **Zeichen gesamt** | 824’070 |
+| **Geschätzte Tokens** | 109’251 |
 
 ---
 
@@ -22,15 +22,15 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 26 | 9’756 | 34’474 | 1326 |
-| **DOCUMENTATION** | 11 | 1’829 | 24’979 | 2271 |
-| **TODOS_MANAGEMENT** | 9 | 1’510 | 16’686 | 1854 |
-| **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 26 | 4’360 | 13’413 | 516 |
+| **UNCLASSIFIED** | 21 | 9’325 | 34’811 | 1658 |
+| **DOCUMENTATION** | 20 | 3’026 | 28’593 | 1430 |
+| **TODOS_MANAGEMENT** | 9 | 1’515 | 16’754 | 1862 |
+| **CONTENT** | 5 | 1’467 | 14’052 | 2810 |
+| **CSS_DESIGN** | 18 | 2’113 | 7’468 | 415 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
-| **CONFIG** | 3 | 435 | 1’452 | 484 |
-| **ASSETS** | 2 | 107 | 644 | 322 |
+| **CONFIG** | 3 | 439 | 1’477 | 492 |
 | **INSTRUCTIONS** | 1 | 24 | 318 | 318 |
+| **ASSETS** | 1 | 14 | 173 | 173 |
 | **BUILD_SYSTEM** | 2 | 50 | 135 | 68 |
 
 ---
@@ -42,21 +42,27 @@
 - `docs/website_struktur/content/gicht-buch/`
 - `docs/website_struktur/dynamische-seiten/`
 - `docs/website_struktur/recherche/`
+- `docs/website_struktur/statische-seiten/`
+- `docs/website_struktur/`
+- `docs/`
 - `public/assets/images/startseite-index/`
 - `public/assets/images/startseite_uebermich/`
 - `public/assets/images/`
+- `public/assets/`
 - `public/`
-- `src/styles/aida-sections/`
 - `src/`
+- `tools/analyzer/instructions/`
 - `tools/analyzer/tools/analyzer/`
 - `tools/analyzer/tools/`
+- `tools/media/`
+- `tools/project-maintenance/`
 - `tools/`
 
-**🎯 EMPFEHLUNG:** 12 leere Verzeichnisse löschen
+**🎯 EMPFEHLUNG:** 18 leere Verzeichnisse löschen
 
 ### 🔄 REDUNDANTE VERZEICHNISSE
 
-#### 1. `docs` ↔ `docs/todos/prioritaeten/hoch`
+#### 1. `docs/documentation/core` ↔ `tools/analyzer/core`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
@@ -97,10 +103,9 @@
 |-------|---------|-------|------------|
 | `astro.config.mjs` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
 | `package.json` | BUILD_SYSTEM | UNCLASSIFIED | Datei gehört besser zu UNCLASSIFIED |
-| `docs/css-deep-analysis-roadmap.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/documentation/technical/styles-system.md` | DOCUMENTATION | CSS_DESIGN | Datei gehört besser zu CSS_DESIGN |
+| `docs/00_ideenwerkstatt/ideen_brainstormings.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/dynamische-seiten/blog/mindset-gegen-grosskonzern.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
-| `docs/website_struktur/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
-| `docs/website_struktur/statische-seiten/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/statische-seiten/static/index.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/website_elemente/footer.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/website_elemente/header.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
@@ -112,7 +117,6 @@
 | `tools/analyzer/instructions-redundancy-scanner.cjs` | UNCLASSIFIED | INSTRUCTIONS | Datei gehört besser zu INSTRUCTIONS |
 | `tools/analyzer/master-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/modules/smart-exception-handler.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
-| `tools/analyzer/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `tools/analyzer/redundanz-report-2025-08-02.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scanner-korruptions-bericht-2025-07-31.md` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/scopes/instruction-contradiction-scanner.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
@@ -121,8 +125,7 @@
 | `tools/analyzer/scopes/structure-optimizer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/structure-deep-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/universal-project-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
-| `tools/media/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
-| `tools/project-maintenance/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/documentation/core/analyzer-instructions.md` | INSTRUCTIONS | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/prioritaeten/hoch/aktuelle-krisen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/prioritaeten/mittel/technische-verbesserungen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/prioritaeten/niedrig/optimierungen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
@@ -134,19 +137,16 @@
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/content/fallbeispiel_Story_formatted.md` | CONTENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/content/polemik/startseite.md` | CONTENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
-| `docs/website_struktur/content/simons_authentische_sprache.md` | CONTENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/website_design/60-30-10-PLUS-FLEX-SYSTEM.md` | CSS_DESIGN | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/website_struktur/website_design/global_css.md` | CSS_DESIGN | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
-| `public/assets/README.md` | ASSETS | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `public/assets/videos/README.md` | ASSETS | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `tools/analyzer/exact-line-counter.js` | CONFIG | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/modules/file-scanner.js` | CONFIG | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/analyzer/modules/scope-definitions.js` | CONFIG | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
-| `tools/analyzer/instructions/README.md` | INSTRUCTIONS | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 
 ### ⚠️ STRUKTUR-VERLETZUNGEN
 
-#### README-PLACEMENT (14 Verletzungen)
+#### README-PLACEMENT (7 Verletzungen)
 
 - **[`LOW`]** `docs/00_ideenwerkstatt/dggp/README.md`
   - Erwartet: Verzeichnis-Root
@@ -154,22 +154,7 @@
 - **[`LOW`]** `docs/00_ideenwerkstatt/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
-- **[`LOW`]** `docs/marketing/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `docs/website_struktur/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `docs/website_struktur/statische-seiten/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `tools/analyzer/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `tools/media/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `tools/project-maintenance/README.md`
+- **[`LOW`]** `docs/documentation/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
 - **[`LOW`]** `docs/todos/prioritaeten/README.md`
@@ -181,25 +166,19 @@
 - **[`LOW`]** `src/styles/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
-- **[`LOW`]** `public/assets/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
 - **[`LOW`]** `public/assets/videos/README.md`
-  - Erwartet: Verzeichnis-Root
-  - Aktuell: Unterverzeichnis
-- **[`LOW`]** `tools/analyzer/instructions/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
 
 ### 🏷️ NAMING-INKONSISTENZEN
 
-#### CAMELCASE_IN_MARKDOWN (21 Dateien)
+#### CAMELCASE_IN_MARKDOWN (14 Dateien)
 
 - **[`LOW`]** `docs/00_ideenwerkstatt/dggp/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/00_ideenwerkstatt/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `docs/marketing/README.md`
+- **[`LOW`]** `docs/documentation/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
@@ -211,16 +190,6 @@
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `docs/website_struktur/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `docs/website_struktur/statische-seiten/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `tools/analyzer/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `tools/media/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `tools/project-maintenance/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/todos/prioritaeten/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/todos/README.md`
@@ -231,11 +200,7 @@
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `src/styles/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `public/assets/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `public/assets/videos/README.md`
-  - **Empfehlung:** kebab-case für Markdown-Dateien
-- **[`LOW`]** `tools/analyzer/instructions/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 
 #### MIXED_SEPARATORS (2 Dateien)
@@ -254,60 +219,53 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Status** | FAILED |
-| **Confidence-Score** | 0% |
-| **Verification-Levels** | N/A |
+| **Status** | VERIFIED |
+| **Confidence-Score** | 100% |
+| **Verification-Levels** | basic, crossReference, logic, consensus |
 | **Major Issues** | 0 |
 
-❌ **UNRELIABLE RESULTS** - Analyse sollte wiederholt werden.
+✅ **ANALYSIS VERIFIED** - Ergebnisse wurden durch Multi-Level-Checks bestätigt.
 
 ---
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope DOCUMENTATION hat 24979 Tokens (>10k GLOBAL LIMIT)
+### 1. ⚠️ Scope DOCUMENTATION hat 28593 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 34474 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34811 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 16686 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 16754 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 4. ⚠️ Scope CONTENT hat 14810 Tokens (>10k GLOBAL LIMIT)
+### 4. ⚠️ Scope CONTENT hat 14052 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** CONTENT
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 5. ⚠️ Scope CSS_DESIGN hat 13413 Tokens (>10k GLOBAL LIMIT)
-
-- **Typ:** SPLIT_SCOPE
-- **Scope:** CSS_DESIGN
-- **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
-- **Priorität:** HIGH
-
-### 6. 🔔 26 Dateien ohne Scope-Zuordnung
+### 5. 🔔 21 Dateien ohne Scope-Zuordnung
 
 - **Typ:** CATEGORIZE_FILES
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 7. ⚠️ Projekt-Total: 112381 Tokens (KI-Work-Context: 37474 = 33%)
+### 6. ⚠️ Projekt-Total: 109251 Tokens (KI-Work-Context: 31622 = 29%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -320,9 +278,9 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 112’381 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 37’474 Tokens (33% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (74’907 Tokens)
+- **Projekt-Total:** 109’251 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 31’622 Tokens (29% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (77’629 Tokens)
 
 ⚠️ **WORK-CONTEXT WARNUNG:** KI-relevante Bereiche werden groß
 
@@ -339,11 +297,11 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph03_Go-to-Market-Plan für Coaching-Launch_.md` | 5662 | 316 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md` | 5310 | 284 | DOCUMENTATION |
 | `docs/website_struktur/content/fallbeispiel_Story_formatted.md` | 5239 | 199 | CONTENT |
-| `tools/analyzer/universal-project-analyzer.cjs` | 5115 | 1420 | UNCLASSIFIED |
+| `tools/analyzer/universal-project-analyzer.cjs` | 5129 | 1426 | UNCLASSIFIED |
 | `docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md` | 5069 | 284 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
-| `docs/todos/todos.md` | 3666 | 494 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3734 | 499 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
 
 ---

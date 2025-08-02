@@ -233,6 +233,11 @@ class UniversalProjectAnalyzer {
   identifyFileScopes(filePath, content) {
     // PRIORITÄTS-REIHENFOLGE: Spezifischste Bereiche zuerst prüfen
     const scopePriority = [
+      "DOCUMENTATION_CORE", // Neue Sub-Scopes zuerst!
+      "DOCUMENTATION_TECHNICAL",
+      "DOCUMENTATION_WEBSITE", 
+      "DOCUMENTATION_HUB",
+      "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
       "INSTRUCTIONS", // Höchste Priorität: .github/instructions/
       "TODOS_MANAGEMENT", // Dann: docs/todos/
       "CSS_DESIGN", // Dann: src/styles/
@@ -241,7 +246,7 @@ class UniversalProjectAnalyzer {
       "BUILD_SYSTEM", // Dann: Build-Tools
       "CONFIG", // Dann: Konfigurationen
       "CONTENT", // Dann: Content
-      "DOCUMENTATION", // Niedrigste Priorität: Dokumentation
+      "LEGACY_DOCUMENTATION", // Legacy-Dokumentation (niedrigste Priorität)
     ];
 
     // Suche ersten passenden Scope (Einzel-Zuordnung)
