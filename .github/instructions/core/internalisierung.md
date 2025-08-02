@@ -52,6 +52,8 @@
 
 **🔄 GIT-BACKUP-AUTOMATISIERUNG-ZWANG (INTERNALISIERT 02.08.2025):**
 
+**📍 SCOPE-REFERENZ:** Siehe [instructions/project/git-backup.md](../project/git-backup.md) - Vollständige Git-Backup-Automatisierung
+
 **ZWINGEND VOR/NACH GRÖSSEREN ÄNDERUNGEN:**
 
 - ✅ **AUTO-BACKUP-TRIGGER:** Vor strukturellen Änderungen automatisch git add . && git commit && git push
@@ -61,6 +63,7 @@
 - ✅ **SAFETY-NET-KONTINUITÄT:** Niemals Arbeit ohne Git-Sicherung verlieren
 
 **GIT-COMMIT-MESSAGE-FORMAT:**
+
 ```
 [SCOPE] Kurzbeschreibung
 
@@ -313,11 +316,20 @@ BEI JEDER SCOPE-BEHAUPTUNG ZWINGEND:
 **WENN SIMON SAGT "INTERNALISIEREN":**
 
 1. **SOFORT Instructions erweitern** mit neuer Regel/Verbesserung
-2. **WIDERSPRÜCHE IDENTIFIZIEREN** in bestehenden Instructions
-3. **NEUE REGELN DAUERHAFT SPEICHERN** für zukünftige Anwendung
-4. **FEHLERMUSTER VERHINDERN** durch präventive Regel-Erweiterung
-5. **GARANTIE SCHAFFEN** dass Fehler nie wieder auftritt
-6. **VARIABLES-SYSTEM NUTZEN** für wiederkehrende Konzepte
+2. **SCOPE-MODULARISIERUNG prüfen:** Neue Bereiche verdienen eigene Datei?
+3. **SCOPE-DATEI erstellen:** Bei komplexen Themen separates .md in entsprechendem Verzeichnis
+4. **CROSS-REFERENZ setzen:** Von Haupt-Instructions auf neue Scope-Datei verweisen
+5. **WIDERSPRÜCHE IDENTIFIZIEREN** in bestehenden Instructions
+6. **NEUE REGELN DAUERHAFT SPEICHERN** für zukünftige Anwendung
+7. **FEHLERMUSTER VERHINDERN** durch präventive Regel-Erweiterung
+8. **GARANTIE SCHAFFEN** dass Fehler nie wieder auftritt
+9. **VARIABLES-SYSTEM NUTZEN** für wiederkehrende Konzepte
+
+**🔧 SCOPE-MODULARISIERUNGS-KRITERIEN:**
+- **Komplexität:** >200 Zeilen verdienen eigene Datei
+- **Themen-Abgrenzung:** Eigenständiger Fachbereich (Git, CSS, SEO, etc.)
+- **Wiederverwendbarkeit:** Andere Projekte könnten profitieren
+- **Referenz-Häufigkeit:** Wird oft zitiert/verlinkt
 
 ### **INTERNALISIERUNGS-BESTÄTIGUNG:**
 

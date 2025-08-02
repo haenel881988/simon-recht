@@ -243,7 +243,8 @@ GESAMT: 39.500 Tokens (sicher unter 51.2k Limit)
 ### 🔧 **PROJECT-MANAGEMENT:**
 
 - **[🚨 Exception-System](instructions/project/exception-system.md)** - Fehlerbehandlung, Widerspruchs-Scanner
-- **[📁 Datei-Operationen](instructions/project/datei-operationen.md)** - Backup, Search-Regeln, Integrität, git add ., git commit, git push
+- **[📁 Datei-Operationen](instructions/project/datei-operationen.md)** - Backup, Search-Regeln, Integrität
+- **[🔄 Git-Backup-Automatisierung](instructions/project/git-backup.md)** - Automatische Sicherung vor/nach Änderungen
 - **[🎯 Scope-System](instructions/project/scope-system.md)** - Bereichs-Definitionen
 
 ### 🧠 **COACHING & PSYCHOLOGIE:**
