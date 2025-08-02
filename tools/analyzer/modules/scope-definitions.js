@@ -22,7 +22,7 @@ const SCOPE_DEFINITIONS = {
   IDEENWERKSTATT: [
     /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt als separater Scope (NICHT anfassen!)
   ],
-  // 🔧 ANALYZER-TOOLS SUB-SCOPES
+  // 🔧 ANALYZER-TOOLS SUB-SCOPES (AUFGETEILT)
   ANALYZER_CORE_TOOLS: [
     /^tools\/analyzer\/universal-project-analyzer\.cjs$/, // Haupt-Analyzer
     /^tools\/analyzer\/master-analyzer\.cjs$/, // Master-Tool
@@ -31,19 +31,36 @@ const SCOPE_DEFINITIONS = {
   ANALYZER_REPORTS: [
     /^tools\/analyzer\/.*\.md$/, // Alle Reports (.md)
   ],
-  ANALYZER_MODULES: [
-    /^tools\/analyzer\/modules\//, // Module-Verzeichnis
-    /^tools\/analyzer\/core\//, // Core-Module  
-    /^tools\/analyzer\/scopes\//, // Scope-spezifische Tools
+  ANALYZER_MODULES_BASE: [
+    /^tools\/analyzer\/modules\//, // Module-Verzeichnis (3 Dateien)
+  ],
+  ANALYZER_MODULES_CORE: [
+    /^tools\/analyzer\/core\//, // Core-Module (3 Dateien)
+  ],
+  ANALYZER_MODULES_SCOPES: [
+    /^tools\/analyzer\/scopes\//, // Scope-spezifische Tools (4 Dateien)
   ],
   ANALYZER_LEGACY_TOOLS: [
     /^tools\/analyzer\/.*\.cjs$/, // Remaining .cjs Tools
     /^tools\/analyzer\/.*\.js$/, // JavaScript Tools
     /^tools\/project-maintenance\//, // Project-Maintenance-Tools
   ],
-  // 📄 LEGACY-WEBSITE-STRUKTUR SUB-SCOPES
-  LEGACY_RECHERCHE: [
-    /^docs\/website_struktur\/recherche\//, // Markt-Recherche & SEO-Strategien
+  // 📄 LEGACY-WEBSITE-STRUKTUR SUB-SCOPES (AUFGETEILT)
+  LEGACY_RECHERCHE_GRUND: [
+    /^docs\/website_struktur\/recherche\/grundrecherche\.md$/, // Haupt-Marktanalyse
+    /^docs\/website_struktur\/recherche\/tiefenrecherche\.md$/, // Haupt-Tiefen-Recherche
+  ],
+  LEGACY_RECHERCHE_COACHING: [
+    /^docs\/website_struktur\/recherche\/tiefen_recherche\/ph01_/, // Coaching-Markt DACH
+  ],
+  LEGACY_RECHERCHE_SEO: [
+    /^docs\/website_struktur\/recherche\/tiefen_recherche\/ph02_/, // SEO & Content-Strategie
+  ],
+  LEGACY_RECHERCHE_GTM: [
+    /^docs\/website_struktur\/recherche\/tiefen_recherche\/ph03_/, // Go-to-Market Plan
+  ],
+  LEGACY_RECHERCHE_BILDUNG: [
+    /^docs\/website_struktur\/recherche\/tiefen_recherche\/ph04_/, // Digitale Bildung
   ],
   LEGACY_CONTENT: [
     /^docs\/website_struktur\/content\//, // Content-Strukturen & Stories
@@ -81,10 +98,12 @@ const SCOPE_DEFINITIONS = {
     /copilot-instructions\.md$/, // Alle copilot-instructions Dateien
     /instructions.*\.md$/, // Instructions-Dateien
   ],
-  TODOS_MANAGEMENT: [
+  TODOS_STRUKTUR: [
+    /^docs\/todos\/struktur-migration-plan/, // Struktur-Migration (JSON+MD)
+  ],
+  TODOS_CORE: [
     /^docs\/todos\/README\.md$/, // TODO Navigation-Hub
     /^docs\/todos\/todos\.md$/, // Haupt-TODO-Liste  
-    /^docs\/todos\/struktur-migration-plan/, // Migration-Pläne
   ],
   TODOS_PRIORITAETEN: [
     /^docs\/todos\/prioritaeten\//, // Prioritäts-Kategorien

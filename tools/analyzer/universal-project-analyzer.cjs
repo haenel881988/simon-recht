@@ -240,15 +240,22 @@ class UniversalProjectAnalyzer {
       "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
       "ANALYZER_CORE_TOOLS", // Haupt-Analyzer-Tools (spezifischste)
       "ANALYZER_REPORTS", // Analyzer Reports
-      "ANALYZER_MODULES", // Analyzer Module  
+      "ANALYZER_MODULES_BASE", // Analyzer Module Base
+      "ANALYZER_MODULES_CORE", // Analyzer Module Core  
+      "ANALYZER_MODULES_SCOPES", // Analyzer Module Scopes  
       "ANALYZER_LEGACY_TOOLS", // Legacy Analyzer Tools
-      "LEGACY_RECHERCHE", // Legacy Recherche (spezifischste)
+      "LEGACY_RECHERCHE_GRUND", // Legacy Recherche Grund (spezifischste)
+      "LEGACY_RECHERCHE_COACHING", // Legacy Recherche Coaching
+      "LEGACY_RECHERCHE_SEO", // Legacy Recherche SEO
+      "LEGACY_RECHERCHE_GTM", // Legacy Recherche Go-to-Market
+      "LEGACY_RECHERCHE_BILDUNG", // Legacy Recherche Bildung
       "LEGACY_CONTENT", // Legacy Content 
       "LEGACY_DESIGN", // Legacy Design
       "LEGACY_ZIELGRUPPE", // Legacy Zielgruppe
       "TODOS_PRIORITAETEN", // TODO Prioritäten (spezifisch)
       "TODOS_VERHALTENSMUSTER", // TODO Verhaltensmuster (spezifisch)
-      "TODOS_MANAGEMENT", // TODO Management (allgemein)
+      "TODOS_STRUKTUR", // TODO Struktur (spezifisch)
+      "TODOS_CORE", // TODO Core (spezifisch) (allgemein)
       "INSTRUCTIONS", // Höchste Priorität: .github/instructions/
       "CSS_DESIGN", // Dann: src/styles/
       "ASTRO_COMPONENTS", // Dann: .astro Dateien
