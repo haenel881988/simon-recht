@@ -23,7 +23,7 @@
 }
 
 .hero-aufmerksamkeit::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -75,12 +75,12 @@
     padding: 3rem 1rem;
     min-height: 60vh;
   }
-  
+
   .hero-haupttitel {
     font-size: 2.5rem;
     line-height: 1.2;
   }
-  
+
   .hero-untertitel {
     font-size: 1.25rem;
     padding: 0 1rem;

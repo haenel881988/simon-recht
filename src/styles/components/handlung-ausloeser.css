@@ -21,7 +21,7 @@
 }
 
 .handlung-bereich::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -170,11 +170,11 @@
   .handlung-bereich {
     padding: 3rem 1rem;
   }
-  
+
   .handlung-titel {
     font-size: 2.2rem;
   }
-  
+
   .hauptaktion-button {
     padding: 1rem 2rem;
     font-size: 1.1rem;
@@ -185,7 +185,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .nebenakion-button {
     padding: 0.9rem 2rem;
     margin: 0.5rem 0;
@@ -195,7 +195,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   .kontakt-bereich {
     grid-template-columns: 1fr;
     gap: 1rem;

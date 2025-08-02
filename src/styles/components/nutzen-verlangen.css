@@ -105,16 +105,16 @@
   .nutzen-verlangen {
     padding: 3rem 1rem;
   }
-  
+
   .nutzen-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .nutzen-haupttitel {
     font-size: 2rem;
   }
-  
+
   .nutzen-karte {
     padding: 1.5rem;
   }

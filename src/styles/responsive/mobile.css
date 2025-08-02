@@ -1,0 +1,203 @@
+/*
+ * 📱 MOBILE-FIRST RESPONSIVE CSS
+ * AIDA-SYSTEM: Mobile-First Approach
+ * Basis-Styles für 320px-768px Geräte
+ */
+
+/* 📱 MOBILE BASE (320px+) */
+@media screen and (max-width: 767px) {
+  /* 🎯 MOBILE FOUNDATION */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* 🦸 MOBILE HERO OPTIMIZATION */
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* 🧭 MOBILE NAVIGATION */
+  .primary-navigation {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    background: var(--asphaltschwarz-light);
+  }
+
+  /* 🎯 MOBILE AIDA SECTIONS */
+  .aida-section {
+    padding: 2rem 1rem;
+    margin: 1rem 0;
+  }
+
+  /* 📝 MOBILE CONTENT */
+  .content-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .content-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-text {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* 🃏 MOBILE CARDS */
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* 🔘 MOBILE BUTTONS */
+  .btn-primary {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .btn-group {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* 📋 MOBILE FORMS */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  /* 📊 MOBILE TESTIMONIALS */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  /* 🎯 MOBILE UTILITIES */
+  .mobile-hide {
+    display: none !important;
+  }
+
+  .mobile-center {
+    text-align: center;
+  }
+
+  .mobile-full-width {
+    width: 100%;
+  }
+
+  .mobile-padding {
+    padding: 1rem;
+  }
+
+  .mobile-margin {
+    margin: 1rem 0;
+  }
+}
+
+/* 📱 SMALL MOBILE (320px-480px) */
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .attention-headline {
+    font-size: 2rem;
+  }
+
+  .benefit-card {
+    padding: 1rem;
+  }
+
+  .testimonial-card::before {
+    font-size: 3rem;
+    top: -0.25rem;
+  }
+}
+
+/* 🔧 MOBILE TOUCH OPTIMIZATIONS */
+@media screen and (max-width: 767px) {
+  /* 👆 TOUCH TARGETS */
+  button,
+  .btn,
+  .nav-link,
+  .card-link {
+    min-height: 44px; /* iOS touch target */
+    min-width: 44px;
+  }
+
+  /* 📝 MOBILE FORM ENHANCEMENTS */
+  .form-input,
+  .form-textarea,
+  .form-select {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 8px;
+  }
+
+  /* 🎯 MOBILE ACCESSIBILITY */
+  *:focus {
+    outline: 3px solid var(--glut-orange);
+    outline-offset: 2px;
+  }
+
+  /* 📱 MOBILE PERFORMANCE */
+  * {
+    -webkit-tap-highlight-color: rgba(255, 140, 0, 0.3);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* 🌐 MOBILE LANDSCAPE */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 60vh;
+  }
+
+  .aida-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

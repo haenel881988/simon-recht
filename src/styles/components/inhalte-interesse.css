@@ -67,7 +67,7 @@
 }
 
 .interesse-punkt::before {
-  content: '▶';
+  content: "▶";
   color: var(--glut-orange);
   position: absolute;
   left: 0;
@@ -84,11 +84,11 @@
     padding: 2rem 1rem;
     margin-bottom: 2rem;
   }
-  
+
   .inhalt-ueberschrift {
     font-size: 1.8rem;
   }
-  
+
   .inhalt-hervorhebung {
     padding: 1rem;
     margin: 1.5rem 0;

@@ -152,19 +152,19 @@ src/styles/
 
 ```css
 /* global.css - Deutsche Marketing-CSS-Architektur */
-@import "foundation/variables.css";     /* Basis-System */
-@import "foundation/typography.css";    /* Font-System */
-@import "foundation/reset.css";         /* Browser-Reset */
-@import "components/navigation.css";    /* Technisch */
-@import "components/hero-aufmerksamkeit.css";  /* Marketing A */
-@import "components/inhalte-interesse.css";    /* Marketing I */
-@import "components/nutzen-verlangen.css";     /* Marketing D */
-@import "components/handlung-ausloeser.css";   /* Marketing A */
-@import "components/buttons.css";       /* Technisch */
-@import "components/cards.css";         /* Technisch */
-@import "components/layout.css";        /* Technisch */
-@import "components/feedback.css";      /* Technisch */
-@import "components/utilities.css";     /* Technisch */
+@import "foundation/variables.css"; /* Basis-System */
+@import "foundation/typography.css"; /* Font-System */
+@import "foundation/reset.css"; /* Browser-Reset */
+@import "components/navigation.css"; /* Technisch */
+@import "components/hero-aufmerksamkeit.css"; /* Marketing A */
+@import "components/inhalte-interesse.css"; /* Marketing I */
+@import "components/nutzen-verlangen.css"; /* Marketing D */
+@import "components/handlung-ausloeser.css"; /* Marketing A */
+@import "components/buttons.css"; /* Technisch */
+@import "components/cards.css"; /* Technisch */
+@import "components/layout.css"; /* Technisch */
+@import "components/feedback.css"; /* Technisch */
+@import "components/utilities.css"; /* Technisch */
 ```
 
 ---

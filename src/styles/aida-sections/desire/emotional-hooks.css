@@ -1,0 +1,316 @@
+/*
+ * 🔥 EMOTIONAL HOOKS - DESIRE LAYER
+ * AIDA: D = DESIRE (Emotionale Trigger aktivieren)
+ * Psychologische Conversion-Elemente
+ */
+
+/* 🎭 EMOTION TRIGGER SECTION */
+.emotion-section {
+  background: linear-gradient(
+    180deg,
+    var(--asphaltschwarz) 0%,
+    var(--asphaltschwarz-light) 50%,
+    var(--asphaltschwarz) 100%
+  );
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.emotion-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    rgba(255, 140, 0, 0.1) 0%,
+    transparent 50%
+  );
+  pointer-events: none;
+}
+
+/* 💥 EMOTIONAL IMPACT CARDS */
+.emotion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.emotion-card {
+  background: var(--asphaltschwarz);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  border: 3px solid var(--analyse-blau-alpha);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.emotion-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    var(--glut-orange-alpha) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.emotion-card:hover {
+  border-color: var(--glut-orange);
+  transform: translateY(-16px) rotateX(5deg);
+  box-shadow: 0 25px 60px rgba(255, 140, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.emotion-card:hover::before {
+  opacity: 1;
+}
+
+/* 🚀 PAIN POINT TRIGGERS */
+.pain-point {
+  position: relative;
+  z-index: 2;
+}
+
+.pain-icon {
+  font-size: 4rem;
+  color: var(--glut-orange);
+  margin-bottom: 1.5rem;
+  display: block;
+  filter: drop-shadow(0 4px 8px rgba(255, 140, 0, 0.4));
+}
+
+.pain-headline {
+  color: var(--text-weiss);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.pain-description {
+  color: var(--text-hell);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* ⚡ SOLUTION REVEAL */
+.solution-reveal {
+  background: linear-gradient(
+    90deg,
+    var(--analyse-blau-alpha) 0%,
+    var(--asphaltschwarz-light) 100%
+  );
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--analyse-blau);
+}
+
+.solution-text {
+  color: var(--analyse-blau-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.solution-highlight {
+  color: var(--glut-orange);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* 🎯 FEAR & URGENCY TRIGGERS */
+.fear-trigger {
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.1) 0%,
+    transparent 70%
+  );
+  border: 2px dashed var(--glut-orange);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.fear-trigger::before {
+  content: "⚠️";
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--asphaltschwarz);
+  padding: 0 1rem;
+  font-size: 2rem;
+}
+
+.fear-text {
+  color: var(--text-weiss);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.fear-consequence {
+  color: var(--glut-orange);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 💫 ASPIRATION TRIGGERS */
+.aspiration-trigger {
+  background: linear-gradient(
+    135deg,
+    var(--analyse-blau-alpha) 0%,
+    var(--asphaltschwarz-light) 100%
+  );
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  position: relative;
+}
+
+.aspiration-trigger::after {
+  content: "✨";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.aspiration-headline {
+  color: var(--glut-orange);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.aspiration-vision {
+  color: var(--analyse-blau-light);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* 🔗 SOCIAL PROOF HOOKS */
+.social-hook {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--asphaltschwarz-light);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--glut-orange);
+}
+
+.social-avatar-group {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.social-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--analyse-blau), var(--glut-orange));
+  border: 2px solid var(--asphaltschwarz);
+  margin-left: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--asphaltschwarz);
+  font-weight: 900;
+  font-size: 0.875rem;
+}
+
+.social-text {
+  color: var(--text-weiss);
+  font-weight: 500;
+  flex: 1;
+}
+
+.social-count {
+  color: var(--glut-orange);
+  font-weight: 700;
+}
+
+/* 📱 RESPONSIVE EMOTIONS */
+@media (max-width: 768px) {
+  .emotion-section {
+    padding: 3rem 1rem;
+  }
+
+  .emotion-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .emotion-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .pain-icon {
+    font-size: 3rem;
+  }
+
+  .pain-headline {
+    font-size: 1.25rem;
+  }
+
+  .fear-trigger {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .aspiration-trigger {
+    padding: 2rem 1.5rem;
+  }
+
+  .aspiration-headline {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .social-hook {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
