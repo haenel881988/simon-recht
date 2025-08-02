@@ -1,0 +1,96 @@
+/*
+ * 📄 INHALTE-INTERESSE CSS
+ * Deutsche Marketing-Architektur: Interesse vertiefen durch Content
+ * FUNKTION: Lesefluss + Neugier verstärken + Expertise zeigen
+ * SCOPE: Interest-Marketing + Content-Präsentation
+ */
+
+/* 📖 CONTENT INTERESSE-SYSTEM */
+.inhalt-interesse {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: var(--asphaltschwarz-light);
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.inhalt-ueberschrift {
+  color: var(--analyse-blau-light);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.inhalt-text {
+  color: var(--text-hell);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.inhalt-hervorhebung {
+  background: var(--glut-orange-alpha);
+  border-left: 4px solid var(--glut-orange);
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.inhalt-expertise {
+  background: var(--analyse-blau-alpha);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  border: 1px solid var(--analyse-blau);
+}
+
+.expertise-titel {
+  color: var(--analyse-blau-light);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* 🎯 INTERESSE-VERSTÄRKER */
+.interesse-liste {
+  list-style: none;
+  padding: 0;
+}
+
+.interesse-punkt {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--asphaltschwarz-light);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.interesse-punkt::before {
+  content: '▶';
+  color: var(--glut-orange);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.interesse-punkt:last-child {
+  border-bottom: none;
+}
+
+/* 📱 RESPONSIVE INTERESSE */
+@media (max-width: 768px) {
+  .inhalt-interesse {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .inhalt-ueberschrift {
+    font-size: 1.8rem;
+  }
+  
+  .inhalt-hervorhebung {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+}

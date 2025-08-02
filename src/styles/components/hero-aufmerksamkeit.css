@@ -1,0 +1,88 @@
+/*
+ * 🦸 HERO-AUFMERKSAMKEIT CSS
+ * Deutsche Marketing-Architektur: Erste Sekunden entscheiden
+ * FUNKTION: Sofortige Aufmerksamkeit + Vertrauen schaffen
+ * SCOPE: Attention-Marketing + Hero-Section-Technik
+ */
+
+/* 🎯 HERO AUFMERKSAMKEITS-SYSTEM */
+.hero-aufmerksamkeit {
+  background: linear-gradient(
+    135deg,
+    var(--asphaltschwarz) 0%,
+    var(--asphaltschwarz-light) 100%
+  );
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-aufmerksamkeit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    var(--analyse-blau-alpha) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* 🚨 SOFORT-AUFMERKSAMKEIT ELEMENTE */
+.hero-haupttitel {
+  color: var(--analyse-blau-ueberschrift);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: var(--text-schatten);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-untertitel {
+  color: var(--text-hell);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  line-height: 1.4;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-markierung {
+  background: var(--glut-orange);
+  color: var(--asphaltschwarz);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+  display: inline-block;
+  margin: 0 0.3rem;
+}
+
+/* 📱 RESPONSIVE AUFMERKSAMKEIT */
+@media (max-width: 768px) {
+  .hero-aufmerksamkeit {
+    padding: 3rem 1rem;
+    min-height: 60vh;
+  }
+  
+  .hero-haupttitel {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-untertitel {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+  }
+}

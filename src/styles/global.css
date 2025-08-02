@@ -7,16 +7,19 @@
  * FOKUS: Klarheit, Seriosität, Vertrauen
  */
 
-/* 🎯 IMPORTS - Modularisierte CSS-Struktur */
-@import "base/variables.css";
-@import "base/typography.css";
+/* 🎯 IMPORTS - Deutsche Marketing-CSS-Architektur */
+@import "foundation/variables.css";
+@import "foundation/typography.css";
+@import "foundation/reset.css";
 @import "components/navigation.css";
-@import "components/hero.css";
+@import "components/hero-aufmerksamkeit.css";
+@import "components/inhalte-interesse.css";
+@import "components/nutzen-verlangen.css";
+@import "components/handlung-ausloeser.css";
 @import "components/buttons.css";
 @import "components/cards.css";
 @import "components/layout.css";
 @import "components/feedback.css";
-@import "components/content.css";
 @import "components/utilities.css";
 
 /* 🚨 WCAG-KONFORME ICON-FARBEN für Screenshot-Probleme */

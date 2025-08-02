@@ -1,0 +1,121 @@
+/*
+ * 💝 NUTZEN-VERLANGEN CSS  
+ * Deutsche Marketing-Architektur: Verlangen durch konkreten Nutzen
+ * FUNKTION: Emotionale Trigger + Social Proof + Benefits hervorheben
+ * SCOPE: Desire-Marketing + Conversion-Vorbereitung
+ */
+
+/* 💖 VERLANGEN-AUFBAU-SYSTEM */
+.nutzen-verlangen {
+  background: linear-gradient(
+    to bottom,
+    var(--asphaltschwarz) 0%,
+    var(--asphaltschwarz-light) 100%
+  );
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+}
+
+.nutzen-haupttitel {
+  color: var(--glut-orange);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.nutzen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nutzen-karte {
+  background: var(--asphaltschwarz-light);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nutzen-karte:hover {
+  border-color: var(--analyse-blau);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(123, 161, 179, 0.3);
+}
+
+.nutzen-icon {
+  font-size: 3rem;
+  color: var(--glut-orange);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.nutzen-titel {
+  color: var(--analyse-blau-light);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.nutzen-beschreibung {
+  color: var(--text-hell);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.nutzen-vorteil {
+  background: var(--glut-orange-alpha);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  color: var(--glut-orange);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0.25rem;
+}
+
+/* 🏆 SOCIAL PROOF BEREICH */
+.social-proof {
+  background: var(--analyse-blau-alpha);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 3rem 0;
+  border-left: 5px solid var(--analyse-blau);
+}
+
+.testimonial-text {
+  color: var(--text-weiss);
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  color: var(--analyse-blau-light);
+  font-weight: 600;
+}
+
+/* 📱 RESPONSIVE VERLANGEN */
+@media (max-width: 768px) {
+  .nutzen-verlangen {
+    padding: 3rem 1rem;
+  }
+  
+  .nutzen-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .nutzen-haupttitel {
+    font-size: 2rem;
+  }
+  
+  .nutzen-karte {
+    padding: 1.5rem;
+  }
+}

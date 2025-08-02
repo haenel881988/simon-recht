@@ -1,0 +1,203 @@
+/*
+ * 🚀 HANDLUNG-AUSLÖSER CSS
+ * Deutsche Marketing-Architektur: Konkrete Handlungen auslösen  
+ * FUNKTION: Call-to-Action + Kontakt + Urgency schaffen
+ * SCOPE: Action-Marketing + Conversion-Optimierung
+ */
+
+/* ⚡ HANDLUNGS-AUSLÖSUNG-SYSTEM */
+.handlung-bereich {
+  background: linear-gradient(
+    135deg,
+    var(--glut-orange-alpha) 0%,
+    var(--asphaltschwarz) 100%
+  );
+  padding: 4rem 2rem;
+  text-align: center;
+  margin: 3rem 0;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.handlung-bereich::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    var(--glut-orange-alpha) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.handlung-titel {
+  color: var(--glut-orange);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.handlung-untertitel {
+  color: var(--text-weiss);
+  font-size: 1.3rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* 🎯 HAUPTAKTION-BUTTON */
+.hauptaktion-button {
+  background: var(--glut-orange);
+  color: var(--asphaltschwarz);
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.5rem;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4);
+}
+
+.hauptaktion-button:hover {
+  background: var(--glut-orange-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 140, 0, 0.6);
+}
+
+.nebenakion-button {
+  background: transparent;
+  color: var(--analyse-blau-light);
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid var(--analyse-blau);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.nebenakion-button:hover {
+  background: var(--analyse-blau);
+  color: var(--text-weiss);
+  transform: translateY(-2px);
+}
+
+/* ⏰ DRINGLICHKEITS-ELEMENTE */
+.dringlichkeit {
+  background: var(--glut-orange-alpha);
+  border: 2px solid var(--glut-orange);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+}
+
+.dringlichkeit-text {
+  color: var(--glut-orange);
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* 📞 KONTAKT-BEREICH */
+.kontakt-bereich {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kontakt-option {
+  background: var(--asphaltschwarz-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--analyse-blau-alpha);
+  transition: all 0.3s ease;
+}
+
+.kontakt-option:hover {
+  border-color: var(--analyse-blau);
+  background: var(--analyse-blau-alpha);
+}
+
+.kontakt-icon {
+  font-size: 2rem;
+  color: var(--glut-orange);
+  margin-bottom: 1rem;
+}
+
+.kontakt-titel {
+  color: var(--analyse-blau-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.kontakt-info {
+  color: var(--text-hell);
+  font-size: 0.95rem;
+}
+
+/* 📱 RESPONSIVE HANDLUNG */
+@media (max-width: 768px) {
+  .handlung-bereich {
+    padding: 3rem 1rem;
+  }
+  
+  .handlung-titel {
+    font-size: 2.2rem;
+  }
+  
+  .hauptaktion-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .nebenakion-button {
+    padding: 0.9rem 2rem;
+    margin: 0.5rem 0;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .kontakt-bereich {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
