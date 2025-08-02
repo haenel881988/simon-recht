@@ -380,7 +380,14 @@ class UniversalProjectAnalyzer {
     );
 
     // SIMON'S KI-WORK-CONTEXT-BERECHNUNG
-    const kiRelevantScopes = ['ASTRO_COMPONENTS', 'CSS_DESIGN', 'INSTRUCTIONS', 'TODOS_MANAGEMENT', 'CONFIG', 'BUILD_SYSTEM'];
+    const kiRelevantScopes = [
+      "ASTRO_COMPONENTS",
+      "CSS_DESIGN",
+      "INSTRUCTIONS",
+      "TODOS_MANAGEMENT",
+      "CONFIG",
+      "BUILD_SYSTEM",
+    ];
     const kiWorkTokens = Array.from(this.stats.scopes.entries())
       .filter(([scope]) => kiRelevantScopes.includes(scope))
       .reduce((sum, [, data]) => sum + data.totalTokens, 0);
@@ -388,7 +395,7 @@ class UniversalProjectAnalyzer {
     if (totalTokens > 50000) {
       // KI-WORK-CONTEXT vs. PROJEKT-TOTAL
       const kiPercentage = Math.round((kiWorkTokens / totalTokens) * 100);
-      
+
       suggestions.push({
         type: "IMPLEMENT_CHUNKING",
         scope: "PROJECT_WIDE",
@@ -487,11 +494,11 @@ class UniversalProjectAnalyzer {
     for (const file of allFiles) {
       const fileName = path.basename(file.path, path.extname(file.path));
       const extension = path.extname(file.path);
-      
+
       // Normalisiere Filename: entferne bekannte Suffixe
       let baseFileName = fileName
-        .replace(/_(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, '')
-        .replace(/\.(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, '');
+        .replace(/_(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, "")
+        .replace(/\.(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, "");
 
       const fullBaseName = baseFileName + extension;
       const dirPath = path.dirname(file.path);
@@ -509,11 +516,11 @@ class UniversalProjectAnalyzer {
         const redundancyGroup = {
           basePattern: baseKey,
           files: files,
-          severity: this.assessFilenameRedundancySeverity(files)
+          severity: this.assessFilenameRedundancySeverity(files),
         };
 
         this.redundancyDetection.filenameRedundancies.push(redundancyGroup);
-        
+
         console.log(`  🚨 FILENAME-REDUNDANZ: ${baseKey}`);
         console.log(`     Severität: ${redundancyGroup.severity}`);
         files.forEach((f) => console.log(`     - ${f.path} (${f.scope})`));
@@ -1236,7 +1243,14 @@ class UniversalProjectAnalyzer {
     );
 
     // SIMON'S KI-WORK-CONTEXT-BERECHNUNG
-    const kiRelevantScopes = ['ASTRO_COMPONENTS', 'CSS_DESIGN', 'INSTRUCTIONS', 'TODOS_MANAGEMENT', 'CONFIG', 'BUILD_SYSTEM'];
+    const kiRelevantScopes = [
+      "ASTRO_COMPONENTS",
+      "CSS_DESIGN",
+      "INSTRUCTIONS",
+      "TODOS_MANAGEMENT",
+      "CONFIG",
+      "BUILD_SYSTEM",
+    ];
     const kiWorkTokens = Array.from(this.stats.scopes.entries())
       .filter(([scope]) => kiRelevantScopes.includes(scope))
       .reduce((sum, [, data]) => sum + data.totalTokens, 0);
@@ -1246,7 +1260,9 @@ class UniversalProjectAnalyzer {
     report += `🎯 **KI-WORK-CONTEXT-ANALYSE:**\n`;
     report += `- **Projekt-Total:** ${totalTokens.toLocaleString()} Tokens (inkl. irrelevante Bilder/Research)\n`;
     report += `- **KI-Work-Relevant:** ${kiWorkTokens.toLocaleString()} Tokens (${kiPercentage}% des Projekts)\n`;
-    report += `- **Filtered Out:** Bilder, Research-Docs, Archive (${(totalTokens - kiWorkTokens).toLocaleString()} Tokens)\n\n`;
+    report += `- **Filtered Out:** Bilder, Research-Docs, Archive (${(
+      totalTokens - kiWorkTokens
+    ).toLocaleString()} Tokens)\n\n`;
 
     if (kiWorkTokens > 64000) {
       report += `⚠️ **WORK-CONTEXT KRITISCH:** KI-relevante Bereiche überschreiten 64k Limit\n\n`;
@@ -1361,11 +1377,11 @@ class UniversalProjectAnalyzer {
       /^Thumbs\.db$/,
       /package-lock\.json$/, // 🚨 LOCK-FILES
       /yarn\.lock$/,
-      
+
       // 🎯 KI-IRRELEVANTE DATEIEN (SIMON'S FALSE-POSITIVE-STOPP)
       /\.webp$/i, // Bilder verzerren Token-Counts
       /\.jpg$/i,
-      /\.jpeg$/i, 
+      /\.jpeg$/i,
       /\.png$/i,
       /\.gif$/i,
       /\.svg$/i,
@@ -1375,12 +1391,12 @@ class UniversalProjectAnalyzer {
       /\.mov$/i,
       /\.avi$/i,
       /\.txt$/i, // Research-TXT-Files (book_1.txt etc.)
-      
+
       // FORSCHUNGS-/RESEARCH-VERZEICHNISSE (KI arbeitet selten damit)
       /recherche.*tiefen_recherche/i,
       /grundrecherche/i,
       /tiefenrecherche/i,
-      
+
       // Exclude all non-source files in tools/analyzer except .js/.cjs/.json/.md (README)
       /^tools\/analyzer\/((?!\.js$|\.cjs$|\.json$|README\.md$).)*$/i,
     ];

@@ -1,6 +1,11 @@
 # offen
 
 **unsortiertes**
+
+**_Idee interaktiver schriftlicher Onlinekurs_**
+
+Bevor wir loslegen möchte Simon mit der KI
+
 Was meinst du mit scope pattern? keine fremdwörter verwenden.
 Bitte phase 1 klar, einfach und deutlich formulieren. Was ist das Problem? --> Problembeschreibung --> Wie sieht die Lösung aus? Keine Fremdwörter verwenden, die KI muss beachten, dass der User, Simon, ein Laie ist.
 

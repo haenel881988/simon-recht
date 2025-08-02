@@ -1,0 +1,45 @@
+/* 
+ * SIMON-RECHT GLOBAL CSS - "NACHTSTAHL & WARNSIGNAL" DESIGN-SYSTEM (OLD VERSION)
+ * REDUNDANTE BACKUP-DATEI - ANALYZER-TEST
+ * REINE 3-FARBEN-REGEL (60/30/10): ASPHALTSCHWARZ - ANALYSE-BLAU - GLUT-ORANGE
+ * 
+ * VERBOTEN: Animationen, 4. Farbe, Überladung
+ * FOKUS: Klarheit, Seriosität, Vertrauen
+ */
+
+/* Legacy CSS Structure - Pre-Modularization */
+@import "base/variables.css";
+@import "base/typography.css";
+
+/* Body Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-primary);
+  background-color: var(--asphaltschwarz);
+  color: var(--text-hell);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--asphaltschwarz);
+  border-bottom: 2px solid var(--analyse-blau);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--asphaltschwarz-dark);
+  border-top: 2px solid var(--analyse-blau);
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+/* REDUNDANT OLD VERSION FOR ANALYZER TEST */
