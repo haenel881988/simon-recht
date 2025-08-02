@@ -235,11 +235,18 @@ class UniversalProjectAnalyzer {
     const scopePriority = [
       "DOCUMENTATION_CORE", // Neue Sub-Scopes zuerst!
       "DOCUMENTATION_TECHNICAL",
-      "DOCUMENTATION_WEBSITE",
+      "DOCUMENTATION_WEBSITE", 
       "DOCUMENTATION_HUB",
       "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
+      "ANALYZER_TOOLS", // Analyzer-Tools (spezifisch)
+      "LEGACY_RECHERCHE", // Legacy Recherche (spezifischste)
+      "LEGACY_CONTENT", // Legacy Content 
+      "LEGACY_DESIGN", // Legacy Design
+      "LEGACY_ZIELGRUPPE", // Legacy Zielgruppe
+      "TODOS_PRIORITAETEN", // TODO Prioritäten (spezifisch)
+      "TODOS_VERHALTENSMUSTER", // TODO Verhaltensmuster (spezifisch)
+      "TODOS_MANAGEMENT", // TODO Management (allgemein)
       "INSTRUCTIONS", // Höchste Priorität: .github/instructions/
-      "TODOS_MANAGEMENT", // Dann: docs/todos/
       "CSS_DESIGN", // Dann: src/styles/
       "ASTRO_COMPONENTS", // Dann: .astro Dateien
       "ASSETS", // Dann: public/
@@ -247,9 +254,7 @@ class UniversalProjectAnalyzer {
       "CONFIG", // Dann: Konfigurationen
       "CONTENT", // Dann: Content
       "LEGACY_DOCUMENTATION", // Legacy-Dokumentation (niedrigste Priorität)
-    ];
-
-    // Suche ersten passenden Scope (Einzel-Zuordnung)
+    ];    // Suche ersten passenden Scope (Einzel-Zuordnung)
     for (const scopeName of scopePriority) {
       if (this.scopePatterns[scopeName]) {
         for (const pattern of this.scopePatterns[scopeName]) {

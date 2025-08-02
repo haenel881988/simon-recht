@@ -22,6 +22,27 @@ const SCOPE_DEFINITIONS = {
   IDEENWERKSTATT: [
     /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt als separater Scope (NICHT anfassen!)
   ],
+  // 🔧 ANALYZER-TOOLS (spezifische Pattern zuerst!)
+  ANALYZER_TOOLS: [
+    /^tools\/analyzer\//, // Alle Analyzer-Tools
+    /^tools\/project-maintenance\//, // Project-Maintenance-Tools
+  ],
+  // 📄 LEGACY-WEBSITE-STRUKTUR SUB-SCOPES
+  LEGACY_RECHERCHE: [
+    /^docs\/website_struktur\/recherche\//, // Markt-Recherche & SEO-Strategien
+  ],
+  LEGACY_CONTENT: [
+    /^docs\/website_struktur\/content\//, // Content-Strukturen & Stories
+    /^docs\/website_struktur\/dynamische-seiten\//, // Blog-Content
+    /^docs\/website_struktur\/statische-seiten\//, // Static-Pages
+  ],
+  LEGACY_DESIGN: [
+    /^docs\/website_struktur\/website_design\//, // Design-System & CSS
+    /^docs\/website_struktur\/website_elemente\//, // Header/Footer etc.
+  ],
+  LEGACY_ZIELGRUPPE: [
+    /^docs\/website_struktur\/zielgruppe\//, // Persona & Targeting
+  ],
   // 🎯 ALLGEMEINE PATTERNS DANACH
   CSS_DESIGN: [
     /^src\/styles\//, // Nur src/styles/ Verzeichnis
@@ -47,7 +68,15 @@ const SCOPE_DEFINITIONS = {
     /instructions.*\.md$/, // Instructions-Dateien
   ],
   TODOS_MANAGEMENT: [
-    /^docs\/todos\//, // Nur docs/todos/ Verzeichnis
+    /^docs\/todos\/README\.md$/, // TODO Navigation-Hub
+    /^docs\/todos\/todos\.md$/, // Haupt-TODO-Liste  
+    /^docs\/todos\/struktur-migration-plan/, // Migration-Pläne
+  ],
+  TODOS_PRIORITAETEN: [
+    /^docs\/todos\/prioritaeten\//, // Prioritäts-Kategorien
+  ],
+  TODOS_VERHALTENSMUSTER: [
+    /^docs\/todos\/verhaltensmuster\//, // Verhaltensanalysen
   ],
   BUILD_SYSTEM: [
     /^tools\/build_check\/(?!logfiles\/archive)/, // Build-Tools aber NICHT alte Logfiles
