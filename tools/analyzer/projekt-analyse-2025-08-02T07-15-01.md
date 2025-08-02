@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 2.8.2025, 07:57:14  
-**Analysedauer:** 0.29 Sekunden  
+**Erstellt:** 2.8.2025, 09:15:01  
+**Analysedauer:** 0.32 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 71 |
-| **Zeilen gesamt** | 17’931 |
-| **Wörter gesamt** | 79’616 |
-| **Zeichen gesamt** | 782’754 |
-| **Geschätzte Tokens** | 103’529 |
+| **Dateien gesamt** | 78 |
+| **Zeilen gesamt** | 18’010 |
+| **Wörter gesamt** | 79’806 |
+| **Zeichen gesamt** | 785’407 |
+| **Geschätzte Tokens** | 103’779 |
 
 ---
 
@@ -22,11 +22,11 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 26 | 9’665 | 34’160 | 1314 |
-| **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
-| **TODOS_MANAGEMENT** | 5 | 1’275 | 15’889 | 3178 |
+| **UNCLASSIFIED** | 26 | 9’756 | 34’474 | 1326 |
+| **DOCUMENTATION** | 11 | 1’829 | 24’979 | 2271 |
+| **TODOS_MANAGEMENT** | 5 | 1’283 | 15’944 | 3189 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 8 | 1’505 | 5’688 | 711 |
+| **CSS_DESIGN** | 15 | 1’480 | 5’553 | 370 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
@@ -47,9 +47,11 @@
 - `public/assets/images/`
 - `public/`
 - `src/`
+- `tools/analyzer/tools/analyzer/`
+- `tools/analyzer/tools/`
 - `tools/`
 
-**🎯 EMPFEHLUNG:** 9 leere Verzeichnisse löschen
+**🎯 EMPFEHLUNG:** 11 leere Verzeichnisse löschen
 
 ### 🔄 REDUNDANTE VERZEICHNISSE
 
@@ -243,21 +245,21 @@
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope DOCUMENTATION hat 24963 Tokens (>10k GLOBAL LIMIT)
+### 1. ⚠️ Scope DOCUMENTATION hat 24979 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 34160 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34474 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15889 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15944 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
@@ -278,7 +280,7 @@
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 103529 Tokens (KI-Work-Context: 28952 = 28%)
+### 6. 🔔 Projekt-Total: 103779 Tokens (KI-Work-Context: 28872 = 28%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -291,9 +293,9 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 103’529 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 28’952 Tokens (28% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (74’577 Tokens)
+- **Projekt-Total:** 103’779 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 28’872 Tokens (28% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (74’907 Tokens)
 
 ✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
 
@@ -307,11 +309,11 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph03_Go-to-Market-Plan für Coaching-Launch_.md` | 5662 | 316 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md` | 5310 | 284 | DOCUMENTATION |
 | `docs/website_struktur/content/fallbeispiel_Story_formatted.md` | 5239 | 199 | CONTENT |
+| `tools/analyzer/universal-project-analyzer.cjs` | 5115 | 1420 | UNCLASSIFIED |
 | `docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md` | 5069 | 284 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
-| `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
-| `docs/todos/todos.md` | 3648 | 449 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3703 | 457 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
 
 ---

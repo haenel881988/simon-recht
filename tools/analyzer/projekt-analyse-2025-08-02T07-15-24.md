@@ -1,6 +1,6 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 2.8.2025, 08:10:30  
+**Erstellt:** 2.8.2025, 09:15:24  
 **Analysedauer:** 0.31 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 71 |
-| **Zeilen gesamt** | 17’939 |
-| **Wörter gesamt** | 79’658 |
-| **Zeichen gesamt** | 783’237 |
-| **Geschätzte Tokens** | 103’584 |
+| **Dateien gesamt** | 76 |
+| **Zeilen gesamt** | 17’963 |
+| **Wörter gesamt** | 79’685 |
+| **Zeichen gesamt** | 784’327 |
+| **Geschätzte Tokens** | 103’621 |
 
 ---
 
@@ -22,12 +22,12 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 26 | 9’665 | 34’160 | 1314 |
-| **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
+| **UNCLASSIFIED** | 26 | 9’756 | 34’474 | 1326 |
+| **DOCUMENTATION** | 11 | 1’829 | 24’979 | 2271 |
 | **TODOS_MANAGEMENT** | 5 | 1’283 | 15’944 | 3189 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 8 | 1’505 | 5’688 | 711 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
+| **CSS_DESIGN** | 13 | 1’433 | 5’395 | 415 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
 | **INSTRUCTIONS** | 1 | 24 | 318 | 318 |
@@ -47,9 +47,11 @@
 - `public/assets/images/`
 - `public/`
 - `src/`
+- `tools/analyzer/tools/analyzer/`
+- `tools/analyzer/tools/`
 - `tools/`
 
-**🎯 EMPFEHLUNG:** 9 leere Verzeichnisse löschen
+**🎯 EMPFEHLUNG:** 11 leere Verzeichnisse löschen
 
 ### 🔄 REDUNDANTE VERZEICHNISSE
 
@@ -243,14 +245,14 @@
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope DOCUMENTATION hat 24963 Tokens (>10k GLOBAL LIMIT)
+### 1. ⚠️ Scope DOCUMENTATION hat 24979 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 34160 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34474 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
@@ -278,7 +280,7 @@
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 103584 Tokens (KI-Work-Context: 29007 = 28%)
+### 6. 🔔 Projekt-Total: 103621 Tokens (KI-Work-Context: 28714 = 28%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
@@ -291,9 +293,9 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 103’584 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 29’007 Tokens (28% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (74’577 Tokens)
+- **Projekt-Total:** 103’621 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 28’714 Tokens (28% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (74’907 Tokens)
 
 ✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
 
@@ -307,9 +309,9 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph03_Go-to-Market-Plan für Coaching-Launch_.md` | 5662 | 316 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md` | 5310 | 284 | DOCUMENTATION |
 | `docs/website_struktur/content/fallbeispiel_Story_formatted.md` | 5239 | 199 | CONTENT |
+| `tools/analyzer/universal-project-analyzer.cjs` | 5115 | 1420 | UNCLASSIFIED |
 | `docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md` | 5069 | 284 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
-| `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
 | `docs/todos/todos.md` | 3703 | 457 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
