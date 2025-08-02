@@ -238,7 +238,10 @@ class UniversalProjectAnalyzer {
       "DOCUMENTATION_WEBSITE", 
       "DOCUMENTATION_HUB",
       "IDEENWERKSTATT", // Separater Scope für Ideenwerkstatt
-      "ANALYZER_TOOLS", // Analyzer-Tools (spezifisch)
+      "ANALYZER_CORE_TOOLS", // Haupt-Analyzer-Tools (spezifischste)
+      "ANALYZER_REPORTS", // Analyzer Reports
+      "ANALYZER_MODULES", // Analyzer Module  
+      "ANALYZER_LEGACY_TOOLS", // Legacy Analyzer Tools
       "LEGACY_RECHERCHE", // Legacy Recherche (spezifischste)
       "LEGACY_CONTENT", // Legacy Content 
       "LEGACY_DESIGN", // Legacy Design

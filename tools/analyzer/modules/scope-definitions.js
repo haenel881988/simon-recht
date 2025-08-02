@@ -22,9 +22,23 @@ const SCOPE_DEFINITIONS = {
   IDEENWERKSTATT: [
     /^docs\/00_ideenwerkstatt\//, // Ideenwerkstatt als separater Scope (NICHT anfassen!)
   ],
-  // 🔧 ANALYZER-TOOLS (spezifische Pattern zuerst!)
-  ANALYZER_TOOLS: [
-    /^tools\/analyzer\//, // Alle Analyzer-Tools
+  // 🔧 ANALYZER-TOOLS SUB-SCOPES
+  ANALYZER_CORE_TOOLS: [
+    /^tools\/analyzer\/universal-project-analyzer\.cjs$/, // Haupt-Analyzer
+    /^tools\/analyzer\/master-analyzer\.cjs$/, // Master-Tool
+    /^tools\/analyzer\/contradiction-scanner\.cjs$/, // Widerspruchs-Scanner
+  ],
+  ANALYZER_REPORTS: [
+    /^tools\/analyzer\/.*\.md$/, // Alle Reports (.md)
+  ],
+  ANALYZER_MODULES: [
+    /^tools\/analyzer\/modules\//, // Module-Verzeichnis
+    /^tools\/analyzer\/core\//, // Core-Module  
+    /^tools\/analyzer\/scopes\//, // Scope-spezifische Tools
+  ],
+  ANALYZER_LEGACY_TOOLS: [
+    /^tools\/analyzer\/.*\.cjs$/, // Remaining .cjs Tools
+    /^tools\/analyzer\/.*\.js$/, // JavaScript Tools
     /^tools\/project-maintenance\//, // Project-Maintenance-Tools
   ],
   // 📄 LEGACY-WEBSITE-STRUKTUR SUB-SCOPES
