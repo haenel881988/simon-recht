@@ -169,85 +169,50 @@ src/styles/
 
 ---
 
-**🎯 SIMON'S REVOLUTION:** Deutsche Marketing-Weisheit + Technische Exzellenz = Intuitive CSS-Architektur!
+**🎯 SIMON'S REVOLUTION:** Deutsche Marketing-Weisheit + English Tech Standards = Zukunftssichere CSS-Architektur!
 
-**🚀 ERFOLG:** Logische Dateinamen → Bessere Wartbarkeit → Höhere Conversion-Rates!
+**🚀 ERFOLG:** AIDA Marketing-Flow + International Standards = Optimal für KI-Zeitalter!
 
 ---
 
-## 📚 **DEUTSCHES CSS-GLOSSAR (FREMDWORT-ERKLÄRER):**
+## 📚 **ENGLISH TERMS → GLOSSAR:**
 
-### **🏗️ FOUNDATION = GRUNDLAGEN:**
+**Alle englischen/technischen Begriffe sind detailliert erklärt in:** → **[📖 glossar.md](glossar.md)**
 
-```
-🔍 WAS IST DAS?
-Foundation = Grundlagen-CSS, das NIEMALS verändert wird
-= Basis-System für Farben, Schriften, Browser-Reset
+- **Foundation** = Grundlagen-CSS
+- **Components** = Wiederverwendbare Bausteine  
+- **Utilities** = Helper-CSS-Klassen
+- **Responsive** = Bildschirm-Anpassung
+- **Layout** = Struktureller Aufbau
+- **Feedback** = Benutzer-Rückmeldungen
 
-📁 VERZEICHNIS: foundation/
-├── variables.css = Farb-System (asphaltschwarz, stormy-blue, glut-orange)
-├── typography.css = Schrift-System (Überschriften, Text-Größen)
-└── reset.css = Browser-Vereinheitlichung (Chrome = Firefox = Safari)
+**Simon's Englisch-Lernstrategie:** Status Quo Terminologie verwenden → KI-Zeitalter-Adaptabilität stärken
 
-💡 SIMON'S NUTZEN:
-Einmal definiert → überall verwendet → nie wieder ändern müssen
-```
+---
 
-### **🎯 COMPONENTS = BAUSTEINE:**
+## 🎯 **STRUKTUR-ÜBERSICHT (English Standard Terms):**
 
 ```
-🔍 WAS IST DAS?
-Components = Wiederverwendbare CSS-Bausteine
-= Einzelne Website-Teile (Navigation, Buttons, Cards etc.)
-
-📁 VERZEICHNIS: components/
-├── hero-aufmerksamkeit.css = Erste Sektion der Website
-├── inhalte-interesse.css = Content-Bereiche
-├── nutzen-verlangen.css = Vorteile + Testimonials
-├── handlung-ausloeser.css = Call-to-Action Buttons
-├── navigation.css = Menü + Links
-├── buttons.css = Alle Button-Arten
-├── cards.css = Info-Kästen
-├── layout.css = Grundstruktur-Layout
-├── feedback.css = Formulare + Rückmeldungen
-└── utilities.css = Hilfs-Tools (Barrierefreiheit etc.)
-
-💡 SIMON'S NUTZEN:
-Jeder Baustein = Eine Datei → Leicht zu finden → Leicht zu ändern
+src/styles/
+├── global.css                      # Master Import Hub
+├── foundation/                     # Static Base System
+│   ├── variables.css              # Color System, Fonts, Breakpoints
+│   ├── reset.css                  # CSS Reset/Normalize  
+│   └── typography.css             # Font System (global)
+└── components/                    # Reusable Components
+    ├── hero-aufmerksamkeit.css    # Marketing: ATTENTION
+    ├── inhalte-interesse.css      # Marketing: INTEREST
+    ├── nutzen-verlangen.css       # Marketing: DESIRE
+    ├── handlung-ausloeser.css     # Marketing: ACTION
+    ├── navigation.css             # Technical: Navigation
+    ├── buttons.css                # Technical: Button System
+    ├── cards.css                  # Technical: Card Components
+    ├── layout.css                 # Technical: Layout System
+    ├── feedback.css               # Technical: Forms & Status
+    └── utilities.css              # Technical: Helper Classes
 ```
 
-### **🔧 UTILITIES = HILFS-WERKZEUGE:**
-
-```
-🔍 WAS IST DAS?
-Utilities = Kleine Hilfs-Tools für spezielle Fälle
-= Barrierefreiheit, Verstecken von Elementen, Schnell-Fixes
-
-📄 DATEI: utilities.css
-├── .visually-hidden = Versteckt Text vor Augen, Screenreader liest vor
-├── .skip-link = Springt zum Hauptinhalt (Tastatur-Navigation)
-├── .text-center = Text zentrieren
-└── .margin-auto = Automatische Abstände
-
-💡 SIMON'S NUTZEN:
-Seltene Spezialfälle → Muss nicht neu erfinden → Copy-Paste fertig
-```
-
-### **📱 RESPONSIVE = BILDSCHIRM-ANPASSUNG:**
-
-```
-🔍 WAS IST DAS?
-Responsive = Website passt sich Bildschirmgröße an
-= Handy-optimiert + Tablet-optimiert + Desktop-optimiert
-
-📁 VERZEICHNIS: responsive/
-├── mobile.css = Smartphone-Optimierung
-├── tablet.css = Tablet-Optimierung
-└── desktop.css = Computer-Optimierung
-
-💡 SIMON'S NUTZEN:
-Website sieht auf JEDEM Gerät perfekt aus → Mehr Besucher → Mehr Kunden
-```
+**� Hybrid-Approach:** Marketing-Components = Deutsche Namen, Technical-Components = English Standards
 
 ---
 
