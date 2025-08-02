@@ -29,12 +29,13 @@
 
 **ZWINGEND ERFORDERLICH VOR JEDER DATEI-OPERATION:**
 
-1. **ANALYZER-REDUNDANZ-CHECK:** `node tools/analyzer/universal-project-analyzer.cjs` → 0 Filename-Redundanzen
-2. **PRE-CLEANUP:** Existierende redundante Dateien entfernen BEVOR neue erstellt werden
-3. **MIGRATION-ONLY:** Inhalte verschieben, nicht kopieren
-4. **POST-VALIDATION:** Analyzer bestätigt 0 neue Redundanzen nach Änderung
+1. **CONTENT-DESTRUCTION-CHECK:** Siehe [🛡️ Datei-Operations-Sicherheit](instructions/project/datei-operations-sicherheit.md)
+2. **ANALYZER-REDUNDANZ-CHECK:** `node tools/analyzer/universal-project-analyzer.cjs` → 0 Filename-Redundanzen
+3. **COPY-FIRST-PRINCIPLE:** NIEMALS Move-Item ohne explizite Lösch-Anforderung
+4. **PRE-CLEANUP:** Existierende redundante Dateien entfernen BEVOR neue erstellt werden
+5. **POST-VALIDATION:** Analyzer bestätigt 0 neue Redundanzen nach Änderung
 
-**EXCEPTION-TRIGGER:** Bei erkannten Redundanzen sofort stoppen und bereinigen!
+**EXCEPTION-TRIGGER:** Bei destruktiven Operationen ohne explizite Lösch-Anforderung → SOFORT STOPPEN!
 
 ---
 

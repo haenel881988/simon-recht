@@ -688,11 +688,13 @@ class UniversalProjectAnalyzer {
     }
 
     // Documentation - erweiterte Pattern-Erkennung
-    if (filePath.toLowerCase().includes("readme") || 
-        filePath.includes("docs/") ||
-        filePath.includes("docs\\") ||
-        filePath.includes("/documentation/") ||
-        filePath.includes("\\documentation\\")) {
+    if (
+      filePath.toLowerCase().includes("readme") ||
+      filePath.includes("docs/") ||
+      filePath.includes("docs\\") ||
+      filePath.includes("/documentation/") ||
+      filePath.includes("\\documentation\\")
+    ) {
       return "DOCUMENTATION";
     }
 

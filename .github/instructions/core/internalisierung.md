@@ -50,6 +50,33 @@
 - ✅ **ANALYZER-ENHANCEMENT:** Tool erweitern für bessere Redundanz-Erkennung
 - ✅ **ZERO-REDUNDANCY-GOAL:** Jede Regel nur einmal in Instructions-System
 
+**🛡️ SIMON'S CONTENT-DESTRUCTION-PREVENTION-ZWANG (INTERNALISIERT 02.08.2025):**
+
+**ABSOLUT VERBOTEN - NIEMALS OHNE EXPLICIT REQUEST:**
+
+- ❌ **Move-Item** (DESTRUKTIV: Löscht Original)
+- ❌ **Remove-Item** (DESTRUKTIV: Unwiederbringlich)  
+- ❌ **del, rm, mv** (DESTRUKTIV: Terminal-Löschungen)
+- ❌ **replace_string_in_file** für komplette Datei-Erneuerung
+- ❌ **Modularisierung** die Original-Content zerstört
+
+**ZWINGEND ERFORDERLICH VOR JEDER DATEI-OPERATION:**
+
+1. **CONTENT-VALUE-ASSESSMENT:** Ist diese Datei kritisch? (README, Documentation, Instructions)
+2. **EXPLICIT-DESTRUCTION-CHECK:** Hat Simon explizit LÖSCHUNG gefordert?
+3. **COPY-FIRST-PRINCIPLE:** `Copy-Item` DANN umbenennen, Original prüfen
+4. **BACKUP-VERIFICATION:** Git-Status bestätigen vor destruktiven Operationen
+5. **PRESERVATION-VALIDATION:** Bei Unsicherheit → Exception werfen, Simon fragen
+
+**SICHERE OPERATIONEN (ERLAUBT):**
+
+- ✅ **Copy-Item** (SAFE: Original bleibt)
+- ✅ **create_file** (SAFE: Neue Datei)
+- ✅ **Rename nach Copy** (SAFE: Original gesichert)
+- ✅ **Git-basierte Archivierung** (SAFE: Git-Historie)
+
+**EXCEPTION-TRIGGER:** Bei destruktiven Operationen ohne explizite Lösch-Anforderung → Sofort stoppen!
+
 **� WORKFLOW-COMPLIANCE-ZWANG (INTERNALISIERT 02.08.2025):**
 
 **🚨 ABSOLUTER WORKFLOW-BYPASS-VERHINDERER:**
