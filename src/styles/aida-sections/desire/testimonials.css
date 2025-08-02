@@ -1,0 +1,190 @@
+/*
+ * 💖 TESTIMONIALS - DESIRE LAYER
+ * AIDA: D = DESIRE (Social Proof & Erfolgsgeschichten)
+ * Kundenstimmen für Vertrauen und Verlangen
+ */
+
+/* 🗣️ TESTIMONIALS GRID */
+.testimonials-section {
+  background: var(--asphaltschwarz-light);
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.testimonials-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--glut-orange) 0%,
+    var(--analyse-blau) 50%,
+    var(--glut-orange) 100%
+  );
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 💬 EINZELNES TESTIMONIAL */
+.testimonial-card {
+  background: var(--asphaltschwarz);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  border: 2px solid var(--analyse-blau-alpha);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  border-color: var(--analyse-blau);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 123, 191, 0.2);
+}
+
+.testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: -1rem;
+  left: 2rem;
+  font-size: 6rem;
+  color: var(--glut-orange);
+  font-family: Georgia, serif;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+/* 📝 TESTIMONIAL CONTENT */
+.testimonial-text {
+  color: var(--text-weiss);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.testimonial-highlight {
+  color: var(--glut-orange);
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* 👤 TESTIMONIAL AUTHOR */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--analyse-blau-alpha);
+  padding-top: 1.5rem;
+}
+
+.testimonial-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--analyse-blau) 0%,
+    var(--glut-orange) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--asphaltschwarz);
+  font-weight: 900;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.testimonial-info {
+  flex: 1;
+}
+
+.testimonial-name {
+  color: var(--analyse-blau-light);
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-role {
+  color: var(--text-medium);
+  font-size: 0.875rem;
+}
+
+/* ⭐ RATING SYSTEM */
+.testimonial-rating {
+  display: flex;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.rating-star {
+  color: var(--glut-orange);
+  font-size: 1.25rem;
+}
+
+/* 🎯 FEATURED TESTIMONIAL */
+.testimonial-featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    135deg,
+    var(--asphaltschwarz) 0%,
+    var(--asphaltschwarz-light) 100%
+  );
+  border-color: var(--glut-orange);
+  position: relative;
+}
+
+.testimonial-featured::after {
+  content: '⭐ FEATURED';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--glut-orange);
+  color: var(--asphaltschwarz);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 📱 RESPONSIVE TESTIMONIALS */
+@media (max-width: 768px) {
+  .testimonials-section {
+    padding: 3rem 1rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .testimonial-card {
+    padding: 2rem;
+  }
+  
+  .testimonial-card::before {
+    font-size: 4rem;
+    top: -0.5rem;
+    left: 1rem;
+  }
+  
+  .testimonial-text {
+    font-size: 1rem;
+  }
+  
+  .testimonial-featured {
+    grid-column: auto;
+  }
+}

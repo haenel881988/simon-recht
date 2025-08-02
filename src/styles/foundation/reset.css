@@ -1,0 +1,97 @@
+/*
+ * 🏗️ CSS RESET & NORMALIZE - FOUNDATION LAYER
+ * Zero-Redundancy CSS-Reset für Simon's Website
+ * ZWECK: Browser-Inkonsistenzen eliminieren
+ */
+
+/* 🔄 CSS RESET - Modern Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-primary);
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--asphaltschwarz);
+  color: var(--text-weiss);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 🎯 SEMANTIC HTML RESET */
+main,
+section,
+article,
+aside,
+nav,
+header,
+footer {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  margin: 0;
+}
+
+p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+/* 🎯 ACCESSIBILITY FOUNDATION */
+[hidden] {
+  display: none !important;
+}
+
+*:focus {
+  outline: 2px solid var(--glut-orange);
+  outline-offset: 2px;
+}
+
+/* 🎯 PRINT-FRIENDLY RESET */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}

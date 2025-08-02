@@ -1,7 +1,7 @@
 # 🤖 UNIVERSELLE PROJEKT-ANALYSE - simon-recht
 
-**Erstellt:** 2.8.2025, 08:37:12  
-**Analysedauer:** 0.32 Sekunden  
+**Erstellt:** 2.8.2025, 10:07:46  
+**Analysedauer:** 0.30 Sekunden  
 **Tool-Version:** v1.0 + Verification
 
 ---
@@ -10,11 +10,11 @@
 
 | Metrik | Wert |
 |--------|------|
-| **Dateien gesamt** | 77 |
-| **Zeilen gesamt** | 17’913 |
-| **Wörter gesamt** | 79’553 |
-| **Zeichen gesamt** | 782’473 |
-| **Geschätzte Tokens** | 103’449 |
+| **Dateien gesamt** | 81 |
+| **Zeilen gesamt** | 18’379 |
+| **Wörter gesamt** | 80’872 |
+| **Zeichen gesamt** | 795’297 |
+| **Geschätzte Tokens** | 105’166 |
 
 ---
 
@@ -22,11 +22,11 @@
 
 | Scope | Dateien | Zeilen | Tokens | Avg/Datei |
 |-------|---------|--------|--------|-----------|
-| **UNCLASSIFIED** | 26 | 9’665 | 34’160 | 1314 |
-| **DOCUMENTATION** | 11 | 1’824 | 24’963 | 2269 |
-| **TODOS_MANAGEMENT** | 5 | 1’283 | 15’944 | 3189 |
+| **UNCLASSIFIED** | 26 | 9’756 | 34’474 | 1326 |
+| **DOCUMENTATION** | 11 | 1’829 | 24’979 | 2271 |
+| **TODOS_MANAGEMENT** | 9 | 1’510 | 16’686 | 1854 |
 | **CONTENT** | 6 | 1’590 | 14’810 | 2468 |
-| **CSS_DESIGN** | 14 | 1’479 | 5’553 | 397 |
+| **CSS_DESIGN** | 14 | 1’622 | 6’198 | 443 |
 | **ASTRO_COMPONENTS** | 7 | 1’456 | 5’470 | 781 |
 | **CONFIG** | 3 | 435 | 1’452 | 484 |
 | **ASSETS** | 2 | 107 | 644 | 322 |
@@ -55,27 +55,32 @@
 
 ### 🔄 REDUNDANTE VERZEICHNISSE
 
-#### 1. `docs/website_struktur/dynamische-seiten/blog` ↔ `src/content/blog`
+#### 1. `docs` ↔ `docs/todos/prioritaeten/hoch`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
 
-#### 2. `docs/website_struktur/dynamische-seiten/blog` ↔ `src/pages/blog`
+#### 2. `docs/website_struktur/dynamische-seiten/blog` ↔ `src/content/blog`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
 
-#### 3. `docs/website_struktur/content` ↔ `src/content`
+#### 3. `docs/website_struktur/dynamische-seiten/blog` ↔ `src/pages/blog`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
 
-#### 4. `src/content/blog` ↔ `src/pages/blog`
+#### 4. `docs/website_struktur/content` ↔ `src/content`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
 
-#### 5. `src/content/pages` ↔ `src/pages`
+#### 5. `src/content/blog` ↔ `src/pages/blog`
+
+- **Grund:** Ähnliche Namen oder Zwecke
+- **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
+
+#### 6. `src/content/pages` ↔ `src/pages`
 
 - **Grund:** Ähnliche Namen oder Zwecke
 - **🎯 EMPFEHLUNG:** Verzeichnisse zusammenführen oder umbenennen
@@ -117,6 +122,10 @@
 | `tools/analyzer/universal-project-analyzer.cjs` | UNCLASSIFIED | BUILD_SYSTEM | Datei gehört besser zu BUILD_SYSTEM |
 | `tools/media/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `tools/project-maintenance/README.md` | UNCLASSIFIED | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/todos/prioritaeten/hoch/aktuelle-krisen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/todos/prioritaeten/mittel/technische-verbesserungen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/todos/prioritaeten/niedrig/optimierungen.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
+| `docs/todos/prioritaeten/README.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/README.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/struktur-migration-plan.json` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
 | `docs/todos/struktur-migration-plan.md` | TODOS_MANAGEMENT | DOCUMENTATION | Datei gehört besser zu DOCUMENTATION |
@@ -136,7 +145,7 @@
 
 ### ⚠️ STRUKTUR-VERLETZUNGEN
 
-#### README-PLACEMENT (12 Verletzungen)
+#### README-PLACEMENT (14 Verletzungen)
 
 - **[`LOW`]** `docs/00_ideenwerkstatt/dggp/README.md`
   - Erwartet: Verzeichnis-Root
@@ -162,7 +171,13 @@
 - **[`LOW`]** `tools/project-maintenance/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
+- **[`LOW`]** `docs/todos/prioritaeten/README.md`
+  - Erwartet: Verzeichnis-Root
+  - Aktuell: Unterverzeichnis
 - **[`LOW`]** `docs/todos/README.md`
+  - Erwartet: Verzeichnis-Root
+  - Aktuell: Unterverzeichnis
+- **[`LOW`]** `src/styles/README.md`
   - Erwartet: Verzeichnis-Root
   - Aktuell: Unterverzeichnis
 - **[`LOW`]** `public/assets/README.md`
@@ -177,7 +192,7 @@
 
 ### 🏷️ NAMING-INKONSISTENZEN
 
-#### CAMELCASE_IN_MARKDOWN (19 Dateien)
+#### CAMELCASE_IN_MARKDOWN (21 Dateien)
 
 - **[`LOW`]** `docs/00_ideenwerkstatt/dggp/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
@@ -205,11 +220,15 @@
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `tools/project-maintenance/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
+- **[`LOW`]** `docs/todos/prioritaeten/README.md`
+  - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/todos/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/website_struktur/content/fallbeispiel_Story_formatted.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `docs/website_struktur/website_design/60-30-10-PLUS-FLEX-SYSTEM.md`
+  - **Empfehlung:** kebab-case für Markdown-Dateien
+- **[`LOW`]** `src/styles/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
 - **[`LOW`]** `public/assets/README.md`
   - **Empfehlung:** kebab-case für Markdown-Dateien
@@ -245,21 +264,21 @@
 
 ## 🏗️ MODULARISIERUNGS-EMPFEHLUNGEN
 
-### 1. ⚠️ Scope DOCUMENTATION hat 24963 Tokens (>10k GLOBAL LIMIT)
+### 1. ⚠️ Scope DOCUMENTATION hat 24979 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** DOCUMENTATION
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 2. ⚠️ Scope UNCLASSIFIED hat 34160 Tokens (>10k GLOBAL LIMIT)
+### 2. ⚠️ Scope UNCLASSIFIED hat 34474 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** UNCLASSIFIED
 - **Aktion:** Aufteilen in Sub-Scopes oder separate Verzeichnisse
 - **Priorität:** HIGH
 
-### 3. ⚠️ Scope TODOS_MANAGEMENT hat 15944 Tokens (>10k GLOBAL LIMIT)
+### 3. ⚠️ Scope TODOS_MANAGEMENT hat 16686 Tokens (>10k GLOBAL LIMIT)
 
 - **Typ:** SPLIT_SCOPE
 - **Scope:** TODOS_MANAGEMENT
@@ -280,12 +299,12 @@
 - **Aktion:** Neue Scope-Pattern definieren oder Dateien reorganisieren
 - **Priorität:** MEDIUM
 
-### 6. 🔔 Projekt-Total: 103449 Tokens (KI-Work-Context: 28872 = 28%)
+### 6. ⚠️ Projekt-Total: 105166 Tokens (KI-Work-Context: 30259 = 29%)
 
 - **Typ:** IMPLEMENT_CHUNKING
 - **Scope:** PROJECT_WIDE
 - **Aktion:** HINWEIS: KI arbeitet nur mit relevanten Scopes, nicht Vollprojekt. Bei Token-Warnings: Scope-fokussierte Arbeit nutzen.
-- **Priorität:** MEDIUM
+- **Priorität:** HIGH
 
 
 ---
@@ -293,13 +312,16 @@
 ## 🤖 KI-ARBEITSEMPFEHLUNGEN (WORK-CONTEXT-OPTIMIERT)
 
 🎯 **KI-WORK-CONTEXT-ANALYSE:**
-- **Projekt-Total:** 103’449 Tokens (inkl. irrelevante Bilder/Research)
-- **KI-Work-Relevant:** 28’872 Tokens (28% des Projekts)
-- **Filtered Out:** Bilder, Research-Docs, Archive (74’577 Tokens)
+- **Projekt-Total:** 105’166 Tokens (inkl. irrelevante Bilder/Research)
+- **KI-Work-Relevant:** 30’259 Tokens (29% des Projekts)
+- **Filtered Out:** Bilder, Research-Docs, Archive (74’907 Tokens)
 
-✅ **WORK-CONTEXT OK:** KI kann effizient mit relevanten Bereichen arbeiten
+⚠️ **WORK-CONTEXT WARNUNG:** KI-relevante Bereiche werden groß
 
-**Arbeitsweise:** Multi-Scope-Operationen möglich, Scope-Trennung trotzdem sinnvoll
+**Empfohlene Arbeitsweise:**
+1. **Scope-fokussierte Arbeit** bevorzugen für Effizienz
+2. **Multi-Scope nur bei Abhängigkeiten** (CSS+Astro Components)
+3. **Token-Monitoring** bei komplexen Operationen
 
 ### 📋 TOP TOKEN-INTENSIVE DATEIEN
 
@@ -309,11 +331,11 @@
 | `docs/website_struktur/recherche/tiefen_recherche/ph03_Go-to-Market-Plan für Coaching-Launch_.md` | 5662 | 316 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph04_Digitale Bildung_ Selbstvertretung für Laien_.md` | 5310 | 284 | DOCUMENTATION |
 | `docs/website_struktur/content/fallbeispiel_Story_formatted.md` | 5239 | 199 | CONTENT |
+| `tools/analyzer/universal-project-analyzer.cjs` | 5115 | 1420 | UNCLASSIFIED |
 | `docs/website_struktur/recherche/tiefen_recherche/ph01_Coachingmarkt DACH_ Simon Recht Analyse_.md` | 5069 | 284 | DOCUMENTATION |
 | `docs/website_struktur/recherche/tiefen_recherche/ph02_SEO- und Content-Strategie DACH_.md` | 5061 | 394 | DOCUMENTATION |
-| `tools/analyzer/universal-project-analyzer.cjs` | 4801 | 1329 | UNCLASSIFIED |
 | `docs/todos/verhaltensmuster/vollstaendige_analyse_backup.md` | 4773 | 66 | TODOS_MANAGEMENT |
-| `docs/todos/todos.md` | 3703 | 457 | TODOS_MANAGEMENT |
+| `docs/todos/todos.md` | 3666 | 494 | TODOS_MANAGEMENT |
 | `src/content/blog/mindset-gegen-grosskonzern.md` | 3595 | 634 | CONTENT |
 
 ---

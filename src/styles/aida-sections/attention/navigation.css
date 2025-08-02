@@ -1,0 +1,84 @@
+/*
+ * 🧭 SIMON'S NAVIGATION SYSTEM
+ * Extracted from global.css - Navigation-specific styles
+ * WCAG-konforme Navigation mit 60/30/10 Farbsystem
+ */
+
+/* 🧭 NAVBAR CORE SYSTEM */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  color: var(
+    --navigation-optimiert
+  ); /* ✅ WEISSE NAVIGATION: 15.8:1 Kontrast */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: var(--glut-orange); /* ✅ Hover in Glut-Orange */
+  background-color: rgba(
+    138,
+    180,
+    199,
+    0.1
+  ); /* ✅ Subtile Analyse-Blau Hintergrund */
+  text-shadow: var(--text-schatten);
+}
+
+.navbar-link.active {
+  color: var(--glut-orange); /* ✅ Aktiver Link in Glut-Orange */
+  background-color: rgba(138, 180, 199, 0.15);
+  font-weight: 600;
+}
+
+/* 🔄 RESPONSIVE NAVIGATION */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  .navbar-link {
+    padding: 1rem;
+    border-bottom: 1px solid var(--analyse-blau);
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* 🎯 MOBILE HAMBURGER MENU */
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--navigation-optimiert);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+}

@@ -1,0 +1,156 @@
+/*
+ * 🛡️ CREDIBILITY & TRUST - INTEREST LAYER
+ * AIDA: I = INTEREST (Vertrauen aufbauen)
+ * Trust-Elements für Simon's Expertise
+ */
+
+/* 🏆 CREDENTIALS SECTION */
+.credibility-section {
+  background: linear-gradient(
+    to right,
+    var(--asphaltschwarz) 0%,
+    var(--asphaltschwarz-light) 50%,
+    var(--asphaltschwarz) 100%
+  );
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 🎓 EINZELNE CREDENTIALS */
+.credential-item {
+  background: var(--asphaltschwarz);
+  border: 2px solid var(--analyse-blau-alpha);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.credential-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--glut-orange) 0%,
+    var(--analyse-blau) 100%
+  );
+}
+
+.credential-icon {
+  font-size: 3rem;
+  color: var(--glut-orange);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.credential-title {
+  color: var(--analyse-blau-light);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.credential-description {
+  color: var(--text-hell);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 📊 TRUST INDICATORS */
+.trust-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  text-align: center;
+  color: var(--text-hell);
+}
+
+.trust-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--glut-orange);
+  display: block;
+  line-height: 1;
+}
+
+.trust-label {
+  font-size: 0.875rem;
+  color: var(--analyse-blau-light);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 🔒 SECURITY & PRIVACY BADGES */
+.security-badges {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.security-badge {
+  background: var(--asphaltschwarz-light);
+  border: 1px solid var(--analyse-blau-alpha);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-weiss);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.security-badge-icon {
+  color: var(--glut-orange);
+  font-size: 1.25rem;
+}
+
+/* 📱 RESPONSIVE CREDIBILITY */
+@media (max-width: 768px) {
+  .credibility-section {
+    padding: 3rem 1rem;
+  }
+  
+  .credentials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .trust-indicators {
+    gap: 2rem;
+  }
+  
+  .trust-number {
+    font-size: 2.5rem;
+  }
+  
+  .security-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
