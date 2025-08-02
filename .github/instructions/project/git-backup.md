@@ -18,11 +18,31 @@
 
 ---
 
-## 📝 **GIT-COMMIT-MESSAGE-FORMAT:**
+## 📝 **GIT-COMMIT-MESSAGE-FORMAT (ERWEITERT):**
 
 ```
 [SCOPE] Kurzbeschreibung
 
+=== SIMON'S ORIGINAL-PROMPT ===
+"{EXAKTER USER-PROMPT von Simon}"
+
+=== KI-HERAUSFORDERUNGEN ===
+🧠 Prompt-Interpretation:
+- Mehrdeutige Begriffe erkannt: [Begriff] → [KI-Interpretation]
+- Scope-Komplexität: [Anzahl Bereiche] gleichzeitig bearbeitet
+- Token-Budget-Challenge: [Aktueller Context] / [Limit]
+
+🔧 Technische Hürden:
+- Tool-Limitations: [Welche Tools stießen an Grenzen]
+- Code-Dependencies: [Unerwartete Abhängigkeiten]
+- Validation-Challenges: [Build-Checker Anomalien]
+
+💡 KI-Lösungsansatz:
+- Gewählte Strategie: [Warum dieser Ansatz]
+- Alternative Wege: [Was wurde nicht gewählt + Grund]
+- Unerwartete Erkenntnisse: [Neue Patterns entdeckt]
+
+=== ÄNDERUNGSPROTOKOLL ===
 Geändert:
 - Spezifische Datei/Funktion 1
 - Spezifische Datei/Funktion 2
@@ -31,10 +51,10 @@ Nächste Schritte:
 - Konkreter nächster Task
 - Abhängigkeiten/Validierung
 
-Änderungsprotokoll:
-- Problem/Grund für Änderung
-- Implementierte Lösung
-- Erwarteter Impact
+KI-Erkenntnisse für Future-Sessions:
+- Was funktionierte besonders gut
+- Welche Patterns vermieden werden sollten
+- Scope-spezifische Lessons-Learned
 ```
 
 ---
@@ -42,6 +62,7 @@ Nächste Schritte:
 ## 🔧 **AUTOMATISCHE BACKUP-TRIGGER:**
 
 ### **🚨 VOR-BACKUP-SITUATIONEN:**
+
 - **Strukturelle Änderungen:** >5 Dateien betroffen
 - **CSS-Modifikationen:** Layout-Impact möglich
 - **Instructions-Updates:** Regel-Änderungen
@@ -49,6 +70,7 @@ Nächste Schritte:
 - **Content-Migration:** Token-Overflow-Situationen
 
 ### **✅ NACH-BACKUP-SITUATIONEN:**
+
 - **Erfolgreicher Build-Test:** npm run build erfolgreich
 - **Analyzer-Validation:** Tools bestätigen Integrität
 - **Scope-Transition:** Wechsel zwischen Arbeitsbereichen
@@ -62,7 +84,7 @@ Nächste Schritte:
 [CSS] - Styling-Änderungen & Design
 [CONTENT] - Blog/Text-Updates
 [BUILD] - Build-System-Changes
-[DOCS] - Documentation-Updates  
+[DOCS] - Documentation-Updates
 [FIX] - Bugfixes/Corrections
 [ANALYZER] - Tool-Improvements
 [STRUCTURE] - Directory/File-Organization
@@ -76,12 +98,14 @@ Nächste Schritte:
 ## 🛡️ **ROLLBACK & RECOVERY:**
 
 ### **📋 ROLLBACK-STRATEGIEN:**
+
 - **Git revert:** Für einzelne problematische Commits
 - **Git reset:** Für lokale Änderungen vor Push
 - **Branch-Checkout:** Für experimentelle Änderungen
 - **Selective-Cherry-Pick:** Für teilweise Wiederherstellung
 
 ### **🔍 RECOVERY-KONTEXT:**
+
 - **Commit-Message-Analyse:** Was wurde geändert?
 - **File-Diff-Review:** Welche spezifischen Änderungen?
 - **Dependency-Check:** Welche Abhängigkeiten betroffen?
@@ -92,12 +116,14 @@ Nächste Schritte:
 ## 📊 **BACKUP-MONITORING:**
 
 ### **🎯 ERFOLGS-METRIKEN:**
+
 - **Commit-Frequency:** Regelmäßige Sicherungen
 - **Message-Quality:** Detaillierte Beschreibungen
 - **Recovery-Speed:** Schnelle Wiederherstellung bei Problemen
 - **Context-Preservation:** Arbeits-Kontinuität gewährleistet
 
 ### **⚠️ WARNING-INDICATORS:**
+
 - **Lange Arbeits-Sessions ohne Backup:** >2h ohne Commit
 - **Massive File-Changes ohne Zwischensicherung:** >10 Dateien
 - **Critical-Path-Modifications ohne Backup:** Build-System-Änderungen

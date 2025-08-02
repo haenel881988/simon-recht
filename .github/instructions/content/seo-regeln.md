@@ -1,5 +1,22 @@
 # 📈 SEO-GUIDELINES
 
+## **🔧 VALIDATION-ZWANG (GLOBAL GÜLTIG):**
+
+### **🚨 ZWINGEND NACH JEDER SEO-ÄNDERUNG:**
+
+1. **BUILD-CHECKER AUSFÜHREN:** Multi-Scope-Checker für SEO-Validation
+2. **META-TAGS PRÜFEN:** Vollständigkeit und Länge validieren
+3. **LIGHTHOUSE-SCORE:** SEO-Score ≥95/100 halten
+4. **STRUCTURED-DATA:** Schema.org Markup validieren
+5. **CONTENT-AUTHENTICITY:** Simon's Stimme bewahrt?
+
+### **📊 SEO-QUALITÄTS-GATES:**
+
+- **SEO Score:** ≥95/100 (aktuell: 98/100)
+- **Blog-Content:** Mindestens 5 authentische Posts
+- **Meta-Completeness:** 100% aller Seiten
+- **Performance:** Core Web Vitals grün
+
 ## **ORGANISCHE OPTIMIERUNG:**
 
 ### **🎯 ZIELGRUPPE:**

@@ -50,7 +50,24 @@
 - ✅ **ANALYZER-ENHANCEMENT:** Tool erweitern für bessere Redundanz-Erkennung
 - ✅ **ZERO-REDUNDANCY-GOAL:** Jede Regel nur einmal in Instructions-System
 
-**🔄 GIT-BACKUP-AUTOMATISIERUNG-ZWANG (INTERNALISIERT 02.08.2025):**
+**� WORKFLOW-COMPLIANCE-ZWANG (INTERNALISIERT 02.08.2025):**
+
+**🚨 ABSOLUTER WORKFLOW-BYPASS-VERHINDERER:**
+
+- ✅ **TOP-LEVEL-HIERARCHIE-ZWANG:** Workflow-Regeln stehen IMMER an Position 1 in Instructions
+- ✅ **GIT-BACKUP-ERSTE-AKTION:** VOR jeder Arbeit zwingend `git add -A && git commit && git push`
+- ✅ **ANALYZER-PFLICHT:** `node tools/analyzer/universal-project-analyzer.cjs` vor Änderungen
+- ✅ **BUILD-CHECK-PFLICHT:** `node tools/build_check/multi-scope-checker.cjs` für Validation
+- ✅ **WORKFLOW-VIOLATION-EXCEPTION:** Bei Verstoß gegen Level-1-Rules sofort Exception werfen
+
+**🔍 SELF-MONITORING-PROTOKOLL:**
+
+- ✅ **WORKFLOW-CHECK:** Vor jeder Antwort: "Habe ich Git-Backup gemacht?"
+- ✅ **HIERARCHY-CHECK:** Stehen kritische Rules an Position 1?
+- ✅ **COMPLIANCE-VALIDATION:** Tools ausgeführt vor Behauptungen?
+- ✅ **EXCEPTION-COURAGE:** Bei Unsicherheit lieber Exception als Workflow-Verstoß
+
+**�🔄 GIT-BACKUP-AUTOMATISIERUNG-ZWANG (INTERNALISIERT 02.08.2025):**
 
 **📍 SCOPE-REFERENZ:** Siehe [instructions/project/git-backup.md](../project/git-backup.md) - Vollständige Git-Backup-Automatisierung
 
@@ -326,6 +343,7 @@ BEI JEDER SCOPE-BEHAUPTUNG ZWINGEND:
 9. **VARIABLES-SYSTEM NUTZEN** für wiederkehrende Konzepte
 
 **🔧 SCOPE-MODULARISIERUNGS-KRITERIEN:**
+
 - **Komplexität:** >200 Zeilen verdienen eigene Datei
 - **Themen-Abgrenzung:** Eigenständiger Fachbereich (Git, CSS, SEO, etc.)
 - **Wiederverwendbarkeit:** Andere Projekte könnten profitieren

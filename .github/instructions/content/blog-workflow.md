@@ -1,5 +1,22 @@
 # 📝 BLOG-WORKFLOW
 
+## **🔧 VALIDATION-ZWANG (GLOBAL GÜLTIG):**
+
+### **🚨 ZWINGEND NACH JEDER BLOG-ÄNDERUNG:**
+
+1. **SEO-SCORE PRÜFEN:** Multi-Scope-Checker für Content-Validation
+2. **AUTHENTIZITÄTS-CHECK:** Simon's Stimme erhalten?
+3. **META-TAGS VALIDIEREN:** Title, Description, Keywords vollständig
+4. **READABILITY-TEST:** DU-Form durchgängig verwendet
+5. **LINK-VALIDATION:** Interne/Externe Links funktional
+
+### **📊 BLOG-QUALITÄTS-GATES:**
+
+- **Content-Authenticity:** 100% Simon's Originalstimme
+- **SEO-Optimierung:** Meta-Tags vollständig
+- **Sprachkonsistenz:** DU-Form durchgängig
+- **Legal-Compliance:** Anonymisierung bei Fällen
+
 ## **CONTENT-ERSTELLUNG:**
 
 ### **🎯 CONTENT-STRATEGIE:**

@@ -1,12 +1,12 @@
 # 🚀 Multi-Scope Build-Checker Bericht
 
-**Generiert:** 2.8.2025, 08:28:58
+**Generiert:** 2.8.2025, 08:22:10
 **Projekt:** simon-recht
 **Gesamt-Health-Score:** 71/100
 
 ## 📊 Executive Summary
 
-- **Ausführungszeit:** 6060ms
+- **Ausführungszeit:** 6058ms
 - **Scopes getestet:** 5
 - **Gesamt-Issues:** 17
 - **Kritische Issues:** 0
@@ -17,7 +17,7 @@
 
 **Health Score:** 100/100
 **Status:** success
-**Ausführungszeit:** 14ms
+**Ausführungszeit:** 8ms
 **Issues:** 12
 
 ### 📈 Metriken
@@ -95,7 +95,7 @@
 
 **Health Score:** 98/100
 **Status:** success
-**Ausführungszeit:** 4ms
+**Ausführungszeit:** 5ms
 **Issues:** 1
 
 ### 📈 Metriken
@@ -116,7 +116,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 3139ms
+**Ausführungszeit:** 3168ms
 **Issues:** 4
 
 ### 📈 Metriken
@@ -144,7 +144,7 @@
 
 **Health Score:** 0/100
 **Status:** success
-**Ausführungszeit:** 0ms
+**Ausführungszeit:** 1ms
 **Issues:** 0
 
 ---
@@ -153,7 +153,7 @@
 
 **Health Score:** 84/100
 **Status:** success
-**Ausführungszeit:** 355ms
+**Ausführungszeit:** 323ms
 **Issues:** 0
 
 ---

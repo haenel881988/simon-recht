@@ -1,3 +1,43 @@
+# ⚡ ABSOLUTE TOP-PRIORITÄT: WORKFLOW-HIERARCHIE (NICHT VERHANDELBAR)
+
+## 🚨 **ZWINGENDER WORKFLOW FÜR JEDEN CHAT (LEVEL 1 - SICHERHEIT):**
+
+**VOR JEDER ARBEIT ZWINGEND:**
+
+1. **🔐 GIT-BACKUP:** `git add -A && git commit -m "[Backup vor Arbeit]" && git push`
+2. **📊 ANALYZER-RUN:** `node tools/analyzer/universal-project-analyzer.cjs`
+3. **🔧 BUILD-CHECK:** `node tools/build_check/multi-scope-checker.cjs`
+4. **✅ VALIDATION:** Eigene Arbeit mit Tools validieren
+5. **📝 TODO-UPDATE:** docs/todos/todos.md entsprechend aktualisieren
+
+**NACH JEDER ÄNDERUNG ZWINGEND:**
+
+1. **🔧 TOOL-VALIDATION:** Entsprechender Scope-Checker ausführen
+2. **🔐 GIT-COMMIT:** Mit KI-Tagebuch-Format (siehe git-backup.md)
+3. **🚀 GIT-PUSH:** Remote-Backup sicherstellen
+
+**❌ ABSOLUT VERBOTEN:** Arbeit ohne Git-Backup-Workflow beginnen!
+
+## 🚨 **ZERO-REDUNDANCY-ZWANG (LEVEL 1 - INTERNALISIERT 02.08.2025):**
+
+**ABSOLUT VERBOTEN:**
+
+- ❌ Dateien mit identischen Basisnamen erstellen (file.css + file_old.css)
+- ❌ Backup-Kopien ohne Löschung der Originale (global_clean.css, global_old.css)
+- ❌ Modularisierung durch Duplikation statt Migration
+- ❌ Iterative Versionen ohne Cleanup (v1, v2, v3 Files)
+
+**ZWINGEND ERFORDERLICH VOR JEDER DATEI-OPERATION:**
+
+1. **ANALYZER-REDUNDANZ-CHECK:** `node tools/analyzer/universal-project-analyzer.cjs` → 0 Filename-Redundanzen
+2. **PRE-CLEANUP:** Existierende redundante Dateien entfernen BEVOR neue erstellt werden
+3. **MIGRATION-ONLY:** Inhalte verschieben, nicht kopieren
+4. **POST-VALIDATION:** Analyzer bestätigt 0 neue Redundanzen nach Änderung
+
+**EXCEPTION-TRIGGER:** Bei erkannten Redundanzen sofort stoppen und bereinigen!
+
+---
+
 # Wichtige Informationen die die KI berücksichtigen muss.
 
 Sämtliche zeitliche Deadlines sind zu entfernen.

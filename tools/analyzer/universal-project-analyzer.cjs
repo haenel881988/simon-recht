@@ -79,6 +79,7 @@ class UniversalProjectAnalyzer {
     // 🚨 SIMON'S NEUE SCOPES (01.08.2025)
     this.redundancyDetection = {
       duplicateFiles: new Map(),
+      filenameRedundancies: [], // SIMON'S NEUE FILENAME-REDUNDANZ-DETECTION
       redundantDirectories: [],
       emptyDirectories: [],
       orphanedFiles: [],
@@ -440,16 +441,20 @@ class UniversalProjectAnalyzer {
       }
     }
 
-    // Doppelte Dateien identifizieren
+    // Doppelte Dateien identifizieren (Content-basiert)
     for (const [hash, files] of fileHashes.entries()) {
       if (files.length > 1) {
         this.redundancyDetection.duplicateFiles.set(hash, files);
         console.log(
-          `  🔄 DUPLIKAT gefunden: ${files.length} identische Dateien`
+          `  🔄 CONTENT-DUPLIKAT gefunden: ${files.length} identische Dateien`
         );
         files.forEach((f) => console.log(`     - ${f.path} (${f.scope})`));
       }
     }
+
+    // 🚨 SIMON'S NEUE FILENAME-REDUNDANZ-DETECTION
+    console.log("\n🚨 FILENAME-REDUNDANZ-ANALYSE:");
+    this.detectFilenameRedundancies(allFiles);
 
     // 2. LEERE VERZEICHNISSE finden
     await this.findEmptyDirectories(this.projectRoot);
@@ -459,7 +464,10 @@ class UniversalProjectAnalyzer {
 
     console.log(`\n🔄 REDUNDANZ-ZUSAMMENFASSUNG:`);
     console.log(
-      `   📁 ${this.redundancyDetection.duplicateFiles.size} Duplikat-Gruppen`
+      `   � ${this.redundancyDetection.duplicateFiles.size} Content-Duplikat-Gruppen`
+    );
+    console.log(
+      `   🏷️ ${this.redundancyDetection.filenameRedundancies.length} Filename-Redundanzen`
     );
     console.log(
       `   📂 ${this.redundancyDetection.emptyDirectories.length} leere Verzeichnisse`
@@ -467,6 +475,73 @@ class UniversalProjectAnalyzer {
     console.log(
       `   🔄 ${this.redundancyDetection.redundantDirectories.length} redundante Verzeichnisse`
     );
+  }
+
+  /**
+   * 🚨 FILENAME-REDUNDANZ-DETECTION (SIMON'S ENHANCEMENT 01.08.2025)
+   */
+  detectFilenameRedundancies(allFiles) {
+    const baseFilenames = new Map();
+
+    // Gruppiere nach Basis-Filename (ohne Suffixe wie _old, _clean, _backup)
+    for (const file of allFiles) {
+      const fileName = path.basename(file.path, path.extname(file.path));
+      const extension = path.extname(file.path);
+      
+      // Normalisiere Filename: entferne bekannte Suffixe
+      let baseFileName = fileName
+        .replace(/_(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, '')
+        .replace(/\.(old|clean|backup|copy|orig|original|new|temp|tmp)$/i, '');
+
+      const fullBaseName = baseFileName + extension;
+      const dirPath = path.dirname(file.path);
+      const uniqueKey = `${dirPath}/${fullBaseName}`;
+
+      if (!baseFilenames.has(uniqueKey)) {
+        baseFilenames.set(uniqueKey, []);
+      }
+      baseFilenames.get(uniqueKey).push(file);
+    }
+
+    // Identifiziere Redundanzen
+    for (const [baseKey, files] of baseFilenames.entries()) {
+      if (files.length > 1) {
+        const redundancyGroup = {
+          basePattern: baseKey,
+          files: files,
+          severity: this.assessFilenameRedundancySeverity(files)
+        };
+
+        this.redundancyDetection.filenameRedundancies.push(redundancyGroup);
+        
+        console.log(`  🚨 FILENAME-REDUNDANZ: ${baseKey}`);
+        console.log(`     Severität: ${redundancyGroup.severity}`);
+        files.forEach((f) => console.log(`     - ${f.path} (${f.scope})`));
+      }
+    }
+  }
+
+  /**
+   * ⚖️ Bewerte Severität von Filename-Redundanzen
+   */
+  assessFilenameRedundancySeverity(files) {
+    // KRITISCH: Beide Dateien im selben Verzeichnis, ähnliche Größe
+    if (files.length === 2) {
+      const [file1, file2] = files;
+      const sizeDiff = Math.abs(file1.size - file2.size);
+      const avgSize = (file1.size + file2.size) / 2;
+      const sizeDiffPercent = (sizeDiff / avgSize) * 100;
+
+      if (sizeDiffPercent < 20) {
+        return "KRITISCH"; // Sehr ähnliche Dateien
+      } else if (sizeDiffPercent < 50) {
+        return "HOCH"; // Mäßig unterschiedliche Dateien
+      } else {
+        return "MITTEL"; // Deutlich unterschiedliche Dateien
+      }
+    }
+
+    return files.length > 2 ? "KRITISCH" : "MITTEL";
   }
 
   /**
