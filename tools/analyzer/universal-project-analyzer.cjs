@@ -367,12 +367,12 @@ class UniversalProjectAnalyzer {
 
     // 1. Große Scopes aufteilen
     for (const [scope, data] of this.stats.scopes.entries()) {
-      if (data.totalTokens > 10000) {
-        // >10k Tokens = GLOBAL LIMIT überschritten
+      if (data.totalTokens > 15000) {
+        // >15k Tokens = GLOBAL LIMIT überschritten
         suggestions.push({
           type: "SPLIT_SCOPE",
           scope,
-          reason: `Scope ${scope} hat ${data.totalTokens} Tokens (>10k GLOBAL LIMIT)`,
+          reason: `Scope ${scope} hat ${data.totalTokens} Tokens (>15k GLOBAL LIMIT)`,
           action: `Aufteilen in Sub-Scopes oder separate Verzeichnisse`,
           priority: "HIGH",
         });
