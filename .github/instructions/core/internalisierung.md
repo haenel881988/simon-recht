@@ -55,7 +55,7 @@
 **ABSOLUT VERBOTEN - NIEMALS OHNE EXPLICIT REQUEST:**
 
 - ❌ **Move-Item** (DESTRUKTIV: Löscht Original)
-- ❌ **Remove-Item** (DESTRUKTIV: Unwiederbringlich)  
+- ❌ **Remove-Item** (DESTRUKTIV: Unwiederbringlich)
 - ❌ **del, rm, mv** (DESTRUKTIV: Terminal-Löschungen)
 - ❌ **replace_string_in_file** für komplette Datei-Erneuerung
 - ❌ **Modularisierung** die Original-Content zerstört

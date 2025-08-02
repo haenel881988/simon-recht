@@ -9,6 +9,7 @@
 ## 🚨 **DAS PROBLEM: MOVE-ITEM DESTRUKTION**
 
 ### **⚰️ WAS PASSIERT IST:**
+
 ```powershell
 Move-Item "src/styles/README.md" "docs/documentation/technical/styles-system.md"
 ```
@@ -33,7 +34,7 @@ Move-Item "src/styles/README.md" "docs/documentation/technical/styles-system.md"
 
 ```powershell
 ❌ Move-Item           # LÖSCHT Original
-❌ Remove-Item         # UNWIEDERBRINGLICH  
+❌ Remove-Item         # UNWIEDERBRINGLICH
 ❌ del, rm, mv         # TERMINAL-DESTRUKTION
 ❌ > filename          # ÜBERSCHREIBT komplett
 ❌ Set-Content         # ERSETZT kompletten Inhalt
@@ -64,6 +65,7 @@ Move-Item "src/styles/README.md" "docs/documentation/technical/styles-system.md"
 ### **📋 ZWINGENDER WORKFLOW VOR JEDER DATEI-OPERATION:**
 
 #### **1. CONTENT-VALUE-ASSESSMENT:**
+
 ```
 FRAGE: Ist diese Datei kritisch?
 CHECK: README, Documentation, Instructions, Config?
@@ -71,6 +73,7 @@ AKTION: Bei JA → Extra-Vorsicht, bei NEIN → Standard-Flow
 ```
 
 #### **2. EXPLICIT-DESTRUCTION-CHECK:**
+
 ```
 FRAGE: Hat Simon explizit LÖSCHUNG gefordert?
 KEYWORDS: "lösche", "entferne", "delete", "remove"
@@ -78,6 +81,7 @@ AKTION: Bei NEIN → Copy-First-Principle
 ```
 
 #### **3. COPY-FIRST-PRINCIPLE:**
+
 ```
 SCHRITT 1: Copy-Item source target
 SCHRITT 2: Validation der Kopie
@@ -86,6 +90,7 @@ SCHRITT 4: Erst dann ggf. Original-Removal
 ```
 
 #### **4. BACKUP-VERIFICATION:**
+
 ```
 CHECK: Git-Status sauber?
 CHECK: Alle wichtigen Dateien committed?
@@ -93,6 +98,7 @@ CHECK: Recovery-Plan falls Fehler?
 ```
 
 #### **5. PRESERVATION-VALIDATION:**
+
 ```
 Bei Unsicherheit: Exception werfen
 Bei kritischen Dateien: Simon explizit fragen
@@ -147,10 +153,10 @@ Alle anderen Dateien   # Copy-First trotzdem
 ```
 IF (destructive_operation AND NOT explicit_delete_request):
     THROW Exception("Destructive operation ohne explizite Lösch-Anforderung")
-    
+
 IF (critical_file AND move_operation):
     THROW Exception("Move-Operation für kritische Datei - Copy-First!")
-    
+
 IF (bulk_operation AND important_files):
     THROW Exception("Bulk-Operation zu riskant - einzeln bearbeiten")
 ```
@@ -192,7 +198,7 @@ Move-Item "src/styles/README.md" "docs/documentation/technical/styles-system.md"
 
 ```
 ✅ "Lösche die alte file.css"
-✅ "Entferne redundant.md" 
+✅ "Entferne redundant.md"
 ✅ "Delete unused.js"
 ✅ "Remove backup.old"
 
@@ -222,7 +228,7 @@ Move-Item "src/styles/README.md" "docs/documentation/technical/styles-system.md"
 ### **✅ ZIEL: NULL CONTENT-DESTRUCTION-INCIDENTS**
 
 - **0 wichtige Dateien** durch Move-Item verloren
-- **0 Original-Dokumentation** versehentlich gelöscht  
+- **0 Original-Dokumentation** versehentlich gelöscht
 - **100% Recovery-Rate** bei Fehlern durch Git
 - **Explizite Confirmation** bei jeder destruktiven Operation
 
