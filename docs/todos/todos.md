@@ -1,32 +1,65 @@
-# ⚠️ OBERSTE REGEL UND DIREKTIVE (SIMON'S TOKEN-BLINDHEITS-STOPP)
+# 🚨 **TODO-MASTER-NAVIGATION: SIMON-RECHT PROJECT**
 
-**🚨 ALLER GRÖSSTES PROBLEM DER KI:**
-Die KI bemerkt nicht, wenn die Tokens überschritten werden, die KI beginnt, blind zu arbeiten.
-Dies ist um alles in der Welt zu verhindern und ist daher zwingend als oberste und fundamentale Priorität zu betrachten und zu behandeln.
-
-**🔧 ZWINGENDER WORKFLOW VOR JEDER ÄNDERUNG:**
-Die KI muss zwingend eigenständig vor jeder Änderung, eine Analyse mit dem Analyzing tool durchführen. Das Analyzing-Tool, muss für jede Datei, die exakte Zeilenzahl evaluieren und identifizieren.
-
-**📏 1200-ZEILEN-REGEL (GLOBAL GÜLTIG):**
-Wenn 1200 Zeilen überschritten werden, muss die KI zwingend beginnen, die überlaufenden Zeilen in neue scopes zu unterteilen und dafür eine scope-struktur von der betreffendem Verzeichnis / Datei erstellen.
-Wenn der Code betroffen ist, müssen sämtliche Abhängigkeiten berücksichtigt und angepasst werden.
-
-**🔍 ANALYZER-ENTWICKLUNG (FUNDAMENTAL):**
-Da diese Abhängigkeiten sehr schnell die tokenlimits erreichen, muss der Analyzer weiterentwickelt werden, in der auch alle Abhängigkeiten überprüft, sowie alle interne Links.
-Der Analyzer muss diese zwingend verifizieren, damit die KI die Problematik / Abhängigkeitskette einfacher erkennen kann, um tokens zu sparen.
-
-**🎯 SCOPE-RESPEKT (UNVERHANDELBAR):**
-Jede weitere Analyse-Routine, soll wenn möglich durch den Analyzer organisch erweitert werden und erfolgen.
-Die KI muss zwingend sicherstellen, dass alle Änderungen im Code die definierten Scopes und Abhängigkeiten respektieren.
-Bei den Scopes, können neue Abhängigkeiten geschaffen werden, die ebenfalls berücksichtigt werden müssen.
+**Letzte Aktualisierung:** 02.08.2025, 09:22  
+**Status:** Scope-modularisiert für Token-Management  
+**Ziel:** Website-Launch August 2025
 
 ---
 
-# 🚨 **TODO-LISTE: SIMON-RECHT PROJECT (AKTUALISIERT)**
+## 🚨 **SOFORTIGE REDUNDANZ-KRISE ERKANNT:**
 
-**Letzte Bereinigung:** 02.08.2025 - Instructions-Redundanzen eliminiert  
-**Status:** Einzige Quelle der TODO-Wahrheit  
-**Ziel:** Website-Optimierung & Strukturbereinigung (August 2025)
+**ZERO-REDUNDANCY-ZWANG VERLETZT:** `global_old.css` wieder aufgetaucht!  
+**🔍 BEWEIS:** Analyzer zeigt 1 Filename-Redundanz nach erfolgreichem Cleanup  
+**🚨 AKTION:** Sofort bereinigen vor weiterer Arbeit!
+
+---
+
+## � **TODO-SCOPE-NAVIGATION:**
+
+### 🔴 **[HOCH-PRIORITÄT (3/3 AKTIV)](prioritaeten/hoch/)**
+- **[🚨 Aktuelle Krisen](prioritaeten/hoch/aktuelle-krisen.md)** - SOFORT bearbeiten
+- **Status:** Redundanz-Crisis + Token-Overflow + CSS-Feinschliff
+- **Regel:** Nicht mehr als 3 gleichzeitig!
+
+### � **[MITTEL-PRIORITÄT](prioritaeten/mittel/)**  
+- **[🔧 Technische Verbesserungen](prioritaeten/mittel/technische-verbesserungen.md)** - Qualität verbessern
+- **Token-Budget:** ~5k-8k pro Bereich (Manageable)
+
+### 🟢 **[NIEDRIG-PRIORITÄT](prioritaeten/niedrig/)**
+- **[🎨 Optimierungen](prioritaeten/niedrig/optimierungen.md)** - Future-Features
+- **Timing:** Nur bei freier Kapazität
+
+---
+
+## ✅ **HEUTE ERFOLGREICH ABGESCHLOSSEN:**
+
+- ✅ **Scope-Modularisierung implementiert** (Token: 15.944 → ~3k pro Scope)
+- ✅ **Zero-Redundancy-System enhanced** (Analyzer erkennt Filename-Redundanzen)  
+- ✅ **CSS-Modularisierung zu 90% abgeschlossen** (Health Score: 90/100)
+- ✅ **Instructions-Redundanzen eliminiert** (Cross-File-Duplikate bereinigt)
+
+---
+
+## 📊 **AKTUELLER PROJEKT-STATUS:**
+
+**🔍 BEWEIS [Analyzer-Scan 02.08.2025]:**
+- **📁 Files:** 77 analysiert  
+- **🔢 Tokens:** 103.621 geschätzt
+- **🏷️ Filename-Redundanzen:** 1 erkannt (KRITISCH)
+- **📂 Leere Verzeichnisse:** 11 
+- **📄 Falsch platzierte Dateien:** 44
+
+---
+
+## 🎯 **NÄCHSTE SOFORT-AKTION:**
+
+1. **REDUNDANZ-CRISIS lösen** → global_old.css permanent eliminieren
+2. **CSS-Feinschliff abschließen** → 95+/100 Health Score erreichen  
+3. **Navigation optimieren** → Simon's UI-Insistenz erfüllen
+
+---
+
+**📍 NAVIGATION:** Diese Datei ist nur noch Hub - Details in Scope-Verzeichnissen!
 
 ## ✅ **ERLEDIGTE AUFGABEN (HEUTE):**
 
